@@ -2,26 +2,38 @@
   "name": "catalogvector",
   "version": "0.1.0",
   "private": true,
+  "description": "CatalogVector — outcome measurement of AI shopping-agent retrieval for technically-specified Shopify catalogs. Phase 1 measurement instrument (read-only against public surfaces).",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
     "lint": "biome check",
-    "format": "biome format --write"
+    "lint:fix": "biome check --write",
+    "format": "biome format --write",
+    "typecheck": "tsc --noEmit",
+    "test": "VITE_CONFIG_NATIVE_IGNORE_WARNING=true vitest run",
+    "test:watch": "VITE_CONFIG_NATIVE_IGNORE_WARNING=true vitest",
+    "test:e2e": "playwright test",
+    "verify": "biome check && tsc --noEmit && next build"
   },
   "dependencies": {
     "next": "16.3.0-preview.10",
     "react": "19.2.8",
-    "react-dom": "19.2.8"
+    "react-dom": "19.2.8",
+    "zod": "^4.4.3"
   },
   "devDependencies": {
     "@biomejs/biome": "2.4.2",
+    "@next/playwright": "^16.2.12",
+    "@playwright/test": "^1.62.1",
     "@tailwindcss/postcss": "^4",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
+    "@vitejs/plugin-react": "^6.0.5",
     "babel-plugin-react-compiler": "1.0.0",
     "tailwindcss": "^4",
-    "typescript": "^5"
+    "typescript": "^5",
+    "vitest": "^4.1.10"
   }
 }

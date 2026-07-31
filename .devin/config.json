@@ -1,0 +1,51 @@
+{
+  "//": "Devin CLI project config — shared via version control. See https://docs.devin.ai/cli/extensibility/mcp/configuration",
+  "permissions": {
+    "allow": [
+      "Read(**)",
+      "Exec(npm run lint)",
+      "Exec(npm run lint:fix)",
+      "Exec(npm run format)",
+      "Exec(npm run typecheck)",
+      "Exec(npm run test)",
+      "Exec(npm run test:e2e)",
+      "Exec(npm run verify)",
+      "Exec(npm run dev)",
+      "Exec(npm run build)",
+      "Exec(git status)",
+      "Exec(git diff)",
+      "Exec(git log)",
+      "Exec(git add)",
+      "Exec(git commit)",
+      "Exec(biome check)",
+      "Exec(tsc --noEmit)"
+    ],
+    "deny": [
+      "Exec(sudo)",
+      "Exec(rm -rf /)",
+      "Write(**/.env)",
+      "Write(**/.env.local)",
+      "Write(**/.env.production)"
+    ],
+    "ask": [
+      "Write(**/.env.example)",
+      "Exec(npm install)",
+      "Exec(npm uninstall)",
+      "Exec(git push)",
+      "Exec(git reset --hard)",
+      "Exec(git rebase)"
+    ]
+  },
+  "mcpServers": {
+    "next-devtools": {
+      "command": "npx",
+      "args": ["-y", "next-devtools-mcp@latest"]
+    }
+  },
+  "read_config_from": {
+    "agents_standard": true,
+    "cursor": true,
+    "windsurf": true,
+    "claude": true
+  }
+}
