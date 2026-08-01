@@ -4,9 +4,9 @@
 |---|---|
 | **Document** | TDD (governing, technical) |
 | **Companion** | `BLUEPRINT.md` (governing, non-technical) |
-| **Version** | 0.2.1 |
-| **Date** | 31 July 2026 |
-| **Status** | Design + scaffold. Project scaffolded (Next.js 16.3, folder structure, agent tooling, CI, MIT licence). No pipeline code written. Phase 0 not started. |
+| **Version** | 0.3.0 |
+| **Date** | 1 August 2026 |
+| **Status** | Design + scaffold + I-4 resolved. Project scaffolded (Next.js 16.3, folder structure, agent tooling, CI, MIT licence). UCP agent profile + auth helper wired. No pipeline code written. Phase 0 not started. |
 
 ---
 
@@ -65,9 +65,12 @@ Dev MCP is read-only, local stdio, public. It grounds the coding agent in live s
 - **Blind spot: metafields are NOT exposed in this JSON.** Structured specs a merchant *has* stored properly are invisible here. This is a methodology limitation and must be stated in PUB-2, not hidden.
 - Rate limiting exists; observed 429/430 responses under load.
 
-### 2.4 Global Catalog MCP *(28 Jul 2026)* — the primary measurement surface
+### 2.4 Global Catalog MCP *(28 Jul 2026; auth model corrected 31 Jul 2026)* — the primary measurement surface
 - Endpoint: `POST https://catalog.shopify.com/api/ucp/mcp`, JSON-RPC 2.0.
-- **Auth: a UCP agent profile hosted at a well-known URL**, referenced as `meta.ucp-agent.profile` on every request. No merchant OAuth. Trust tier governs rate limits and available tools.
+- **Two separate concerns, previously conflated:**
+  - **Capability negotiation (profile):** a UCP agent profile JSON hosted at a public HTTPS URL, referenced as `meta.ucp-agent.profile` on every request. Shopify fetches it to negotiate which UCP capabilities your agent supports. No registration or approval — just host the file and include the URL. Our profile is at `public/ucp-agent-profile.json` in the repo, declaring `dev.ucp.shopping.catalog.search`, `dev.ucp.shopping.catalog.lookup`, and `dev.shopify.catalog.global` only (Phase 1 is read-only).
+  - **Authentication (rate-limit tier):** three tiers — Token (API key → bearer token, highest limits), Signed (HTTP Message Signatures, no API key), Anonymous (no auth, lowest limits). All three get Catalog access. **We use the Token tier**: API key from Dev Dashboard → Catalogs → Get an API key (instant, no approval — Spring '26 removed the approval requirement). Exchange `client_id` / `client_secret` for a bearer token at `https://api.shopify.com/auth/access_token` (scope: `read_global_api_catalog_search`, expires after 60 min, fetch at runtime). Include as `Authorization: Bearer <token>` header.
+- No merchant OAuth. No merchant permission required.
 - Tools: `search_catalog`, `lookup_catalog`, `get_product`.
 - `catalog.query` — free text. `catalog.context.intent` — free-text buyer intent.
 - **`catalog.filters.shops`** — array of shop GIDs, **up to 1000 per request**. This is what makes store-scoped measurement possible.
@@ -92,7 +95,7 @@ Published products are auto-enrolled with manual opt-out. Rate limiting and cach
 ### 2.7 Facts requiring runtime confirmation (not yet verified)
 | # | Unknown | Blocks | How to resolve |
 |---|---|---|---|
-| U-1 | Does agent-profile registration involve human review? What is the lead time? | I-4, C3, all of Phase 1 scope | Register immediately; observe |
+| U-1 | ~~Does agent-profile registration involve human review? What is the lead time?~~ **RESOLVED 31 Jul 2026:** No human review. Spring '26 Edition removed the approval requirement. API key is generated instantly in Dev Dashboard → Catalogs → Get an API key. Agent profile is just a JSON file you host — no registration step. **Zero lead time.** | ~~I-4, C3~~ | Done — see §2.4 |
 | U-2 | Actual requests/minute by trust tier | N, runtime, cost | Measure at first contact |
 | U-3 | Can a shop GID be resolved from a public domain without OAuth? | C1 → C3 handoff | Probe `lookup_catalog` with a product URL; the response `seller.id` may be the resolution path |
 | U-4 | Is `filters.shops` semantics a hard restriction or a soft bias? | C6 scoring validity | Control experiment: query for a product known present in a scoped shop |
@@ -481,3 +484,4 @@ Actions that must happen on or before the day the report goes public. Each is a 
 | 2026-07-28 | 0.1.0 | Initial design. Architecture fixed; vertical-dependent vocabulary (C4 archetypes, C5 spec taxonomy) deferred to Phase 0 as explicit contracts rather than invented content. |
 | 2026-07-31 | 0.2.0 | **Naming:** `ShopifyAiScanner` → `CatalogVector` (repo `github.com/knezdusan/catalogvector`). **Scaffold:** Next.js 16.3 preview (`cacheComponents: true`, `reactCompiler: true`, `agentRules: true`), React 19.2, TypeScript strict + `verbatimModuleSyntax` + `noUncheckedIndexedAccess` (target ES2022), Biome 2 (replaces ESLint/Prettier), Tailwind v4. Folder structure replicated from §3: `src/app/{(public),admin,api/inngest}`, `src/db/{schema,index}`, `src/inngest/{client,functions}`, `src/lib/scanner/c1–c7` stubs with TDD interface signatures, `scripts/` probes (excluded from tsconfig). **§2.2 agent tooling:** added Next.js 16.3 first-party stack (`next-devtools-mcp`, `agent-browser` 0.27, `next-dev-loop` skill, `.devin/` config, `AGENTS.md`). **§8 tests:** Vitest + Playwright (`@next/playwright` `instant()` helper) staged. **Foundation:** Zod env validation (`src/lib/env.ts`, `.env.example`), `next.config.ts` hardened (CSP, HSTS, `poweredByHeader: false`, `reactStrictMode: true`), GitHub Actions CI. All C1–C9 remain `PENDING`/`BLOCKED` — stubs only, no implementation. |
 | 2026-07-31 | 0.2.1 | **Licence:** MIT `LICENSE` added at repo root (copyright Dušan Knežević, 2026) — repo is now genuinely open source. **§11 Launch Day checklist:** added, led by the `robots: noindex` removal reminder (`src/app/layout.tsx` currently sets `robots: { index: false, follow: false }` for the placeholder; must flip to `index: true` before publication or the report is invisible to search). |
+| 2026-08-01 | 0.3.0 | **I-4 RESOLVED — U-1 closed, lead-time risk eliminated.** §2.4 auth model corrected: the original design conflated capability negotiation (agent profile) with authentication (rate-limit tier). Spring '26 removed the approval requirement — API key is generated instantly in Dev Dashboard → Catalogs. Two separate concerns now documented: (1) agent profile = JSON at `public/ucp-agent-profile.json` (catalog-only: `dev.ucp.shopping.catalog.search` + `dev.ucp.shopping.catalog.lookup` + `dev.shopify.catalog.global`), included as `meta.ucp-agent.profile`; (2) auth = Token tier, `SHOPIFY_CLIENT_ID`/`SHOPIFY_CLIENT_SECRET` → bearer token at `https://api.shopify.com/auth/access_token` (scope `read_global_api_catalog_search`, 60-min expiry, runtime fetch), sent as `Authorization: Bearer`. **Code:** `src/lib/scanner/ucp-auth.ts` (token fetch), C3 stub updated with real JSON-RPC request shape + Authorization header. **Env:** `SHOPIFY_CLIENT_ID`, `SHOPIFY_CLIENT_SECRET`, `UCP_AGENT_PROFILE_URL` added. **Manual step remaining:** user generates API key in Dev Dashboard and adds credentials to `.env.local`. |

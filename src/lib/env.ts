@@ -27,8 +27,13 @@ const envSchema = z.object({
   INNGEST_EVENT_KEY: z.string().optional(),
   INNGEST_SIGNING_KEY: z.string().optional(),
 
-  // I-4: UCP agent profile (TDD §2.4) — required for C3. Lead-time risk, do first.
+  // I-4: UCP agent profile + API key (TDD §2.4, updated 31 Jul 2026)
+  // Profile: hosted at a public HTTPS URL for capability negotiation.
+  // API key: from Dev Dashboard → Catalogs → Get an API key (instant, no approval).
+  // Token tier = highest rate limits. Scope: read_global_api_catalog_search.
   UCP_AGENT_PROFILE_URL: z.string().url().optional(),
+  SHOPIFY_CLIENT_ID: z.string().optional(),
+  SHOPIFY_CLIENT_SECRET: z.string().optional(),
 
   // LLM routing (TDD §7: OpenRouter, cost as first-class constraint)
   OPENROUTER_API_KEY: z.string().optional(),
