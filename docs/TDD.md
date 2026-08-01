@@ -304,7 +304,7 @@ export async function searchCatalog(input: {
 ```
 **Notes.** Persist `requestBody` and `results` verbatim to `catalog_runs`. Never trust `total_count`. Paginate to the 1000-result cap only where the scoring design requires depth.
 **Testable boundary.** Contract tests against recorded responses; one live smoke test in CI, skipped without credentials.
-**Status.** `BLOCKED` on I-4.
+**Status.** `PENDING` — I-4 resolved (auth + profile wired, request shape implemented, verified via smoke test).
 
 ### C4 — Buyer query synthesis
 **Purpose.** Generate queries a real buyer in this vertical would type.

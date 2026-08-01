@@ -174,7 +174,7 @@ Nothing reaches `VERIFIED` on documentation reading alone. Several platform beha
 |---|---|---|---|
 | C1 | Store frontier / sampling | `PENDING` | How N stores are discovered and qualified |
 | C2 | Storefront ingestion adapter | `PENDING` | `/products.json` + JSON-LD; handles disabled endpoints |
-| C3 | Global Catalog MCP client | `BLOCKED` | on I-4 |
+| C3 | Global Catalog MCP client | `PENDING` | I-4 resolved; auth + profile wired, request shape implemented, verified via smoke test |
 | C4 | Buyer query synthesis | `PENDING` | Vertical vocabulary `PENDING — PHASE 0` |
 | C5 | Expected-match resolver | `PENDING` | **The hard component.** pgvector + arbitration. Where the concept lives or dies |
 | C6 | Retrieval scoring | `PENDING` | recall@k, rank, near-miss taxonomy |
