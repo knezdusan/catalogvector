@@ -4,9 +4,9 @@
 |---|---|
 | **Document** | TDD (governing, technical) |
 | **Companion** | `BLUEPRINT.md` (governing, non-technical) |
-| **Version** | 0.2.0 |
+| **Version** | 0.2.1 |
 | **Date** | 31 July 2026 |
-| **Status** | Design + scaffold. Project scaffolded (Next.js 16.3, folder structure, agent tooling, CI). No pipeline code written. Phase 0 not started. |
+| **Status** | Design + scaffold. Project scaffolded (Next.js 16.3, folder structure, agent tooling, CI, MIT licence). No pipeline code written. Phase 0 not started. |
 
 ---
 
@@ -462,9 +462,22 @@ No Playwright in Phase 1 — there is no UI. It re-enters if a public results pa
 
 ---
 
-## 11. Change log
+## 11. Launch Day checklist
+
+Actions that must happen on or before the day the report goes public. Each is a footgun if forgotten — the site ships broken or invisible.
+
+- [ ] **Remove `robots: noindex` from `src/app/layout.tsx`.** The metadata currently sets `robots: { index: false, follow: false }` so the placeholder site is not crawled. **If this is not flipped before launch, Google will never index the report and no one will find it.** Set to `{ index: true, follow: true }` (or remove the `robots` key entirely) when PUB-1..4 are published.
+- [ ] Confirm the public route group `(public)/` serves the real report pages, not placeholders.
+- [ ] Verify the dataset export contains no store names (C9 invariant, TDD §5 C9).
+- [ ] Confirm the frozen query set and arbitration prompt version are committed and referenced in PUB-2.
+- [ ] Run `npm run verify` green on `main`.
+
+---
+
+## 12. Change log
 
 | Date | Version | Change |
 |---|---|---|
 | 2026-07-28 | 0.1.0 | Initial design. Architecture fixed; vertical-dependent vocabulary (C4 archetypes, C5 spec taxonomy) deferred to Phase 0 as explicit contracts rather than invented content. |
 | 2026-07-31 | 0.2.0 | **Naming:** `ShopifyAiScanner` → `CatalogVector` (repo `github.com/knezdusan/catalogvector`). **Scaffold:** Next.js 16.3 preview (`cacheComponents: true`, `reactCompiler: true`, `agentRules: true`), React 19.2, TypeScript strict + `verbatimModuleSyntax` + `noUncheckedIndexedAccess` (target ES2022), Biome 2 (replaces ESLint/Prettier), Tailwind v4. Folder structure replicated from §3: `src/app/{(public),admin,api/inngest}`, `src/db/{schema,index}`, `src/inngest/{client,functions}`, `src/lib/scanner/c1–c7` stubs with TDD interface signatures, `scripts/` probes (excluded from tsconfig). **§2.2 agent tooling:** added Next.js 16.3 first-party stack (`next-devtools-mcp`, `agent-browser` 0.27, `next-dev-loop` skill, `.devin/` config, `AGENTS.md`). **§8 tests:** Vitest + Playwright (`@next/playwright` `instant()` helper) staged. **Foundation:** Zod env validation (`src/lib/env.ts`, `.env.example`), `next.config.ts` hardened (CSP, HSTS, `poweredByHeader: false`, `reactStrictMode: true`), GitHub Actions CI. All C1–C9 remain `PENDING`/`BLOCKED` — stubs only, no implementation. |
+| 2026-07-31 | 0.2.1 | **Licence:** MIT `LICENSE` added at repo root (copyright Dušan Knežević, 2026) — repo is now genuinely open source. **§11 Launch Day checklist:** added, led by the `robots: noindex` removal reminder (`src/app/layout.tsx` currently sets `robots: { index: false, follow: false }` for the placeholder; must flip to `index: true` before publication or the report is invisible to search). |

@@ -4,7 +4,7 @@
 |---|---|
 | **Document** | Blueprint (governing, non-technical) |
 | **Companion** | `TDD.md` (governing, technical) |
-| **Version** | 0.2.0 |
+| **Version** | 0.2.1 |
 | **Date** | 31 July 2026 |
 | **Owner** | Dušan Knežević (solo) |
 | **Status** | Phase 0 not started. Project scaffolded (repo, CI, folder structure, agent tooling). No pipeline code written. |
@@ -166,7 +166,7 @@ Nothing reaches `VERIFIED` on documentation reading alone. Several platform beha
 | I-5 | Postgres + pgvector instance | `PENDING` | Existing pattern from VectorMatch |
 | I-6 | Redis (distributed rate limiting) | `PENDING` | Reuse of existing hard-global-cap pattern |
 | I-7 | Self-hosted Inngest | `PENDING` | Existing pattern |
-| I-8 | Repo, CI, licence (open source from commit 1) | `PARTIAL` | Repo created (`github.com/knezdusan/catalogvector`), CI baseline (GitHub Actions: biome/tsc/build/test), folder structure scaffolded, agent tooling configured. Licence TBD per PUB-3. |
+| I-8 | Repo, CI, licence (open source from commit 1) | `PARTIAL` | Repo created (`github.com/knezdusan/catalogvector`), CI baseline (GitHub Actions: biome/tsc/build/test), folder structure scaffolded, agent tooling configured. **MIT licence added** (resolves the open-source requirement; was the legal blocker — an unlicensed public repo is copyrighted/closed by default). |
 
 ### Phase 1 — pipeline
 
@@ -285,3 +285,4 @@ The measurement is the comparison between them: what the merchant has, versus wh
 |---|---|---|
 | 2026-07-28 | 0.1.0 | Initial. Supersedes external "Vertical Catalog Intelligence" blueprint v1 and incorporates the Inkling audit's verified findings while rejecting its IP, GTM and partnership recommendations (§3). |
 | 2026-07-31 | 0.2.0 | **Naming:** internal name `ShopifyAiScanner` → `CatalogVector`; repo `github.com/knezdusan/catalogvector` created. `CatalogVector` is the leading public-name candidate (satisfies §2.3 constraints); Phase 0 confirms per original gate. **Scaffold:** Next.js 16.3 preview project scaffolded with Cache Components, React Compiler, Biome 2 (replacing ESLint/Prettier), Tailwind v4, TypeScript strict+`verbatimModuleSyntax`+`noUncheckedIndexedAccess`. Folder structure replicated from §7/TDD §3 (route groups `(public)`/`admin`, `db`, `inngest`, `lib/scanner` C1–C7 stubs, `scripts/` probes). **Agent tooling (Next.js 16.3 first-party):** `next-devtools-mcp` via `/_next/mcp`, `agent-browser` 0.27 with React DevTools introspection, `next-dev-loop` skill, `.devin/` project config, `AGENTS.md` with Cache Components decision tree. **Foundation:** Zod env validation, Vitest + Playwright (`@next/playwright` `instant()` helper staged), `next.config.ts` hardened (security headers, `poweredByHeader: false`, `reactStrictMode: true`), GitHub Actions CI. I-8 status → `PARTIAL`. No pipeline code written; all C1–C9 remain `PENDING`/`BLOCKED`. |
+| 2026-07-31 | 0.2.1 | **Licence:** MIT `LICENSE` added at repo root (copyright Dušan Knežević, 2026). An unlicensed public repo is copyrighted/closed by default — this resolves the open-source requirement and makes the repo a real portfolio piece. **Launch Day checklist:** added to TDD §11, led by the `robots: noindex` removal reminder (`src/app/layout.tsx` sets `robots: { index: false, follow: false }` for the placeholder; must flip before publication or the report is invisible to search). |
