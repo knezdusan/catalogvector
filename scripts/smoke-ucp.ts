@@ -12,8 +12,9 @@
  * Resolves U-2 (actual rate limits by tier) and U-3 (shop GID resolution)
  * partially: we observe the response shape and any rate-limit headers.
  */
-import { config } from "dotenv";
+
 import { resolve } from "node:path";
+import { config } from "dotenv";
 
 // Load .env before importing app code that reads process.env at import time.
 config({ path: resolve(import.meta.dirname, "..", ".env") });
@@ -27,7 +28,9 @@ async function main() {
   const profileUrl = process.env.UCP_AGENT_PROFILE_URL;
 
   if (!clientId || !clientSecret) {
-    console.error("SHOPIFY_CLIENT_ID and SHOPIFY_CLIENT_SECRET must be set in .env");
+    console.error(
+      "SHOPIFY_CLIENT_ID and SHOPIFY_CLIENT_SECRET must be set in .env",
+    );
     process.exit(1);
   }
   if (!profileUrl) {
@@ -51,7 +54,9 @@ async function main() {
 
   if (!tokenRes.ok) {
     const body = await tokenRes.text();
-    console.error(`  Token fetch failed: ${tokenRes.status} ${tokenRes.statusText}`);
+    console.error(
+      `  Token fetch failed: ${tokenRes.status} ${tokenRes.statusText}`,
+    );
     console.error(`  Response: ${body}`);
     process.exit(1);
   }
@@ -68,7 +73,9 @@ async function main() {
 
   console.log(`  JWT payload keys: ${Object.keys(payload).join(", ")}`);
   console.log(`  Scopes:   ${JSON.stringify(payload.scopes)}`);
-  console.log(`  Expires:  ${new Date((payload.exp as number) * 1000).toLocaleTimeString()}`);
+  console.log(
+    `  Expires:  ${new Date((payload.exp as number) * 1000).toLocaleTimeString()}`,
+  );
   if (payload.limits) {
     console.log(`  Limits:   ${JSON.stringify(payload.limits)}`);
   }
@@ -79,12 +86,16 @@ async function main() {
   const profileRes = await fetch(profileUrl);
   console.log(`  Status: ${profileRes.status} ${profileRes.statusText}`);
   if (!profileRes.ok) {
-    console.error("  Profile URL is not reachable — Shopify cannot negotiate capabilities.");
+    console.error(
+      "  Profile URL is not reachable — Shopify cannot negotiate capabilities.",
+    );
     process.exit(1);
   }
   const profile = await profileRes.json();
   console.log(`  UCP version: ${profile.ucp?.version}`);
-  console.log(`  Capabilities: ${Object.keys(profile.ucp?.capabilities ?? {}).join(", ")}`);
+  console.log(
+    `  Capabilities: ${Object.keys(profile.ucp?.capabilities ?? {}).join(", ")}`,
+  );
 
   // ── 3. Call search_catalog ───────────────────────────────────
   console.log("\n── 3. Global Catalog search ────────────────────────\n");
@@ -101,14 +112,16 @@ async function main() {
         },
         catalog: {
           query: "SOT-223 voltage regulator",
-          context: { intent: "Looking for SOT-223 package LDO voltage regulators" },
+          context: {
+            intent: "Looking for SOT-223 package LDO voltage regulators",
+          },
           pagination: { limit: 5 },
         },
       },
     },
   };
 
-  console.log("  Query: \"SOT-223 voltage regulator\"");
+  console.log('  Query: "SOT-223 voltage regulator"');
   console.log("  Sending request...");
 
   const searchRes = await fetch(CATALOG_ENDPOINT, {
@@ -123,7 +136,11 @@ async function main() {
   // Print rate-limit headers if present (informs U-2)
   const rateLimitHeaders: Record<string, string> = {};
   for (const [key, value] of searchRes.headers.entries()) {
-    if (key.toLowerCase().includes("rate") || key.toLowerCase().includes("x-shopify") || key.toLowerCase().includes("retry")) {
+    if (
+      key.toLowerCase().includes("rate") ||
+      key.toLowerCase().includes("x-shopify") ||
+      key.toLowerCase().includes("retry")
+    ) {
       rateLimitHeaders[key] = value;
     }
   }
@@ -154,11 +171,17 @@ async function main() {
 
   if (searchData.result?.structuredContent) {
     const content = searchData.result.structuredContent as {
-      products?: Array<{ id?: string; title?: string; seller?: { id?: string; name?: string } }>;
+      products?: Array<{
+        id?: string;
+        title?: string;
+        seller?: { id?: string; name?: string };
+      }>;
       total_count?: number;
     };
     const products = content.products ?? [];
-    console.log(`  total_count (estimate): ${content.total_count ?? "not provided"}`);
+    console.log(
+      `  total_count (estimate): ${content.total_count ?? "not provided"}`,
+    );
     console.log(`  Products returned: ${products.length}`);
     for (const product of products.slice(0, 5)) {
       console.log(
@@ -167,11 +190,15 @@ async function main() {
     }
   } else {
     console.log("  No structuredContent in response");
-    console.log(`  Full result: ${JSON.stringify(searchData.result, null, 2).slice(0, 500)}`);
+    console.log(
+      `  Full result: ${JSON.stringify(searchData.result, null, 2).slice(0, 500)}`,
+    );
   }
 
   if (searchData.result?.messages?.length) {
-    console.log(`  Messages: ${JSON.stringify(searchData.result.messages, null, 2)}`);
+    console.log(
+      `  Messages: ${JSON.stringify(searchData.result.messages, null, 2)}`,
+    );
   }
 
   console.log("\n── Done ────────────────────────────────────────────\n");

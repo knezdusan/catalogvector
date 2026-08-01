@@ -4,9 +4,9 @@
 |---|---|
 | **Document** | TDD (governing, technical) |
 | **Companion** | `BLUEPRINT.md` (governing, non-technical) |
-| **Version** | 0.3.0 |
+| **Version** | 0.3.1 |
 | **Date** | 1 August 2026 |
-| **Status** | Design + scaffold + I-4 resolved. Project scaffolded (Next.js 16.3, folder structure, agent tooling, CI, MIT licence). UCP agent profile + auth helper wired. No pipeline code written. Phase 0 not started. |
+| **Status** | Design + scaffold + I-3, I-4 resolved. Project scaffolded (Next.js 16.3, folder structure, agent tooling, CI, MIT licence). UCP agent profile + auth helper wired. Shopify AI Toolkit adapted for Devin. No pipeline code written. Phase 0 not started. |
 
 ---
 
@@ -35,20 +35,21 @@ The Remix template is maintained for critical security issues only. The React Ro
 
 *Relevance to Phase 1: none — Phase 1 builds no Shopify app.* Recorded because Phase 2 will, and because it is a common source of outdated AI-generated code.
 
-### 2.2 Agent tooling *(28 Jul 2026; updated 31 Jul 2026)*
+### 2.2 Agent tooling *(28 Jul 2026; updated 1 Aug 2026)*
 
-**Shopify agent tooling** — install day one, grounds the agent in live schemas:
-```bash
-# Plugin (recommended, auto-updates)
-claude plugin install shopify-ai-toolkit@claude-plugins-official
+**Shopify agent tooling** — adapted for Devin Desktop (Shopify's plugin path supports Claude Code, Codex, Cursor, VS Code, Hermes — not Devin. The three underlying components are tool-agnostic and all work with Devin's extensibility model):
 
-# Standalone Dev MCP — docs + GraphQL schema validation, no auth, no dev app
-claude mcp add --transport stdio shopify-dev-mcp -- npx -y @shopify/dev-mcp@latest
+1. **Dev MCP server** (`@shopify/dev-mcp@latest`, stdio) — Shopify developer docs + GraphQL schema validation. No auth, no dev app. Configured in `.devin/config.json` and `.mcp.json` as a stdio MCP server (same pattern as `next-devtools-mcp`). Tools: `learn_shopify_api`, `search_docs_chunks`, `validate_graphql_codeblocks`, `validate_component_codeblocks`, `validate_theme`. Verified operational 1 Aug 2026.
 
-# UCP CLI
-npm install -g @shopify/ucp-cli
-```
-Dev MCP is read-only, local stdio, public. It grounds the coding agent in live schemas — install day one. A `CLAUDE.md` rule should force schema validation before any proposed Shopify code.
+2. **Shopify AI Toolkit skills** (via `npx skills add Shopify/shopify-ai-toolkit --skill <name>`) — installed to `.agents/skills/`, symlinked for Devin for Terminal. Four skills selected for Phase 1 relevance (out of 21 total):
+   - `ucp` — UCP/Global Catalog operations, natural language → UCP CLI command mapping
+   - `shopify-dev` — general Shopify development guidance
+   - `shopify-storefront-graphql` — Storefront API (relevant for storefront JSON understanding, C2)
+   - `shopify-use-shopify-cli` — Shopify CLI usage
+
+   Skills not installed (not relevant to Phase 1 read-only catalog analysis): `shopify-admin`, `shopify-app-store-review`, `shopify-custom-data`, `shopify-customer`, `shopify-functions`, `shopify-hydrogen`, `shopify-liquid`, `shopify-onboarding-dev`, `shopify-onboarding-merchant`, `shopify-partner`, `shopify-payments-apps`, `shopify-polaris-*` (4 skills), `shopify-pos-ui`, `shopify-shopifyql`. Add as needed if scope expands.
+
+3. **UCP CLI** (`@shopify/ucp-cli` v0.6.3, global npm install) — terminal access to Global Catalog search/lookup/get_product. Local profile initialized as `catalogvector` (`~/.ucp/profiles/catalogvector`). Auth via `SHOPIFY_CLIENT_ID`/`SHOPIFY_CLIENT_SECRET` env vars. Verified: `ucp catalog search --set '/query=SOT-223 voltage regulator'` returns 10 of 354 results with seller domains, variant GIDs, and buy-now URLs.
 
 **Next.js 16.3 first-party agent tooling** *(31 Jul 2026)* — scaffolded into the project:
 - **Bundled docs via `AGENTS.md`** — `next dev` auto-manages a block pointing agents at `node_modules/next/dist/docs/` (version-matched). Project rules added on top: stack, commands, `@/*` alias, Cache Components decision tree, governing-docs-first rule.
@@ -486,3 +487,4 @@ Actions that must happen on or before the day the report goes public. Each is a 
 | 2026-07-31 | 0.2.0 | **Naming:** `ShopifyAiScanner` → `CatalogVector` (repo `github.com/knezdusan/catalogvector`). **Scaffold:** Next.js 16.3 preview (`cacheComponents: true`, `reactCompiler: true`, `agentRules: true`), React 19.2, TypeScript strict + `verbatimModuleSyntax` + `noUncheckedIndexedAccess` (target ES2022), Biome 2 (replaces ESLint/Prettier), Tailwind v4. Folder structure replicated from §3: `src/app/{(public),admin,api/inngest}`, `src/db/{schema,index}`, `src/inngest/{client,functions}`, `src/lib/scanner/c1–c7` stubs with TDD interface signatures, `scripts/` probes (excluded from tsconfig). **§2.2 agent tooling:** added Next.js 16.3 first-party stack (`next-devtools-mcp`, `agent-browser` 0.27, `next-dev-loop` skill, `.devin/` config, `AGENTS.md`). **§8 tests:** Vitest + Playwright (`@next/playwright` `instant()` helper) staged. **Foundation:** Zod env validation (`src/lib/env.ts`, `.env.example`), `next.config.ts` hardened (CSP, HSTS, `poweredByHeader: false`, `reactStrictMode: true`), GitHub Actions CI. All C1–C9 remain `PENDING`/`BLOCKED` — stubs only, no implementation. |
 | 2026-07-31 | 0.2.1 | **Licence:** MIT `LICENSE` added at repo root (copyright Dušan Knežević, 2026) — repo is now genuinely open source. **§11 Launch Day checklist:** added, led by the `robots: noindex` removal reminder (`src/app/layout.tsx` currently sets `robots: { index: false, follow: false }` for the placeholder; must flip to `index: true` before publication or the report is invisible to search). |
 | 2026-08-01 | 0.3.0 | **I-4 RESOLVED — U-1 closed, lead-time risk eliminated.** §2.4 auth model corrected: the original design conflated capability negotiation (agent profile) with authentication (rate-limit tier). Spring '26 removed the approval requirement — API key is generated instantly in Dev Dashboard → Catalogs. Two separate concerns now documented: (1) agent profile = JSON at `public/ucp-agent-profile.json` (catalog-only: `dev.ucp.shopping.catalog.search` + `dev.ucp.shopping.catalog.lookup` + `dev.shopify.catalog.global`), included as `meta.ucp-agent.profile`; (2) auth = Token tier, `SHOPIFY_CLIENT_ID`/`SHOPIFY_CLIENT_SECRET` → bearer token at `https://api.shopify.com/auth/access_token` (scope `read_global_api_catalog_search`, 60-min expiry, runtime fetch), sent as `Authorization: Bearer`. **Code:** `src/lib/scanner/ucp-auth.ts` (token fetch), C3 stub updated with real JSON-RPC request shape + Authorization header. **Env:** `SHOPIFY_CLIENT_ID`, `SHOPIFY_CLIENT_SECRET`, `UCP_AGENT_PROFILE_URL` added. **Manual step remaining:** user generates API key in Dev Dashboard and adds credentials to `.env.local`. |
+| 2026-08-01 | 0.3.1 | **I-3 DONE — Shopify AI Toolkit adapted for Devin Desktop.** Shopify's plugin path supports Claude Code, Codex, Cursor, VS Code, Hermes — not Devin. §2.2 rewritten with the Devin-adapted approach: (1) `shopify-dev-mcp` MCP server (stdio, docs + GraphQL validation, no auth) added to `.devin/config.json` + `.mcp.json` — verified 5 tools operational (`learn_shopify_api`, `search_docs_chunks`, `validate_graphql_codeblocks`, `validate_component_codeblocks`, `validate_theme`); (2) 4 Shopify AI Toolkit skills installed via `npx skills add` to `.agents/skills/` (`ucp`, `shopify-dev`, `shopify-storefront-graphql`, `shopify-use-shopify-cli` — 4 of 21 total, selected for Phase 1 read-only catalog relevance; other 17 listed in §2.2 for future reference); (3) `@shopify/ucp-cli` v0.6.3 global, profile `catalogvector` initialized, verified with live catalog search. AGENTS.md updated with Shopify tooling section. |

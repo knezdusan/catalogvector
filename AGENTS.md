@@ -49,6 +49,14 @@ Zod-validate every external payload before persistence (TDD §5 C2/C3). Never tr
 
 Use the `next-dev-loop` skill to verify edits at runtime (drive the browser, read console, inspect React tree). The `next-devtools` MCP server (configured in `.devin/config.json` and `.mcp.json`) exposes routes, server logs, and compilation issues from the running dev server. After edits, check `get_errors` / `get_compilation_issues` before declaring done.
 
+## Shopify agent tooling
+
+Three components, all configured for Devin Desktop (TDD §2.2):
+
+- **`shopify-dev-mcp`** (MCP server, stdio) — Shopify developer docs + GraphQL schema validation. Configured in `.devin/config.json` and `.mcp.json`. Tools: `learn_shopify_api`, `search_docs_chunks`, `validate_graphql_codeblocks`. No auth required. Use it to validate any GraphQL against live Shopify schemas before committing.
+- **Shopify AI Toolkit skills** (in `.agents/skills/`, symlinked for Devin) — `ucp` (UCP/Global Catalog operations), `shopify-dev` (general Shopify dev guidance), `shopify-storefront-graphql` (Storefront API), `shopify-use-shopify-cli` (CLI usage). Invoke these when working on Shopify-integrated code.
+- **UCP CLI** (`@shopify/ucp-cli` v0.6.3, global) — terminal access to Global Catalog search/lookup/get_product. Profile initialized as `catalogvector`. Use `ucp catalog search --set '/query=...'` for quick probes. Auth via `SHOPIFY_CLIENT_ID`/`SHOPIFY_CLIENT_SECRET` env vars (loaded from `.env`).
+
 ## What this is NOT (BLUEPRINT §4)
 
 No App Store listing, no billing, no multi-tenancy, no merchant OAuth, no generic readiness scanner, no SaaS scaffolding "for later", no write path to any merchant's store. Phase 1 is read-only against public surfaces. If a decision is only justified by "we'll need it when this becomes a product," it is out.
