@@ -4,7 +4,7 @@
 |---|---|
 | **Document** | TDD (governing, technical) |
 | **Companion** | `BLUEPRINT.md` (governing, non-technical) |
-| **Version** | 0.4.1 |
+| **Version** | 0.5.0 |
 | **Date** | 2 August 2026 |
 | **Status** | Design + scaffold + I-3, I-4 resolved. U-3, U-4 resolved. Inference-accuracy reframe nullified (n=59, 1.7% error). **Fitment-recall probe: PROVISIONAL coverage gap** (corrected mean recall ~0.70 < 0.80 threshold, n=12, 1-2 stores; inferred-set audit passed — zeros are real platform failures, not extractor bugs; but extractor needs hardening, matching needs handle/SKU, stratification didn't happen, re-run required before declaration). Original thesis holds: specs visible ≠ products retrievable. §6 `fitment_recall` is the primary metric. No pipeline code written. Phase 0 not started. |
 
@@ -107,10 +107,11 @@ Published products are auto-enrolled with manual opt-out. Rate limiting and cach
 | U-3 | ~~Can a shop GID be resolved from a public domain without OAuth?~~ **RESOLVED 1 Aug 2026:** Yes, via `search_catalog` with a shop-identifying query. `lookup_catalog` requires GIDs (not URLs) as input, so it cannot resolve a domain. Instead, search for a product unique to the target shop and extract `variants[].seller.id` (format: `gid://shopify/Shop/<id>`). Verified: Two Step Performance → `gid://shopify/Shop/1357086779`, Movcan → `gid://shopify/Shop/71335575609`. | ~~C1 → C3 handoff~~ | Done — see §2.4 |
 | U-4 | ~~Is `filters.shops` semantics a hard restriction or a soft bias?~~ **RESOLVED 1 Aug 2026:** **HARD RESTRICTION with query fallback.** Control experiment (5 tests, 250 products, 0 containment violations): `filters.shops` restricts results to the scoped shop set — every returned product carries at least one seller from the scoped set. The negative control (T3: "wedding dress" scoped to an auto-parts shop) returned 50 products, all from the target shop, 0 violations — the filter held. **Caveat:** the query is a soft ranking signal within the shop, not a hard filter. When the query has no matches in the scoped shop, the API returns the shop's general catalog instead of an empty set. **Implication for C6:** recall@k must account for query relevance, not just product presence. Store-scoped retrieval measurement is valid. | ~~C6 scoring validity~~ | Done — transcript at `scripts/output/u4-*.json` |
 | U-5 | Do Catalog results reflect merchant metafields at all? | C5/C6 interpretation, all Phase 2 value claims | Seed a dev store with structured metafields, wait out §2.6 delay, compare |
+| U-6 | **Does Global Catalog rank predict what a consumer AI assistant actually surfaces?** `BLUEPRINT.md` §2.2 asserts the Global Catalog *"is the same retrieval surface the consumer AI assistants query."* Every measurement in this project inherits that claim, and it was never in §2.7's unknowns until now. **Status: OPEN (DIRECTIVE-5 §5, 2 Aug 2026).** Founder-owned: put the same relational queries to ChatGPT, Copilot, Gemini as a shopper would; record which merchants/products each names; compare against unscoped rank ordering. Blocks the publication framing, not the measurement. | Publication framing | One afternoon, no code. If rank predicts assistant output, the instrument is validated against the outcome — and that validation is itself publishable. If it does not, the Global Catalog is a proxy, and this project has been measuring a proxy while its entire position rests on criticising everyone else for measuring proxies. |
 
 **Verified platform fact — Shopify storefront `tags` schema (2 Aug 2026, DIRECTIVE-4 §11):** Shopify's `/products.json` and `/products/<handle>.json` endpoints return `tags` as a **comma-separated string**, not an array. Example: `"tags": "10percent, 2003 Mitsubishi Evo 8, 2004 Subaru WRX STI, ..."`. This is significant because tags often contain vehicle fitment data (make + model + year) that is invisible to an extractor expecting an array. The Stage 1 probe's `StorefrontProduct` Zod schema expected `z.array(z.string())`, causing every `fetchStorefrontProduct()` call to fail silently (Zod parse error caught in a try/catch that returned null). This suppressed ~99% of matches across three of four stores. Fix: `z.union([z.string(), z.array(z.string())])`. **Every Zod parse failure must be logged and counted (DIRECTIVE-4 §4 P-4.4) — a zero-match store is a loud error, never an empty row.**
 
-**U-4 and U-5 are the two that can invalidate the methodology.** They are scheduled in Week 1, not Week 3.
+**U-4 and U-5 are the two that can invalidate the methodology.** They are scheduled in Week 1, not Week 3. **U-6 blocks the publication framing, not the measurement — it can run in parallel with Stage 2.5 and does not gate it.**
 
 ---
 
@@ -399,7 +400,7 @@ export const scanStore = inngest.createFunction(
 | `recall@50` | Same at the page maximum | Separates "invisible" from "buried" |
 | `best_rank` | Best position of any `should_match` product; null if absent | Ordinal, robust |
 | `retrieval_rate` | Queries with ≥1 `should_match` retrieved, over all queries | The headline number |
-| `competitor_displacement` | Whether other merchants' products fill the slots | Converts a technical finding into a commercial one |
+| `competitor_displacement` | Whether other merchants' products fill the slots — the seller domains occupying the top 10, and for each, whether the product is a near-equivalent of the target. **Produced by Stage 2.5 (DIRECTIVE-5 §3).** | Converts a technical finding into a commercial one. Defined since day one, never produced until Stage 2.5. |
 | `fitment_recall` | **\|inferred ∩ stated\| / \|stated\|** — fraction of vehicles in the merchant's stated fitment set that appear in the Catalog's inferred `metadata.tech_specs`. Unit is (make, model), not (year, make, model, trim). | **The coverage finding (1 Aug 2026).** Shopify's inference drops vehicles from fitment lists. If the merchant says a pad fits a Mégane RS and the Catalog omits it, an agent cannot retrieve that product. This is the original thesis: specs visible ≠ products retrievable. Measured by `scripts/probe-fitment-recall.ts`. |
 | `inference_error_rate` | **(Contradicted + Unsourced) / total inferred claims**, hand-labelled against merchant source text. | **Secondary metric (1 Aug 2026, n=59, 1 store).** Error rate: 1.7% (1/59). Fitment errors: 0/9. Contradictions: 0/59. Conclusion: well-functioning extraction pipeline, not a hallucination problem. Retained as a secondary dimension; the inference-accuracy reframe is invalidated (BLUEPRINT §3). Ground truth is human-labelled — using an LLM to judge an LLM's extraction begs the question. |
 
@@ -432,6 +433,8 @@ export const scanStore = inngest.createFunction(
 **Dual scoring rules (DIRECTIVE-4 §2.3, 2 Aug 2026):** Report both `relational_recall_prefix` (symmetric, headline) and `relational_recall_strict` (exact key, sensitivity) every time. On Stage 1's sample the defensible range is roughly **0.58 – 0.68**. The number is unstable across scoring rules; its ordering against 0.80 is not. **Report the range, not a point estimate.**
 
 **P-3 resolution (DIRECTIVE-4 §7, 2 Aug 2026):** "Multiple Fitments" is the merchant's own title, faithfully preserved by Shopify. The speculated second coverage mechanism does not exist. Resolved by fetching the storefront JSON (`/products/<handle>.json`) and comparing — the storefront title is identical to the catalog title. The previous session's 0-row contribution from MAPerformance was a matching failure (storefront product list didn't include the catalog products), not a title collapse.
+
+**Stage 2 conclusion withdrawn as unsupported (DIRECTIVE-5 §0, 2 Aug 2026):** Stage 2 (Workstream B) used `filters.shops` scoping per DIRECTIVE-3 §5 / DIRECTIVE-4 §3, which removes every competitor from the result set. Competition is the only mechanism by which a missing attribute costs a merchant a sale. Stage 2 therefore measured whether a product can be found *inside its own store* — not the commercial question. The Stage 2 conclusion — "the `fitment_recall` line has no commercial consequence" — is **withdrawn as unsupported, not as false**. It may be true; the experiment cannot establish it. Stage 2.5 (DIRECTIVE-5 §3) re-runs the same frozen query set without `filters.shops` to test the actual commercial question.
 
 > **Probe:** 20 products across 3–4 stores, stratified by source-text richness (10 with descriptions under ~500 chars, 10 over 3,000). For each, extract the merchant's stated fitment set and the Catalog's inferred fitment set. Metric: `fitment_recall = |inferred ∩ stated| / |stated|`.
 >
@@ -490,12 +493,46 @@ export const scanStore = inngest.createFunction(
 
 **If H2 holds, it is commercially better news than H1.** "Your fitment table is past the extraction budget — move it up and structure it" is a specific, cheap, verifiable remediation a merchant can act on. "The platform drops relational attributes" is a complaint about Shopify.
 
+### 6.1.3 H3 — unscoped competitive retrieval (pre-registered 2 Aug 2026, DIRECTIVE-5 §3)
+
+**The question Stage 2 could not ask:** when a buyer's query goes to the whole Global Catalog, does this merchant's product appear at all — and who occupies the slots when it doesn't?
+
+**Design.** Re-issue the same frozen query set (`scripts/retrieval-query-set.json`, commit `b0365f6`) with `filters.shops` removed. Only one parameter changes; pre-registration is preserved. Keep `address_country: 'US'` per §6.3 limitation 5.
+
+**Pre-registered decision rule — fixed 2 August 2026, before any run:**
+
+> **H3 confirmed (the coverage gap has commercial consequence):** `unscoped_presence@50` for the dropped-relational population is lower than for the retained-relational population by **≥ 0.30 absolute**, across relational queries.
+>
+> **H3 rejected (no consequence):** the difference is **≤ 0.10**.
+>
+> **H3 inconclusive:** anything between, or fewer than 6 (target, relational query) pairs in either population, or fewer than 3 distinct targets appearing at all in either population.
+
+Inconclusive is a likely and acceptable outcome at this n. The run is worth doing anyway because `competitor_displacement` is produced either way, and that table stands on its own.
+
+### 6.1.4 H4 — the title-coverage hypothesis (pre-registered 2 Aug 2026, DIRECTIVE-5 §4)
+
+**Observation from Stage 2 §8.3:** the metric that predicts retrieval may be `title_vehicle_coverage`, not `fitment_recall`. Under title dominance, products whose title names no vehicle ("Multiple Fitments", bare part numbers) are structurally unretrievable by relational query — a merchant-caused failure with a merchant-side fix.
+
+**Design.** Assemble ≥8 products across ≥2 stores whose Catalog title names no vehicle, but whose merchant data (tags, body, or tech_specs) states one. Pair each with a matched control from the same store and category whose title does name the vehicle. Issue relational queries for the stated vehicles both unscoped and shop-scoped.
+
+**Pre-registered decision rule — fixed 2 August 2026, before any run:**
+
+> **H4 supported (title dominates retrieval):** title-absent products show `presence@50` at least **0.40 below** matched title-present products, on the unscoped run.
+>
+> **H4 rejected:** the difference is within **0.15**.
+>
+> **H4 inconclusive:** anything between, or fewer than 8 title-absent products assembled, or fewer than 6 matched pairs.
+
+**If H4 is supported it is the best commercial news this project has produced.** A platform defect is a complaint Shopify can close next quarter. A merchant-authored title defect is diagnosable, fixable, verifiable by the merchant, and independent of Shopify's inference pipeline entirely.
+
 ### 6.2 Miss classification
 When an expected product is not retrieved, classify why — **this is the part with commercial value**, because it is the fix list:
 
 `spec_unstructured` · `taxonomy_mismatch` · `variant_fragmentation` · `title_uninformative` · `identifier_missing` · `not_enrolled` · `unexplained`
 
 `unexplained` is reported honestly and not minimised. A methodology with no residual is a methodology that is hiding something.
+
+**Exclusion rule (DIRECTIVE-5 §1.3, 2 Aug 2026):** A retrieved target may be removed from the `should_match` population **only** by an explicit `should_not_match` label. It may never be removed on the basis of a §6.2 miss class, because a miss class presupposes it should have matched. A product cannot be both a classified miss and excluded from the `should_match` population.
 
 ### 6.3 Stated limitations (must appear in PUB-2)
 1. Metafields are invisible to public storefront JSON, so merchant-side structured data may be understated (§2.3).
@@ -589,3 +626,4 @@ Actions that must happen on or before the day the report goes public. Each is a 
 | 2026-08-01 | 0.4.0 | **U-3, U-4 resolved; inference-accuracy reframe proposed and nullified; fitment-recall probe: PROVISIONAL coverage gap.** U-4 control experiment (`scripts/probe-u4-shop-filter.ts`, 5 tests, 250 products): (1) **U-3 RESOLVED:** shop GIDs resolvable via `search_catalog` + `variants[].seller.id`. (2) **U-4 RESOLVED:** `filters.shops` is a HARD RESTRICTION (0 containment violations across all 5 tests, including page 2 with real cursor). Query is a soft ranking signal within a shop. `metadata.tech_specs` populated on ~99% of products. **Inference-accuracy probe** (n=59 claims, 10 products, 1 store): error rate 1.7% (1/59), fitment errors 0/9, contradictions 0/59. Well-functioning extraction pipeline — the "hallucination" reframe is nullified (BLUEPRINT §3). **The real finding is coverage, not accuracy:** Shopify's inference drops vehicles from fitment lists. **Fitment-recall probe** (`scripts/probe-fitment-recall.ts`, pre-registered threshold 0.80): raw mean recall 0.490 (n=12, 1 store). After stated-set audit (correcting extractor errors): corrected mean recall **0.70** (n=12, headline) / **0.64** (n=17, sensitivity). **Inferred-set audit passed:** all 6 products with zero inferred fitment checked by reading raw `tech_specs` — genuinely devoid of vehicle names, parametric specs only. Zeros are real platform failures, not extractor bugs. **Below 0.80 threshold but NOT DECLARED — PROVISIONAL.** Extractor needs hardening (both sides), matching needs handle/SKU (2/4 stores contributed zero rows), stratification didn't happen (all rich-bucket), sample is 1-2 stores. Pre-registration deviations documented honestly: n=17 pulls from `all` after numbers visible (moves headline downward — report n=12/0.70 as headline). MAPerformance/Springrates title collapse ("Multiple Fitments" instead of vehicle names) is a coverage finding in its own right. §2.5 updated (coverage, not accuracy). §6 `fitment_recall` is primary metric, `inference_error_rate` secondary. §6.1.1 pre-registered decision rule + first-run results + deviations. BLUEPRINT §1, §2.2 reverted to v0.3.1 framing; §3 updated with both invalidated directions. |
 | 2026-08-02 | 0.4.1 | **DIRECTIVE-3 §6 executed — timebox withdrawn, milestones evidence-gated.** BLUEPRINT §5.1 added (per directive authorization): three-week timebox withdrawn; milestones now evidence-gated not calendar-gated; Gate A inbound-conversation threshold suspended pending redefinition by directive (no replacement invented). BLUEPRINT §5 Phase 1 header annotated to point at §5.1. TDD §9 marked SUPERSEDED with pointer to BLUEPRINT §5.1. No pre-registered thresholds touched. §3 inference-accuracy entry verified present (line 89, added in 0.4.0) — not re-added. DIRECTIVE-3 prerequisites (P-1, P-2, P-3) and Workstreams A/B not yet started. |
 | 2026-08-02 | 0.5.0 | **DIRECTIVE-3 Stage 1 (prerequisites) + DIRECTIVE-4 §11 governing doc updates.** Stage 1: P-1 (5-tier handle/SKU matching — tier 0 handle-from-variant-URL, tier 1 exact title, tier 2 SKU, tier 3 handle token overlap flagged, tier 4 reject), P-2 (extractor hardened — delimiter splitting, verb/auxiliary rejection, possessive 's' stripping, part-number/chassis-code rejection, ~80 expanded stopwords, symmetric prefix matching — applied identically to both sides), P-3 ("Multiple Fitments" is merchant-authored, not Shopify collapse — resolved by fetching storefront JSON). **Critical bug found:** Shopify returns `tags` as comma-separated string, not array; Zod schema expected array, silently failing 99% of matches for 3/4 stores. Fixed. Stage 1 report: `docs/reports/stage1-followback.md`. **DIRECTIVE-4 §11 updates:** §6 metric definitions copied verbatim from DIRECTIVE-3 §4, marked directive-fixed. §6.1.1 — 0.80 rule sample-design precondition + Stage 1 verdict withdrawal (§1.1), recall/zero-rate bound (§1.3), dual scoring rules prefix/strict (§2.3), P-3 resolution. §6.1.2 — H2 truncation hypothesis pre-registered with decision rule. §2.7 — tags schema finding recorded as verified platform fact. BLUEPRINT §5.1 — Gate A replaced with compound G1/G3 gate. Stage 1 verdict withdrawn per DIRECTIVE-4 §1.1 — auto parts must be re-sampled (3+ stores, 15+ scored products). |
+| 2026-08-02 | 0.5.1 | **DIRECTIVE-4 §3 Stage 2 (Workstream B) + DIRECTIVE-5 §7 governing doc updates.** Stage 2: 18 queries (14 relational + 4 intrinsic) across 7 archetypes, scoped to TSP via `filters.shops`. 55 hand-labelled pairs (27 should_match, 14 partial, 14 should_not_match). C5 acid test passed (2 partial verdicts field presence could not produce). Misses classified: taxonomy_mismatch ×2, title_uninformative ×2, variant_fragmentation ×1. **Stage 2 conclusion withdrawn as unsupported (DIRECTIVE-5 §0):** `filters.shops` scoping removed all competitors — the experiment measured within-store findability, not commercial consequence. **DIRECTIVE-5 §7 updates:** §2.7 — U-6 (Global Catalog rank vs assistant output) registered OPEN. §6.1.1 — Stage 2 conclusion withdrawn with scoping reason. §6.1.3 — H3 unscoped competitive retrieval pre-registered. §6.1.4 — H4 title-coverage hypothesis pre-registered. §6.2 — exclusion rule: removal from should_match requires should_not_match label, never a miss class. `competitor_displacement` marked as produced by Stage 2.5. Version headers fixed to 0.5.0. |
