@@ -28,22 +28,21 @@
  *   scripts/output/u5-seed-<timestamp>.json — full transcript.
  */
 
-import { writeFile, mkdir } from 'node:fs/promises';
-import { join } from 'node:path';
-import { config } from 'dotenv';
-import { resolve } from 'node:path';
+import { mkdir, writeFile } from "node:fs/promises";
+import { join, resolve } from "node:path";
+import { config } from "dotenv";
 
-config({ path: resolve(import.meta.dirname, '..', '.env') });
+config({ path: resolve(import.meta.dirname, "..", ".env") });
 
 const SHOPIFY_ACCESS_TOKEN = process.env.SHOPIFY_ACCESS_TOKEN;
-const SHOPIFY_STORE = process.env.SHOPIFY_STORE || 'catalogvector';
+const SHOPIFY_STORE = process.env.SHOPIFY_STORE || "catalogvector";
 
 if (!SHOPIFY_ACCESS_TOKEN) {
   console.error(
-    'SHOPIFY_ACCESS_TOKEN must be set in .env.\n' +
-      'Get it from the dev store Admin → Apps → Develop apps → Create an app →\n' +
-      'Configure Admin API scopes (write_products, write_metafields) → Install →\n' +
-      'Get Admin API access token.',
+    "SHOPIFY_ACCESS_TOKEN must be set in .env.\n" +
+      "Get it from the dev store Admin → Apps → Develop apps → Create an app →\n" +
+      "Configure Admin API scopes (write_products, write_metafields) → Install →\n" +
+      "Get Admin API access token.",
   );
   process.exit(1);
 }
@@ -53,18 +52,23 @@ const ADMIN_API_URL = `https://${SHOPIFY_STORE}.myshopify.com/admin/api/2026-04/
 /** Unique token that won't appear anywhere else in any catalog. */
 const U5_TOKEN = `U5SEED-${Date.now()}-CATALOGVECTOR`;
 
-async function gql<T>(query: string, variables: Record<string, unknown>): Promise<T> {
+async function gql<T>(
+  query: string,
+  variables: Record<string, unknown>,
+): Promise<T> {
   const res = await fetch(ADMIN_API_URL, {
-    method: 'POST',
+    method: "POST",
     headers: {
-      'Content-Type': 'application/json',
-      'X-Shopify-Access-Token': SHOPIFY_ACCESS_TOKEN,
+      "Content-Type": "application/json",
+      "X-Shopify-Access-Token": SHOPIFY_ACCESS_TOKEN,
     },
     body: JSON.stringify({ query, variables }),
   });
   const json = await res.json();
   if (!res.ok) {
-    throw new Error(`GraphQL error: ${res.status} ${res.statusText}\n${JSON.stringify(json, null, 2)}`);
+    throw new Error(
+      `GraphQL error: ${res.status} ${res.statusText}\n${JSON.stringify(json, null, 2)}`,
+    );
   }
   if (json.errors) {
     throw new Error(`GraphQL errors: ${JSON.stringify(json.errors, null, 2)}`);
@@ -73,13 +77,13 @@ async function gql<T>(query: string, variables: Record<string, unknown>): Promis
 }
 
 async function main() {
-  console.log('\nU-5 SEED — creating product with distinctive metafields');
-  console.log('═'.repeat(64));
+  console.log("\nU-5 SEED — creating product with distinctive metafields");
+  console.log("═".repeat(64));
   console.log(`Store: ${SHOPIFY_STORE}.myshopify.com`);
   console.log(`Token: ${U5_TOKEN}`);
 
   // ── 1. Create the product ──────────────────────────────────────────────
-  console.log('\n── 1. Creating product ──────────────────────────────\n');
+  console.log("\n── 1. Creating product ──────────────────────────────\n");
 
   const createMutation = `
     mutation CreateProduct($input: ProductInput!) {
@@ -99,26 +103,38 @@ async function main() {
   const productInput = {
     title: `U5 Test Product ${U5_TOKEN}`,
     descriptionHtml: `<p>This is a U5 test product for CatalogVector. Unique token: ${U5_TOKEN}. Voltage: 4.2V. Fitment: U5-TEST-VERTICAL-ONLY.</p>`,
-    vendor: 'CatalogVector Test',
-    productType: 'Test Component',
-    status: 'ACTIVE',
-    tags: ['u5-test', 'catalogvector-probe'],
+    vendor: "CatalogVector Test",
+    productType: "Test Component",
+    status: "ACTIVE",
+    tags: ["u5-test", "catalogvector-probe"],
     variants: [
       {
-        price: '99.99',
+        price: "99.99",
         sku: `U5-${Date.now()}`,
-        inventoryManagement: 'SHOPIFY',
+        inventoryManagement: "SHOPIFY",
         inventoryQuantities: [{ availableQuantity: 1, locationId: null }],
       },
     ],
   };
 
   const createResult = await gql<{
-    productCreate: { product: { id: string; handle: string; title: string; status: string; onlineStoreUrl: string | null }; userErrors: unknown[] };
+    productCreate: {
+      product: {
+        id: string;
+        handle: string;
+        title: string;
+        status: string;
+        onlineStoreUrl: string | null;
+      };
+      userErrors: unknown[];
+    };
   }>(createMutation, { input: productInput });
 
   if (createResult.productCreate.userErrors.length > 0) {
-    console.error('Product creation errors:', JSON.stringify(createResult.productCreate.userErrors, null, 2));
+    console.error(
+      "Product creation errors:",
+      JSON.stringify(createResult.productCreate.userErrors, null, 2),
+    );
     process.exit(1);
   }
 
@@ -126,33 +142,33 @@ async function main() {
   console.log(`  Product ID: ${product.id}`);
   console.log(`  Handle: ${product.handle}`);
   console.log(`  Status: ${product.status}`);
-  console.log(`  URL: ${product.onlineStoreUrl ?? '(not published yet)'}`);
+  console.log(`  URL: ${product.onlineStoreUrl ?? "(not published yet)"}`);
 
   // ── 2. Add metafields ──────────────────────────────────────────────────
-  console.log('\n── 2. Adding metafields ─────────────────────────────\n');
+  console.log("\n── 2. Adding metafields ─────────────────────────────\n");
 
   const metafields = [
     {
-      namespace: 'custom',
-      key: 'u5_test_token',
+      namespace: "custom",
+      key: "u5_test_token",
       value: U5_TOKEN,
-      type: 'single_line_text_field',
+      type: "single_line_text_field",
     },
     {
-      namespace: 'custom',
-      key: 'u5_spec_value',
-      value: '4.2V',
-      type: 'single_line_text_field',
+      namespace: "custom",
+      key: "u5_spec_value",
+      value: "4.2V",
+      type: "single_line_text_field",
     },
     {
-      namespace: 'custom',
-      key: 'u5_fitment_note',
-      value: 'U5-TEST-VERTICAL-ONLY',
-      type: 'single_line_text_field',
+      namespace: "custom",
+      key: "u5_fitment_note",
+      value: "U5-TEST-VERTICAL-ONLY",
+      type: "single_line_text_field",
     },
   ];
 
-  const metafieldMutation = `
+  const _metafieldMutation = `
     mutation UpdateMetafields($metafields: [MetafieldInput!]!) {
       metafieldsSet(metafields: $metafields) {
         metafields {
@@ -167,7 +183,7 @@ async function main() {
   `;
 
   // metafieldsSet requires ownerId — we need to use the product-specific mutation
-  const productMetafieldMutation = `
+  const _productMetafieldMutation = `
     mutation UpdateProductMetafields($input: ProductInput!) {
       productUpdate(input: $input) {
         product {
@@ -204,11 +220,22 @@ async function main() {
   }));
 
   const metafieldResult = await gql<{
-    metafieldsSet: { metafields: Array<{ id: string; namespace: string; key: string; value: string }>; userErrors: unknown[] };
+    metafieldsSet: {
+      metafields: Array<{
+        id: string;
+        namespace: string;
+        key: string;
+        value: string;
+      }>;
+      userErrors: unknown[];
+    };
   }>(metafieldsSetMutation, { metafields: metafieldInputs });
 
   if (metafieldResult.metafieldsSet.userErrors.length > 0) {
-    console.error('Metafield errors:', JSON.stringify(metafieldResult.metafieldsSet.userErrors, null, 2));
+    console.error(
+      "Metafield errors:",
+      JSON.stringify(metafieldResult.metafieldsSet.userErrors, null, 2),
+    );
     process.exit(1);
   }
 
@@ -217,7 +244,7 @@ async function main() {
   }
 
   // ── 3. Summary ─────────────────────────────────────────────────────────
-  console.log('\n── 3. Summary ────────────────────────────────────────\n');
+  console.log("\n── 3. Summary ────────────────────────────────────────\n");
   console.log(`  Product created with 3 distinctive metafields.`);
   console.log(`  Unique token: ${U5_TOKEN}`);
   console.log(`  Wait at least 24-48 hours for catalog indexing (TDD §2.6).`);
@@ -225,9 +252,9 @@ async function main() {
   console.log(`  (or query the Global Catalog for "${U5_TOKEN}")`);
 
   // ── 4. Persist ──────────────────────────────────────────────────────────
-  const dir = join(process.cwd(), 'scripts', 'output');
+  const dir = join(process.cwd(), "scripts", "output");
   await mkdir(dir, { recursive: true });
-  const stamp = new Date().toISOString().replace(/[:.]/g, '-');
+  const stamp = new Date().toISOString().replace(/[:.]/g, "-");
   const path = join(dir, `u5-seed-${stamp}.json`);
   await writeFile(
     path,
@@ -238,17 +265,17 @@ async function main() {
         product,
         metafields: metafieldResult.metafieldsSet.metafields,
         u5Token: U5_TOKEN,
-        note: 'Wait 24-48h for catalog indexing, then query Global Catalog for the U5 token.',
+        note: "Wait 24-48h for catalog indexing, then query Global Catalog for the U5 token.",
       },
       null,
       2,
     ),
-    'utf8',
+    "utf8",
   );
   console.log(`\n  Transcript → ${path}\n`);
 }
 
 main().catch((err) => {
-  console.error('\nSeed crashed:', err);
+  console.error("\nSeed crashed:", err);
   process.exit(1);
 });

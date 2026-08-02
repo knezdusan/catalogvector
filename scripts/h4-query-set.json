@@ -1,0 +1,257 @@
+{
+  "$schema": "h4-query-set-v1",
+  "created": "2026-08-02",
+  "directive": "DIRECTIVE-5 §4 — H4 title-coverage hypothesis",
+  "design_notes": [
+    "8 title-absent products across 2 stores (TSP=2, MAP=6)",
+    "Each title-absent product has vehicle data in merchant fields (tech_specs or variant description) but NO vehicle in Catalog title",
+    "Matched controls: title-present products from the same store, same vehicle, different category where necessary",
+    "Category matching is imperfect — MAP has no title-present brake pad products (all use 'Multiple Fitments' pattern)",
+    "Pre-registered decision rule: H4 supported if title-absent presence@50 >= 0.40 below title-present; rejected if within 0.15; inconclusive if between or <6 matched pairs",
+    "Deviation from pre-registration: matched pairs are not same-category for MAP controls (no same-category title-present products exist)"
+  ],
+  "title_absent": [
+    {
+      "id": "ta-01",
+      "handle": "paragon-pbp370-brake-pads",
+      "title": "Paragon PBP370 Front Brake Pads",
+      "store": "www.twostepperformance.com",
+      "vehicle_in_merchant_data": "honda civic type r",
+      "merchant_field": "tech_specs"
+    },
+    {
+      "id": "ta-02",
+      "handle": "paragon-pbp1557-brake-pads",
+      "title": "Paragon PBP15570 Rear Brake Pads",
+      "store": "www.twostepperformance.com",
+      "vehicle_in_merchant_data": "honda civic",
+      "merchant_field": "tech_specs"
+    },
+    {
+      "id": "ta-03",
+      "handle": "ferodo-ds2500-front-brake-pads-multiple-fitments-frp3067h",
+      "title": "Ferodo DS2500 Front Brake Pads | Multiple Fitments (FRP3067H)",
+      "store": "www.maperformance.com",
+      "vehicle_in_merchant_data": "ford mustang gt",
+      "merchant_field": "variant description"
+    },
+    {
+      "id": "ta-04",
+      "handle": "ebc-red-stuff-front-brake-pads-multiple-fitments-dp31210c",
+      "title": "EBC RedStuff Front Brake Pads | Multiple Fitments (DP31210C)",
+      "store": "www.maperformance.com",
+      "vehicle_in_merchant_data": "chevrolet camaro",
+      "merchant_field": "variant description"
+    },
+    {
+      "id": "ta-05",
+      "handle": "hawk-performance-street-5-0-brake-pads-multiple-fitments-hb453b-585",
+      "title": "Hawk Performance Street 5.0 Front Brake Pads | Multiple Fitments (HB453B.585)",
+      "store": "www.maperformance.com",
+      "vehicle_in_merchant_data": "subaru wrx sti",
+      "merchant_field": "variant description"
+    },
+    {
+      "id": "ta-06",
+      "handle": "hawk-performance-ceramic-front-brake-pads-multiple-fitments-hb453z-585",
+      "title": "Hawk Performance Ceramic Front Brake Pads | Multiple Fitments (HB453Z.585)",
+      "store": "www.maperformance.com",
+      "vehicle_in_merchant_data": "ford mustang boss 302",
+      "merchant_field": "variant description"
+    },
+    {
+      "id": "ta-07",
+      "handle": "ebc-yellowstuff-rear-brake-pads-multiple-fitments-dp41955r",
+      "title": "EBC Yellowstuff Rear Brake Pads | Multiple Fitments (DP41955R)",
+      "store": "www.maperformance.com",
+      "vehicle_in_merchant_data": "nissan 370z",
+      "merchant_field": "variant description"
+    },
+    {
+      "id": "ta-08",
+      "handle": "ebc-blue-stuff-ndx-front-brake-pads-multiple-fitments-dp51210",
+      "title": "EBC Blue Stuff NDX Front Brake Pads | Multiple Fitments (DP51210)",
+      "store": "www.maperformance.com",
+      "vehicle_in_merchant_data": "subaru brz",
+      "merchant_field": "variant description"
+    }
+  ],
+  "title_present_controls": [
+    {
+      "id": "tp-01",
+      "handle": "27won-performance-valved-exhaust-system-for-2023-honda-civic-type-r-fl5",
+      "title": "27WON Performance Valved Exhaust System for 2023+ Honda Civic Type R [FL5]",
+      "store": "www.twostepperformance.com",
+      "vehicle_in_title": "honda civic type r",
+      "category": "exhaust"
+    },
+    {
+      "id": "tp-02",
+      "handle": "eibach-22-23-honda-civic-type-r-fwd-fl5-sportline-kit-set-of-4-springs",
+      "title": "Eibach Sportline Kit for 2022+ Honda Civic Type R [FL5]",
+      "store": "www.twostepperformance.com",
+      "vehicle_in_title": "honda civic type r",
+      "category": "lowering springs"
+    },
+    {
+      "id": "tp-03",
+      "handle": "hel-hon-4-905",
+      "title": "HEL Performance Stainless Steel Braided Brake Lines for 2022+ Honda Civic Si [FE1]",
+      "store": "www.twostepperformance.com",
+      "vehicle_in_title": "honda civic si",
+      "category": "brake lines"
+    },
+    {
+      "id": "tp-04",
+      "handle": "whiteline-2015-honda-civic-rear-upper-camber-arm-adjustable-pair",
+      "title": "Whiteline Adjustable Rear Upper Camber Arms for 2016+ Honda Civic (Pair) [FC/FK/FE/FL]",
+      "store": "www.twostepperformance.com",
+      "vehicle_in_title": "honda civic",
+      "category": "camber arms"
+    },
+    {
+      "id": "tp-05",
+      "handle": "icon-stage-4-w-billet-uca-suspension-kit-for-2021-2025-ford-f-150-4wd",
+      "title": "ICON Stage 4 Lift Kit CDCV for 2021-2024 Ford F-150 4WD",
+      "store": "www.twostepperformance.com",
+      "vehicle_in_title": "ford f-150",
+      "category": "lift kit"
+    },
+    {
+      "id": "tp-06",
+      "handle": "high-efficiency-downpipe-upgrade-for-2017-2021-honda-civic-type-r-fk8",
+      "title": "High Efficiency Downpipe Upgrade for 2017+, 2023+ Honda Civic Type R FK8 FL5 2.0T & 2024+ Acura Integra Type S 2.0T DE5",
+      "store": "www.twostepperformance.com",
+      "vehicle_in_title": "honda civic type r",
+      "category": "downpipe"
+    }
+  ],
+  "queries": [
+    {
+      "id": "H4Q01",
+      "type": "relational",
+      "population": "title_absent",
+      "query": "brake pads for 2017 Honda Civic Type R",
+      "target_handle": "paragon-pbp370-brake-pads",
+      "target_store": "www.twostepperformance.com",
+      "rationale": "Paragon PBP370 has 'honda civic type r' in tech_specs but not in title. Tests if relational query retrieves it."
+    },
+    {
+      "id": "H4Q02",
+      "type": "relational",
+      "population": "title_absent",
+      "query": "rear brake pads for 2016 Honda Civic",
+      "target_handle": "paragon-pbp1557-brake-pads",
+      "target_store": "www.twostepperformance.com",
+      "rationale": "Paragon PBP15570 has 'honda civic' in tech_specs but not in title. Tests rear brake pad retrieval."
+    },
+    {
+      "id": "H4Q03",
+      "type": "relational",
+      "population": "title_absent",
+      "query": "brake pads for 2011 Ford Mustang GT",
+      "target_handle": "ferodo-ds2500-front-brake-pads-multiple-fitments-frp3067h",
+      "target_store": "www.maperformance.com",
+      "rationale": "Ferodo DS2500 has '2011-2014 Ford Mustang GT' in variant description but title says 'Multiple Fitments'."
+    },
+    {
+      "id": "H4Q04",
+      "type": "relational",
+      "population": "title_absent",
+      "query": "brake pads for 2015 Chevrolet Camaro",
+      "target_handle": "ebc-red-stuff-front-brake-pads-multiple-fitments-dp31210c",
+      "target_store": "www.maperformance.com",
+      "rationale": "EBC RedStuff has '2010, 2015-2018 Chevrolet Camaro' in variant description but title says 'Multiple Fitments'."
+    },
+    {
+      "id": "H4Q05",
+      "type": "relational",
+      "population": "title_absent",
+      "query": "brake pads for 2015 Subaru WRX STI",
+      "target_handle": "hawk-performance-street-5-0-brake-pads-multiple-fitments-hb453b-585",
+      "target_store": "www.maperformance.com",
+      "rationale": "Hawk Street 5.0 has '2004-2017 Subaru WRX STI' in variant description but title says 'Multiple Fitments'."
+    },
+    {
+      "id": "H4Q06",
+      "type": "relational",
+      "population": "title_absent",
+      "query": "brake pads for 2012 Ford Mustang Boss 302",
+      "target_handle": "hawk-performance-ceramic-front-brake-pads-multiple-fitments-hb453z-585",
+      "target_store": "www.maperformance.com",
+      "rationale": "Hawk Ceramic has '2012-2013 Ford Mustang Boss 302' in variant description but title says 'Multiple Fitments'."
+    },
+    {
+      "id": "H4Q07",
+      "type": "relational",
+      "population": "title_absent",
+      "query": "brake pads for 2009 Nissan 370Z",
+      "target_handle": "ebc-yellowstuff-rear-brake-pads-multiple-fitments-dp41955r",
+      "target_store": "www.maperformance.com",
+      "rationale": "EBC Yellowstuff has '2009-2017 Nissan 370Z' in variant description but title says 'Multiple Fitments'."
+    },
+    {
+      "id": "H4Q08",
+      "type": "relational",
+      "population": "title_absent",
+      "query": "brake pads for 2017 Subaru BRZ",
+      "target_handle": "ebc-blue-stuff-ndx-front-brake-pads-multiple-fitments-dp51210",
+      "target_store": "www.maperformance.com",
+      "rationale": "EBC Blue Stuff NDX has '2017-2020 Subaru BRZ w/ Brembo' in variant description but title says 'Multiple Fitments'."
+    },
+    {
+      "id": "H4Q09",
+      "type": "relational",
+      "population": "title_present",
+      "query": "exhaust system for 2023 Honda Civic Type R",
+      "target_handle": "27won-performance-valved-exhaust-system-for-2023-honda-civic-type-r-fl5",
+      "target_store": "www.twostepperformance.com",
+      "rationale": "Control: 27WON exhaust has 'Honda Civic Type R' in title. Same store as ta-01/ta-02, same vehicle as ta-01."
+    },
+    {
+      "id": "H4Q10",
+      "type": "relational",
+      "population": "title_present",
+      "query": "lowering springs for 2023 Honda Civic Type R",
+      "target_handle": "eibach-22-23-honda-civic-type-r-fwd-fl5-sportline-kit-set-of-4-springs",
+      "target_store": "www.twostepperformance.com",
+      "rationale": "Control: Eibach Sportline has 'Honda Civic Type R' in title. Same store as ta-01/ta-02, same vehicle as ta-01."
+    },
+    {
+      "id": "H4Q11",
+      "type": "relational",
+      "population": "title_present",
+      "query": "brake lines for 2022 Honda Civic Si",
+      "target_handle": "hel-hon-4-905",
+      "target_store": "www.twostepperformance.com",
+      "rationale": "Control: HEL brake lines has 'Honda Civic Si' in title. Same store as ta-01/ta-02."
+    },
+    {
+      "id": "H4Q12",
+      "type": "relational",
+      "population": "title_present",
+      "query": "camber arms for 2016 Honda Civic",
+      "target_handle": "whiteline-2015-honda-civic-rear-upper-camber-arm-adjustable-pair",
+      "target_store": "www.twostepperformance.com",
+      "rationale": "Control: Whiteline camber arms has 'Honda Civic' in title. Same store as ta-01/ta-02, same vehicle as ta-02."
+    },
+    {
+      "id": "H4Q13",
+      "type": "relational",
+      "population": "title_present",
+      "query": "lift kit for 2023 Ford F-150",
+      "target_handle": "icon-stage-4-w-billet-uca-suspension-kit-for-2021-2025-ford-f-150-4wd",
+      "target_store": "www.twostepperformance.com",
+      "rationale": "Control: ICON lift kit has 'Ford F-150' in title. Same store as ta-01/ta-02."
+    },
+    {
+      "id": "H4Q14",
+      "type": "relational",
+      "population": "title_present",
+      "query": "downpipe for 2018 Honda Civic Type R",
+      "target_handle": "high-efficiency-downpipe-upgrade-for-2017-2021-honda-civic-type-r-fk8",
+      "target_store": "www.twostepperformance.com",
+      "rationale": "Control: TSP downpipe has 'Honda Civic Type R' in title. Same store as ta-01/ta-02, same vehicle as ta-01."
+    }
+  ]
+}

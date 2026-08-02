@@ -34,32 +34,33 @@
  *   scripts/output/u4-<timestamp>.json (reproducibility is a schema requirement — TDD §4).
  */
 
-import { writeFile, mkdir } from 'node:fs/promises';
-import { join } from 'node:path';
-import { config } from 'dotenv';
-import { resolve } from 'node:path';
-import { z } from 'zod';
+import { mkdir, writeFile } from "node:fs/promises";
+import { join, resolve } from "node:path";
+import { config } from "dotenv";
+import { z } from "zod";
 
 // Load .env — this is a throwaway probe, not app code. Auth is inlined
 // rather than imported from src/ (scripts/ is the laboratory, not the factory).
-config({ path: resolve(import.meta.dirname, '..', '.env') });
+config({ path: resolve(import.meta.dirname, "..", ".env") });
 
-const TOKEN_ENDPOINT = 'https://api.shopify.com/auth/access_token';
+const TOKEN_ENDPOINT = "https://api.shopify.com/auth/access_token";
 
 /** Fetch a fresh bearer token (Token tier, 60-min expiry). */
 async function getAccessToken(): Promise<string> {
   const clientId = process.env.SHOPIFY_CLIENT_ID;
   const clientSecret = process.env.SHOPIFY_CLIENT_SECRET;
   if (!clientId || !clientSecret) {
-    throw new Error('SHOPIFY_CLIENT_ID and SHOPIFY_CLIENT_SECRET must be set in .env');
+    throw new Error(
+      "SHOPIFY_CLIENT_ID and SHOPIFY_CLIENT_SECRET must be set in .env",
+    );
   }
   const res = await fetch(TOKEN_ENDPOINT, {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
     body: JSON.stringify({
       client_id: clientId,
       client_secret: clientSecret,
-      grant_type: 'client_credentials',
+      grant_type: "client_credentials",
     }),
   });
   if (!res.ok) {
@@ -82,19 +83,19 @@ const CONFIG = {
    * its shop GID via search_catalog. This doubles as the U-3 probe.
    * Two Step Performance — auto parts shop, sells brake pads.
    */
-  targetSearchQuery: 'Paragon PBP370 brake pads',
-  targetShopDomain: 'two-step-performance.myshopify.com',
+  targetSearchQuery: "Paragon PBP370 brake pads",
+  targetShopDomain: "two-step-performance.myshopify.com",
 
   /**
    * A DIFFERENT shop, for the multi-shop containment test (T4).
    * Same vertical is fine; it just needs to be a distinct seller.
    * Movcan — e-bike shop, also sells brake pads.
    */
-  secondSearchQuery: 'Movcan brake pads',
-  secondShopDomain: 'wh0d6e-sd.myshopify.com',
+  secondSearchQuery: "Movcan brake pads",
+  secondShopDomain: "wh0d6e-sd.myshopify.com",
 
   /** A generic query the target shop plausibly has inventory for. */
-  genericQuery: 'brake pads',
+  genericQuery: "brake pads",
 
   /**
    * NEGATIVE CONTROL: a category the target shop demonstrably does NOT sell.
@@ -102,12 +103,12 @@ const CONFIG = {
    * auto parts, use something like 'wedding dress' or 'espresso machine'.
    * The whole experiment turns on this being genuinely absent from the shop.
    */
-  negativeControlQuery: 'wedding dress',
+  negativeControlQuery: "wedding dress",
 
   /** Token tier is 5 req/s (TDD §2.7, U-2). 250ms keeps us at half that. */
   requestDelayMs: 250,
 
-  endpoint: 'https://catalog.shopify.com/api/ucp/mcp',
+  endpoint: "https://catalog.shopify.com/api/ucp/mcp",
 } as const;
 
 // ─────────────────────────────────────────────────────────────────────────────
@@ -149,7 +150,10 @@ const StructuredContent = z
     results: z.array(Product).optional(),
     total_count: z.number().optional(),
     messages: z.array(z.unknown()).optional(),
-    pagination: z.object({ has_next_page: z.boolean().optional() }).passthrough().optional(),
+    pagination: z
+      .object({ has_next_page: z.boolean().optional() })
+      .passthrough()
+      .optional(),
   })
   .passthrough();
 
@@ -182,15 +186,19 @@ const transcript: Array<{
 
 let rpcId = 1;
 
-async function callTool(test: string, toolName: string, catalogArgs: Record<string, unknown>) {
+async function callTool(
+  test: string,
+  toolName: string,
+  catalogArgs: Record<string, unknown>,
+) {
   const body = {
-    jsonrpc: '2.0',
+    jsonrpc: "2.0",
     id: rpcId++,
-    method: 'tools/call',
+    method: "tools/call",
     params: {
       name: toolName,
       arguments: {
-        meta: { 'ucp-agent': { profile: CONFIG.profileUrl } },
+        meta: { "ucp-agent": { profile: CONFIG.profileUrl } },
         catalog: catalogArgs,
       },
     },
@@ -199,20 +207,28 @@ async function callTool(test: string, toolName: string, catalogArgs: Record<stri
   const token = await getAccessToken();
 
   const res = await fetch(CONFIG.endpoint, {
-    method: 'POST',
+    method: "POST",
     headers: {
-      'content-type': 'application/json',
+      "content-type": "application/json",
       authorization: `Bearer ${token}`,
     },
     body: JSON.stringify(body),
   });
 
   const raw = await res.json();
-  transcript.push({ test, request: body, response: raw, httpStatus: res.status, at: new Date().toISOString() });
+  transcript.push({
+    test,
+    request: body,
+    response: raw,
+    httpStatus: res.status,
+    at: new Date().toISOString(),
+  });
 
   const parsed = McpResponse.safeParse(raw);
   if (!parsed.success) {
-    console.warn(`  ⚠ response failed schema validation (recorded in transcript): ${parsed.error.message}`);
+    console.warn(
+      `  ⚠ response failed schema validation (recorded in transcript): ${parsed.error.message}`,
+    );
     return { products: [] as ProductT[], rawOk: false, content: undefined };
   }
   if (parsed.data.error) {
@@ -251,9 +267,12 @@ interface ContainmentResult {
   indeterminate: number;
 }
 
-function checkContainment(products: ProductT[], scopedGids: string[]): ContainmentResult {
+function checkContainment(
+  products: ProductT[],
+  scopedGids: string[],
+): ContainmentResult {
   const scoped = new Set(scopedGids);
-  const violations: ContainmentResult['violations'] = [];
+  const violations: ContainmentResult["violations"] = [];
   let indeterminate = 0;
 
   for (const p of products) {
@@ -276,8 +295,12 @@ function checkContainment(products: ProductT[], scopedGids: string[]): Containme
 // will surface the target shop's product and extract the shop GID from variants.
 // ─────────────────────────────────────────────────────────────────────────────
 
-async function resolveShopGid(test: string, searchQuery: string, expectedDomain: string): Promise<string | null> {
-  const { products } = await callTool(test, 'search_catalog', {
+async function resolveShopGid(
+  test: string,
+  searchQuery: string,
+  expectedDomain: string,
+): Promise<string | null> {
+  const { products } = await callTool(test, "search_catalog", {
     query: searchQuery,
     pagination: { limit: 20 },
   });
@@ -296,103 +319,141 @@ async function resolveShopGid(test: string, searchQuery: string, expectedDomain:
 // ─────────────────────────────────────────────────────────────────────────────
 
 async function main() {
-  console.log('\nU-4 CONTROL EXPERIMENT — filters.shops semantics');
-  console.log('═'.repeat(64));
+  console.log("\nU-4 CONTROL EXPERIMENT — filters.shops semantics");
+  console.log("═".repeat(64));
 
   const findings: Record<string, unknown> = {};
   const verdicts: string[] = [];
 
   // ── T0 / U-3: resolve shop GIDs ───────────────────────────────────────────
-  console.log('\nT0  Resolving shop GIDs from public product URLs (also answers U-3)');
-  const targetGid = await resolveShopGid('T0-target', CONFIG.targetSearchQuery, CONFIG.targetShopDomain);
-  const secondGid = await resolveShopGid('T0-second', CONFIG.secondSearchQuery, CONFIG.secondShopDomain);
+  console.log(
+    "\nT0  Resolving shop GIDs from public product URLs (also answers U-3)",
+  );
+  const targetGid = await resolveShopGid(
+    "T0-target",
+    CONFIG.targetSearchQuery,
+    CONFIG.targetShopDomain,
+  );
+  const secondGid = await resolveShopGid(
+    "T0-second",
+    CONFIG.secondSearchQuery,
+    CONFIG.secondShopDomain,
+  );
 
-  console.log(`    target shop GID: ${targetGid ?? 'NOT RESOLVED'}`);
-  console.log(`    second shop GID: ${secondGid ?? 'NOT RESOLVED'}`);
+  console.log(`    target shop GID: ${targetGid ?? "NOT RESOLVED"}`);
+  console.log(`    second shop GID: ${secondGid ?? "NOT RESOLVED"}`);
   findings.u3 = { targetGid, secondGid, resolved: Boolean(targetGid) };
 
   if (!targetGid) {
     console.error(
-      '\n✗ U-3 FAILED: could not resolve a shop GID from a public product URL.\n' +
-        '  U-4 cannot run without it, and C1→C3 has no handoff path.\n' +
-        '  Inspect the lookup_catalog response in the transcript before proceeding.',
+      "\n✗ U-3 FAILED: could not resolve a shop GID from a public product URL.\n" +
+        "  U-4 cannot run without it, and C1→C3 has no handoff path.\n" +
+        "  Inspect the lookup_catalog response in the transcript before proceeding.",
     );
-    await persist(findings, ['U-3 UNRESOLVED — U-4 not run']);
+    await persist(findings, ["U-3 UNRESOLVED — U-4 not run"]);
     process.exit(1);
   }
 
   // ── T1: scoped generic query — containment under a query with real matches ──
-  console.log(`\nT1  Scoped generic query ("${CONFIG.genericQuery}") — containment check`);
-  const t1 = await callTool('T1-scoped-generic', 'search_catalog', {
+  console.log(
+    `\nT1  Scoped generic query ("${CONFIG.genericQuery}") — containment check`,
+  );
+  const t1 = await callTool("T1-scoped-generic", "search_catalog", {
     query: CONFIG.genericQuery,
     filters: { available: true, shops: [targetGid] },
     pagination: { limit: 50 },
   });
   const t1c = checkContainment(t1.products, [targetGid]);
-  console.log(`    ${t1c.total} products, ${t1c.violations.length} containment violations, ${t1c.indeterminate} indeterminate`);
+  console.log(
+    `    ${t1c.total} products, ${t1c.violations.length} containment violations, ${t1c.indeterminate} indeterminate`,
+  );
   if (t1c.violations.length > 0) {
-    console.log('    ✗ violating products:', t1c.violations.slice(0, 5));
+    console.log("    ✗ violating products:", t1c.violations.slice(0, 5));
   }
   findings.t1 = t1c;
 
   // ── T2: unscoped baseline — proves the filter changes anything at all ──────
-  console.log(`\nT2  Unscoped baseline ("${CONFIG.genericQuery}") — does the filter do anything?`);
-  const t2 = await callTool('T2-unscoped-generic', 'search_catalog', {
+  console.log(
+    `\nT2  Unscoped baseline ("${CONFIG.genericQuery}") — does the filter do anything?`,
+  );
+  const t2 = await callTool("T2-unscoped-generic", "search_catalog", {
     query: CONFIG.genericQuery,
     filters: { available: true },
     pagination: { limit: 50 },
   });
   const t2Sellers = new Set(t2.products.flatMap(sellerIdsOf));
-  const t2TargetHits = t2.products.filter((p) => sellerIdsOf(p).includes(targetGid)).length;
-  console.log(`    ${t2.products.length} products from ${t2Sellers.size} distinct sellers; ${t2TargetHits} from target shop`);
-  findings.t2 = { total: t2.products.length, distinctSellers: t2Sellers.size, targetHits: t2TargetHits };
+  const t2TargetHits = t2.products.filter((p) =>
+    sellerIdsOf(p).includes(targetGid),
+  ).length;
+  console.log(
+    `    ${t2.products.length} products from ${t2Sellers.size} distinct sellers; ${t2TargetHits} from target shop`,
+  );
+  findings.t2 = {
+    total: t2.products.length,
+    distinctSellers: t2Sellers.size,
+    targetHits: t2TargetHits,
+  };
 
   if (t2Sellers.size <= 1 && t1c.total > 0) {
-    verdicts.push('INCONCLUSIVE: unscoped query also returned a single seller — the query is too narrow to discriminate.');
+    verdicts.push(
+      "INCONCLUSIVE: unscoped query also returned a single seller — the query is too narrow to discriminate.",
+    );
   }
 
   // ── T3: NEGATIVE CONTROL — the decisive test ──────────────────────────────
-  console.log(`\nT3  NEGATIVE CONTROL ("${CONFIG.negativeControlQuery}" scoped to a shop that does not sell it)`);
-  console.log('    Hard restriction ⇒ zero results. Soft bias ⇒ foreign products appear.');
-  const t3 = await callTool('T3-negative-control', 'search_catalog', {
+  console.log(
+    `\nT3  NEGATIVE CONTROL ("${CONFIG.negativeControlQuery}" scoped to a shop that does not sell it)`,
+  );
+  console.log(
+    "    Hard restriction ⇒ zero results. Soft bias ⇒ foreign products appear.",
+  );
+  const t3 = await callTool("T3-negative-control", "search_catalog", {
     query: CONFIG.negativeControlQuery,
     filters: { available: true, shops: [targetGid] },
     pagination: { limit: 50 },
   });
   const t3c = checkContainment(t3.products, [targetGid]);
-  console.log(`    ${t3c.total} products returned, ${t3c.violations.length} from outside the scoped shop`);
+  console.log(
+    `    ${t3c.total} products returned, ${t3c.violations.length} from outside the scoped shop`,
+  );
   findings.t3 = t3c;
 
   // ── T4: multi-shop scope ──────────────────────────────────────────────────
   if (secondGid) {
-    console.log('\nT4  Two-shop scope — containment across a set');
-    const t4 = await callTool('T4-multi-shop', 'search_catalog', {
+    console.log("\nT4  Two-shop scope — containment across a set");
+    const t4 = await callTool("T4-multi-shop", "search_catalog", {
       query: CONFIG.genericQuery,
       filters: { available: true, shops: [targetGid, secondGid] },
       pagination: { limit: 50 },
     });
     const t4c = checkContainment(t4.products, [targetGid, secondGid]);
-    console.log(`    ${t4c.total} products, ${t4c.violations.length} containment violations`);
+    console.log(
+      `    ${t4c.total} products, ${t4c.violations.length} containment violations`,
+    );
     findings.t4 = t4c;
   } else {
-    console.log('\nT4  SKIPPED — second shop GID unresolved');
+    console.log("\nT4  SKIPPED — second shop GID unresolved");
   }
 
   // ── T5: pagination depth — does containment survive past page one? ─────────
-  console.log('\nT5  Pagination depth — containment on page 2');
+  console.log("\nT5  Pagination depth — containment on page 2");
   const t1Cursor = t1.content?.pagination?.cursor;
   if (t1Cursor) {
     console.log(`    Using cursor from T1: ${t1Cursor.slice(0, 40)}…`);
-    const t5 = await callTool('T5-deep-page', 'search_catalog', {
+    const t5 = await callTool("T5-deep-page", "search_catalog", {
       query: CONFIG.genericQuery,
       filters: { available: true, shops: [targetGid] },
       pagination: { limit: 50, cursor: t1Cursor },
     });
     const t5c = checkContainment(t5.products, [targetGid]);
-    console.log(`    ${t5c.total} products, ${t5c.violations.length} containment violations`);
+    console.log(
+      `    ${t5c.total} products, ${t5c.violations.length} containment violations`,
+    );
     findings.t5 = t5c;
   } else {
-    console.log('    SKIPPED — T1 did not return a pagination cursor (no next page)');
+    console.log(
+      "    SKIPPED — T1 did not return a pagination cursor (no next page)",
+    );
     findings.t5 = { total: 0, violations: [], indeterminate: 0, skipped: true };
   }
 
@@ -409,43 +470,46 @@ async function main() {
   // query is ignored when it has no matches in the shop) returns the shop's
   // general catalog — 0 violations, but total > 0. That's still a hard restriction.
   const negativeControlLeaked = t3c.violations.length > 0;
-  const negativeControlReturnedIrrelevant = t3c.total > 0 && t3c.violations.length === 0;
+  const negativeControlReturnedIrrelevant =
+    t3c.total > 0 && t3c.violations.length === 0;
 
-  console.log(`\n${'═'.repeat(64)}`);
-  console.log('VERDICT');
-  console.log('═'.repeat(64));
+  console.log(`\n${"═".repeat(64)}`);
+  console.log("VERDICT");
+  console.log("═".repeat(64));
 
   if (negativeControlLeaked) {
     verdicts.push(
-      'SOFT BIAS (methodology invalid as designed). The negative control returned products ' +
-        'from OUTSIDE the scoped shop for a category it does not sell. filters.shops re-weights ' +
-        'rather than restricts, so store-scoped recall cannot be measured this way. ' +
-        'STOP and redesign C6 before building further.',
+      "SOFT BIAS (methodology invalid as designed). The negative control returned products " +
+        "from OUTSIDE the scoped shop for a category it does not sell. filters.shops re-weights " +
+        "rather than restricts, so store-scoped recall cannot be measured this way. " +
+        "STOP and redesign C6 before building further.",
     );
   } else if (allViolations > 0) {
     verdicts.push(
       `PARTIAL / LEAKY (${allViolations} containment violations). The negative control held, but some ` +
-        'returned products carry no offer from the scoped shop. Investigate whether these are UPID ' +
-        'clustering artifacts (tolerable, document it) or genuine filter leakage (not tolerable).',
+        "returned products carry no offer from the scoped shop. Investigate whether these are UPID " +
+        "clustering artifacts (tolerable, document it) or genuine filter leakage (not tolerable).",
     );
   } else if (t1c.total === 0 && t2.products.length === 0) {
-    verdicts.push('INCONCLUSIVE: no results in either scoped or unscoped queries. Check the query terms and catalog enrolment.');
+    verdicts.push(
+      "INCONCLUSIVE: no results in either scoped or unscoped queries. Check the query terms and catalog enrolment.",
+    );
   } else if (negativeControlReturnedIrrelevant) {
     verdicts.push(
-      'HARD RESTRICTION with query fallback (design holds, with caveat). The shop filter is hard — ' +
-        'every returned product carries at least one seller from the scoped set (0 violations across all tests). ' +
-        'BUT the negative control returned the shop\'s general catalog for a query it doesn\'t match, meaning ' +
-        'the query is a soft ranking signal within the shop, not a hard filter. When the query has no matches ' +
-        'in the scoped shop, the API returns the shop\'s general catalog instead of an empty set. ' +
-        'IMPLICATION FOR C6: recall@k must account for query relevance, not just product presence. A query ' +
-        'that returns 50 products from a shop is not necessarily 50 relevant products — verify relevance ' +
-        'before counting hits. Store-scoped retrieval measurement is valid; proceed to U-5 and Phase 0.',
+      "HARD RESTRICTION with query fallback (design holds, with caveat). The shop filter is hard — " +
+        "every returned product carries at least one seller from the scoped set (0 violations across all tests). " +
+        "BUT the negative control returned the shop's general catalog for a query it doesn't match, meaning " +
+        "the query is a soft ranking signal within the shop, not a hard filter. When the query has no matches " +
+        "in the scoped shop, the API returns the shop's general catalog instead of an empty set. " +
+        "IMPLICATION FOR C6: recall@k must account for query relevance, not just product presence. A query " +
+        "that returns 50 products from a shop is not necessarily 50 relevant products — verify relevance " +
+        "before counting hits. Store-scoped retrieval measurement is valid; proceed to U-5 and Phase 0.",
     );
   } else {
     verdicts.push(
-      'HARD RESTRICTION (design holds). Negative control returned nothing, and every returned product ' +
-        'carries at least one offer from the scoped shop set. Store-scoped retrieval measurement is valid. ' +
-        'Proceed to U-5 and Phase 0.',
+      "HARD RESTRICTION (design holds). Negative control returned nothing, and every returned product " +
+        "carries at least one offer from the scoped shop set. Store-scoped retrieval measurement is valid. " +
+        "Proceed to U-5 and Phase 0.",
     );
   }
 
@@ -453,8 +517,8 @@ async function main() {
   if (t1c.indeterminate > 0 || t3c.indeterminate > 0) {
     console.log(
       `\n  NOTE: ${t1c.indeterminate + t3c.indeterminate} products had no readable seller id. ` +
-        'If this count is high, the containment test is weak — inspect the transcript and fix the parser ' +
-        'before trusting the verdict.',
+        "If this count is high, the containment test is weak — inspect the transcript and fix the parser " +
+        "before trusting the verdict.",
     );
   }
 
@@ -462,18 +526,25 @@ async function main() {
 }
 
 async function persist(findings: Record<string, unknown>, verdicts: string[]) {
-  const dir = join(process.cwd(), 'scripts', 'output');
+  const dir = join(process.cwd(), "scripts", "output");
   await mkdir(dir, { recursive: true });
-  const path = join(dir, `u4-${new Date().toISOString().replace(/[:.]/g, '-')}.json`);
+  const path = join(
+    dir,
+    `u4-${new Date().toISOString().replace(/[:.]/g, "-")}.json`,
+  );
   await writeFile(
     path,
-    JSON.stringify({ config: { ...CONFIG }, findings, verdicts, transcript }, null, 2),
-    'utf8',
+    JSON.stringify(
+      { config: { ...CONFIG }, findings, verdicts, transcript },
+      null,
+      2,
+    ),
+    "utf8",
   );
   console.log(`\n  Full transcript → ${path}\n`);
 }
 
 main().catch((err) => {
-  console.error('\nProbe crashed:', err);
+  console.error("\nProbe crashed:", err);
   process.exit(1);
 });

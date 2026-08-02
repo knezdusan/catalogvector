@@ -29,7 +29,20 @@
         "id": "drop-prl-bbk",
         "handle": "prl-motorsports-4-piston-bbk-paragon-upgrade-kit-for-2017-honda-civic-si-integra-fc-fe-de4-1",
         "title": "PRL Motorsports 4-Piston BBK + Paragon Upgrade Kit for 2017+ Honda Civic Si/Integra [FC/FE/DE4]",
-        "stated_vehicles": ["honda civic si", "honda civic", "acura integra", "mitsubishi evo 5-10", "subaru sti", "subaru brz", "scion fr-s", "subaru brz ts", "audi rs3 8p", "audi tt rs", "holden commodore redline", "cadillac cts-v"],
+        "stated_vehicles": [
+          "honda civic si",
+          "honda civic",
+          "acura integra",
+          "mitsubishi evo 5-10",
+          "subaru sti",
+          "subaru brz",
+          "scion fr-s",
+          "subaru brz ts",
+          "audi rs3 8p",
+          "audi tt rs",
+          "holden commodore redline",
+          "cadillac cts-v"
+        ],
         "inferred_vehicles": [],
         "field_presence": "title_only",
         "source_chars": 9671
@@ -69,8 +82,28 @@
         "id": "keep-paragon-pbp370",
         "handle": "paragon-pbp370-brake-pads",
         "title": "Paragon PBP370 Front Brake Pads",
-        "stated_vehicles": ["honda civic", "mitsubishi evo 5-10", "subaru sti", "subaru brz", "scion fr-s", "subaru brz ts", "audi rs3 8p", "audi tt rs", "holden commodore redline", "cadillac cts-v"],
-        "inferred_vehicles": ["honda civic", "acura integra", "mitsubishi evo 5-10", "subaru sti gdb", "scion fr-s", "audi rs3", "holden commodore redline", "cadillac cts-v"],
+        "stated_vehicles": [
+          "honda civic",
+          "mitsubishi evo 5-10",
+          "subaru sti",
+          "subaru brz",
+          "scion fr-s",
+          "subaru brz ts",
+          "audi rs3 8p",
+          "audi tt rs",
+          "holden commodore redline",
+          "cadillac cts-v"
+        ],
+        "inferred_vehicles": [
+          "honda civic",
+          "acura integra",
+          "mitsubishi evo 5-10",
+          "subaru sti gdb",
+          "scion fr-s",
+          "audi rs3",
+          "holden commodore redline",
+          "cadillac cts-v"
+        ],
         "field_presence": "specs_only",
         "source_chars": 5362,
         "recall": 0.6
@@ -110,7 +143,11 @@
         "handle": "11th-gen-civic-front-strut-tower-bar",
         "title": "27WON Front Strut Tower Bar for 2022+ Honda Civic/2023+ Acura Integra - Black",
         "stated_vehicles": ["honda civic", "acura integra"],
-        "inferred_vehicles": ["honda civic", "honda civic si", "acura integra base"],
+        "inferred_vehicles": [
+          "honda civic",
+          "honda civic si",
+          "acura integra base"
+        ],
         "field_presence": "both",
         "source_chars": 3751,
         "recall": 1.0
@@ -129,7 +166,12 @@
         "id": "keep-downpipe",
         "handle": "high-efficiency-downpipe-upgrade-for-2017-2021-honda-civic-type-r-fk8",
         "title": "High Efficiency Downpipe Upgrade for 2017+, 2023+ Honda Civic Type R FK8 FL5 2.0T & 2024+ Acura Integra Type S 2.0T DE5",
-        "stated_vehicles": ["honda civic", "acura integra", "acura rdx", "acura tlx"],
+        "stated_vehicles": [
+          "honda civic",
+          "acura integra",
+          "acura rdx",
+          "acura tlx"
+        ],
         "inferred_vehicles": ["honda civic", "honda fl5", "acura integra"],
         "field_presence": "both",
         "source_chars": 3720,
@@ -144,7 +186,11 @@
       "type": "relational",
       "query": "brake pads for 2018 Honda Civic Si",
       "target_vehicle": "honda civic si",
-      "targets": ["drop-27won-pads", "keep-paragon-pbp370", "keep-paragon-pbp1557"],
+      "targets": [
+        "drop-27won-pads",
+        "keep-paragon-pbp370",
+        "keep-paragon-pbp1557"
+      ],
       "rationale": "Relational query targeting the dropped 27WON pads and retained Paragon pads. The vehicle is named explicitly."
     },
     {
@@ -162,7 +208,11 @@
       "type": "intrinsic",
       "query": "front brake pads",
       "target_vehicle": null,
-      "targets": ["keep-paragon-pbp370", "keep-paragon-pbp1557", "drop-27won-pads"],
+      "targets": [
+        "keep-paragon-pbp370",
+        "keep-paragon-pbp1557",
+        "drop-27won-pads"
+      ],
       "rationale": "Intrinsic control — no vehicle named. All brake pad products should be retrievable on this query regardless of fitment. Tests whether dropped-relational products are retrievable when the query doesn't require the relational attribute."
     },
     {
