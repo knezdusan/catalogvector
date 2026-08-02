@@ -5,6 +5,16 @@
 **Date:** 2026-08-02
 **Agent:** Devin
 
+> **CORRECTION ADDENDUM (DIRECTIVE-4 §2, 2 Aug 2026):** Three items in this report are corrected by DIRECTIVE-4:
+>
+> 1. **§6 verdict withdrawn.** The "COVERAGE GAP CONFIRMED" verdict is withdrawn (DIRECTIVE-4 §1.1). The 0.80 rule was registered against a design of 20 products across 3–4 stores, stratified. Stage 1 scored 12 products from one store. A stop rule does not fire on a sample non-compliant with its own registration. The rule fires on the first compliant sample.
+>
+> 2. **§5 deviation direction corrected.** The 8 no-stated-fitment products are not "neutral" — they were excluded from the recall denominator, which biases the headline **downward (in favour of the finding)**. Five of the eight have a non-empty inferred set; three have an empty one. Had their stated sets been extracted, five would likely have scored high and three would have scored zero.
+>
+> 3. **§3 "~0.70 → 0.675" is not a like-for-like delta.** The source-text definition changed between the runs (`tags` now parse and are included) and the sample composition changed entirely. The two numbers are separate measurements on different instruments and should not be presented as a small movement.
+>
+> 4. **Prefix matching made symmetric (§2.3).** The asymmetric prefix matching in this report counted "audi rs3" as both an omission and an addition in product 11 — an instrument artifact. The symmetric rule is now in place, and both scoring rules (prefix/strict) are reported. On Stage 1's sample the defensible range is roughly **0.58 – 0.68**. Report the range, not a point estimate.
+
 ---
 
 ## 1. Executed / Not executed

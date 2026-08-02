@@ -1,0 +1,310 @@
+{
+  "$schema": "retrieval-query-set-v1",
+  "committed": "2026-08-02",
+  "directive": "DIRECTIVE-4 §3 Stage 2 — Workstream B",
+  "store": {
+    "domain": "www.twostepperformance.com",
+    "gid": "gid://shopify/Shop/1357086779"
+  },
+  "design_notes": [
+    "≥3 archetypes: brake pads, suspension, exhaust, brake lines, BBK, lift kit, downpipe, strut bar",
+    "≥1 explicitly relational query (all relational queries name a vehicle)",
+    "Queries target each of 3 dropped products (title_only, zero inferred vehicles) AND each retained control",
+    "Non-relational (intrinsic) queries included as controls — no vehicle named",
+    "Population split: dropped = recall=0 in Stage 1 (inferred empty); retained = recall>0 in Stage 1",
+    "Four-way field presence: title_only / specs_only / both / neither — recorded per query-product pair"
+  ],
+  "products": {
+    "dropped": [
+      {
+        "id": "drop-27won-pads",
+        "handle": "27won-brake-pads",
+        "title": "27WON Performance Brake Pads for 2017+ Honda Civic Si / 2023+ Acura Integra",
+        "stated_vehicles": ["honda civic si", "acura integra"],
+        "inferred_vehicles": [],
+        "field_presence": "title_only",
+        "source_chars": 5618
+      },
+      {
+        "id": "drop-prl-bbk",
+        "handle": "prl-motorsports-4-piston-bbk-paragon-upgrade-kit-for-2017-honda-civic-si-integra-fc-fe-de4-1",
+        "title": "PRL Motorsports 4-Piston BBK + Paragon Upgrade Kit for 2017+ Honda Civic Si/Integra [FC/FE/DE4]",
+        "stated_vehicles": ["honda civic si", "honda civic", "acura integra", "mitsubishi evo 5-10", "subaru sti", "subaru brz", "scion fr-s", "subaru brz ts", "audi rs3 8p", "audi tt rs", "holden commodore redline", "cadillac cts-v"],
+        "inferred_vehicles": [],
+        "field_presence": "title_only",
+        "source_chars": 9671
+      },
+      {
+        "id": "drop-hel-lines",
+        "handle": "hel-hon-4-905",
+        "title": "HEL Performance Stainless Steel Braided Brake Lines for 2022+ Honda Civic Si [FE1]",
+        "stated_vehicles": ["honda civic si"],
+        "inferred_vehicles": [],
+        "field_presence": "title_only",
+        "source_chars": 6515
+      }
+    ],
+    "retained": [
+      {
+        "id": "keep-eibach-springs",
+        "handle": "eibach-22-23-honda-civic-type-r-fwd-fl5-sportline-kit-set-of-4-springs",
+        "title": "Eibach Sportline Kit for 2022+ Honda Civic Type R [FL5]",
+        "stated_vehicles": ["honda civic"],
+        "inferred_vehicles": ["honda civic"],
+        "field_presence": "both",
+        "source_chars": 500,
+        "recall": 1.0
+      },
+      {
+        "id": "keep-whiteline-camber",
+        "handle": "whiteline-2015-honda-civic-rear-upper-camber-arm-adjustable-pair",
+        "title": "Whiteline Adjustable Rear Upper Camber Arms for 2016+ Honda Civic (Pair) [FC/FK/FE/FL]",
+        "stated_vehicles": ["honda civic"],
+        "inferred_vehicles": ["honda civic fc"],
+        "field_presence": "both",
+        "source_chars": 369,
+        "recall": 1.0
+      },
+      {
+        "id": "keep-paragon-pbp370",
+        "handle": "paragon-pbp370-brake-pads",
+        "title": "Paragon PBP370 Front Brake Pads",
+        "stated_vehicles": ["honda civic", "mitsubishi evo 5-10", "subaru sti", "subaru brz", "scion fr-s", "subaru brz ts", "audi rs3 8p", "audi tt rs", "holden commodore redline", "cadillac cts-v"],
+        "inferred_vehicles": ["honda civic", "acura integra", "mitsubishi evo 5-10", "subaru sti gdb", "scion fr-s", "audi rs3", "holden commodore redline", "cadillac cts-v"],
+        "field_presence": "specs_only",
+        "source_chars": 5362,
+        "recall": 0.6
+      },
+      {
+        "id": "keep-paragon-pbp1557",
+        "handle": "paragon-pbp1557-brake-pads",
+        "title": "Paragon PBP15570 Rear Brake Pads",
+        "stated_vehicles": ["honda civic"],
+        "inferred_vehicles": ["honda civic"],
+        "field_presence": "specs_only",
+        "source_chars": 4932,
+        "recall": 1.0
+      },
+      {
+        "id": "keep-icon-lift",
+        "handle": "icon-stage-4-w-billet-uca-suspension-kit-for-2021-2025-ford-f-150-4wd",
+        "title": "ICON Stage 4 Lift Kit CDCV for 2021-2024 Ford F-150 4WD",
+        "stated_vehicles": ["ford f-150 4wd"],
+        "inferred_vehicles": ["ford f-150 4wd"],
+        "field_presence": "both",
+        "source_chars": 3737,
+        "recall": 1.0
+      },
+      {
+        "id": "keep-br-coilovers",
+        "handle": "br-series-coilovers-for-2016-honda-civic-non-si-1-5t-coupe-sedan",
+        "title": "BR Series Coilovers for 2016-2021 Honda Civic Non-Si Coupe / Sedan",
+        "stated_vehicles": ["honda civic non-si"],
+        "inferred_vehicles": ["honda civic non-si"],
+        "field_presence": "both",
+        "source_chars": 3294,
+        "recall": 1.0
+      },
+      {
+        "id": "keep-27won-strut",
+        "handle": "11th-gen-civic-front-strut-tower-bar",
+        "title": "27WON Front Strut Tower Bar for 2022+ Honda Civic/2023+ Acura Integra - Black",
+        "stated_vehicles": ["honda civic", "acura integra"],
+        "inferred_vehicles": ["honda civic", "honda civic si", "acura integra base"],
+        "field_presence": "both",
+        "source_chars": 3751,
+        "recall": 1.0
+      },
+      {
+        "id": "keep-27won-exhaust",
+        "handle": "27won-performance-valved-exhaust-system-for-2023-honda-civic-type-r-fl5",
+        "title": "27WON Performance Valved Exhaust System for 2023+ Honda Civic Type R [FL5]",
+        "stated_vehicles": ["honda civic"],
+        "inferred_vehicles": ["honda civic"],
+        "field_presence": "both",
+        "source_chars": 5377,
+        "recall": 1.0
+      },
+      {
+        "id": "keep-downpipe",
+        "handle": "high-efficiency-downpipe-upgrade-for-2017-2021-honda-civic-type-r-fk8",
+        "title": "High Efficiency Downpipe Upgrade for 2017+, 2023+ Honda Civic Type R FK8 FL5 2.0T & 2024+ Acura Integra Type S 2.0T DE5",
+        "stated_vehicles": ["honda civic", "acura integra", "acura rdx", "acura tlx"],
+        "inferred_vehicles": ["honda civic", "honda fl5", "acura integra"],
+        "field_presence": "both",
+        "source_chars": 3720,
+        "recall": 0.5
+      }
+    ]
+  },
+  "queries": [
+    {
+      "id": "Q01",
+      "archetype": "brake_pads",
+      "type": "relational",
+      "query": "brake pads for 2018 Honda Civic Si",
+      "target_vehicle": "honda civic si",
+      "targets": ["drop-27won-pads", "keep-paragon-pbp370", "keep-paragon-pbp1557"],
+      "rationale": "Relational query targeting the dropped 27WON pads and retained Paragon pads. The vehicle is named explicitly."
+    },
+    {
+      "id": "Q02",
+      "archetype": "brake_pads",
+      "type": "relational",
+      "query": "brake pads for 2023 Acura Integra",
+      "target_vehicle": "acura integra",
+      "targets": ["drop-27won-pads"],
+      "rationale": "Relational query targeting the dropped 27WON pads (title names Acura Integra). Tests whether the dropped vehicle in tech_specs affects retrieval."
+    },
+    {
+      "id": "Q03",
+      "archetype": "brake_pads",
+      "type": "intrinsic",
+      "query": "front brake pads",
+      "target_vehicle": null,
+      "targets": ["keep-paragon-pbp370", "keep-paragon-pbp1557", "drop-27won-pads"],
+      "rationale": "Intrinsic control — no vehicle named. All brake pad products should be retrievable on this query regardless of fitment. Tests whether dropped-relational products are retrievable when the query doesn't require the relational attribute."
+    },
+    {
+      "id": "Q04",
+      "archetype": "bbk",
+      "type": "relational",
+      "query": "big brake kit for 2017 Honda Civic Si",
+      "target_vehicle": "honda civic si",
+      "targets": ["drop-prl-bbk"],
+      "rationale": "Relational query targeting the dropped PRL BBK kit. Title names Honda Civic Si but tech_specs has zero vehicles."
+    },
+    {
+      "id": "Q05",
+      "archetype": "bbk",
+      "type": "relational",
+      "query": "brake kit for 2018 Honda Civic Si",
+      "target_vehicle": "honda civic si",
+      "targets": ["drop-prl-bbk", "drop-27won-pads"],
+      "rationale": "Relational query with broader phrasing targeting both dropped products that name Civic Si."
+    },
+    {
+      "id": "Q06",
+      "archetype": "brake_lines",
+      "type": "relational",
+      "query": "brake lines for 2022 Honda Civic Si",
+      "target_vehicle": "honda civic si",
+      "targets": ["drop-hel-lines"],
+      "rationale": "Relational query targeting the dropped HEL brake lines. Title names Honda Civic Si but tech_specs has zero vehicles."
+    },
+    {
+      "id": "Q07",
+      "archetype": "brake_lines",
+      "type": "intrinsic",
+      "query": "stainless steel braided brake lines",
+      "target_vehicle": null,
+      "targets": ["drop-hel-lines"],
+      "rationale": "Intrinsic control for HEL brake lines — no vehicle named. Tests whether the product is retrievable without the relational attribute."
+    },
+    {
+      "id": "Q08",
+      "archetype": "suspension",
+      "type": "relational",
+      "query": "lowering springs for 2023 Honda Civic Type R",
+      "target_vehicle": "honda civic",
+      "targets": ["keep-eibach-springs"],
+      "rationale": "Relational query targeting retained Eibach springs. Vehicle in both title and tech_specs."
+    },
+    {
+      "id": "Q09",
+      "archetype": "suspension",
+      "type": "relational",
+      "query": "camber arms for 2016 Honda Civic",
+      "target_vehicle": "honda civic",
+      "targets": ["keep-whiteline-camber"],
+      "rationale": "Relational query targeting retained Whiteline camber arms. Vehicle in both title and tech_specs."
+    },
+    {
+      "id": "Q10",
+      "archetype": "suspension",
+      "type": "relational",
+      "query": "coilovers for 2017 Honda Civic",
+      "target_vehicle": "honda civic",
+      "targets": ["keep-br-coilovers"],
+      "rationale": "Relational query targeting retained BR Series coilovers. Vehicle in both title and tech_specs."
+    },
+    {
+      "id": "Q11",
+      "archetype": "suspension",
+      "type": "relational",
+      "query": "lift kit for 2023 Ford F-150",
+      "target_vehicle": "ford f-150",
+      "targets": ["keep-icon-lift"],
+      "rationale": "Relational query targeting retained ICON lift kit. Vehicle in both title and tech_specs. Different make (Ford) to test cross-make retrieval."
+    },
+    {
+      "id": "Q12",
+      "archetype": "exhaust",
+      "type": "relational",
+      "query": "exhaust system for 2023 Honda Civic Type R",
+      "target_vehicle": "honda civic",
+      "targets": ["keep-27won-exhaust"],
+      "rationale": "Relational query targeting retained 27WON exhaust. Vehicle in both title and tech_specs."
+    },
+    {
+      "id": "Q13",
+      "archetype": "downpipe",
+      "type": "relational",
+      "query": "downpipe for 2018 Honda Civic Type R",
+      "target_vehicle": "honda civic",
+      "targets": ["keep-downpipe"],
+      "rationale": "Relational query targeting retained downpipe. Vehicle in both title and tech_specs, but recall is 0.5 (partial)."
+    },
+    {
+      "id": "Q14",
+      "archetype": "strut_bar",
+      "type": "relational",
+      "query": "strut tower bar for 2023 Honda Civic",
+      "target_vehicle": "honda civic",
+      "targets": ["keep-27won-strut"],
+      "rationale": "Relational query targeting retained 27WON strut bar. Vehicle in both title and tech_specs."
+    },
+    {
+      "id": "Q15",
+      "archetype": "brake_pads",
+      "type": "relational",
+      "query": "brake pads for 2024 Acura Integra",
+      "target_vehicle": "acura integra",
+      "targets": ["drop-27won-pads"],
+      "rationale": "Relational query with newer year targeting the dropped 27WON pads. Tests year sensitivity in retrieval."
+    },
+    {
+      "id": "Q16",
+      "archetype": "suspension",
+      "type": "intrinsic",
+      "query": "coilover kit",
+      "target_vehicle": null,
+      "targets": ["keep-br-coilovers"],
+      "rationale": "Intrinsic control for coilovers — no vehicle named. Tests baseline retrievability."
+    },
+    {
+      "id": "Q17",
+      "archetype": "exhaust",
+      "type": "intrinsic",
+      "query": "valved exhaust system",
+      "target_vehicle": null,
+      "targets": ["keep-27won-exhaust"],
+      "rationale": "Intrinsic control for exhaust — no vehicle named. Tests baseline retrievability."
+    },
+    {
+      "id": "Q18",
+      "archetype": "suspension",
+      "type": "intrinsic",
+      "query": "sportline lowering springs",
+      "target_vehicle": null,
+      "targets": ["keep-eibach-springs"],
+      "rationale": "Intrinsic control for springs — no vehicle named. Tests baseline retrievability."
+    }
+  ],
+  "archetype_count": 7,
+  "relational_query_count": 14,
+  "intrinsic_query_count": 4,
+  "total_queries": 18,
+  "target_product_count": 12,
+  "expected_min_pairs": 50
+}

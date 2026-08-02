@@ -281,32 +281,40 @@ export interface Vehicle {
 const key = (v: Vehicle) => `${v.make}|${v.model}`;
 
 /**
- * Check if a stated vehicle matches an inferred vehicle.
- * A stated vehicle matches if the inferred vehicle's key starts with the stated
- * vehicle's key (the inferred side may be more specific — e.g. "honda civic fc"
- * matches "honda civic"). This prevents false omissions when Shopify adds chassis
- * codes the merchant didn't state.
+ * Symmetric prefix match: a match holds when either side's key is a prefix of
+ * the other. (DIRECTIVE-4 §2.3, 2 Aug 2026 — made symmetric.)
+ * "honda civic"/"honda civic fc" matches (inferred more specific).
+ * "audi rs3 8p"/"audi rs3" matches (stated more specific).
  */
-function vehicleMatches(stated: Vehicle, inferred: Vehicle[]): boolean {
-  const statedKey = key(stated);
-  return inferred.some((v) => {
-    const infKey = key(v);
-    // Exact match, or inferred is a specialization of stated
-    return infKey === statedKey || infKey.startsWith(statedKey + ' ');
-  });
+function prefixMatch(a: string, b: string): boolean {
+  return a === b || a.startsWith(b + ' ') || b.startsWith(a + ' ');
 }
 
 /**
- * Check if an inferred vehicle was stated by the merchant.
- * An inferred vehicle matches if any stated vehicle's key is a prefix of the
- * inferred vehicle's key (the stated side may be less specific).
+ * Check if a stated vehicle matches an inferred vehicle (symmetric prefix).
+ */
+function vehicleMatches(stated: Vehicle, inferred: Vehicle[]): boolean {
+  const statedKey = key(stated);
+  return inferred.some((v) => prefixMatch(statedKey, key(v)));
+}
+
+/**
+ * Check if an inferred vehicle was stated by the merchant (symmetric prefix).
  */
 function wasStated(inf: Vehicle, stated: Vehicle[]): boolean {
   const infKey = key(inf);
-  return stated.some((v) => {
-    const stKey = key(v);
-    return infKey === stKey || infKey.startsWith(stKey + ' ');
-  });
+  return stated.some((v) => prefixMatch(infKey, key(v)));
+}
+
+/** Strict (exact key) versions for the sensitivity scoring rule. */
+function vehicleMatchesStrict(stated: Vehicle, inferred: Vehicle[]): boolean {
+  const statedKey = key(stated);
+  return inferred.some((v) => key(v) === statedKey);
+}
+
+function wasStatedStrict(inf: Vehicle, stated: Vehicle[]): boolean {
+  const infKey = key(inf);
+  return stated.some((v) => key(v) === infKey);
 }
 
 /**
@@ -667,7 +675,8 @@ interface Row {
   inferred: Vehicle[];
   omitted: Vehicle[];
   added: Vehicle[];
-  recall: number | null;
+  recallPrefix: number | null;  // symmetric prefix matching (headline)
+  recallStrict: number | null;  // exact key matching (sensitivity)
 }
 
 async function main() {
@@ -751,9 +760,10 @@ async function main() {
       const stated = extractVehicles(source);
       const inferred = extractVehicles(specs);
 
-      // P-2 hardening: prefix matching — "honda civic" (stated) matches "honda civic fc" (inferred)
+      // DIRECTIVE-4 §2.3: dual scoring rules — prefix (symmetric, headline) + strict (sensitivity)
       const omitted = stated.filter((v) => !vehicleMatches(v, inferred));
       const added = inferred.filter((v) => !wasStated(v, stated));
+      const omittedStrict = stated.filter((v) => !vehicleMatchesStrict(v, inferred));
 
       rows.push({
         store: store.domain,
@@ -769,7 +779,8 @@ async function main() {
         inferred,
         omitted,
         added,
-        recall: stated.length === 0 ? null : (stated.length - omitted.length) / stated.length,
+        recallPrefix: stated.length === 0 ? null : (stated.length - omitted.length) / stated.length,
+        recallStrict: stated.length === 0 ? null : (stated.length - omittedStrict.length) / stated.length,
       });
     }
 
@@ -781,47 +792,69 @@ async function main() {
   const rich = rows.filter((r) => r.bucket === 'rich').slice(0, CONFIG.perBucket);
   const sample = [...thin, ...rich];
 
-  const scored = sample.filter((r) => r.recall !== null);
+  // DIRECTIVE-4 §2.3: dual scoring rules
+  const scored = sample.filter((r) => r.recallPrefix !== null);
   const noFitment = sample.length - scored.length;
-  const meanRecall = scored.length ? scored.reduce((s, r) => s + (r.recall ?? 0), 0) / scored.length : null;
+  const meanPrefix = scored.length ? scored.reduce((s, r) => s + (r.recallPrefix ?? 0), 0) / scored.length : null;
+  const meanStrict = scored.length ? scored.reduce((s, r) => s + (r.recallStrict ?? 0), 0) / scored.length : null;
 
-  const meanFor = (b: 'thin' | 'rich') => {
+  const meanFor = (b: 'thin' | 'rich', rule: 'prefix' | 'strict') => {
     const xs = scored.filter((r) => r.bucket === b);
-    return xs.length ? xs.reduce((s, r) => s + (r.recall ?? 0), 0) / xs.length : null;
+    const field = rule === 'prefix' ? 'recallPrefix' : 'recallStrict';
+    return xs.length ? xs.reduce((s, r) => s + (r[field] ?? 0), 0) / xs.length : null;
   };
+
+  // Scored-set composition by store (DIRECTIVE-4 §12)
+  const scoredByStore: Record<string, number> = {};
+  for (const r of scored) scoredByStore[r.store] = (scoredByStore[r.store] ?? 0) + 1;
 
   console.log('\n' + '═'.repeat(66));
   console.log(`Sample: ${sample.length} products (${thin.length} thin, ${rich.length} rich)`);
   console.log(`Scored: ${scored.length}   No stated fitment: ${noFitment}`);
-  console.log(`Mean fitment recall: ${meanRecall === null ? 'n/a' : meanRecall.toFixed(3)}`);
-  console.log(`  thin: ${meanFor('thin')?.toFixed(3) ?? 'n/a'}   rich: ${meanFor('rich')?.toFixed(3) ?? 'n/a'}`);
+  console.log(`Scored by store: ${Object.entries(scoredByStore).map(([k, v]) => `${k}=${v}`).join(', ')}`);
+  console.log(`Mean fitment recall (prefix, headline): ${meanPrefix === null ? 'n/a' : meanPrefix.toFixed(3)}`);
+  console.log(`Mean fitment recall (strict, sensitivity): ${meanStrict === null ? 'n/a' : meanStrict.toFixed(3)}`);
+  console.log(`  thin:  prefix=${meanFor('thin', 'prefix')?.toFixed(3) ?? 'n/a'}  strict=${meanFor('thin', 'strict')?.toFixed(3) ?? 'n/a'}`);
+  console.log(`  rich:  prefix=${meanFor('rich', 'prefix')?.toFixed(3) ?? 'n/a'}  strict=${meanFor('rich', 'strict')?.toFixed(3) ?? 'n/a'}`);
   console.log('═'.repeat(66));
 
   let verdict: string;
-  if (meanRecall === null) {
+  if (meanPrefix === null) {
     verdict =
       'INCONCLUSIVE — no products with a stated fitment set. Either the extractor is failing ' +
       '(check the review sheet) or fitment lives in metafields invisible to /products.json. ' +
       'Do not interpret this as either outcome of the decision rule.';
   } else if (scored.length < 8) {
     verdict = `UNDERPOWERED — only ${scored.length} scored products. Add stores before applying the decision rule.`;
-  } else if (meanRecall < DECISION_THRESHOLD) {
-    verdict =
-      `COVERAGE GAP CONFIRMED (${meanRecall.toFixed(3)} < ${DECISION_THRESHOLD}). Shopify's inference drops ` +
-      'vehicles the merchant states, so products are unretrievable for vehicles the merchant serves. ' +
-      'This is the finding. Proceed to Phase 0 and measure the retrieval consequences of omission.';
   } else {
-    verdict =
-      `NO COVERAGE GAP (${meanRecall.toFixed(3)} >= ${DECISION_THRESHOLD}). Shopify's inference preserves the ` +
-      "merchant's stated fitment. The catalogue-visibility problem largely does not exist in this vertical. " +
-      'STOP per the pre-registered rule. Write up the negative result, publish it, take the artifact — ' +
-      'BLUEPRINT §5 records this in advance as a successful outcome.';
+    // DIRECTIVE-4 §1.1: the 0.80 rule requires a compliant sample (20 products, 3-4 stores, stratified)
+    const storeCount = Object.keys(scoredByStore).length;
+    const compliant = scored.length >= 20 && storeCount >= 3;
+    const range = `prefix=${meanPrefix.toFixed(3)}, strict=${meanStrict.toFixed(3)}`;
+    if (!compliant) {
+      verdict =
+        `RULE NOT FIRED — sample non-compliant with registration (${scored.length} scored from ${storeCount} store(s); ` +
+        `requires 20 across 3-4). Recall range: ${range}. The rule fires on the first compliant sample (DIRECTIVE-4 §1.1).`;
+    } else if (meanPrefix < DECISION_THRESHOLD) {
+      verdict =
+        `COVERAGE GAP CONFIRMED (${range} < ${DECISION_THRESHOLD}). Shopify's inference drops ` +
+        'vehicles the merchant states, so products are unretrievable for vehicles the merchant serves.';
+    } else {
+      verdict =
+        `NO COVERAGE GAP (${range} >= ${DECISION_THRESHOLD}). Shopify's inference preserves the ` +
+        "merchant's stated fitment. STOP per the pre-registered rule.";
+    }
   }
 
   console.log(`\n${verdict}\n`);
   console.log('VERIFY THE EXTRACTED SETS in the review sheet before trusting this number.\n');
 
-  await emit(rows, sample, { meanRecall, thinMean: meanFor('thin'), richMean: meanFor('rich'), noFitment }, verdict);
+  await emit(rows, sample, {
+    meanPrefix, meanStrict,
+    thinPrefix: meanFor('thin', 'prefix'), thinStrict: meanFor('thin', 'strict'),
+    richPrefix: meanFor('rich', 'prefix'), richStrict: meanFor('rich', 'strict'),
+    noFitment, scoredByStore,
+  }, verdict);
 }
 
 async function emit(
@@ -846,10 +879,12 @@ async function emit(
     '',
     '| Metric | Value |',
     '|---|---|',
-    `| Mean fitment recall | ${stats.meanRecall === null ? 'n/a' : (stats.meanRecall as number).toFixed(3)} |`,
-    `| Thin-source mean | ${stats.thinMean === null ? 'n/a' : (stats.thinMean as number).toFixed(3)} |`,
-    `| Rich-source mean | ${stats.richMean === null ? 'n/a' : (stats.richMean as number).toFixed(3)} |`,
+    `| Mean recall (prefix, headline) | ${stats.meanPrefix === null ? 'n/a' : (stats.meanPrefix as number).toFixed(3)} |`,
+    `| Mean recall (strict, sensitivity) | ${stats.meanStrict === null ? 'n/a' : (stats.meanStrict as number).toFixed(3)} |`,
+    `| Thin-source mean (prefix / strict) | ${stats.thinPrefix === null ? 'n/a' : (stats.thinPrefix as number).toFixed(3)} / ${stats.thinStrict === null ? 'n/a' : (stats.thinStrict as number).toFixed(3)} |`,
+    `| Rich-source mean (prefix / strict) | ${stats.richPrefix === null ? 'n/a' : (stats.richPrefix as number).toFixed(3)} / ${stats.richStrict === null ? 'n/a' : (stats.richStrict as number).toFixed(3)} |`,
     `| Products with no stated fitment | ${stats.noFitment} |`,
+    `| Scored by store | ${Object.entries(stats.scoredByStore as Record<string, number>).map(([k, v]) => `${k}=${v}`).join(', ')} |`,
     '',
     '## Before trusting the number',
     '',
@@ -878,7 +913,7 @@ async function emit(
     md.push(`- **Store:** ${r.store} · **Bucket:** ${r.bucket} (${r.sourceChars} chars)`);
     md.push(`- **Source:** https://${r.store}/products/${r.handle}`);
     md.push(`- **Match:** tier ${r.matchTier} — ${r.matchMethod} (${r.matchConfidence})${r.needsConfirmation ? ' ⚠ VERIFY — tier 3 match' : ''}`);
-    md.push(`- **Recall:** ${r.recall === null ? 'n/a — no stated fitment' : r.recall.toFixed(2)}`);
+    md.push(`- **Recall:** prefix=${r.recallPrefix === null ? 'n/a' : r.recallPrefix.toFixed(2)} · strict=${r.recallStrict === null ? 'n/a' : r.recallStrict.toFixed(2)}${r.recallPrefix === null ? ' — no stated fitment' : ''}`);
     md.push('');
     md.push(`**Stated (${r.stated.length}):** ${r.stated.map((v) => `${v.make} ${v.model}`).join(', ') || '—'}`);
     md.push('');
