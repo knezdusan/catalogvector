@@ -1,0 +1,585 @@
+{
+  "directive": "DIRECTIVE-7 §4 + §3",
+  "timestamp": "2026-08-02T17:16:11.077Z",
+  "sourceFile": "unscoped-2026-08-02T15-44-54-483Z.json",
+  "clustering": {
+    "verdict": "PER-MERCHANT ROWS (not UPID clusters)",
+    "totalProducts": 900,
+    "multiVariant": 0,
+    "multiSeller": 0,
+    "upidFields": [],
+    "productKeys": [
+      "description",
+      "id",
+      "media",
+      "metadata",
+      "options",
+      "price_range",
+      "rating",
+      "title",
+      "variants"
+    ],
+    "multiSellerTitleCount": 34,
+    "h5Applies": false
+  },
+  "presenceDefinition": "handle identity (extract handle from variant URL, match against target handle)",
+  "rescored": [
+    {
+      "queryId": "Q01",
+      "query": "brake pads for 2018 Honda Civic Si",
+      "type": "relational",
+      "targets": [
+        {
+          "targetId": "drop-27won-pads",
+          "handle": "27won-brake-pads",
+          "population": "dropped",
+          "present": false,
+          "rank": null,
+          "matchedProductId": null,
+          "matchedDomain": null
+        },
+        {
+          "targetId": "keep-paragon-pbp370",
+          "handle": "paragon-pbp370-brake-pads",
+          "population": "retained",
+          "present": false,
+          "rank": null,
+          "matchedProductId": null,
+          "matchedDomain": null
+        },
+        {
+          "targetId": "keep-paragon-pbp1557",
+          "handle": "paragon-pbp1557-brake-pads",
+          "population": "retained",
+          "present": false,
+          "rank": null,
+          "matchedProductId": null,
+          "matchedDomain": null
+        }
+      ]
+    },
+    {
+      "queryId": "Q02",
+      "query": "brake pads for 2023 Acura Integra",
+      "type": "relational",
+      "targets": [
+        {
+          "targetId": "drop-27won-pads",
+          "handle": "27won-brake-pads",
+          "population": "dropped",
+          "present": true,
+          "rank": 22,
+          "matchedProductId": "gid://shopify/p/3c9Jr5JMZXt0dK4iqVXTy4",
+          "matchedDomain": "www.twostepperformance.com"
+        }
+      ]
+    },
+    {
+      "queryId": "Q03",
+      "query": "front brake pads",
+      "type": "intrinsic",
+      "targets": [
+        {
+          "targetId": "keep-paragon-pbp370",
+          "handle": "paragon-pbp370-brake-pads",
+          "population": "retained",
+          "present": false,
+          "rank": null,
+          "matchedProductId": null,
+          "matchedDomain": null
+        },
+        {
+          "targetId": "keep-paragon-pbp1557",
+          "handle": "paragon-pbp1557-brake-pads",
+          "population": "retained",
+          "present": false,
+          "rank": null,
+          "matchedProductId": null,
+          "matchedDomain": null
+        },
+        {
+          "targetId": "drop-27won-pads",
+          "handle": "27won-brake-pads",
+          "population": "dropped",
+          "present": false,
+          "rank": null,
+          "matchedProductId": null,
+          "matchedDomain": null
+        }
+      ]
+    },
+    {
+      "queryId": "Q04",
+      "query": "big brake kit for 2017 Honda Civic Si",
+      "type": "relational",
+      "targets": [
+        {
+          "targetId": "drop-prl-bbk",
+          "handle": "prl-motorsports-4-piston-bbk-paragon-upgrade-kit-for-2017-honda-civic-si-integra-fc-fe-de4-1",
+          "population": "dropped",
+          "present": true,
+          "rank": 41,
+          "matchedProductId": "gid://shopify/p/4es46jNu58ko9LzdbaxIEC",
+          "matchedDomain": "www.twostepperformance.com"
+        }
+      ]
+    },
+    {
+      "queryId": "Q05",
+      "query": "brake kit for 2018 Honda Civic Si",
+      "type": "relational",
+      "targets": [
+        {
+          "targetId": "drop-prl-bbk",
+          "handle": "prl-motorsports-4-piston-bbk-paragon-upgrade-kit-for-2017-honda-civic-si-integra-fc-fe-de4-1",
+          "population": "dropped",
+          "present": false,
+          "rank": null,
+          "matchedProductId": null,
+          "matchedDomain": null
+        },
+        {
+          "targetId": "drop-27won-pads",
+          "handle": "27won-brake-pads",
+          "population": "dropped",
+          "present": false,
+          "rank": null,
+          "matchedProductId": null,
+          "matchedDomain": null
+        }
+      ]
+    },
+    {
+      "queryId": "Q06",
+      "query": "brake lines for 2022 Honda Civic Si",
+      "type": "relational",
+      "targets": [
+        {
+          "targetId": "drop-hel-lines",
+          "handle": "hel-hon-4-905",
+          "population": "dropped",
+          "present": true,
+          "rank": 1,
+          "matchedProductId": "gid://shopify/p/7lgC6tjBpJbF8OFKs5HnqL",
+          "matchedDomain": "www.twostepperformance.com"
+        }
+      ]
+    },
+    {
+      "queryId": "Q07",
+      "query": "stainless steel braided brake lines",
+      "type": "intrinsic",
+      "targets": [
+        {
+          "targetId": "drop-hel-lines",
+          "handle": "hel-hon-4-905",
+          "population": "dropped",
+          "present": true,
+          "rank": 39,
+          "matchedProductId": "gid://shopify/p/7lgC6tjBpJbF8OFKs5HnqL",
+          "matchedDomain": "www.twostepperformance.com"
+        }
+      ]
+    },
+    {
+      "queryId": "Q08",
+      "query": "lowering springs for 2023 Honda Civic Type R",
+      "type": "relational",
+      "targets": [
+        {
+          "targetId": "keep-eibach-springs",
+          "handle": "eibach-22-23-honda-civic-type-r-fwd-fl5-sportline-kit-set-of-4-springs",
+          "population": "retained",
+          "present": true,
+          "rank": 8,
+          "matchedProductId": "gid://shopify/p/3KIMtF8xKS2yDGsmGgr7YJ",
+          "matchedDomain": "www.twostepperformance.com"
+        }
+      ]
+    },
+    {
+      "queryId": "Q09",
+      "query": "camber arms for 2016 Honda Civic",
+      "type": "relational",
+      "targets": [
+        {
+          "targetId": "keep-whiteline-camber",
+          "handle": "whiteline-2015-honda-civic-rear-upper-camber-arm-adjustable-pair",
+          "population": "retained",
+          "present": true,
+          "rank": 1,
+          "matchedProductId": "gid://shopify/p/KcDwIi1QmJkhQkjgm0lDm",
+          "matchedDomain": "www.twostepperformance.com"
+        }
+      ]
+    },
+    {
+      "queryId": "Q10",
+      "query": "coilovers for 2017 Honda Civic",
+      "type": "relational",
+      "targets": [
+        {
+          "targetId": "keep-br-coilovers",
+          "handle": "br-series-coilovers-for-2016-honda-civic-non-si-1-5t-coupe-sedan",
+          "population": "retained",
+          "present": false,
+          "rank": null,
+          "matchedProductId": null,
+          "matchedDomain": null
+        }
+      ]
+    },
+    {
+      "queryId": "Q11",
+      "query": "lift kit for 2023 Ford F-150",
+      "type": "relational",
+      "targets": [
+        {
+          "targetId": "keep-icon-lift",
+          "handle": "icon-stage-4-w-billet-uca-suspension-kit-for-2021-2025-ford-f-150-4wd",
+          "population": "retained",
+          "present": false,
+          "rank": null,
+          "matchedProductId": null,
+          "matchedDomain": null
+        }
+      ]
+    },
+    {
+      "queryId": "Q12",
+      "query": "exhaust system for 2023 Honda Civic Type R",
+      "type": "relational",
+      "targets": [
+        {
+          "targetId": "keep-27won-exhaust",
+          "handle": "27won-performance-valved-exhaust-system-for-2023-honda-civic-type-r-fl5",
+          "population": "retained",
+          "present": true,
+          "rank": 2,
+          "matchedProductId": "gid://shopify/p/3IjQMSpicixtuG0SaKFrNK",
+          "matchedDomain": "www.twostepperformance.com"
+        }
+      ]
+    },
+    {
+      "queryId": "Q13",
+      "query": "downpipe for 2018 Honda Civic Type R",
+      "type": "relational",
+      "targets": [
+        {
+          "targetId": "keep-downpipe",
+          "handle": "high-efficiency-downpipe-upgrade-for-2017-2021-honda-civic-type-r-fk8",
+          "population": "retained",
+          "present": true,
+          "rank": 6,
+          "matchedProductId": "gid://shopify/p/5y0xueiZeGglCgfQAJHoIm",
+          "matchedDomain": "www.twostepperformance.com"
+        }
+      ]
+    },
+    {
+      "queryId": "Q14",
+      "query": "strut tower bar for 2023 Honda Civic",
+      "type": "relational",
+      "targets": [
+        {
+          "targetId": "keep-27won-strut",
+          "handle": "11th-gen-civic-front-strut-tower-bar",
+          "population": "retained",
+          "present": true,
+          "rank": 1,
+          "matchedProductId": "gid://shopify/p/3v38UWbxNhOiFQjXBqLu9N",
+          "matchedDomain": "www.twostepperformance.com"
+        }
+      ]
+    },
+    {
+      "queryId": "Q15",
+      "query": "brake pads for 2024 Acura Integra",
+      "type": "relational",
+      "targets": [
+        {
+          "targetId": "drop-27won-pads",
+          "handle": "27won-brake-pads",
+          "population": "dropped",
+          "present": false,
+          "rank": null,
+          "matchedProductId": null,
+          "matchedDomain": null
+        }
+      ]
+    },
+    {
+      "queryId": "Q16",
+      "query": "coilover kit",
+      "type": "intrinsic",
+      "targets": [
+        {
+          "targetId": "keep-br-coilovers",
+          "handle": "br-series-coilovers-for-2016-honda-civic-non-si-1-5t-coupe-sedan",
+          "population": "retained",
+          "present": false,
+          "rank": null,
+          "matchedProductId": null,
+          "matchedDomain": null
+        }
+      ]
+    },
+    {
+      "queryId": "Q17",
+      "query": "valved exhaust system",
+      "type": "intrinsic",
+      "targets": [
+        {
+          "targetId": "keep-27won-exhaust",
+          "handle": "27won-performance-valved-exhaust-system-for-2023-honda-civic-type-r-fl5",
+          "population": "retained",
+          "present": true,
+          "rank": 27,
+          "matchedProductId": "gid://shopify/p/3IjQMSpicixtuG0SaKFrNK",
+          "matchedDomain": "www.twostepperformance.com"
+        }
+      ]
+    },
+    {
+      "queryId": "Q18",
+      "query": "sportline lowering springs",
+      "type": "intrinsic",
+      "targets": [
+        {
+          "targetId": "keep-eibach-springs",
+          "handle": "eibach-22-23-honda-civic-type-r-fwd-fl5-sportline-kit-set-of-4-springs",
+          "population": "retained",
+          "present": false,
+          "rank": null,
+          "matchedProductId": null,
+          "matchedDomain": null
+        }
+      ]
+    }
+  ],
+  "denominators": [
+    {
+      "queryId": "Q01",
+      "query": "brake pads for 2018 Honda Civic Si",
+      "type": "relational",
+      "distinctDomains": 28,
+      "totalCount": 291,
+      "hasNextPage": true
+    },
+    {
+      "queryId": "Q02",
+      "query": "brake pads for 2023 Acura Integra",
+      "type": "relational",
+      "distinctDomains": 24,
+      "totalCount": 312,
+      "hasNextPage": true
+    },
+    {
+      "queryId": "Q03",
+      "query": "front brake pads",
+      "type": "intrinsic",
+      "distinctDomains": 24,
+      "totalCount": 352,
+      "hasNextPage": true
+    },
+    {
+      "queryId": "Q04",
+      "query": "big brake kit for 2017 Honda Civic Si",
+      "type": "relational",
+      "distinctDomains": 22,
+      "totalCount": 315,
+      "hasNextPage": true
+    },
+    {
+      "queryId": "Q05",
+      "query": "brake kit for 2018 Honda Civic Si",
+      "type": "relational",
+      "distinctDomains": 37,
+      "totalCount": 320,
+      "hasNextPage": true
+    },
+    {
+      "queryId": "Q06",
+      "query": "brake lines for 2022 Honda Civic Si",
+      "type": "relational",
+      "distinctDomains": 33,
+      "totalCount": 281,
+      "hasNextPage": true
+    },
+    {
+      "queryId": "Q07",
+      "query": "stainless steel braided brake lines",
+      "type": "intrinsic",
+      "distinctDomains": 23,
+      "totalCount": 353,
+      "hasNextPage": true
+    },
+    {
+      "queryId": "Q08",
+      "query": "lowering springs for 2023 Honda Civic Type R",
+      "type": "relational",
+      "distinctDomains": 36,
+      "totalCount": 334,
+      "hasNextPage": true
+    },
+    {
+      "queryId": "Q09",
+      "query": "camber arms for 2016 Honda Civic",
+      "type": "relational",
+      "distinctDomains": 29,
+      "totalCount": 310,
+      "hasNextPage": true
+    },
+    {
+      "queryId": "Q10",
+      "query": "coilovers for 2017 Honda Civic",
+      "type": "relational",
+      "distinctDomains": 22,
+      "totalCount": 322,
+      "hasNextPage": true
+    },
+    {
+      "queryId": "Q11",
+      "query": "lift kit for 2023 Ford F-150",
+      "type": "relational",
+      "distinctDomains": 24,
+      "totalCount": 327,
+      "hasNextPage": true
+    },
+    {
+      "queryId": "Q12",
+      "query": "exhaust system for 2023 Honda Civic Type R",
+      "type": "relational",
+      "distinctDomains": 34,
+      "totalCount": 294,
+      "hasNextPage": true
+    },
+    {
+      "queryId": "Q13",
+      "query": "downpipe for 2018 Honda Civic Type R",
+      "type": "relational",
+      "distinctDomains": 29,
+      "totalCount": 318,
+      "hasNextPage": true
+    },
+    {
+      "queryId": "Q14",
+      "query": "strut tower bar for 2023 Honda Civic",
+      "type": "relational",
+      "distinctDomains": 31,
+      "totalCount": 341,
+      "hasNextPage": true
+    },
+    {
+      "queryId": "Q15",
+      "query": "brake pads for 2024 Acura Integra",
+      "type": "relational",
+      "distinctDomains": 25,
+      "totalCount": 317,
+      "hasNextPage": true
+    },
+    {
+      "queryId": "Q16",
+      "query": "coilover kit",
+      "type": "intrinsic",
+      "distinctDomains": 35,
+      "totalCount": 322,
+      "hasNextPage": true
+    },
+    {
+      "queryId": "Q17",
+      "query": "valved exhaust system",
+      "type": "intrinsic",
+      "distinctDomains": 6,
+      "totalCount": 317,
+      "hasNextPage": true
+    },
+    {
+      "queryId": "Q18",
+      "query": "sportline lowering springs",
+      "type": "intrinsic",
+      "distinctDomains": 17,
+      "totalCount": 358,
+      "hasNextPage": true
+    }
+  ],
+  "presenceByDepth": {
+    "dropped": {
+      "presence3": [
+        {
+          "depth": 3,
+          "present": 1,
+          "pairs": 7,
+          "rate": 0.14285714285714285
+        },
+        {
+          "depth": 10,
+          "present": 1,
+          "pairs": 7,
+          "rate": 0.14285714285714285
+        },
+        {
+          "depth": 50,
+          "present": 3,
+          "pairs": 7,
+          "rate": 0.42857142857142855
+        }
+      ]
+    },
+    "retained": {
+      "presence3": [
+        {
+          "depth": 3,
+          "present": 3,
+          "pairs": 9,
+          "rate": 0.3333333333333333
+        },
+        {
+          "depth": 10,
+          "present": 5,
+          "pairs": 9,
+          "rate": 0.5555555555555556
+        },
+        {
+          "depth": 50,
+          "present": 5,
+          "pairs": 9,
+          "rate": 0.5555555555555556
+        }
+      ]
+    },
+    "pooled": {
+      "presence3": [
+        {
+          "depth": 3,
+          "present": 4,
+          "pairs": 16,
+          "rate": 0.25
+        },
+        {
+          "depth": 10,
+          "present": 6,
+          "pairs": 16,
+          "rate": 0.375
+        },
+        {
+          "depth": 50,
+          "present": 8,
+          "pairs": 16,
+          "rate": 0.5
+        }
+      ]
+    }
+  },
+  "rankDistribution": [
+    1,
+    1,
+    1,
+    2,
+    6,
+    8,
+    22,
+    41
+  ]
+}
