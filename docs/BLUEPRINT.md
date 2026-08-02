@@ -4,7 +4,7 @@
 |---|---|
 | **Document** | Blueprint (governing, non-technical) |
 | **Companion** | `TDD.md` (governing, technical) |
-| **Version** | 0.4.0 |
+| **Version** | 0.4.1 |
 | **Date** | 2 August 2026 |
 | **Owner** | Dušan Knežević (solo) |
 | **Status** | Phase 0 not started. Infrastructure I-1–I-4 done. U-3, U-4 resolved. Inference-accuracy reframe nullified (1.7% error, n=59). **Fitment-recall probe: PROVISIONAL coverage gap** (corrected mean recall ~0.70 < 0.80, n=12, 1-2 stores; inferred-set audit passed; re-run required before declaration). Original thesis holds: specs visible ≠ products retrievable. No pipeline code written. |
@@ -114,7 +114,7 @@ Pick one vertical against four criteria: specs are relational not descriptive; e
 
 ### Phase 1 — Measurement instrument and publication *(3 weeks)* ← **the artifact**
 Build the retrieval measurement pipeline, run it over N public stores in the chosen vertical, publish four things: dataset, methodology, open-source code under his name, and analysis written for people in that vertical.
-**Timebox is fixed.** If it does not fit, cut the scan scope — never the publication quality.
+**Timebox is fixed.** If it does not fit, cut the scan scope — never the publication quality. *(The three-week timebox is withdrawn per §5.1 / DIRECTIVE-3 §6, 2 Aug 2026; milestones are now evidence-gated. The header text is retained for history.)*
 
 **Acid test, carried from Directive #2:** if the scoring reduces to a loop over fields, the concept has collapsed back into the dead one and the project stops. Current assessment: it does not — the expected-match resolver (`TDD.md` C5) is a genuine retrieval and arbitration problem. This must be re-checked at first working prototype, not assumed.
 
@@ -133,6 +133,14 @@ Productization reopens only after **2–3 engagements reveal the same repeatable
 
 ### Phase 3 — Productize
 Not now. Not designed now.
+
+### 5.1 Timebox withdrawal and evidence-gated milestones *(added per DIRECTIVE-3 §6, 2 Aug 2026)*
+
+**The three-week timebox is withdrawn.** The Phase 1 header above reads "*(3 weeks)*" for historical continuity; that calendar constraint no longer binds. DIRECTIVE-3 supersedes the Phase 0 / Phase 1 sequencing in this §5 and the three-week milestone plan in `TDD.md` §9.
+
+**Milestones are now evidence-gated, not calendar-gated.** A stage advances when its pre-registered threshold is met on a hardened instrument at adequate n — not when a week elapses. If a measurement is inconclusive at current n, the response is a better run, not a deadline-driven declaration.
+
+**Gate A's inbound-conversation threshold is suspended, pending redefinition by directive.** The "3+ distinct inbound conversations within four weeks of publication" threshold (agreed 28 July 2026) is no longer the active gate. It will be replaced by a directive that defines a gate appropriate to an evidence-gated, non-deadline project. **Do not invent a replacement threshold.** Until that directive arrives, Gate A is effectively open: the project advances on measurement evidence, not on inbound count.
 
 ---
 
@@ -293,3 +301,4 @@ The measurement is the comparison between them: what the merchant has, versus wh
 | 2026-08-01 | 0.3.0 | **Infrastructure:** I-1 (Partner account) and I-2 (dev store) created. **I-4 RESOLVED — lead-time risk eliminated:** Shopify Spring '26 removed the agent-profile approval requirement. The TDD's §2.4 auth model was wrong (conflated capability negotiation with authentication). Corrected: (1) agent profile = JSON file you host, no registration, included as `meta.ucp-agent.profile`; (2) auth = API key from Dev Dashboard → Catalogs (instant), exchanged for bearer token at runtime, sent as `Authorization: Bearer`. Token tier = highest rate limits. Profile created at `public/ucp-agent-profile.json` (catalog-only: search + lookup + global extension). Auth helper in `src/lib/scanner/ucp-auth.ts`. C3 stub updated with real request shape. Env updated with `SHOPIFY_CLIENT_ID`/`SHOPIFY_CLIENT_SECRET`. TDD §2.4 rewritten, U-1 marked RESOLVED. **Manual step remaining:** user must generate the API key in Dev Dashboard and add credentials to `.env.local`. |
 | 2026-08-01 | 0.3.1 | **I-3 DONE — Shopify AI Toolkit adapted for Devin Desktop.** Shopify's plugin path supports Claude Code, Codex, Cursor, VS Code, Hermes — not Devin. Adapted the three underlying tool-agnostic components: (1) `shopify-dev-mcp` MCP server (stdio, docs + GraphQL validation, no auth) added to `.devin/config.json` + `.mcp.json`; (2) 4 Shopify AI Toolkit skills installed via `npx skills add` to `.agents/skills/` (`ucp`, `shopify-dev`, `shopify-storefront-graphql`, `shopify-use-shopify-cli` — 4 of 21 total, selected for Phase 1 relevance); (3) `@shopify/ucp-cli` v0.6.3 global, profile `catalogvector`. All verified operational: Dev MCP exposes 5 tools, UCP CLI returns real catalog results. AGENTS.md updated with Shopify tooling section. TDD §2.2 rewritten with Devin-adapted installation details and full skill inventory. |
 | 2026-08-01 | 0.4.0 | **U-3, U-4 resolved; inference-accuracy reframe proposed and nullified; fitment-recall probe: PROVISIONAL coverage gap.** U-4 control experiment (5 tests, 250 products): (1) U-3 RESOLVED: shop GIDs resolvable via `search_catalog` + `variants[].seller.id`. (2) U-4 RESOLVED: `filters.shops` is a HARD RESTRICTION (0 containment violations, including page 2 with real cursor). `metadata.tech_specs` populated on ~99% of products. **Inference-accuracy reframe proposed** ("is Shopify's AI hallucinating wrong specs?") and **nullified** by probe (n=59 claims, 1.7% error, 0/9 fitment errors, 0/59 contradictions — well-functioning pipeline). **The real finding is coverage, not accuracy:** Shopify's inference drops vehicles from fitment lists. **Fitment-recall probe** (pre-registered threshold 0.80): raw mean recall 0.490 (n=12, 1 store). After stated-set audit: corrected mean recall **0.70** (n=12) / **0.64** (n=17 sensitivity). **Inferred-set audit passed:** all 6 products with zero inferred fitment checked by reading raw `tech_specs` — genuinely devoid of vehicle names, parametric specs only. Zeros are real platform failures. **Below 0.80 threshold but NOT DECLARED — PROVISIONAL.** Extractor needs hardening, matching needs handle/SKU (2/4 stores contributed zero rows), stratification didn't happen, sample is 1-2 stores. Pre-registration deviations: n=17 pulls from `all` after numbers visible (report n=12/0.70 as headline); MAPerformance title collapse ("Multiple Fitments" instead of vehicle names) is a coverage finding in its own right. §1, §2.2 reverted to v0.3.1 framing. §3 updated with both invalidated directions. TDD §6 `fitment_recall` is the primary metric. |
+| 2026-08-02 | 0.4.1 | **DIRECTIVE-3 §6 executed — timebox withdrawn, milestones evidence-gated.** §5.1 added (per directive authorization, not self-initiated): the three-week timebox is withdrawn; milestones are now evidence-gated, not calendar-gated; Gate A's inbound-conversation threshold is suspended pending redefinition by directive — no replacement invented. §5 Phase 1 header annotated to point at §5.1. TDD §9 marked SUPERSEDED. §3 inference-accuracy entry (line 89, added in 0.4.0) verified present — not re-added. No pre-registered thresholds touched. DIRECTIVE-3 prerequisites (P-1, P-2, P-3) and Workstreams A/B not yet started. |

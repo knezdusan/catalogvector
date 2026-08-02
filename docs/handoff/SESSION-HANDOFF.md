@@ -191,6 +191,7 @@ These are cheap to settle and they determine what Workstream A means.
 
 1. Read the files listed in "What to read first" — in order.
 2. Make the two directed doc changes (verify §3 inference-accuracy entry; add §5.1 timebox withdrawal).
-3. Declare your understanding of your role, the project context, the permission boundary, and the directive's execution order.
-4. Ask the founder to provide DIRECTIVE-3.md for immediate processing.
-5. Begin Stage 1 (prerequisites) upon confirmation.
+3. Raise any initial concerns if it is critical and can prevent you of succesfully initiate and follow the session mandate.
+4. Declare your understanding of your role, the project context, the permission boundary, and the directive's execution order.
+5. Ask the founder to proceed with DIRECTIVE-3.md immediate processing.
+6. Begin Stage 1 (prerequisites) upon confirmation.

@@ -162,7 +162,63 @@ const MODEL_STOP = new Set([
   'front', 'rear', 'left', 'right', 'and', 'or', 'the', 'for', 'with', 'w', 'all',
   'models', 'model', 'performance', 'packages', 'package', 'series', 'type',
   'brake', 'pads', 'pad', 'rotors', 'rotor', 'kit', 'set', 'oem', 'fitment', 'fits',
+  // P-2 hardening: common auto-parts prose words that are not model names
+  'parts', 'specialists', 'enthusiasts', 'decided', 'tends', 'changed', 'seeking',
+  'offers', 'provides', 'features', 'includes', 'designed', 'engineered', 'looking',
+  'wanting', 'great', 'best', 'quality', 'product', 'products', 'upgrade', 'upgrades',
+  'vehicle', 'vehicles', 'car', 'cars', 'auto', 'automotive', 'race', 'racing',
+  'track', 'street', 'driving', 'driver', 'drivers', 'application', 'applications',
+  // Second-round hardening: colors (inferred side false positives)
+  'silver', 'gray', 'grey', 'black', 'brown', 'bronze', 'white', 'red', 'blue',
+  'green', 'yellow', 'orange', 'purple', 'gold', 'pink', 'tan', 'beige', 'clear',
+  // Fluids/chemicals (from compatibility lists, not vehicles)
+  'e85', 'e10', 'e5', 'methanol', 'diesel', 'nitrous', 'coolant', 'water', 'air',
+  'oil', 'hydraulic', 'co2', 'gasoline', 'petrol', 'ethanol', 'fuel',
+  // Common prose words that follow make names in marketing text
+  'ok', 'mean', 'deep', 'aggressive', 'paste', 'design', 'assembled', 'modulation',
+  'priced', 'similarly', 'accident', 'engine', 'intended', 'fails', 'part', 'off',
+  'wa', 'centers', 'spirited', 'weekend', 'pedal', 'feel', 'thermal', 'stability',
+  'corrosion', 'protection', 'banjo', 'bolts', 'security', 'pins', 'bolts', 'high',
+  'durability', 'reliability', 'fade', 'reduce', 'body', 'international', 'pair',
+  // Auxiliary verbs that can be captured as second model token
+  'was', 'is', 'are', 'were', 'been', 'being', 'has', 'had', 'does', 'did',
+  // Brake compound/brand names (from comparison tables, not vehicles)
+  'ferodo', 'dsuno', 'ds3000', 'pagid', 'rst3', 'rs44', 'rs19', 'rs29', 'hawk',
+  'pfc', 'endless', 'mxrs', 'mx72', 'project', 'mu', 'cobalt', 'cc', 'rg',
+  'competitions', 'sport', 'satin', 'gunmetal', 'competition', 'p2', 'p3', 'r7',
+  'stainless', 'hardware', 'gaskets', 'standoffs', 'heat', 'shield', 'backspace',
+  'turbo', 'intake', 'sri', 'air', 'effect', 'orange',
+  // Third-round: "brakes" (singular "brake" already in list)
+  'brakes', 'brakelines',
+  // Fourth-round: prose words captured as model tokens
+  'releases', 'new', 'soon', 'flow', 'backfill', 'krse11',
 ]);
+
+/**
+ * P-2 hardening: verbs and auxiliaries that indicate prose, not a model name.
+ * Per DIRECTIVE-3 §3 P-2: "Reject a captured model token if the following token
+ * is a verb or auxiliary."
+ */
+const VERB_AUX = new Set([
+  // auxiliaries
+  'to', 'be', 'is', 'are', 'was', 'were', 'been', 'being', 'have', 'has', 'had',
+  'do', 'does', 'did', 'will', 'would', 'can', 'could', 'should', 'may', 'might',
+  'must', 'shall',
+  // common verbs in auto-parts prose
+  'decided', 'decides', 'tend', 'tends', 'changed', 'changes', 'change', 'seeking',
+  'seek', 'seeks', 'offer', 'offers', 'offered', 'provide', 'provides', 'provided',
+  'feature', 'features', 'featured', 'include', 'includes', 'included', 'designed',
+  'design', 'designs', 'engineered', 'engineer', 'engineers', 'made', 'make', 'makes',
+  'built', 'build', 'builds', 'manufactured', 'manufacture', 'manufactures',
+  'produced', 'produce', 'produces', 'looking', 'look', 'looks', 'wanting', 'want',
+  'wants', 'need', 'needs', 'specialize', 'specializes', 'specialist', 'specialists',
+  'enthusiast', 'enthusiasts',
+  // verb particles
+  'up', 'out', 'down', 'away', 'back',
+]);
+
+/** P-2 hardening: spec token pattern (starts with digit, likely a spec not a model). */
+const SPEC_TOKEN = /^\d+[a-z.]*/;
 
 // ─────────────────────────────────────────────────────────────────────────────
 // SCHEMAS
@@ -172,9 +228,23 @@ const CatalogProduct = z
   .object({
     id: z.string().optional(),
     title: z.string().optional(),
+    description: z
+      .union([z.string(), z.object({ plain: z.string().optional() }).passthrough()])
+      .optional(),
     metadata: z
       .object({ tech_specs: z.string().optional() })
       .passthrough()
+      .optional(),
+    variants: z
+      .array(
+        z
+          .object({
+            url: z.string().optional(),
+            sku: z.string().optional(),
+            seller: z.object({ id: z.string().optional() }).passthrough().optional(),
+          })
+          .passthrough(),
+      )
       .optional(),
   })
   .passthrough();
@@ -185,7 +255,8 @@ const StorefrontProduct = z
     handle: z.string(),
     title: z.string(),
     body_html: z.string().nullable().optional(),
-    tags: z.array(z.string()).optional(),
+    // Shopify returns tags as a comma-separated string, not an array
+    tags: z.union([z.string(), z.array(z.string())]).optional(),
     variants: z.array(z.record(z.unknown())).optional(),
   })
   .passthrough();
@@ -210,57 +281,152 @@ export interface Vehicle {
 const key = (v: Vehicle) => `${v.make}|${v.model}`;
 
 /**
+ * Check if a stated vehicle matches an inferred vehicle.
+ * A stated vehicle matches if the inferred vehicle's key starts with the stated
+ * vehicle's key (the inferred side may be more specific — e.g. "honda civic fc"
+ * matches "honda civic"). This prevents false omissions when Shopify adds chassis
+ * codes the merchant didn't state.
+ */
+function vehicleMatches(stated: Vehicle, inferred: Vehicle[]): boolean {
+  const statedKey = key(stated);
+  return inferred.some((v) => {
+    const infKey = key(v);
+    // Exact match, or inferred is a specialization of stated
+    return infKey === statedKey || infKey.startsWith(statedKey + ' ');
+  });
+}
+
+/**
+ * Check if an inferred vehicle was stated by the merchant.
+ * An inferred vehicle matches if any stated vehicle's key is a prefix of the
+ * inferred vehicle's key (the stated side may be less specific).
+ */
+function wasStated(inf: Vehicle, stated: Vehicle[]): boolean {
+  const infKey = key(inf);
+  return stated.some((v) => {
+    const stKey = key(v);
+    return infKey === stKey || infKey.startsWith(stKey + ' ');
+  });
+}
+
+/**
  * Scan text for `<make> <model tokens…>` patterns.
- * Captures up to three following tokens, stopping at stopwords, punctuation or
- * another make. Deliberately simple: predictable beats clever when a human has to
- * verify the output.
+ *
+ * P-2 HARDENING (DIRECTIVE-3 §3, 2 Aug 2026):
+ *   1. Split on `,`, `/`, `&`, `+` before model capture — prevents "honda civic accord"
+ *      from "Honda Civic, Accord" (slash-merged lists).
+ *   2. Reject a captured model token if the following token is a verb or auxiliary —
+ *      prevents "honda decided to", "honda tends to".
+ *   3. Strip possessive `s` when preceded by a make and followed by a spec token —
+ *      prevents "honda s 2.0l" = "Honda's 2.0L".
+ *
+ * Identical logic applied to both sides (merchant source text and Shopify tech_specs).
+ * Deliberately simple: predictable beats clever when a human has to verify the output.
  */
 export function extractVehicles(text: string): Vehicle[] {
+  // Normalize: lowercase, replace dashes, keep delimiters , / & + as segment boundaries
   const flat = text
     .toLowerCase()
     .replace(/[\u2013\u2014]/g, '-')
-    .replace(/[^a-z0-9\-/+.\s]/g, ' ')
-    .replace(/\s+/g, ' ');
+    .replace(/[^a-z0-9\-/+.,&\s]/g, ' ')
+    .replace(/\s+/g, ' ')
+    .trim();
+
+  // P-2 fix 1: split on delimiters before model capture
+  const segments = flat.split(/[,/&+]/).map((s) => s.trim()).filter(Boolean);
 
   const found = new Map<string, Vehicle>();
+  const makeSet = new Set(MAKES as readonly string[]);
 
-  for (const make of MAKES) {
-    let idx = 0;
-    while ((idx = flat.indexOf(make, idx)) !== -1) {
-      const before = flat[idx - 1];
-      const after = flat[idx + make.length];
-      // must be a whole-word match
-      if ((before && /[a-z0-9]/.test(before)) || (after && /[a-z0-9]/.test(after))) {
-        idx += make.length;
+  /**
+   * Capture model tokens from a token list starting at `startIdx`.
+   * Stops at: stopwords, other makes, year patterns, part numbers, end of token list.
+   * Returns the model parts and the index of the first unconsumed token.
+   */
+  function captureModel(
+    tokens: string[],
+    startIdx: number,
+  ): { parts: string[]; nextIdx: number } {
+    const modelParts: string[] = [];
+    let i = startIdx;
+    for (; i < tokens.length && i < startIdx + 3; i++) {
+      const clean = tokens[i].replace(/^[-/.]+|[-/.]+$/g, '');
+      if (!clean) continue;
+      if (MODEL_STOP.has(clean)) break;
+      if (makeSet.has(clean)) break;
+      if (/^\d{2,4}(-\d{2,4})?$/.test(clean)) break; // a year, not a model
+      // Part-number rejection: tokens with digit.digit patterns (like "pbp.0370")
+      // or tokens that start with digits and have 3+ consecutive digits (like "0370")
+      // but NOT model names like "f-150" (starts with a letter)
+      if (/\d\.\d/.test(clean)) break;
+      if (/^\d/.test(clean) && /\d{3,}/.test(clean)) break;
+      // Chassis-code rejection: 2-3 letters + 1-2 digits (e.g. "fc", "fk8", "de4", "fl5")
+      // These are chassis codes, not model names. Only reject as a SECOND token —
+      // a first token like "evo" or "cts" is a legitimate model name.
+      if (modelParts.length >= 1 && /^[a-z]{2,3}\d{1,2}$/.test(clean)) break;
+      // Part-number rejection: 4+ letters followed by digits (e.g. "krse11", "krs664")
+      // These are part numbers, not model names.
+      if (/^[a-z]{4,}\d{1,}$/.test(clean)) break;
+      modelParts.push(clean);
+      if (modelParts.length >= 2) {
+        i++;
+        break;
+      }
+    }
+    return { parts: modelParts, nextIdx: i };
+  }
+
+  /** P-2 fix 2: reject if the token after the captured model is a verb/auxiliary. */
+  function isProseAfterModel(tokens: string[], nextIdx: number): boolean {
+    // Scan forward past any trailing punctuation tokens to find the next real token
+    for (let i = nextIdx; i < tokens.length && i < nextIdx + 2; i++) {
+      const t = tokens[i].replace(/^[-/.]+|[-/.]+$/g, '');
+      if (!t) continue;
+      return VERB_AUX.has(t);
+    }
+    return false;
+  }
+
+  /** P-2 fix 3: check for possessive 's' — make + "s" + spec_token → skip. */
+  function isPossessiveS(tokens: string[], startIdx: number): boolean {
+    const first = tokens[startIdx]?.replace(/^[-/.]+|[-/.]+$/g, '');
+    if (first !== 's') return false;
+    const second = tokens[startIdx + 1]?.replace(/^[-/.]+|[-/.]+$/g, '');
+    return second ? SPEC_TOKEN.test(second) : false;
+  }
+
+  for (const seg of segments) {
+    const tokens = seg.split(' ').filter(Boolean);
+
+    for (let i = 0; i < tokens.length; i++) {
+      const t = tokens[i].replace(/^[-/.]+|[-/.]+$/g, '');
+
+      // Check if this token is a make (whole-word)
+      if (!makeSet.has(t)) continue;
+
+      const canonicalMake = MAKE_ALIAS[t] ?? t;
+
+      const modelStart = i + 1;
+
+      // P-2 fix 3: possessive 's' check
+      if (isPossessiveS(tokens, modelStart)) {
+        // "honda s 2.0l" = "Honda's 2.0L" — skip, no model here
         continue;
       }
 
-      const tail = flat.slice(idx + make.length, idx + make.length + 60);
-      const tokens = tail.trim().split(' ');
-      const modelParts: string[] = [];
+      const { parts, nextIdx } = captureModel(tokens, modelStart);
 
-      for (const t of tokens.slice(0, 3)) {
-        const clean = t.replace(/^[-/]+|[-/.]+$/g, '');
-        if (!clean) break;
-        if (MODEL_STOP.has(clean)) break;
-        if ((MAKES as readonly string[]).includes(clean)) break;
-        if (/^\d{2,4}(-\d{2,4})?$/.test(clean)) break; // a year, not a model
-        modelParts.push(clean);
-        // one strong token is usually enough: civic, impreza, m3
-        if (modelParts.length >= 2) break;
-      }
+      if (parts.length === 0) continue;
 
-      if (modelParts.length > 0) {
-        const canonicalMake = MAKE_ALIAS[make] ?? make;
-        const v: Vehicle = {
-          make: canonicalMake,
-          model: modelParts.join(' '),
-          context: flat.slice(Math.max(0, idx - 20), idx + make.length + 40).trim(),
-        };
-        found.set(key(v), v);
-      }
+      // P-2 fix 2: reject if next token after model is a verb/auxiliary
+      if (isProseAfterModel(tokens, nextIdx)) continue;
 
-      idx += make.length;
+      const v: Vehicle = {
+        make: canonicalMake,
+        model: parts.join(' '),
+        context: seg,
+      };
+      found.set(key(v), v);
     }
   }
 
@@ -323,40 +489,144 @@ async function fetchStorefront(domain: string): Promise<StorefrontProductT[]> {
   return all;
 }
 
+/**
+ * P-1: Fetch a single storefront product by handle.
+ * The catalog variant URL contains the storefront handle — this is the strongest
+ * possible match. Returns null if the product is not found (disabled JSON, etc.).
+ */
+async function fetchStorefrontProduct(
+  domain: string,
+  handle: string,
+): Promise<StorefrontProductT | null> {
+  const url = `https://${domain}/products/${handle}.json`;
+  const res = await fetch(url, {
+    headers: {
+      'user-agent': 'CatalogVector/0.1 (research probe; +https://github.com/knezdusan/catalogvector)',
+    },
+  });
+  await sleep(CONFIG.storefrontDelayMs);
+  if (!res.ok) {
+    transcript.push({ step: 'storefront-product', domain, handle, status: res.status });
+    return null;
+  }
+  const json = await res.json();
+  transcript.push({ step: 'storefront-product', domain, handle, status: 200 });
+  try {
+    return StorefrontProduct.parse(json.product);
+  } catch {
+    return null;
+  }
+}
+
+/** P-1: Extract the storefront handle from a catalog variant URL. */
+function extractHandleFromUrl(url: string | undefined): string | null {
+  if (!url) return null;
+  const m = url.match(/\/products\/([^?]+)/);
+  return m ? m[1] : null;
+}
+
+/** Extract plain-text description from a catalog product (handles both string and object forms). */
+function catalogDescription(cat: CatalogProductT): string {
+  const d = cat.description;
+  if (typeof d === 'string') return d;
+  if (d && typeof d === 'object' && 'plain' in d) return d.plain ?? '';
+  return '';
+}
+
 // ─────────────────────────────────────────────────────────────────────────────
-// MATCHING — handle/SKU first, title only as a last resort
-// (the inference-accuracy probe mispaired a Z16 with a Z23 on title Jaccard)
+// MATCHING — P-1: handle/SKU, never title tokens
+// (DIRECTIVE-3 §3 P-1: 4 tiers — exact title → variant SKU → handle token overlap → reject)
 // ─────────────────────────────────────────────────────────────────────────────
 
 function norm(s: string) {
   return s.toLowerCase().replace(/[^a-z0-9]+/g, ' ').trim();
 }
 
-function matchProduct(cat: CatalogProductT, storefront: StorefrontProductT[]) {
+/** Tokenize a handle for token-overlap matching (tier 3). Filters generic tokens. */
+const GENERIC_TOKENS = new Set([
+  'for', 'the', 'and', 'with', 'all', 'new', 'used', 'set', 'kit', 'pair',
+  'front', 'rear', 'left', 'right', 'side', 'each', 'type', 'series',
+]);
+
+/** Check if a token looks like a chassis code (2-3 letters + 1-2 digits, e.g. FK8, FE1, DE4). */
+function isChassisCode(t: string): boolean {
+  return /^[a-z]{2,3}\d{1,2}$/.test(t);
+}
+
+function handleTokens(handle: string): Set<string> {
+  return new Set(
+    norm(handle)
+      .split(' ')
+      .filter((t) => t.length >= 3 && !GENERIC_TOKENS.has(t) && !/^\d+$/.test(t) && !isChassisCode(t)),
+  );
+}
+
+interface MatchResult {
+  product: StorefrontProductT;
+  tier: 1 | 2 | 3;
+  method: string;
+  confidence: number;
+  /** Tier 3 matches are flagged for human confirmation. */
+  needsConfirmation: boolean;
+}
+
+/**
+ * P-1: Match a catalog product to a storefront product.
+ * Tiers (per DIRECTIVE-3 §3 P-1):
+ *   1. Exact normalised title
+ *   2. Variant SKU appearing in the Catalog title or description
+ *   3. Storefront handle token overlap (flagged for human confirmation)
+ *   4. Reject — no fuzzy title fallback
+ *
+ * Note: handle-from-variant-URL is handled separately in main() via
+ * fetchStorefrontProduct(), which is the strongest possible match (tier 0).
+ * This function handles the fallback cases where no variant URL is available.
+ */
+function matchProduct(cat: CatalogProductT, storefront: StorefrontProductT[]): MatchResult | null {
   const ct = norm(cat.title ?? '');
   if (!ct) return null;
 
-  // 1. exact normalised title
+  // Tier 1: exact normalised title
   const exact = storefront.find((sp) => norm(sp.title) === ct);
-  if (exact) return { product: exact, confidence: 1, method: 'exact-title' as const };
+  if (exact) return { product: exact, tier: 1, method: 'exact-title', confidence: 1.0, needsConfirmation: false };
 
-  // 2. SKU appearing in the catalog title
+  // Tier 2: variant SKU appearing in the catalog title or description
+  const catText = norm(`${cat.title ?? ''} ${catalogDescription(cat)}`);
   for (const sp of storefront) {
     for (const v of sp.variants ?? []) {
       const sku = typeof v.sku === 'string' ? norm(v.sku) : '';
-      if (sku.length >= 5 && ct.includes(sku)) {
-        return { product: sp, confidence: 0.95, method: 'sku' as const };
+      if (sku.length >= 5 && catText.includes(sku)) {
+        return { product: sp, tier: 2, method: 'sku', confidence: 0.9, needsConfirmation: false };
       }
     }
   }
 
-  // 3. containment either way — still risky, flagged for human check
-  const contained = storefront.find((sp) => {
-    const st = norm(sp.title);
-    return st.length > 10 && (st.includes(ct) || ct.includes(st));
-  });
-  if (contained) return { product: contained, confidence: 0.6, method: 'containment' as const };
+  // Tier 3: storefront handle token overlap (flagged for human confirmation)
+  // Filter generic tokens and chassis codes from the catalog title
+  const catTokenSet = new Set(
+    ct
+      .split(' ')
+      .filter((t) => t.length >= 3 && !GENERIC_TOKENS.has(t) && !/^\d+$/.test(t) && !isChassisCode(t)),
+  );
+  let bestOverlap = 0;
+  let bestMatch: StorefrontProductT | null = null;
+  for (const sp of storefront) {
+    const ht = handleTokens(sp.handle);
+    if (ht.size < 2) continue; // need at least 2 significant tokens
+    let overlap = 0;
+    for (const t of ht) if (catTokenSet.has(t)) overlap++;
+    const score = overlap / Math.max(catTokenSet.size, ht.size);
+    if (score > bestOverlap) {
+      bestOverlap = score;
+      bestMatch = sp;
+    }
+  }
+  // Require ≥65% token overlap to match at tier 3 (raised to prevent mispairs)
+  if (bestMatch && bestOverlap >= 0.65) {
+    return { product: bestMatch, tier: 3, method: 'handle-tokens', confidence: 0.7, needsConfirmation: true };
+  }
 
+  // Tier 4: reject
   return null;
 }
 
@@ -369,9 +639,11 @@ function stripHtml(html: string) {
 }
 
 function sourceTextOf(sp: StorefrontProductT) {
+  const tags = sp.tags;
+  const tagsStr = Array.isArray(tags) ? tags.join(' ') : typeof tags === 'string' ? tags : '';
   return [
     sp.title,
-    (sp.tags ?? []).join(' '),
+    tagsStr,
     stripHtml(sp.body_html ?? ''),
     (sp.variants ?? []).map((v) => [v.title, v.sku].filter(Boolean).join(' ')).join(' '),
   ].join('\n');
@@ -386,8 +658,10 @@ interface Row {
   bucket: 'thin' | 'rich';
   catalogTitle: string;
   handle: string;
+  matchTier: number; // 0 = handle-from-URL, 1 = exact title, 2 = SKU, 3 = handle tokens
   matchMethod: string;
   matchConfidence: number;
+  needsConfirmation: boolean;
   sourceChars: number;
   stated: Vehicle[];
   inferred: Vehicle[];
@@ -397,7 +671,7 @@ interface Row {
 }
 
 async function main() {
-  console.log('\nFITMENT-RECALL PROBE');
+  console.log('\nFITMENT-RECALL PROBE (P-1/P-2 hardened)');
   console.log('═'.repeat(66));
   console.log(`Pre-registered threshold: mean recall >= ${DECISION_THRESHOLD} → STOP (success)`);
   console.log(`                          mean recall <  ${DECISION_THRESHOLD} → coverage gap, proceed\n`);
@@ -406,12 +680,11 @@ async function main() {
 
   for (const store of CONFIG.stores) {
     console.log(`\n${store.domain}`);
+
+    // Fetch storefront product list as fallback for catalog products without variant URLs
     const storefront = await fetchStorefront(store.domain);
-    console.log(`  storefront: ${storefront.length} products`);
-    if (storefront.length === 0) {
-      console.warn('  ⚠ no public catalogue — skipping (implement JSON-LD fallback per C2)');
-      continue;
-    }
+    console.log(`  storefront list: ${storefront.length} products`);
+    // Note: we don't skip on 0 — handle-based matching may still work
 
     const catalogProducts: CatalogProductT[] = [];
     for (const q of CONFIG.queries) {
@@ -426,14 +699,49 @@ async function main() {
     });
     console.log(`  catalog: ${unique.length} unique products`);
 
+    let matched = 0;
+    let rejected = 0;
+
     for (const cat of unique) {
       const specs = cat.metadata?.tech_specs;
       if (!specs) continue;
 
-      const m = matchProduct(cat, storefront);
-      if (!m) continue;
+      // P-1: Try handle-from-variant-URL first (strongest match — "tier 0")
+      const handle = extractHandleFromUrl(cat.variants?.[0]?.url);
+      let sp: StorefrontProductT | null = null;
+      let tier = 0;
+      let method = 'handle-url';
+      let confidence = 1.0;
+      let needsConfirmation = false;
 
-      const source = sourceTextOf(m.product);
+      if (handle) {
+        // Check if it's in the already-fetched storefront list first (avoids extra fetch)
+        sp = storefront.find((p) => p.handle === handle) ?? null;
+        if (!sp) {
+          // Not in the list — fetch directly by handle
+          sp = await fetchStorefrontProduct(store.domain, handle);
+        }
+      }
+
+      // Fallback: 4-tier matching against the storefront list
+      if (!sp) {
+        const m = matchProduct(cat, storefront);
+        if (m) {
+          sp = m.product;
+          tier = m.tier;
+          method = m.method;
+          confidence = m.confidence;
+          needsConfirmation = m.needsConfirmation;
+        }
+      }
+
+      if (!sp) {
+        rejected++;
+        continue;
+      }
+      matched++;
+
+      const source = sourceTextOf(sp);
       const sourceChars = source.length;
 
       const bucket: 'thin' | 'rich' | null =
@@ -443,18 +751,19 @@ async function main() {
       const stated = extractVehicles(source);
       const inferred = extractVehicles(specs);
 
-      const statedKeys = new Set(stated.map(key));
-      const inferredKeys = new Set(inferred.map(key));
-      const omitted = stated.filter((v) => !inferredKeys.has(key(v)));
-      const added = inferred.filter((v) => !statedKeys.has(key(v)));
+      // P-2 hardening: prefix matching — "honda civic" (stated) matches "honda civic fc" (inferred)
+      const omitted = stated.filter((v) => !vehicleMatches(v, inferred));
+      const added = inferred.filter((v) => !wasStated(v, stated));
 
       rows.push({
         store: store.domain,
         bucket,
         catalogTitle: cat.title ?? '(untitled)',
-        handle: m.product.handle,
-        matchMethod: m.method,
-        matchConfidence: m.confidence,
+        handle: sp.handle,
+        matchTier: tier,
+        matchMethod: method,
+        matchConfidence: confidence,
+        needsConfirmation,
         sourceChars,
         stated,
         inferred,
@@ -463,6 +772,8 @@ async function main() {
         recall: stated.length === 0 ? null : (stated.length - omitted.length) / stated.length,
       });
     }
+
+    console.log(`  matched: ${matched}, rejected: ${rejected}`);
   }
 
   // balance the buckets
@@ -547,7 +858,12 @@ async function emit(
     '',
     '1. Does the **stated** set match what the merchant page actually claims?',
     '2. Does the **inferred** set match `tech_specs`?',
-    '3. Is the **match method** trustworthy? `containment` pairings need eyes on them.',
+    '3. Is the **match tier** trustworthy? Tier 0 (handle-url) and tier 1 (exact-title)',
+    '   are reliable. Tier 2 (SKU) is strong. **Tier 3 (handle-tokens) needs eyes on it.**',
+    '',
+    'P-2 hardening: the extractor now splits on `,` `/` `&` `+`, rejects models followed',
+    'by verbs/auxiliaries, and strips possessive `s`. Verify both sides — the same logic',
+    'is applied to merchant source text and Shopify tech_specs.',
     '',
     'Correct any set by hand and recompute. An uncorrected extractor error is not a',
     'platform finding.',
@@ -561,7 +877,7 @@ async function emit(
     md.push('');
     md.push(`- **Store:** ${r.store} · **Bucket:** ${r.bucket} (${r.sourceChars} chars)`);
     md.push(`- **Source:** https://${r.store}/products/${r.handle}`);
-    md.push(`- **Match:** ${r.matchMethod} (${r.matchConfidence})${r.matchConfidence < 0.9 ? ' ⚠ verify' : ''}`);
+    md.push(`- **Match:** tier ${r.matchTier} — ${r.matchMethod} (${r.matchConfidence})${r.needsConfirmation ? ' ⚠ VERIFY — tier 3 match' : ''}`);
     md.push(`- **Recall:** ${r.recall === null ? 'n/a — no stated fitment' : r.recall.toFixed(2)}`);
     md.push('');
     md.push(`**Stated (${r.stated.length}):** ${r.stated.map((v) => `${v.make} ${v.model}`).join(', ') || '—'}`);
