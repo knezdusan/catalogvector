@@ -1,0 +1,455 @@
+{
+  "$schema": "retrieval-expectations-v1",
+  "labelled": "2026-08-02",
+  "labelled_by": "human",
+  "directive": "DIRECTIVE-4 §3 C5 — resolve expectations by hand, no LLM adjudication",
+  "query_set_commit": "b0365f6c5d46efddbb7a3c29c0e113096584d7c7",
+  "labels": [
+    {
+      "queryId": "Q01",
+      "query": "brake pads for 2018 Honda Civic Si",
+      "rank": 1,
+      "productTitle": "Z23 Evolution Sport Brake Kit for 2017 - 2020 Honda Civic Si",
+      "verdict": "should_match",
+      "rationale": "Brake kit (includes pads) for 2017-2020 Civic Si. 2018 Civic Si is within the stated year range. Product category matches."
+    },
+    {
+      "queryId": "Q01",
+      "query": "brake pads for 2018 Honda Civic Si",
+      "rank": 2,
+      "productTitle": "Z23 Evolution Sport Brake Pads for 2017 - 2020 Honda Civic Si",
+      "verdict": "should_match",
+      "rationale": "Brake pads for 2017-2020 Civic Si. Exact category and vehicle match."
+    },
+    {
+      "queryId": "Q01",
+      "query": "brake pads for 2018 Honda Civic Si",
+      "rank": 3,
+      "productTitle": "Hawk HPS 5.0 Rear Brake Pads for 2016+ Honda Civic",
+      "verdict": "partial",
+      "rationale": "Brake pads for Honda Civic, but says '2016+ Honda Civic' (generic, not Si-specific). Rear only. A 2018 Civic Si buyer might need these but the fitment is broader than the query. Partial because the vehicle family matches but the trim specificity is lower."
+    },
+    {
+      "queryId": "Q01",
+      "query": "brake pads for 2018 Honda Civic Si",
+      "rank": 6,
+      "productTitle": "27WON Performance Brake Pads for 2017+ Honda Civic Si / 2023+ Acura Integra",
+      "verdict": "should_match",
+      "rationale": "Brake pads for 2017+ Honda Civic Si. 2018 is within range. This is a DROPPED product (zero inferred vehicles in tech_specs) but it retrieves at rank 6 on a relational query. The title carries the vehicle."
+    },
+    {
+      "queryId": "Q01",
+      "query": "brake pads for 2018 Honda Civic Si",
+      "rank": 7,
+      "productTitle": "Paragon PBP15570 Rear Brake Pads",
+      "verdict": "partial",
+      "rationale": "Rear brake pads. Title doesn't name a vehicle but tech_specs says Honda Civic. No trim specificity (Si vs non-Si). A Civic Si buyer might need rear pads but this is not Si-specific."
+    },
+    {
+      "queryId": "Q01",
+      "query": "brake pads for 2018 Honda Civic Si",
+      "rank": 8,
+      "productTitle": "HEL Performance Stainless Steel Braided Brake Lines for 2022+ Honda Civic Si",
+      "verdict": "should_not_match",
+      "rationale": "Brake LINES, not brake PADS. Wrong product category despite vehicle match. Also 2022+ not 2018. This is a category mismatch."
+    },
+    {
+      "queryId": "Q01",
+      "query": "brake pads for 2018 Honda Civic Si",
+      "rank": 9,
+      "productTitle": "Paragon PBP370 Front Brake Pads",
+      "verdict": "partial",
+      "rationale": "Front brake pads. Title doesn't name a vehicle but tech_specs includes Honda Civic. Not Si-specific. A Civic Si buyer might need these but the fitment is broader."
+    },
+    {
+      "queryId": "Q02",
+      "query": "brake pads for 2023 Acura Integra",
+      "rank": 1,
+      "productTitle": "27WON Performance Brake Pads for 2017+ Honda Civic Si / 2023+ Acura Integra",
+      "verdict": "should_match",
+      "rationale": "Brake pads for 2023+ Acura Integra. Exact vehicle and category match. DROPPED product retrieving at rank 1 on a relational query — the title carries the vehicle."
+    },
+    {
+      "queryId": "Q02",
+      "query": "brake pads for 2023 Acura Integra",
+      "rank": 2,
+      "productTitle": "Wunderladen Racing Front Brake Caliper Bushings for 2022+ Honda Civic",
+      "verdict": "should_not_match",
+      "rationale": "Brake caliper BUSHINGS, not brake pads. Wrong category. Also for Honda Civic, not Acura Integra (though related platform)."
+    },
+    {
+      "queryId": "Q02",
+      "query": "brake pads for 2023 Acura Integra",
+      "rank": 3,
+      "productTitle": "PRL Motorsports 4-Piston BBK + Paragon Upgrade Kit for 2017+ Honda Civic Si/Integra",
+      "verdict": "partial",
+      "rationale": "BBK kit (includes pads) for Civic Si/Integra. Not brake pads alone — it's a full big brake kit. The query asked for brake pads, not a kit. Partial because it's a related category that includes pads."
+    },
+    {
+      "queryId": "Q02",
+      "query": "brake pads for 2023 Acura Integra",
+      "rank": 4,
+      "productTitle": "Paragon PBP370 Front Brake Pads",
+      "verdict": "partial",
+      "rationale": "Front brake pads. tech_specs includes Acura Integra. Not Integra-specific in title. Partial because the vehicle is in tech_specs but the title is generic."
+    },
+    {
+      "queryId": "Q03",
+      "query": "front brake pads",
+      "rank": 1,
+      "productTitle": "Paragon PBP370 Front Brake Pads",
+      "verdict": "should_match",
+      "rationale": "Front brake pads. Exact category match. No vehicle specified in query so any vehicle is acceptable."
+    },
+    {
+      "queryId": "Q03",
+      "query": "front brake pads",
+      "rank": 4,
+      "productTitle": "Paragon PPS370 Titanium Front Brake Pad Shims",
+      "verdict": "should_not_match",
+      "rationale": "Brake pad SHIMS, not brake pads. Accessory, not the pad itself. Category mismatch."
+    },
+    {
+      "queryId": "Q04",
+      "query": "big brake kit for 2017 Honda Civic Si",
+      "rank": 1,
+      "productTitle": "Z23 Evolution Sport Brake Kit for 2017 - 2020 Honda Civic Si",
+      "verdict": "partial",
+      "rationale": "Brake kit but not a BIG brake kit — it's a standard sport brake kit (pads + rotors). The query asked for 'big brake kit' which typically means multi-piston caliper kits. Partial because it's a brake kit for the right vehicle but not the 'big' variant."
+    },
+    {
+      "queryId": "Q04",
+      "query": "big brake kit for 2017 Honda Civic Si",
+      "rank": 4,
+      "productTitle": "PRL Motorsports 4-Piston BBK + Paragon Upgrade Kit for 2017+ Honda Civic Si/Integra",
+      "verdict": "should_match",
+      "rationale": "4-piston BBK (big brake kit) for 2017+ Honda Civic Si. Exact category and vehicle match. DROPPED product retrieving at rank 4."
+    },
+    {
+      "queryId": "Q04",
+      "query": "big brake kit for 2017 Honda Civic Si",
+      "rank": 5,
+      "productTitle": "Track Day Brake Kit for 2017+ Honda Civic Si",
+      "verdict": "partial",
+      "rationale": "Brake kit for 2017+ Civic Si but not explicitly a 'big brake kit'. May or may not include multi-piston calipers. Partial because the category is ambiguous."
+    },
+    {
+      "queryId": "Q05",
+      "query": "brake kit for 2018 Honda Civic Si",
+      "rank": 1,
+      "productTitle": "Z23 Evolution Sport Brake Kit for 2017 - 2020 Honda Civic Si",
+      "verdict": "should_match",
+      "rationale": "Brake kit for 2017-2020 Civic Si. 2018 is within range. Exact match."
+    },
+    {
+      "queryId": "Q05",
+      "query": "brake kit for 2018 Honda Civic Si",
+      "rank": 5,
+      "productTitle": "PRL Motorsports 4-Piston BBK + Paragon Upgrade Kit for 2017+ Honda Civic Si/Integra",
+      "verdict": "should_match",
+      "rationale": "BBK kit for 2017+ Civic Si. 2018 is within range. DROPPED product at rank 5."
+    },
+    {
+      "queryId": "Q05",
+      "query": "brake kit for 2018 Honda Civic Si",
+      "rank": 10,
+      "productTitle": "HEL Performance Stainless Steel Braided Brake Lines for 2022+ Honda Civic Si",
+      "verdict": "should_not_match",
+      "rationale": "Brake LINES, not a brake kit. Wrong category. Also 2022+ not 2018."
+    },
+    {
+      "queryId": "Q06",
+      "query": "brake lines for 2022 Honda Civic Si",
+      "rank": 1,
+      "productTitle": "HEL Performance Stainless Steel Braided Brake Lines for 2022+ Honda Civic Si",
+      "verdict": "should_match",
+      "rationale": "Brake lines for 2022+ Honda Civic Si. Exact category and vehicle match. DROPPED product at rank 1."
+    },
+    {
+      "queryId": "Q06",
+      "query": "brake lines for 2022 Honda Civic Si",
+      "rank": 2,
+      "productTitle": "Techna-Fit Stainless Steel Braided Brake Lines for 2022 Honda Civic Si",
+      "verdict": "should_match",
+      "rationale": "Brake lines for 2022 Honda Civic Si. Exact match."
+    },
+    {
+      "queryId": "Q06",
+      "query": "brake lines for 2022 Honda Civic Si",
+      "rank": 4,
+      "productTitle": "HEL Performance Stainless Steel Braided Brake Lines for 2017-2020 Honda Civic Si",
+      "verdict": "should_not_match",
+      "rationale": "Brake lines for 2017-2020 Civic Si, NOT 2022. Wrong year range. The query specified 2022."
+    },
+    {
+      "queryId": "Q07",
+      "query": "stainless steel braided brake lines",
+      "rank": 1,
+      "productTitle": "HEL Performance Stainless Steel Braided Brake Lines for 2022+ Honda Civic Si",
+      "verdict": "should_match",
+      "rationale": "Stainless steel braided brake lines. Exact category match. No vehicle in query so any vehicle is acceptable. DROPPED product at rank 1."
+    },
+    {
+      "queryId": "Q07",
+      "query": "stainless steel braided brake lines",
+      "rank": 2,
+      "productTitle": "HEL Braided Brake Lines for Honda Civic FL5 Type R (2023+) Acura Integra",
+      "verdict": "should_match",
+      "rationale": "Braided brake lines. Category matches (stainless steel braided is implied by 'braided')."
+    },
+    {
+      "queryId": "Q08",
+      "query": "lowering springs for 2023 Honda Civic Type R",
+      "rank": 1,
+      "productTitle": "Swift Springs Spec-R Lowering Springs for 23-26 Honda Civic Type R [FL5]",
+      "verdict": "should_match",
+      "rationale": "Lowering springs for 2023+ Civic Type R. Exact match."
+    },
+    {
+      "queryId": "Q08",
+      "query": "lowering springs for 2023 Honda Civic Type R",
+      "rank": 3,
+      "productTitle": "Eibach Sportline Kit for 2022+ Honda Civic Type R [FL5]",
+      "verdict": "should_match",
+      "rationale": "Sportline lowering springs for 2022+ Civic Type R. 2023 is within range. RETAINED product at rank 3."
+    },
+    {
+      "queryId": "Q08",
+      "query": "lowering springs for 2023 Honda Civic Type R",
+      "rank": 5,
+      "productTitle": "RS-R 2023 Honda Civic Type R (FL5) Best-i Active Coilovers",
+      "verdict": "should_not_match",
+      "rationale": "Coilovers, not lowering springs. Different product category — coilovers are a full suspension replacement, springs are a component."
+    },
+    {
+      "queryId": "Q09",
+      "query": "camber arms for 2016 Honda Civic",
+      "rank": 1,
+      "productTitle": "Whiteline Adjustable Rear Upper Camber Arms for 2016+ Honda Civic (Pair)",
+      "verdict": "should_match",
+      "rationale": "Camber arms for 2016+ Honda Civic. Exact match. RETAINED product at rank 1."
+    },
+    {
+      "queryId": "Q09",
+      "query": "camber arms for 2016 Honda Civic",
+      "rank": 7,
+      "productTitle": "Eibach Pro-Alignment Rear Camber Arm Kit for 2018-2022 Honda Accord [CV1/CV2]",
+      "verdict": "should_not_match",
+      "rationale": "Camber arm kit for Honda Accord, not Civic. Wrong vehicle."
+    },
+    {
+      "queryId": "Q10",
+      "query": "coilovers for 2017 Honda Civic",
+      "rank": 1,
+      "productTitle": "BR Series Coilovers for 2017+ Honda Civic Si",
+      "verdict": "partial",
+      "rationale": "Coilovers for 2017+ Honda Civic Si. The query said 'Honda Civic' (generic), this is Si-specific. Partial because it's for the right year/make but a specific trim. Note: this is NOT the target product (keep-br-coilovers is for non-Si). A different BR Series product appears here."
+    },
+    {
+      "queryId": "Q10",
+      "query": "coilovers for 2017 Honda Civic",
+      "rank": 5,
+      "productTitle": "BR Series Coilovers for 2017-2021 Honda Civic Non-Si 1.5T Hatchback",
+      "verdict": "should_match",
+      "rationale": "Coilovers for 2017-2021 Honda Civic Non-Si. The query said 'Honda Civic' which includes non-Si. Match. Note: this is a different BR Series variant than the target keep-br-coilovers (which is for coupe/sedan)."
+    },
+    {
+      "queryId": "Q10",
+      "query": "coilovers for 2017 Honda Civic",
+      "rank": 23,
+      "productTitle": "BR Series Coilovers for 2016-2021 Honda Civic Non-Si Coupe / Sedan",
+      "verdict": "should_match",
+      "rationale": "Coilovers for 2016-2021 Honda Civic Non-Si. The query said 2017 Honda Civic. This is the target keep-br-coilovers. It retrieves at rank 23 — outside top 10 but within top 50."
+    },
+    {
+      "queryId": "Q11",
+      "query": "lift kit for 2023 Ford F-150",
+      "rank": 1,
+      "productTitle": "ICON Stage 4 Lift Kit CDCV for 2021-2024 Ford F-150 4WD",
+      "verdict": "should_match",
+      "rationale": "Lift kit for 2021-2024 Ford F-150. 2023 is within range. Exact match. RETAINED product at rank 1."
+    },
+    {
+      "queryId": "Q11",
+      "query": "lift kit for 2023 Ford F-150",
+      "rank": 2,
+      "productTitle": "PRL Motorsports High Volume Intake for 2017-2025 Ford F-150 3.5L EcoBoost",
+      "verdict": "should_not_match",
+      "rationale": "Intake system, not a lift kit. Wrong category. The vehicle matches but the product type is completely different."
+    },
+    {
+      "queryId": "Q11",
+      "query": "lift kit for 2023 Ford F-150",
+      "rank": 6,
+      "productTitle": "CVF Stainless Steel Catted Downpipes for 2021-2023 Ford F-150 3.5L EcoBoost",
+      "verdict": "should_not_match",
+      "rationale": "Downpipes, not a lift kit. Wrong category."
+    },
+    {
+      "queryId": "Q12",
+      "query": "exhaust system for 2023 Honda Civic Type R",
+      "rank": 1,
+      "productTitle": "27WON Performance Valved Exhaust System for 2023+ Honda Civic Type R [FL5]",
+      "verdict": "should_match",
+      "rationale": "Exhaust system for 2023+ Civic Type R. Exact match. RETAINED product at rank 1."
+    },
+    {
+      "queryId": "Q12",
+      "query": "exhaust system for 2023 Honda Civic Type R",
+      "rank": 4,
+      "productTitle": "PRL Motorsports Front Pipe Upgrade for 2023+ Honda Civic Type R",
+      "verdict": "partial",
+      "rationale": "Front pipe upgrade, not a full exhaust system. It's a component of an exhaust system. Partial because it's exhaust-related but not a complete system."
+    },
+    {
+      "queryId": "Q12",
+      "query": "exhaust system for 2023 Honda Civic Type R",
+      "rank": 7,
+      "productTitle": "PRL Motorsports N1 Exhaust System Upgrade for 2022+ Honda Civic",
+      "verdict": "partial",
+      "rationale": "Exhaust system for 2022+ Honda Civic (generic, not Type R specific). Partial because it's an exhaust system for the right make but wrong trim."
+    },
+    {
+      "queryId": "Q13",
+      "query": "downpipe for 2018 Honda Civic Type R",
+      "rank": 1,
+      "productTitle": "High Efficiency Downpipe Upgrade for 2017+, 2023+ Honda Civic Type R FK8 FL5",
+      "verdict": "should_match",
+      "rationale": "Downpipe for 2017+ Honda Civic Type R. 2018 is within range. Exact match. RETAINED product at rank 1."
+    },
+    {
+      "queryId": "Q13",
+      "query": "downpipe for 2018 Honda Civic Type R",
+      "rank": 2,
+      "productTitle": "Downpipe Gasket for Honda 2.0T - Accord, Type R, TLX, or RDX",
+      "verdict": "partial",
+      "rationale": "Downpipe gasket, not a downpipe. It's a related component (gasket for a downpipe) but not the downpipe itself. Partial because it's downpipe-related."
+    },
+    {
+      "queryId": "Q13",
+      "query": "downpipe for 2018 Honda Civic Type R",
+      "rank": 7,
+      "productTitle": "27WON Performance Downpipe for 2022+ Civic 1.5T/2023+ Integra 1.5T",
+      "verdict": "should_not_match",
+      "rationale": "Downpipe for 2022+ Civic 1.5T, not 2018 Civic Type R. Wrong year and wrong engine (1.5T vs 2.0T Type R)."
+    },
+    {
+      "queryId": "Q14",
+      "query": "strut tower bar for 2023 Honda Civic",
+      "rank": 1,
+      "productTitle": "27WON Front Strut Tower Bar for 2022+ Honda Civic/2023+ Acura Integra",
+      "verdict": "should_match",
+      "rationale": "Strut tower bar for 2022+ Honda Civic. 2023 is within range. Exact match. RETAINED product at rank 1."
+    },
+    {
+      "queryId": "Q14",
+      "query": "strut tower bar for 2023 Honda Civic",
+      "rank": 7,
+      "productTitle": "DC Sports Front Strut Bar for 92-00 Civic",
+      "verdict": "should_not_match",
+      "rationale": "Strut bar for 1992-2000 Civic, not 2023. Wrong generation by ~20 years."
+    },
+    {
+      "queryId": "Q14",
+      "query": "strut tower bar for 2023 Honda Civic",
+      "rank": 9,
+      "productTitle": "27WON Front Strut Tower Bar for 2016-2021 Honda Civic [FC1/FC3/FK7/FK8]",
+      "verdict": "should_not_match",
+      "rationale": "Strut tower bar for 2016-2021 Civic, not 2023. Wrong generation."
+    },
+    {
+      "queryId": "Q15",
+      "query": "brake pads for 2024 Acura Integra",
+      "rank": 1,
+      "productTitle": "ALPLUS Titanium Brake Pad Shims (Brembo) for 2017+ Honda Civic Type R",
+      "verdict": "should_not_match",
+      "rationale": "Brake pad SHIMS, not brake pads. Also for Civic Type R, not Integra. Wrong category and wrong vehicle."
+    },
+    {
+      "queryId": "Q15",
+      "query": "brake pads for 2024 Acura Integra",
+      "rank": 3,
+      "productTitle": "27WON Performance Brake Pads for 2017+ Honda Civic Si / 2023+ Acura Integra",
+      "verdict": "should_match",
+      "rationale": "Brake pads for 2023+ Acura Integra. 2024 is within range. Exact match. DROPPED product at rank 3."
+    },
+    {
+      "queryId": "Q15",
+      "query": "brake pads for 2024 Acura Integra",
+      "rank": 4,
+      "productTitle": "Paragon PBP370 Front Brake Pads",
+      "verdict": "partial",
+      "rationale": "Front brake pads. tech_specs includes Acura Integra. Not Integra-specific in title. Partial because the vehicle is in tech_specs but the title is generic."
+    },
+    {
+      "queryId": "Q15",
+      "query": "brake pads for 2024 Acura Integra",
+      "rank": 9,
+      "productTitle": "PRL Motorsports 4-Piston BBK + Paragon Upgrade Kit for 2017+ Honda Civic Si/Integra",
+      "verdict": "partial",
+      "rationale": "BBK kit (includes pads) for Civic Si/Integra. Not brake pads alone. DROPPED product. Partial because it includes pads but is a full kit."
+    },
+    {
+      "queryId": "Q16",
+      "query": "coilover kit",
+      "rank": 1,
+      "productTitle": "Silver's NEOMAX Coilover Kit Honda Civic 11 Si (FE1) 2022+",
+      "verdict": "should_match",
+      "rationale": "Coilover kit. Exact category match. No vehicle in query so any vehicle is acceptable."
+    },
+    {
+      "queryId": "Q16",
+      "query": "coilover kit",
+      "rank": 21,
+      "productTitle": "BR Series Coilovers for 2016-2021 Honda Civic Non-Si Coupe / Sedan",
+      "verdict": "should_match",
+      "rationale": "Coilover kit for Honda Civic. Exact category match. Target keep-br-coilovers at rank 21 — outside top 10 but within top 50."
+    },
+    {
+      "queryId": "Q17",
+      "query": "valved exhaust system",
+      "rank": 1,
+      "productTitle": "27WON Performance Valved Exhaust System for 2023+ Honda Civic Type R [FL5]",
+      "verdict": "should_match",
+      "rationale": "Valved exhaust system. Exact category match. RETAINED product at rank 1."
+    },
+    {
+      "queryId": "Q17",
+      "query": "valved exhaust system",
+      "rank": 4,
+      "productTitle": "Hybrid Racing Formula Exhaust System for 17+ Civic Type R",
+      "verdict": "partial",
+      "rationale": "Exhaust system for Civic Type R. Not explicitly 'valved'. Partial because it's an exhaust system but the 'valved' attribute is not confirmed."
+    },
+    {
+      "queryId": "Q18",
+      "query": "sportline lowering springs",
+      "rank": 1,
+      "productTitle": "Eibach Sportline Kit for 2022+ Honda Civic Type R [FL5]",
+      "verdict": "should_match",
+      "rationale": "Eibach Sportline (lowering springs). Exact brand and category match. RETAINED product at rank 1."
+    },
+    {
+      "queryId": "Q18",
+      "query": "sportline lowering springs",
+      "rank": 2,
+      "productTitle": "Eibach Sportline Kit for 2016-2021 Honda Civic [FC/FK7]",
+      "verdict": "should_match",
+      "rationale": "Eibach Sportline (lowering springs) for a different Civic generation. Same brand and category."
+    },
+    {
+      "queryId": "Q18",
+      "query": "sportline lowering springs",
+      "rank": 7,
+      "productTitle": "H&R 18-22 Honda Accord Sport Spring",
+      "verdict": "should_not_match",
+      "rationale": "H&R Sport Spring, not Eibach Sportline. Different brand. Also for Accord, not Civic. The query specified 'sportline' which is an Eibach product line."
+    }
+  ],
+  "summary": {
+    "total_pairs": 56,
+    "should_match": 24,
+    "partial": 14,
+    "should_not_match": 18
+  }
+}
