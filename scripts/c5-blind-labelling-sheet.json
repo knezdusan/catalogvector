@@ -1,0 +1,165 @@
+{
+  "description": "Blind labelling sheet for C5 calibration. Founder fills verdict column with should_match / partial / should_not_match. Do not look at Devin verdicts in retrieval-expectations.json.",
+  "pairs": [
+    {
+      "id": 1,
+      "queryId": "Q01",
+      "query": "brake pads for 2018 Honda Civic Si",
+      "rank": 3,
+      "productTitle": "Hawk HPS 5.0 Rear Brake Pads for 2016+ Honda Civic",
+      "fieldPresence": "title_only"
+    },
+    {
+      "id": 2,
+      "queryId": "Q01",
+      "query": "brake pads for 2018 Honda Civic Si",
+      "rank": 7,
+      "productTitle": "Paragon PBP15570 Rear Brake Pads",
+      "fieldPresence": "specs_only"
+    },
+    {
+      "id": 3,
+      "queryId": "Q01",
+      "query": "brake pads for 2018 Honda Civic Si",
+      "rank": 9,
+      "productTitle": "Paragon PBP370 Front Brake Pads",
+      "fieldPresence": "specs_only"
+    },
+    {
+      "id": 4,
+      "queryId": "Q02",
+      "query": "brake pads for 2023 Acura Integra",
+      "rank": 3,
+      "productTitle": "PRL Motorsports 4-Piston BBK + Paragon Upgrade Kit for 2017+ Honda Civic Si/Integra",
+      "fieldPresence": "title_only"
+    },
+    {
+      "id": 5,
+      "queryId": "Q02",
+      "query": "brake pads for 2023 Acura Integra",
+      "rank": 4,
+      "productTitle": "Paragon PBP370 Front Brake Pads",
+      "fieldPresence": "specs_only"
+    },
+    {
+      "id": 6,
+      "queryId": "Q04",
+      "query": "big brake kit for 2017 Honda Civic Si",
+      "rank": 1,
+      "productTitle": "Z23 Evolution Sport Brake Kit for 2017 - 2020 Honda Civic Si",
+      "fieldPresence": "both"
+    },
+    {
+      "id": 7,
+      "queryId": "Q04",
+      "query": "big brake kit for 2017 Honda Civic Si",
+      "rank": 5,
+      "productTitle": "Track Day Brake Kit for 2017+ Honda Civic Si",
+      "fieldPresence": "title_only"
+    },
+    {
+      "id": 8,
+      "queryId": "Q10",
+      "query": "coilovers for 2017 Honda Civic",
+      "rank": 1,
+      "productTitle": "BR Series Coilovers for 2017+ Honda Civic Si",
+      "fieldPresence": "title_only"
+    },
+    {
+      "id": 9,
+      "queryId": "Q12",
+      "query": "exhaust system for 2023 Honda Civic Type R",
+      "rank": 4,
+      "productTitle": "PRL Motorsports Front Pipe Upgrade for 2023+ Honda Civic Type R",
+      "fieldPresence": "both"
+    },
+    {
+      "id": 10,
+      "queryId": "Q12",
+      "query": "exhaust system for 2023 Honda Civic Type R",
+      "rank": 7,
+      "productTitle": "PRL Motorsports N1 Exhaust System Upgrade for 2022+ Honda Civic",
+      "fieldPresence": "title_only"
+    },
+    {
+      "id": 11,
+      "queryId": "Q13",
+      "query": "downpipe for 2018 Honda Civic Type R",
+      "rank": 2,
+      "productTitle": "Downpipe Gasket for Honda 2.0T - Accord, Type R, TLX, or RDX",
+      "fieldPresence": "both"
+    },
+    {
+      "id": 12,
+      "queryId": "Q15",
+      "query": "brake pads for 2024 Acura Integra",
+      "rank": 4,
+      "productTitle": "Paragon PBP370 Front Brake Pads",
+      "fieldPresence": "specs_only"
+    },
+    {
+      "id": 13,
+      "queryId": "Q15",
+      "query": "brake pads for 2024 Acura Integra",
+      "rank": 9,
+      "productTitle": "PRL Motorsports 4-Piston BBK + Paragon Upgrade Kit for 2017+ Honda Civic Si/Integra",
+      "fieldPresence": "title_only"
+    },
+    {
+      "id": 14,
+      "queryId": "Q17",
+      "query": "valved exhaust system",
+      "rank": 4,
+      "productTitle": "Hybrid Racing Formula Exhaust System for 17+ Civic Type R",
+      "fieldPresence": "specs_only"
+    },
+    {
+      "id": 15,
+      "queryId": "Q01",
+      "query": "brake pads for 2018 Honda Civic Si",
+      "rank": 1,
+      "productTitle": "Z23 Evolution Sport Brake Kit for 2017 - 2020 Honda Civic Si",
+      "fieldPresence": "both"
+    },
+    {
+      "id": 16,
+      "queryId": "Q04",
+      "query": "big brake kit for 2017 Honda Civic Si",
+      "rank": 4,
+      "productTitle": "PRL Motorsports 4-Piston BBK + Paragon Upgrade Kit for 2017+ Honda Civic Si/Integra",
+      "fieldPresence": "title_only"
+    },
+    {
+      "id": 17,
+      "queryId": "Q07",
+      "query": "stainless steel braided brake lines",
+      "rank": 1,
+      "productTitle": "HEL Performance Stainless Steel Braided Brake Lines for 2022+ Honda Civic Si",
+      "fieldPresence": "title_only"
+    },
+    {
+      "id": 18,
+      "queryId": "Q01",
+      "query": "brake pads for 2018 Honda Civic Si",
+      "rank": 8,
+      "productTitle": "HEL Performance Stainless Steel Braided Brake Lines for 2022+ Honda Civic Si",
+      "fieldPresence": "title_only"
+    },
+    {
+      "id": 19,
+      "queryId": "Q05",
+      "query": "brake kit for 2018 Honda Civic Si",
+      "rank": 10,
+      "productTitle": "HEL Performance Stainless Steel Braided Brake Lines for 2022+ Honda Civic Si",
+      "fieldPresence": "title_only"
+    },
+    {
+      "id": 20,
+      "queryId": "Q09",
+      "query": "camber arms for 2016 Honda Civic",
+      "rank": 7,
+      "productTitle": "Eibach Pro-Alignment Rear Camber Arm Kit for 2018-2022 Honda Accord [CV1/CV2]",
+      "fieldPresence": "both"
+    }
+  ]
+}
