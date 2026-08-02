@@ -4,9 +4,9 @@
 |---|---|
 | **Document** | TDD (governing, technical) |
 | **Companion** | `BLUEPRINT.md` (governing, non-technical) |
-| **Version** | 0.3.1 |
-| **Date** | 1 August 2026 |
-| **Status** | Design + scaffold + I-3, I-4 resolved. Project scaffolded (Next.js 16.3, folder structure, agent tooling, CI, MIT licence). UCP agent profile + auth helper wired. Shopify AI Toolkit adapted for Devin. No pipeline code written. Phase 0 not started. |
+| **Version** | 0.4.0 |
+| **Date** | 2 August 2026 |
+| **Status** | Design + scaffold + I-3, I-4 resolved. U-3, U-4 resolved. Inference-accuracy reframe nullified (n=59, 1.7% error). **Fitment-recall probe: PROVISIONAL coverage gap** (corrected mean recall ~0.70 < 0.80 threshold, n=12, 1-2 stores; inferred-set audit passed — zeros are real platform failures, not extractor bugs; but extractor needs hardening, matching needs handle/SKU, stratification didn't happen, re-run required before declaration). Original thesis holds: specs visible ≠ products retrievable. §6 `fitment_recall` is the primary metric. No pipeline code written. Phase 0 not started. |
 
 ---
 
@@ -82,12 +82,17 @@ The Remix template is maintained for critical security issues only. The React Ro
 - `get_product` returns option values with `available` / `exists` flags → variant modelling quality is directly measurable.
 - `categories` returned in both `google_product_category` and `merchant` taxonomies → taxonomy divergence is directly measurable.
 
-### 2.5 Shopify's own catalogue enrichment *(28 Jul 2026)*
+### 2.5 Shopify's own catalogue enrichment *(28 Jul 2026; empirically verified 1 Aug 2026)*
 Shopify Engineering describes a multimodal-LLM pipeline that infers product metadata, **merges complementary attributes across listings of the same product** (including technical specs), normalizes variants, aggregates content, and produces a canonical record used by downstream systems.
 
-**Two consequences that shape the whole design:**
+**Empirical verification (U-4 transcript, 1 Aug 2026):** The Global Catalog returns `metadata.tech_specs` on ~99% of tested products (199/200 from Two Step Performance, an auto-parts shop). The inferred fields carry friction coefficients, temperature ranges, part numbers, and multi-vehicle fitment lists (e.g., Honda Civic Type R FK8, Mitsubishi EVO 5–10, Subaru STI) — all extracted from unstructured merchant description text by Shopify's ML pipeline. Additional inferred fields: `metadata.top_features` (prose summary), `metadata.unique_selling_points` (array).
+
+**This falsifies the original project premise** ("AI agents can't see your technical specs because they are trapped in unstructured text"). See BLUEPRINT §3 (Invalidated Directions). An inference-accuracy reframe ("is Shopify's AI hallucinating wrong specs?") was also proposed and nullified — n=59 claims, 1.7% error rate, 0/9 fitment errors, 0/59 contradictions. The extraction pipeline is well-functioning. **The real finding is coverage, not accuracy:** Shopify's inference drops vehicles from fitment lists (merchant says pad fits Mégane RS, Catalog omits it). Specs being *visible* is not the same as products being *retrievable* — which is the original §2.2 thesis, untouched.
+
+**Three consequences that shape the whole design:**
 1. Where a spec appears structured in *any* merchant's listing, Shopify already propagates it. Measuring or remediating there is worthless.
 2. The gap survives only where a spec exists nowhere structured **and** the taxonomy has no attribute slot. That intersection is the entire addressable surface — and §2.4's three-attribute filter vocabulary defines its boundary.
+3. **Shopify's inference is high-coverage but lossy.** `metadata.tech_specs` is ML-generated, not merchant-authored, and it drops fitment entries from the merchant's source text. If an agent asks for "brake pads for a Mégane RS" and the Catalog's inferred fitment omits that vehicle, the product is not retrieved — even though the merchant's own page says it fits. This coverage gap is measured by `fitment_recall` (§6.1) and is the commercially defensible finding: "Your products are invisible to AI shopping agents for queries they should match."
 
 ### 2.6 Catalog freshness *(28 Jul 2026)*
 Published products are auto-enrolled with manual opt-out. Rate limiting and caching apply. **Only inventory and price are real-time; other fields refresh on a delay.**
@@ -99,8 +104,8 @@ Published products are auto-enrolled with manual opt-out. Rate limiting and cach
 |---|---|---|---|
 | U-1 | ~~Does agent-profile registration involve human review? What is the lead time?~~ **RESOLVED 31 Jul 2026:** No human review. Spring '26 Edition removed the approval requirement. API key is generated instantly in Dev Dashboard → Catalogs → Get an API key. Agent profile is just a JSON file you host — no registration step. **Zero lead time.** | ~~I-4, C3~~ | Done — see §2.4 |
 | U-2 | Actual requests/minute by trust tier | N, runtime, cost | **PARTIALLY RESOLVED 1 Aug 2026:** Token tier rate limit observed in JWT payload: `limits: {catalog: {max: 5, period: 1}}` — 5 requests/second. Scope: `read_global_api_catalog_search write_global_api_app_events`. Sufficient for Phase 1 with C7's ≤1 req/sec/domain storefront cap (the Global Catalog cap is separate). Full picture emerges at scale. |
-| U-3 | Can a shop GID be resolved from a public domain without OAuth? | C1 → C3 handoff | Probe `lookup_catalog` with a product URL; the response `seller.id` may be the resolution path |
-| U-4 | Is `filters.shops` semantics a hard restriction or a soft bias? | C6 scoring validity | Control experiment: query for a product known present in a scoped shop |
+| U-3 | ~~Can a shop GID be resolved from a public domain without OAuth?~~ **RESOLVED 1 Aug 2026:** Yes, via `search_catalog` with a shop-identifying query. `lookup_catalog` requires GIDs (not URLs) as input, so it cannot resolve a domain. Instead, search for a product unique to the target shop and extract `variants[].seller.id` (format: `gid://shopify/Shop/<id>`). Verified: Two Step Performance → `gid://shopify/Shop/1357086779`, Movcan → `gid://shopify/Shop/71335575609`. | ~~C1 → C3 handoff~~ | Done — see §2.4 |
+| U-4 | ~~Is `filters.shops` semantics a hard restriction or a soft bias?~~ **RESOLVED 1 Aug 2026:** **HARD RESTRICTION with query fallback.** Control experiment (5 tests, 250 products, 0 containment violations): `filters.shops` restricts results to the scoped shop set — every returned product carries at least one seller from the scoped set. The negative control (T3: "wedding dress" scoped to an auto-parts shop) returned 50 products, all from the target shop, 0 violations — the filter held. **Caveat:** the query is a soft ranking signal within the shop, not a hard filter. When the query has no matches in the scoped shop, the API returns the shop's general catalog instead of an empty set. **Implication for C6:** recall@k must account for query relevance, not just product presence. Store-scoped retrieval measurement is valid. | ~~C6 scoring validity~~ | Done — transcript at `scripts/output/u4-*.json` |
 | U-5 | Do Catalog results reflect merchant metafields at all? | C5/C6 interpretation, all Phase 2 value claims | Seed a dev store with structured metafields, wait out §2.6 delay, compare |
 
 **U-4 and U-5 are the two that can invalidate the methodology.** They are scheduled in Week 1, not Week 3.
@@ -393,6 +398,50 @@ export const scanStore = inngest.createFunction(
 | `best_rank` | Best position of any `should_match` product; null if absent | Ordinal, robust |
 | `retrieval_rate` | Queries with ≥1 `should_match` retrieved, over all queries | The headline number |
 | `competitor_displacement` | Whether other merchants' products fill the slots | Converts a technical finding into a commercial one |
+| `fitment_recall` | **\|inferred ∩ stated\| / \|stated\|** — fraction of vehicles in the merchant's stated fitment set that appear in the Catalog's inferred `metadata.tech_specs`. Unit is (make, model), not (year, make, model, trim). | **The coverage finding (1 Aug 2026).** Shopify's inference drops vehicles from fitment lists. If the merchant says a pad fits a Mégane RS and the Catalog omits it, an agent cannot retrieve that product. This is the original thesis: specs visible ≠ products retrievable. Measured by `scripts/probe-fitment-recall.ts`. |
+| `inference_error_rate` | **(Contradicted + Unsourced) / total inferred claims**, hand-labelled against merchant source text. | **Secondary metric (1 Aug 2026, n=59, 1 store).** Error rate: 1.7% (1/59). Fitment errors: 0/9. Contradictions: 0/59. Conclusion: well-functioning extraction pipeline, not a hallucination problem. Retained as a secondary dimension; the inference-accuracy reframe is invalidated (BLUEPRINT §3). Ground truth is human-labelled — using an LLM to judge an LLM's extraction begs the question. |
+
+**Inference-accuracy verdict codes (hand-labelling instrument, secondary):**
+`G` Grounded (traceable to source) · `D` Derived (legitimately inferable — unit conversion, paraphrase) · `C` Contradicted (source says something materially different) · `U` Unsourced (candidate hallucination) · `X` Unverifiable (cannot judge from public data). The headline metric is `(C+U)/total`. The distinction between `D` and `U` is the judgment that makes this publishable.
+
+### 6.1.1 Fitment-recall probe — pre-registered decision rule
+
+**Threshold pre-registered 1 Aug 2026, before running the probe.** Committed to git before the numbers exist. If it moves later, the diff shows it moved.
+
+> **Probe:** 20 products across 3–4 stores, stratified by source-text richness (10 with descriptions under ~500 chars, 10 over 3,000). For each, extract the merchant's stated fitment set and the Catalog's inferred fitment set. Metric: `fitment_recall = |inferred ∩ stated| / |stated|`.
+>
+> **If mean fitment recall < 0.8** → real coverage gap, that's the paper, proceed to Phase 0 measuring retrieval consequences of omission.
+>
+> **If ≥ 0.8** → inference is doing the job, the catalogue-visibility problem largely doesn't exist, and the honest move is to stop, write up what you found, and take the artifact. Gate A was always defined to make that a success.
+
+**First run (2 Aug 2026) — PROVISIONAL, not declared:**
+- Raw mean recall: 0.490 (n=12, all from 1 store — Two Step Performance)
+- Corrected mean recall (after stated-set audit): **0.70** (n=12, headline) / **0.64** (n=17, sensitivity — includes Subimods rows from `all`, not the pre-registered sample)
+- **Inferred-set audit passed:** all 6 products with zero inferred fitment were checked by reading raw `tech_specs` strings. All are genuinely devoid of vehicle names — parametric specs only. The zeros are real platform failures, not extractor bugs.
+- **Below 0.80 threshold, but NOT DECLARED.** Reasons:
+  1. Extractor needs hardening (both sides): prose fragments, possessives, slash-merged names inflate `stated` and would inflate `inferred` too.
+  2. Matching needs handle/SKU, not title tokens — 2 of 4 stores contributed zero rows.
+  3. Stratification didn't happen — all scored products were rich-bucket; the thin/rich contrast (the actual scientific content) was never tested.
+  4. Sample is 1-2 stores, not 4.
+  5. 0.70 against 0.80 on a noisy instrument with n=12 from one store is not a comfortable enough margin.
+
+**Pre-registration deviations (honest accounting):**
+- The n=17 sensitivity number pulls Subimods rows from `all` after the numbers were visible. It moves the headline downward (toward the finding). Report n=12/0.70 as headline; n=17/0.64 as sensitivity only.
+- Stratification was designed but not executed. The thin/rich contrast is the actual experiment; running only rich-bucket products means the designed experiment wasn't run.
+- MAPerformance and Springrates dropped out due to title mismatch (Catalog titles say "Multiple Fitments" where storefront titles name vehicles). This is also a coverage finding: Shopify's canonical title collapses fitment into a generic phrase. Deserves investigation, not just an infrastructure fix.
+
+**Stated limitations of the probe:**
+1. The extractor is a closed-vocabulary pattern matcher, not an LLM. Predictable, auditable, but may miss unconventional fitment phrasing.
+2. The unit is (make, model), not (year, make, model, trim). Year-range normalisation is its own hard problem and would make the metric measure the extractor, not the platform.
+3. **Bias runs in favour of the null hypothesis:** fitment stored in metafields is invisible to `/products.json`, so the *stated* set may be understated, which inflates recall. A conservative instrument that still finds a gap is a much stronger claim than an optimistic one.
+4. The `added` set (vehicles inferred but not stated) is a free second result — either cross-merchant enrichment or invention. Either is publishable. Check one or two by hand.
+5. The verdict refuses to apply the rule if fewer than 8 products score, or if nothing has a stated fitment set at all. An underpowered run that returns "no gap" would be the easiest way to fool yourself.
+
+**Next steps before declaration:**
+1. Harden the extractor (both sides): filter prose fragments, handle possessives, split comma/slash lists.
+2. Fix matching to handle-based or variant-SKU.
+3. Re-run across 4+ stores with real thin/rich stratification.
+4. Then apply the pre-registered rule.
 
 ### 6.2 Miss classification
 When an expected product is not retrieved, classify why — **this is the part with commercial value**, because it is the fix list:
@@ -488,3 +537,4 @@ Actions that must happen on or before the day the report goes public. Each is a 
 | 2026-07-31 | 0.2.1 | **Licence:** MIT `LICENSE` added at repo root (copyright Dušan Knežević, 2026) — repo is now genuinely open source. **§11 Launch Day checklist:** added, led by the `robots: noindex` removal reminder (`src/app/layout.tsx` currently sets `robots: { index: false, follow: false }` for the placeholder; must flip to `index: true` before publication or the report is invisible to search). |
 | 2026-08-01 | 0.3.0 | **I-4 RESOLVED — U-1 closed, lead-time risk eliminated.** §2.4 auth model corrected: the original design conflated capability negotiation (agent profile) with authentication (rate-limit tier). Spring '26 removed the approval requirement — API key is generated instantly in Dev Dashboard → Catalogs. Two separate concerns now documented: (1) agent profile = JSON at `public/ucp-agent-profile.json` (catalog-only: `dev.ucp.shopping.catalog.search` + `dev.ucp.shopping.catalog.lookup` + `dev.shopify.catalog.global`), included as `meta.ucp-agent.profile`; (2) auth = Token tier, `SHOPIFY_CLIENT_ID`/`SHOPIFY_CLIENT_SECRET` → bearer token at `https://api.shopify.com/auth/access_token` (scope `read_global_api_catalog_search`, 60-min expiry, runtime fetch), sent as `Authorization: Bearer`. **Code:** `src/lib/scanner/ucp-auth.ts` (token fetch), C3 stub updated with real JSON-RPC request shape + Authorization header. **Env:** `SHOPIFY_CLIENT_ID`, `SHOPIFY_CLIENT_SECRET`, `UCP_AGENT_PROFILE_URL` added. **Manual step remaining:** user generates API key in Dev Dashboard and adds credentials to `.env.local`. |
 | 2026-08-01 | 0.3.1 | **I-3 DONE — Shopify AI Toolkit adapted for Devin Desktop.** Shopify's plugin path supports Claude Code, Codex, Cursor, VS Code, Hermes — not Devin. §2.2 rewritten with the Devin-adapted approach: (1) `shopify-dev-mcp` MCP server (stdio, docs + GraphQL validation, no auth) added to `.devin/config.json` + `.mcp.json` — verified 5 tools operational (`learn_shopify_api`, `search_docs_chunks`, `validate_graphql_codeblocks`, `validate_component_codeblocks`, `validate_theme`); (2) 4 Shopify AI Toolkit skills installed via `npx skills add` to `.agents/skills/` (`ucp`, `shopify-dev`, `shopify-storefront-graphql`, `shopify-use-shopify-cli` — 4 of 21 total, selected for Phase 1 read-only catalog relevance; other 17 listed in §2.2 for future reference); (3) `@shopify/ucp-cli` v0.6.3 global, profile `catalogvector` initialized, verified with live catalog search. AGENTS.md updated with Shopify tooling section. |
+| 2026-08-01 | 0.4.0 | **U-3, U-4 resolved; inference-accuracy reframe proposed and nullified; fitment-recall probe: PROVISIONAL coverage gap.** U-4 control experiment (`scripts/probe-u4-shop-filter.ts`, 5 tests, 250 products): (1) **U-3 RESOLVED:** shop GIDs resolvable via `search_catalog` + `variants[].seller.id`. (2) **U-4 RESOLVED:** `filters.shops` is a HARD RESTRICTION (0 containment violations across all 5 tests, including page 2 with real cursor). Query is a soft ranking signal within a shop. `metadata.tech_specs` populated on ~99% of products. **Inference-accuracy probe** (n=59 claims, 10 products, 1 store): error rate 1.7% (1/59), fitment errors 0/9, contradictions 0/59. Well-functioning extraction pipeline — the "hallucination" reframe is nullified (BLUEPRINT §3). **The real finding is coverage, not accuracy:** Shopify's inference drops vehicles from fitment lists. **Fitment-recall probe** (`scripts/probe-fitment-recall.ts`, pre-registered threshold 0.80): raw mean recall 0.490 (n=12, 1 store). After stated-set audit (correcting extractor errors): corrected mean recall **0.70** (n=12, headline) / **0.64** (n=17, sensitivity). **Inferred-set audit passed:** all 6 products with zero inferred fitment checked by reading raw `tech_specs` — genuinely devoid of vehicle names, parametric specs only. Zeros are real platform failures, not extractor bugs. **Below 0.80 threshold but NOT DECLARED — PROVISIONAL.** Extractor needs hardening (both sides), matching needs handle/SKU (2/4 stores contributed zero rows), stratification didn't happen (all rich-bucket), sample is 1-2 stores. Pre-registration deviations documented honestly: n=17 pulls from `all` after numbers visible (moves headline downward — report n=12/0.70 as headline). MAPerformance/Springrates title collapse ("Multiple Fitments" instead of vehicle names) is a coverage finding in its own right. §2.5 updated (coverage, not accuracy). §6 `fitment_recall` is primary metric, `inference_error_rate` secondary. §6.1.1 pre-registered decision rule + first-run results + deviations. BLUEPRINT §1, §2.2 reverted to v0.3.1 framing; §3 updated with both invalidated directions. |

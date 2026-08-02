@@ -1,0 +1,95 @@
+{
+  "config": {
+    "profileUrl": "https://cdn.jsdelivr.net/gh/knezdusan/catalogvector@main/public/ucp-agent-profile.json",
+    "targetProductUrl": "https://www.twostepperformance.com/products/paragon-pbp370-brake-pads",
+    "secondProductUrl": "https://movcan.com/products/brake-pads",
+    "genericQuery": "brake pads",
+    "negativeControlQuery": "wedding dress",
+    "requestDelayMs": 250,
+    "endpoint": "https://catalog.shopify.com/api/ucp/mcp"
+  },
+  "findings": {
+    "u3": {
+      "targetGid": null,
+      "secondGid": null,
+      "resolved": false
+    }
+  },
+  "verdicts": [
+    "U-3 UNRESOLVED — U-4 not run"
+  ],
+  "transcript": [
+    {
+      "test": "T0-target",
+      "request": {
+        "jsonrpc": "2.0",
+        "id": 1,
+        "method": "tools/call",
+        "params": {
+          "name": "lookup_catalog",
+          "arguments": {
+            "meta": {
+              "ucp-agent": {
+                "profile": "https://cdn.jsdelivr.net/gh/knezdusan/catalogvector@main/public/ucp-agent-profile.json"
+              }
+            },
+            "catalog": {
+              "url": "https://www.twostepperformance.com/products/paragon-pbp370-brake-pads"
+            }
+          }
+        }
+      },
+      "response": {
+        "jsonrpc": "2.0",
+        "id": 1,
+        "result": {
+          "content": [
+            {
+              "type": "text",
+              "text": "Invalid arguments: object at `/catalog` is missing required properties: ids"
+            }
+          ],
+          "isError": true
+        }
+      },
+      "httpStatus": 200,
+      "at": "2026-08-01T20:47:00.315Z"
+    },
+    {
+      "test": "T0-second",
+      "request": {
+        "jsonrpc": "2.0",
+        "id": 2,
+        "method": "tools/call",
+        "params": {
+          "name": "lookup_catalog",
+          "arguments": {
+            "meta": {
+              "ucp-agent": {
+                "profile": "https://cdn.jsdelivr.net/gh/knezdusan/catalogvector@main/public/ucp-agent-profile.json"
+              }
+            },
+            "catalog": {
+              "url": "https://movcan.com/products/brake-pads"
+            }
+          }
+        }
+      },
+      "response": {
+        "jsonrpc": "2.0",
+        "id": 2,
+        "result": {
+          "content": [
+            {
+              "type": "text",
+              "text": "Invalid arguments: object at `/catalog` is missing required properties: ids"
+            }
+          ],
+          "isError": true
+        }
+      },
+      "httpStatus": 200,
+      "at": "2026-08-01T20:47:00.927Z"
+    }
+  ]
+}
