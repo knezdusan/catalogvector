@@ -1,5 +1,5 @@
 {
-  "$schema": "u6r-results-v1",
+  "schemaVersion": "u6r-results-v1",
   "created": "2026-08-03",
   "directive": "DIRECTIVE-10 §2 — U-6-R",
   "assistants_tested": ["ChatGPT", "Gemini", "Copilot"],

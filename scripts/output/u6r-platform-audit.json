@@ -1,5 +1,5 @@
 {
-  "$schema": "u6r-platform-audit-v1",
+  "schemaVersion": "u6r-platform-audit-v1",
   "created": "2026-08-03",
   "directive": "DIRECTIVE-11 §1",
   "method": "For each merchant named in a ChatGPT product card or carousel slot, determine the ecommerce platform via: (1) /products.json response (Shopify stores return JSON), (2) HTTP headers (powered-by: Shopify, X-Shopify-* cookies), (3) /cart.js response, (4) robots.txt patterns, (5) web search for independent confirmation.",

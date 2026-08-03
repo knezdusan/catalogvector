@@ -1,5 +1,5 @@
 {
-  "$schema": "surface-trigger-rate-v1",
+  "schemaVersion": "surface-trigger-rate-v1",
   "created": "2026-08-03",
   "directive": "DIRECTIVE-11 §3",
   "method": "12 original U-6-R queries + 12 new queries across 3 verticals = 24 total. All run on ChatGPT (anonymous, no login). Record whether product card/carousel rendered, slot count, and query characteristics.",

@@ -1,5 +1,5 @@
 {
-  "$schema": "h6-results-v1",
+  "schemaVersion": "h6-results-v1",
   "created": "2026-08-03",
   "directive": "DIRECTIVE-11 §4",
   "method": "Search shop.app for each of 20 product titles via Playwright browser (client-side rendered search). Record presence, result count, and top results. Compare against Catalog presence and ChatGPT card appearance.",
