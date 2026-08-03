@@ -1,0 +1,52 @@
+{
+  "$schema": "h6-results-v1",
+  "created": "2026-08-03",
+  "directive": "DIRECTIVE-11 §4",
+  "method": "Search shop.app for each of 20 product titles via Playwright browser (client-side rendered search). Record presence, result count, and top results. Compare against Catalog presence and ChatGPT card appearance.",
+  "product_count": 20,
+  "results": [
+    {"index": 1, "store": "Subimods", "title": "Fluidampr Steel Internally Balanced Damper Most EJ", "shopAppFound": true, "resultCount": 30, "catalogPresent": false, "chatgptCard": false, "agreement_chatgpt": "disagree", "agreement_catalog": "disagree"},
+    {"index": 2, "store": "Subimods", "title": "COBB Boost Control Solenoid 2015-2021 WRX", "shopAppFound": true, "resultCount": 24, "catalogPresent": false, "chatgptCard": false, "agreement_chatgpt": "disagree", "agreement_catalog": "disagree"},
+    {"index": 3, "store": "Subimods", "title": "PRL Motorsports High Volume Intake Kit 2022-2024 Honda Civic", "shopAppFound": true, "resultCount": 30, "catalogPresent": false, "chatgptCard": false, "agreement_chatgpt": "disagree", "agreement_catalog": "disagree"},
+    {"index": 4, "store": "Subimods", "title": "COBB AccessPORT V3 2015-2021 WRX", "shopAppFound": true, "resultCount": 30, "catalogPresent": false, "chatgptCard": false, "agreement_chatgpt": "disagree", "agreement_catalog": "disagree"},
+    {"index": 5, "store": "Subimods", "title": "PRL Motorsports Charge Pipe Upgrade Kit 2018-2022", "shopAppFound": true, "resultCount": 30, "catalogPresent": false, "chatgptCard": false, "agreement_chatgpt": "disagree", "agreement_catalog": "disagree"},
+    {"index": 6, "store": "Springrates", "title": "BC Racing BR Series Coilovers for 2009-2014 Acura TL", "shopAppFound": true, "resultCount": 30, "catalogPresent": true, "chatgptCard": true, "agreement_chatgpt": "agree", "agreement_catalog": "agree"},
+    {"index": 7, "store": "Subimods", "title": "PRL Motorsports High Volume Intake Kit 2022-2024 Honda Civic (duplicate)", "shopAppFound": true, "resultCount": 30, "catalogPresent": true, "chatgptCard": true, "agreement_chatgpt": "agree", "agreement_catalog": "agree", "note": "This was labeled as Subimods in the product set but is actually the PRL intake that appeared in ChatGPT B3 card via shop.app"},
+    {"index": 8, "store": "MAP", "title": "Cobb Accessport V3 2015-2021 Subaru WRX STI", "shopAppFound": true, "resultCount": 30, "catalogPresent": true, "chatgptCard": false, "agreement_chatgpt": "disagree", "agreement_catalog": "agree"},
+    {"index": 9, "store": "BremboStore", "title": "Brake Pads 07BB1507", "shopAppFound": true, "resultCount": 30, "catalogPresent": true, "chatgptCard": false, "agreement_chatgpt": "disagree", "agreement_catalog": "agree"},
+    {"index": 10, "store": "BremboStore", "title": "PRIME Low-Met Rear Disc Brake Pad Set P24254", "shopAppFound": true, "resultCount": 24, "catalogPresent": true, "chatgptCard": false, "agreement_chatgpt": "disagree", "agreement_catalog": "agree"},
+    {"index": 11, "store": "Valvetronic", "title": "Audi RS6 RS7 C8 Valved Sport Exhaust System", "shopAppFound": true, "resultCount": 28, "catalogPresent": true, "chatgptCard": false, "agreement_chatgpt": "disagree", "agreement_catalog": "agree"},
+    {"index": 12, "store": "Valvetronic", "title": "Valvetronic Designs 4.0 Inch Outlet Exhaust Tips", "shopAppFound": true, "resultCount": 30, "catalogPresent": true, "chatgptCard": false, "agreement_chatgpt": "disagree", "agreement_catalog": "agree"},
+    {"index": 13, "store": "EBCBrakeShop", "title": "EBC SR Series Race Pads DP8037", "shopAppFound": true, "resultCount": 30, "catalogPresent": true, "chatgptCard": false, "agreement_chatgpt": "disagree", "agreement_catalog": "agree"},
+    {"index": 14, "store": "Intec", "title": "ARP Honda D16Y Head Stud Kit", "shopAppFound": true, "resultCount": 30, "catalogPresent": true, "chatgptCard": false, "agreement_chatgpt": "disagree", "agreement_catalog": "agree"},
+    {"index": 15, "store": "Intec", "title": "GSC P-D Honda B-Series Vtec Dual Spring Set", "shopAppFound": true, "resultCount": 30, "catalogPresent": true, "chatgptCard": false, "agreement_chatgpt": "disagree", "agreement_catalog": "agree"},
+    {"index": 16, "store": "JDMuscle", "title": "COBB 15-21 WRX STI V3 AccessPORT", "shopAppFound": true, "resultCount": 23, "catalogPresent": true, "chatgptCard": false, "agreement_chatgpt": "disagree", "agreement_catalog": "agree"},
+    {"index": 17, "store": "UnityPerf", "title": "Goodridge SS Brake Lines 23 Civic Type R FL5", "shopAppFound": true, "resultCount": 30, "catalogPresent": true, "chatgptCard": false, "agreement_chatgpt": "disagree", "agreement_catalog": "agree"},
+    {"index": 18, "store": "TSP", "title": "NGK Ruthenium HX Spark Plug Box of 4 LKAR8BHX", "shopAppFound": true, "resultCount": 30, "catalogPresent": true, "chatgptCard": false, "agreement_chatgpt": "disagree", "agreement_catalog": "agree"},
+    {"index": 19, "store": "MAP", "title": "BC Racing BR Series Coilovers 2009-2014 Acura TL", "shopAppFound": true, "resultCount": 30, "catalogPresent": true, "chatgptCard": false, "agreement_chatgpt": "disagree", "agreement_catalog": "agree"},
+    {"index": 20, "store": "Springrates", "title": "KONI Special Active FSD Shock Front for 2018+ Volvo", "shopAppFound": true, "resultCount": 29, "catalogPresent": true, "chatgptCard": false, "agreement_chatgpt": "disagree", "agreement_catalog": "agree"}
+  ],
+  "summary": {
+    "products_resolvable_on_shopapp": 20,
+    "all_found": true,
+    "agreement_with_chatgpt_card": 2,
+    "disagreement_with_chatgpt_card": 18,
+    "agreement_with_catalog_presence": 15,
+    "disagreement_with_catalog_presence": 5,
+    "verdict": "REJECTED",
+    "verdict_reason": "Agreement with ChatGPT card appearance is 2/20 (≤12 threshold for rejection). shop.app finds ALL 20 products — it cannot discriminate between products that appear in ChatGPT cards and those that don't. It is not a useful proxy for ChatGPT card appearance.",
+    "key_findings": [
+      "shop.app finds 100% of products searched — it is a product search engine, not a Catalog-syndication filter",
+      "The 5 Subimods products (absent from Catalog) ARE found on shop.app — shop.app and the Catalog are different systems with different coverage",
+      "shop.app disagrees with Catalog presence on 5/20 (the Subimods products), meeting the ≥5 disagreement threshold, but this is because shop.app is MORE inclusive than the Catalog, not less",
+      "Only 2 products appeared in ChatGPT cards, and both were found on shop.app — but so were the other 18 that didn't appear in cards",
+      "shop.app presence is necessary but not sufficient for ChatGPT card appearance — every product is on shop.app, but only some appear in cards"
+    ],
+    "implications": [
+      "shop.app cannot serve as a 'deterministic, cheaply scrapable proxy for Catalog-to-assistant reach' as hypothesized",
+      "The hypothesis that shop.app tracks the outcome better than the Catalog API is falsified — shop.app tracks everything, so it tracks nothing specifically",
+      "The Catalog API remains the more discriminating instrument: it returns 0 results for Subimods products while shop.app returns 30",
+      "The gap between Catalog presence and ChatGPT card appearance is not explained by shop.app presence — it must be explained by something else (ranking, relevance, merchant authority, etc.)"
+    ]
+  }
+}

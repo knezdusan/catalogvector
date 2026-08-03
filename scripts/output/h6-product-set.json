@@ -1,0 +1,218 @@
+[
+  {
+    "store": "Subimods",
+    "domain": "www.subimods.com",
+    "title": "Fluidampr Steel Internally Balanced Damper Most EJ Subaru Models",
+    "handle": "fluidampr-subaru-ej-series-steel-internally-balanced-damper",
+    "visibility": "absent",
+    "nlRank": null,
+    "bsRank": null,
+    "chatgptCard": false,
+    "selectionReason": "absolutely invisible target"
+  },
+  {
+    "store": "Subimods",
+    "domain": "www.subimods.com",
+    "title": "COBB Boost Control Solenoid 2015-2021 WRX",
+    "handle": "cobb-tuning-electronic-boost-controller-2015-2018-wrx",
+    "visibility": "absent",
+    "nlRank": null,
+    "bsRank": null,
+    "chatgptCard": false,
+    "selectionReason": "absolutely invisible target"
+  },
+  {
+    "store": "Subimods",
+    "domain": "www.subimods.com",
+    "title": "PRL Motorsports High Volume Intake Kit 2022-2024 Honda Civic 2.0L N/A",
+    "handle": "prl-motorsports-2022-honda-civic-2-0l-high-volume-intake-kit",
+    "visibility": "absent",
+    "nlRank": null,
+    "bsRank": null,
+    "chatgptCard": false,
+    "selectionReason": "absolutely invisible target"
+  },
+  {
+    "store": "Subimods",
+    "domain": "www.subimods.com",
+    "title": "COBB AccessPORT V3 2015-2021 WRX / 2015-2021 STI / 2014-2018 Forester XT CVT",
+    "handle": "cobb-tuning-accessport-v3-2015-2019-wrx-2015-2019-sti-2014-2018-forester-xt",
+    "visibility": "absent",
+    "nlRank": null,
+    "bsRank": null,
+    "chatgptCard": false,
+    "selectionReason": "absolutely invisible target"
+  },
+  {
+    "store": "Subimods",
+    "domain": "www.subimods.com",
+    "title": "PRL Motorsports Charge Pipe Upgrade Kit 2018-2022 Honda Accord 2.0T",
+    "handle": "prl-motorsports-2018-honda-accord-2-0t-charge-pipe-upgrade-kit",
+    "visibility": "absent",
+    "nlRank": null,
+    "bsRank": null,
+    "chatgptCard": false,
+    "selectionReason": "absolutely invisible target"
+  },
+  {
+    "store": "Springrates",
+    "domain": "www.springrates.com",
+    "title": "BC Racing BR Series Coilovers for 2009-2014 Acura TL FWD/AWD (UA8/UA9)",
+    "handle": "bc-racing-br-series-coilovers-2009-2014-acura-tl",
+    "visibility": "present",
+    "nlRank": 3,
+    "bsRank": 8,
+    "chatgptCard": true,
+    "chatgptCardQuery": "C2",
+    "selectionReason": "appeared in ChatGPT C2 card (bc.springrates.com citation)"
+  },
+  {
+    "store": "Subimods",
+    "domain": "www.subimods.com",
+    "title": "PRL Motorsports High Volume Intake Kit 2022-2024 Honda Civic 2.0L N/A",
+    "handle": "prl-motorsports-2022-honda-civic-2-0l-high-volume-intake-kit",
+    "visibility": "present",
+    "chatgptCard": true,
+    "chatgptCardQuery": "B3",
+    "selectionReason": "appeared in ChatGPT B3 card (shop.app citation)"
+  },
+  {
+    "store": "MAP",
+    "domain": "www.maperformance.com",
+    "title": "Cobb Accessport V3 | 2015-2021 Subaru WRX/STI and 2014-2018 Subaru Forester XT (AP3-SUB-004)",
+    "handle": "cobb-tuning-accessport-v3-2015-2018-subaru-wrx-sti-ap3-sub-004",
+    "visibility": "present",
+    "nlRank": 1,
+    "bsRank": 1,
+    "chatgptCard": false,
+    "selectionReason": "high visibility (rank 1 both NL and BS)"
+  },
+  {
+    "store": "BremboStore",
+    "domain": "www.brembostore.com",
+    "title": "Brake Pads - 07BB1507",
+    "handle": "brake-pads-07bb1507",
+    "visibility": "present",
+    "nlRank": 1,
+    "chatgptCard": false,
+    "selectionReason": "high visibility (rank 1 NL)"
+  },
+  {
+    "store": "BremboStore",
+    "domain": "www.brembostore.com",
+    "title": "PRIME Low-Met Rear Disc Brake Pad Set - P24254",
+    "handle": "prime-low-met-rear-disc-brake-pad-set-p24254",
+    "visibility": "present",
+    "nlRank": 1,
+    "chatgptCard": false,
+    "selectionReason": "high visibility (rank 1 NL)"
+  },
+  {
+    "store": "Valvetronic",
+    "domain": "valvetronic.com",
+    "title": "Audi RS6 / RS7 C8 Valved Sport Exhaust System",
+    "handle": "audi-rs6-rs7-c8-valved-catback-exhaust",
+    "visibility": "present",
+    "nlRank": 1,
+    "chatgptCard": false,
+    "selectionReason": "high visibility (rank 1 NL)"
+  },
+  {
+    "store": "Valvetronic",
+    "domain": "valvetronic.com",
+    "title": "Valvetronic Designs 4.0 Inch Outlet Exhaust Tips (Exclusive)",
+    "handle": "valvetronic-designs-2-5-4-0-inch-exhaust-tips-exclusive",
+    "visibility": "present",
+    "nlRank": 1,
+    "chatgptCard": false,
+    "selectionReason": "high visibility (rank 1 NL)"
+  },
+  {
+    "store": "EBCBrakeShop",
+    "domain": "www.ebcbrakeshop.co.uk",
+    "title": "EBC SR Series Race Pads DP8037/2.20SR11 Front",
+    "handle": "ebc-sr-series-race-pads-dp8037-2-20sr11",
+    "visibility": "present",
+    "nlRank": 1,
+    "chatgptCard": false,
+    "selectionReason": "high visibility (rank 1 NL)"
+  },
+  {
+    "store": "Intec",
+    "domain": "www.intecracing.com",
+    "title": "ARP Honda D16Y Head Stud Kit",
+    "handle": "arp-honda-d16y-head-stud-kit-1",
+    "visibility": "present",
+    "nlRank": 56,
+    "bsRank": 116,
+    "chatgptCard": false,
+    "selectionReason": "mid visibility (NL@56, BS@116)"
+  },
+  {
+    "store": "Intec",
+    "domain": "www.intecracing.com",
+    "title": "GSC P-D Honda B-Series Vtec Dual Spring Set and Titanium Retainer",
+    "handle": "gsc-p-d-honda-b-series-vtec-dual-spring-set-and-titanium-retainer",
+    "visibility": "present",
+    "nlRank": 292,
+    "bsRank": null,
+    "chatgptCard": false,
+    "selectionReason": "low visibility (NL@292, BS absent)"
+  },
+  {
+    "store": "JDMuscle",
+    "domain": "jdmuscleusa.com",
+    "title": "COBB [15-21 WRX/STI, 14-18 FXT] V3 AccessPORT",
+    "handle": "cobb-tuning-v3-accessport-subaru-wrx-2015-2021-sti-2015-2021-forester-xt-cvt-2014-2018-cobbap3-sub-004-ap3-sub-004",
+    "visibility": "present",
+    "nlRank": 17,
+    "bsRank": 25,
+    "chatgptCard": false,
+    "selectionReason": "mid visibility (NL@17, BS@25)"
+  },
+  {
+    "store": "UnityPerf",
+    "domain": "unity-performance.com",
+    "title": "Goodridge SS Brake Lines | 23+ Civic Type R FL5",
+    "handle": "goodridge-ss-brake-lines-23-civic-type-r-fl5",
+    "visibility": "partial",
+    "nlRank": null,
+    "bsRank": 205,
+    "chatgptCard": false,
+    "selectionReason": "low visibility (NL absent, BS@205)"
+  },
+  {
+    "store": "TSP",
+    "domain": "www.twostepperformance.com",
+    "title": "NGK Ruthenium HX Spark Plug Box of 4 (LKAR8BHX)",
+    "handle": "ngk-ruthenium-hx-spark-plug-box-of-4-lkar8bhx",
+    "visibility": "partial",
+    "nlRank": null,
+    "bsRank": 46,
+    "chatgptCard": false,
+    "selectionReason": "low visibility (NL absent, BS@46)"
+  },
+  {
+    "store": "MAP",
+    "domain": "www.maperformance.com",
+    "title": "BC Racing BR Series Coilovers | 2009-2014 Acura TL FWD/AWD (A-75-BR)",
+    "handle": "bc-racing-br-series-coilovers-09-14-acura-tl-fwd-awd-ua8-ua9-a-75-br",
+    "visibility": "present",
+    "nlRank": 21,
+    "bsRank": 74,
+    "chatgptCard": false,
+    "chatgptCardNote": "BC Racing BR Series appeared in B2 and C2 cards, but via Springrates (C2) and Redline360 (B2), not MAP",
+    "selectionReason": "mid visibility (NL@21, BS@74) — same product as ChatGPT cards but different store"
+  },
+  {
+    "store": "Springrates",
+    "domain": "www.springrates.com",
+    "title": "KONI Special Active FSD Shock (Front) for 2018+ Volkswagen Atlas",
+    "handle": "koni-active-fsd-volkswagen-atlas-2018plus-front-87451424",
+    "visibility": "present",
+    "nlRank": 1,
+    "bsRank": 153,
+    "chatgptCard": false,
+    "selectionReason": "high NL visibility (rank 1), low BS visibility (rank 153)"
+  }
+]
