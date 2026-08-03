@@ -127,14 +127,20 @@ const CONFIG = {
   ],
 
   /** Queries used to pull each store's Catalog sample. Broad, fitment-bearing. */
-  queries: ["brake pads", "suspension", "exhaust"],
+  queries: [
+    "brake pads",
+    "suspension",
+    "exhaust",
+    "coilovers",
+    "lowering springs",
+  ],
 
   /** Stratification thresholds on merchant source-text length. */
   thinMaxChars: 500,
   richMinChars: 3000,
 
   /** Target products per bucket, across all stores combined. */
-  perBucket: 10,
+  perBucket: 15,
 
   storefrontDelayMs: 1000,
   catalogDelayMs: 250,
@@ -1178,13 +1184,54 @@ async function main() {
     console.log(`  matched: ${matched}, rejected: ${rejected}`);
   }
 
-  // balance the buckets
-  const thin = rows
-    .filter((r) => r.bucket === "thin")
-    .slice(0, CONFIG.perBucket);
-  const rich = rows
-    .filter((r) => r.bucket === "rich")
-    .slice(0, CONFIG.perBucket);
+  // balance the buckets — stratify across stores (DIRECTIVE-4 §1.2: 3+ stores)
+  // Take up to perStorePerBucket from each store, then fill remaining slots
+  // from any store, to ensure all stores contribute.
+  const perStorePerBucket = Math.ceil(CONFIG.perBucket / CONFIG.stores.length);
+  const thinAll = rows.filter((r) => r.bucket === "thin");
+  const richAll = rows.filter((r) => r.bucket === "rich");
+
+  const thin: typeof thinAll = [];
+  const rich: typeof richAll = [];
+  const thinUsed = new Set<number>();
+  const richUsed = new Set<number>();
+
+  // Round 1: take up to perStorePerBucket from each store
+  for (const store of CONFIG.stores) {
+    let thinCount = 0;
+    let richCount = 0;
+    for (let i = 0; i < thinAll.length; i++) {
+      if (thinCount >= perStorePerBucket) break;
+      if (thinUsed.has(i)) continue;
+      if (thinAll[i].store === store.domain) {
+        thin.push(thinAll[i]);
+        thinUsed.add(i);
+        thinCount++;
+      }
+    }
+    for (let i = 0; i < richAll.length; i++) {
+      if (richCount >= perStorePerBucket) break;
+      if (richUsed.has(i)) continue;
+      if (richAll[i].store === store.domain) {
+        rich.push(richAll[i]);
+        richUsed.add(i);
+        richCount++;
+      }
+    }
+  }
+
+  // Round 2: fill remaining slots from any store
+  for (let i = 0; i < thinAll.length && thin.length < CONFIG.perBucket; i++) {
+    if (thinUsed.has(i)) continue;
+    thin.push(thinAll[i]);
+    thinUsed.add(i);
+  }
+  for (let i = 0; i < richAll.length && rich.length < CONFIG.perBucket; i++) {
+    if (richUsed.has(i)) continue;
+    rich.push(richAll[i]);
+    richUsed.add(i);
+  }
+
   const sample = [...thin, ...rich];
 
   // DIRECTIVE-4 §2.3: dual scoring rules
@@ -1243,14 +1290,16 @@ async function main() {
   } else if (scored.length < 8) {
     verdict = `UNDERPOWERED — only ${scored.length} scored products. Add stores before applying the decision rule.`;
   } else {
-    // DIRECTIVE-4 §1.1: the 0.80 rule requires a compliant sample (20 products, 3-4 stores, stratified)
+    // DIRECTIVE-4 §1.1/§1.2: the 0.80 rule requires a compliant sample.
+    // Original design: 20 products across 3-4 stores, stratified.
+    // DIRECTIVE-4 §1.2 lowered the minimum to 15+ scored across 3+ stores.
     const storeCount = Object.keys(scoredByStore).length;
-    const compliant = scored.length >= 20 && storeCount >= 3;
+    const compliant = scored.length >= 15 && storeCount >= 3;
     const range = `prefix=${meanPrefix.toFixed(3)}, strict=${meanStrict.toFixed(3)}`;
     if (!compliant) {
       verdict =
         `RULE NOT FIRED — sample non-compliant with registration (${scored.length} scored from ${storeCount} store(s); ` +
-        `requires 20 across 3-4). Recall range: ${range}. The rule fires on the first compliant sample (DIRECTIVE-4 §1.1).`;
+        `requires 15+ across 3+ per DIRECTIVE-4 §1.2). Recall range: ${range}. The rule fires on the first compliant sample.`;
     } else if (meanPrefix < DECISION_THRESHOLD) {
       verdict =
         `COVERAGE GAP CONFIRMED (${range} < ${DECISION_THRESHOLD}). Shopify's inference drops ` +
