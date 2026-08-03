@@ -1,0 +1,62 @@
+{
+  "$schema": "surface-trigger-rate-v1",
+  "created": "2026-08-03",
+  "directive": "DIRECTIVE-11 §3",
+  "method": "12 original U-6-R queries + 12 new queries across 3 verticals = 24 total. All run on ChatGPT (anonymous, no login). Record whether product card/carousel rendered, slot count, and query characteristics.",
+  "observations": [
+    {"id": "A1", "query": "Help me find brake pads for a 2018 Honda Civic Si", "vertical": "auto_aggregator", "intent_phrasing": "help_me_find", "specificity": "vehicle_specific", "card_rendered": true, "card_count": 1, "surface_type": "product_card"},
+    {"id": "A2", "query": "Shop for brake rotors for a 2017 Honda Civic", "vertical": "auto_aggregator", "intent_phrasing": "shop_for", "specificity": "vehicle_specific", "card_rendered": false, "card_count": 0, "surface_type": "conversational"},
+    {"id": "A3", "query": "Help me find an oil filter for a 2020 Ford F-150", "vertical": "auto_aggregator", "intent_phrasing": "help_me_find", "specificity": "vehicle_specific", "card_rendered": true, "card_count": 1, "surface_type": "product_card"},
+    {"id": "B1", "query": "Help me find a downpipe for a 2018 Honda Civic Type R FK8", "vertical": "auto_niche", "intent_phrasing": "help_me_find", "specificity": "vehicle_specific", "card_rendered": false, "card_count": 0, "surface_type": "conversational"},
+    {"id": "B2", "query": "Shop for coilovers for a 2017 Honda Civic", "vertical": "auto_niche", "intent_phrasing": "shop_for", "specificity": "vehicle_specific", "card_rendered": true, "card_count": 1, "surface_type": "product_card"},
+    {"id": "B3", "query": "Help me find a cold air intake for a 2023 Honda Civic Type R FL5", "vertical": "auto_niche", "intent_phrasing": "help_me_find", "specificity": "vehicle_specific", "card_rendered": true, "card_count": 1, "surface_type": "product_card"},
+    {"id": "C1", "query": "Help me find Paragon PBP370 brake pads", "vertical": "auto_longtail", "intent_phrasing": "help_me_find", "specificity": "part_number", "card_rendered": false, "card_count": 0, "surface_type": "conversational"},
+    {"id": "C2", "query": "Shop for BC Racing BR Series coilovers for a 2009 Acura TL", "vertical": "auto_longtail", "intent_phrasing": "shop_for", "specificity": "brand_vehicle_specific", "card_rendered": true, "card_count": 1, "surface_type": "product_card"},
+    {"id": "C3", "query": "Help me find Eibach Sportline lowering springs for a 2023 Honda Civic Type R", "vertical": "auto_longtail", "intent_phrasing": "help_me_find", "specificity": "brand_vehicle_specific", "card_rendered": true, "card_count": 1, "surface_type": "product_card"},
+    {"id": "D1", "query": "Help me find a ceramic coffee mug", "vertical": "home_goods", "intent_phrasing": "help_me_find", "specificity": "category", "card_rendered": false, "card_count": 0, "surface_type": "conversational"},
+    {"id": "D2", "query": "Shop for a linen bed sheet set", "vertical": "home_goods", "intent_phrasing": "shop_for", "specificity": "category", "card_rendered": true, "card_count": 4, "surface_type": "product_carousel"},
+    {"id": "D3", "query": "Help me find a handmade leather wallet", "vertical": "home_goods", "intent_phrasing": "help_me_find", "specificity": "category", "card_rendered": false, "card_count": 0, "surface_type": "conversational"},
+    {"id": "E1", "query": "Help me find a linen duvet cover", "vertical": "home_goods", "intent_phrasing": "help_me_find", "specificity": "category", "card_rendered": true, "card_count": 3, "surface_type": "product_carousel", "products": ["Quince European Linen Duvet Cover", "Brooklinen Linen Duvet Cover", "Parachute Linen Duvet Cover"]},
+    {"id": "E2", "query": "Shop for a ceramic dinnerware set", "vertical": "home_goods", "intent_phrasing": "shop_for", "specificity": "category", "card_rendered": false, "card_count": 0, "surface_type": "conversational"},
+    {"id": "E3", "query": "Help me find a wool area rug 8x10", "vertical": "home_goods", "intent_phrasing": "help_me_find", "specificity": "category_with_spec", "card_rendered": false, "card_count": 0, "surface_type": "conversational"},
+    {"id": "E4", "query": "Shop for a down alternative comforter", "vertical": "home_goods", "intent_phrasing": "shop_for", "specificity": "category", "card_rendered": false, "card_count": 0, "surface_type": "conversational"},
+    {"id": "F1", "query": "Help me find a vitamin C serum", "vertical": "beauty_personal_care", "intent_phrasing": "help_me_find", "specificity": "category", "card_rendered": true, "card_count": 3, "surface_type": "product_card", "products": ["SkinCeuticals C E Ferulic", "Paula's Choice 25% Vitamin C", "The Ordinary Ascorbyl Glucoside 12%"]},
+    {"id": "F2", "query": "Shop for a cordless hair dryer", "vertical": "beauty_personal_care", "intent_phrasing": "shop_for", "specificity": "category_with_feature", "card_rendered": false, "card_count": 0, "surface_type": "conversational"},
+    {"id": "F3", "query": "Help me find a fluoride-free toothpaste", "vertical": "beauty_personal_care", "intent_phrasing": "help_me_find", "specificity": "category_with_feature", "card_rendered": true, "card_count": 2, "surface_type": "product_card", "products": ["Boka Ela Mint Nano-Hydroxyapatite", "Boka Refresh Mint Whitening"]},
+    {"id": "F4", "query": "Shop for a solid cologne for men", "vertical": "beauty_personal_care", "intent_phrasing": "shop_for", "specificity": "category_with_demographic", "card_rendered": false, "card_count": 0, "surface_type": "conversational"},
+    {"id": "G1", "query": "Help me find a 2-person backpacking tent", "vertical": "outdoor_gear", "intent_phrasing": "help_me_find", "specificity": "category_with_spec", "card_rendered": false, "card_count": 0, "surface_type": "conversational"},
+    {"id": "G2", "query": "Shop for a down sleeping bag 20 degree", "vertical": "outdoor_gear", "intent_phrasing": "shop_for", "specificity": "category_with_spec", "card_rendered": false, "card_count": 0, "surface_type": "conversational"},
+    {"id": "G3", "query": "Help me find a carbon fiber trekking pole", "vertical": "outdoor_gear", "intent_phrasing": "help_me_find", "specificity": "category_with_material", "card_rendered": false, "card_count": 0, "surface_type": "conversational"},
+    {"id": "G4", "query": "Shop for a hydration bladder 3 liter", "vertical": "outdoor_gear", "intent_phrasing": "shop_for", "specificity": "category_with_spec", "card_rendered": false, "card_count": 0, "surface_type": "conversational"}
+  ],
+  "summary": {
+    "total_queries": 24,
+    "total_cards_rendered": 10,
+    "overall_surface_trigger_rate": 0.417,
+    "by_vertical": {
+      "auto_aggregator": {"queries": 3, "cards": 2, "rate": 0.667},
+      "auto_niche": {"queries": 3, "cards": 2, "rate": 0.667},
+      "auto_longtail": {"queries": 3, "cards": 2, "rate": 0.667},
+      "home_goods": {"queries": 7, "cards": 2, "rate": 0.286},
+      "beauty_personal_care": {"queries": 4, "cards": 2, "rate": 0.500},
+      "outdoor_gear": {"queries": 4, "cards": 0, "rate": 0.000}
+    },
+    "by_intent_phrasing": {
+      "help_me_find": {"queries": 13, "cards": 7, "rate": 0.538},
+      "shop_for": {"queries": 11, "cards": 3, "rate": 0.273}
+    },
+    "by_specificity": {
+      "vehicle_specific": {"queries": 6, "cards": 4, "rate": 0.667},
+      "brand_vehicle_specific": {"queries": 2, "cards": 2, "rate": 1.000},
+      "part_number": {"queries": 1, "cards": 0, "rate": 0.000},
+      "category": {"queries": 9, "cards": 4, "rate": 0.444},
+      "category_with_spec": {"queries": 4, "cards": 0, "rate": 0.000},
+      "category_with_feature": {"queries": 2, "cards": 1, "rate": 0.500},
+      "category_with_demographic": {"queries": 1, "cards": 0, "rate": 0.000},
+      "category_with_material": {"queries": 1, "cards": 0, "rate": 0.000}
+    },
+    "rate_range": "0.000 (outdoor_gear) to 0.667 (auto) — varies enough to be worth a hypothesis",
+    "no_hypothesis_registered": true,
+    "directive_note": "No hypothesis is registered yet. This cycle establishes whether the rate varies enough to be worth a hypothesis. The rate varies from 0% to 66.7% across verticals — this is enough variation to warrant a hypothesis in a future cycle."
+  }
+}

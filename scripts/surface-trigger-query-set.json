@@ -1,0 +1,119 @@
+{
+  "$schema": "surface-trigger-rate-query-set-v1",
+  "created": "2026-08-03",
+  "directive": "DIRECTIVE-11 §3",
+  "description": "12 new queries spanning 3 verticals, combined with 12 existing U-6-R queries for 24 total surface_trigger_rate observations.",
+  "verticals": [
+    {
+      "name": "home_goods",
+      "queries": [
+        {
+          "id": "E1",
+          "query": "Help me find a linen duvet cover",
+          "intent_phrasing": "help_me_find",
+          "category": "bedding",
+          "specificity": "category",
+          "price_mention": false
+        },
+        {
+          "id": "E2",
+          "query": "Shop for a ceramic dinnerware set",
+          "intent_phrasing": "shop_for",
+          "category": "dining",
+          "specificity": "category",
+          "price_mention": false
+        },
+        {
+          "id": "E3",
+          "query": "Help me find a wool area rug 8x10",
+          "intent_phrasing": "help_me_find",
+          "category": "rugs",
+          "specificity": "category_with_spec",
+          "price_mention": false
+        },
+        {
+          "id": "E4",
+          "query": "Shop for a down alternative comforter",
+          "intent_phrasing": "shop_for",
+          "category": "bedding",
+          "specificity": "category",
+          "price_mention": false
+        }
+      ]
+    },
+    {
+      "name": "beauty_personal_care",
+      "queries": [
+        {
+          "id": "F1",
+          "query": "Help me find a vitamin C serum",
+          "intent_phrasing": "help_me_find",
+          "category": "skincare",
+          "specificity": "category",
+          "price_mention": false
+        },
+        {
+          "id": "F2",
+          "query": "Shop for a cordless hair dryer",
+          "intent_phrasing": "shop_for",
+          "category": "hair_care",
+          "specificity": "category_with_feature",
+          "price_mention": false
+        },
+        {
+          "id": "F3",
+          "query": "Help me find a fluoride-free toothpaste",
+          "intent_phrasing": "help_me_find",
+          "category": "oral_care",
+          "specificity": "category_with_feature",
+          "price_mention": false
+        },
+        {
+          "id": "F4",
+          "query": "Shop for a solid cologne for men",
+          "intent_phrasing": "shop_for",
+          "category": "fragrance",
+          "specificity": "category_with_demographic",
+          "price_mention": false
+        }
+      ]
+    },
+    {
+      "name": "outdoor_gear",
+      "queries": [
+        {
+          "id": "G1",
+          "query": "Help me find a 2-person backpacking tent",
+          "intent_phrasing": "help_me_find",
+          "category": "camping",
+          "specificity": "category_with_spec",
+          "price_mention": false
+        },
+        {
+          "id": "G2",
+          "query": "Shop for a down sleeping bag 20 degree",
+          "intent_phrasing": "shop_for",
+          "category": "camping",
+          "specificity": "category_with_spec",
+          "price_mention": false
+        },
+        {
+          "id": "G3",
+          "query": "Help me find a carbon fiber trekking pole",
+          "intent_phrasing": "help_me_find",
+          "category": "hiking",
+          "specificity": "category_with_material",
+          "price_mention": false
+        },
+        {
+          "id": "G4",
+          "query": "Shop for a hydration bladder 3 liter",
+          "intent_phrasing": "shop_for",
+          "category": "outdoor_accessories",
+          "specificity": "category_with_spec",
+          "price_mention": false
+        }
+      ]
+    }
+  ]
+}
