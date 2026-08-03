@@ -1,0 +1,1222 @@
+[
+  {
+    "store": "TSP",
+    "domain": "www.twostepperformance.com",
+    "gid": "gid://shopify/Shop/1357086779",
+    "products": [
+      {
+        "handle": "2018-honda-accord-2-0t-intercooler-charge-pipe-upgrade-kit",
+        "title": "PRL Motorsports Intercooler Charge Pipe Upgrade Kit for 2018+ Honda Accord 2.0T [CV2]",
+        "domain": "www.twostepperformance.com",
+        "brand": "PRL Motorsports",
+        "sku": ""
+      },
+      {
+        "handle": "ngk-ruthenium-hx-spark-plug-box-of-4-lkar8bhx",
+        "title": "NGK Ruthenium HX Spark Plug Box of 4 (LKAR8BHX)",
+        "domain": "www.twostepperformance.com",
+        "brand": "NGK Ruthenium",
+        "sku": "LKAR8"
+      },
+      {
+        "handle": "spc-performance-16-17-honda-civic-ctr-adjustable-aluminum-rear-camber-arm",
+        "title": "SPC Performance 16-17 Honda Civic & CTR Adjustable Aluminum Rear Camber Arm",
+        "domain": "www.twostepperformance.com",
+        "brand": "SPC Performance",
+        "sku": ""
+      },
+      {
+        "handle": "hybrid-racing-maxim-performance-shift-knob",
+        "title": "Hybrid Racing Maxim Performance Shift Knob",
+        "domain": "www.twostepperformance.com",
+        "brand": "Hybrid Racing",
+        "sku": ""
+      },
+      {
+        "handle": "stage-1-intake-system-for-2018-accord-1-5t",
+        "title": "PRL Motorsports Stage 1 Intake System for 2018+ Accord 1.5T [CV1]",
+        "domain": "www.twostepperformance.com",
+        "brand": "PRL Motorsports",
+        "sku": ""
+      }
+    ],
+    "naturalLanguageQueries": [
+      "PRL Motorsports Intercooler Charge Pipe Upgrade Kit for",
+      "NGK Ruthenium HX Spark Plug Box of 4",
+      "SPC Performance 16-17 Honda Civic & CTR Adjustable",
+      "Hybrid Racing Maxim Performance Shift Knob",
+      "PRL Motorsports Stage 1 Intake System for 2018+"
+    ],
+    "brandSkuQueries": [
+      "PRL Motorsports 2018",
+      "NGK Ruthenium LKAR8",
+      "SPC Performance spc",
+      "Hybrid Racing hybrid",
+      "PRL Motorsports stage"
+    ],
+    "naturalLanguageResults": [
+      {
+        "query": "PRL Motorsports Intercooler Charge Pipe Upgrade Kit for",
+        "present": true,
+        "rank": 10,
+        "productCount": 10
+      },
+      {
+        "query": "NGK Ruthenium HX Spark Plug Box of 4",
+        "present": false,
+        "rank": null,
+        "productCount": 312
+      },
+      {
+        "query": "SPC Performance 16-17 Honda Civic & CTR Adjustable",
+        "present": true,
+        "rank": 11,
+        "productCount": 11
+      },
+      {
+        "query": "Hybrid Racing Maxim Performance Shift Knob",
+        "present": true,
+        "rank": 37,
+        "productCount": 37
+      },
+      {
+        "query": "PRL Motorsports Stage 1 Intake System for 2018+",
+        "present": true,
+        "rank": 13,
+        "productCount": 13
+      }
+    ],
+    "brandSkuResults": [
+      {
+        "query": "PRL Motorsports 2018",
+        "present": true,
+        "rank": 3,
+        "productCount": 3
+      },
+      {
+        "query": "NGK Ruthenium LKAR8",
+        "present": true,
+        "rank": 46,
+        "productCount": 46
+      },
+      {
+        "query": "SPC Performance spc",
+        "present": false,
+        "rank": null,
+        "productCount": 221
+      },
+      {
+        "query": "Hybrid Racing hybrid",
+        "present": true,
+        "rank": 41,
+        "productCount": 41
+      },
+      {
+        "query": "PRL Motorsports stage",
+        "present": true,
+        "rank": 17,
+        "productCount": 17
+      }
+    ],
+    "nlPresenceRate": 0.8,
+    "bsPresenceRate": 0.8
+  },
+  {
+    "store": "MAP",
+    "domain": "www.maperformance.com",
+    "gid": "gid://shopify/Shop/8906136",
+    "products": [
+      {
+        "handle": "cobb-tuning-accessport-v3-2015-2018-subaru-wrx-sti-ap3-sub-004",
+        "title": "Cobb Accessport V3 | 2015-2021 Subaru WRX/STI and 2014-2018 Subaru Forester XT (AP3-SUB-004)",
+        "domain": "www.maperformance.com",
+        "brand": "Cobb Accessport",
+        "sku": "AP3"
+      },
+      {
+        "handle": "hybrid-racing-130r-delrin-shift-knob-black-white-hyb-nob-01-08",
+        "title": "Hybrid Racing 130R Delrin Shift Knob (HYB-NOB)",
+        "domain": "www.maperformance.com",
+        "brand": "Hybrid Racing",
+        "sku": ""
+      },
+      {
+        "handle": "bc-racing-br-series-coilovers-09-14-acura-tl-fwd-awd-ua8-ua9-a-75-br",
+        "title": "BC Racing BR Series Coilovers | 2009-2014 Acura TL FWD/AWD (A-75-BR)",
+        "domain": "www.maperformance.com",
+        "brand": "BC Racing",
+        "sku": "UA8"
+      },
+      {
+        "handle": "fluidampr-steel-internal-harmonic-balancer-5-3-8-o-d-subaru-ej-series",
+        "title": "Fluidampr Steel Internal Harmonic Balancer 5-3/8\" O.D. | 2002-2020 Subaru EJ Series (531101)",
+        "domain": "www.maperformance.com",
+        "brand": "Fluidampr Steel",
+        "sku": ""
+      },
+      {
+        "handle": "cobb-3-port-boost-control-solenoid-bcs-2015-subaru-wrx-714750",
+        "title": "Cobb 3-Port Boost Control Solenoid | 2015-2021 Subaru WRX (714750)",
+        "domain": "www.maperformance.com",
+        "brand": "Cobb 3-Port",
+        "sku": ""
+      }
+    ],
+    "naturalLanguageQueries": [
+      "Cobb Accessport V3 | 2015-2021 Subaru WRX/STI and",
+      "Hybrid Racing 130R Delrin Shift Knob (HYB-NOB)",
+      "BC Racing BR Series Coilovers | 2009-2014 Acura",
+      "Fluidampr Steel Internal Harmonic Balancer 5-3/8\" O.D. |",
+      "Cobb 3-Port Boost Control Solenoid | 2015-2021 Subaru"
+    ],
+    "brandSkuQueries": [
+      "Cobb Accessport AP3",
+      "Hybrid Racing hybrid",
+      "BC Racing UA8",
+      "Fluidampr Steel fluidampr",
+      "Cobb 3-Port cobb"
+    ],
+    "naturalLanguageResults": [
+      {
+        "query": "Cobb Accessport V3 | 2015-2021 Subaru WRX/STI and",
+        "present": true,
+        "rank": 1,
+        "productCount": 1
+      },
+      {
+        "query": "Hybrid Racing 130R Delrin Shift Knob (HYB-NOB)",
+        "present": true,
+        "rank": 20,
+        "productCount": 20
+      },
+      {
+        "query": "BC Racing BR Series Coilovers | 2009-2014 Acura",
+        "present": true,
+        "rank": 21,
+        "productCount": 21
+      },
+      {
+        "query": "Fluidampr Steel Internal Harmonic Balancer 5-3/8\" O.D. |",
+        "present": true,
+        "rank": 1,
+        "productCount": 1
+      },
+      {
+        "query": "Cobb 3-Port Boost Control Solenoid | 2015-2021 Subaru",
+        "present": true,
+        "rank": 11,
+        "productCount": 11
+      }
+    ],
+    "brandSkuResults": [
+      {
+        "query": "Cobb Accessport AP3",
+        "present": true,
+        "rank": 1,
+        "productCount": 1
+      },
+      {
+        "query": "Hybrid Racing hybrid",
+        "present": true,
+        "rank": 157,
+        "productCount": 157
+      },
+      {
+        "query": "BC Racing UA8",
+        "present": true,
+        "rank": 74,
+        "productCount": 74
+      },
+      {
+        "query": "Fluidampr Steel fluidampr",
+        "present": true,
+        "rank": 12,
+        "productCount": 12
+      },
+      {
+        "query": "Cobb 3-Port cobb",
+        "present": true,
+        "rank": 1,
+        "productCount": 1
+      }
+    ],
+    "nlPresenceRate": 1,
+    "bsPresenceRate": 1
+  },
+  {
+    "store": "Intec",
+    "domain": "www.intecracing.com",
+    "gid": "gid://shopify/Shop/56215076911",
+    "products": [
+      {
+        "handle": "arp-honda-d16y-head-stud-kit-1",
+        "title": "ARP Honda D16Y Head Stud Kit",
+        "domain": "www.intecracing.com",
+        "brand": "ARP Honda",
+        "sku": ""
+      },
+      {
+        "handle": "eagle-acura-b18a-b-engine-length-5-394-connecting-rods-set-of-4",
+        "title": "Eagle Acura B18A/B Engine (Length=5.394) Connecting Rods (Set of 4)",
+        "domain": "www.intecracing.com",
+        "brand": "Eagle Acura",
+        "sku": ""
+      },
+      {
+        "handle": "radium-engineering-3-into-1-distribution-block-w-fittings",
+        "title": "Radium Engineering 3 Into 1 Distribution Block w/ Fittings",
+        "domain": "www.intecracing.com",
+        "brand": "Radium Engineering",
+        "sku": ""
+      },
+      {
+        "handle": "ati-damper-6-325in-steel-ford-sb-v8-28-2-ext-bal-4-bolt-oem-4in-long-b-timing",
+        "title": "ATI Damper - 6.325in - Steel - Ford SB V8 - 28.2 Ext Bal - 4 Bolt OEM - 4in Long - B Timing",
+        "domain": "www.intecracing.com",
+        "brand": "ATI Damper",
+        "sku": ""
+      },
+      {
+        "handle": "gsc-p-d-honda-b-series-vtec-dual-spring-set-and-titanium-retainer",
+        "title": "GSC P-D Honda B-Series Vtec Dual Spring Set and Titanium Retainer",
+        "domain": "www.intecracing.com",
+        "brand": "GSC P-D",
+        "sku": ""
+      }
+    ],
+    "naturalLanguageQueries": [
+      "ARP Honda D16Y Head Stud Kit",
+      "Eagle Acura B18A/B Engine (Length=5.394) Connecting Rods (Set",
+      "Radium Engineering 3 Into 1 Distribution Block w/",
+      "ATI Damper - 6.325in - Steel - Ford",
+      "GSC P-D Honda B-Series Vtec Dual Spring Set"
+    ],
+    "brandSkuQueries": [
+      "ARP Honda arp",
+      "Eagle Acura eagle",
+      "Radium Engineering radium",
+      "ATI Damper ati",
+      "GSC P-D gsc"
+    ],
+    "naturalLanguageResults": [
+      {
+        "query": "ARP Honda D16Y Head Stud Kit",
+        "present": true,
+        "rank": 56,
+        "productCount": 56
+      },
+      {
+        "query": "Eagle Acura B18A/B Engine (Length=5.394) Connecting Rods (Set",
+        "present": true,
+        "rank": 134,
+        "productCount": 134
+      },
+      {
+        "query": "Radium Engineering 3 Into 1 Distribution Block w/",
+        "present": true,
+        "rank": 165,
+        "productCount": 165
+      },
+      {
+        "query": "ATI Damper - 6.325in - Steel - Ford",
+        "present": true,
+        "rank": 136,
+        "productCount": 136
+      },
+      {
+        "query": "GSC P-D Honda B-Series Vtec Dual Spring Set",
+        "present": true,
+        "rank": 292,
+        "productCount": 292
+      }
+    ],
+    "brandSkuResults": [
+      {
+        "query": "ARP Honda arp",
+        "present": true,
+        "rank": 116,
+        "productCount": 116
+      },
+      {
+        "query": "Eagle Acura eagle",
+        "present": false,
+        "rank": null,
+        "productCount": 259
+      },
+      {
+        "query": "Radium Engineering radium",
+        "present": true,
+        "rank": 255,
+        "productCount": 255
+      },
+      {
+        "query": "ATI Damper ati",
+        "present": true,
+        "rank": 263,
+        "productCount": 263
+      },
+      {
+        "query": "GSC P-D gsc",
+        "present": false,
+        "rank": null,
+        "productCount": 196
+      }
+    ],
+    "nlPresenceRate": 1,
+    "bsPresenceRate": 0.6
+  },
+  {
+    "store": "Subimods",
+    "domain": "www.subimods.com",
+    "gid": "gid://shopify/Shop/58735984815",
+    "products": [
+      {
+        "handle": "fluidampr-subaru-ej-series-steel-internally-balanced-damper",
+        "title": "Fluidampr Steel Internally Balanced Damper Most EJ Subaru Models",
+        "domain": "www.subimods.com",
+        "brand": "Fluidampr Steel",
+        "sku": ""
+      },
+      {
+        "handle": "cobb-tuning-electronic-boost-controller-2015-2018-wrx",
+        "title": "COBB Boost Control Solenoid 2015-2021 WRX",
+        "domain": "www.subimods.com",
+        "brand": "COBB Boost",
+        "sku": ""
+      },
+      {
+        "handle": "prl-motorsports-2022-honda-civic-2-0l-high-volume-intake-kit",
+        "title": "PRL Motorsports High Volume Intake Kit 2022-2024 Honda Civic 2.0L N/A",
+        "domain": "www.subimods.com",
+        "brand": "PRL Motorsports",
+        "sku": ""
+      },
+      {
+        "handle": "cobb-tuning-accessport-v3-2015-2019-wrx-2015-2019-sti-2014-2018-forester-xt",
+        "title": "COBB AccessPORT V3 2015-2021 WRX / 2015-2021 STI / 2014-2018 Forester XT CVT",
+        "domain": "www.subimods.com",
+        "brand": "COBB AccessPORT",
+        "sku": ""
+      },
+      {
+        "handle": "prl-motorsports-2018-honda-accord-2-0t-charge-pipe-upgrade-kit",
+        "title": "PRL Motorsports Charge Pipe Upgrade Kit 2018-2022 Honda Accord 2.0T",
+        "domain": "www.subimods.com",
+        "brand": "PRL Motorsports",
+        "sku": ""
+      }
+    ],
+    "naturalLanguageQueries": [
+      "Fluidampr Steel Internally Balanced Damper Most EJ Subaru",
+      "COBB Boost Control Solenoid 2015-2021 WRX",
+      "PRL Motorsports High Volume Intake Kit 2022-2024 Honda",
+      "COBB AccessPORT V3 2015-2021 WRX / 2015-2021 STI",
+      "PRL Motorsports Charge Pipe Upgrade Kit 2018-2022 Honda"
+    ],
+    "brandSkuQueries": [
+      "Fluidampr Steel fluidampr",
+      "COBB Boost cobb",
+      "PRL Motorsports prl",
+      "COBB AccessPORT cobb",
+      "PRL Motorsports prl"
+    ],
+    "naturalLanguageResults": [
+      {
+        "query": "Fluidampr Steel Internally Balanced Damper Most EJ Subaru",
+        "present": false,
+        "rank": null,
+        "productCount": 248
+      },
+      {
+        "query": "COBB Boost Control Solenoid 2015-2021 WRX",
+        "present": false,
+        "rank": null,
+        "productCount": 219
+      },
+      {
+        "query": "PRL Motorsports High Volume Intake Kit 2022-2024 Honda",
+        "present": false,
+        "rank": null,
+        "productCount": 254
+      },
+      {
+        "query": "COBB AccessPORT V3 2015-2021 WRX / 2015-2021 STI",
+        "present": false,
+        "rank": null,
+        "productCount": 237
+      },
+      {
+        "query": "PRL Motorsports Charge Pipe Upgrade Kit 2018-2022 Honda",
+        "present": false,
+        "rank": null,
+        "productCount": 263
+      }
+    ],
+    "brandSkuResults": [
+      {
+        "query": "Fluidampr Steel fluidampr",
+        "present": false,
+        "rank": null,
+        "productCount": 282
+      },
+      {
+        "query": "COBB Boost cobb",
+        "present": false,
+        "rank": null,
+        "productCount": 293
+      },
+      {
+        "query": "PRL Motorsports prl",
+        "present": false,
+        "rank": null,
+        "productCount": 338
+      },
+      {
+        "query": "COBB AccessPORT cobb",
+        "present": false,
+        "rank": null,
+        "productCount": 190
+      },
+      {
+        "query": "PRL Motorsports prl",
+        "present": false,
+        "rank": null,
+        "productCount": 340
+      }
+    ],
+    "nlPresenceRate": 0,
+    "bsPresenceRate": 0
+  },
+  {
+    "store": "Springrates",
+    "domain": "www.springrates.com",
+    "gid": "gid://shopify/Shop/2183",
+    "products": [
+      {
+        "handle": "bc-racing-br-series-coilovers-2009-2014-acura-tl",
+        "title": "BC Racing BR Series Coilovers for 2009-2014 Acura TL FWD/AWD (UA8/UA9)",
+        "domain": "www.springrates.com",
+        "brand": "BC Racing",
+        "sku": ""
+      },
+      {
+        "handle": "bilstein-b8-upper-control-arm-kit-for-2007-2021-toyota-tundra",
+        "title": "Bilstein B8 Front Upper Control Arm Kit for 2007-2021 Toyota Tundra",
+        "domain": "www.springrates.com",
+        "brand": "Bilstein B8",
+        "sku": ""
+      },
+      {
+        "handle": "bc-racing-br-series-coilovers-1997-2001-toyota-camry",
+        "title": "BC Racing BR Series Coilovers for 1997-2001 Toyota Camry FWD (SXV20/MCV20)",
+        "domain": "www.springrates.com",
+        "brand": "BC Racing",
+        "sku": ""
+      },
+      {
+        "handle": "megan-racing-ezii-series-coilovers-for-2010-2013-chevrolet-camaro",
+        "title": "Megan Racing EZ I Series Coilovers for 2010-2013 Chevrolet Camaro",
+        "domain": "www.springrates.com",
+        "brand": "Megan Racing",
+        "sku": ""
+      },
+      {
+        "handle": "koni-active-fsd-volkswagen-atlas-2018plus-front-87451424",
+        "title": "KONI Special Active FSD Shock (Front) for 2018+ Volkswagen Atlas",
+        "domain": "www.springrates.com",
+        "brand": "KONI Special",
+        "sku": ""
+      }
+    ],
+    "naturalLanguageQueries": [
+      "BC Racing BR Series Coilovers for 2009-2014 Acura",
+      "Bilstein B8 Front Upper Control Arm Kit for",
+      "BC Racing BR Series Coilovers for 1997-2001 Toyota",
+      "Megan Racing EZ I Series Coilovers for 2010-2013",
+      "KONI Special Active FSD Shock (Front) for 2018+"
+    ],
+    "brandSkuQueries": [
+      "BC Racing racing",
+      "Bilstein B8 bilstein",
+      "BC Racing racing",
+      "Megan Racing megan",
+      "KONI Special koni"
+    ],
+    "naturalLanguageResults": [
+      {
+        "query": "BC Racing BR Series Coilovers for 2009-2014 Acura",
+        "present": true,
+        "rank": 3,
+        "productCount": 3
+      },
+      {
+        "query": "Bilstein B8 Front Upper Control Arm Kit for",
+        "present": true,
+        "rank": 4,
+        "productCount": 4
+      },
+      {
+        "query": "BC Racing BR Series Coilovers for 1997-2001 Toyota",
+        "present": true,
+        "rank": 1,
+        "productCount": 1
+      },
+      {
+        "query": "Megan Racing EZ I Series Coilovers for 2010-2013",
+        "present": true,
+        "rank": 2,
+        "productCount": 2
+      },
+      {
+        "query": "KONI Special Active FSD Shock (Front) for 2018+",
+        "present": true,
+        "rank": 1,
+        "productCount": 1
+      }
+    ],
+    "brandSkuResults": [
+      {
+        "query": "BC Racing racing",
+        "present": true,
+        "rank": 8,
+        "productCount": 8
+      },
+      {
+        "query": "Bilstein B8 bilstein",
+        "present": false,
+        "rank": null,
+        "productCount": 308
+      },
+      {
+        "query": "BC Racing racing",
+        "present": true,
+        "rank": 8,
+        "productCount": 8
+      },
+      {
+        "query": "Megan Racing megan",
+        "present": true,
+        "rank": 63,
+        "productCount": 63
+      },
+      {
+        "query": "KONI Special koni",
+        "present": true,
+        "rank": 153,
+        "productCount": 153
+      }
+    ],
+    "nlPresenceRate": 1,
+    "bsPresenceRate": 0.8
+  },
+  {
+    "store": "BremboStore",
+    "domain": "www.brembostore.com",
+    "gid": "gid://shopify/Shop/87629234525",
+    "products": [
+      {
+        "handle": "brake-pads-07bb1507",
+        "title": "Brake Pads - 07BB1507",
+        "domain": "www.brembostore.com",
+        "brand": "Brake Pads",
+        "sku": ""
+      },
+      {
+        "handle": "prime-low-met-rear-disc-brake-pad-set-p24254",
+        "title": "PRIME Low-Met Rear Disc Brake Pad Set - P24254",
+        "domain": "www.brembostore.com",
+        "brand": "PRIME Low-Met",
+        "sku": ""
+      },
+      {
+        "handle": "prime-ceramic-front-disc-brake-pad-set-p06092n",
+        "title": "PRIME Ceramic Front Disc Brake Pad Set - P06092N",
+        "domain": "www.brembostore.com",
+        "brand": "PRIME Ceramic",
+        "sku": ""
+      },
+      {
+        "handle": "prime-ceramic-rear-disc-brake-pad-set-p54034n",
+        "title": "PRIME Ceramic Rear Disc Brake Pad Set - P54034N",
+        "domain": "www.brembostore.com",
+        "brand": "PRIME Ceramic",
+        "sku": ""
+      },
+      {
+        "handle": "prime-ceramic-front-disc-brake-pad-set-p06079n",
+        "title": "PRIME Ceramic Front Disc Brake Pad Set - P06079N",
+        "domain": "www.brembostore.com",
+        "brand": "PRIME Ceramic",
+        "sku": ""
+      }
+    ],
+    "naturalLanguageQueries": [
+      "Brake Pads - 07BB1507",
+      "PRIME Low-Met Rear Disc Brake Pad Set -",
+      "PRIME Ceramic Front Disc Brake Pad Set -",
+      "PRIME Ceramic Rear Disc Brake Pad Set -",
+      "PRIME Ceramic Front Disc Brake Pad Set -"
+    ],
+    "brandSkuQueries": [
+      "Brake Pads brake",
+      "PRIME Low-Met prime",
+      "PRIME Ceramic prime",
+      "PRIME Ceramic prime",
+      "PRIME Ceramic prime"
+    ],
+    "naturalLanguageResults": [
+      {
+        "query": "Brake Pads - 07BB1507",
+        "present": true,
+        "rank": 1,
+        "productCount": 1
+      },
+      {
+        "query": "PRIME Low-Met Rear Disc Brake Pad Set -",
+        "present": true,
+        "rank": 1,
+        "productCount": 1
+      },
+      {
+        "query": "PRIME Ceramic Front Disc Brake Pad Set -",
+        "present": true,
+        "rank": 1,
+        "productCount": 1
+      },
+      {
+        "query": "PRIME Ceramic Rear Disc Brake Pad Set -",
+        "present": true,
+        "rank": 1,
+        "productCount": 1
+      },
+      {
+        "query": "PRIME Ceramic Front Disc Brake Pad Set -",
+        "present": true,
+        "rank": 1,
+        "productCount": 1
+      }
+    ],
+    "brandSkuResults": [
+      {
+        "query": "Brake Pads brake",
+        "present": true,
+        "rank": 13,
+        "productCount": 13
+      },
+      {
+        "query": "PRIME Low-Met prime",
+        "present": true,
+        "rank": 3,
+        "productCount": 3
+      },
+      {
+        "query": "PRIME Ceramic prime",
+        "present": true,
+        "rank": 6,
+        "productCount": 6
+      },
+      {
+        "query": "PRIME Ceramic prime",
+        "present": true,
+        "rank": 2,
+        "productCount": 2
+      },
+      {
+        "query": "PRIME Ceramic prime",
+        "present": true,
+        "rank": 6,
+        "productCount": 6
+      }
+    ],
+    "nlPresenceRate": 1,
+    "bsPresenceRate": 1
+  },
+  {
+    "store": "UnityPerf",
+    "domain": "unity-performance.com",
+    "gid": "gid://shopify/Shop/6900809818",
+    "products": [
+      {
+        "handle": "prl-cobra-cold-air-intake-10th-gen-si",
+        "title": "PRL Cobra Cold Air Intake | 17-20 Civic Si",
+        "domain": "unity-performance.com",
+        "brand": "PRL Cobra",
+        "sku": ""
+      },
+      {
+        "handle": "prl-titanium-inlet-pipe-kit-23-civic-type-r-fl5",
+        "title": "PRL Titanium Inlet Pipe Kit | 23+ Civic Type R FL5, 23+ Integra Type S DE5",
+        "domain": "unity-performance.com",
+        "brand": "PRL Titanium",
+        "sku": "FL5"
+      },
+      {
+        "handle": "eibach-sportline-lowering-springs-23-civic-type-r-fl5",
+        "title": "Eibach Sportline Lowering Springs | 23+ Civic Type R FL5",
+        "domain": "unity-performance.com",
+        "brand": "Eibach Sportline",
+        "sku": "FL5"
+      },
+      {
+        "handle": "prl-throwback-front-strut-bar-18-22-accord",
+        "title": "PRL \"Throwback\" Front Strut Bar | 18-22 Accord",
+        "domain": "unity-performance.com",
+        "brand": "PRL \"Throwback\"",
+        "sku": ""
+      },
+      {
+        "handle": "goodridge-ss-brake-lines-23-civic-type-r-fl5",
+        "title": "Goodridge SS Brake Lines | 23+ Civic Type R FL5",
+        "domain": "unity-performance.com",
+        "brand": "Goodridge SS",
+        "sku": "FL5"
+      }
+    ],
+    "naturalLanguageQueries": [
+      "PRL Cobra Cold Air Intake | 17-20 Civic",
+      "PRL Titanium Inlet Pipe Kit | 23+ Civic",
+      "Eibach Sportline Lowering Springs | 23+ Civic Type",
+      "PRL \"Throwback\" Front Strut Bar | 18-22 Accord",
+      "Goodridge SS Brake Lines | 23+ Civic Type"
+    ],
+    "brandSkuQueries": [
+      "PRL Cobra prl",
+      "PRL Titanium FL5",
+      "Eibach Sportline FL5",
+      "PRL \"Throwback\" prl",
+      "Goodridge SS FL5"
+    ],
+    "naturalLanguageResults": [
+      {
+        "query": "PRL Cobra Cold Air Intake | 17-20 Civic",
+        "present": true,
+        "rank": 37,
+        "productCount": 37
+      },
+      {
+        "query": "PRL Titanium Inlet Pipe Kit | 23+ Civic",
+        "present": true,
+        "rank": 97,
+        "productCount": 97
+      },
+      {
+        "query": "Eibach Sportline Lowering Springs | 23+ Civic Type",
+        "present": true,
+        "rank": 10,
+        "productCount": 10
+      },
+      {
+        "query": "PRL \"Throwback\" Front Strut Bar | 18-22 Accord",
+        "present": true,
+        "rank": 18,
+        "productCount": 18
+      },
+      {
+        "query": "Goodridge SS Brake Lines | 23+ Civic Type",
+        "present": false,
+        "rank": null,
+        "productCount": 212
+      }
+    ],
+    "brandSkuResults": [
+      {
+        "query": "PRL Cobra prl",
+        "present": true,
+        "rank": 16,
+        "productCount": 16
+      },
+      {
+        "query": "PRL Titanium FL5",
+        "present": true,
+        "rank": 37,
+        "productCount": 37
+      },
+      {
+        "query": "Eibach Sportline FL5",
+        "present": true,
+        "rank": 8,
+        "productCount": 8
+      },
+      {
+        "query": "PRL \"Throwback\" prl",
+        "present": true,
+        "rank": 6,
+        "productCount": 6
+      },
+      {
+        "query": "Goodridge SS FL5",
+        "present": true,
+        "rank": 205,
+        "productCount": 205
+      }
+    ],
+    "nlPresenceRate": 0.8,
+    "bsPresenceRate": 1
+  },
+  {
+    "store": "EBCBrakeShop",
+    "domain": "www.ebcbrakeshop.co.uk",
+    "gid": "gid://shopify/Shop/91454210339",
+    "products": [
+      {
+        "handle": "ebc-sr-series-race-pads-dp8037-2-20sr11",
+        "title": "EBC SR Series Race Pads DP8037/2.20SR11 Front",
+        "domain": "www.ebcbrakeshop.co.uk",
+        "brand": "EBC SR",
+        "sku": "DP8037"
+      },
+      {
+        "handle": "ebc-brakes-pad-and-disc-kit-pd13kf826",
+        "title": "EBC Brakes Pad and Disc Kit (PD13KF826)",
+        "domain": "www.ebcbrakeshop.co.uk",
+        "brand": "EBC Brakes",
+        "sku": "PD13"
+      },
+      {
+        "handle": "ebc-brakes-pad-and-disc-kit-pd12kr010",
+        "title": "EBC Brakes Pad and Disc Kit (PD12KR010)",
+        "domain": "www.ebcbrakeshop.co.uk",
+        "brand": "EBC Brakes",
+        "sku": "PD12"
+      },
+      {
+        "handle": "ebc-brakes-pad-and-disc-kit-pd01kf302",
+        "title": "EBC Brakes Pad  and  Disc Kit (PD01KF302)",
+        "domain": "www.ebcbrakeshop.co.uk",
+        "brand": "EBC Brakes",
+        "sku": "PD01"
+      },
+      {
+        "handle": "brake-line-set-bla1993-4l",
+        "title": "Brake Line Set (BLA1993-4L)",
+        "domain": "www.ebcbrakeshop.co.uk",
+        "brand": "Brake Line",
+        "sku": "BLA1993"
+      }
+    ],
+    "naturalLanguageQueries": [
+      "EBC SR Series Race Pads DP8037/2.20SR11 Front",
+      "EBC Brakes Pad and Disc Kit (PD13KF826)",
+      "EBC Brakes Pad and Disc Kit (PD12KR010)",
+      "EBC Brakes Pad and Disc Kit (PD01KF302)",
+      "Brake Line Set (BLA1993-4L)"
+    ],
+    "brandSkuQueries": [
+      "EBC SR DP8037",
+      "EBC Brakes PD13",
+      "EBC Brakes PD12",
+      "EBC Brakes PD01",
+      "Brake Line BLA1993"
+    ],
+    "naturalLanguageResults": [
+      {
+        "query": "EBC SR Series Race Pads DP8037/2.20SR11 Front",
+        "present": true,
+        "rank": 4,
+        "productCount": 4
+      },
+      {
+        "query": "EBC Brakes Pad and Disc Kit (PD13KF826)",
+        "present": true,
+        "rank": 1,
+        "productCount": 1
+      },
+      {
+        "query": "EBC Brakes Pad and Disc Kit (PD12KR010)",
+        "present": true,
+        "rank": 1,
+        "productCount": 1
+      },
+      {
+        "query": "EBC Brakes Pad and Disc Kit (PD01KF302)",
+        "present": true,
+        "rank": 1,
+        "productCount": 1
+      },
+      {
+        "query": "Brake Line Set (BLA1993-4L)",
+        "present": true,
+        "rank": 5,
+        "productCount": 5
+      }
+    ],
+    "brandSkuResults": [
+      {
+        "query": "EBC SR DP8037",
+        "present": true,
+        "rank": 6,
+        "productCount": 6
+      },
+      {
+        "query": "EBC Brakes PD13",
+        "present": true,
+        "rank": 1,
+        "productCount": 1
+      },
+      {
+        "query": "EBC Brakes PD12",
+        "present": true,
+        "rank": 1,
+        "productCount": 1
+      },
+      {
+        "query": "EBC Brakes PD01",
+        "present": true,
+        "rank": 1,
+        "productCount": 1
+      },
+      {
+        "query": "Brake Line BLA1993",
+        "present": true,
+        "rank": 6,
+        "productCount": 6
+      }
+    ],
+    "nlPresenceRate": 1,
+    "bsPresenceRate": 1
+  },
+  {
+    "store": "Valvetronic",
+    "domain": "valvetronic.com",
+    "gid": "gid://shopify/Shop/8669986875",
+    "products": [
+      {
+        "handle": "audi-rs6-rs7-c8-valved-catback-exhaust",
+        "title": "Audi RS6 / RS7 C8 Valved Sport Exhaust System",
+        "domain": "valvetronic.com",
+        "brand": "Audi RS6",
+        "sku": "RS6"
+      },
+      {
+        "handle": "valvetronic-designs-2-5-4-0-inch-exhaust-tips-exclusive",
+        "title": "Valvetronic Designs 4.0 Inch Outlet Exhaust Tips (Exclusive)",
+        "domain": "valvetronic.com",
+        "brand": "Valvetronic Designs",
+        "sku": ""
+      },
+      {
+        "handle": "bmw-f10-m5-valved-exhaust",
+        "title": "BMW F10 M5 / F06 M6 Valved Sport Exhaust System",
+        "domain": "valvetronic.com",
+        "brand": "BMW F10",
+        "sku": ""
+      },
+      {
+        "handle": "audi-b8-b8-5-s4-s5-valved-exhaust",
+        "title": "Audi B8 / B8.5 S4 / S5 Valved Sport Exhaust System",
+        "domain": "valvetronic.com",
+        "brand": "Audi B8",
+        "sku": ""
+      },
+      {
+        "handle": "audi-r8-lamborghini-gallardo-exhaust-valve-controller",
+        "title": "Audi R8 / Lamborghini Gallardo / Huracan Exhaust Valve/Flap Controller",
+        "domain": "valvetronic.com",
+        "brand": "Audi R8",
+        "sku": ""
+      }
+    ],
+    "naturalLanguageQueries": [
+      "Audi RS6 / RS7 C8 Valved Sport Exhaust",
+      "Valvetronic Designs 4.0 Inch Outlet Exhaust Tips (Exclusive)",
+      "BMW F10 M5 / F06 M6 Valved Sport",
+      "Audi B8 / B8.5 S4 / S5 Valved",
+      "Audi R8 / Lamborghini Gallardo / Huracan Exhaust"
+    ],
+    "brandSkuQueries": [
+      "Audi RS6 RS6",
+      "Valvetronic Designs valvetronic",
+      "BMW F10 bmw",
+      "Audi B8 audi",
+      "Audi R8 audi"
+    ],
+    "naturalLanguageResults": [
+      {
+        "query": "Audi RS6 / RS7 C8 Valved Sport Exhaust",
+        "present": true,
+        "rank": 1,
+        "productCount": 1
+      },
+      {
+        "query": "Valvetronic Designs 4.0 Inch Outlet Exhaust Tips (Exclusive)",
+        "present": true,
+        "rank": 1,
+        "productCount": 1
+      },
+      {
+        "query": "BMW F10 M5 / F06 M6 Valved Sport",
+        "present": true,
+        "rank": 1,
+        "productCount": 1
+      },
+      {
+        "query": "Audi B8 / B8.5 S4 / S5 Valved",
+        "present": true,
+        "rank": 1,
+        "productCount": 1
+      },
+      {
+        "query": "Audi R8 / Lamborghini Gallardo / Huracan Exhaust",
+        "present": true,
+        "rank": 1,
+        "productCount": 1
+      }
+    ],
+    "brandSkuResults": [
+      {
+        "query": "Audi RS6 RS6",
+        "present": true,
+        "rank": 4,
+        "productCount": 4
+      },
+      {
+        "query": "Valvetronic Designs valvetronic",
+        "present": true,
+        "rank": 1,
+        "productCount": 1
+      },
+      {
+        "query": "BMW F10 bmw",
+        "present": true,
+        "rank": 4,
+        "productCount": 4
+      },
+      {
+        "query": "Audi B8 audi",
+        "present": true,
+        "rank": 3,
+        "productCount": 3
+      },
+      {
+        "query": "Audi R8 audi",
+        "present": true,
+        "rank": 13,
+        "productCount": 13
+      }
+    ],
+    "nlPresenceRate": 1,
+    "bsPresenceRate": 1
+  },
+  {
+    "store": "JDMuscle",
+    "domain": "jdmuscleusa.com",
+    "gid": "gid://shopify/Shop/7587037237",
+    "products": [
+      {
+        "handle": "cobb-tuning-v3-accessport-subaru-wrx-2015-2021-sti-2015-2021-forester-xt-cvt-2014-2018-cobbap3-sub-004-ap3-sub-004",
+        "title": "COBB [15-21 WRX/STI, 14-18 FXT] V3 AccessPORT",
+        "domain": "jdmuscleusa.com",
+        "brand": "COBB [15-21",
+        "sku": "AP3"
+      },
+      {
+        "handle": "bc-racing-br-series-coilover-kit-acura-tl-fwd-awd-2009-2014",
+        "title": "BC Racing BR Series Coilover Kit Acura TL FWD/AWD 2009-2014",
+        "domain": "jdmuscleusa.com",
+        "brand": "BC Racing",
+        "sku": ""
+      },
+      {
+        "handle": "cobb-3-port-boost-control-solenoid-subaru-wrx-2015-2021-cobb714750-714750",
+        "title": "COBB [15-21 WRX] 3-Port Boost Control Solenoid (BCS)",
+        "domain": "jdmuscleusa.com",
+        "brand": "COBB [15-21",
+        "sku": "COBB714750"
+      },
+      {
+        "handle": "granatelli-motor-sports-chevrolet-corvette-c7-rear-adjustable-toe-links-part-gms500059-gms500059",
+        "title": "Granatelli Motor Sports Chevrolet Corvette C7 Rear Adjustable Toe Links (Part #GMS500059) | gms500059",
+        "domain": "jdmuscleusa.com",
+        "brand": "Granatelli Motor",
+        "sku": "GMS500059"
+      },
+      {
+        "handle": "cobb-subaru-front-sway-bar-26mm-2-position-adjustable-sti-2015-2021",
+        "title": "COBB [15-21 STI ] Front Sway Bar 26mm - 2 Position Adjustable",
+        "domain": "jdmuscleusa.com",
+        "brand": "COBB [15-21",
+        "sku": ""
+      }
+    ],
+    "naturalLanguageQueries": [
+      "COBB [15-21 WRX/STI, 14-18 FXT] V3 AccessPORT",
+      "BC Racing BR Series Coilover Kit Acura TL",
+      "COBB [15-21 WRX] 3-Port Boost Control Solenoid (BCS)",
+      "Granatelli Motor Sports Chevrolet Corvette C7 Rear Adjustable",
+      "COBB [15-21 STI ] Front Sway Bar 26mm"
+    ],
+    "brandSkuQueries": [
+      "COBB [15-21 AP3",
+      "BC Racing racing",
+      "COBB [15-21 COBB714750",
+      "Granatelli Motor GMS500059",
+      "COBB [15-21 cobb"
+    ],
+    "naturalLanguageResults": [
+      {
+        "query": "COBB [15-21 WRX/STI, 14-18 FXT] V3 AccessPORT",
+        "present": true,
+        "rank": 17,
+        "productCount": 17
+      },
+      {
+        "query": "BC Racing BR Series Coilover Kit Acura TL",
+        "present": true,
+        "rank": 4,
+        "productCount": 4
+      },
+      {
+        "query": "COBB [15-21 WRX] 3-Port Boost Control Solenoid (BCS)",
+        "present": true,
+        "rank": 50,
+        "productCount": 50
+      },
+      {
+        "query": "Granatelli Motor Sports Chevrolet Corvette C7 Rear Adjustable",
+        "present": true,
+        "rank": 147,
+        "productCount": 147
+      },
+      {
+        "query": "COBB [15-21 STI ] Front Sway Bar 26mm",
+        "present": true,
+        "rank": 26,
+        "productCount": 26
+      }
+    ],
+    "brandSkuResults": [
+      {
+        "query": "COBB [15-21 AP3",
+        "present": true,
+        "rank": 25,
+        "productCount": 25
+      },
+      {
+        "query": "BC Racing racing",
+        "present": true,
+        "rank": 99,
+        "productCount": 99
+      },
+      {
+        "query": "COBB [15-21 COBB714750",
+        "present": true,
+        "rank": 2,
+        "productCount": 2
+      },
+      {
+        "query": "Granatelli Motor GMS500059",
+        "present": false,
+        "rank": null,
+        "productCount": 339
+      },
+      {
+        "query": "COBB [15-21 cobb",
+        "present": true,
+        "rank": 5,
+        "productCount": 5
+      }
+    ],
+    "nlPresenceRate": 1,
+    "bsPresenceRate": 0.8
+  }
+]
