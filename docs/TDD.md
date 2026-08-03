@@ -4,7 +4,7 @@
 |---|---|
 | **Document** | TDD (governing, technical) |
 | **Companion** | `BLUEPRINT.md` (governing, non-technical) |
-| **Version** | 0.7.0 |
+| **Version** | 0.8.0 |
 | **Date** | 2 August 2026 |
 | **Status** | Design + scaffold + I-3, I-4 resolved. U-3, U-4 resolved. Inference-accuracy reframe nullified (n=59, 1.7% error). **Fitment-recall probe: PROVISIONAL coverage gap** (corrected mean recall ~0.70 < 0.80 threshold, n=12, 1-2 stores; inferred-set audit passed — zeros are real platform failures, not extractor bugs; but extractor needs hardening, matching needs handle/SKU, stratification didn't happen, re-run required before declaration). Original thesis holds: specs visible ≠ products retrievable. §6 `fitment_recall` is the primary metric. No pipeline code written. Phase 0 not started. |
 
@@ -589,18 +589,20 @@ All 900 products across 18 queries inspected. Each product row has exactly 1 var
 
 **Classification per §6.2:** IV01 `title_uninformative`, IV02 `unexplained`, IV03 `title_uninformative`. IV02 is the most concerning — title contains brand, product type, and vehicle, but the product is still excluded from the result set while competitors with similar titles are included. Report: `docs/reports/directive7-stage3-followback.md`.
 
-### 6.1.8 H4-R — title-coverage replication on a second store (DIRECTIVE-6 §3, executed 2 Aug 2026)
+### 6.1.8 H4-R — title-coverage replication (DIRECTIVE-6 §3)
 
-**Design.** Replicate H4 on a second store (Intec Racing). 6 title-absent EBC brake pad/rotor kits (no vehicle in title, vehicle in tags). 6 title-present controls (vehicle in title). 8 relational queries. Scored presence@50 unscoped.
+**Design (as registered, DIRECTIVE-6 §3).** Paired-query design at TSP — title-absent and title-present products from the same store and category tested inside the same query. This is the registered experiment.
 
 **Pre-registered decision rule (from H4, unchanged):**
 - H4-R supported: title-absent presence@50 ≥ 0.40 below title-present
 - H4-R rejected: difference ≤ 0.15
 - H4-R inconclusive: anything between, or < 6 title-absent products, or < 6 matched pairs
 
-**Result — 2 Aug 2026:**
+**Status — corrected per DIRECTIVE-8-v2 §2.2 (3 Aug 2026):**
 
-> **H4-R REJECTED — difference -0.021 ≤ 0.15.** Confounded by store-level invisibility (floor effect).
+> **H4-R is UNRUN, not rejected.** The registered design (DIRECTIVE-6 §3) specified a paired-query design at TSP. Stage 4 ran a different store (Intec Racing), unpaired, both arms at the floor. That is not the registered experiment, so no verdict attaches, including the floor-effect reading. Devin never received DIRECTIVE-6 (see DIRECTIVE-8-v2 §3); this is a delivery failure, not an execution failure.
+
+**Exploratory observation — Intec Racing (2 Aug 2026, recorded as exploratory, not as H4-R verdict):**
 
 | Population | Pairs | Present@50 | Rate |
 |---|---|---|---|
@@ -608,14 +610,14 @@ All 900 products across 18 queries inspected. Each product row has exactly 1 var
 | Title-present | 48 | 0 | 0.000 |
 | Difference | — | — | -0.021 |
 
-Both populations scored near zero. Only 1 Intec product appeared across all 8 queries (1 in 400 slots, below chance). The test cannot measure title effect when the store's products don't appear regardless of title. The rejection is a floor effect, not a disconfirmation of H4.
+Both populations scored near zero. Only 1 Intec product appeared across all 8 queries (1 in 400 slots, below chance). This is recorded as an **exploratory store-level observation** — the store itself is nearly invisible in the Catalog regardless of title. This is where its real value lies. The registered H4-R at TSP is scheduled for DIRECTIVE-8-v2 §8.4.
 
-**Three mechanisms of invisibility now identified:**
+**Three mechanisms of invisibility (identified from exploratory work, not from the registered H4-R):**
 1. Title-level (H4): products without vehicles in titles are unretrievable. Merchant-caused, merchant-fixable.
 2. Relevance-matching (IV02): products with adequate titles excluded for unknown reasons. Not merchant-caused.
-3. Store-level (H4-R): stores whose products barely appear regardless of title. Cause unknown.
+3. Store-level (Intec exploratory observation): stores whose products barely appear regardless of title. Cause unknown.
 
-H4 remains an auto-parts finding (TSP+MAP), not a platform finding. H4-R does not disconfirm H4 — it identifies store-level invisibility as a confound. Report: `docs/reports/directive7-stage4-followback.md`.
+H4 remains an auto-parts finding (TSP+MAP), not a platform finding. Report: `docs/reports/directive7-stage4-followback.md`.
 
 ### 6.1.9 Auto-parts re-sample — fitment-recall on 4 stores (DIRECTIVE-4 §4, executed 3 Aug 2026)
 
@@ -632,11 +634,17 @@ H4 remains an auto-parts finding (TSP+MAP), not a platform finding. H4-R does no
 | Mean recall (prefix) | 0.285 | 0.385 |
 | Mean recall (strict) | 0.178 | 0.313 |
 
-12 of 19 products had extractor errors (non-vehicle tokens, trim specifiers). Corrections applied. Both raw and corrected numbers are far below 0.80 — verdict unchanged.
+12 of 19 products had extractor errors (non-vehicle tokens, trim specifiers). Corrections applied. Both raw and corrected numbers are far below 0.80 — verdict unchanged. The hand corrections moved the number *toward* the threshold, against the finding.
 
-**Per-store recall (corrected prefix):** TSP=0.38, MAP=0.04, Subimods=1.00, Springrates=0.67. MAP "Multiple Fitments" products have 0 inferred vehicles — the most extreme gap. H2 (truncation hypothesis) not supported: thin=0.333, rich=0.411 — gap narrowed and slightly reversed.
+**Caveat (DIRECTIVE-8-v2 §2.5):** 12 of 19 products hand-corrected by the same agent that built the extractor, on the sample being measured, no held-out set. The verdict survives that; per-store figures (MAP at 0.04, n=4) do not and must not be quoted.
 
-**This is the first pre-registered rule to fire on a compliant sample.** The original Stage 1 (12 from 1 store) was non-compliant and withdrawn. This re-sample (18 from 4 stores) is compliant. The coverage gap is confirmed: Shopify's inference drops 60–70% of vehicles the merchant states. Report: `docs/reports/directive7-stage5-followback.md`.
+**H2 status — corrected per DIRECTIVE-8-v2 §2.1 (3 Aug 2026):** H2 is INCONCLUSIVE, not "not supported." The rule (DIRECTIVE-4 §5) needs the quartile contrast in ≥2 verticals for support and <0.10 in ≥3 for rejection. Stage 5 covered one vertical, used thin/rich buckets rather than length quartiles, and skipped the mandatory first-occurrence-offset control.
+
+**Causal claim — struck per DIRECTIVE-8-v2 §2.3 (3 Aug 2026):** "A product whose `tech_specs` omits a vehicle cannot be retrieved by an agent searching for that vehicle" is struck. It is contradicted twice by this project's own data: H3 measured dropped-relational products at `presence@50` = 0.429, and Stage 5 reports 6 of 10 TSP products with zero inferred vehicles while Stage 1 reports TSP holding rank 1 in 5 of 14 relational queries.
+
+**Root-cause claim — struck per DIRECTIVE-8-v2 §2.4 (3 Aug 2026):** "The coverage gap is the root cause; the three mechanisms are surface symptoms" is struck as unsupported. H4 points the other way. On current evidence the coverage gap and the retrieval mechanisms are parallel and largely independent.
+
+**This is the first pre-registered rule to fire on a compliant sample.** The original Stage 1 (12 from 1 store) was non-compliant and withdrawn. This re-sample (18 from 4 stores) is compliant. Report: `docs/reports/directive7-stage5-followback.md`.
 
 ### 6.2 Miss classification
 When an expected product is not retrieved, classify why — **this is the part with commercial value**, because it is the fix list:
@@ -746,3 +754,4 @@ Actions that must happen on or before the day the report goes public. Each is a 
 | 2026-08-02 | 0.6.2 | **DIRECTIVE-7 Stage 3 — §6 identical-part audit. Structural invisibility confirmed for 3/3 absolutely invisible targets.** Sub-study A (12 parts, brand+SKU queries): 12/12 TSP present, 0 invisibility — TSP enrollment is not broken. Sub-study B (3 invisible targets, multiple query phrasings): all 3 findable by brand/SKU (rank 1–203) but invisible by natural-language relational query. Other merchants selling same brand ARE present. IV01 (BC Racing): `title_uninformative` — brand omitted, year mismatch. IV02 (ICON Stage 4): `unexplained` — title adequate, competitors present, TSP excluded. IV03 (Paragon PBP370): `title_uninformative` — vehicle omitted. **Invisibility is query-dependent, not absolute.** IV02 is most concerning — title contains brand+product+vehicle but still excluded. §6.1.7 added with audit results. Reports: `docs/reports/directive7-stage3-followback.md`, `scripts/output/identical-part-audit-2026-08-02T20-51-23-532Z.json`, `scripts/output/invisible-target-audit-2026-08-02T20-54-17-635Z.json`. |
 | 2026-08-02 | 0.6.3 | **DIRECTIVE-7 Stage 4 — H4-R replication REJECTED (confounded by store-level invisibility).** H4-R on Intec Racing: 6 title-absent EBC kits, 6 title-present controls, 8 relational queries. Title-absent presence@50 = 0.021 (1/48), title-present = 0.000 (0/48), difference -0.021 ≤ 0.15 → REJECTED by pre-registered rule. **Floor effect:** only 1 Intec product appeared across all 8 queries (1 in 400 slots, below chance). Both populations scored near zero — test cannot measure title effect when store is invisible. H4 NOT disconfirmed — rejection is confounded by store-level invisibility. Three mechanisms of invisibility now identified: (1) title-level (H4), (2) relevance-matching (IV02), (3) store-level (H4-R). H4 remains auto-parts finding (TSP+MAP), not platform finding. §6.1.8 added with H4-R results. Report: `docs/reports/directive7-stage4-followback.md`. |
 | 2026-08-03 | 0.7.0 | **DIRECTIVE-7 Stage 5 — COVERAGE GAP CONFIRMED on first compliant sample.** Fitment-recall re-run across 4 stores (TSP, MAP, Subimods, Springrates), 5 queries per store, store-stratified bucketing. 18 scored from 4 stores (meets DIRECTIVE-4 §1.2: 15+ / 3+). Corrected mean recall: prefix=0.385, strict=0.313 — both far below 0.80 threshold. **First pre-registered rule to fire on a compliant sample.** Original Stage 1 (12 from 1 store) was non-compliant and withdrawn. MAP "Multiple Fitments" products have 0 inferred vehicles (worst gap). 12/19 products had extractor errors (corrected). H2 (truncation) not supported: thin=0.333, rich=0.411. §6.1.9 added with re-sample results. Report: `docs/reports/directive7-stage5-followback.md`. **DIRECTIVE-7 COMPLETE — all 5 stages executed.** |
+| 2026-08-03 | 0.8.0 | **DIRECTIVE-8-v2 §2 verdict corrections + §3 pipeline fix.** DIRECTIVE-6 (reconstructed from secondary sources) and DIRECTIVE-8-v2 committed and pushed at `d7879a0`. §2.1: H2 corrected to INCONCLUSIVE (not "not supported") — Stage 5 used thin/rich buckets not length quartiles, covered 1 vertical not ≥2, skipped first-occurrence-offset control. §2.2: H4-R corrected to UNRUN (not rejected) — Stage 4 ran a different store, unpaired, both arms at floor; that is not the registered experiment. Intec Racing recorded as exploratory store-level observation. §2.3: Stage 5 causal claim ("tech_specs omits vehicle → unretrievable") struck — contradicted by H3 (0.429) and TSP rank-1 in 5/14 queries with 0 inferred vehicles. §2.4: "coverage gap is root cause" struck — H4 points the other way; coverage gap and retrieval mechanisms are parallel and independent. §2.5: COVERAGE GAP CONFIRMED accepted with caveat (12/19 hand-corrected by same agent that built extractor, no held-out set; per-store figures must not be quoted). §6.1.8 and §6.1.9 updated with corrected verdicts. |
