@@ -1,0 +1,99 @@
+{
+  "$schema": "u6r-query-set-v1",
+  "created": "2026-08-03",
+  "directive": "DIRECTIVE-10 §2 — U-6-R re-run on correct surface",
+  "design_notes": [
+    "12 queries × 3 assistants = 36 observations",
+    "Buying-intent phrasing only (Help me find…, Shop for…)",
+    "Do NOT ask which stores to buy from — that phrasing produces citation answers",
+    "Block A replicates original U-6 query with correct phrasing",
+    "Block D is non-auto control — most important block per directive",
+    "Record per observation: carousel/cards render (binary), merchants named, Shopify stores, Catalog match, Instant Checkout/Buy"
+  ],
+  "queries": [
+    {
+      "id": "A1",
+      "block": "A — aggregator-dominated auto",
+      "query": "Help me find brake pads for a 2018 Honda Civic Si",
+      "purpose": "Replicates original U-6 query with buying-intent phrasing",
+      "catalog_equivalent": "brake pads for 2018 Honda Civic Si"
+    },
+    {
+      "id": "A2",
+      "block": "A — aggregator-dominated auto",
+      "query": "Shop for brake rotors for a 2017 Honda Civic",
+      "purpose": "Another aggregator-dominated auto query",
+      "catalog_equivalent": "brake rotors for 2017 Honda Civic"
+    },
+    {
+      "id": "A3",
+      "block": "A — aggregator-dominated auto",
+      "query": "Help me find an oil filter for a 2020 Ford F-150",
+      "purpose": "Mass-market truck, aggregator-dominated",
+      "catalog_equivalent": "oil filter for 2020 Ford F-150"
+    },
+    {
+      "id": "B1",
+      "block": "B — enthusiast/niche auto",
+      "query": "Help me find a downpipe for a 2018 Honda Civic Type R FK8",
+      "purpose": "Niche enthusiast query, brand+platform specific",
+      "catalog_equivalent": "downpipe for 2018 Honda Civic Type R"
+    },
+    {
+      "id": "B2",
+      "block": "B — enthusiast/niche auto",
+      "query": "Shop for coilovers for a 2017 Honda Civic",
+      "purpose": "Enthusiast suspension query",
+      "catalog_equivalent": "coilovers for 2017 Honda Civic"
+    },
+    {
+      "id": "B3",
+      "block": "B — enthusiast/niche auto",
+      "query": "Help me find a cold air intake for a 2023 Honda Civic Type R FL5",
+      "purpose": "Newer platform, enthusiast query",
+      "catalog_equivalent": "cold air intake for 2023 Honda Civic Type R"
+    },
+    {
+      "id": "C1",
+      "block": "C — long-tail auto",
+      "query": "Help me find Paragon PBP370 brake pads",
+      "purpose": "Specific part number, long-tail",
+      "catalog_equivalent": "Paragon PBP370 brake pads"
+    },
+    {
+      "id": "C2",
+      "block": "C — long-tail auto",
+      "query": "Shop for BC Racing BR Series coilovers for a 2009 Acura TL",
+      "purpose": "Uncommon vehicle, specific brand",
+      "catalog_equivalent": "BC Racing BR Series coilovers for 2009 Acura TL"
+    },
+    {
+      "id": "C3",
+      "block": "C — long-tail auto",
+      "query": "Help me find Eibach Sportline lowering springs for a 2023 Honda Civic Type R",
+      "purpose": "Specific brand+product, newer platform",
+      "catalog_equivalent": "Eibach Sportline lowering springs for 2023 Honda Civic Type R"
+    },
+    {
+      "id": "D1",
+      "block": "D — non-auto control",
+      "query": "Help me find a ceramic coffee mug",
+      "purpose": "Non-auto, weak aggregator dominance, Shopify-heavy category",
+      "catalog_equivalent": "ceramic coffee mug"
+    },
+    {
+      "id": "D2",
+      "block": "D — non-auto control",
+      "query": "Shop for a linen bed sheet set",
+      "purpose": "Home goods, lots of Shopify stores",
+      "catalog_equivalent": "linen bed sheet set"
+    },
+    {
+      "id": "D3",
+      "block": "D — non-auto control",
+      "query": "Help me find a handmade leather wallet",
+      "purpose": "Crafts/goods, Shopify-heavy",
+      "catalog_equivalent": "handmade leather wallet"
+    }
+  ]
+}

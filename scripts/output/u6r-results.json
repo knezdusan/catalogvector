@@ -1,0 +1,286 @@
+{
+  "$schema": "u6r-results-v1",
+  "created": "2026-08-03",
+  "directive": "DIRECTIVE-10 §2 — U-6-R",
+  "assistants_tested": ["ChatGPT", "Gemini", "Copilot"],
+  "copilot_note": "Copilot (copilot.microsoft.com) requires Microsoft/Apple/Google sign-in — cannot be tested without authentication. Bing search AI summary used as fallback for A1 only, but is a different surface (search results page, not chat). Copilot column marked as BLOCKED.",
+  "observations": [
+    {
+      "id": "A1",
+      "query": "Help me find brake pads for a 2018 Honda Civic Si",
+      "block": "A — aggregator-dominated auto",
+      "chatgpt": {
+        "surface": "product_card",
+        "card_rendered": true,
+        "product_name": "Akebono ProACT Ceramic Brake Pads",
+        "merchants_named": ["Akebono (manufacturer)"],
+        "shopify_store_cited": false,
+        "catalog_match": "unknown — Akebono is a manufacturer brand, not a scanned store",
+        "citations": ["Go-Parts (non-Shopify)"],
+        "notes": "Single product card with 'Select product' button. Not a Shopify store."
+      },
+      "gemini": {
+        "surface": "conversational",
+        "card_rendered": false,
+        "merchants_named": ["CARiD", "HondaPartsNow", "AutoZone"],
+        "shopify_store_cited": false,
+        "citations": ["Honda Parts Now", "Parts Geek"],
+        "notes": "Conversational answer with inline citations. No product cards."
+      },
+      "copilot": "BLOCKED — sign-in required"
+    },
+    {
+      "id": "A2",
+      "query": "Shop for brake rotors for a 2017 Honda Civic",
+      "block": "A — aggregator-dominated auto",
+      "chatgpt": {
+        "surface": "conversational",
+        "card_rendered": false,
+        "merchants_named": ["Go-Parts"],
+        "shopify_store_cited": false,
+        "citations": ["Go-Parts"],
+        "notes": "Conversational answer with citation to Go-Parts. No product card."
+      },
+      "gemini": "not_run",
+      "copilot": "BLOCKED — sign-in required"
+    },
+    {
+      "id": "A3",
+      "query": "Help me find an oil filter for a 2020 Ford F-150",
+      "block": "A — aggregator-dominated auto",
+      "chatgpt": {
+        "surface": "product_card",
+        "card_rendered": true,
+        "product_name": "Motorcraft FL-500S",
+        "merchants_named": ["Motorcraft (OEM Ford brand)"],
+        "shopify_store_cited": false,
+        "catalog_match": "unknown — Motorcraft is OEM, not a scanned store",
+        "citations": [],
+        "notes": "Two product buttons rendered (Motorcraft FL-500S and FL-2062-A). Not Shopify stores."
+      },
+      "gemini": "not_run",
+      "copilot": "BLOCKED — sign-in required"
+    },
+    {
+      "id": "B1",
+      "query": "Help me find a downpipe for a 2018 Honda Civic Type R FK8",
+      "block": "B — enthusiast/niche auto",
+      "chatgpt": {
+        "surface": "conversational",
+        "card_rendered": false,
+        "merchants_named": ["RV6 Performance", "TSP (Two Step Performance)", "MagnaFlow", "MAPerformance", "Airtec Motorsport"],
+        "shopify_store_cited": false,
+        "catalog_match": "TSP is a scanned store (www.twostepperformance.com) — named in text but no product card",
+        "citations": ["Reddit", "Pro Civic", "Tuning Pro"],
+        "notes": "Conversational answer. TSP named as recommended option but no product card rendered."
+      },
+      "gemini": "not_run",
+      "copilot": "BLOCKED — sign-in required"
+    },
+    {
+      "id": "B2",
+      "query": "Shop for coilovers for a 2017 Honda Civic",
+      "block": "B — enthusiast/niche auto",
+      "chatgpt": {
+        "surface": "product_card",
+        "card_rendered": true,
+        "product_name": "BC Racing BR Series Coilovers",
+        "merchants_named": ["BC Racing", "Tein", "HKS", "TruHart", "ST/KW"],
+        "shopify_store_cited": false,
+        "catalog_match": "unknown — BC Racing is a manufacturer brand",
+        "citations": ["Redline360", "Reddit", "CivicX.com"],
+        "notes": "Primary product card for BC Racing BR Series. Additional product links for Tein Flex Z and HKS Hipermax S."
+      },
+      "gemini": {
+        "surface": "conversational",
+        "card_rendered": false,
+        "merchants_named": ["TEIN", "TruHart", "Megan Racing", "BC Racing", "Ksport"],
+        "shopify_store_cited": false,
+        "citations": ["Ultimate Motorsports", "TruHart", "Megan Racing", "Ksport USA"],
+        "notes": "Conversational answer with inline citations. No product cards."
+      },
+      "copilot": "BLOCKED — sign-in required"
+    },
+    {
+      "id": "B3",
+      "query": "Help me find a cold air intake for a 2023 Honda Civic Type R FL5",
+      "block": "B — enthusiast/niche auto",
+      "chatgpt": {
+        "surface": "product_card",
+        "card_rendered": true,
+        "product_name": "PRL Motorsports High Volume Intake System",
+        "merchants_named": ["PRL Motorsports", "27WON Performance", "K&N", "MAPerformance", "Ramair Filters"],
+        "shopify_store_cited": true,
+        "shopify_store_url": "https://shop.app/products/10170051657921/2023-honda-civic-type-r-fl5-high-volume-intake-system",
+        "catalog_match": "shop.app URL — Shopify's own consumer app. This is direct Catalog syndication.",
+        "citations": ["Shop (shop.app)", "27WON Performance", "MAPerformance", "civicxi.com"],
+        "notes": "CRITICAL: Product card citation links to shop.app (Shopify's consumer app). This is the first direct evidence of Shopify Catalog surfacing in ChatGPT product cards."
+      },
+      "gemini": {
+        "surface": "conversational",
+        "card_rendered": false,
+        "merchants_named": ["PRL Motorsports", "HPS Performance", "27WON Performance", "aFe Takeda", "Eventuri", "COBB Tuning"],
+        "shopify_store_cited": false,
+        "citations": ["Dream Automotive", "Eventuri", "HPS Performance", "YouTube"],
+        "notes": "Conversational answer. Same products as ChatGPT (PRL, 27WON) but text format, no cards."
+      },
+      "copilot": "BLOCKED — sign-in required"
+    },
+    {
+      "id": "C1",
+      "query": "Help me find Paragon PBP370 brake pads",
+      "block": "C — long-tail auto",
+      "chatgpt": {
+        "surface": "conversational",
+        "card_rendered": false,
+        "merchants_named": ["Paragon Performance (paragonbrakes.com)"],
+        "shopify_store_cited": false,
+        "catalog_match": "unknown — Paragon Performance is a manufacturer with direct DTC site",
+        "citations": ["Paragon Brakes (paragonbrakes.com)"],
+        "notes": "Conversational answer citing manufacturer's own site. No product card."
+      },
+      "gemini": "not_run",
+      "copilot": "BLOCKED — sign-in required"
+    },
+    {
+      "id": "C2",
+      "query": "Shop for BC Racing BR Series coilovers for a 2009 Acura TL",
+      "block": "C — long-tail auto",
+      "chatgpt": {
+        "surface": "product_card",
+        "card_rendered": true,
+        "product_name": "BC Racing BR Series Coilovers – 2009–2014 Acura TL (A-75-BR)",
+        "merchants_named": ["BC Racing (via Springrates)", "Coilovers.ca"],
+        "shopify_store_cited": true,
+        "shopify_store_url": "https://bc.springrates.com/products/bc-racing-br-series-coilovers-2009-2014-acura-tl",
+        "catalog_match": "Springrates (www.springrates.com) is a scanned store from DIRECTIVE-8 Stage 3. NL rate 1.000, BS rate 0.800. This is a direct Catalog-to-surface match.",
+        "citations": ["BC Racing - Springrates.com", "Coilovers.ca"],
+        "notes": "CRITICAL: Product card citation links to bc.springrates.com — a Shopify store in our scan set. Price quoted ($1,195 USD). This is the first direct evidence of a scanned Shopify store surfacing in a ChatGPT product card."
+      },
+      "gemini": "not_run",
+      "copilot": "BLOCKED — sign-in required"
+    },
+    {
+      "id": "C3",
+      "query": "Help me find Eibach Sportline lowering springs for a 2023 Honda Civic Type R",
+      "block": "C — long-tail auto",
+      "chatgpt": {
+        "surface": "product_card",
+        "card_rendered": true,
+        "product_name": "Eibach SPORTLINE Kit – E20-40-043-04-22",
+        "merchants_named": ["Eibach (manufacturer)", "ProCivic", "Phearable"],
+        "shopify_store_cited": false,
+        "catalog_match": "unknown — Eibach is a manufacturer. ProCivic and Phearable are retailers but not in our scan set.",
+        "citations": ["Eibach", "Pro Civic", "Phearable", "Reddit"],
+        "notes": "Product card with part number, drop specs, and price comparison table. Citations to manufacturer + retailers."
+      },
+      "gemini": "not_run",
+      "copilot": "BLOCKED — sign-in required"
+    },
+    {
+      "id": "D1",
+      "query": "Help me find a ceramic coffee mug",
+      "block": "D — non-auto control",
+      "chatgpt": {
+        "surface": "conversational",
+        "card_rendered": false,
+        "merchants_named": [],
+        "shopify_store_cited": false,
+        "citations": ["Koti Store"],
+        "notes": "Conversational answer with buying tips. No product card, no specific products named."
+      },
+      "gemini": "not_run",
+      "copilot": "BLOCKED — sign-in required"
+    },
+    {
+      "id": "D2",
+      "query": "Shop for a linen bed sheet set",
+      "block": "D — non-auto control",
+      "chatgpt": {
+        "surface": "product_carousel",
+        "card_rendered": true,
+        "card_count": 4,
+        "products": [
+          "Quince European Linen Sheet Set",
+          "Brooklinen Washed European Linen Core Sheet Set",
+          "CB2 Classic European Flax-Certified Linen Flax Queen Sheet Set",
+          "Casaluna 100% Linen Sheet Set"
+        ],
+        "merchants_named": ["Quince", "Brooklinen", "CB2", "Casaluna (Target)"],
+        "shopify_store_cited": false,
+        "catalog_match": "unknown — Quince, Brooklinen, CB2, Target are major retailers, not in our auto parts scan set",
+        "citations": ["Quince", "Brooklinen", "CB2", "Target"],
+        "notes": "FULL product carousel with 4 product cards, each with image, 'Select product' button, and price. This is the most developed product surface observed in U-6-R."
+      },
+      "gemini": {
+        "surface": "conversational",
+        "card_rendered": false,
+        "merchants_named": ["Quince", "Parachute", "Sijo", "Boll & Branch"],
+        "shopify_store_cited": false,
+        "citations": ["Sleep Doctor", "Yawnder"],
+        "notes": "Conversational answer. Same products as ChatGPT (Quince appears in both) but text format with inline citations to review sites, not product cards."
+      },
+      "copilot": "BLOCKED — sign-in required"
+    },
+    {
+      "id": "D3",
+      "query": "Help me find a handmade leather wallet",
+      "block": "D — non-auto control",
+      "chatgpt": {
+        "surface": "conversational",
+        "card_rendered": false,
+        "merchants_named": ["Moorins Heritage", "Brown Bear Leatherworks", "Xclusive Leatherworks", "Grifon Leather", "Atelier Petre Miuta", "Luava"],
+        "shopify_store_cited": false,
+        "catalog_match": "unknown — these are small craft workshops, not in our scan set",
+        "citations": ["Moorins", "brownbearleatherworks.com", "Xclusive Leatherworks", "Grifon Leather", "Atelier Petre Miuta", "Luava"],
+        "notes": "Conversational answer with 6 named makers. No product cards. Many appear to be small Shopify stores but none in our scan set."
+      },
+      "gemini": "not_run",
+      "copilot": "BLOCKED — sign-in required"
+    }
+  ],
+  "summary": {
+    "chatgpt": {
+      "queries_run": 12,
+      "product_cards_rendered": 7,
+      "product_cards_not_rendered": 5,
+      "card_rate": 0.583,
+      "shopify_store_citations": 2,
+      "shopify_store_examples": [
+        "B3: shop.app/products/... (PRL Motorsports intake — Shopify's own consumer app)",
+        "C2: bc.springrates.com/products/... (Springrates — a scanned store from DIRECTIVE-8 Stage 3)"
+      ],
+      "full_carousel_rendered": 1,
+      "carousel_example": "D2: 4-card carousel for linen bed sheet set (Quince, Brooklinen, CB2, Casaluna)"
+    },
+    "gemini": {
+      "queries_run": 4,
+      "product_cards_rendered": 0,
+      "product_cards_not_rendered": 4,
+      "card_rate": 0.0,
+      "notes": "Gemini consistently produces conversational answers with inline text citations. No product card surface observed in any query. Same products sometimes named (Quince, PRL, BC Racing) but in text format."
+    },
+    "copilot": {
+      "queries_run": 0,
+      "blocked": true,
+      "block_reason": "copilot.microsoft.com requires Microsoft/Apple/Google sign-in. Cannot test without authentication."
+    }
+  },
+  "oai_searchbot_check": {
+    "description": "Fetched robots.txt for all 10 scanned stores + Subimods to check for OAI-SearchBot blocks",
+    "method": "curl -sL https://{domain}/robots.txt, grep for OAI-SearchBot",
+    "results": [
+      {"domain": "www.twostepperformance.com", "oai_searchbot_rule": "explicit_allow", "details": "# Allow OAI-SearchBot / User-agent: OAI-SearchBot / Disallow:"},
+      {"domain": "www.maperformance.com", "oai_searchbot_rule": "no_rule", "details": "No OAI-SearchBot rule. Default User-agent: * with Allow: / (Shopify UCP-enabled robots.txt)"},
+      {"domain": "www.intecracing.com", "oai_searchbot_rule": "no_rule", "details": "No OAI-SearchBot rule. Default User-agent: * with Allow: / (Shopify UCP-enabled robots.txt)"},
+      {"domain": "www.subimods.com", "oai_searchbot_rule": "no_rule", "details": "No OAI-SearchBot rule. Default User-agent: * with standard Shopify disallows (admin, cart, etc). Does NOT block OAI-SearchBot."},
+      {"domain": "www.springrates.com", "oai_searchbot_rule": "no_rule", "details": "No OAI-SearchBot rule. Default User-agent: * with standard Shopify disallows."},
+      {"domain": "www.brembostore.com", "oai_searchbot_rule": "no_rule", "details": "No OAI-SearchBot rule. Default User-agent: * with standard Shopify disallows."},
+      {"domain": "unity-performance.com", "oai_searchbot_rule": "no_rule", "details": "No OAI-SearchBot rule. Default User-agent: * with Allow: / (Shopify UCP-enabled robots.txt)"},
+      {"domain": "www.ebcbrakeshop.co.uk", "oai_searchbot_rule": "no_rule", "details": "No OAI-SearchBot rule. Default User-agent: * with Allow: / (Shopify UCP-enabled robots.txt)"},
+      {"domain": "valvetronic.com", "oai_searchbot_rule": "no_rule", "details": "No OAI-SearchBot rule. Default User-agent: * with Allow: / (Shopify UCP-enabled robots.txt)"},
+      {"domain": "jdmuscleusa.com", "oai_searchbot_rule": "explicit_allow", "details": "User-agent: OAI-SearchBot (grouped with ChatGPT-User, GPTBot, etc) / Allow: /"}
+    ],
+    "conclusion": "ZERO stores block OAI-SearchBot. 2 stores (TSP, JDMuscle) explicitly allow it. 8 stores (including Subimods) have no OAI-SearchBot rule, meaning the default User-agent: * applies — which does NOT block crawling of product pages. Subimods' invisibility in the Catalog is NOT caused by robots.txt blocking OAI-SearchBot. The cause must be elsewhere (e.g., Catalog ingestion pipeline, product data format, or store-level Catalog opt-in)."
+  }
+}
