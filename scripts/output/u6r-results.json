@@ -245,13 +245,22 @@
       "product_cards_rendered": 7,
       "product_cards_not_rendered": 5,
       "card_rate": 0.583,
-      "shopify_store_citations": 2,
+      "shopify_store_citations_original": 2,
+      "shopify_store_citations_corrected": 4,
       "shopify_store_examples": [
         "B3: shop.app/products/... (PRL Motorsports intake — Shopify's own consumer app)",
         "C2: bc.springrates.com/products/... (Springrates — a scanned store from DIRECTIVE-8 Stage 3)"
       ],
+      "platform_audit": {
+        "directive": "DIRECTIVE-11 §1",
+        "cards_with_shopify_merchant": 4,
+        "corrected_shopify_share": 0.571,
+        "original_shopify_share": 0.286,
+        "correction": "D2 was scored as 0 Shopify (actually 2: Quince, Brooklinen). B2's Redline360 (Shopify), B3's PRL Motorsports (Shopify) and MAPerformance (Shopify), C2's Coilovers.ca (Shopify) were not audited in original report.",
+        "audit_file": "scripts/output/u6r-platform-audit.json"
+      },
       "full_carousel_rendered": 1,
-      "carousel_example": "D2: 4-card carousel for linen bed sheet set (Quince, Brooklinen, CB2, Casaluna)"
+      "carousel_example": "D2: 4-card carousel for linen bed sheet set (Quince [Shopify Plus], Brooklinen [Shopify Plus], CB2 [not Shopify], Casaluna/Target [not Shopify])"
     },
     "gemini": {
       "queries_run": 4,

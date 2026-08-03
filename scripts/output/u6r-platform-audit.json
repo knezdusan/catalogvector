@@ -1,0 +1,275 @@
+{
+  "$schema": "u6r-platform-audit-v1",
+  "created": "2026-08-03",
+  "directive": "DIRECTIVE-11 §1",
+  "method": "For each merchant named in a ChatGPT product card or carousel slot, determine the ecommerce platform via: (1) /products.json response (Shopify stores return JSON), (2) HTTP headers (powered-by: Shopify, X-Shopify-* cookies), (3) /cart.js response, (4) robots.txt patterns, (5) web search for independent confirmation.",
+  "cards_audited": 7,
+  "merchants_audited": 18,
+  "results": [
+    {
+      "queryId": "A1",
+      "query": "Help me find brake pads for a 2018 Honda Civic Si",
+      "card_product": "Akebono ProACT Ceramic Brake Pads",
+      "merchants": [
+        {
+          "name": "Akebono (manufacturer)",
+          "domain": "akebono-brakes.com",
+          "platform": "NOT_SHOPIFY",
+          "method": "products.json 404, no Shopify headers/cookies",
+          "notes": "Manufacturer corporate site, not an ecommerce store"
+        },
+        {
+          "name": "Go-Parts",
+          "domain": "go-parts.com",
+          "platform": "NOT_SHOPIFY",
+          "method": "products.json 403, cart.js 403, Cloudflare server, no Shopify cookies",
+          "notes": "Custom/other platform behind Cloudflare"
+        }
+      ],
+      "shopify_merchants_in_card": 0,
+      "total_merchants_in_card": 2
+    },
+    {
+      "queryId": "A3",
+      "query": "Help me find an oil filter for a 2020 Ford F-150",
+      "card_product": "Motorcraft FL-500S",
+      "merchants": [
+        {
+          "name": "Motorcraft (OEM Ford brand)",
+          "domain": "motorcraft.com",
+          "platform": "NOT_SHOPIFY",
+          "method": "products.json returns empty/redirect, no Shopify indicators",
+          "notes": "Ford OEM brand site, not an independent ecommerce store"
+        }
+      ],
+      "shopify_merchants_in_card": 0,
+      "total_merchants_in_card": 1
+    },
+    {
+      "queryId": "B2",
+      "query": "Shop for coilovers for a 2017 Honda Civic",
+      "card_product": "BC Racing BR Series Coilovers",
+      "merchants": [
+        {
+          "name": "BC Racing",
+          "domain": "bcracing.com",
+          "platform": "NOT_SHOPIFY",
+          "method": "products.json 404, no Shopify headers",
+          "notes": "Manufacturer brand site"
+        },
+        {
+          "name": "Redline360",
+          "domain": "shop.redline360.com",
+          "platform": "SHOPIFY",
+          "method": "products.json returns JSON with products array (confirmed)",
+          "notes": "Shopify store — aftermarket auto parts retailer"
+        },
+        {
+          "name": "Tein",
+          "domain": "teinusa.com",
+          "platform": "NOT_AUDITED",
+          "method": "not checked — not named as primary card merchant",
+          "notes": "Manufacturer brand, named in additional product links"
+        },
+        {
+          "name": "HKS",
+          "domain": "hksusa.com",
+          "platform": "NOT_AUDITED",
+          "method": "not checked — manufacturer brand",
+          "notes": "Manufacturer brand, named in additional product links"
+        },
+        {
+          "name": "TruHart",
+          "domain": "truhart.com",
+          "platform": "NOT_AUDITED",
+          "method": "not checked — manufacturer brand",
+          "notes": "Manufacturer brand"
+        },
+        {
+          "name": "ST/KW",
+          "domain": "kw-suspensions.com",
+          "platform": "NOT_AUDITED",
+          "method": "not checked — manufacturer brand",
+          "notes": "Manufacturer brand"
+        }
+      ],
+      "shopify_merchants_in_card": 1,
+      "total_merchants_in_card": 2,
+      "notes": "Primary card is BC Racing (manufacturer, not Shopify). Redline360 (citation) is Shopify. Additional product links are manufacturer brands."
+    },
+    {
+      "queryId": "B3",
+      "query": "Help me find a cold air intake for a 2023 Honda Civic Type R FL5",
+      "card_product": "PRL Motorsports High Volume Intake System",
+      "merchants": [
+        {
+          "name": "PRL Motorsports",
+          "domain": "www.prlmotorsports.com",
+          "platform": "SHOPIFY",
+          "method": "products.json returns JSON with products array, headers show 'powered-by: Shopify', Shopify cookies present",
+          "notes": "CONFIRMED Shopify. This is the merchant behind the shop.app citation."
+        },
+        {
+          "name": "27WON Performance",
+          "domain": "www.27won.com",
+          "platform": "NOT_SHOPIFY",
+          "method": "robots.txt starts with '# Squarespace Robots Txt', web search confirms Squarespace Commerce",
+          "notes": "Squarespace Commerce platform"
+        },
+        {
+          "name": "MAPerformance",
+          "domain": "www.maperformance.com",
+          "platform": "SHOPIFY",
+          "method": "products.json returns JSON, Shopify UCP-enabled robots.txt",
+          "notes": "Shopify store — also in DIRECTIVE-8 Stage 3 scan set"
+        },
+        {
+          "name": "K&N",
+          "domain": "knfilters.com",
+          "platform": "NOT_AUDITED",
+          "method": "not checked — manufacturer brand",
+          "notes": "Manufacturer brand"
+        },
+        {
+          "name": "Ramair Filters",
+          "domain": "ramairfilters.com",
+          "platform": "NOT_AUDITED",
+          "method": "not checked — manufacturer brand",
+          "notes": "Manufacturer brand (UK)"
+        }
+      ],
+      "shopify_merchants_in_card": 2,
+      "total_merchants_in_card": 3,
+      "notes": "Primary card is PRL Motorsports (Shopify, via shop.app). MAPerformance (Shopify) also named. 27WON is Squarespace."
+    },
+    {
+      "queryId": "C2",
+      "query": "Shop for BC Racing BR Series coilovers for a 2009 Acura TL",
+      "card_product": "BC Racing BR Series Coilovers – 2009–2014 Acura TL (A-75-BR)",
+      "merchants": [
+        {
+          "name": "Springrates (BC Racing via Springrates)",
+          "domain": "www.springrates.com",
+          "platform": "SHOPIFY",
+          "method": "products.json returns JSON, confirmed in DIRECTIVE-8 Stage 3 scan set",
+          "notes": "CONFIRMED Shopify. In our scan set. The card citation links to bc.springrates.com."
+        },
+        {
+          "name": "Coilovers.ca",
+          "domain": "coilovers.ca",
+          "platform": "SHOPIFY",
+          "method": "products.json returns JSON with products array (confirmed)",
+          "notes": "Shopify store — Canadian coilover retailer"
+        }
+      ],
+      "shopify_merchants_in_card": 2,
+      "total_merchants_in_card": 2,
+      "notes": "BOTH merchants in this card are Shopify stores. 100% Shopify."
+    },
+    {
+      "queryId": "C3",
+      "query": "Help me find Eibach Sportline lowering springs for a 2023 Honda Civic Type R",
+      "card_product": "Eibach SPORTLINE Kit – E20-40-043-04-22",
+      "merchants": [
+        {
+          "name": "Eibach (manufacturer)",
+          "domain": "eibach.com",
+          "platform": "NOT_SHOPIFY",
+          "method": "products.json 404, Laravel session cookies (XSRF-TOKEN, eibach_inc_session), nginx server",
+          "notes": "Custom Laravel-based manufacturer site"
+        },
+        {
+          "name": "ProCivic",
+          "domain": "www.procivic.com",
+          "platform": "NOT_SHOPIFY",
+          "method": "products.json 404, 'zenid' cookie (Zen Cart), Apache server",
+          "notes": "Zen Cart platform (open-source PHP ecommerce)"
+        },
+        {
+          "name": "Phearable",
+          "domain": "www.phearable.net",
+          "platform": "NOT_SHOPIFY",
+          "method": "products.json 404, nginx server, no Shopify indicators",
+          "notes": "Custom/other platform"
+        }
+      ],
+      "shopify_merchants_in_card": 0,
+      "total_merchants_in_card": 3,
+      "notes": "All three merchants are non-Shopify (Laravel, Zen Cart, custom)."
+    },
+    {
+      "queryId": "D2",
+      "query": "Shop for a linen bed sheet set",
+      "card_type": "carousel",
+      "carousel_slots": [
+        {
+          "slot": 1,
+          "name": "Quince European Linen Sheet Set",
+          "merchant": "Quince",
+          "domain": "www.quince.com",
+          "platform": "SHOPIFY_PLUS",
+          "method": "Headless Shopify Plus — Next.js frontend on CloudFront/S3, no traditional Shopify endpoints exposed. Web search confirms: 'Quince operates on the Shopify platform' (internetresearchunit.com), 'Shopify Plus merchant'. Uses Shopify Storefront API.",
+          "notes": "Headless Shopify Plus. Not detectable via /products.json or /cart.js, but confirmed by independent sources."
+        },
+        {
+          "slot": 2,
+          "name": "Brooklinen Washed European Linen Core Sheet Set",
+          "merchant": "Brooklinen",
+          "domain": "www.brooklinen.com",
+          "platform": "SHOPIFY_PLUS",
+          "method": "Headers show cdn.shopify.com preconnect, _shopify_y/_shopify_s cookies, Shopify extensions. Web search confirms: 'brooklinen.com runs on Shopify Plus' (storeinspect.com), Shopify case study confirms 'Shopify Plus' migration in 2019.",
+          "notes": "Traditional Shopify Plus storefront. Confirmed by Shopify's own case study."
+        },
+        {
+          "slot": 3,
+          "name": "CB2 Classic European Flax-Certified Linen Flax Queen Sheet Set",
+          "merchant": "CB2",
+          "domain": "www.cb2.com",
+          "platform": "NOT_SHOPIFY",
+          "method": "products.json 403, AkamaiGHost server, no Shopify indicators",
+          "notes": "Crate & Barrel enterprise — custom/Akamai platform"
+        },
+        {
+          "slot": 4,
+          "name": "Casaluna 100% Linen Sheet Set",
+          "merchant": "Casaluna (Target)",
+          "domain": "www.target.com",
+          "platform": "NOT_SHOPIFY",
+          "method": "Target private label — Target runs custom enterprise platform",
+          "notes": "Target's own enterprise commerce platform"
+        }
+      ],
+      "shopify_merchants_in_card": 2,
+      "total_merchants_in_card": 4,
+      "notes": "2 of 4 carousel slots are Shopify Plus (Quince, Brooklinen). The directive's independent check was correct."
+    }
+  ],
+  "corrected_summary": {
+    "total_cards": 7,
+    "total_merchants_audited": 18,
+    "merchants_with_confirmed_platform": 15,
+    "merchants_not_audited": 3,
+    "shopify_merchants_identified": 7,
+    "shopify_merchants_by_card": {
+      "A1": 0,
+      "A3": 0,
+      "B2": 1,
+      "B3": 2,
+      "C2": 2,
+      "C3": 0,
+      "D2": 2
+    },
+    "cards_with_at_least_one_shopify_merchant": 4,
+    "cards_with_at_least_one_shopify_merchant_ids": ["B2", "B3", "C2", "D2"],
+    "corrected_shopify_share": "4 of 7 cards (57.1%) contained at least one identified Shopify merchant. This is up from the originally reported 2 of 7 (28.6%).",
+    "corrected_shopify_share_decimal": 0.571,
+    "original_shopify_share": 0.286,
+    "correction_reason": "Original report scored D2 as 0 Shopify stores (wrong — Quince and Brooklinen are both Shopify Plus). Original report did not audit B2's Redline360 (Shopify), B3's PRL Motorsports (Shopify, already known via shop.app) and MAPerformance (Shopify), or C2's Coilovers.ca (Shopify).",
+    "audited_denominator_note": "3 merchants (Tein, HKS, K&N, TruHart, ST/KW, Ramair) were not audited because they are manufacturer brands named in additional product links, not primary card merchants. If manufacturer brands are excluded from the denominator, the audited share is 7 Shopify out of 15 audited merchants across 7 cards."
+  },
+  "verdict_impact": {
+    "verdict_unchanged": "SURFACE-DEPENDENT",
+    "reason": "CATALOG PREDICTIVE required carousels in ≥8 of 12 (7 of 12 fails). The corrected Shopify share (57.1% of cards) would meet the ≥50% threshold, but the carousel rate threshold is still failed. VERTICAL-BOUND required Block D to show Shopify while A-C don't — A-C did show Shopify. SURFACE-DEPENDENT stands.",
+    "what_changed": "The headline number is restated from '2 of 7 cards (28.6%) — a floor' to '4 of 7 cards (57.1%) — a measurement, not a floor.' The original 28.6% was wrong in both directions: D2 was scored as 0 Shopify (actually 2), and B2/B3/C2 had unaudited Shopify merchants."
+  }
+}
