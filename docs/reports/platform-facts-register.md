@@ -31,21 +31,21 @@ Each entry: the documented claim, the observed behaviour, the JSON path or trans
 
 **Date established:** 3 August 2026 (DIRECTIVE-7 Stage 5)
 
-**Impact:** The coverage gap is confirmed on a compliant sample. Products whose `tech_specs` omit a vehicle are unretrievable for that vehicle by any agent using the Catalog.
+**Impact:** On a four-store sample, corrected mean fitment recall is 0.385. The retrieval consequence of this omission is not established; measured retrieval differences between products with and without inferred vehicles have been small.
 
 ---
 
-## 3. Agent-profile approval lead time — documentation wrong
+## 3. Agent-profile approval — documentation corrected (Spring '26 removal)
 
-**Documented claim:** Agent profile approval is fast (implied: same-day or near-term).
+**Documented claim (original):** Agent profile approval is required and has a lead time.
 
-**Observed behaviour:** Agent profile approval took multiple days, well beyond the implied lead time.
+**Observed behaviour (U-1 resolution, 1 August 2026):** Spring '26 removed the approval requirement entirely. The profile is a hosted JSON file, auth is an API key exchanged for a bearer token, **zero lead time**. The original register entry claiming "multi-day approval" was based on a project-log note that predates the U-1 resolution and has no artefact.
 
-**Evidence:** Project log — UCP agent profile `catalogvector` approval timeline.
+**Evidence:** U-1 resolution (1 August 2026) — UCP CLI `catalogvector` profile is a hosted JSON file; `SHOPIFY_CLIENT_ID`/`SHOPIFY_CLIENT_SECRET` exchange for bearer token via `ucp auth token`. No approval step encountered.
 
-**Date established:** 2 August 2026 (during DIRECTIVE-3/4 setup)
+**Date established:** 1 August 2026 (U-1 resolution). Register entry corrected 3 August 2026 (DIRECTIVE-9 §3.2, executed under DIRECTIVE-11 §5).
 
-**Impact:** Project timeline affected. Documentation does not reflect actual approval time.
+**Impact:** The original "multi-day approval" claim is struck. The genuine documentation correction is that approval is no longer required at all — a stronger finding than "approval is slow."
 
 ---
 
@@ -124,17 +124,32 @@ Each entry: the documented claim, the observed behaviour, the JSON path or trans
 
 ---
 
+## 9. Head/padding boundary — INCONCLUSIVE (U-8)
+
+**Documented claim:** The Catalog returns a match set for a query.
+
+**Observed behaviour (U-8):** The Catalog response is a deterministic prefix (head) followed by a non-deterministic tail (padding). For "brake pads for 2018 Honda Civic Si" (3 runs), the first 12 ranks are identical across runs, then agreement drops to ~40%. For the nonsense query "zxqv flurbin widget" (3 runs), the deterministic prefix is only 6 ranks, then agreement drops to ~5%. Token-overlap decay (U8-B) could not locate the boundary because auto parts query tokens are too common — fractional overlap stays at 0.40–0.98 throughout all deciles, never approaching the 0.0 nonsense baseline.
+
+**Evidence:** `scripts/output/u8-results.json` — U8-A (3×3 runs) and U8-B (18 queries × 10 deciles).
+
+**Date established:** 3 August 2026 (DIRECTIVE-9 §1, executed under DIRECTIVE-11 §5)
+
+**Impact:** `presence@10` is the safest metric (within the deterministic prefix for real queries). `presence@50` includes significant non-deterministic content. The IV02 comparison (competitors at ranks 66–169) is unsafe — those ranks are in the padding zone. Domain concentration at top-10 is safe; at top-20 and beyond is contaminated. The verdict is INCONCLUSIVE because the two estimation methods cannot be compared (U8-B gives null for all 18 queries).
+
+---
+
 ## Summary
 
 | # | Fact | Status | Date |
 |---|---|---|---|
 | 1 | UPID clustering | Documentation wrong — per-merchant rows | 2 Aug 2026 |
-| 2 | `tech_specs` population | Documentation incomplete — 60–70% of vehicles dropped | 3 Aug 2026 |
-| 3 | Agent-profile approval lead time | Documentation wrong — multi-day, not fast | 2 Aug 2026 |
+| 2 | `tech_specs` population | Documentation incomplete — 60–70% of vehicles dropped; retrieval consequence not established | 3 Aug 2026 |
+| 3 | Agent-profile approval | Documentation corrected — approval removed Spring '26, zero lead time | 1 Aug 2026 |
 | 4 | `tags` schema | Documentation wrong — string, not array | 2 Aug 2026 |
 | 5 | Scoped no-empty-result fallback | Documentation incomplete — returns shop-general catalogue | 2 Aug 2026 |
 | 6 | `filters.shops` hard restriction | Documentation correct | 2 Aug 2026 |
 | 7 | Pagination behaviour | Documentation incomplete — exhausts at ~300, not 1000; unscoped floor exists | 2–3 Aug 2026 |
 | 8 | Scoped-fallback overlap | Documentation incomplete — partial fallback, 14.5% overlap | 3 Aug 2026 |
+| 9 | Head/padding boundary | INCONCLUSIVE — deterministic prefix ~12 ranks (real), ~6 (nonsense); token-overlap method cannot locate boundary | 3 Aug 2026 |
 
 **This is the one publishable artefact the project already owns outright.** It depends on no hypothesis, cannot be over-read, is checkable by anyone with an API key, and is exactly what establishes standing with the people who would eventually pay.

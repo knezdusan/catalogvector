@@ -1,0 +1,1848 @@
+{
+  "timestamp": "2026-08-03T21:41:02.933Z",
+  "directive": "DIRECTIVE-9 §1 / DIRECTIVE-11 §5",
+  "u8b": {
+    "method": "Token-overlap decay (binary + fractional) from existing depth-1000 data",
+    "nonsenseBaseline": {
+      "binary": 0,
+      "fractional": 0,
+      "nonsenseProductCount": 350,
+      "nonsenseProductTitles": [
+        "Replacement Refrigerator Water Filter for Samsung DA97-17376B HAF-QIN/EXP",
+        "Cases - iPhone",
+        "Right Replacement AirPod - 2nd Generation",
+        "Front Folding Shelves",
+        "Accordion Zip Wallet"
+      ]
+    },
+    "perQuery": [
+      {
+        "queryId": "Q01",
+        "query": "brake pads for 2018 Honda Civic Si",
+        "productCount": 284,
+        "deciles": [
+          {
+            "decile": 0,
+            "rankRange": [
+              1,
+              29
+            ],
+            "binaryRate": 1,
+            "fractionalRate": 0.6954022988505748
+          },
+          {
+            "decile": 1,
+            "rankRange": [
+              30,
+              58
+            ],
+            "binaryRate": 0.9655172413793104,
+            "fractionalRate": 0.5574712643678162
+          },
+          {
+            "decile": 2,
+            "rankRange": [
+              59,
+              87
+            ],
+            "binaryRate": 1,
+            "fractionalRate": 0.4770114942528735
+          },
+          {
+            "decile": 3,
+            "rankRange": [
+              88,
+              116
+            ],
+            "binaryRate": 1,
+            "fractionalRate": 0.5459770114942528
+          },
+          {
+            "decile": 4,
+            "rankRange": [
+              117,
+              145
+            ],
+            "binaryRate": 1,
+            "fractionalRate": 0.3908045977011494
+          },
+          {
+            "decile": 5,
+            "rankRange": [
+              146,
+              174
+            ],
+            "binaryRate": 1,
+            "fractionalRate": 0.44827586206896547
+          },
+          {
+            "decile": 6,
+            "rankRange": [
+              175,
+              203
+            ],
+            "binaryRate": 1,
+            "fractionalRate": 0.4655172413793104
+          },
+          {
+            "decile": 7,
+            "rankRange": [
+              204,
+              232
+            ],
+            "binaryRate": 0.9655172413793104,
+            "fractionalRate": 0.5114942528735631
+          },
+          {
+            "decile": 8,
+            "rankRange": [
+              233,
+              261
+            ],
+            "binaryRate": 0.9655172413793104,
+            "fractionalRate": 0.4655172413793103
+          },
+          {
+            "decile": 9,
+            "rankRange": [
+              262,
+              284
+            ],
+            "binaryRate": 1,
+            "fractionalRate": 0.5144927536231884
+          }
+        ],
+        "estimatedH_binary": null,
+        "estimatedH_fractional": null
+      },
+      {
+        "queryId": "Q02",
+        "query": "brake pads for 2023 Acura Integra",
+        "productCount": 310,
+        "deciles": [
+          {
+            "decile": 0,
+            "rankRange": [
+              1,
+              31
+            ],
+            "binaryRate": 1,
+            "fractionalRate": 0.5870967741935482
+          },
+          {
+            "decile": 1,
+            "rankRange": [
+              32,
+              62
+            ],
+            "binaryRate": 1,
+            "fractionalRate": 0.6709677419354839
+          },
+          {
+            "decile": 2,
+            "rankRange": [
+              63,
+              93
+            ],
+            "binaryRate": 1,
+            "fractionalRate": 0.5419354838709677
+          },
+          {
+            "decile": 3,
+            "rankRange": [
+              94,
+              124
+            ],
+            "binaryRate": 1,
+            "fractionalRate": 0.5806451612903225
+          },
+          {
+            "decile": 4,
+            "rankRange": [
+              125,
+              155
+            ],
+            "binaryRate": 1,
+            "fractionalRate": 0.4774193548387095
+          },
+          {
+            "decile": 5,
+            "rankRange": [
+              156,
+              186
+            ],
+            "binaryRate": 1,
+            "fractionalRate": 0.6193548387096774
+          },
+          {
+            "decile": 6,
+            "rankRange": [
+              187,
+              217
+            ],
+            "binaryRate": 1,
+            "fractionalRate": 0.5483870967741935
+          },
+          {
+            "decile": 7,
+            "rankRange": [
+              218,
+              248
+            ],
+            "binaryRate": 1,
+            "fractionalRate": 0.6129032258064516
+          },
+          {
+            "decile": 8,
+            "rankRange": [
+              249,
+              279
+            ],
+            "binaryRate": 1,
+            "fractionalRate": 0.5419354838709677
+          },
+          {
+            "decile": 9,
+            "rankRange": [
+              280,
+              310
+            ],
+            "binaryRate": 1,
+            "fractionalRate": 0.535483870967742
+          }
+        ],
+        "estimatedH_binary": null,
+        "estimatedH_fractional": null
+      },
+      {
+        "queryId": "Q03",
+        "query": "front brake pads",
+        "productCount": 331,
+        "deciles": [
+          {
+            "decile": 0,
+            "rankRange": [
+              1,
+              34
+            ],
+            "binaryRate": 1,
+            "fractionalRate": 0.8137254901960786
+          },
+          {
+            "decile": 1,
+            "rankRange": [
+              35,
+              68
+            ],
+            "binaryRate": 1,
+            "fractionalRate": 0.7745098039215688
+          },
+          {
+            "decile": 2,
+            "rankRange": [
+              69,
+              102
+            ],
+            "binaryRate": 1,
+            "fractionalRate": 0.754901960784314
+          },
+          {
+            "decile": 3,
+            "rankRange": [
+              103,
+              136
+            ],
+            "binaryRate": 1,
+            "fractionalRate": 0.7647058823529415
+          },
+          {
+            "decile": 4,
+            "rankRange": [
+              137,
+              170
+            ],
+            "binaryRate": 1,
+            "fractionalRate": 0.7058823529411766
+          },
+          {
+            "decile": 5,
+            "rankRange": [
+              171,
+              204
+            ],
+            "binaryRate": 1,
+            "fractionalRate": 0.7254901960784315
+          },
+          {
+            "decile": 6,
+            "rankRange": [
+              205,
+              238
+            ],
+            "binaryRate": 1,
+            "fractionalRate": 0.7254901960784315
+          },
+          {
+            "decile": 7,
+            "rankRange": [
+              239,
+              272
+            ],
+            "binaryRate": 1,
+            "fractionalRate": 0.754901960784314
+          },
+          {
+            "decile": 8,
+            "rankRange": [
+              273,
+              306
+            ],
+            "binaryRate": 1,
+            "fractionalRate": 0.7156862745098042
+          },
+          {
+            "decile": 9,
+            "rankRange": [
+              307,
+              331
+            ],
+            "binaryRate": 1,
+            "fractionalRate": 0.6799999999999997
+          }
+        ],
+        "estimatedH_binary": null,
+        "estimatedH_fractional": null
+      },
+      {
+        "queryId": "Q04",
+        "query": "big brake kit for 2017 Honda Civic Si",
+        "productCount": 317,
+        "deciles": [
+          {
+            "decile": 0,
+            "rankRange": [
+              1,
+              32
+            ],
+            "binaryRate": 1,
+            "fractionalRate": 0.7276785714285713
+          },
+          {
+            "decile": 1,
+            "rankRange": [
+              33,
+              64
+            ],
+            "binaryRate": 1,
+            "fractionalRate": 0.6205357142857144
+          },
+          {
+            "decile": 2,
+            "rankRange": [
+              65,
+              96
+            ],
+            "binaryRate": 1,
+            "fractionalRate": 0.7455357142857146
+          },
+          {
+            "decile": 3,
+            "rankRange": [
+              97,
+              128
+            ],
+            "binaryRate": 1,
+            "fractionalRate": 0.6830357142857144
+          },
+          {
+            "decile": 4,
+            "rankRange": [
+              129,
+              160
+            ],
+            "binaryRate": 1,
+            "fractionalRate": 0.7767857142857144
+          },
+          {
+            "decile": 5,
+            "rankRange": [
+              161,
+              192
+            ],
+            "binaryRate": 1,
+            "fractionalRate": 0.7633928571428573
+          },
+          {
+            "decile": 6,
+            "rankRange": [
+              193,
+              224
+            ],
+            "binaryRate": 1,
+            "fractionalRate": 0.7232142857142859
+          },
+          {
+            "decile": 7,
+            "rankRange": [
+              225,
+              256
+            ],
+            "binaryRate": 1,
+            "fractionalRate": 0.5714285714285715
+          },
+          {
+            "decile": 8,
+            "rankRange": [
+              257,
+              288
+            ],
+            "binaryRate": 1,
+            "fractionalRate": 0.6116071428571428
+          },
+          {
+            "decile": 9,
+            "rankRange": [
+              289,
+              317
+            ],
+            "binaryRate": 1,
+            "fractionalRate": 0.7586206896551725
+          }
+        ],
+        "estimatedH_binary": null,
+        "estimatedH_fractional": null
+      },
+      {
+        "queryId": "Q05",
+        "query": "brake kit for 2018 Honda Civic Si",
+        "productCount": 315,
+        "deciles": [
+          {
+            "decile": 0,
+            "rankRange": [
+              1,
+              32
+            ],
+            "binaryRate": 1,
+            "fractionalRate": 0.5677083333333334
+          },
+          {
+            "decile": 1,
+            "rankRange": [
+              33,
+              64
+            ],
+            "binaryRate": 1,
+            "fractionalRate": 0.5520833333333334
+          },
+          {
+            "decile": 2,
+            "rankRange": [
+              65,
+              96
+            ],
+            "binaryRate": 1,
+            "fractionalRate": 0.5989583333333334
+          },
+          {
+            "decile": 3,
+            "rankRange": [
+              97,
+              128
+            ],
+            "binaryRate": 1,
+            "fractionalRate": 0.6979166666666665
+          },
+          {
+            "decile": 4,
+            "rankRange": [
+              129,
+              160
+            ],
+            "binaryRate": 1,
+            "fractionalRate": 0.6718749999999998
+          },
+          {
+            "decile": 5,
+            "rankRange": [
+              161,
+              192
+            ],
+            "binaryRate": 1,
+            "fractionalRate": 0.6406249999999998
+          },
+          {
+            "decile": 6,
+            "rankRange": [
+              193,
+              224
+            ],
+            "binaryRate": 1,
+            "fractionalRate": 0.6614583333333331
+          },
+          {
+            "decile": 7,
+            "rankRange": [
+              225,
+              256
+            ],
+            "binaryRate": 1,
+            "fractionalRate": 0.6093749999999999
+          },
+          {
+            "decile": 8,
+            "rankRange": [
+              257,
+              288
+            ],
+            "binaryRate": 1,
+            "fractionalRate": 0.65625
+          },
+          {
+            "decile": 9,
+            "rankRange": [
+              289,
+              315
+            ],
+            "binaryRate": 1,
+            "fractionalRate": 0.5493827160493827
+          }
+        ],
+        "estimatedH_binary": null,
+        "estimatedH_fractional": null
+      },
+      {
+        "queryId": "Q06",
+        "query": "brake lines for 2022 Honda Civic Si",
+        "productCount": 273,
+        "deciles": [
+          {
+            "decile": 0,
+            "rankRange": [
+              1,
+              28
+            ],
+            "binaryRate": 1,
+            "fractionalRate": 0.7321428571428574
+          },
+          {
+            "decile": 1,
+            "rankRange": [
+              29,
+              56
+            ],
+            "binaryRate": 0.9642857142857143,
+            "fractionalRate": 0.5892857142857143
+          },
+          {
+            "decile": 2,
+            "rankRange": [
+              57,
+              84
+            ],
+            "binaryRate": 0.9642857142857143,
+            "fractionalRate": 0.6071428571428571
+          },
+          {
+            "decile": 3,
+            "rankRange": [
+              85,
+              112
+            ],
+            "binaryRate": 0.9285714285714286,
+            "fractionalRate": 0.5535714285714285
+          },
+          {
+            "decile": 4,
+            "rankRange": [
+              113,
+              140
+            ],
+            "binaryRate": 1,
+            "fractionalRate": 0.6011904761904762
+          },
+          {
+            "decile": 5,
+            "rankRange": [
+              141,
+              168
+            ],
+            "binaryRate": 1,
+            "fractionalRate": 0.5595238095238093
+          },
+          {
+            "decile": 6,
+            "rankRange": [
+              169,
+              196
+            ],
+            "binaryRate": 0.9285714285714286,
+            "fractionalRate": 0.5654761904761905
+          },
+          {
+            "decile": 7,
+            "rankRange": [
+              197,
+              224
+            ],
+            "binaryRate": 0.9642857142857143,
+            "fractionalRate": 0.5178571428571428
+          },
+          {
+            "decile": 8,
+            "rankRange": [
+              225,
+              252
+            ],
+            "binaryRate": 1,
+            "fractionalRate": 0.5595238095238095
+          },
+          {
+            "decile": 9,
+            "rankRange": [
+              253,
+              273
+            ],
+            "binaryRate": 0.9523809523809523,
+            "fractionalRate": 0.5158730158730158
+          }
+        ],
+        "estimatedH_binary": null,
+        "estimatedH_fractional": null
+      },
+      {
+        "queryId": "Q07",
+        "query": "stainless steel braided brake lines",
+        "productCount": 385,
+        "deciles": [
+          {
+            "decile": 0,
+            "rankRange": [
+              1,
+              39
+            ],
+            "binaryRate": 1,
+            "fractionalRate": 0.7948717948717952
+          },
+          {
+            "decile": 1,
+            "rankRange": [
+              40,
+              78
+            ],
+            "binaryRate": 1,
+            "fractionalRate": 0.6923076923076925
+          },
+          {
+            "decile": 2,
+            "rankRange": [
+              79,
+              117
+            ],
+            "binaryRate": 1,
+            "fractionalRate": 0.7641025641025644
+          },
+          {
+            "decile": 3,
+            "rankRange": [
+              118,
+              156
+            ],
+            "binaryRate": 1,
+            "fractionalRate": 0.7948717948717954
+          },
+          {
+            "decile": 4,
+            "rankRange": [
+              157,
+              195
+            ],
+            "binaryRate": 1,
+            "fractionalRate": 0.8102564102564107
+          },
+          {
+            "decile": 5,
+            "rankRange": [
+              196,
+              234
+            ],
+            "binaryRate": 1,
+            "fractionalRate": 0.784615384615385
+          },
+          {
+            "decile": 6,
+            "rankRange": [
+              235,
+              273
+            ],
+            "binaryRate": 1,
+            "fractionalRate": 0.8102564102564107
+          },
+          {
+            "decile": 7,
+            "rankRange": [
+              274,
+              312
+            ],
+            "binaryRate": 1,
+            "fractionalRate": 0.7948717948717954
+          },
+          {
+            "decile": 8,
+            "rankRange": [
+              313,
+              351
+            ],
+            "binaryRate": 1,
+            "fractionalRate": 0.8051282051282056
+          },
+          {
+            "decile": 9,
+            "rankRange": [
+              352,
+              385
+            ],
+            "binaryRate": 1,
+            "fractionalRate": 0.8000000000000004
+          }
+        ],
+        "estimatedH_binary": null,
+        "estimatedH_fractional": null
+      },
+      {
+        "queryId": "Q08",
+        "query": "lowering springs for 2023 Honda Civic Type R",
+        "productCount": 301,
+        "deciles": [
+          {
+            "decile": 0,
+            "rankRange": [
+              1,
+              31
+            ],
+            "binaryRate": 1,
+            "fractionalRate": 0.8333333333333334
+          },
+          {
+            "decile": 1,
+            "rankRange": [
+              32,
+              62
+            ],
+            "binaryRate": 1,
+            "fractionalRate": 0.7795698924731181
+          },
+          {
+            "decile": 2,
+            "rankRange": [
+              63,
+              93
+            ],
+            "binaryRate": 0.967741935483871,
+            "fractionalRate": 0.6827956989247311
+          },
+          {
+            "decile": 3,
+            "rankRange": [
+              94,
+              124
+            ],
+            "binaryRate": 0.967741935483871,
+            "fractionalRate": 0.6666666666666667
+          },
+          {
+            "decile": 4,
+            "rankRange": [
+              125,
+              155
+            ],
+            "binaryRate": 1,
+            "fractionalRate": 0.6666666666666665
+          },
+          {
+            "decile": 5,
+            "rankRange": [
+              156,
+              186
+            ],
+            "binaryRate": 1,
+            "fractionalRate": 0.6505376344086019
+          },
+          {
+            "decile": 6,
+            "rankRange": [
+              187,
+              217
+            ],
+            "binaryRate": 1,
+            "fractionalRate": 0.5967741935483871
+          },
+          {
+            "decile": 7,
+            "rankRange": [
+              218,
+              248
+            ],
+            "binaryRate": 1,
+            "fractionalRate": 0.6881720430107527
+          },
+          {
+            "decile": 8,
+            "rankRange": [
+              249,
+              279
+            ],
+            "binaryRate": 1,
+            "fractionalRate": 0.6559139784946237
+          },
+          {
+            "decile": 9,
+            "rankRange": [
+              280,
+              301
+            ],
+            "binaryRate": 1,
+            "fractionalRate": 0.5984848484848485
+          }
+        ],
+        "estimatedH_binary": null,
+        "estimatedH_fractional": null
+      },
+      {
+        "queryId": "Q09",
+        "query": "camber arms for 2016 Honda Civic",
+        "productCount": 308,
+        "deciles": [
+          {
+            "decile": 0,
+            "rankRange": [
+              1,
+              31
+            ],
+            "binaryRate": 1,
+            "fractionalRate": 0.8322580645161292
+          },
+          {
+            "decile": 1,
+            "rankRange": [
+              32,
+              62
+            ],
+            "binaryRate": 1,
+            "fractionalRate": 0.7548387096774195
+          },
+          {
+            "decile": 2,
+            "rankRange": [
+              63,
+              93
+            ],
+            "binaryRate": 1,
+            "fractionalRate": 0.741935483870968
+          },
+          {
+            "decile": 3,
+            "rankRange": [
+              94,
+              124
+            ],
+            "binaryRate": 0.967741935483871,
+            "fractionalRate": 0.6064516129032258
+          },
+          {
+            "decile": 4,
+            "rankRange": [
+              125,
+              155
+            ],
+            "binaryRate": 0.9032258064516129,
+            "fractionalRate": 0.6129032258064516
+          },
+          {
+            "decile": 5,
+            "rankRange": [
+              156,
+              186
+            ],
+            "binaryRate": 0.967741935483871,
+            "fractionalRate": 0.6387096774193549
+          },
+          {
+            "decile": 6,
+            "rankRange": [
+              187,
+              217
+            ],
+            "binaryRate": 1,
+            "fractionalRate": 0.638709677419355
+          },
+          {
+            "decile": 7,
+            "rankRange": [
+              218,
+              248
+            ],
+            "binaryRate": 0.967741935483871,
+            "fractionalRate": 0.5548387096774193
+          },
+          {
+            "decile": 8,
+            "rankRange": [
+              249,
+              279
+            ],
+            "binaryRate": 1,
+            "fractionalRate": 0.6193548387096776
+          },
+          {
+            "decile": 9,
+            "rankRange": [
+              280,
+              308
+            ],
+            "binaryRate": 1,
+            "fractionalRate": 0.5379310344827588
+          }
+        ],
+        "estimatedH_binary": null,
+        "estimatedH_fractional": null
+      },
+      {
+        "queryId": "Q10",
+        "query": "coilovers for 2017 Honda Civic",
+        "productCount": 316,
+        "deciles": [
+          {
+            "decile": 0,
+            "rankRange": [
+              1,
+              32
+            ],
+            "binaryRate": 1,
+            "fractionalRate": 0.90625
+          },
+          {
+            "decile": 1,
+            "rankRange": [
+              33,
+              64
+            ],
+            "binaryRate": 0.9375,
+            "fractionalRate": 0.8515625
+          },
+          {
+            "decile": 2,
+            "rankRange": [
+              65,
+              96
+            ],
+            "binaryRate": 0.96875,
+            "fractionalRate": 0.90625
+          },
+          {
+            "decile": 3,
+            "rankRange": [
+              97,
+              128
+            ],
+            "binaryRate": 1,
+            "fractionalRate": 0.9296875
+          },
+          {
+            "decile": 4,
+            "rankRange": [
+              129,
+              160
+            ],
+            "binaryRate": 1,
+            "fractionalRate": 0.9140625
+          },
+          {
+            "decile": 5,
+            "rankRange": [
+              161,
+              192
+            ],
+            "binaryRate": 1,
+            "fractionalRate": 0.9140625
+          },
+          {
+            "decile": 6,
+            "rankRange": [
+              193,
+              224
+            ],
+            "binaryRate": 1,
+            "fractionalRate": 0.8828125
+          },
+          {
+            "decile": 7,
+            "rankRange": [
+              225,
+              256
+            ],
+            "binaryRate": 1,
+            "fractionalRate": 0.84375
+          },
+          {
+            "decile": 8,
+            "rankRange": [
+              257,
+              288
+            ],
+            "binaryRate": 1,
+            "fractionalRate": 0.859375
+          },
+          {
+            "decile": 9,
+            "rankRange": [
+              289,
+              316
+            ],
+            "binaryRate": 0.9642857142857143,
+            "fractionalRate": 0.8035714285714286
+          }
+        ],
+        "estimatedH_binary": null,
+        "estimatedH_fractional": null
+      },
+      {
+        "queryId": "Q11",
+        "query": "lift kit for 2023 Ford F-150",
+        "productCount": 300,
+        "deciles": [
+          {
+            "decile": 0,
+            "rankRange": [
+              1,
+              30
+            ],
+            "binaryRate": 1,
+            "fractionalRate": 0.88
+          },
+          {
+            "decile": 1,
+            "rankRange": [
+              31,
+              60
+            ],
+            "binaryRate": 1,
+            "fractionalRate": 0.8933333333333336
+          },
+          {
+            "decile": 2,
+            "rankRange": [
+              61,
+              90
+            ],
+            "binaryRate": 1,
+            "fractionalRate": 0.8866666666666668
+          },
+          {
+            "decile": 3,
+            "rankRange": [
+              91,
+              120
+            ],
+            "binaryRate": 1,
+            "fractionalRate": 0.8200000000000003
+          },
+          {
+            "decile": 4,
+            "rankRange": [
+              121,
+              150
+            ],
+            "binaryRate": 0.9666666666666667,
+            "fractionalRate": 0.8000000000000003
+          },
+          {
+            "decile": 5,
+            "rankRange": [
+              151,
+              180
+            ],
+            "binaryRate": 1,
+            "fractionalRate": 0.7733333333333337
+          },
+          {
+            "decile": 6,
+            "rankRange": [
+              181,
+              210
+            ],
+            "binaryRate": 1,
+            "fractionalRate": 0.786666666666667
+          },
+          {
+            "decile": 7,
+            "rankRange": [
+              211,
+              240
+            ],
+            "binaryRate": 1,
+            "fractionalRate": 0.7600000000000002
+          },
+          {
+            "decile": 8,
+            "rankRange": [
+              241,
+              270
+            ],
+            "binaryRate": 0.9666666666666667,
+            "fractionalRate": 0.7600000000000003
+          },
+          {
+            "decile": 9,
+            "rankRange": [
+              271,
+              300
+            ],
+            "binaryRate": 1,
+            "fractionalRate": 0.7600000000000005
+          }
+        ],
+        "estimatedH_binary": null,
+        "estimatedH_fractional": null
+      },
+      {
+        "queryId": "Q12",
+        "query": "exhaust system for 2023 Honda Civic Type R",
+        "productCount": 286,
+        "deciles": [
+          {
+            "decile": 0,
+            "rankRange": [
+              1,
+              29
+            ],
+            "binaryRate": 1,
+            "fractionalRate": 0.7471264367816091
+          },
+          {
+            "decile": 1,
+            "rankRange": [
+              30,
+              58
+            ],
+            "binaryRate": 1,
+            "fractionalRate": 0.7873563218390806
+          },
+          {
+            "decile": 2,
+            "rankRange": [
+              59,
+              87
+            ],
+            "binaryRate": 1,
+            "fractionalRate": 0.6839080459770117
+          },
+          {
+            "decile": 3,
+            "rankRange": [
+              88,
+              116
+            ],
+            "binaryRate": 1,
+            "fractionalRate": 0.735632183908046
+          },
+          {
+            "decile": 4,
+            "rankRange": [
+              117,
+              145
+            ],
+            "binaryRate": 1,
+            "fractionalRate": 0.6896551724137929
+          },
+          {
+            "decile": 5,
+            "rankRange": [
+              146,
+              174
+            ],
+            "binaryRate": 1,
+            "fractionalRate": 0.6896551724137931
+          },
+          {
+            "decile": 6,
+            "rankRange": [
+              175,
+              203
+            ],
+            "binaryRate": 0.9655172413793104,
+            "fractionalRate": 0.6781609195402298
+          },
+          {
+            "decile": 7,
+            "rankRange": [
+              204,
+              232
+            ],
+            "binaryRate": 0.9310344827586207,
+            "fractionalRate": 0.6321839080459771
+          },
+          {
+            "decile": 8,
+            "rankRange": [
+              233,
+              261
+            ],
+            "binaryRate": 0.9310344827586207,
+            "fractionalRate": 0.6206896551724137
+          },
+          {
+            "decile": 9,
+            "rankRange": [
+              262,
+              286
+            ],
+            "binaryRate": 0.92,
+            "fractionalRate": 0.6333333333333332
+          }
+        ],
+        "estimatedH_binary": null,
+        "estimatedH_fractional": null
+      },
+      {
+        "queryId": "Q13",
+        "query": "downpipe for 2018 Honda Civic Type R",
+        "productCount": 303,
+        "deciles": [
+          {
+            "decile": 0,
+            "rankRange": [
+              1,
+              31
+            ],
+            "binaryRate": 1,
+            "fractionalRate": 0.6064516129032258
+          },
+          {
+            "decile": 1,
+            "rankRange": [
+              32,
+              62
+            ],
+            "binaryRate": 1,
+            "fractionalRate": 0.6000000000000001
+          },
+          {
+            "decile": 2,
+            "rankRange": [
+              63,
+              93
+            ],
+            "binaryRate": 1,
+            "fractionalRate": 0.6258064516129032
+          },
+          {
+            "decile": 3,
+            "rankRange": [
+              94,
+              124
+            ],
+            "binaryRate": 1,
+            "fractionalRate": 0.6516129032258067
+          },
+          {
+            "decile": 4,
+            "rankRange": [
+              125,
+              155
+            ],
+            "binaryRate": 0.9354838709677419,
+            "fractionalRate": 0.6064516129032259
+          },
+          {
+            "decile": 5,
+            "rankRange": [
+              156,
+              186
+            ],
+            "binaryRate": 1,
+            "fractionalRate": 0.6903225806451616
+          },
+          {
+            "decile": 6,
+            "rankRange": [
+              187,
+              217
+            ],
+            "binaryRate": 1,
+            "fractionalRate": 0.6967741935483873
+          },
+          {
+            "decile": 7,
+            "rankRange": [
+              218,
+              248
+            ],
+            "binaryRate": 1,
+            "fractionalRate": 0.6064516129032257
+          },
+          {
+            "decile": 8,
+            "rankRange": [
+              249,
+              279
+            ],
+            "binaryRate": 1,
+            "fractionalRate": 0.6064516129032259
+          },
+          {
+            "decile": 9,
+            "rankRange": [
+              280,
+              303
+            ],
+            "binaryRate": 1,
+            "fractionalRate": 0.6833333333333336
+          }
+        ],
+        "estimatedH_binary": null,
+        "estimatedH_fractional": null
+      },
+      {
+        "queryId": "Q14",
+        "query": "strut tower bar for 2023 Honda Civic",
+        "productCount": 343,
+        "deciles": [
+          {
+            "decile": 0,
+            "rankRange": [
+              1,
+              35
+            ],
+            "binaryRate": 1,
+            "fractionalRate": 0.8047619047619047
+          },
+          {
+            "decile": 1,
+            "rankRange": [
+              36,
+              70
+            ],
+            "binaryRate": 1,
+            "fractionalRate": 0.6666666666666669
+          },
+          {
+            "decile": 2,
+            "rankRange": [
+              71,
+              105
+            ],
+            "binaryRate": 1,
+            "fractionalRate": 0.6714285714285714
+          },
+          {
+            "decile": 3,
+            "rankRange": [
+              106,
+              140
+            ],
+            "binaryRate": 1,
+            "fractionalRate": 0.719047619047619
+          },
+          {
+            "decile": 4,
+            "rankRange": [
+              141,
+              175
+            ],
+            "binaryRate": 1,
+            "fractionalRate": 0.7285714285714283
+          },
+          {
+            "decile": 5,
+            "rankRange": [
+              176,
+              210
+            ],
+            "binaryRate": 1,
+            "fractionalRate": 0.6952380952380954
+          },
+          {
+            "decile": 6,
+            "rankRange": [
+              211,
+              245
+            ],
+            "binaryRate": 1,
+            "fractionalRate": 0.6619047619047618
+          },
+          {
+            "decile": 7,
+            "rankRange": [
+              246,
+              280
+            ],
+            "binaryRate": 1,
+            "fractionalRate": 0.6571428571428571
+          },
+          {
+            "decile": 8,
+            "rankRange": [
+              281,
+              315
+            ],
+            "binaryRate": 1,
+            "fractionalRate": 0.7714285714285712
+          },
+          {
+            "decile": 9,
+            "rankRange": [
+              316,
+              343
+            ],
+            "binaryRate": 1,
+            "fractionalRate": 0.6785714285714285
+          }
+        ],
+        "estimatedH_binary": null,
+        "estimatedH_fractional": null
+      },
+      {
+        "queryId": "Q15",
+        "query": "brake pads for 2024 Acura Integra",
+        "productCount": 315,
+        "deciles": [
+          {
+            "decile": 0,
+            "rankRange": [
+              1,
+              32
+            ],
+            "binaryRate": 1,
+            "fractionalRate": 0.5125
+          },
+          {
+            "decile": 1,
+            "rankRange": [
+              33,
+              64
+            ],
+            "binaryRate": 1,
+            "fractionalRate": 0.5625
+          },
+          {
+            "decile": 2,
+            "rankRange": [
+              65,
+              96
+            ],
+            "binaryRate": 1,
+            "fractionalRate": 0.55625
+          },
+          {
+            "decile": 3,
+            "rankRange": [
+              97,
+              128
+            ],
+            "binaryRate": 1,
+            "fractionalRate": 0.5124999999999998
+          },
+          {
+            "decile": 4,
+            "rankRange": [
+              129,
+              160
+            ],
+            "binaryRate": 0.96875,
+            "fractionalRate": 0.59375
+          },
+          {
+            "decile": 5,
+            "rankRange": [
+              161,
+              192
+            ],
+            "binaryRate": 1,
+            "fractionalRate": 0.50625
+          },
+          {
+            "decile": 6,
+            "rankRange": [
+              193,
+              224
+            ],
+            "binaryRate": 1,
+            "fractionalRate": 0.4624999999999998
+          },
+          {
+            "decile": 7,
+            "rankRange": [
+              225,
+              256
+            ],
+            "binaryRate": 1,
+            "fractionalRate": 0.4187499999999999
+          },
+          {
+            "decile": 8,
+            "rankRange": [
+              257,
+              288
+            ],
+            "binaryRate": 1,
+            "fractionalRate": 0.4749999999999998
+          },
+          {
+            "decile": 9,
+            "rankRange": [
+              289,
+              315
+            ],
+            "binaryRate": 1,
+            "fractionalRate": 0.5185185185185184
+          }
+        ],
+        "estimatedH_binary": null,
+        "estimatedH_fractional": null
+      },
+      {
+        "queryId": "Q16",
+        "query": "coilover kit",
+        "productCount": 296,
+        "deciles": [
+          {
+            "decile": 0,
+            "rankRange": [
+              1,
+              30
+            ],
+            "binaryRate": 1,
+            "fractionalRate": 0.9833333333333333
+          },
+          {
+            "decile": 1,
+            "rankRange": [
+              31,
+              60
+            ],
+            "binaryRate": 1,
+            "fractionalRate": 0.7833333333333333
+          },
+          {
+            "decile": 2,
+            "rankRange": [
+              61,
+              90
+            ],
+            "binaryRate": 1,
+            "fractionalRate": 0.8833333333333333
+          },
+          {
+            "decile": 3,
+            "rankRange": [
+              91,
+              120
+            ],
+            "binaryRate": 1,
+            "fractionalRate": 0.9166666666666666
+          },
+          {
+            "decile": 4,
+            "rankRange": [
+              121,
+              150
+            ],
+            "binaryRate": 1,
+            "fractionalRate": 0.9333333333333333
+          },
+          {
+            "decile": 5,
+            "rankRange": [
+              151,
+              180
+            ],
+            "binaryRate": 1,
+            "fractionalRate": 0.9666666666666667
+          },
+          {
+            "decile": 6,
+            "rankRange": [
+              181,
+              210
+            ],
+            "binaryRate": 0.9666666666666667,
+            "fractionalRate": 0.95
+          },
+          {
+            "decile": 7,
+            "rankRange": [
+              211,
+              240
+            ],
+            "binaryRate": 0.9666666666666667,
+            "fractionalRate": 0.9166666666666666
+          },
+          {
+            "decile": 8,
+            "rankRange": [
+              241,
+              270
+            ],
+            "binaryRate": 1,
+            "fractionalRate": 0.9333333333333333
+          },
+          {
+            "decile": 9,
+            "rankRange": [
+              271,
+              296
+            ],
+            "binaryRate": 1,
+            "fractionalRate": 0.9423076923076923
+          }
+        ],
+        "estimatedH_binary": null,
+        "estimatedH_fractional": null
+      },
+      {
+        "queryId": "Q17",
+        "query": "valved exhaust system",
+        "productCount": 313,
+        "deciles": [
+          {
+            "decile": 0,
+            "rankRange": [
+              1,
+              32
+            ],
+            "binaryRate": 1,
+            "fractionalRate": 0.9479166666666667
+          },
+          {
+            "decile": 1,
+            "rankRange": [
+              33,
+              64
+            ],
+            "binaryRate": 0.96875,
+            "fractionalRate": 0.8645833333333331
+          },
+          {
+            "decile": 2,
+            "rankRange": [
+              65,
+              96
+            ],
+            "binaryRate": 1,
+            "fractionalRate": 0.7916666666666667
+          },
+          {
+            "decile": 3,
+            "rankRange": [
+              97,
+              128
+            ],
+            "binaryRate": 0.875,
+            "fractionalRate": 0.7187499999999999
+          },
+          {
+            "decile": 4,
+            "rankRange": [
+              129,
+              160
+            ],
+            "binaryRate": 0.90625,
+            "fractionalRate": 0.8020833333333335
+          },
+          {
+            "decile": 5,
+            "rankRange": [
+              161,
+              192
+            ],
+            "binaryRate": 1,
+            "fractionalRate": 0.8645833333333333
+          },
+          {
+            "decile": 6,
+            "rankRange": [
+              193,
+              224
+            ],
+            "binaryRate": 1,
+            "fractionalRate": 0.9166666666666666
+          },
+          {
+            "decile": 7,
+            "rankRange": [
+              225,
+              256
+            ],
+            "binaryRate": 0.875,
+            "fractionalRate": 0.7604166666666666
+          },
+          {
+            "decile": 8,
+            "rankRange": [
+              257,
+              288
+            ],
+            "binaryRate": 0.90625,
+            "fractionalRate": 0.7604166666666667
+          },
+          {
+            "decile": 9,
+            "rankRange": [
+              289,
+              313
+            ],
+            "binaryRate": 1,
+            "fractionalRate": 0.8933333333333333
+          }
+        ],
+        "estimatedH_binary": null,
+        "estimatedH_fractional": null
+      },
+      {
+        "queryId": "Q18",
+        "query": "sportline lowering springs",
+        "productCount": 357,
+        "deciles": [
+          {
+            "decile": 0,
+            "rankRange": [
+              1,
+              36
+            ],
+            "binaryRate": 0.9722222222222222,
+            "fractionalRate": 0.8055555555555558
+          },
+          {
+            "decile": 1,
+            "rankRange": [
+              37,
+              72
+            ],
+            "binaryRate": 1,
+            "fractionalRate": 0.7962962962962964
+          },
+          {
+            "decile": 2,
+            "rankRange": [
+              73,
+              108
+            ],
+            "binaryRate": 1,
+            "fractionalRate": 0.712962962962963
+          },
+          {
+            "decile": 3,
+            "rankRange": [
+              109,
+              144
+            ],
+            "binaryRate": 1,
+            "fractionalRate": 0.7314814814814817
+          },
+          {
+            "decile": 4,
+            "rankRange": [
+              145,
+              180
+            ],
+            "binaryRate": 1,
+            "fractionalRate": 0.8611111111111114
+          },
+          {
+            "decile": 5,
+            "rankRange": [
+              181,
+              216
+            ],
+            "binaryRate": 1,
+            "fractionalRate": 0.7962962962962963
+          },
+          {
+            "decile": 6,
+            "rankRange": [
+              217,
+              252
+            ],
+            "binaryRate": 1,
+            "fractionalRate": 0.8333333333333334
+          },
+          {
+            "decile": 7,
+            "rankRange": [
+              253,
+              288
+            ],
+            "binaryRate": 1,
+            "fractionalRate": 0.8333333333333335
+          },
+          {
+            "decile": 8,
+            "rankRange": [
+              289,
+              324
+            ],
+            "binaryRate": 1,
+            "fractionalRate": 0.7685185185185185
+          },
+          {
+            "decile": 9,
+            "rankRange": [
+              325,
+              357
+            ],
+            "binaryRate": 1,
+            "fractionalRate": 0.7979797979797979
+          }
+        ],
+        "estimatedH_binary": null,
+        "estimatedH_fractional": null
+      }
+    ]
+  },
+  "u8a": {
+    "method": "Determinism probe — same query 3x, compare product-ID sequences",
+    "realQuery": {
+      "query": "brake pads for 2018 Honda Civic Si",
+      "runCounts": [
+        300,
+        300,
+        300
+      ],
+      "firstDivergence": 13,
+      "agreementByDecile": [
+        0.6,
+        0.5,
+        0.36666666666666664,
+        0.36666666666666664,
+        0.5,
+        0.36666666666666664,
+        0.4666666666666667,
+        0.36666666666666664,
+        0.5333333333333333,
+        0.43333333333333335
+      ]
+    },
+    "nonsenseQuery": {
+      "query": "zxqv flurbin widget",
+      "runCounts": [
+        300,
+        300,
+        200
+      ],
+      "firstDivergence": 7,
+      "agreementByDecile": [
+        0.35,
+        0.05,
+        0,
+        0.05,
+        0.25,
+        0,
+        0.15,
+        0.05,
+        0.2,
+        0.1
+      ]
+    }
+  }
+}
