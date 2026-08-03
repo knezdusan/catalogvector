@@ -1,0 +1,175 @@
+{
+  "directive": "DIRECTIVE-8-v2 §8.4",
+  "design": "H4-R as registered at TSP, paired-query, presence@50 unscoped",
+  "deviation": "Relaxed category matching (same store, not same category)",
+  "titleAbsent": [
+    {
+      "id": "ta-01",
+      "handle": "paragon-pbp370-brake-pads",
+      "title": "Paragon PBP370 Front Brake Pads",
+      "vehicle": "2017 Honda Civic Type R",
+      "query": "brake pads for 2017 Honda Civic Type R",
+      "category": "brake pads"
+    },
+    {
+      "id": "ta-02",
+      "handle": "paragon-pbp1557-brake-pads",
+      "title": "Paragon PBP15570 Rear Brake Pads",
+      "vehicle": "2016 Honda Civic",
+      "query": "rear brake pads for 2016 Honda Civic",
+      "category": "brake pads"
+    },
+    {
+      "id": "ta-03",
+      "handle": "poco-insulated-low-profile-shift-knob-in-black-m10x1-5",
+      "title": "POCO Insulated Low-Profile Shift Knob (M10X1.5)",
+      "vehicle": "2017 Honda Civic Si",
+      "query": "shift knob for 2017 Honda Civic Si",
+      "category": "shifter"
+    },
+    {
+      "id": "ta-04",
+      "handle": "ngk-laser-iridium-spark-plug-box-of-4-ilzkar8j8sy",
+      "title": "NGK Laser Iridium Spark Plug Box of 4 (ILZKAR8J8SY)",
+      "vehicle": "2018 Honda Civic Si",
+      "query": "spark plugs for 2018 Honda Civic Si",
+      "category": "spark plugs"
+    },
+    {
+      "id": "ta-05",
+      "handle": "hybrid-racing-heavy-duty-gear-selector-springs",
+      "title": "Hybrid Racing Heavy-Duty Gear Selector Springs",
+      "vehicle": "2005 Acura RSX",
+      "query": "shifter springs for 2005 Acura RSX",
+      "category": "other"
+    },
+    {
+      "id": "ta-06",
+      "handle": "k-series-transmission-performance-spring-upgrade-1887",
+      "title": "K-Series Transmission Performance Select Springs",
+      "vehicle": "2012 Honda Civic Si",
+      "query": "shifter springs for 2012 Honda Civic Si",
+      "category": "other"
+    }
+  ],
+  "titlePresent": [
+    {
+      "id": "tp-01",
+      "handle": "z23-evolution-sport-brake-pads-for-2017-honda-civic-si",
+      "title": "Z23 Evolution Sport Brake Pads for 2017 - 2020 Honda Civic Si",
+      "vehicle": "2017 Honda Civic Type R",
+      "query": "brake pads for 2017 Honda Civic Type R",
+      "category": "brake pads"
+    },
+    {
+      "id": "tp-02",
+      "handle": "hawk-16-17-honda-civic-hps-5-0-rear-brake-pads",
+      "title": "Hawk HPS 5.0 Rear Brake Pads for 2016+ Honda Civic",
+      "vehicle": "2016 Honda Civic",
+      "query": "rear brake pads for 2016 Honda Civic",
+      "category": "brake pads"
+    },
+    {
+      "id": "tp-03",
+      "handle": "acuity-4-way-adjustable-performance-shifter-for-2022-honda-civic-integra-fe-fl-de",
+      "title": "Acuity 4-Way Adjustable Performance Shifter for 2022+ Honda Civic / Integra",
+      "vehicle": "2017 Honda Civic Si",
+      "query": "shift knob for 2017 Honda Civic Si",
+      "category": "shifter"
+    },
+    {
+      "id": "tp-04",
+      "handle": "z23-evolution-sport-brake-pads-for-2017-honda-civic-si",
+      "title": "Z23 Evolution Sport Brake Pads for 2017 - 2020 Honda Civic Si",
+      "vehicle": "2018 Honda Civic Si",
+      "query": "spark plugs for 2018 Honda Civic Si",
+      "category": "brake pads"
+    },
+    {
+      "id": "tp-05",
+      "handle": "acuity-adjustable-short-shifter-for-the-2012-2015-honda-civic",
+      "title": "9th Gen Civic ACUITY Adjustable Short Shifter",
+      "vehicle": "2005 Acura RSX",
+      "query": "shifter springs for 2005 Acura RSX",
+      "category": "shifter"
+    },
+    {
+      "id": "tp-06",
+      "handle": "10th-gen-civic-acuity-adjustable-short-shifter",
+      "title": "10th Gen Civic Fully Adjustable Performance Short Shifter",
+      "vehicle": "2012 Honda Civic Si",
+      "query": "shifter springs for 2012 Honda Civic Si",
+      "category": "shifter"
+    }
+  ],
+  "results": [
+    {
+      "query": "brake pads for 2017 Honda Civic Type R",
+      "totalCount": 79,
+      "taHandle": "paragon-pbp370-brake-pads",
+      "tpHandle": "z23-evolution-sport-brake-pads-for-2017-honda-civic-si",
+      "taPresent": false,
+      "tpPresent": false,
+      "taRank": null,
+      "tpRank": null
+    },
+    {
+      "query": "rear brake pads for 2016 Honda Civic",
+      "totalCount": 201,
+      "taHandle": "paragon-pbp1557-brake-pads",
+      "tpHandle": "hawk-16-17-honda-civic-hps-5-0-rear-brake-pads",
+      "taPresent": true,
+      "tpPresent": true,
+      "taRank": 2,
+      "tpRank": 33
+    },
+    {
+      "query": "shift knob for 2017 Honda Civic Si",
+      "totalCount": 213,
+      "taHandle": "poco-insulated-low-profile-shift-knob-in-black-m10x1-5",
+      "tpHandle": "acuity-4-way-adjustable-performance-shifter-for-2022-honda-civic-integra-fe-fl-de",
+      "taPresent": false,
+      "tpPresent": false,
+      "taRank": null,
+      "tpRank": null
+    },
+    {
+      "query": "spark plugs for 2018 Honda Civic Si",
+      "totalCount": 88,
+      "taHandle": "ngk-laser-iridium-spark-plug-box-of-4-ilzkar8j8sy",
+      "tpHandle": "z23-evolution-sport-brake-pads-for-2017-honda-civic-si",
+      "taPresent": true,
+      "tpPresent": false,
+      "taRank": 2,
+      "tpRank": null
+    },
+    {
+      "query": "shifter springs for 2005 Acura RSX",
+      "totalCount": 77,
+      "taHandle": "hybrid-racing-heavy-duty-gear-selector-springs",
+      "tpHandle": "acuity-adjustable-short-shifter-for-the-2012-2015-honda-civic",
+      "taPresent": false,
+      "tpPresent": false,
+      "taRank": null,
+      "tpRank": null
+    },
+    {
+      "query": "shifter springs for 2012 Honda Civic Si",
+      "totalCount": 179,
+      "taHandle": "k-series-transmission-performance-spring-upgrade-1887",
+      "tpHandle": "10th-gen-civic-acuity-adjustable-short-shifter",
+      "taPresent": true,
+      "tpPresent": false,
+      "taRank": 1,
+      "tpRank": null
+    }
+  ],
+  "summary": {
+    "taPresent": 3,
+    "tpPresent": 1,
+    "total": 6,
+    "taRate": 0.5,
+    "tpRate": 0.16666666666666666,
+    "difference": -0.33333333333333337
+  }
+}
