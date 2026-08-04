@@ -1,0 +1,440 @@
+{
+  "timestamp": "2026-08-04T09:44:49.459Z",
+  "directive": "DIRECTIVE-12 §5",
+  "method": "Platform audit via curl: products.json, headers, cookies, robots.txt, HTML",
+  "totalDomains": 49,
+  "results": [
+    {
+      "domain": "carparts.com",
+      "platform": "Unknown/Other",
+      "method": "no indicators found",
+      "evidence": "No platform-specific indicators detected"
+    },
+    {
+      "domain": "prlmotorsports.com",
+      "platform": "Shopify",
+      "method": "products.json",
+      "evidence": "https://www.prlmotorsports.com/products.json returns JSON with products array"
+    },
+    {
+      "domain": "civicx.com",
+      "platform": "Unknown/Other",
+      "method": "no indicators found",
+      "evidence": "No platform-specific indicators detected"
+    },
+    {
+      "domain": "carid.com",
+      "platform": "Unknown/Other",
+      "method": "no indicators found",
+      "evidence": "No platform-specific indicators detected"
+    },
+    {
+      "domain": "sbxperformance.com",
+      "platform": "Shopify",
+      "method": "products.json",
+      "evidence": "https://www.sbxperformance.com/products.json returns JSON with products array"
+    },
+    {
+      "domain": "shop.app",
+      "platform": "Unknown/Other",
+      "method": "no indicators found",
+      "evidence": "No platform-specific indicators detected"
+    },
+    {
+      "domain": "procivic.com",
+      "platform": "Unknown/Other",
+      "method": "no indicators found",
+      "evidence": "No platform-specific indicators detected"
+    },
+    {
+      "domain": "hpsperformanceproducts.com",
+      "platform": "Shopify",
+      "method": "products.json",
+      "evidence": "https://www.hpsperformanceproducts.com/products.json returns JSON with products array"
+    },
+    {
+      "domain": "redline360.com",
+      "platform": "Shopify",
+      "method": "products.json",
+      "evidence": "https://www.redline360.com/products.json returns JSON with products array"
+    },
+    {
+      "domain": "evasivemotorsports.com",
+      "platform": "WordPress/WooCommerce",
+      "method": "HTML",
+      "evidence": "woocommerce or wp-content in HTML"
+    },
+    {
+      "domain": "twostepperformance.com",
+      "platform": "Shopify",
+      "method": "products.json",
+      "evidence": "https://www.twostepperformance.com/products.json returns JSON with products array"
+    },
+    {
+      "domain": "turbokits.com",
+      "platform": "Unknown/Other",
+      "method": "no indicators found",
+      "evidence": "No platform-specific indicators detected"
+    },
+    {
+      "domain": "youtube.com",
+      "platform": "Unknown/Other",
+      "method": "no indicators found",
+      "evidence": "No platform-specific indicators detected"
+    },
+    {
+      "domain": "springrates.com",
+      "platform": "Shopify",
+      "method": "products.json",
+      "evidence": "https://www.springrates.com/products.json returns JSON with products array"
+    },
+    {
+      "domain": "kamispeed.com",
+      "platform": "Shopify",
+      "method": "products.json",
+      "evidence": "https://www.kamispeed.com/products.json returns JSON with products array"
+    },
+    {
+      "domain": "ebay.com",
+      "platform": "Unknown/Other",
+      "method": "no indicators found",
+      "evidence": "No platform-specific indicators detected"
+    },
+    {
+      "domain": "nextgentuning.com",
+      "platform": "Shopify",
+      "method": "products.json",
+      "evidence": "https://www.nextgentuning.com/products.json returns JSON with products array"
+    },
+    {
+      "domain": "fitmentindustries.com",
+      "platform": "Unknown/Other",
+      "method": "no indicators found",
+      "evidence": "No platform-specific indicators detected"
+    },
+    {
+      "domain": "maperformance.com",
+      "platform": "Shopify",
+      "method": "products.json",
+      "evidence": "https://www.maperformance.com/products.json returns JSON with products array"
+    },
+    {
+      "domain": "hybrid-racing.com",
+      "platform": "Shopify",
+      "method": "products.json",
+      "evidence": "https://www.hybrid-racing.com/products.json returns JSON with products array"
+    },
+    {
+      "domain": "bcracing-na.com",
+      "platform": "Unknown/Other",
+      "method": "no indicators found",
+      "evidence": "No platform-specific indicators detected"
+    },
+    {
+      "domain": "goodhousekeeping.com",
+      "platform": "Unknown/Other",
+      "method": "no indicators found",
+      "evidence": "No platform-specific indicators detected"
+    },
+    {
+      "domain": "sleepfoundation.org",
+      "platform": "WordPress/WooCommerce",
+      "method": "robots.txt",
+      "evidence": "woocommerce or wp-content in robots.txt"
+    },
+    {
+      "domain": "target.com",
+      "platform": "Unknown/Other",
+      "method": "no indicators found",
+      "evidence": "No platform-specific indicators detected"
+    },
+    {
+      "domain": "shipt.com",
+      "platform": "Unknown/Other",
+      "method": "no indicators found",
+      "evidence": "No platform-specific indicators detected"
+    },
+    {
+      "domain": "amazon.com",
+      "platform": "Unknown/Other",
+      "method": "no indicators found",
+      "evidence": "No platform-specific indicators detected"
+    },
+    {
+      "domain": "urbanoutfitters.com",
+      "platform": "Unknown/Other",
+      "method": "no indicators found",
+      "evidence": "No platform-specific indicators detected"
+    },
+    {
+      "domain": "kohls.com",
+      "platform": "Unknown/Other",
+      "method": "no indicators found",
+      "evidence": "No platform-specific indicators detected"
+    },
+    {
+      "domain": "soulesthetic.com",
+      "platform": "Shopify",
+      "method": "products.json",
+      "evidence": "https://www.soulesthetic.com/products.json returns JSON with products array"
+    },
+    {
+      "domain": "linoto.com",
+      "platform": "Shopify",
+      "method": "products.json",
+      "evidence": "https://www.linoto.com/products.json returns JSON with products array"
+    },
+    {
+      "domain": "nymag.com",
+      "platform": "Unknown/Other",
+      "method": "no indicators found",
+      "evidence": "No platform-specific indicators detected"
+    },
+    {
+      "domain": "parachutehome.com",
+      "platform": "Shopify",
+      "method": "products.json",
+      "evidence": "https://www.parachutehome.com/products.json returns JSON with products array"
+    },
+    {
+      "domain": "coyuchi.com",
+      "platform": "Shopify",
+      "method": "products.json",
+      "evidence": "https://www.coyuchi.com/products.json returns JSON with products array"
+    },
+    {
+      "domain": "wayside-performance.co.uk",
+      "platform": "Shopify",
+      "method": "products.json",
+      "evidence": "https://www.wayside-performance.co.uk/products.json returns JSON with products array"
+    },
+    {
+      "domain": "nforcd.com",
+      "platform": "Shopify",
+      "method": "products.json",
+      "evidence": "https://www.nforcd.com/products.json returns JSON with products array"
+    },
+    {
+      "domain": "hks-power.co.jp",
+      "platform": "Unknown/Other",
+      "method": "no indicators found",
+      "evidence": "No platform-specific indicators detected"
+    },
+    {
+      "domain": "autobarn.net",
+      "platform": "Unknown/Other",
+      "method": "no indicators found",
+      "evidence": "No platform-specific indicators detected"
+    },
+    {
+      "domain": "gsportbygesi.com",
+      "platform": "Unknown/Other",
+      "method": "no indicators found",
+      "evidence": "No platform-specific indicators detected"
+    },
+    {
+      "domain": "hardmotion.com",
+      "platform": "Unknown/Other",
+      "method": "no indicators found",
+      "evidence": "No platform-specific indicators detected"
+    },
+    {
+      "domain": "dickssportinggoods.com",
+      "platform": "WordPress/WooCommerce",
+      "method": "robots.txt",
+      "evidence": "woocommerce or wp-content in robots.txt"
+    },
+    {
+      "domain": "bigagnes.com",
+      "platform": "Shopify",
+      "method": "products.json",
+      "evidence": "https://www.bigagnes.com/products.json returns JSON with products array"
+    },
+    {
+      "domain": "rei.com",
+      "platform": "Unknown/Other",
+      "method": "no indicators found",
+      "evidence": "No platform-specific indicators detected"
+    },
+    {
+      "domain": "outdoorgearlab.com",
+      "platform": "Unknown/Other",
+      "method": "no indicators found",
+      "evidence": "No platform-specific indicators detected"
+    },
+    {
+      "domain": "cascadedesigns.com",
+      "platform": "Shopify",
+      "method": "products.json",
+      "evidence": "https://www.cascadedesigns.com/products.json returns JSON with products array"
+    },
+    {
+      "domain": "walmart.com",
+      "platform": "Unknown/Other",
+      "method": "no indicators found",
+      "evidence": "No platform-specific indicators detected"
+    },
+    {
+      "domain": "sportsmans.com",
+      "platform": "Unknown/Other",
+      "method": "no indicators found",
+      "evidence": "No platform-specific indicators detected"
+    },
+    {
+      "domain": "cleverhiker.com",
+      "platform": "WordPress/WooCommerce",
+      "method": "HTML",
+      "evidence": "woocommerce or wp-content in HTML"
+    },
+    {
+      "domain": "sixmoondesigns.com",
+      "platform": "Shopify",
+      "method": "products.json",
+      "evidence": "https://www.sixmoondesigns.com/products.json returns JSON with products array"
+    },
+    {
+      "domain": "sectionhiker.com",
+      "platform": "Unknown/Other",
+      "method": "no indicators found",
+      "evidence": "No platform-specific indicators detected"
+    }
+  ],
+  "summary": {
+    "Unknown/Other": 26,
+    "Shopify": 19,
+    "WordPress/WooCommerce": 4
+  },
+  "shopifyDomains": [
+    "prlmotorsports.com",
+    "sbxperformance.com",
+    "hpsperformanceproducts.com",
+    "redline360.com",
+    "twostepperformance.com",
+    "springrates.com",
+    "kamispeed.com",
+    "nextgentuning.com",
+    "maperformance.com",
+    "hybrid-racing.com",
+    "soulesthetic.com",
+    "linoto.com",
+    "parachutehome.com",
+    "coyuchi.com",
+    "wayside-performance.co.uk",
+    "nforcd.com",
+    "bigagnes.com",
+    "cascadedesigns.com",
+    "sixmoondesigns.com"
+  ],
+  "shopifyCount": 19,
+  "perAssistant": {
+    "chatgpt": {
+      "label": "ChatGPT",
+      "cards": 2,
+      "conversational": 0,
+      "mixed": 4,
+      "total": 6,
+      "shopifyMerchantDomains": [
+        "sbxperformance.com",
+        "springrates.com",
+        "kamispeed.com",
+        "nextgentuning.com",
+        "wayside-performance.co.uk",
+        "nforcd.com",
+        "bigagnes.com"
+      ],
+      "shopifyCount": 7,
+      "allMerchantDomains": [
+        "carparts.com",
+        "sbxperformance.com",
+        "procivic.com",
+        "springrates.com",
+        "kamispeed.com",
+        "ebay.com",
+        "nextgentuning.com",
+        "target.com",
+        "shipt.com",
+        "wayside-performance.co.uk",
+        "nforcd.com",
+        "hks-power.co.jp",
+        "dickssportinggoods.com",
+        "bigagnes.com",
+        "rei.com"
+      ],
+      "allMerchantCount": 15
+    },
+    "copilot": {
+      "label": "Copilot",
+      "cards": 3,
+      "conversational": 1,
+      "mixed": 2,
+      "total": 6,
+      "shopifyMerchantDomains": [
+        "prlmotorsports.com",
+        "hpsperformanceproducts.com",
+        "redline360.com",
+        "maperformance.com",
+        "twostepperformance.com",
+        "cascadedesigns.com"
+      ],
+      "shopifyCount": 6,
+      "allMerchantDomains": [
+        "prlmotorsports.com",
+        "hpsperformanceproducts.com",
+        "redline360.com",
+        "evasivemotorsports.com",
+        "fitmentindustries.com",
+        "maperformance.com",
+        "amazon.com",
+        "urbanoutfitters.com",
+        "kohls.com",
+        "twostepperformance.com",
+        "autobarn.net",
+        "cascadedesigns.com",
+        "walmart.com",
+        "sportsmans.com"
+      ],
+      "allMerchantCount": 14
+    },
+    "google_ai": {
+      "label": "Google AI (Serbia)",
+      "cards": 1,
+      "conversational": 5,
+      "mixed": 0,
+      "total": 6,
+      "shopifyMerchantDomains": [
+        "twostepperformance.com",
+        "hybrid-racing.com",
+        "springrates.com",
+        "soulesthetic.com",
+        "linoto.com",
+        "parachutehome.com",
+        "coyuchi.com",
+        "sixmoondesigns.com"
+      ],
+      "shopifyCount": 8,
+      "allMerchantDomains": [
+        "carid.com",
+        "twostepperformance.com",
+        "turbokits.com",
+        "hybrid-racing.com",
+        "bcracing-na.com",
+        "springrates.com",
+        "soulesthetic.com",
+        "linoto.com",
+        "parachutehome.com",
+        "coyuchi.com",
+        "gsportbygesi.com",
+        "hardmotion.com",
+        "sixmoondesigns.com"
+      ],
+      "allMerchantCount": 13
+    }
+  },
+  "merchantOnlySummary": {
+    "totalMerchants": 40,
+    "shopifyMerchants": 19,
+    "nonShopifyMerchants": 21,
+    "shopifyShare": 0.475,
+    "note": "Excluding content/review sites (civicx.com, youtube.com, goodhousekeeping.com, sleepfoundation.org, nymag.com, outdoorgearlab.com, cleverhiker.com, sectionhiker.com, shop.app)"
+  }
+}
