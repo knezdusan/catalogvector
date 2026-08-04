@@ -1,0 +1,59 @@
+{
+  "schemaVersion": "h6-seller-check-v1",
+  "created": "2026-08-04",
+  "directive": "DIRECTIVE-12 §3",
+  "method": "For each of 5 Subimods products, determine whether Subimods' OWN listing is on shop.app — seller name and merchant domain, not just title match.",
+  "subimods_store_info": {
+    "domain": "subimods.com",
+    "shopify_store_id": "58735984815",
+    "shop_app_presence": "partial — only OEM Subaru parts and Motul oils indexed",
+    "indexed_product_types": ["oil filter", "flywheel bolt", "lug nut", "wheel stud", "coolant", "crush gaskets", "gear oil", "motor oil"]
+  },
+  "results": [
+    {
+      "product_title": "Fluidampr Steel Internally Balanced Damper Most EJ",
+      "subimods_product_id_on_subimods_com": "7105505231023",
+      "subimods_listing_found_on_shopapp": false,
+      "sellers_seen": ["Next Level Performance", "Rallysport Direct", "Automotive Specialties USA", "Sideways Fab"],
+      "evidence": "Matching products from other sellers exist. Subimods sells this on subimods.com but it does not appear on shop.app as a Subimods listing."
+    },
+    {
+      "product_title": "COBB Boost Control Solenoid 2015-2021 WRX",
+      "subimods_product_id_on_subimods_com": "7105456406703",
+      "subimods_listing_found_on_shopapp": false,
+      "sellers_seen": ["GrimmSpeed", "LOWDOLLER-MOTORSPORTS", "CAMTuning Performance"],
+      "evidence": "No COBB-brand boost control solenoid for 2015-2021 WRX found from any seller on shop.app. GrimmSpeed sells a different brand."
+    },
+    {
+      "product_title": "PRL Motorsports High Volume Intake Kit 2022-2024 Honda Civic",
+      "subimods_product_id_on_subimods_com": "8333638729903",
+      "subimods_listing_found_on_shopapp": false,
+      "sellers_seen": ["PRL Motorsports", "Two Step Performance", "HPTautosport", "Axion Performance Parts"],
+      "evidence": "PRL Motorsports' own shop.app store has the product, sold by PRL directly. Subimods' listing does not appear."
+    },
+    {
+      "product_title": "COBB AccessPORT V3 2015-2021 WRX",
+      "subimods_product_id_on_subimods_com": "7105382154415",
+      "subimods_listing_found_on_shopapp": false,
+      "sellers_seen": ["JDMuscle", "FelixPerformance", "CAMTuning Performance", "Rallysport Direct", "SubiSpeed"],
+      "evidence": "Product appears as JDMuscle listing. 'More from Subimods.com' section only shows OEM Subaru parts and Motul oils, not the COBB Accessport."
+    },
+    {
+      "product_title": "PRL Motorsports Charge Pipe Upgrade Kit 2018-2022",
+      "subimods_product_id_on_subimods_com": "8333640171695",
+      "subimods_listing_found_on_shopapp": false,
+      "sellers_seen": ["Axion Performance Parts", "PRL Motorsports", "AHC Garage", "Two Step Performance"],
+      "evidence": "Axion Performance Parts sells the PRL charge pipe for Honda Accord. PRL Motorsports' own shop.app store has charge pipes for different vehicles. Subimods' listing does not appear."
+    }
+  ],
+  "verdict": "H6 finding 2 dissolves. Subimods' own listings for all 5 target products are NOT on shop.app. The two Shopify surfaces (Catalog API and shop.app) agree about Subimods: both return zero results for these 5 products. Subimods' absence is consistent across both surfaces.",
+  "key_findings": [
+    "Subimods has a partial shop.app presence — only OEM Subaru parts and Motul oils are indexed",
+    "None of the 5 aftermarket performance products (Fluidampr, COBB, PRL Motorsports) appear as Subimods listings on shop.app",
+    "Matching products from other sellers DO appear on shop.app — this is what H6 originally detected",
+    "The H6 finding 'products absent from Catalog API are present on shop.app' was checking the wrong thing (product title match, not seller identity)",
+    "When seller identity is checked, the two surfaces agree: Subimods' aftermarket performance catalog is not indexed on either surface",
+    "This is NOT a platform inconsistency — it is a consistent absence. Subimods may have opted out of Catalog syndication for aftermarket parts, or their feed may be filtered."
+  ],
+  "implications_for_u9": "Set B (absent from Catalog API but present on shop.app under own merchant) CANNOT be assembled from Subimods. Need to find other merchants whose products are absent from Catalog but present on shop.app under their own listing."
+}
