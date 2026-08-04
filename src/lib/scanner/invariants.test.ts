@@ -39,19 +39,67 @@ describe("I-1: PaginationInvariant", () => {
 
   it("throws when page 2 has the same IDs as page 1 (U8-A bug)", () => {
     const inv = new PaginationInvariant();
-    inv.check({
-      products: [{ id: "a", title: "A", surface: "catalog-api", variants: [] }],
-      cursor: "c1",
-      hasNextPage: true,
-    });
+    const products = Array.from({ length: 10 }, (_, i) => ({
+      id: `id${i}`,
+      title: `P${i}`,
+      surface: "catalog-api" as const,
+      variants: [],
+    }));
+    inv.check({ products, cursor: "c1", hasNextPage: true });
+    // Same 10 IDs on page 2 = 100% overlap, far above 20% threshold
     expect(() =>
-      inv.check({
-        products: [
-          { id: "a", title: "A", surface: "catalog-api", variants: [] },
-        ],
-        cursor: "c2",
-        hasNextPage: true,
-      }),
+      inv.check({ products, cursor: "c2", hasNextPage: true }),
+    ).toThrow(InvariantViolation);
+  });
+
+  it("allows small overlap (API ranking shift) but catches large overlap", () => {
+    const page1 = Array.from({ length: 10 }, (_, i) => ({
+      id: `id${i}`,
+      title: `P${i}`,
+      surface: "catalog-api" as const,
+      variants: [],
+    }));
+
+    // Test 1: 1 shared ID out of 10 = 10% overlap, below 20% threshold
+    const inv1 = new PaginationInvariant(0.2);
+    inv1.check({ products: page1, cursor: "c1", hasNextPage: true });
+    const page2ok = [
+      {
+        id: "id0",
+        title: "Shared",
+        surface: "catalog-api" as const,
+        variants: [],
+      },
+      ...Array.from({ length: 9 }, (_, i) => ({
+        id: `new${i}`,
+        title: `N${i}`,
+        surface: "catalog-api" as const,
+        variants: [],
+      })),
+    ];
+    expect(() =>
+      inv1.check({ products: page2ok, cursor: "c2", hasNextPage: true }),
+    ).not.toThrow();
+
+    // Test 2: 3 shared IDs out of 10 = 30% overlap, above 20% threshold (fresh invariant)
+    const inv2 = new PaginationInvariant(0.2);
+    inv2.check({ products: page1, cursor: "c1", hasNextPage: true });
+    const page2bad = [
+      ...Array.from({ length: 3 }, (_, i) => ({
+        id: `id${i}`,
+        title: `S${i}`,
+        surface: "catalog-api" as const,
+        variants: [],
+      })),
+      ...Array.from({ length: 7 }, (_, i) => ({
+        id: `new2${i}`,
+        title: `N2${i}`,
+        surface: "catalog-api" as const,
+        variants: [],
+      })),
+    ];
+    expect(() =>
+      inv2.check({ products: page2bad, cursor: "c3", hasNextPage: true }),
     ).toThrow(InvariantViolation);
   });
 

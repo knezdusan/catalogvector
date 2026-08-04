@@ -1,0 +1,42 @@
+{
+  "real": {
+    "query": "brake pads for 2018 Honda Civic Si",
+    "pages": 1,
+    "totalProducts": 50,
+    "distinctIds": 50,
+    "pageBoundaries": [
+      {
+        "page": 1,
+        "count": 50,
+        "distinctSoFar": 50,
+        "cursor": "eyJvZmZzZXQiOjUzLCJ0b3RhbF9jb3VudCI6MzY4LCJyZXR1cm5lZCI6NTB9"
+      }
+    ]
+  },
+  "nonsense": {
+    "query": "zxqv flurbin widget",
+    "pages": 3,
+    "totalProducts": 150,
+    "distinctIds": 150,
+    "pageBoundaries": [
+      {
+        "page": 1,
+        "count": 50,
+        "distinctSoFar": 50,
+        "cursor": "eyJvZmZzZXQiOjUwLCJ0b3RhbF9jb3VudCI6MzgxLCJyZXR1cm5lZCI6NTB9"
+      },
+      {
+        "page": 2,
+        "count": 50,
+        "distinctSoFar": 100,
+        "cursor": "eyJvZmZzZXQiOjEwMCwidG90YWxfY291bnQiOjM4MSwicmV0dXJuZWQiOjEwMH0"
+      },
+      {
+        "page": 3,
+        "count": 50,
+        "distinctSoFar": 150,
+        "cursor": "eyJvZmZzZXQiOjE1MSwidG90YWxfY291bnQiOjM4MSwicmV0dXJuZWQiOjE1MH0"
+      }
+    ]
+  }
+}
