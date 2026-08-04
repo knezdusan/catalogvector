@@ -154,25 +154,27 @@ Each entry: the documented claim, the observed behaviour, the JSON path or trans
 
 ---
 
-## 11. `/products.json` is not exhaustive — sitemap is the ground truth
+## 11. `/products.json` exhaustiveness — restated (was: "not exhaustive")
 
 **Documented claim:** (Not documented — discovered by this project)
 
-**Observed behaviour:** `/products.json` returns only a subset of a store's products. The sitemap (`/sitemap.xml` → `/sitemap_products_*.xml`) is the exhaustive source. The shortfall is severe and varies by store:
+**Observed behaviour (CORRECTED):** `/products.json` is exhaustive for stores with fewer than 25,000 products. Shopify caps the endpoint at 100 pages × 250 = 25,000 products (HTTP 400 beyond page 100). The prior claim of massive shortfalls for Subimods (70.9%) and MAP (92.4%) was caused by a fetch bug in this project's earlier scripts — the fetch loop broke early on page boundaries (Subimods stopped at page 21, MAP at page 31).
 
-| Store | Sitemap | `/products.json` | Shortfall | `% missing` |
-|---|---|---|---|---|
-| Subimods | 18,067 | 5,250 | 12,817 | 70.9% |
-| TSP | 2,608 | 2,608 | 0 | 0% |
-| MAP | 102,176 | 7,750 | 94,426 | 92.4% |
+A fully instrumented re-fetch (DIRECTIVE-16 §2) with retry, HTTP status logging, and page-size assertions shows:
 
-TSP is the exception — its `/products.json` matches the sitemap exactly. Subimods and MAP show massive shortfalls. Every prior directive that used `/products.json` as a denominator (title-coverage scan, store-visibility sampling, H7's design, H8's candidate set) was working with an incomplete set.
+| Store | Sitemap | Old `/products.json` | New `/products.json` | Real shortfall | Cause |
+|---|---|---|---|---|---|
+| Subimods | 18,067 | 5,250 | 18,066 | 1 (0.006%) | Old fetch truncated at page 21 |
+| TSP | 2,608 | 2,608 | 2,608 | 0 (0%) | Was already correct |
+| MAP | 102,176 | 7,750 | 25,000 | 77,176 (75.5%) | Old fetch truncated at page 31; platform caps at 25,000 |
 
-**Evidence:** `scripts/output/d15-sitemap-enumeration.json` — three stores enumerated from sitemap, three-way comparison with `/products.json` and Catalog handles. All sitemap products exist as live URLs on the store domain (confirmed by H8's direct fetch test in DIRECTIVE-14).
+Subimods terminated naturally on page 73 with 66 products (partial page). TSP terminated naturally on page 11 with 108 products. MAP received HTTP 400 at page 101 — a genuine platform cap at 25,000 products.
 
-**Date established:** 4 August 2026 (DIRECTIVE-15 §5)
+**Evidence:** `scripts/output/d16-products-json-refetch.json` — all three stores re-fetched with full page logs. `scripts/output/d16-products-json-{store}.json` — per-store results with all handles.
 
-**Impact:** This becomes invariant I-2 and the ground truth for everything downstream. Any store enumeration must equal the sitemap product count, or abort with the delta. The sitemap is the only exhaustive source. This also means the "4,005 extra Catalog handles" from DIRECTIVE-14 §2 were not a handle-matching artefact — they were real products that `/products.json` doesn't list. H8's rejection still holds (all handles returned 200+available), but the explanation is simpler: the store has more products than `/products.json` exposes.
+**Date established:** 4 August 2026 (DIRECTIVE-15 §5, restated DIRECTIVE-16 §2)
+
+**Impact:** Sitemap remains the ground truth for stores above the 25,000 cap (MAP). For stores below the cap (Subimods, TSP), `/products.json` is equivalent to the sitemap. The prior claim that "every prior directive using `/products.json` as a denominator was working with an incomplete set" is correct for MAP (denominator was 7,750 instead of 25,000) but wrong for Subimods (denominator was 5,250 instead of 18,066 — the full set was always available, our fetch was broken). I-2 invariant must account for the 25,000 cap.
 
 ---
 
