@@ -1,0 +1,44 @@
+{
+  "schemaVersion": "d14-id-contradiction-v1",
+  "created": "2026-08-04",
+  "directive": "DIRECTIVE-14 §1",
+  "method": "Re-fetch 300 products for 'brake pads for 2018 Honda Civic Si' with correct pagination. Print product.id and variants[].seller.domain side by side. Compare with U8-A data.",
+  "jsonPaths": {
+    "productId": "result.products[].id",
+    "sellerDomain": "result.products[].variants[0].seller.domain",
+    "sellerName": "result.products[].variants[0].seller.name"
+  },
+  "freshFetch": {
+    "totalRows": 300,
+    "distinctProductIds": 248,
+    "productsWithMultipleVariants": 0,
+    "productsWithMultipleSellers": 0,
+    "sharedIdAcrossSellers": 0,
+    "idsAppearing1x": 197,
+    "idsAppearing2x": 50,
+    "idsAppearingMoreThan2x": 1
+  },
+  "u8aData": {
+    "totalRows": 300,
+    "distinctProductIds": 16,
+    "idsAppearing1x": 5,
+    "idsAppearingMoreThan1x": 11,
+    "maxAppearances": 30
+  },
+  "rootCause": "The U8-A script (probe-u8a-refined.ts) used `--set '/query=...,cursor=...'` (comma-separated) instead of separate `--set '/query=...' --set '/pagination/cursor=...'` arguments. This put the cursor into the query string, breaking pagination. The API returned the first ~10 products repeatedly, giving 16 distinct IDs instead of the real ~248.",
+  "verdict": "REGISTER ENTRY 1 IS CORRECT. The Catalog returns per-merchant rows, not UPID clusters. Each product row has exactly 1 variant with 1 seller. The same physical part appears as separate rows with different product IDs, one per merchant. The §3 finding of '16 distinct products' is WRONG — it is an artifact of broken pagination in the U8-A script.",
+  "consequences": [
+    "Register entry 1 stands. H5 (offer attachment) remains killed — the response shape does not contain clusters.",
+    "The §3 '16 distinct products' reframe is withdrawn. The ~300 set contains ~248 distinct product IDs, each from a single seller.",
+    "The 'controlled comparison' from §3 (PRL intake appearing 30x, Subimods absent) is also withdrawn — the 30x repetition was an artifact of broken pagination.",
+    "The World B finding (stable set with noisy ordering, Jaccard 0.90-1.00) needs re-validation with correct pagination. The high Jaccard was measuring overlap of the same 10-16 products across runs, not 300 distinct products.",
+    "The 'listings vs products' distinction from §3 is moot — 300 rows are ~248 distinct products from ~248 distinct merchants, not 16 products repeated from 30 merchants each."
+  ],
+  "first50RowsSample": [
+    {"row": 0, "productId": "gid://shopify/p/IQchP5SLzSBmlsXVb63Te", "sellerDomain": "unity-performance.myshopify.com", "title": "EBC Greenstuff Front Brake Pads | 17-20 Civic Si"},
+    {"row": 1, "productId": "gid://shopify/p/2PRbC43ssqL898SHT3ZecQ", "sellerDomain": "medallion-auto-center.myshopify.com", "title": "Improved Coated Disc Brake Rotors Brake Pads For Honda Civic"},
+    {"row": 2, "productId": "gid://shopify/p/2sWGOwQwhW7nsiIfC3tDGU", "sellerDomain": "trucrane-motorsports.myshopify.com", "title": "Cobalt Racing Brakes Brake Pads Honda Civic SI CRB.XRx.D1698"},
+    {"row": 3, "productId": "gid://shopify/p/4lATQ0iF2jxWB4v3xgohlw", "sellerDomain": "import-image-racing.myshopify.com", "title": "Hawk Street 5.0 Front Brake Pads Honda Civic SI 2018-2019"},
+    {"row": 4, "productId": "gid://shopify/p/4uFOVa84oJOXwS4pcChtnA", "sellerDomain": "fortune-hunterz-motorsports.myshopify.com", "title": "Porterfield Brake Pads for 2018 HONDA CIVIC Sedan Si"}
+  ]
+}

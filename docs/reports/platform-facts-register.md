@@ -124,17 +124,33 @@ Each entry: the documented claim, the observed behaviour, the JSON path or trans
 
 ---
 
-## 9. Head/padding boundary — INCONCLUSIVE (U-8)
+## 9. Head/padding boundary — INCONCLUSIVE (U-8), data partially corrupted
 
 **Documented claim:** The Catalog returns a match set for a query.
 
 **Observed behaviour (U-8):** The Catalog response is a deterministic prefix (head) followed by a non-deterministic tail (padding). For "brake pads for 2018 Honda Civic Si" (3 runs), the first 12 ranks are identical across runs, then agreement drops to ~40%. For the nonsense query "zxqv flurbin widget" (3 runs), the deterministic prefix is only 6 ranks, then agreement drops to ~5%. Token-overlap decay (U8-B) could not locate the boundary because auto parts query tokens are too common — fractional overlap stays at 0.40–0.98 throughout all deciles, never approaching the 0.0 nonsense baseline.
 
-**Evidence:** `scripts/output/u8-results.json` — U8-A (3×3 runs) and U8-B (18 queries × 10 deciles).
+**CORRECTION (4 Aug 2026, DIRECTIVE-14 §1):** The U8-A refined data (`scripts/output/u8a-refined-results.json`) was corrupted by a pagination bug. The script used `--set '/query=...,cursor=...'` (comma-separated) instead of separate `--set '/query=...' --set '/pagination/cursor=...'` arguments. This put the cursor into the query string, breaking pagination. The API returned the first ~10 products repeatedly, giving 16 distinct product IDs instead of the real ~248. The Jaccard overlap of 0.90–1.00 was measuring overlap of the same 10–16 products across runs, not 300 distinct products. The World B finding (stable set with noisy ordering) needs re-validation with correct pagination. The deterministic prefix finding (first 12 ranks identical) is still valid because the first 10 rows match a fresh fetch with correct pagination.
 
-**Date established:** 3 August 2026 (DIRECTIVE-9 §1, executed under DIRECTIVE-11 §5)
+**Evidence:** `scripts/output/u8-results.json` — U8-A (3×3 runs) and U8-B (18 queries × 10 deciles). `scripts/output/d14-id-contradiction.json` — fresh fetch with correct pagination (300 rows, 248 distinct IDs).
 
-**Impact:** `presence@10` is the safest metric (within the deterministic prefix for real queries). `presence@50` includes significant non-deterministic content. The IV02 comparison (competitors at ranks 66–169) is unsafe — those ranks are in the padding zone. Domain concentration at top-10 is safe; at top-20 and beyond is contaminated. The verdict is INCONCLUSIVE because the two estimation methods cannot be compared (U8-B gives null for all 18 queries).
+**Date established:** 3 August 2026 (DIRECTIVE-9 §1, executed under DIRECTIVE-11 §5). Corrected 4 August 2026 (DIRECTIVE-14 §1).
+
+**Impact:** `presence@10` is the safest metric (within the deterministic prefix for real queries). `presence@50` includes significant non-deterministic content. The IV02 comparison (competitors at ranks 66–169) is unsafe — those ranks are in the padding zone. Domain concentration at top-10 is safe; at top-20 and beyond is contaminated. The verdict is INCONCLUSIVE because the two estimation methods cannot be compared (U8-B gives null for all 18 queries). **The World B finding and the "16 distinct products" finding from DIRECTIVE-13 §3 are withdrawn pending re-validation with correct pagination.**
+
+---
+
+## 10. No per-store Catalog enumeration endpoint — platform limitation
+
+**Documented claim:** (Not documented — discovered by this project)
+
+**Observed behaviour:** There is no way to enumerate a shop's full Catalog presence. The Catalog API's search is relevance-ranked, not exhaustive. A scoped search with `filters.shops` returns ~300 results per query (the top results matching the query, not all products from that shop). `lookup_catalog` takes opaque Catalog product IDs (format `gid://shopify/p/{base64}`) that do not correspond to store product IDs (numeric, from `/products.json`). No conversion endpoint exists.
+
+**Evidence:** `scripts/output/h7-membership-validation.json` — 50 "absent" products checked by exact title search, 54% false negative rate. The union of 40 scoped queries returned 6,730 unique handles, but 27 of 50 sampled "absent" products were actually present when searched by exact title.
+
+**Date established:** 4 August 2026 (DIRECTIVE-13 §1, recorded as register entry 10 per DIRECTIVE-14 §6)
+
+**Impact:** Any third party attempting per-store Catalog auditing hits the same wall. This is both a limitation on this project and a barrier to entry protecting it. The reverse direction (checking if a Catalog handle is still live on the storefront) does not have this problem — it is a direct fetch of a known URL (H8).
 
 ---
 
@@ -142,7 +158,7 @@ Each entry: the documented claim, the observed behaviour, the JSON path or trans
 
 | # | Fact | Status | Date |
 |---|---|---|---|
-| 1 | UPID clustering | Documentation wrong — per-merchant rows | 2 Aug 2026 |
+| 1 | UPID clustering | Documentation wrong — per-merchant rows. **Confirmed 4 Aug 2026**: 300 rows = 248 distinct IDs, 0 with >1 variant, 0 with >1 seller | 2 Aug 2026 |
 | 2 | `tech_specs` population | Documentation incomplete — 60–70% of vehicles dropped; retrieval consequence not established | 3 Aug 2026 |
 | 3 | Agent-profile approval | Documentation corrected — approval removed Spring '26, zero lead time | 1 Aug 2026 |
 | 4 | `tags` schema | Documentation wrong — string, not array | 2 Aug 2026 |
@@ -150,6 +166,7 @@ Each entry: the documented claim, the observed behaviour, the JSON path or trans
 | 6 | `filters.shops` hard restriction | Documentation correct | 2 Aug 2026 |
 | 7 | Pagination behaviour | Documentation incomplete — exhausts at ~300, not 1000; unscoped floor exists | 2–3 Aug 2026 |
 | 8 | Scoped-fallback overlap | Documentation incomplete — partial fallback, 14.5% overlap | 3 Aug 2026 |
-| 9 | Head/padding boundary | INCONCLUSIVE — deterministic prefix ~12 ranks (real), ~6 (nonsense); token-overlap method cannot locate boundary | 3 Aug 2026 |
+| 9 | Head/padding boundary | INCONCLUSIVE — deterministic prefix ~12 ranks (real), ~6 (nonsense). **U8-A data partially corrupted by pagination bug — World B and "16 distinct products" withdrawn pending re-validation** | 3 Aug 2026 |
+| 10 | No per-store enumeration | Platform limitation — search is relevance-ranked, no enumeration endpoint, 54% false negative rate | 4 Aug 2026 |
 
 **This is the one publishable artefact the project already owns outright.** It depends on no hypothesis, cannot be over-read, is checkable by anyone with an API key, and is exactly what establishes standing with the people who would eventually pay.
