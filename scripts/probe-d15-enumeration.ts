@@ -80,11 +80,12 @@ function scopedSearchHandles(query: string, maxPages = 30): Set<string> {
       const products = data.result?.products || [];
       const pagination = data.result?.pagination || {};
 
-      const currentIds = new Set(products.map((p: any) => p.id));
+      const currentIds = new Set<string>(products.map((p: any) => p.id as string));
 
       // I-1 relaxed: allow up to 20% overlap
       if (prevIds !== null) {
-        const shared = [...currentIds].filter((id) => prevIds!.has(id));
+        const prev = prevIds;
+        const shared = [...currentIds].filter((id) => prev.has(id));
         const maxAllowed = Math.ceil(products.length * 0.2);
         if (shared.length > maxAllowed) break; // Stop, don't abort
       }
