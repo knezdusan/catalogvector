@@ -1,0 +1,283 @@
+{
+  "schemaVersion": "authenticated-pass-v1",
+  "created": "2026-08-04",
+  "directive": "DIRECTIVE-12 §5",
+  "source": "Founder (manual, via US VPS for ChatGPT and Copilot; Google AI from Belgrade, Serbia)",
+  "note": "Google AI did not allow US VPS location — all Google AI results are from Serbian (Belgrade) location, which is reflected in the results.",
+  "total_queries": 6,
+  "llms_tested": ["ChatGPT", "MS Copilot", "Google AI (Serbia)"],
+  "queries": [
+    {
+      "id": "A1",
+      "query": "Help me find brake pads for a 2018 Honda Civic Si",
+      "chatgpt": {
+        "surface_type": "card",
+        "card_count": 1,
+        "products": ["SureStop Front & Rear Brake Pad Set"],
+        "urls": ["https://www.carparts.com/details/Buick/Verano/SureStop/2015-2017/STPSSCP1468.html?utm_source=chatgpt.com"],
+        "merchant_domains": ["carparts.com"]
+      },
+      "copilot": {
+        "surface_type": "conversational",
+        "result_count": 3,
+        "urls": ["https://prlmotorsports.com/products/hawk-front-brake-pads-for-2017-honda-civic-si"],
+        "merchant_domains": ["prlmotorsports.com", "civicx.com"]
+      },
+      "google_ai": {
+        "surface_type": "cards",
+        "card_count": "multiple",
+        "urls": ["https://www.carid.com/sf-pl-mpn/pid-2814345202-mmyid-125411-ofmpnid-5271768745.html?utm_source=copilot.com"],
+        "merchant_domains": ["carid.com"],
+        "note": "URL contains utm_source=copilot.com which is unusual for Google AI — may be a Copilot result misattributed, or cross-contamination in the data"
+      }
+    },
+    {
+      "id": "B3",
+      "query": "Help me find a cold air intake for a 2023 Honda Civic Type R FL5",
+      "chatgpt": {
+        "surface_type": "mixed",
+        "result_count": "multiple",
+        "urls": [
+          "https://www.sbxperformance.com/blogs/fl5-civic-type-r-intake-guide-real-research-real-feedback-no-bs-1/fl5-civic-type-r-intake-guide-real-research-real-feedback-no-bs?utm_source=chatgpt.com",
+          "https://shop.app/products/10170051657921/2023-honda-civic-type-r-fl5-high-volume-intake-system?utm_source=chatgpt.com",
+          "https://www.procivic.com/c/ym/2023/civic/cold-air-intake.html?utm_source=chatgpt.com"
+        ],
+        "merchant_domains": ["sbxperformance.com", "shop.app", "procivic.com"]
+      },
+      "copilot": {
+        "surface_type": "cards",
+        "card_count": "multiple",
+        "urls": [
+          "https://hpsperformanceproducts.com/products/hps-performance-cold-air-intake-kit-honda-civic-type-r-fl5-k20c1-2-0l-turbo-827-741?utm_source=copilot.com",
+          "https://shop.redline360.com/products/cobb-air-intake-honda-civic-type-r-fl5-2023-2025-redline-carbon-fiber-7h2160?utm_source=copilot.com",
+          "https://www.evasivemotorsports.com/store/product/afe-takeda-momentum-cold-air-intake-black-pro-dry-s-filter-honda-civic-type-r-fl5-20t-2023/?utm_source=copilot.com"
+        ],
+        "merchant_domains": ["hpsperformanceproducts.com", "redline360.com", "evasivemotorsports.com"]
+      },
+      "google_ai": {
+        "surface_type": "conversational",
+        "result_count": "multiple",
+        "urls": [
+          "https://www.twostepperformance.com/products/27won-hybrid-cold-air-intake-for-2023-honda-civic-type-r-2024-acura-integra-type-s-fl5-de5",
+          "https://www.turbokits.com/2023-civic-type-r-fl5-amraspeed-carbon-fiber-cold-air-intake.html",
+          "https://www.youtube.com/watch?v=AwF5esD77_8"
+        ],
+        "merchant_domains": ["twostepperformance.com", "turbokits.com", "youtube.com"]
+      }
+    },
+    {
+      "id": "C2",
+      "query": "Shop for BC Racing BR Series coilovers for a 2009 Acura TL",
+      "chatgpt": {
+        "surface_type": "mixed",
+        "result_count": "multiple",
+        "urls": [
+          "https://bc.springrates.com/products/bc-racing-br-series-coilovers-2009-2014-acura-tl?utm_source=chatgpt.com",
+          "https://www.kamispeed.com/products/bc-racing-br-coilovers-w-free-extended-adjusters-2009-2011-acura-tl-ua8-ua9?utm_source=chatgpt.com",
+          "https://www.ebay.com/itm/287210959373?utm_source=chatgpt.com",
+          "https://nextgentuning.com/products/bc-racing-br-series-coilovers-q-04-br?utm_source=chatgpt.com"
+        ],
+        "merchant_domains": ["springrates.com", "kamispeed.com", "ebay.com", "nextgentuning.com"]
+      },
+      "copilot": {
+        "surface_type": "carousel",
+        "card_count": "multiple",
+        "urls": [
+          "https://www.fitmentindustries.com/store/suspension/36488/bc-racing-br-series-coilovers-b5?utm_source=copilot.com",
+          "https://www.maperformance.com/products/bc-racing-br-series-coilovers-09-14-acura-tl-fwd-awd-ua8-ua9-a-75-br?utm_source=copilot.com"
+        ],
+        "merchant_domains": ["fitmentindustries.com", "maperformance.com"]
+      },
+      "google_ai": {
+        "surface_type": "conversational",
+        "result_count": "multiple",
+        "urls": [
+          "https://www.hybrid-racing.com/products/bc-racing-br-series-coilovers-09-14-acura-tl",
+          "https://shop.bcracing-na.com/products/09-14-acura-tl-fwd-awd",
+          "https://bc.springrates.com/products/bc-racing-br-series-coilovers-2009-2014-acura-tl"
+        ],
+        "merchant_domains": ["hybrid-racing.com", "bcracing-na.com", "springrates.com"]
+      }
+    },
+    {
+      "id": "D2",
+      "query": "Shop for a linen bed sheet set",
+      "chatgpt": {
+        "surface_type": "mixed",
+        "result_count": "multiple",
+        "urls": [
+          "https://www.goodhousekeeping.com/home-products/best-sheets/g71039867/best-linen-sheet/?utm_source=chatgpt.com",
+          "https://www.sleepfoundation.org/best-sheets/best-linen-sheets?utm_source=chatgpt.com",
+          "https://www.target.com/p/full-100-linen-sheet-set-dark-gray-casaluna-8482/-/A-91900236?utm_source=chatgpt.com",
+          "https://auth.shipt.com/u/login/identifier"
+        ],
+        "merchant_domains": ["goodhousekeeping.com", "sleepfoundation.org", "target.com", "shipt.com"]
+      },
+      "copilot": {
+        "surface_type": "mixed",
+        "result_count": "multiple",
+        "urls": [
+          "https://www.amazon.com/ap/signin (add to cart B0C8JF49J9)",
+          "https://www.urbanoutfitters.com/shop/magiclinen-4-piece-linen-sheet-set?utm_source=copilot.com",
+          "https://www.kohls.com/product/prd-6459604/100-french-linen-sheet-set.jsp?utm_source=copilot.com"
+        ],
+        "merchant_domains": ["amazon.com", "urbanoutfitters.com", "kohls.com"]
+      },
+      "google_ai": {
+        "surface_type": "conversational",
+        "result_count": "multiple",
+        "urls": [
+          "https://www.soulesthetic.com/blogs/posts/create-dreamy-bedroom-retreat-belgian-linen-bedding",
+          "https://www.linoto.com/products/organic-natural-linen-sheet-set-custom-sizes",
+          "https://nymag.com/strategist/article/best-linen-bed-sheets-review.html",
+          "https://parachutehome.com/products/linen-sheet-set-bone-f-q",
+          "https://www.coyuchi.com/products/organic-relaxed-linen-sheet-set-doe"
+        ],
+        "merchant_domains": ["soulesthetic.com", "linoto.com", "nymag.com", "parachutehome.com", "coyuchi.com"]
+      }
+    },
+    {
+      "id": "B1",
+      "query": "Help me find a downpipe for a 2018 Honda Civic Type R FK8",
+      "chatgpt": {
+        "surface_type": "mixed",
+        "result_count": "multiple",
+        "urls": [
+          "https://wayside-performance.co.uk/products/airtec-motorsport-de-cat-downpipe-for-honda-civic-fk8-type-r?utm_source=chatgpt.com",
+          "https://www.nforcd.com/products/airtec-motorsport-downpipe-for-honda-civic-type-r-fk8?utm_source=chatgpt.com",
+          "https://www.hks-power.co.jp/en/product_db/exhaust/db/21150?utm_source=chatgpt.com"
+        ],
+        "merchant_domains": ["wayside-performance.co.uk", "nforcd.com", "hks-power.co.jp"]
+      },
+      "copilot": {
+        "surface_type": "mixed",
+        "result_count": "multiple",
+        "urls": [
+          "https://www.twostepperformance.com/products/invidia-catted-76mm-downpipe-upgrade-for-2017-2021-honda-civic-type-r-fk8?utm_source=copilot.com",
+          "https://www.fitmentindustries.com/store/performance/191926/invidia-catted-downpipe?utm_source=copilot.com",
+          "https://www.autobarn.net/products/invidia-invidia-17-honda-civic-type-r-fk8-76mm-downpipe-w-high-flow-cat-t14-183186?utm_source=copilot.com",
+          "https://www.fitmentindustries.com/store/performance/721634/milltek-milltek-cast-downpipe-w-hjs-high-flow-sports-cat-for-honda-civic-type-r-fk8-2016-2020?utm_source=copilot.com"
+        ],
+        "merchant_domains": ["twostepperformance.com", "fitmentindustries.com", "autobarn.net"]
+      },
+      "google_ai": {
+        "surface_type": "conversational",
+        "result_count": "multiple",
+        "urls": [
+          "https://www.civicx.com/forum/threads/best-downpipe-option.76546/",
+          "https://www.gsportbygesi.com/",
+          "https://www.twostepperformance.com/products/high-efficiency-downpipe-upgrade-for-2017-2021-honda-civic-type-r-fk8",
+          "https://hardmotion.com/civic-16-21/10th-civic-type-r/plm-2017-2021-civic-type-r-downpipe-front-pipe-combo-v2-fk8/"
+        ],
+        "merchant_domains": ["civicx.com", "gsportbygesi.com", "twostepperformance.com", "hardmotion.com"]
+      }
+    },
+    {
+      "id": "G1",
+      "query": "Help me find a 2-person backpacking tent",
+      "chatgpt": {
+        "surface_type": "carousel",
+        "card_count": "multiple",
+        "urls": [
+          "https://www.dickssportinggoods.com/p/big-agness-copper-spur-ul2-tent-25tumucpprsprl2xxcat/25tumucpprsprl2xxcat?utm_source=chatgpt.com",
+          "https://www.bigagnes.com/products/copper-spur-ul-two?utm_source=chatgpt.com",
+          "https://www.rei.com/product/245273/big-agnes-copper-spur-ul2-tent?utm_source=chatgpt.com",
+          "https://www.outdoorgearlab.com/topics/camping-and-hiking/best-backpacking-tent?utm_source=chatgpt.com"
+        ],
+        "merchant_domains": ["dickssportinggoods.com", "bigagnes.com", "rei.com", "outdoorgearlab.com"]
+      },
+      "copilot": {
+        "surface_type": "cards",
+        "card_count": "multiple",
+        "urls": [
+          "https://cascadedesigns.com/products/freelite-2-person-ultralight-backpacking-tent?utm_source=copilot.com",
+          "https://www.walmart.com/affil/cart/buynow?items=16832969057&utm_source=copilot.com",
+          "https://www.amazon.com/ap/signin (add to cart B01MCSRQT8)",
+          "https://www.sportsmans.com/camping-gear-supplies/tents-shelters/tents/marmot-tungsten-2-person-backpacking-tent-solarred-sun/p/1701693?utm_source=copilot.com"
+        ],
+        "merchant_domains": ["cascadedesigns.com", "walmart.com", "amazon.com", "sportsmans.com"]
+      },
+      "google_ai": {
+        "surface_type": "conversational",
+        "result_count": "multiple",
+        "urls": [
+          "https://www.cleverhiker.com/tutorials/lightweight-backpacking-video-series/ultralight-shelters/",
+          "https://www.sixmoondesigns.com/blogs/newsletter/how-to-choose-a-2-person-thru-hiking-tent-by-mandy-veggie-redpath",
+          "https://sectionhiker.com/10-best-thru-hiking-tents/"
+        ],
+        "merchant_domains": ["cleverhiker.com", "sixmoondesigns.com", "sectionhiker.com"]
+      }
+    }
+  ],
+  "summary_by_llm": {
+    "chatgpt": {
+      "queries_run": 6,
+      "cards_or_carousels": 3,
+      "conversational_or_mixed": 3,
+      "note": "A1=card, B3=mixed, C2=mixed, D2=mixed, B1=mixed, G1=carousel. 'Mixed' means combination of cards/conversational/links."
+    },
+    "copilot": {
+      "queries_run": 6,
+      "cards_or_carousels": 3,
+      "conversational_or_mixed": 3,
+      "note": "A1=conversational, B3=cards, C2=carousel, D2=mixed, B1=mixed, G1=cards. Copilot produced cards/carousels for 4 of 6 queries."
+    },
+    "google_ai_serbia": {
+      "queries_run": 6,
+      "cards_or_carousels": 1,
+      "conversational": 5,
+      "note": "A1=cards, B3=conversational, C2=conversational, D2=conversational, B1=conversational, G1=conversational. Google AI produced mostly conversational results. Location: Serbia (Belgrade), not US."
+    }
+  },
+  "all_merchant_domains": [
+    "carparts.com",
+    "prlmotorsports.com",
+    "civicx.com",
+    "carid.com",
+    "sbxperformance.com",
+    "shop.app",
+    "procivic.com",
+    "hpsperformanceproducts.com",
+    "redline360.com",
+    "evasivemotorsports.com",
+    "twostepperformance.com",
+    "turbokits.com",
+    "youtube.com",
+    "springrates.com",
+    "kamispeed.com",
+    "ebay.com",
+    "nextgentuning.com",
+    "fitmentindustries.com",
+    "maperformance.com",
+    "hybrid-racing.com",
+    "bcracing-na.com",
+    "goodhousekeeping.com",
+    "sleepfoundation.org",
+    "target.com",
+    "shipt.com",
+    "amazon.com",
+    "urbanoutfitters.com",
+    "kohls.com",
+    "soulesthetic.com",
+    "linoto.com",
+    "nymag.com",
+    "parachutehome.com",
+    "coyuchi.com",
+    "wayside-performance.co.uk",
+    "nforcd.com",
+    "hks-power.co.jp",
+    "autobarn.net",
+    "gsportbygesi.com",
+    "hardmotion.com",
+    "dickssportinggoods.com",
+    "bigagnes.com",
+    "rei.com",
+    "outdoorgearlab.com",
+    "cascadedesigns.com",
+    "walmart.com",
+    "sportsmans.com",
+    "cleverhiker.com",
+    "sixmoondesigns.com",
+    "sectionhiker.com"
+  ]
+}
