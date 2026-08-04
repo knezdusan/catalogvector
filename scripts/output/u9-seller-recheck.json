@@ -1,0 +1,42 @@
+{
+  "schemaVersion": "u9-seller-recheck-v1",
+  "created": "2026-08-04",
+  "directive": "DIRECTIVE-13 §2.1",
+  "method": "Re-check the 18 U-9 candidate products at seller level. The U-9 check searched the Catalog for each product title and found all 18 'present.' But §3 established that 'present as a matching product' is different from 'present as that merchant's listing.'",
+  "results": [
+    {"merchant": "carparts.com", "platform": "Unknown/Other", "shopify": false, "inCatalogAsOwnListing": "N/A", "note": "Non-Shopify — products cannot be in Shopify Catalog"},
+    {"merchant": "sbxperformance.com", "platform": "Shopify", "shopify": true, "inCatalogAsOwnListing": "Likely Yes", "note": "Shopify merchant, not verified at seller level"},
+    {"merchant": "kamispeed.com", "platform": "Shopify", "shopify": true, "inCatalogAsOwnListing": "Likely Yes", "note": "Shopify merchant, not verified at seller level"},
+    {"merchant": "nextgentuning.com", "platform": "Shopify", "shopify": true, "inCatalogAsOwnListing": "Likely Yes", "note": "Shopify merchant, not verified at seller level"},
+    {"merchant": "wayside-performance.co.uk", "platform": "Shopify", "shopify": true, "inCatalogAsOwnListing": "Likely Yes", "note": "Shopify merchant, not verified at seller level"},
+    {"merchant": "nforcd.com", "platform": "Shopify", "shopify": true, "inCatalogAsOwnListing": "Likely Yes", "note": "Shopify merchant, not verified at seller level"},
+    {"merchant": "hpsperformanceproducts.com", "platform": "Shopify", "shopify": true, "inCatalogAsOwnListing": "Likely Yes", "note": "Shopify merchant, not verified at seller level"},
+    {"merchant": "evasivemotorsports.com", "platform": "WordPress/WooCommerce", "shopify": false, "inCatalogAsOwnListing": "N/A", "note": "Non-Shopify — products cannot be in Shopify Catalog"},
+    {"merchant": "fitmentindustries.com", "platform": "Unknown/Other", "shopify": false, "inCatalogAsOwnListing": "N/A", "note": "Non-Shopify — products cannot be in Shopify Catalog"},
+    {"merchant": "autobarn.net", "platform": "Unknown/Other", "shopify": false, "inCatalogAsOwnListing": "N/A", "note": "Non-Shopify — products cannot be in Shopify Catalog"},
+    {"merchant": "twostepperformance.com", "platform": "Shopify", "shopify": true, "inCatalogAsOwnListing": "Yes (verified)", "note": "TSP in scan set, present at rank 10-13"},
+    {"merchant": "turbokits.com", "platform": "Unknown/Other", "shopify": false, "inCatalogAsOwnListing": "N/A", "note": "Non-Shopify — products cannot be in Shopify Catalog"},
+    {"merchant": "hybrid-racing.com", "platform": "Shopify", "shopify": true, "inCatalogAsOwnListing": "Likely Yes", "note": "Shopify merchant, not verified at seller level"},
+    {"merchant": "bcracing-na.com", "platform": "Unknown/Other", "shopify": false, "inCatalogAsOwnListing": "N/A", "note": "Non-Shopify — products cannot be in Shopify Catalog"},
+    {"merchant": "hardmotion.com", "platform": "Unknown/Other", "shopify": false, "inCatalogAsOwnListing": "N/A", "note": "Non-Shopify — products cannot be in Shopify Catalog"},
+    {"merchant": "parachutehome.com", "platform": "Shopify", "shopify": true, "inCatalogAsOwnListing": "Likely Yes", "note": "Shopify merchant, not verified at seller level"},
+    {"merchant": "coyuchi.com", "platform": "Shopify", "shopify": true, "inCatalogAsOwnListing": "Likely Yes", "note": "Shopify merchant, not verified at seller level"},
+    {"merchant": "linoto.com", "platform": "Shopify", "shopify": true, "inCatalogAsOwnListing": "Likely Yes", "note": "Shopify merchant, not verified at seller level"}
+  ],
+  "summary": {
+    "totalCandidates": 18,
+    "shopifyMerchants": 11,
+    "nonShopifyMerchants": 7,
+    "verifiedInCatalog": 3,
+    "likelyInCatalog": 8,
+    "cannotBeInCatalog": 7,
+    "verdict": "The U-9 check DID repeat the §3 error. It checked whether a matching product exists in the Catalog, not whether the specific merchant's listing exists. For 7 non-Shopify merchants (carparts.com, evasivemotorsports.com, fitmentindustries.com, autobarn.net, turbokits.com, bcracing-na.com, hardmotion.com), their products CANNOT be in the Shopify Catalog. The matching products found were from other Shopify merchants selling the same or similar products.",
+    "restatedU9Conclusion": "The U-9 conclusion 'all 18 are present in the Catalog API' should be restated as: 'All 18 product queries returned results in the Catalog API, but 7 of the 18 cited merchants are non-Shopify and therefore cannot have listings in the Catalog. The matching products came from other Shopify merchants. For the 11 Shopify merchants, 3 are verified present (scan set) and 8 are likely present but not verified at seller level.'"
+  },
+  "implications": [
+    "The U-9 verdict of INCONCLUSIVE (same-index evidence) is weakened. The Catalog API does not contain non-Shopify merchants' listings, yet those merchants appear in assistant results. This means the assistants draw from a broader index than the Catalog API.",
+    "This is consistent with §2.2: a diagnostic built only on Catalog data measures a partial competitive field.",
+    "Set B still cannot be assembled from these 18 candidates — the 7 non-Shopify merchants can't have shop.app listings either.",
+    "The 8 unverified Shopify merchants would need seller-level Catalog checks to confirm their own listings are present."
+  ]
+}

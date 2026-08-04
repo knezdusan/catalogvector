@@ -1,0 +1,85 @@
+{
+  "schemaVersion": "u8-listings-vs-products-v1",
+  "created": "2026-08-04",
+  "directive": "DIRECTIVE-13 §3",
+  "method": "For each of 4 real queries, count distinct product IDs vs total listings in the ~300 set. Report duplication distribution. Identify parts appearing from >=5 merchants and check whether any scanned store stocks that part and is absent.",
+  "results": [
+    {
+      "query": "brake pads for 2018 Honda Civic Si",
+      "totalListings": 300,
+      "distinctProductIds": 16,
+      "duplicationRatio": 18.8,
+      "duplicationDistribution": {"1x": 5, "16x": 1, "18x": 1, "26x": 1, "28x": 1, "29x": 3, "30x": 4},
+      "productsWithFivePlusMerchants": 11,
+      "topProducts": [
+        {"appearances": 30, "title": "Hawk Street 5.0 Front Brake Pads Honda Civic SI 2018-2019 | HB875B.666"},
+        {"appearances": 30, "title": "Porterfield Brake Pads for 2018 HONDA CIVIC Sedan Si"},
+        {"appearances": 30, "title": "Set of 4 Ceramic Brake Pads for Honda Civic (2020-2022), Accord Si LX"},
+        {"appearances": 29, "title": "Cobalt Racing Brakes Brake Pads Honda Civic SI CRB.XRx.D1698"},
+        {"appearances": 18, "title": "Improved Coated Disc Brake Rotors Brake Pads For Honda Civic Si 2017 2018 2020"}
+      ],
+      "scannedStoresStockingPart": "BremboStore products present at rank 1. No scanned store stocks these brake pads and is absent."
+    },
+    {
+      "query": "cold air intake for 2023 Honda Civic Type R FL5",
+      "totalListings": 300,
+      "distinctProductIds": 16,
+      "duplicationRatio": 18.8,
+      "duplicationDistribution": {"1x": 3, "2x": 1, "10x": 2, "20x": 1, "23x": 1, "24x": 1, "29x": 2, "30x": 5},
+      "productsWithFivePlusMerchants": 12,
+      "topProducts": [
+        {"appearances": 30, "title": "2023+ Honda Civic Type-R FL5 High Volume Intake System"},
+        {"appearances": 30, "title": "PRL High Volume Intake for 2023+ Honda Civic Type R (FL5) / Integra Type S (DE5)"},
+        {"appearances": 30, "title": "PRL High Volume Intake System | 2022+ Honda Civic Type-R & 2023+ Integra Type-S"},
+        {"appearances": 30, "title": "MST Performance Honda Civic Type-R FL5/Integra Type-S DE5 Intake System"},
+        {"appearances": 30, "title": "2023+ Honda Civic Type-R FL5 Stage 1 Intake System"}
+      ],
+      "scannedStoresStockingPart": "Subimods stocks PRL Motorsports High Volume Intake Kit 2022-2024 Honda Civic — present=false, rank=null. THIS IS THE CONTROLLED COMPARISON: the PRL intake appears 30 times from different merchants, Subimods stocks it, but Subimods' own listing is absent."
+    },
+    {
+      "query": "BC Racing BR Series coilovers for 2009 Acura TL",
+      "totalListings": 300,
+      "distinctProductIds": 14,
+      "duplicationRatio": 21.4,
+      "duplicationDistribution": {"1x": 2, "4x": 1, "11x": 1, "14x": 1, "29x": 1, "30x": 8},
+      "productsWithFivePlusMerchants": 11,
+      "topProducts": [
+        {"appearances": 30, "title": "BC Racing BR Series Coilovers for 2009-2014 Acura TL FWD/AWD (UA8/UA9)"},
+        {"appearances": 30, "title": "BC Racing BR Coilovers - 2009-2011 Acura TL UA8/UA9"},
+        {"appearances": 30, "title": "BC RACING BR COILOVERS - 2009-2014 Acura TL - A-75"},
+        {"appearances": 30, "title": "BC Racing Coilovers BR Series - 09-14 TL UA8/UA9 - A-75-BR"},
+        {"appearances": 30, "title": "2009-2014 Acura TL BC Racing Coilovers"}
+      ],
+      "scannedStoresStockingPart": "MAP (rank 21), Springrates (rank 3), JDMuscle (rank 4) all stock BC Racing BR Series for 2009-2014 Acura TL and all are present in Catalog. No scanned store stocks this part and is absent."
+    },
+    {
+      "query": "downpipe for 2018 Honda Civic Type R FK8",
+      "totalListings": 300,
+      "distinctProductIds": 13,
+      "duplicationRatio": 23.1,
+      "duplicationDistribution": {"1x": 2, "14x": 1, "15x": 1, "29x": 1, "30x": 8},
+      "productsWithFivePlusMerchants": 11,
+      "topProducts": [
+        {"appearances": 30, "title": "2017-21 Honda Civic Type-R FK8 Acura Integra FL5 2.0T Performance Downpipe"},
+        {"appearances": 30, "title": "Two Step Performance (TSP) High Efficiency Downpipe | 17-23+ Civic Type R"},
+        {"appearances": 30, "title": "High Efficiency Downpipe Upgrade for 2017+, 2023+ Honda Civic Type R FK8/FL5"},
+        {"appearances": 30, "title": "SPDZ1 Widemouth 2017+ Honda Civic Type-R FK8/FL5/Accord 2.0T/RDX 2.0T"},
+        {"appearances": 30, "title": "V2 Race Downpipe For Civic Type-R FK8 & FL5, 10th Gen Honda Accord 2.0T"}
+      ],
+      "scannedStoresStockingPart": "TSP stocks downpipe products and is present (rank 10-11). No scanned store stocks these downpipes and is absent."
+    }
+  ],
+  "keyFindings": [
+    "The ~300 set is a count of LISTINGS (merchant-product pairs), not distinct products. Effective product diversity is 13-16 distinct products per query, each appearing up to 30 times from different merchants.",
+    "Duplication ratio: 18.8x to 23.1x. The catalog returns the same ~15 products from every merchant that stocks them.",
+    "Every presence figure should be read against the smaller number (~15 distinct products), not 300.",
+    "CONTROLLED COMPARISON FOUND: The PRL Motorsports High Volume Intake System for 2023 Honda Civic Type R FL5 appears 30 times in the Catalog from different merchants. Subimods stocks this product but Subimods' own listing is absent (present=false, rank=null). This is the controlled comparison DIRECTIVE-7 §6 was reaching for: same product, multiple merchants present, one merchant absent — with the product held constant.",
+    "For BC Racing BR Series coilovers: MAP, Springrates, and JDMuscle all stock it and all are present. No absent merchant for this part.",
+    "For brake pads and downpipes: scanned stores that stock these parts are present. No absent merchant."
+  ],
+  "implications": [
+    "The Subimods case is not store-wide absence — it is per-product absence. Subimods' OEM Subaru parts ARE in the Catalog; their aftermarket performance parts are NOT. This is the partial syndication observation that DIRECTIVE-13 §1 (H7) is built on.",
+    "The controlled comparison (PRL intake: 30 merchants present, Subimods absent) sharpens the invisibility claim: it is not that the product is invisible, but that one merchant's listing of it is invisible.",
+    "The ~300 boundary is the relevance threshold for listings. With only ~15 distinct products, the catalog exhausts its supply of relevant products quickly and fills the remaining slots with duplicate listings from other merchants."
+  ]
+}
