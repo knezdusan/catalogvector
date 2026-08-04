@@ -1,0 +1,38 @@
+{
+  "schemaVersion": "phrasing-vertical-crosstab-v1",
+  "created": "2026-08-04",
+  "directive": "DIRECTIVE-12 §6",
+  "method": "Crosstab of intent_phrasing × vertical from 24 surface_trigger_rate queries. Check if phrasings are balanced across verticals. If imbalanced, report phrasing effect within vertical only.",
+  "crosstab": [
+    {"vertical": "auto_aggregator", "hmf_cards": 2, "hmf_total": 2, "hmf_rate": 1.0, "sf_cards": 0, "sf_total": 1, "sf_rate": 0.0, "total_cards": 2, "total_queries": 3},
+    {"vertical": "auto_niche", "hmf_cards": 1, "hmf_total": 2, "hmf_rate": 0.5, "sf_cards": 1, "sf_total": 1, "sf_rate": 1.0, "total_cards": 2, "total_queries": 3},
+    {"vertical": "auto_longtail", "hmf_cards": 1, "hmf_total": 2, "hmf_rate": 0.5, "sf_cards": 1, "sf_total": 1, "sf_rate": 1.0, "total_cards": 2, "total_queries": 3},
+    {"vertical": "home_goods", "hmf_cards": 1, "hmf_total": 4, "hmf_rate": 0.25, "sf_cards": 1, "sf_total": 3, "sf_rate": 0.333, "total_cards": 2, "total_queries": 7},
+    {"vertical": "beauty_personal_care", "hmf_cards": 2, "hmf_total": 2, "hmf_rate": 1.0, "sf_cards": 0, "sf_total": 2, "sf_rate": 0.0, "total_cards": 2, "total_queries": 4},
+    {"vertical": "outdoor_gear", "hmf_cards": 0, "hmf_total": 2, "hmf_rate": 0.0, "sf_cards": 0, "sf_total": 2, "sf_rate": 0.0, "total_cards": 0, "total_queries": 4}
+  ],
+  "balance_check": {
+    "auto_aggregator": {"hmf": 2, "sf": 1, "balanced": false},
+    "auto_niche": {"hmf": 2, "sf": 1, "balanced": false},
+    "auto_longtail": {"hmf": 2, "sf": 1, "balanced": false},
+    "home_goods": {"hmf": 4, "sf": 3, "balanced": false},
+    "beauty_personal_care": {"hmf": 2, "sf": 2, "balanced": true},
+    "outdoor_gear": {"hmf": 2, "sf": 2, "balanced": true}
+  },
+  "phrasing_effect_within_vertical": [
+    {"vertical": "auto_aggregator", "hmf_rate": 1.0, "sf_rate": 0.0, "diff_pp": 100, "direction": "hmf_higher", "n_too_small": true, "note": "2 vs 1 queries — cannot conclude"},
+    {"vertical": "auto_niche", "hmf_rate": 0.5, "sf_rate": 1.0, "diff_pp": -50, "direction": "sf_higher", "n_too_small": true, "note": "2 vs 1 queries — REVERSED direction"},
+    {"vertical": "auto_longtail", "hmf_rate": 0.5, "sf_rate": 1.0, "diff_pp": -50, "direction": "sf_higher", "n_too_small": true, "note": "2 vs 1 queries — REVERSED direction"},
+    {"vertical": "home_goods", "hmf_rate": 0.25, "sf_rate": 0.333, "diff_pp": -8, "direction": "sf_higher", "n_too_small": false, "note": "4 vs 3 queries — nearly equal, REVERSED direction"},
+    {"vertical": "beauty_personal_care", "hmf_rate": 1.0, "sf_rate": 0.0, "diff_pp": 100, "direction": "hmf_higher", "n_too_small": true, "note": "2 vs 2 queries — hmf higher but n very small"},
+    {"vertical": "outdoor_gear", "hmf_rate": 0.0, "sf_rate": 0.0, "diff_pp": 0, "direction": "no_effect", "n_too_small": false, "note": "2 vs 2 queries — no effect in either direction"}
+  ],
+  "conclusion": {
+    "phrasings_balanced": false,
+    "aggregate_effect": {"hmf_rate": 0.5, "sf_rate": 0.3, "diff_pp": 20},
+    "within_vertical_effect": "INCONSISTENT — direction reverses across verticals (hmf higher in 2, sf higher in 3, no effect in 1)",
+    "verdict": "The aggregate 50% vs 30% phrasing difference is entirely a vertical confound. Within vertical, the effect is inconsistent in direction and based on very small n. The phrasing effect dissolves.",
+    "vertical_signal_survives": true,
+    "vertical_signal_note": "The vertical signal (0% outdoor gear vs 66.7% auto) survives this correction. It stays descriptive; no hypothesis registered until n per vertical >= 10."
+  }
+}
