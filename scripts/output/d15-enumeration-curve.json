@@ -1,0 +1,110 @@
+{
+  "store": "subimods",
+  "sitemapCount": 18067,
+  "totalQueries": 524,
+  "totalHandles": 13358,
+  "coverage": 0.7393590524160071,
+  "falseNegativeCurve": [
+    {
+      "queriesRun": 50,
+      "totalHandles": 5106,
+      "presentRecall": 0.48,
+      "absentFalsePositiveRate": 0,
+      "falseNegatives": 26,
+      "truePositives": 24
+    },
+    {
+      "queriesRun": 100,
+      "totalHandles": 7280,
+      "presentRecall": 0.54,
+      "absentFalsePositiveRate": 0,
+      "falseNegatives": 23,
+      "truePositives": 27
+    },
+    {
+      "queriesRun": 150,
+      "totalHandles": 9018,
+      "presentRecall": 0.68,
+      "absentFalsePositiveRate": 0,
+      "falseNegatives": 16,
+      "truePositives": 34
+    },
+    {
+      "queriesRun": 200,
+      "totalHandles": 10514,
+      "presentRecall": 0.78,
+      "absentFalsePositiveRate": 0,
+      "falseNegatives": 11,
+      "truePositives": 39
+    },
+    {
+      "queriesRun": 250,
+      "totalHandles": 11201,
+      "presentRecall": 0.84,
+      "absentFalsePositiveRate": 0.02,
+      "falseNegatives": 8,
+      "truePositives": 42
+    },
+    {
+      "queriesRun": 300,
+      "totalHandles": 11745,
+      "presentRecall": 0.84,
+      "absentFalsePositiveRate": 0.02,
+      "falseNegatives": 8,
+      "truePositives": 42
+    },
+    {
+      "queriesRun": 350,
+      "totalHandles": 12250,
+      "presentRecall": 0.86,
+      "absentFalsePositiveRate": 0.02,
+      "falseNegatives": 7,
+      "truePositives": 43
+    },
+    {
+      "queriesRun": 400,
+      "totalHandles": 12617,
+      "presentRecall": 0.92,
+      "absentFalsePositiveRate": 0.02,
+      "falseNegatives": 4,
+      "truePositives": 46
+    },
+    {
+      "queriesRun": 450,
+      "totalHandles": 13023,
+      "presentRecall": 0.96,
+      "absentFalsePositiveRate": 0.02,
+      "falseNegatives": 2,
+      "truePositives": 48
+    },
+    {
+      "queriesRun": 500,
+      "totalHandles": 13313,
+      "presentRecall": 0.96,
+      "absentFalsePositiveRate": 0.02,
+      "falseNegatives": 2,
+      "truePositives": 48
+    },
+    {
+      "queriesRun": 524,
+      "totalHandles": 13358,
+      "presentRecall": 0.98,
+      "absentFalsePositiveRate": 0.02,
+      "falseNegatives": 1,
+      "truePositives": 49
+    }
+  ],
+  "finalValidation": {
+    "method": "scoped-union-final",
+    "totalChecked": 100,
+    "truePositives": 49,
+    "falseNegatives": 1,
+    "trueNegatives": 49,
+    "falsePositives": 1,
+    "falseNegativeRate": 0.02,
+    "falsePositiveRate": 0.02,
+    "passed": true,
+    "threshold": 0.1
+  },
+  "timestamp": "2026-08-04T17:54:51.869Z"
+}
