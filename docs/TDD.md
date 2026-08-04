@@ -4,8 +4,8 @@
 |---|---|
 | **Document** | TDD (governing, technical) |
 | **Companion** | `BLUEPRINT.md` (governing, non-technical) |
-| **Version** | 0.8.4 |
-| **Date** | 2 August 2026 |
+| **Version** | 0.8.5 |
+| **Date** | 4 August 2026 |
 | **Status** | Design + scaffold + I-3, I-4 resolved. U-3, U-4 resolved. Inference-accuracy reframe nullified (n=59, 1.7% error). **Fitment-recall probe: PROVISIONAL coverage gap** (corrected mean recall ~0.70 < 0.80 threshold, n=12, 1-2 stores; inferred-set audit passed — zeros are real platform failures, not extractor bugs; but extractor needs hardening, matching needs handle/SKU, stratification didn't happen, re-run required before declaration). Original thesis holds: specs visible ≠ products retrievable. §6 `fitment_recall` is the primary metric. No pipeline code written. Phase 0 not started. |
 
 ---
@@ -99,7 +99,15 @@ Published products are auto-enrolled with manual opt-out. Rate limiting and cach
 
 **Consequence:** no synchronous write→re-query loop. Any before/after demonstration must be a **pre-built A/B pair of dev stores**, seeded days in advance. Attempting it live fails in front of the buyer.
 
-### 2.7 Facts requiring runtime confirmation (not yet verified)
+### 2.7 Standing limitations *(added 4 Aug 2026, DIRECTIVE-13 §2.2)*
+
+**Partial competitive field.** The Catalog API sees only Shopify merchants. Across the authenticated pass (18 queries × 3 LLMs), 19 of 40 merchant domains cited by assistants are Shopify (47.5%). The remaining 52.5% — Amazon, Target, REI, Walmart, eBay, CarParts.com, CARiD, FitmentIndustries, BC Racing NA, and others — are invisible to the Catalog API. A diagnostic built only on Catalog data measures a partial competitive field. A merchant told "here is who takes your slot" would be shown roughly half the winners. This is a standing limitation of the instrument, not a bug. It must be disclosed in any merchant-facing output.
+
+**Google AI tested from Serbia, not US.** The authenticated pass's Google AI results were captured from a Belgrade VPS, not a US IP. Google AI did not allow US VPS access. No US claim about Google AI behaviour is licensed. This is a partially open confound from DIRECTIVE-11 §2.3.
+
+**shop.app ≠ Catalog API.** DIRECTIVE-12 §3 checked shop.app for Subimods products and concluded they were absent. DIRECTIVE-13 §1 re-checked the same products against the Catalog API and found them present. The two surfaces index different subsets of a merchant's catalog. shop.app is not a valid proxy for Catalog API presence.
+
+### 2.8 Facts requiring runtime confirmation (not yet verified)
 | # | Unknown | Blocks | How to resolve |
 |---|---|---|---|
 | U-1 | ~~Does agent-profile registration involve human review? What is the lead time?~~ **RESOLVED 31 Jul 2026:** No human review. Spring '26 Edition removed the approval requirement. API key is generated instantly in Dev Dashboard → Catalogs → Get an API key. Agent profile is just a JSON file you host — no registration step. **Zero lead time.** | ~~I-4, C3~~ | Done — see §2.4 |
