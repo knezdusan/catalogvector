@@ -1,0 +1,50 @@
+[
+  {
+    "store": "subimods",
+    "domain": "www.subimods.com",
+    "sitemapCount": 18067,
+    "productsJsonCount": 5250,
+    "catalogHandlesCount": 1673,
+    "threeWayOverlap": 435,
+    "sitemapAndProductsJson": 5244,
+    "sitemapAndCatalog": 1673,
+    "productsJsonAndCatalog": 435,
+    "sitemapOnly": 11585,
+    "productsJsonOnly": 6,
+    "catalogOnly": 0,
+    "sitemapVsProductsJsonShortfall": 12817,
+    "exhaustiveSource": "sitemap"
+  },
+  {
+    "store": "tsp",
+    "domain": "www.twostepperformance.com",
+    "sitemapCount": 2608,
+    "productsJsonCount": 2608,
+    "catalogHandlesCount": 1134,
+    "threeWayOverlap": 1133,
+    "sitemapAndProductsJson": 2605,
+    "sitemapAndCatalog": 1134,
+    "productsJsonAndCatalog": 1133,
+    "sitemapOnly": 2,
+    "productsJsonOnly": 3,
+    "catalogOnly": 0,
+    "sitemapVsProductsJsonShortfall": 0,
+    "exhaustiveSource": "sitemap"
+  },
+  {
+    "store": "map",
+    "domain": "www.maperformance.com",
+    "sitemapCount": 102176,
+    "productsJsonCount": 7750,
+    "catalogHandlesCount": 1688,
+    "threeWayOverlap": 49,
+    "sitemapAndProductsJson": 7750,
+    "sitemapAndCatalog": 1688,
+    "productsJsonAndCatalog": 49,
+    "sitemapOnly": 92787,
+    "productsJsonOnly": 0,
+    "catalogOnly": 0,
+    "sitemapVsProductsJsonShortfall": 94426,
+    "exhaustiveSource": "sitemap"
+  }
+]

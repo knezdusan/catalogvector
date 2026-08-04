@@ -1,0 +1,237 @@
+import { describe, expect, it } from "vitest";
+import {
+  assertDomainInKnownStores,
+  assertEnumerationComplete,
+  assertHasSellerDomain,
+  assertMethodValidated,
+  assertSameSurface,
+  type CatalogProduct,
+  domainsMatch,
+  type GroundTruth,
+  InvariantViolation,
+  normalizeDomain,
+  PaginationInvariant,
+  validateMethod,
+} from "./invariants";
+
+// ─── I-1: Pagination invariant ────────────────────────────────────────────
+
+describe("I-1: PaginationInvariant", () => {
+  it("passes when consecutive pages have distinct IDs and changing cursors", () => {
+    const inv = new PaginationInvariant();
+    inv.check({
+      products: [{ id: "a", title: "A", surface: "catalog-api", variants: [] }],
+      cursor: "c1",
+      hasNextPage: true,
+    });
+    inv.check({
+      products: [{ id: "b", title: "B", surface: "catalog-api", variants: [] }],
+      cursor: "c2",
+      hasNextPage: true,
+    });
+    inv.check({
+      products: [{ id: "c", title: "C", surface: "catalog-api", variants: [] }],
+      cursor: undefined,
+      hasNextPage: false,
+    });
+    expect(inv.pageCount_).toBe(3);
+  });
+
+  it("throws when page 2 has the same IDs as page 1 (U8-A bug)", () => {
+    const inv = new PaginationInvariant();
+    inv.check({
+      products: [{ id: "a", title: "A", surface: "catalog-api", variants: [] }],
+      cursor: "c1",
+      hasNextPage: true,
+    });
+    expect(() =>
+      inv.check({
+        products: [
+          { id: "a", title: "A", surface: "catalog-api", variants: [] },
+        ],
+        cursor: "c2",
+        hasNextPage: true,
+      }),
+    ).toThrow(InvariantViolation);
+  });
+
+  it("throws when cursor does not change between pages", () => {
+    const inv = new PaginationInvariant();
+    inv.check({
+      products: [{ id: "a", title: "A", surface: "catalog-api", variants: [] }],
+      cursor: "same",
+      hasNextPage: true,
+    });
+    expect(() =>
+      inv.check({
+        products: [
+          { id: "b", title: "B", surface: "catalog-api", variants: [] },
+        ],
+        cursor: "same",
+        hasNextPage: true,
+      }),
+    ).toThrow(InvariantViolation);
+  });
+
+  it("throws when hasNextPage=true but cursor is undefined", () => {
+    const inv = new PaginationInvariant();
+    expect(() =>
+      inv.check({
+        products: [
+          { id: "a", title: "A", surface: "catalog-api", variants: [] },
+        ],
+        cursor: undefined,
+        hasNextPage: true,
+      }),
+    ).toThrow(InvariantViolation);
+  });
+});
+
+// ─── I-2: Enumeration completeness ────────────────────────────────────────
+
+describe("I-2: assertEnumerationComplete", () => {
+  it("passes when counts match", () => {
+    expect(() =>
+      assertEnumerationComplete(100, 100, "/products.json"),
+    ).not.toThrow();
+  });
+
+  it("throws when enumeration is short", () => {
+    expect(() =>
+      assertEnumerationComplete(5250, 9255, "/products.json"),
+    ).toThrow(InvariantViolation);
+  });
+});
+
+// ─── I-3: Seller domain ───────────────────────────────────────────────────
+
+describe("I-3: assertHasSellerDomain", () => {
+  it("passes when seller.domain is present", () => {
+    const p: CatalogProduct = {
+      id: "x",
+      title: "X",
+      surface: "catalog-api",
+      variants: [{ seller: { domain: "store.myshopify.com", name: "Store" } }],
+    };
+    expect(() => assertHasSellerDomain(p)).not.toThrow();
+  });
+
+  it("throws when seller is missing", () => {
+    const p: CatalogProduct = {
+      id: "x",
+      title: "X",
+      surface: "catalog-api",
+      variants: [{}],
+    };
+    expect(() => assertHasSellerDomain(p)).toThrow(InvariantViolation);
+  });
+
+  it("throws when variants array is empty", () => {
+    const p: CatalogProduct = {
+      id: "x",
+      title: "X",
+      surface: "catalog-api",
+      variants: [],
+    };
+    expect(() => assertHasSellerDomain(p)).toThrow(InvariantViolation);
+  });
+});
+
+// ─── I-4: Surface provenance ──────────────────────────────────────────────
+
+describe("I-4: assertSameSurface", () => {
+  it("passes when surfaces match", () => {
+    expect(() =>
+      assertSameSurface("catalog-api", "catalog-api", "test"),
+    ).not.toThrow();
+  });
+
+  it("throws when surfaces differ (H7 error)", () => {
+    expect(() =>
+      assertSameSurface(
+        "shop-app",
+        "catalog-api",
+        "comparing shop.app finding to Catalog",
+      ),
+    ).toThrow(InvariantViolation);
+  });
+});
+
+// ─── I-5: Domain normalisation ────────────────────────────────────────────
+
+describe("I-5: domain normalisation", () => {
+  it("normalises www., case, and trailing dot", () => {
+    expect(normalizeDomain("www.Example.com.")).toBe("example.com");
+    expect(normalizeDomain("WWW.Store.com")).toBe("store.com");
+    expect(normalizeDomain("store.com.")).toBe("store.com");
+  });
+
+  it("domainsMatch handles case and www. differences", () => {
+    expect(
+      domainsMatch("www.twostepperformance.com", "TWOSTEPPERFORMANCE.com"),
+    ).toBe(true);
+    expect(
+      domainsMatch("twostepperformance.com", "twostepperformance.com"),
+    ).toBe(true);
+    // A real typo (different characters, not just case) is caught
+    expect(
+      domainsMatch("twosteppeformance.com", "twostepperformance.com"),
+    ).toBe(false); // missing 'r'
+  });
+
+  it("assertDomainInKnownStores passes for known stores", () => {
+    expect(() =>
+      assertDomainInKnownStores(
+        "www.subimods.com",
+        ["subimods.com", "twostepperformance.com"],
+        "test",
+      ),
+    ).not.toThrow();
+  });
+
+  it("assertDomainInKnownStores throws for unknown stores", () => {
+    expect(() =>
+      assertDomainInKnownStores("unknown-store.com", ["subimods.com"], "test"),
+    ).toThrow(InvariantViolation);
+  });
+});
+
+// ─── I-6: Method validation ───────────────────────────────────────────────
+
+describe("I-6: validateMethod", () => {
+  const groundTruth: GroundTruth = {
+    confirmedPresent: ["p1", "p2", "p3", "p4", "p5"],
+    confirmedAbsent: ["a1", "a2", "a3", "a4", "a5"],
+  };
+
+  it("passes a perfect method (0% false negatives)", () => {
+    const v = validateMethod("perfect", groundTruth, (id) =>
+      id.startsWith("p") ? "present" : "absent",
+    );
+    expect(v.falseNegativeRate).toBe(0);
+    expect(v.passed).toBe(true);
+  });
+
+  it("fails a 54% false-negative method (the H7 failure)", () => {
+    // 3 of 5 present items classified as absent = 60% FN
+    const v = validateMethod("bad", groundTruth, (id) => {
+      if (id === "p1" || id === "p2") return "present";
+      if (id.startsWith("p")) return "absent"; // false negative
+      return "absent";
+    });
+    expect(v.falseNegativeRate).toBe(0.6);
+    expect(v.passed).toBe(false);
+  });
+
+  it("assertMethodValidated throws for failing methods", () => {
+    const v = validateMethod("bad", groundTruth, () => "absent");
+    expect(() => assertMethodValidated(v)).toThrow(InvariantViolation);
+  });
+
+  it("assertMethodValidated passes for good methods", () => {
+    const v = validateMethod("good", groundTruth, (id) =>
+      id.startsWith("p") ? "present" : "absent",
+    );
+    expect(() => assertMethodValidated(v)).not.toThrow();
+  });
+});

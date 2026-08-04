@@ -154,6 +154,28 @@ Each entry: the documented claim, the observed behaviour, the JSON path or trans
 
 ---
 
+## 11. `/products.json` is not exhaustive — sitemap is the ground truth
+
+**Documented claim:** (Not documented — discovered by this project)
+
+**Observed behaviour:** `/products.json` returns only a subset of a store's products. The sitemap (`/sitemap.xml` → `/sitemap_products_*.xml`) is the exhaustive source. The shortfall is severe and varies by store:
+
+| Store | Sitemap | `/products.json` | Shortfall | `% missing` |
+|---|---|---|---|---|
+| Subimods | 18,067 | 5,250 | 12,817 | 70.9% |
+| TSP | 2,608 | 2,608 | 0 | 0% |
+| MAP | 102,176 | 7,750 | 94,426 | 92.4% |
+
+TSP is the exception — its `/products.json` matches the sitemap exactly. Subimods and MAP show massive shortfalls. Every prior directive that used `/products.json` as a denominator (title-coverage scan, store-visibility sampling, H7's design, H8's candidate set) was working with an incomplete set.
+
+**Evidence:** `scripts/output/d15-sitemap-enumeration.json` — three stores enumerated from sitemap, three-way comparison with `/products.json` and Catalog handles. All sitemap products exist as live URLs on the store domain (confirmed by H8's direct fetch test in DIRECTIVE-14).
+
+**Date established:** 4 August 2026 (DIRECTIVE-15 §5)
+
+**Impact:** This becomes invariant I-2 and the ground truth for everything downstream. Any store enumeration must equal the sitemap product count, or abort with the delta. The sitemap is the only exhaustive source. This also means the "4,005 extra Catalog handles" from DIRECTIVE-14 §2 were not a handle-matching artefact — they were real products that `/products.json` doesn't list. H8's rejection still holds (all handles returned 200+available), but the explanation is simpler: the store has more products than `/products.json` exposes.
+
+---
+
 ## Summary
 
 | # | Fact | Status | Date |
@@ -168,5 +190,6 @@ Each entry: the documented claim, the observed behaviour, the JSON path or trans
 | 8 | Scoped-fallback overlap | Documentation incomplete — partial fallback, 14.5% overlap | 3 Aug 2026 |
 | 9 | Head/padding boundary | INCONCLUSIVE — deterministic prefix ~12 ranks (real), ~6 (nonsense). **U8-A data partially corrupted by pagination bug — World B and "16 distinct products" withdrawn pending re-validation** | 3 Aug 2026 |
 | 10 | No per-store enumeration | Platform limitation — search is relevance-ranked, no enumeration endpoint, 54% false negative rate | 4 Aug 2026 |
+| 11 | `/products.json` not exhaustive | Sitemap is ground truth — Subimods 70.9% missing, MAP 92.4% missing, TSP 0% | 4 Aug 2026 |
 
 **This is the one publishable artefact the project already owns outright.** It depends on no hypothesis, cannot be over-read, is checkable by anyone with an API key, and is exactly what establishes standing with the people who would eventually pay.
