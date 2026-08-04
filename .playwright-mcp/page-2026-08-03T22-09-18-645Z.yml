@@ -1,0 +1,182 @@
+- generic [ref=f87e1]:
+  - link "Skip to content" [ref=f87e2] [cursor=pointer]:
+    - /url: "#main"
+  - generic [ref=f87e6]:
+    - generic [ref=f87e8]:
+      - navigation "Sidebar":
+        - generic:
+          - generic:
+            - generic:
+              - button "Open sidebar"
+        - generic:
+          - generic:
+            - link "New chat":
+              - /url: /
+          - generic: Search chats
+          - generic:
+            - link "Images":
+              - /url: /images
+        - generic:
+          - generic:
+            - button "Open profile menu"
+      - generic [ref=f87e9]:
+        - heading "Chat history" [level=2] [ref=f87e10]
+        - navigation "Chat history" [ref=f87e12]:
+          - generic [ref=f87e15]:
+            - link "Home" [ref=f87e16] [cursor=pointer]:
+              - /url: /
+            - generic [ref=f87e19]:
+              - button "Search chats" [ref=f87e20] [cursor=pointer]
+              - button "Close sidebar" [expanded] [ref=f87e25]
+          - list [ref=f87e29]:
+            - listitem [ref=f87e30]:
+              - link "New chat Shift Command O" [ref=f87e31] [cursor=pointer]:
+                - /url: /
+                - generic [ref=f87e32]: New chat
+                - generic [ref=f87e40]:
+                  - generic "Shift" [ref=f87e41]: ⇧
+                  - generic "Command" [ref=f87e43]: ⌘
+                  - generic [ref=f87e45]: O
+            - listitem
+          - link "Images" [ref=f87e47] [cursor=pointer]:
+            - /url: /images
+          - generic [ref=f87e54]:
+            - link "Plugins" [ref=f87e55] [cursor=pointer]:
+              - /url: /plugins
+            - generic [ref=f87e62] [cursor=pointer]: Deep research
+          - generic [ref=f87e69]:
+            - link [ref=f87e70] [cursor=pointer]:
+              - /url: https://openai.com/chatgpt/pricing/
+            - generic [ref=f87e78] [cursor=pointer]: Settings
+            - generic [ref=f87e82] [cursor=pointer]: Help
+          - generic [ref=f87e92]:
+            - generic [ref=f87e93]:
+              - paragraph [ref=f87e94]: Get responses tailored to you
+              - paragraph [ref=f87e95]: Log in to get answers based on saved chats, plus create images and upload files.
+            - button "Log in" [ref=f87e97] [cursor=pointer]
+    - generic [ref=f87e101]:
+      - generic [ref=f87e102]:
+        - banner:
+          - button "Model selector" [ref=f87e104] [cursor=pointer]:
+            - generic [ref=f87e105]: ChatGPT
+          - generic [ref=f87e113]:
+            - button "Log in" [ref=f87e114] [cursor=pointer]
+            - button "Sign up for free" [ref=f87e116] [cursor=pointer]
+      - main [ref=f87e119]:
+        - generic [ref=f87e121]:
+          - generic [ref=f87e173]:
+            - generic [ref=f87e174]:
+              - generic [ref=f87e176]:
+                - heading "You said:" [level=4] [ref=f87e177]
+                - generic [ref=f87e179]:
+                  - generic [ref=f87e180]: Help me find a fluoride-free toothpaste
+                  - generic [ref=f87e185]:
+                    - group "Your message actions":
+                      - button "Copy message"
+              - generic [ref=f87e188]:
+                - heading "ChatGPT said:" [level=4] [ref=f87e189]
+                - generic [ref=f87e191]:
+                  - generic [ref=f87e213]:
+                    - paragraph [ref=f87e214]:
+                      - text: If you’re looking for a
+                      - strong [ref=f87e215]: fluoride-free toothpaste
+                      - text: ", I’d prioritize one that contains"
+                      - strong [ref=f87e216]: nano-hydroxyapatite (n-HAp)
+                      - text: rather than only “natural” ingredients like charcoal or herbs. Hydroxyapatite is a mineral similar to the mineral structure of teeth and is commonly used in fluoride-free enamel-care formulas. Fluoride still has the strongest evidence base for cavity prevention, so if you have a high cavity risk, it’s worth discussing alternatives with a dentist.
+                      - link "New York Magazine +1" [ref=f87e219] [cursor=pointer]:
+                        - /url: https://nymag.com/strategist/article/what-is-nano-hydroxyapatite-toothpaste.html?utm_campaign=feed-part&utm_medium=social_acct&utm_source=chatgpt.com
+                        - generic [ref=f87e221]:
+                          - generic [ref=f87e222]: New York Magazine
+                          - generic [ref=f87e225]: "+1"
+                    - paragraph [ref=f87e226]: "Here are some good options:"
+                    - generic [ref=f87e229]:
+                      - generic [ref=f87e233] [cursor=pointer]:
+                        - generic [ref=f87e234]:
+                          - img "Boka Ela Mint Nano-Hydroxyapatite Toothpaste" [ref=f87e236]
+                          - button "Select product"
+                        - generic [ref=f87e237]:
+                          - generic [ref=f87e238]: Boka Ela Mint Nano-Hydroxyapatite Toothpaste
+                          - generic [ref=f87e239]: Price not available•Fresh mint flavor with nano-hydroxyapatite for oral health.
+                      - generic [ref=f87e246] [cursor=pointer]:
+                        - generic [ref=f87e247]:
+                          - img "Boka Refresh Mint Whitening Nano-Hydroxyapatite Toothpaste 3-Pack" [ref=f87e249]
+                          - button "Select product"
+                        - generic [ref=f87e250]:
+                          - generic [ref=f87e251]: Boka Refresh Mint Whitening Nano-Hydroxyapatite Toothpaste 3-Pack
+                          - generic [ref=f87e252]: Price not available•Three-pack of whitening toothpaste with mint and nano-hydroxyapatite.
+                    - heading "Good fluoride-free picks" [level=3] [ref=f87e256]
+                    - list [ref=f87e257]:
+                      - listitem [ref=f87e258]:
+                        - paragraph [ref=f87e259]:
+                          - strong [ref=f87e260]:
+                            - generic [ref=f87e261] [cursor=pointer]: Boka
+                            - text: Nano-Hydroxyapatite Toothpaste
+                          - text: — a popular everyday choice; uses nano-hydroxyapatite and is fluoride-free. Good if you want a mild mint flavor and a formula without SLS.
+                          - link "Boka +1" [ref=f87e264] [cursor=pointer]:
+                            - /url: https://www.boka.com/?utm_source=chatgpt.com
+                            - generic [ref=f87e266]:
+                              - generic [ref=f87e267]: Boka
+                              - generic [ref=f87e270]: "+1"
+                      - listitem [ref=f87e271]:
+                        - paragraph [ref=f87e272]:
+                          - strong [ref=f87e273]:
+                            - generic [ref=f87e274] [cursor=pointer]: Davids
+                            - text: Fluoride-Free Nano-Hydroxyapatite Toothpaste
+                          - text: — a minimalist option with nano-hydroxyapatite; the brand has expanded its fluoride-free line.
+                          - link "PR Newswire" [ref=f87e277] [cursor=pointer]:
+                            - /url: https://www.prnewswire.com/news-releases/davids-health-sciences-launches-fluoride-free-unflavored-nano-hydroxyapatite-toothpaste-featuring-proprietary-hydroxi-technology-302820803.html?utm_source=chatgpt.com
+                      - listitem [ref=f87e283]:
+                        - paragraph [ref=f87e284]:
+                          - strong [ref=f87e285]:
+                            - generic [ref=f87e286] [cursor=pointer]: Apagard
+                            - text: Premio
+                          - text: — a Japanese hydroxyapatite toothpaste often chosen by people specifically seeking enamel-supporting formulas.
+                          - link "Minvelle" [ref=f87e289] [cursor=pointer]:
+                            - /url: https://www.minvelle.com/blogs/oral-health/best-fluoride-free-toothpaste-2026?utm_source=chatgpt.com
+                      - listitem [ref=f87e295]:
+                        - paragraph [ref=f87e296]:
+                          - strong [ref=f87e297]:
+                            - generic [ref=f87e298] [cursor=pointer]: RiseWell
+                            - text: Hydroxyapatite Toothpaste
+                          - text: — a family-friendly option frequently recommended in fluoride-free toothpaste roundups.
+                          - link "MadWorldDetox" [ref=f87e301] [cursor=pointer]:
+                            - /url: https://madworlddetox.com/best/natural-toothpaste?utm_source=chatgpt.com
+                    - paragraph [ref=f87e307]:
+                      - strong [ref=f87e308]: "What to look for on the label:"
+                    - list [ref=f87e309]:
+                      - listitem [ref=f87e310]:
+                        - paragraph [ref=f87e311]: ✅ “Nano-hydroxyapatite” or “hydroxyapatite”
+                      - listitem [ref=f87e312]:
+                        - paragraph [ref=f87e313]: ✅ Xylitol (optional, for sweetness and oral-care benefits)
+                      - listitem [ref=f87e314]:
+                        - paragraph [ref=f87e315]: ✅ Low-abrasion formula if you have sensitivity
+                      - listitem [ref=f87e316]:
+                        - paragraph [ref=f87e317]:
+                          - text: Avoid relying only on “natural” claims without an active remineralizing ingredient.
+                          - link "NewMouth" [ref=f87e320] [cursor=pointer]:
+                            - /url: https://www.newmouth.com/blog/hydroxyapatite-toothpaste/?utm_source=chatgpt.com
+                    - paragraph [ref=f87e326]:
+                      - text: If you tell me your
+                      - strong [ref=f87e327]: country (and whether you need it for adults, kids, sensitive teeth, whitening, or gum issues)
+                      - text: ", I can narrow it down to ones you can actually buy locally."
+                  - generic [ref=f87e328]:
+                    - group "Response actions":
+                      - button "Copy response"
+                      - button "Share"
+                      - button "Sources"
+            - generic [ref=f87e197]: ChatGPT is AI and can make mistakes.
+          - generic:
+            - button [ref=f87e329] [cursor=pointer]
+            - generic [ref=f87e138]:
+              - generic [ref=f87e141]:
+                - button "Add files and more" [ref=f87e144] [cursor=pointer]
+                - textbox "Chat with ChatGPT" [active] [ref=f87e147]:
+                  - paragraph [ref=f87e148]: Ask anything
+                - generic [ref=f87e150]:
+                  - button "Start dictation" [ref=f87e151] [cursor=pointer]
+                  - button "Start Voice" [ref=f87e338] [cursor=pointer]:
+                    - generic [ref=f87e342]: Voice
+              - button [disabled] [ref=f87e159]
+              - button [disabled] [ref=f87e160]
+  - alert [ref=f87e171]
+  - status [ref=f87e172]

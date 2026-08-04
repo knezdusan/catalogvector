@@ -1,0 +1,114 @@
+- generic [ref=f111e2]:
+  - banner [ref=f111e5]:
+    - generic [ref=f111e6]:
+      - link [ref=f111e8] [cursor=pointer]:
+        - /url: /
+      - generic:
+        - link "Home" [ref=f111e12] [cursor=pointer]:
+          - /url: /
+        - link "Explore" [ref=f111e16] [cursor=pointer]:
+          - /url: /categories
+        - link "View Cart" [ref=f111e20] [cursor=pointer]:
+          - /url: /cart
+        - link "Deals" [ref=f111e24] [cursor=pointer]:
+          - /url: /offers
+        - button "Sign in to view saved items" [ref=f111e28] [cursor=pointer]
+      - button "Sign in" [ref=f111e33] [cursor=pointer]
+  - generic [ref=f111e39]:
+    - generic [ref=f111e202]:
+      - heading "Related searches" [level=2] [ref=f111e203]
+      - generic [ref=f111e205]:
+        - paragraph [ref=f111e216] [cursor=pointer]: placeholder-0
+        - paragraph [ref=f111e227] [cursor=pointer]: placeholder-1
+        - paragraph [ref=f111e238] [cursor=pointer]: placeholder-2
+        - paragraph [ref=f111e249] [cursor=pointer]: placeholder-3
+        - paragraph [ref=f111e260] [cursor=pointer]: placeholder-4
+        - paragraph [ref=f111e271] [cursor=pointer]: placeholder-5
+    - generic [ref=f111e276]:
+      - generic [ref=f111e278]:
+        - paragraph [ref=f111e279]: Suggested searches
+        - list [ref=f111e280]:
+          - button [ref=f111e281] [cursor=pointer]:
+            - paragraph [ref=f111e287]: Plant-based protein powders
+          - button [ref=f111e288] [cursor=pointer]:
+            - paragraph [ref=f111e294]: Vegan leather handbags
+          - button [ref=f111e295] [cursor=pointer]:
+            - paragraph [ref=f111e301]: Bedroom decor
+          - button [ref=f111e302] [cursor=pointer]:
+            - paragraph [ref=f111e308]: Waterproof jackets
+          - button [ref=f111e309] [cursor=pointer]:
+            - paragraph [ref=f111e315]: Hoodies
+      - generic [ref=f111e319]:
+        - searchbox "Search products and stores" [ref=f111e320]: Cobb Accessport V3 2015-2021 Subaru WRX STI
+        - button "Clear search" [ref=f111e322] [cursor=pointer]
+    - contentinfo [ref=f111e325]:
+      - generic [ref=f111e326]:
+        - generic [ref=f111e327]:
+          - generic [ref=f111e328]:
+            - generic [ref=f111e329]:
+              - img "Shop" [ref=f111e330]
+              - paragraph [ref=f111e336]: Shop is the next step on our mission to make commerce better for everyone.
+            - generic [ref=f111e339]:
+              - link "Download on the App Store" [ref=f111e340] [cursor=pointer]:
+                - /url: https://open.shop.app/E2jp6/yphyl/7qog?sid=49250b87-aa1e-4965-aba6-313d211e8b95
+                - img "Download Shop" [ref=f111e341]
+              - link "Download on Google Play" [ref=f111e342] [cursor=pointer]:
+                - /url: https://open.shop.app/E2jp6/frmk/3n2h?sid=49250b87-aa1e-4965-aba6-313d211e8b95
+                - img "Download Shop" [ref=f111e343]
+          - generic [ref=f111e344]:
+            - navigation "Start selling" [ref=f111e345]:
+              - paragraph [ref=f111e346]: Start selling
+              - link [ref=f111e347] [cursor=pointer]:
+                - /url: https://www.shopify.com/shop?utm_medium=website&utm_source=shop-website&utm_campaign=shop_app_footer_for_brands
+                - paragraph [ref=f111e348]: For brands
+              - link [ref=f111e349] [cursor=pointer]:
+                - /url: https://www.shopify.com/collabs/creators?utm_medium=website&utm_source=shop-website&utm_campaign=shop_app_footer_for_creators
+                - paragraph [ref=f111e350]: For creators
+              - link [ref=f111e351] [cursor=pointer]:
+                - /url: https://www.shopify.com/free-trial?utm_medium=website&utm_source=shop-website&utm_campaign=shop_app_footer_build_your_store
+                - paragraph [ref=f111e352]: Build your store
+            - navigation "Information" [ref=f111e353]:
+              - paragraph [ref=f111e354]: Information
+              - link [ref=f111e355] [cursor=pointer]:
+                - /url: https://shop.app/shop-pay?utm_medium=website&utm_source=shop-website
+                - paragraph [ref=f111e356]: Shop Pay
+              - link [ref=f111e357] [cursor=pointer]:
+                - /url: https://help.shop.app/shop?utm_medium=website&utm_source=shop-website
+                - paragraph [ref=f111e358]: Help center
+            - navigation "Social" [ref=f111e359]:
+              - paragraph [ref=f111e360]: Social
+              - link [ref=f111e361] [cursor=pointer]:
+                - /url: https://twitter.com/shop?utm_medium=website&utm_source=shop-website
+                - paragraph [ref=f111e362]: X (Twitter)
+              - link [ref=f111e363] [cursor=pointer]:
+                - /url: https://instagram.com/shopapp?utm_medium=website&utm_source=shop-website
+                - paragraph [ref=f111e364]: Instagram
+            - navigation "Legal" [ref=f111e365]:
+              - paragraph [ref=f111e366]: Legal
+              - link [ref=f111e367] [cursor=pointer]:
+                - /url: /terms-of-service?locale=en-US
+                - paragraph [ref=f111e368]: Terms of Service
+              - link [ref=f111e369] [cursor=pointer]:
+                - /url: https://www.shopify.com/legal/privacy/app-users?utm_medium=website&utm_source=shop-website
+                - paragraph [ref=f111e370]: Privacy Policy
+              - link [ref=f111e371] [cursor=pointer]:
+                - /url: https://privacy.shopify.com/?utm_medium=website&utm_source=shop-website
+                - paragraph [ref=f111e372]: Your Privacy Choices
+        - generic [ref=f111e378]:
+          - separator [ref=f111e379]
+          - generic [ref=f111e380]:
+            - generic [ref=f111e381]:
+              - generic [ref=f111e382]:
+                - paragraph [ref=f111e383]: Powered by
+                - img "Shopify" [ref=f111e384]
+              - paragraph [ref=f111e398]: "|"
+              - link [ref=f111e399] [cursor=pointer]:
+                - /url: https://www.shopify.com/free-trial?utm_medium=website&utm_source=shop-website&utm_campaign=shop_app_subfooter_start_selling
+                - paragraph [ref=f111e400]: Start selling for free
+            - generic [ref=f111e401]:
+              - link [ref=f111e402] [cursor=pointer]:
+                - /url: /language-settings
+                - paragraph [ref=f111e403]: Language
+              - paragraph [ref=f111e404]: © Shopify Inc. 2026
+    - region "Notifications (F8)":
+      - list

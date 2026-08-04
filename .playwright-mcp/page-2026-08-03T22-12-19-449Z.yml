@@ -1,0 +1,182 @@
+- generic [ref=f99e1]:
+  - link "Skip to content" [ref=f99e2] [cursor=pointer]:
+    - /url: "#main"
+  - generic [ref=f99e6]:
+    - generic [ref=f99e8]:
+      - navigation "Sidebar":
+        - generic:
+          - generic:
+            - generic:
+              - button "Open sidebar"
+        - generic:
+          - generic:
+            - link "New chat":
+              - /url: /
+          - generic: Search chats
+          - generic:
+            - link "Images":
+              - /url: /images
+        - generic:
+          - generic:
+            - button "Open profile menu"
+      - generic [ref=f99e9]:
+        - heading "Chat history" [level=2] [ref=f99e10]
+        - navigation "Chat history" [ref=f99e12]:
+          - generic [ref=f99e15]:
+            - link "Home" [ref=f99e16] [cursor=pointer]:
+              - /url: /
+            - generic [ref=f99e19]:
+              - button "Search chats" [ref=f99e20] [cursor=pointer]
+              - button "Close sidebar" [expanded] [ref=f99e25]
+          - list [ref=f99e29]:
+            - listitem [ref=f99e30]:
+              - link "New chat Shift Command O" [ref=f99e31] [cursor=pointer]:
+                - /url: /
+                - generic [ref=f99e32]: New chat
+                - generic [ref=f99e40]:
+                  - generic "Shift" [ref=f99e41]: ⇧
+                  - generic "Command" [ref=f99e43]: ⌘
+                  - generic [ref=f99e45]: O
+            - listitem
+          - link "Images" [ref=f99e47] [cursor=pointer]:
+            - /url: /images
+          - generic [ref=f99e54]:
+            - link "Plugins" [ref=f99e55] [cursor=pointer]:
+              - /url: /plugins
+            - generic [ref=f99e62] [cursor=pointer]: Deep research
+          - generic [ref=f99e69]:
+            - link [ref=f99e70] [cursor=pointer]:
+              - /url: https://openai.com/chatgpt/pricing/
+            - generic [ref=f99e78] [cursor=pointer]: Settings
+            - generic [ref=f99e82] [cursor=pointer]: Help
+          - generic [ref=f99e92]:
+            - generic [ref=f99e93]:
+              - paragraph [ref=f99e94]: Get responses tailored to you
+              - paragraph [ref=f99e95]: Log in to get answers based on saved chats, plus create images and upload files.
+            - button "Log in" [ref=f99e97] [cursor=pointer]
+    - generic [ref=f99e101]:
+      - generic [ref=f99e102]:
+        - banner:
+          - button "Model selector" [ref=f99e104] [cursor=pointer]:
+            - generic [ref=f99e105]: ChatGPT
+          - generic [ref=f99e113]:
+            - button "Log in" [ref=f99e114] [cursor=pointer]
+            - button "Sign up for free" [ref=f99e116] [cursor=pointer]
+      - main [ref=f99e119]:
+        - generic [ref=f99e121]:
+          - generic [ref=f99e173]:
+            - generic [ref=f99e174]:
+              - generic [ref=f99e176]:
+                - heading "You said:" [level=4] [ref=f99e177]
+                - generic [ref=f99e179]:
+                  - generic [ref=f99e180]: Help me find a carbon fiber trekking pole
+                  - generic [ref=f99e185]:
+                    - group "Your message actions":
+                      - button "Copy message"
+              - generic [ref=f99e188]:
+                - heading "ChatGPT said:" [level=4] [ref=f99e189]
+                - generic [ref=f99e191]:
+                  - generic [ref=f99e213]:
+                    - paragraph [ref=f99e214]:
+                      - text: If you’re looking for a
+                      - strong [ref=f99e215]: carbon fiber trekking pole
+                      - text: ", these are some strong options depending on how you hike and your budget. Carbon poles are popular because they’re very light and damp vibrations well, though they can be less tolerant of hard side impacts than aluminum poles."
+                      - link "REI +1" [ref=f99e218] [cursor=pointer]:
+                        - /url: https://www.rei.com/learn/expert-advice/best-hiking-trekking-poles.html?utm_source=chatgpt.com
+                        - generic [ref=f99e220]:
+                          - generic [ref=f99e221]: REI
+                          - generic [ref=f99e224]: "+1"
+                    - heading "Good picks by use case" [level=3] [ref=f99e225]
+                    - list [ref=f99e226]:
+                      - listitem [ref=f99e227]:
+                        - paragraph [ref=f99e228]:
+                          - strong [ref=f99e229]: "Best lightweight all-around choice:"
+                          - generic [ref=f99e230] [cursor=pointer]: Black Diamond Distance Carbon FLZ Trekking Poles
+                        - list [ref=f99e231]:
+                          - listitem [ref=f99e232]:
+                            - paragraph [ref=f99e233]: Great for backpacking, thru-hiking, and fastpacking.
+                          - listitem [ref=f99e234]:
+                            - paragraph [ref=f99e235]:
+                              - text: Folding Z-style design packs down small. REI’s recent testing lists the Distance Carbon FLZ among its top carbon picks.
+                              - link "REI" [ref=f99e238] [cursor=pointer]:
+                                - /url: https://www.rei.com/learn/expert-advice/best-hiking-trekking-poles.html?utm_source=chatgpt.com
+                      - listitem [ref=f99e244]:
+                        - paragraph [ref=f99e245]:
+                          - strong [ref=f99e246]: "Best premium/durability upgrade:"
+                          - generic [ref=f99e247] [cursor=pointer]: MSR DynaLock Ascent Carbon Trekking Poles
+                        - list [ref=f99e248]:
+                          - listitem [ref=f99e249]:
+                            - paragraph [ref=f99e250]:
+                              - text: Designed for demanding terrain with a strong locking system and comfortable feel.
+                              - link "GearLab" [ref=f99e253] [cursor=pointer]:
+                                - /url: https://www.outdoorgearlab.com/topics/camping-and-hiking/best-trekking-poles?utm_source=chatgpt.com
+                      - listitem [ref=f99e259]:
+                        - paragraph [ref=f99e260]:
+                          - strong [ref=f99e261]: "Best value:"
+                          - generic [ref=f99e262] [cursor=pointer]: Cascade Mountain Tech Carbon Fiber Trekking Poles
+                        - list [ref=f99e263]:
+                          - listitem [ref=f99e264]:
+                            - paragraph [ref=f99e265]:
+                              - text: A good budget carbon option; frequently recommended as a lower-cost way to get carbon poles.
+                              - link "Verywell Fit +1" [ref=f99e268] [cursor=pointer]:
+                                - /url: https://www.verywellfit.com/best-walking-sticks-3435996?utm_source=chatgpt.com
+                                - generic [ref=f99e270]:
+                                  - generic [ref=f99e271]: Verywell Fit
+                                  - generic [ref=f99e274]: "+1"
+                      - listitem [ref=f99e275]:
+                        - paragraph [ref=f99e276]:
+                          - strong [ref=f99e277]: "Best for long trekking comfort:"
+                          - generic [ref=f99e278] [cursor=pointer]: Leki Makalu FX Carbon Trekking Poles
+                        - list [ref=f99e279]:
+                          - listitem [ref=f99e280]:
+                            - paragraph [ref=f99e281]:
+                              - text: A premium trekking-focused pole with a reputation for comfort and reliability.
+                              - link "Outdoor Life" [ref=f99e284] [cursor=pointer]:
+                                - /url: https://www.outdoorlife.com/gear/best-trekking-poles/?utm_source=chatgpt.com
+                    - paragraph [ref=f99e290]: "When choosing, check:"
+                    - list [ref=f99e291]:
+                      - listitem [ref=f99e292]:
+                        - paragraph [ref=f99e293]:
+                          - strong [ref=f99e294]: "Height range:"
+                          - text: usually around 60–135 cm is enough for most adults.
+                      - listitem [ref=f99e295]:
+                        - paragraph [ref=f99e296]:
+                          - strong [ref=f99e297]: "Lock type:"
+                          - text: flip locks are generally easier to maintain than twist locks.
+                      - listitem [ref=f99e298]:
+                        - paragraph [ref=f99e299]:
+                          - strong [ref=f99e300]: "Packability:"
+                          - text: Z-fold poles are best for travel; telescoping poles are often better for variable terrain.
+                      - listitem [ref=f99e301]:
+                        - paragraph [ref=f99e302]:
+                          - strong [ref=f99e303]: "Grip:"
+                          - text: cork handles are comfortable for sweaty hands and long days.
+                    - paragraph [ref=f99e304]:
+                      - text: If you tell me your
+                      - strong [ref=f99e305]: budget
+                      - text: ","
+                      - strong [ref=f99e306]: height
+                      - text: ", and whether you need them for"
+                      - strong [ref=f99e307]: day hikes, backpacking, trail running, or trekking trips
+                      - text: ", I can narrow it to 2–3 models."
+                  - generic [ref=f99e308]:
+                    - group "Response actions":
+                      - button "Copy response"
+                      - button "Share"
+                      - button "Sources"
+            - generic [ref=f99e197]: ChatGPT is AI and can make mistakes.
+          - generic:
+            - button [ref=f99e309] [cursor=pointer]
+            - generic [ref=f99e138]:
+              - generic [ref=f99e141]:
+                - button "Add files and more" [ref=f99e144] [cursor=pointer]
+                - textbox "Chat with ChatGPT" [active] [ref=f99e147]:
+                  - paragraph [ref=f99e148]: Ask anything
+                - generic [ref=f99e150]:
+                  - button "Start dictation" [ref=f99e151] [cursor=pointer]
+                  - button "Start Voice" [ref=f99e318] [cursor=pointer]:
+                    - generic [ref=f99e322]: Voice
+              - button [disabled] [ref=f99e159]
+              - button [disabled] [ref=f99e160]
+  - alert [ref=f99e171]
+  - status [ref=f99e172]

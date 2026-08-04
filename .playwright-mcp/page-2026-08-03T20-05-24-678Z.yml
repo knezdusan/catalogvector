@@ -1,0 +1,95 @@
+- generic [ref=f33e1]:
+  - link "Skip to content" [ref=f33e2] [cursor=pointer]:
+    - /url: "#main"
+  - generic [ref=f33e6]:
+    - generic [ref=f33e8]:
+      - navigation "Sidebar":
+        - generic:
+          - generic:
+            - generic:
+              - button "Open sidebar"
+        - generic:
+          - generic:
+            - link "New chat":
+              - /url: /
+          - generic: Search chats
+          - generic:
+            - link "Images":
+              - /url: /images
+        - generic:
+          - generic:
+            - button "Open profile menu"
+      - generic [ref=f33e9]:
+        - heading "Chat history" [level=2] [ref=f33e10]
+        - navigation "Chat history" [ref=f33e12]:
+          - generic [ref=f33e15]:
+            - link "Home" [ref=f33e16] [cursor=pointer]:
+              - /url: /
+            - generic [ref=f33e19]:
+              - button "Search chats" [ref=f33e20] [cursor=pointer]
+              - button "Close sidebar" [expanded] [ref=f33e25]
+          - list [ref=f33e29]:
+            - listitem [ref=f33e30]:
+              - link "New chat Shift Command O" [ref=f33e31] [cursor=pointer]:
+                - /url: /
+                - generic [ref=f33e32]: New chat
+                - generic [ref=f33e40]:
+                  - generic "Shift" [ref=f33e41]: ⇧
+                  - generic "Command" [ref=f33e43]: ⌘
+                  - generic [ref=f33e45]: O
+            - listitem
+          - link "Images" [ref=f33e47] [cursor=pointer]:
+            - /url: /images
+          - generic [ref=f33e54]:
+            - link "Plugins" [ref=f33e55] [cursor=pointer]:
+              - /url: /plugins
+            - generic [ref=f33e62] [cursor=pointer]: Deep research
+          - generic [ref=f33e69]:
+            - link [ref=f33e70] [cursor=pointer]:
+              - /url: https://openai.com/chatgpt/pricing/
+            - generic [ref=f33e78] [cursor=pointer]: Settings
+            - generic [ref=f33e82] [cursor=pointer]: Help
+          - generic [ref=f33e92]:
+            - generic [ref=f33e93]:
+              - paragraph [ref=f33e94]: Get responses tailored to you
+              - paragraph [ref=f33e95]: Log in to get answers based on saved chats, plus create images and upload files.
+            - button "Log in" [ref=f33e97] [cursor=pointer]
+    - generic [ref=f33e101]:
+      - generic [ref=f33e102]:
+        - banner:
+          - button "Model selector" [ref=f33e104] [cursor=pointer]:
+            - generic [ref=f33e105]: ChatGPT
+          - generic [ref=f33e113]:
+            - button "Log in" [ref=f33e114] [cursor=pointer]
+            - button "Sign up for free" [ref=f33e116] [cursor=pointer]
+      - main [ref=f33e119]:
+        - generic [ref=f33e121]:
+          - generic [ref=f33e177]:
+            - generic [ref=f33e178]:
+              - generic [ref=f33e180]:
+                - heading "You said:" [level=4] [ref=f33e181]
+                - generic [ref=f33e183]:
+                  - generic [ref=f33e184]: Help me find Eibach Sportline lowering springs for a 2023 Honda Civic Type R
+                  - generic [ref=f33e189]:
+                    - group "Your message actions":
+                      - button "Copy message"
+              - generic [ref=f33e192]:
+                - heading "ChatGPT said:" [level=4] [ref=f33e193]
+                - generic [ref=f33e194]: ●
+            - generic [ref=f33e201]: ChatGPT is AI and can make mistakes.
+          - generic:
+            - generic:
+              - generic:
+                - button
+            - generic [ref=f33e138]:
+              - generic [ref=f33e141]:
+                - button "Add files and more" [ref=f33e144] [cursor=pointer]
+                - textbox "Chat with ChatGPT" [active] [ref=f33e147]:
+                  - paragraph [ref=f33e148]: Ask anything
+                - generic [ref=f33e150]:
+                  - button "Start dictation" [ref=f33e151] [cursor=pointer]
+                  - button "Stop answering" [ref=f33e211] [cursor=pointer]
+              - button [ref=f33e159]
+              - button [ref=f33e160]
+  - alert [ref=f33e171]
+  - status [ref=f33e172]: Thinking

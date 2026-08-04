@@ -1,0 +1,91 @@
+- generic [ref=f18e1]:
+  - link "Skip to content" [ref=f18e2] [cursor=pointer]:
+    - /url: "#main"
+  - generic [ref=f18e6]:
+    - generic [ref=f18e8]:
+      - navigation "Sidebar":
+        - generic:
+          - generic:
+            - generic:
+              - button "Open sidebar"
+        - generic:
+          - generic:
+            - link "New chat":
+              - /url: /
+          - generic: Search chats
+          - generic:
+            - link "Images":
+              - /url: /images
+        - generic:
+          - generic:
+            - button "Open profile menu"
+      - generic [ref=f18e9]:
+        - heading "Chat history" [level=2] [ref=f18e10]
+        - navigation "Chat history" [ref=f18e12]:
+          - generic [ref=f18e15]:
+            - link "Home" [ref=f18e16] [cursor=pointer]:
+              - /url: /
+            - generic [ref=f18e19]:
+              - button "Search chats" [ref=f18e20] [cursor=pointer]
+              - button "Close sidebar" [expanded] [ref=f18e25]
+          - list [ref=f18e29]:
+            - listitem [ref=f18e30]:
+              - link "New chat Shift Command O" [ref=f18e31] [cursor=pointer]:
+                - /url: /
+                - generic [ref=f18e32]: New chat
+                - generic [ref=f18e40]:
+                  - generic "Shift" [ref=f18e41]: ⇧
+                  - generic "Command" [ref=f18e43]: ⌘
+                  - generic [ref=f18e45]: O
+            - listitem
+          - link "Images" [ref=f18e47] [cursor=pointer]:
+            - /url: /images
+          - generic [ref=f18e54]:
+            - link "Plugins" [ref=f18e55] [cursor=pointer]:
+              - /url: /plugins
+            - generic [ref=f18e62] [cursor=pointer]: Deep research
+          - generic [ref=f18e69]:
+            - link [ref=f18e70] [cursor=pointer]:
+              - /url: https://openai.com/chatgpt/pricing/
+            - generic [ref=f18e78] [cursor=pointer]: Settings
+            - generic [ref=f18e82] [cursor=pointer]: Help
+          - generic [ref=f18e92]:
+            - generic [ref=f18e93]:
+              - paragraph [ref=f18e94]: Get responses tailored to you
+              - paragraph [ref=f18e95]: Log in to get answers based on saved chats, plus create images and upload files.
+            - button "Log in" [ref=f18e97] [cursor=pointer]
+    - generic [ref=f18e101]:
+      - generic [ref=f18e102]:
+        - banner:
+          - button "Model selector" [ref=f18e104] [cursor=pointer]:
+            - generic [ref=f18e105]: ChatGPT
+          - generic [ref=f18e113]:
+            - button "Log in" [ref=f18e114] [cursor=pointer]
+            - button "Sign up for free" [ref=f18e116] [cursor=pointer]
+      - main [ref=f18e119]:
+        - generic [ref=f18e121]:
+          - heading "What’s on your mind today?" [level=1] [ref=f18e129]
+          - generic [ref=f18e131]:
+            - generic [ref=f18e138]:
+              - generic [ref=f18e141]:
+                - button "Add files and more" [ref=f18e144] [cursor=pointer]
+                - textbox "Chat with ChatGPT" [active] [ref=f18e147]:
+                  - paragraph [ref=f18e148]: Ask anything
+                - generic [ref=f18e150]:
+                  - button "Start dictation" [ref=f18e151] [cursor=pointer]
+                  - button "Start Voice" [ref=f18e154] [cursor=pointer]:
+                    - generic [ref=f18e158]: Voice
+              - button [ref=f18e159]
+              - button [ref=f18e160]
+            - generic [ref=f18e167]:
+              - text: ChatGPT is AI. By using it, you agree to our
+              - link "Terms" [ref=f18e168] [cursor=pointer]:
+                - /url: https://openai.com/terms
+              - text: "&"
+              - link "Privacy Policy" [ref=f18e169] [cursor=pointer]:
+                - /url: https://openai.com/privacy
+              - text: . Chats may be reviewed and used to improve our AI models.
+              - link "Learn more" [ref=f18e170] [cursor=pointer]:
+                - /url: https://help.openai.com/en/articles/5722486-how-your-data-is-used-to-improve-model-performance
+  - alert [ref=f18e171]
+  - status [ref=f18e172]

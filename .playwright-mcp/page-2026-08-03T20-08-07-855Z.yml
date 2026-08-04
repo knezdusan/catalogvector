@@ -1,0 +1,380 @@
+- generic [active] [ref=f48e1]:
+  - banner [ref=f48e2]:
+    - button "Skip to content" [ref=f48e3] [cursor=pointer]
+    - button "Accessibility Feedback" [ref=f48e6] [cursor=pointer]
+    - generic [ref=f48e9]:
+      - link [ref=f48e10] [cursor=pointer]:
+        - /url: /?FORM=Z9FD1
+        - heading "Back to Bing search" [level=1] [ref=f48e11]
+      - search [ref=f48e12]:
+        - button "Search" [ref=f48e15] [cursor=pointer]
+        - searchbox "Enter your search here - Search suggestions will show as you type" [ref=f48e16]: Help me find brake pads for a 2018 Honda Civic Si
+        - button "Search using an image" [ref=f48e22] [cursor=pointer]
+    - complementary "Account Rewards and Preferences" [ref=f48e24]:
+      - button "Microsoft Rewards" [ref=f48e25] [cursor=pointer]
+      - link "Sign in" [ref=f48e26] [cursor=pointer]:
+        - /url: javascript:void(0)
+    - navigation "Search Filter" [ref=f48e28]:
+      - list [ref=f48e29]:
+        - listitem [ref=f48e30]:
+          - link "All" [ref=f48e31] [cursor=pointer]:
+            - /url: /?scope=web&FORM=HDRSC1
+        - listitem [ref=f48e32]:
+          - link "Search" [ref=f48e33] [cursor=pointer]:
+            - /url: /copilotsearch?q=Help+me+find+brake+pads+for+a+2018+Honda+Civic+Si&FORM=CSSCOP
+        - listitem [ref=f48e36]:
+          - link "Shopping" [ref=f48e37] [cursor=pointer]:
+            - /url: https://www.bing.com/ck/a?!&&p=1576a26957fd15869bbc5288def3195e664f72c2e5c414c3fabe1741cff73defJmltdHM9MTc4NTcxNTIwMA&ptn=3&ver=2&hsh=4&fclid=3a5787fb-ed79-6bc8-34f8-9051ec956ad0&u=a1L3Nob3A_cT1IZWxwK21lK2ZpbmQrYnJha2UrcGFkcytmb3IrYSsyMDE4K0hvbmRhK0NpdmljK1NpJkZPUk09U0hPUFRC&ntb=1
+        - listitem [ref=f48e38]:
+          - link "Images" [ref=f48e39] [cursor=pointer]:
+            - /url: https://www.bing.com/ck/a?!&&p=68d1bb2a6546938cece7885dfeddeff3380802f216a94bf8326ab4ee4f8cd227JmltdHM9MTc4NTcxNTIwMA&ptn=3&ver=2&hsh=4&fclid=3a5787fb-ed79-6bc8-34f8-9051ec956ad0&u=a1L2ltYWdlcy9zZWFyY2g_cT1IZWxwK21lK2ZpbmQrYnJha2UrcGFkcytmb3IrYSsyMDE4K0hvbmRhK0NpdmljK1NpJkZPUk09SERSU0Mz&ntb=1
+        - listitem [ref=f48e40]:
+          - link "Videos" [ref=f48e41] [cursor=pointer]:
+            - /url: https://www.bing.com/ck/a?!&&p=d7bec38b865e7fe8015657a7bda5e6ee9bb47ba64ebd85a93129fbe3968612aaJmltdHM9MTc4NTcxNTIwMA&ptn=3&ver=2&hsh=4&fclid=3a5787fb-ed79-6bc8-34f8-9051ec956ad0&u=a1L3ZpZGVvcy9zZWFyY2g_cT1IZWxwK21lK2ZpbmQrYnJha2UrcGFkcytmb3IrYSsyMDE4K0hvbmRhK0NpdmljK1NpJkZPUk09SERSU0M0&ntb=1
+        - listitem [ref=f48e42]:
+          - link "Maps" [ref=f48e43] [cursor=pointer]:
+            - /url: https://www.bing.com/ck/a?!&&p=138a7ef133578fdf3ee1e1c77276e95434544fdf125a74ad81669e17eb886e9aJmltdHM9MTc4NTcxNTIwMA&ptn=3&ver=2&hsh=4&fclid=3a5787fb-ed79-6bc8-34f8-9051ec956ad0&u=a1L21hcHM_cT1IZWxwK21lK2ZpbmQrYnJha2UrcGFkcytmb3IrYSsyMDE4K0hvbmRhK0NpdmljK1NpJkZPUk09SERSU0M2&ntb=1
+        - listitem [ref=f48e44]:
+          - link "Copilot" [ref=f48e45] [cursor=pointer]:
+            - /url: https://www.bing.com/ck/a?!&&p=0865ced11089bd67ecbd4de332a91e8fc6ca94f79cd7b44a0b5bbca327aba260JmltdHM9MTc4NTcxNTIwMA&ptn=3&ver=2&hsh=4&fclid=3a5787fb-ed79-6bc8-34f8-9051ec956ad0&u=a1L2NoYXQ_cHJvbXB0PUhlbHArbWUrZmluZCticmFrZStwYWRzK2ZvcithKzIwMTgrSG9uZGErQ2l2aWMrU2kmc2VuZHF1ZXJ5PTEmRk9STT1TQ0NPRFg&ntb=1
+        - listitem [ref=f48e46]:
+          - button [ref=f48e47] [cursor=pointer]
+  - main "Search Results" [ref=f48e52]:
+    - generic [ref=f48e53]: About 38,300 results
+    - generic [ref=f48e65]:
+      - list [ref=f48e66]:
+        - listitem [ref=f48e67]:
+          - list [ref=f48e68]:
+            - listitem [ref=f48e69]:
+              - generic [ref=f48e70]:
+                - generic [ref=f48e71] [cursor=pointer]:
+                  - generic [ref=f48e72]: eBay
+                  - generic [ref=f48e77]:
+                    - generic [ref=f48e78]: www.ebay.com › shop
+                    - button [ref=f48e79]:
+                      - img "About our ads" [ref=f48e81]
+                - heading [level=2] [ref=f48e82]:
+                  - link "Find Top Brands - Great Offers On eBay" [ref=f48e83] [cursor=pointer]:
+                    - /url: https://www.bing.com/aclick?ld=e8sWxAHlEZJwARgqRILrnQmjVUCUyVBPGUoq1UjP4er-X1-kgF64DUB1-n9OnDt5AZVlrp01retBirBftYQwUc99NYE3nkJsu7yDpnIg0S3ObqB6FdBs3gOQIXpvOoVXSprRPo4eLUOI52rk4R3sUVn0d5uGzB26r_W-UUuoDeKi8uVoo5j6s2g6W2mD2YxOSgT7mlqW--Mie2-32RjW-lCP-BYVk&u=aHR0cHMlM2ElMmYlMmZ3d3cuZWJheS5jb20lMmZzY2glMmZpLmh0bWwlM2Zfbmt3JTNkYnJha2UlMjUyMGhvbmRhJTI1MjBjaXZpYyUyNm5vcm92ZXIlM2QxJTI2bWtldnQlM2QxJTI2bWtyaWQlM2Q3MTEtMzQwMDItMTMwNzgtMCUyNm1rY2lkJTNkMiUyNm1rc2NpZCUzZDEwMiUyNmtleXdvcmQlM2RicmFrZSUyNTIwaG9uZGElMjUyMGNpdmljJTI2Y3JscCUzZF8lMjZNVF9JRCUzZCUyNmdlb19pZCUzZCUyNnJsc2F0YXJnZXQlM2Rrd2QtNzY2OTExNzIzNjk4NDAlM2Fsb2MtNDk5MyUyNmFkcG9zJTNkJTI2ZGV2aWNlJTNkYyUyNm1rdHlwZSUzZCUyNmxvYyUzZDEzODc0MSUyNnBvaSUzZCUyNmFiY0lkJTNkJTI2Y21wZ24lM2QzOTU0MTE2OTAlMjZzaXRlbG5rJTNkJTI2YWRncm91cGlkJTNkMTIyNzA1NTI1NTIwODA1MCUyNm5ldHdvcmslM2RvJTI2bWF0Y2h0eXBlJTNkcCUyNm1zY2xraWQlM2Q5Y2YyOTNhZGQxMjkxNDE2M2ZkZWY5ZGQyNDBlYzI5Yg&rlid=9cf293add12914163fdef9dd240ec29b&ntb=1
+                - generic [ref=f48e85]:
+                  - generic [ref=f48e86]: Sponsored
+                  - text: We've got your back with eBay money-back guarantee. Enjoy great deals you can trust. Try the eBay way-getting what you want doesn't have to be a splurge. Browse top items!
+        - listitem [ref=f48e89]:
+          - list
+      - list [ref=f48e90]:
+        - listitem [ref=f48e91]:
+          - generic [ref=f48e95]:
+            - generic [ref=f48e97]:
+              - button "Like" [ref=f48e98]
+              - button "Dislike" [ref=f48e101]
+            - button "AI disclaimer" [ref=f48e104]
+        - listitem [ref=f48e129]:
+          - link "CARiD" [ref=f48e131] [cursor=pointer]:
+            - /url: https://www.bing.com/ck/a?!&&p=efb5c9af7c91e65c5e82d58ba9f92deb63f885a09a80f2cdad8a06524c3d641fJmltdHM9MTc4NTcxNTIwMA&ptn=3&ver=2&hsh=4&fclid=3a5787fb-ed79-6bc8-34f8-9051ec956ad0&u=a1aHR0cHM6Ly93d3cuY2FyaWQuY29tL2hvbmRhLWNpdmljLXNpLWJyYWtlLXBhZHMvP3llYXI9MjAxOCZtc29ja2lkPTNhNTc4N2ZiZWQ3OTZiYzgzNGY4OTA1MWVjOTU2YWQw&ntb=1
+            - generic [ref=f48e136]:
+              - generic [ref=f48e137]: CARiD
+              - generic [ref=f48e138]: https://www.carid.com › honda-civic-si-brake-pads
+          - heading [level=2] [ref=f48e141]:
+            - link "2018 Honda Civic Si Brake Pads - Front & Rear | CARiD" [ref=f48e142] [cursor=pointer]:
+              - /url: https://www.bing.com/ck/a?!&&p=efb5c9af7c91e65c5e82d58ba9f92deb63f885a09a80f2cdad8a06524c3d641fJmltdHM9MTc4NTcxNTIwMA&ptn=3&ver=2&hsh=4&fclid=3a5787fb-ed79-6bc8-34f8-9051ec956ad0&u=a1aHR0cHM6Ly93d3cuY2FyaWQuY29tL2hvbmRhLWNpdmljLXNpLWJyYWtlLXBhZHMvP3llYXI9MjAxOCZtc29ja2lkPTNhNTc4N2ZiZWQ3OTZiYzgzNGY4OTA1MWVjOTU2YWQw&ntb=1
+          - paragraph [ref=f48e144]: Restore or improve the braking performance of your 2018 Honda Civic Si with our disc brake pads and hardware, all sourced from …
+        - listitem [ref=f48e145]:
+          - generic [ref=f48e147]:
+            - generic [ref=f48e149]:
+              - heading [level=2] [ref=f48e151]:
+                - link "Videos of Help Me Find Brake Pads For A 2018 Honda Civic Si" [ref=f48e152] [cursor=pointer]:
+                  - /url: https://www.bing.com/ck/a?!&&p=c69561765971bde0d0a6edb387c6e8b52103f59badd5e062f2b3a1e2f003d563JmltdHM9MTc4NTcxNTIwMA&ptn=3&ver=2&hsh=4&fclid=3a5787fb-ed79-6bc8-34f8-9051ec956ad0&u=a1L3ZpZGVvcy9zZWFyY2g_cT1IZWxwK21lK2ZpbmQrYnJha2UrcGFkcytmb3IrYSsyMDE4K0hvbmRhK0NpdmljK1NpJnFwdnQ9SGVscCttZStmaW5kK2JyYWtlK3BhZHMrZm9yK2ErMjAxOCtIb25kYStDaXZpYytTaSZGT1JNPVZEUkU&ntb=1
+              - generic [ref=f48e154]:
+                - 'link "2018 Honda Civic Front Brake Pad and Rotor Replacement from YouTube · Duration: 7 minutes 44 seconds · 31.5K views · uploaded on Aug 26, 2023 · uploaded by Dan The Brake Man · Click to play. · Tools Needed - Ratchet 12mm socket 17mm socket Drill with 1/4 in drill bit Flathead screwdriver Hammer Brake grease or Hi-temp grease 19mm for lugs Brake caliper tool" [ref=f48e157] [cursor=pointer]':
+                  - /url: https://www.bing.com/ck/a?!&&p=c6aa07e469901bbbc6982681cbc260921394d6a7ce6b68a2f91e549592982f5cJmltdHM9MTc4NTcxNTIwMA&ptn=3&ver=2&hsh=4&fclid=3a5787fb-ed79-6bc8-34f8-9051ec956ad0&u=a1L3ZpZGVvcy9yaXZlcnZpZXcvcmVsYXRlZHZpZGVvP3E9SGVscCttZStmaW5kK2JyYWtlK3BhZHMrZm9yK2ErMjAxOCtIb25kYStDaXZpYytTaSZtaWQ9QjEyRUYyNUU0QjM4QzRCN0MyMDdCMTJFRjI1RTRCMzhDNEI3QzIwNyZjaHVybD1odHRwcyUzYSUyZiUyZnd3dy55b3V0dWJlLmNvbSUyZmNoYW5uZWwlMmZVQ09NVGRrd1FqN2M2WXpIQ2FQV1VZTWcmRk9STT1WSVJF&ntb=1
+                  - generic [ref=f48e158]:
+                    - generic [ref=f48e159]:
+                      - img "2018 Honda Civic Front Brake Pad and Rotor Replacement" [ref=f48e161]
+                      - generic [ref=f48e164]: 7:44
+                    - generic [ref=f48e168]:
+                      - generic "2018 Honda Civic Front Brake Pad and Rotor Replacement" [ref=f48e169]:
+                        - strong [ref=f48e170]: "2018"
+                        - strong [ref=f48e171]: Honda
+                        - strong [ref=f48e172]: Civic
+                        - text: Front
+                        - strong [ref=f48e173]: Brake
+                        - text: Pad and Rotor Replacement
+                      - generic [ref=f48e174]:
+                        - generic [ref=f48e175]:
+                          - img "Video source site" [ref=f48e176]
+                          - text: YouTube · Dan The Brake Man
+                        - generic [ref=f48e177]: 31.5K views · Aug 26, 2023
+                - 'link "2018 Honda Civic Rear Brake Pad and Rotor Replacement With Electronic Parking Brake No Scan Tool from YouTube · Duration: 14 minutes 58 seconds · 173.2K views · uploaded on Aug 26, 2023 · uploaded by Dan The Brake Man · Click to play. · First attempt at editing a video apologies it''s not perfect. Feel free to leave any questions in the comments I''ll get back to you asap. Tools needed - Drill with 1/4 in drill bit Caliper tool 7mm Allen 5mm Allen Wrachet Flathead Hammer 17mm socket or wrench 9mm socket Brake grease or hi-temp grease no scan tool needed this is the manual ..." [ref=f48e180] [cursor=pointer]':
+                  - /url: https://www.bing.com/ck/a?!&&p=5b70b98873a1f8de1c7e1481368998e6b0f387d692e3d9445ea2d17b477c6382JmltdHM9MTc4NTcxNTIwMA&ptn=3&ver=2&hsh=4&fclid=3a5787fb-ed79-6bc8-34f8-9051ec956ad0&u=a1L3ZpZGVvcy9yaXZlcnZpZXcvcmVsYXRlZHZpZGVvP3E9SGVscCttZStmaW5kK2JyYWtlK3BhZHMrZm9yK2ErMjAxOCtIb25kYStDaXZpYytTaSZtaWQ9RTEyMTlCNEI0MTlFQkY1QkQ4RDZFMTIxOUI0QjQxOUVCRjVCRDhENiZjaHVybD1odHRwcyUzYSUyZiUyZnd3dy55b3V0dWJlLmNvbSUyZmNoYW5uZWwlMmZVQ09NVGRrd1FqN2M2WXpIQ2FQV1VZTWcmRk9STT1WSVJF&ntb=1
+                  - generic [ref=f48e181]:
+                    - generic [ref=f48e182]:
+                      - img "2018 Honda Civic Rear Brake Pad and Rotor Replacement With Electronic Parking Brake No Scan Tool" [ref=f48e184]
+                      - generic [ref=f48e187]: 14:58
+                    - generic [ref=f48e191]:
+                      - generic "2018 Honda Civic Rear Brake Pad and Rotor Replacement With Electronic Parking Brake No Scan Tool" [ref=f48e192]:
+                        - strong [ref=f48e193]: "2018"
+                        - strong [ref=f48e194]: Honda
+                        - strong [ref=f48e195]: Civic
+                        - text: Rear
+                        - strong [ref=f48e196]: Brake
+                        - text: Pad and Rotor Replacement With Electronic Parking
+                        - strong [ref=f48e197]: Brake
+                        - text: No Scan Tool
+                      - generic [ref=f48e198]:
+                        - generic [ref=f48e199]:
+                          - img "Video source site" [ref=f48e200]
+                          - text: YouTube · Dan The Brake Man
+                        - generic [ref=f48e201]: 173.2K views · Aug 26, 2023
+                - 'link "Honda Civic Rear Brake Pad & Rotor Replacement 2016–2025 | Step by Step DIY. from YouTube · Duration: 10 minutes 26 seconds · 10.7K views · uploaded on 11 months ago · uploaded by Brake X · Click to play. · If your 2016–2025 Honda Civic (excluding SI & Type R) 🚗 is due for a rear brake replacement, this step-by-step BRAKE-X guide will help you complete the job safely, efficiently, and like a pro 🛠️. Whether your brakes are squeaking, vibrating, or just worn out, our DIY method will save you time ⏱️ and money 💵 — without ..." [ref=f48e204] [cursor=pointer]':
+                  - /url: https://www.bing.com/ck/a?!&&p=cbf2f915f2cff6e32f42cd5930139555c345cffce39d16823fd03b1c1cb9060bJmltdHM9MTc4NTcxNTIwMA&ptn=3&ver=2&hsh=4&fclid=3a5787fb-ed79-6bc8-34f8-9051ec956ad0&u=a1L3ZpZGVvcy9yaXZlcnZpZXcvcmVsYXRlZHZpZGVvP3E9SGVscCttZStmaW5kK2JyYWtlK3BhZHMrZm9yK2ErMjAxOCtIb25kYStDaXZpYytTaSZtaWQ9REZCQjdBMUZGMkRGRDZCRkY3RjRERkJCN0ExRkYyREZENkJGRjdGNCZjaHVybD1odHRwcyUzYSUyZiUyZnd3dy55b3V0dWJlLmNvbSUyZmNoYW5uZWwlMmZVQ0R0WEtPYVp1cTVQejZnQ25LQnAzTkEmRk9STT1WSVJF&ntb=1
+                  - generic [ref=f48e205]:
+                    - generic [ref=f48e206]:
+                      - img "Honda Civic Rear Brake Pad & Rotor Replacement 2016–2025 | Step by Step DIY." [ref=f48e208]
+                      - generic [ref=f48e211]: 10:26
+                    - generic [ref=f48e215]:
+                      - generic "Honda Civic Rear Brake Pad & Rotor Replacement 2016–2025 | Step by Step DIY." [ref=f48e216]:
+                        - strong [ref=f48e217]: Honda
+                        - strong [ref=f48e218]: Civic
+                        - text: Rear
+                        - strong [ref=f48e219]: Brake
+                        - text: Pad & Rotor Replacement 2016–2025 | Step by Step DIY.
+                      - generic [ref=f48e220]:
+                        - generic [ref=f48e221]:
+                          - img "Video source site" [ref=f48e222]
+                          - text: YouTube · Brake X
+                        - generic [ref=f48e223]: 10.7K views · 11 months ago
+            - button "See more" [ref=f48e226]
+        - listitem [ref=f48e232]:
+          - link "Honda Parts Now" [ref=f48e234] [cursor=pointer]:
+            - /url: https://www.bing.com/ck/a?!&&p=6b26651dc953e9cbd55435c2922295e092be89840a3df4d22ebc6795649ac43cJmltdHM9MTc4NTcxNTIwMA&ptn=3&ver=2&hsh=4&fclid=3a5787fb-ed79-6bc8-34f8-9051ec956ad0&u=a1aHR0cHM6Ly93d3cuaG9uZGFwYXJ0c25vdy5jb20vb2VtLTIwMTgtaG9uZGEtY2l2aWMtYnJha2VfcGFkX3NldC5odG1s&ntb=1
+            - generic [ref=f48e239]:
+              - generic [ref=f48e240]: Honda Parts Now
+              - generic [ref=f48e241]: https://www.hondapartsnow.com
+          - heading [level=2] [ref=f48e244]:
+            - link "2018 Honda Civic Brake Pad Set | Low Price at HondaPartsNow" [ref=f48e245] [cursor=pointer]:
+              - /url: https://www.bing.com/ck/a?!&&p=6b26651dc953e9cbd55435c2922295e092be89840a3df4d22ebc6795649ac43cJmltdHM9MTc4NTcxNTIwMA&ptn=3&ver=2&hsh=4&fclid=3a5787fb-ed79-6bc8-34f8-9051ec956ad0&u=a1aHR0cHM6Ly93d3cuaG9uZGFwYXJ0c25vdy5jb20vb2VtLTIwMTgtaG9uZGEtY2l2aWMtYnJha2VfcGFkX3NldC5odG1s&ntb=1
+          - paragraph [ref=f48e247]: Achieve unprecedented performance experience with our genuine 2018 Honda Civic Brake Pad Set. All our parts are engineered for …
+        - listitem [ref=f48e248]:
+          - link "AutoZone" [ref=f48e250] [cursor=pointer]:
+            - /url: https://www.bing.com/ck/a?!&&p=e9a71efa80ce8384e4696bf53d9651823f82585350194efc5dcdfa19894246bdJmltdHM9MTc4NTcxNTIwMA&ptn=3&ver=2&hsh=4&fclid=3a5787fb-ed79-6bc8-34f8-9051ec956ad0&u=a1aHR0cHM6Ly93d3cuYXV0b3pvbmUuY29tL2JyYWtlcy1hbmQtdHJhY3Rpb24tY29udHJvbC9icmFrZS1wYWRzL2hvbmRhL2NpdmljLzIwMTg_bXNvY2tpZD0zYTU3ODdmYmVkNzk2YmM4MzRmODkwNTFlYzk1NmFkMA&ntb=1
+            - generic [ref=f48e255]:
+              - generic [ref=f48e256]: AutoZone
+              - generic [ref=f48e257]: https://www.autozone.com › ... › honda › civic
+          - heading [level=2] [ref=f48e260]:
+            - link "2018 Honda Civic Brake Pad Replacement - Shop Brake Pads by" [ref=f48e261] [cursor=pointer]:
+              - /url: https://www.bing.com/ck/a?!&&p=e9a71efa80ce8384e4696bf53d9651823f82585350194efc5dcdfa19894246bdJmltdHM9MTc4NTcxNTIwMA&ptn=3&ver=2&hsh=4&fclid=3a5787fb-ed79-6bc8-34f8-9051ec956ad0&u=a1aHR0cHM6Ly93d3cuYXV0b3pvbmUuY29tL2JyYWtlcy1hbmQtdHJhY3Rpb24tY29udHJvbC9icmFrZS1wYWRzL2hvbmRhL2NpdmljLzIwMTg_bXNvY2tpZD0zYTU3ODdmYmVkNzk2YmM4MzRmODkwNTFlYzk1NmFkMA&ntb=1
+          - paragraph [ref=f48e263]: Best Brake Pads for your 2018 Honda Civic at AutoZone. Find the right Brand & Material for your Front and Rear Brakes Pads at the …
+        - listitem [ref=f48e264]:
+          - link "martiniworks.com" [ref=f48e266] [cursor=pointer]:
+            - /url: https://www.bing.com/ck/a?!&&p=0ebb27256e553d62cbec08d2459ad16153fdfc2444f232bd2c1550787834fd3eJmltdHM9MTc4NTcxNTIwMA&ptn=3&ver=2&hsh=4&fclid=3a5787fb-ed79-6bc8-34f8-9051ec956ad0&u=a1aHR0cHM6Ly9tYXJ0aW5pd29ya3MuY29tL2Nhci1wYXJ0cy8yMDE4L2hvbmRhL2NpdmljL3NpL2JyYWtlcw&ntb=1
+            - generic [ref=f48e271]:
+              - generic [ref=f48e272]: martiniworks.com
+              - generic [ref=f48e273]: https://martiniworks.com › car-parts › honda › civic › si › brakes
+          - heading [level=2] [ref=f48e276]:
+            - link "2018 Honda Civic Si Brakes | MartiniWorks" [ref=f48e277] [cursor=pointer]:
+              - /url: https://www.bing.com/ck/a?!&&p=0ebb27256e553d62cbec08d2459ad16153fdfc2444f232bd2c1550787834fd3eJmltdHM9MTc4NTcxNTIwMA&ptn=3&ver=2&hsh=4&fclid=3a5787fb-ed79-6bc8-34f8-9051ec956ad0&u=a1aHR0cHM6Ly9tYXJ0aW5pd29ya3MuY29tL2Nhci1wYXJ0cy8yMDE4L2hvbmRhL2NpdmljL3NpL2JyYWtlcw&ntb=1
+          - paragraph [ref=f48e279]: Whether you need OE replacement pads and rotors, performance upgrades, or race-ready braking, we've got you covered. Fast …
+        - listitem [ref=f48e280]:
+          - link "CARiD" [ref=f48e282] [cursor=pointer]:
+            - /url: https://www.bing.com/ck/a?!&&p=d37eb643b87864a8517f85181265d142273d08353f64e7954f87826f6fa38769JmltdHM9MTc4NTcxNTIwMA&ptn=3&ver=2&hsh=4&fclid=3a5787fb-ed79-6bc8-34f8-9051ec956ad0&u=a1aHR0cHM6Ly93d3cuY2FyaWQuY29tL2hvbmRhLWNpdmljLXNpLWJyYWtlcy8_eWVhcj0yMDE4Jm1zb2NraWQ9M2E1Nzg3ZmJlZDc5NmJjODM0Zjg5MDUxZWM5NTZhZDA&ntb=1
+            - generic [ref=f48e287]:
+              - generic [ref=f48e288]: CARiD
+              - generic [ref=f48e289]: https://www.carid.com › honda-civic-si-brakes
+          - heading [level=2] [ref=f48e292]:
+            - link "2018 Honda Civic Si Brakes - Brake Parts | CARiD" [ref=f48e293] [cursor=pointer]:
+              - /url: https://www.bing.com/ck/a?!&&p=d37eb643b87864a8517f85181265d142273d08353f64e7954f87826f6fa38769JmltdHM9MTc4NTcxNTIwMA&ptn=3&ver=2&hsh=4&fclid=3a5787fb-ed79-6bc8-34f8-9051ec956ad0&u=a1aHR0cHM6Ly93d3cuY2FyaWQuY29tL2hvbmRhLWNpdmljLXNpLWJyYWtlcy8_eWVhcj0yMDE4Jm1zb2NraWQ9M2E1Nzg3ZmJlZDc5NmJjODM0Zjg5MDUxZWM5NTZhZDA&ntb=1
+          - paragraph [ref=f48e295]: We have a wide range of brake parts including pads, rotors, and calipers for your 2018 Honda Civic Si, all built to ensure safe, …
+        - listitem [ref=f48e296]:
+          - link "autopartsprime.com" [ref=f48e298] [cursor=pointer]:
+            - /url: https://www.bing.com/ck/a?!&&p=d77d89f1842ad0cbc0f7d4e13eb5f16f4adbf3ce70aafe1b28392a04d33debd7JmltdHM9MTc4NTcxNTIwMA&ptn=3&ver=2&hsh=4&fclid=3a5787fb-ed79-6bc8-34f8-9051ec956ad0&u=a1aHR0cHM6Ly93d3cuYXV0b3BhcnRzcHJpbWUuY29tL3AvMjAxOC1ob25kYS1jaXZpYy1icmFrZS1wYWQtc2V0&ntb=1
+            - generic [ref=f48e303]:
+              - generic [ref=f48e304]: autopartsprime.com
+              - generic [ref=f48e305]: https://www.autopartsprime.com
+          - heading [level=2] [ref=f48e308]:
+            - link "2018 Honda Civic Brake Pad Set - Replacement and OEM" [ref=f48e309] [cursor=pointer]:
+              - /url: https://www.bing.com/ck/a?!&&p=d77d89f1842ad0cbc0f7d4e13eb5f16f4adbf3ce70aafe1b28392a04d33debd7JmltdHM9MTc4NTcxNTIwMA&ptn=3&ver=2&hsh=4&fclid=3a5787fb-ed79-6bc8-34f8-9051ec956ad0&u=a1aHR0cHM6Ly93d3cuYXV0b3BhcnRzcHJpbWUuY29tL3AvMjAxOC1ob25kYS1jaXZpYy1icmFrZS1wYWQtc2V0&ntb=1
+          - paragraph [ref=f48e311]: Have any questions? Talk with us directly using LiveChat.
+        - listitem [ref=f48e312]:
+          - link "autodoc.parts" [ref=f48e314] [cursor=pointer]:
+            - /url: https://www.bing.com/ck/a?!&&p=b19f0548bcd35fa48549099752c2fbfc817499fd077cd758aa177410e189a36aJmltdHM9MTc4NTcxNTIwMA&ptn=3&ver=2&hsh=4&fclid=3a5787fb-ed79-6bc8-34f8-9051ec956ad0&u=a1aHR0cHM6Ly93d3cuYXV0b2RvYy5wYXJ0cy9jYXItcGFydHMvYnJha2UtcGFkLXNldC0xMDEzMC9ob25kYS9jaXZpYy95ZWFyLTIwMTg&ntb=1
+            - generic [ref=f48e319]:
+              - generic [ref=f48e320]: autodoc.parts
+              - generic [ref=f48e321]: https://www.autodoc.parts › car-parts › honda › civic
+          - heading "HONDA CIVIC 2018 brake pads | AUTODOC" [level=2] [ref=f48e324]:
+            - link "HONDA CIVIC 2018 brake pads | AUTODOC":
+              - /url: https://www.bing.com/ck/a?!&&p=b19f0548bcd35fa48549099752c2fbfc817499fd077cd758aa177410e189a36aJmltdHM9MTc4NTcxNTIwMA&ptn=3&ver=2&hsh=4&fclid=3a5787fb-ed79-6bc8-34f8-9051ec956ad0&u=a1aHR0cHM6Ly93d3cuYXV0b2RvYy5wYXJ0cy9jYXItcGFydHMvYnJha2UtcGFkLXNldC0xMDEzMC9ob25kYS9jaXZpYy95ZWFyLTIwMTg&ntb=1
+          - paragraph [ref=f48e326]: Brake pads HONDA CIVIC models from 2018 onward – order bargain car parts that are dispatched right from our warehouse
+        - listitem [ref=f48e327]:
+          - link "eBay" [ref=f48e329] [cursor=pointer]:
+            - /url: https://www.bing.com/ck/a?!&&p=75311d1c2db7be25dde31bc12b203a160179f20cd4207ba1aa342a15d8cf04fdJmltdHM9MTc4NTcxNTIwMA&ptn=3&ver=2&hsh=4&fclid=3a5787fb-ed79-6bc8-34f8-9051ec956ad0&u=a1aHR0cHM6Ly93d3cuZWJheS5jb20vYi9CcmFrZS1QYWRzLWZvci0yMDE4LUhvbmRhLUNpdmljLzU3MzU3L2JuXzcxMTgxMDY2NjU_bXNvY2tpZD0zYTU3ODdmYmVkNzk2YmM4MzRmODkwNTFlYzk1NmFkMA&ntb=1
+            - generic [ref=f48e334]:
+              - generic [ref=f48e335]: eBay
+              - generic [ref=f48e336]: https://www.ebay.com
+          - heading "Brake Pads for 2018 Honda Civic - eBay" [level=2] [ref=f48e339]:
+            - link "Brake Pads for 2018 Honda Civic - eBay":
+              - /url: https://www.bing.com/ck/a?!&&p=75311d1c2db7be25dde31bc12b203a160179f20cd4207ba1aa342a15d8cf04fdJmltdHM9MTc4NTcxNTIwMA&ptn=3&ver=2&hsh=4&fclid=3a5787fb-ed79-6bc8-34f8-9051ec956ad0&u=a1aHR0cHM6Ly93d3cuZWJheS5jb20vYi9CcmFrZS1QYWRzLWZvci0yMDE4LUhvbmRhLUNpdmljLzU3MzU3L2JuXzcxMTgxMDY2NjU_bXNvY2tpZD0zYTU3ODdmYmVkNzk2YmM4MzRmODkwNTFlYzk1NmFkMA&ntb=1
+          - paragraph [ref=f48e341]: Shop Brake Pads for 2018 Honda Civic with eBay Guaranteed Fit. Great deals. Massive selection from top brands on eBay.com.
+        - listitem [ref=f48e342]:
+          - link "Honda Parts Now" [ref=f48e344] [cursor=pointer]:
+            - /url: https://www.bing.com/ck/a?!&&p=ce6be6e32a3300031ed6daabff33702c602d51c92155ff100fc426e40ea7cf77JmltdHM9MTc4NTcxNTIwMA&ptn=3&ver=2&hsh=4&fclid=3a5787fb-ed79-6bc8-34f8-9051ec956ad0&u=a1aHR0cHM6Ly93d3cuaG9uZGFwYXJ0c25vdy5jb20vb2VtLWhvbmRhLWNpdmljLWJyYWtlX3BhZF9zZXQuaHRtbA&ntb=1
+            - generic [ref=f48e349]:
+              - generic [ref=f48e350]: Honda Parts Now
+              - generic [ref=f48e351]: https://www.hondapartsnow.com › oem-honda-civic-brake_pad_set.html
+          - heading "Honda Civic Brake Pad Set - Guaranteed Genuine Honda Parts" [level=2] [ref=f48e354]:
+            - link "Honda Civic Brake Pad Set - Guaranteed Genuine Honda Parts":
+              - /url: https://www.bing.com/ck/a?!&&p=ce6be6e32a3300031ed6daabff33702c602d51c92155ff100fc426e40ea7cf77JmltdHM9MTc4NTcxNTIwMA&ptn=3&ver=2&hsh=4&fclid=3a5787fb-ed79-6bc8-34f8-9051ec956ad0&u=a1aHR0cHM6Ly93d3cuaG9uZGFwYXJ0c25vdy5jb20vb2VtLWhvbmRhLWNpdmljLWJyYWtlX3BhZF9zZXQuaHRtbA&ntb=1
+          - paragraph [ref=f48e356]: Consider browsing through our extensive inventory of genuine Honda Civic Brake Pad Set. Not only do we provide market-leading …
+        - listitem [ref=f48e357]:
+          - link "Amazon" [ref=f48e359] [cursor=pointer]:
+            - /url: https://www.bing.com/ck/a?!&&p=c9ff293647eb8214bd147907e00ac9cc42e963f9256fad32937d1d96aa7699edJmltdHM9MTc4NTcxNTIwMA&ptn=3&ver=2&hsh=4&fclid=3a5787fb-ed79-6bc8-34f8-9051ec956ad0&u=a1aHR0cHM6Ly93d3cuYW1hem9uLmNvbS9Gcm9udC1CcmFrZS1Db21wYXRpYmxlLUhvbmRhLVBDLTI5MTc1MC9kcC9CMENKUDdXNVhL&ntb=1
+            - generic [ref=f48e364]:
+              - generic [ref=f48e365]: Amazon
+              - generic [ref=f48e366]: https://www.amazon.com › dp
+          - heading "Front Disc Brake Pad Set Compatible With Honda Civic Si 2017" [level=2] [ref=f48e369]:
+            - link "Front Disc Brake Pad Set Compatible With Honda Civic Si 2017":
+              - /url: https://www.bing.com/ck/a?!&&p=c9ff293647eb8214bd147907e00ac9cc42e963f9256fad32937d1d96aa7699edJmltdHM9MTc4NTcxNTIwMA&ptn=3&ver=2&hsh=4&fclid=3a5787fb-ed79-6bc8-34f8-9051ec956ad0&u=a1aHR0cHM6Ly93d3cuYW1hem9uLmNvbS9Gcm9udC1CcmFrZS1Db21wYXRpYmxlLUhvbmRhLVBDLTI5MTc1MC9kcC9CMENKUDdXNVhL&ntb=1
+          - paragraph [ref=f48e371]: Sep 23, 2023 · Make sure to check our product specifications (in image gallery) to confirm that this OE replacement disc brake pad …
+        - listitem [ref=f48e372]:
+          - list [ref=f48e373]:
+            - listitem [ref=f48e374]:
+              - generic [ref=f48e375]:
+                - generic [ref=f48e376] [cursor=pointer]:
+                  - generic [ref=f48e377]: eBay
+                  - generic [ref=f48e382]:
+                    - generic [ref=f48e383]: www.ebay.com › brake honda civic
+                    - button [ref=f48e384]:
+                      - img "About our ads" [ref=f48e386]
+                - heading [level=2] [ref=f48e387]:
+                  - link "Find Brake Honda Civic - Brake Honda Civic On eBay" [ref=f48e388] [cursor=pointer]:
+                    - /url: https://www.bing.com/aclick?ld=e8BDyPprNvNn1ZbIAKRkrvGzVUCUxEEx_Th6V24t3nMtlRDOZ6PMBPmJnLCgoZk__rUbnGZS8A-nAWPU9qPJ3fWftohAkhQdC708KbQwMTD_tOXlrH0HgJ_S-_I8aiwbRN2KIM5D_YEFU6OZnZCyl-2boZ7XLqKqO2BExR3iveEr9REUrHRjer2jWcKEhzVB__G5mQ4b3ackXmym-HIFym5w2n4Wg&u=aHR0cHMlM2ElMmYlMmZ3d3cuZWJheS5jb20lMmZzY2glMmZpLmh0bWwlM2Zfbmt3JTNkYnJha2UlMjUyMGhvbmRhJTI1MjBjaXZpYyUyNm5vcm92ZXIlM2QxJTI2bWtldnQlM2QxJTI2bWtyaWQlM2Q3MTEtMzQwMDItMTMwNzgtMCUyNm1rY2lkJTNkMiUyNm1rc2NpZCUzZDEwMiUyNmtleXdvcmQlM2RicmFrZSUyNTIwaG9uZGElMjUyMGNpdmljJTI2Y3JscCUzZF8lMjZNVF9JRCUzZCUyNmdlb19pZCUzZCUyNnJsc2F0YXJnZXQlM2Rrd2QtNzY2OTExNzIzNjk4NDAlM2Fsb2MtNDk5MyUyNmFkcG9zJTNkJTI2ZGV2aWNlJTNkYyUyNm1rdHlwZSUzZCUyNmxvYyUzZDEzODc0MSUyNnBvaSUzZCUyNmFiY0lkJTNkJTI2Y21wZ24lM2QzOTU0MTE2OTAlMjZzaXRlbG5rJTNkJTI2YWRncm91cGlkJTNkMTIyNzA1NTI1NTIwODA1MCUyNm5ldHdvcmslM2RvJTI2bWF0Y2h0eXBlJTNkcCUyNm1zY2xraWQlM2Q3NzFhNzEyMjk0NDYxMDYxZTFkMTFiNTI2MTYxNzk0ZQ&rlid=771a712294461061e1d11b526161794e&ntb=1
+                - generic [ref=f48e389]:
+                  - generic [ref=f48e390]:
+                    - generic [ref=f48e391]: Sponsored
+                    - text: We've got your back with eBay money-back guarantee. Enjoy Brake honda civic you can trust. Find the deal you deserve on eBay. Discover discounts from sellers across the globe.
+                  - generic [ref=f48e394]:
+                    - strong [ref=f48e395]: "Site visitors:"
+                    - text: Over 1M in the past month
+                  - paragraph [ref=f48e396]: Returns Made Easy · Huge Savings · Under $10 · Featured Collections
+                - generic [ref=f48e399]:
+                  - button [ref=f48e400] [cursor=pointer]
+                  - button [ref=f48e402] [cursor=pointer]
+                  - list "Please use arrow keys to navigate" [ref=f48e406]:
+                    - listitem [ref=f48e407] [cursor=pointer]:
+                      - link "Electronic Parts..." [ref=f48e410]:
+                        - /url: https://www.bing.com/aclick?ld=e8mwHhevE-fqe7Kv0e85IEBTVUCUzwWcePHGBOuLZTQIOwzSu1_4CoFlDaUmFVGiUc2OuiZ57D-6XnJ-Wjn-IYVL3bHetG5C0m8BP4_eyBlNBnC4xZ--hi0y4n_W1aboJh2OqL3oGkd85FgXvoRI9wqAEj77SpkSOEThbn8P-60SqUFuLnzn8j1UAeYPCh1uEqhmF9fOKAXBB0zslPbw5kxzPXt0ja4R4dQ2_Nq6qllSBi6i18&u=aHR0cHMlM2ElMmYlMmZ3d3cuZWJheS5jb20lMmZzY2glMmZpLmh0bWwlM2Zfbmt3JTNkZWxlY3Ryb25pYytwYXJ0cytjYXRhbG9ndWUlMjZub3JvdmVyJTNkMSUyNm1rZXZ0JTNkMSUyNm1rcmlkJTNkNzExLTM0MDAyLTEzMDc4LTAlMjZta2NpZCUzZDIlMjZta3NjaWQlM2QxMDIlMjZrZXl3b3JkJTNkYnJha2UlMjUyMGhvbmRhJTI1MjBjaXZpYyUyNmNybHAlM2RfJTI2TVRfSUQlM2QlMjZnZW9faWQlM2QlMjZybHNhdGFyZ2V0JTNka3dkLTc2NjkxMTcyMzY5ODQwJTNhbG9jLTQ5OTMlMjZhZHBvcyUzZCUyNmRldmljZSUzZGMlMjZta3R5cGUlM2QlMjZsb2MlM2QxMzg3NDElMjZwb2klM2QlMjZhYmNJZCUzZCUyNmNtcGduJTNkMzk1NDExNjkwJTI2c2l0ZWxuayUzZCUyNmFkZ3JvdXBpZCUzZDEyMjcwNTUyNTUyMDgwNTAlMjZuZXR3b3JrJTNkbyUyNm1hdGNodHlwZSUzZHAlMjZtc2Nsa2lkJTNkY2M0NDc0MjkxNWExMWRkYTcxY2QxZTU5ZTA4NmYyNWY&rlid=cc44742915a11dda71cd1e59e086f25f&ntb=1
+                    - listitem [ref=f48e412] [cursor=pointer]:
+                      - link "Gift Cards" [ref=f48e415]:
+                        - /url: https://www.bing.com/aclick?ld=e88Ev2tLM9Hb-8TuWTbTBK3zVUCUx8C87D8VTNKISIcqdv46Q5FRLaX4-xIcmlSQ7SG8zHFwYX03o6A4IvdKjV7tUeBobuf76DbHlFJngISkEv0uSOFockj0GqU-SJxWWDgsYwhZHDxonjnFbL-vLTICc6wbJqkUfCZ0uIWWBscMlDegW0Q76nLzKtO7uBplHOqqQsGxx6gB3pa_ZVCaG1H2tGhcBNlnLRrY6j8ZFF5_ltlYcq&u=aHR0cHMlM2ElMmYlMmZ3d3cuZWJheS5jb20lMmZiJTJmR2lmdC1DYXJkcy1Db3Vwb25zJTJmMTcyMDA4JTJmYm5fMTg1ODU5MiUzZm5vcm92ZXIlM2QxJTI2bWtldnQlM2QxJTI2bWtyaWQlM2Q3MTEtMzQwMDItMTMwNzgtMCUyNm1rY2lkJTNkMiUyNm1rc2NpZCUzZDEwMiUyNmtleXdvcmQlM2RicmFrZSUyNTIwaG9uZGElMjUyMGNpdmljJTI2Y3JscCUzZF8lMjZNVF9JRCUzZCUyNmdlb19pZCUzZCUyNnJsc2F0YXJnZXQlM2Rrd2QtNzY2OTExNzIzNjk4NDAlM2Fsb2MtNDk5MyUyNmFkcG9zJTNkJTI2ZGV2aWNlJTNkYyUyNm1rdHlwZSUzZCUyNmxvYyUzZDEzODc0MSUyNnBvaSUzZCUyNmFiY0lkJTNkJTI2Y21wZ24lM2QzOTU0MTE2OTAlMjZzaXRlbG5rJTNkMiUyNmFkZ3JvdXBpZCUzZDEyMjcwNTUyNTUyMDgwNTAlMjZuZXR3b3JrJTNkbyUyNm1hdGNodHlwZSUzZHAlMjZtc2Nsa2lkJTNkM2UyZDgzNjY0OTA5MTcwYzgzZDZlOTE2YmMyZWViN2Y&rlid=3e2d83664909170c83d6e916bc2eeb7f&ntb=1
+                    - listitem [ref=f48e417] [cursor=pointer]:
+                      - link "Money Back Guarantee" [ref=f48e420]:
+                        - /url: https://www.bing.com/aclick?ld=e89kvxyRbu82Y163tsdSKrQzVUCUzOVuSoJzU4apX9pzAMIR9lU2FxJM62FDtIY0jgUvEAMUD9adfgu0lErZItijDgmbHY2j18ocMh-JzJTcbo1BFp2A_-ayeWpYNW4saM8mMzxGjwrN0encdg_0rrP26iaUQ5FjT6o7nSr75C9JVlIz_PlKS6D3N0KJ7mGQvQU5VuOVLYJ-hHSDlXnvmcOMRzywNr6lbY6oriyEndyIYhVQ8B&u=aHR0cHMlM2ElMmYlMmZwYWdlcy5lYmF5LmNvbSUyZmViYXktbW9uZXktYmFjay1ndWFyYW50ZWUlMmYlM2Zub3JvdmVyJTNkMSUyNm1rZXZ0JTNkMSUyNm1rcmlkJTNkNzExLTM0MDAyLTEzMDc4LTAlMjZta2NpZCUzZDIlMjZta3NjaWQlM2QxMDIlMjZrZXl3b3JkJTNkYnJha2UlMjUyMGhvbmRhJTI1MjBjaXZpYyUyNmNybHAlM2RfJTI2TVRfSUQlM2QlMjZnZW9faWQlM2QlMjZybHNhdGFyZ2V0JTNka3dkLTc2NjkxMTcyMzY5ODQwJTNhbG9jLTQ5OTMlMjZhZHBvcyUzZCUyNmRldmljZSUzZGMlMjZta3R5cGUlM2QlMjZsb2MlM2QxMzg3NDElMjZwb2klM2QlMjZhYmNJZCUzZCUyNmNtcGduJTNkMzk1NDExNjkwJTI2c2l0ZWxuayUzZCUyNmFkZ3JvdXBpZCUzZDEyMjcwNTUyNTUyMDgwNTAlMjZuZXR3b3JrJTNkbyUyNm1hdGNodHlwZSUzZHAlMjZtc2Nsa2lkJTNkZjI0NjU1NWRkN2RiMTM5NDVmZjgzZjJkMjJmYzRiNjg&rlid=f246555dd7db13945ff83f2d22fc4b68&ntb=1
+                    - listitem [ref=f48e422] [cursor=pointer]:
+                      - link "Brake Pad Piston Tool..." [ref=f48e425]:
+                        - /url: https://www.bing.com/aclick?ld=e8Exh-iLAIxSSybdbwcKg2VDVUCUwlDULxExhQCq_9Bv1zATlnTIjsWXu2tv54YE3GbWV9MTLEMqcvyhh41tmjKK8ZF-69C0AGOD1z4-Oh__DcAa_aGvxiYKdg9whWkRz-kee3xGlN5Z-VPChhesSBFLZz6LNVNdAlbknBISW3492bQceNAMQjgHO7hUvA4PRgCMyIMGVIG3I1FHBjfUg48tE-PN2jKYq19oabIqj47C2auYbN&u=aHR0cHMlM2ElMmYlMmZ3d3cuZWJheS5jb20lMmZzY2glMmZpLmh0bWwlM2Zfbmt3JTNkYnJha2UrcGFkK3Bpc3Rvbit0b29sJTI2bm9yb3ZlciUzZDElMjZta2V2dCUzZDElMjZta3JpZCUzZDcxMS0zNDAwMi0xMzA3OC0wJTI2bWtjaWQlM2QyJTI2bWtzY2lkJTNkMTAyJTI2a2V5d29yZCUzZGJyYWtlJTI1MjBob25kYSUyNTIwY2l2aWMlMjZjcmxwJTNkXyUyNk1UX0lEJTNkJTI2Z2VvX2lkJTNkJTI2cmxzYXRhcmdldCUzZGt3ZC03NjY5MTE3MjM2OTg0MCUzYWxvYy00OTkzJTI2YWRwb3MlM2QlMjZkZXZpY2UlM2RjJTI2bWt0eXBlJTNkJTI2bG9jJTNkMTM4NzQxJTI2cG9pJTNkJTI2YWJjSWQlM2QlMjZjbXBnbiUzZDM5NTQxMTY5MCUyNnNpdGVsbmslM2QlMjZhZGdyb3VwaWQlM2QxMjI3MDU1MjU1MjA4MDUwJTI2bmV0d29yayUzZG8lMjZtYXRjaHR5cGUlM2RwJTI2bXNjbGtpZCUzZDU1YjljMGVjMjVlMzFkNzVjMmZlYWE5Y2QwYzRjOTg5&rlid=55b9c0ec25e31d75c2feaa9cd0c4c989&ntb=1
+                    - listitem [ref=f48e427] [cursor=pointer]:
+                      - link "1998 Jaguar Xj8 Window..." [ref=f48e430]:
+                        - /url: https://www.bing.com/aclick?ld=e8J43gypjnM1evw6YDG4sfpDVUCUwx3IaqCwD7kQFs28ETItp5Ur7gVmdTBxoM9Iwe7tOoL885_zKhCaqhnEEy8W2SXqrh7JTVFCY64ttVihCZ5sNlmj4STLM6W32vuLnKN_TM94ujffZ8VfrRZaL25QWXZbURFP5IY_mPMiKuwG5aURkRwizla0ElePT72KtiXME7LH5_f0x8LDZKYSJsoQpjMm8yAyWwhsDWae_MqhaZkM5Z&u=aHR0cHMlM2ElMmYlMmZ3d3cuZWJheS5jb20lMmZzY2glMmZpLmh0bWwlM2Zfbmt3JTNkMTk5OCtqYWd1YXIreGo4K3dpbmRvdytzZWFsJTI2bm9yb3ZlciUzZDElMjZta2V2dCUzZDElMjZta3JpZCUzZDcxMS0zNDAwMi0xMzA3OC0wJTI2bWtjaWQlM2QyJTI2bWtzY2lkJTNkMTAyJTI2a2V5d29yZCUzZGJyYWtlJTI1MjBob25kYSUyNTIwY2l2aWMlMjZjcmxwJTNkXyUyNk1UX0lEJTNkJTI2Z2VvX2lkJTNkJTI2cmxzYXRhcmdldCUzZGt3ZC03NjY5MTE3MjM2OTg0MCUzYWxvYy00OTkzJTI2YWRwb3MlM2QlMjZkZXZpY2UlM2RjJTI2bWt0eXBlJTNkJTI2bG9jJTNkMTM4NzQxJTI2cG9pJTNkJTI2YWJjSWQlM2QlMjZjbXBnbiUzZDM5NTQxMTY5MCUyNnNpdGVsbmslM2QlMjZhZGdyb3VwaWQlM2QxMjI3MDU1MjU1MjA4MDUwJTI2bmV0d29yayUzZG8lMjZtYXRjaHR5cGUlM2RwJTI2bXNjbGtpZCUzZDBlODYyMzBhNzhjNTFkYTE5MDFjNDk3YThkZTJlNDQy&rlid=0e86230a78c51da1901c497a8de2e442&ntb=1
+                    - listitem [ref=f48e432] [cursor=pointer]:
+                      - link "Calipers Ap Racing on..." [ref=f48e435]:
+                        - /url: https://www.bing.com/aclick?ld=e8x0_3qJKe9-TZf104CJwh4TVUCUxgJ-lwuAJ7c5o4piB92du5ci7Iop61lFXL0gBDtnXDnXrMGbXvkBjI77cACL7nYU1XNqqDHfIXgHh4WnhPCAjIIEfx2u9d-N-jjXv8urXmt_HFDZBJuvWuwpvAS5_YUwtZfAjN09AhgTYwHVW7agtnfvhbPtUBC_AugrPrPdmy12oCTqO81iYoQVfCL7i9zL1WZdaObzk4GUMOvZtXgUMt&u=aHR0cHMlM2ElMmYlMmZ3d3cuZWJheS5jb20lMmZzY2glMmZpLmh0bWwlM2Zfbmt3JTNkY2FsaXBlcnMrYXArcmFjaW5nJTI2bm9yb3ZlciUzZDElMjZta2V2dCUzZDElMjZta3JpZCUzZDcxMS0zNDAwMi0xMzA3OC0wJTI2bWtjaWQlM2QyJTI2bWtzY2lkJTNkMTAyJTI2a2V5d29yZCUzZGJyYWtlJTI1MjBob25kYSUyNTIwY2l2aWMlMjZjcmxwJTNkXyUyNk1UX0lEJTNkJTI2Z2VvX2lkJTNkJTI2cmxzYXRhcmdldCUzZGt3ZC03NjY5MTE3MjM2OTg0MCUzYWxvYy00OTkzJTI2YWRwb3MlM2QlMjZkZXZpY2UlM2RjJTI2bWt0eXBlJTNkJTI2bG9jJTNkMTM4NzQxJTI2cG9pJTNkJTI2YWJjSWQlM2QlMjZjbXBnbiUzZDM5NTQxMTY5MCUyNnNpdGVsbmslM2QlMjZhZGdyb3VwaWQlM2QxMjI3MDU1MjU1MjA4MDUwJTI2bmV0d29yayUzZG8lMjZtYXRjaHR5cGUlM2RwJTI2bXNjbGtpZCUzZDAyYzk0MzQyNDQ5ZTE4NzRiNzM4MjkzMmIxYjkyNWUz&rlid=02c94342449e1874b7382932b1b925e3&ntb=1
+                    - listitem [ref=f48e437] [cursor=pointer]:
+                      - link "New Arrivals" [ref=f48e440]:
+                        - /url: https://www.bing.com/aclick?ld=e8Ayemto2PYUP0j-GTm9eVPDVUCUw63lyOwjCLRPvbCk9BsZeluz-DkQ89epfIeyC6qtnyLWshgkzjPxA1LDQhHCps9tdGMPI_su-Fy45rR44xMpJ1sDouqjQyfQQr2lRgsGWgZSKQz55y_N4YtprD4zEmnZjEfA9YzaDNot2W2MzX-AZNNQXL_gVO24CfM6wyxkMm_8ugYD4xfB4t_uRd4QnXpT2UnGYoj4tCzAuwNH9nM7K0&u=aHR0cHMlM2ElMmYlMmZ3d3cuZWJheS5jb20lMmZ0cmVuZGluZyUzZm5vcm92ZXIlM2QxJTI2bWtldnQlM2QxJTI2bWtyaWQlM2Q3MTEtMzQwMDItMTMwNzgtMCUyNm1rY2lkJTNkMiUyNm1rc2NpZCUzZDEwMiUyNmtleXdvcmQlM2RicmFrZSUyNTIwaG9uZGElMjUyMGNpdmljJTI2Y3JscCUzZF8lMjZNVF9JRCUzZCUyNmdlb19pZCUzZCUyNnJsc2F0YXJnZXQlM2Rrd2QtNzY2OTExNzIzNjk4NDAlM2Fsb2MtNDk5MyUyNmFkcG9zJTNkJTI2ZGV2aWNlJTNkYyUyNm1rdHlwZSUzZCUyNmxvYyUzZDEzODc0MSUyNnBvaSUzZCUyNmFiY0lkJTNkJTI2Y21wZ24lM2QzOTU0MTE2OTAlMjZzaXRlbG5rJTNkJTI2YWRncm91cGlkJTNkMTIyNzA1NTI1NTIwODA1MCUyNm5ldHdvcmslM2RvJTI2bWF0Y2h0eXBlJTNkcCUyNm1zY2xraWQlM2RhNDk3MTkxZjEwODkxMGY4MGRlMTczNmZlNWFlMjNhNA&rlid=a497191f108910f80de1736fe5ae23a4&ntb=1
+                    - listitem [ref=f48e442] [cursor=pointer]:
+                      - link "Easy Returns" [ref=f48e445]:
+                        - /url: https://www.bing.com/aclick?ld=e8d-9cpHwRFcMBRExjQhrV6zVUCUwUunXAtc8GDF2skCFA_P3vj048dxpFQscQlEs1r--6C24t5f9ozuYBVfTD3mAcaCCUcRB6CApxT1GuYCrdtTt_XBeMWcC7dw9usNWZ8Vx8ibhUADA72sPqGdSsXxxnXPOu7BZaCM807eD5rqCVpJj8W-Oi3YFkIhjsJMigofVou-JBY0JunN53Mw_HFM69yeqBw22nMBBA671LU8dl-MFK&u=aHR0cHMlM2ElMmYlMmZwYWdlcy5lYmF5LmNvbSUyZnJldHVybnMlMmYlM2Zub3JvdmVyJTNkMSUyNm1rZXZ0JTNkMSUyNm1rcmlkJTNkNzExLTM0MDAyLTEzMDc4LTAlMjZta2NpZCUzZDIlMjZta3NjaWQlM2QxMDIlMjZrZXl3b3JkJTNkYnJha2UlMjUyMGhvbmRhJTI1MjBjaXZpYyUyNmNybHAlM2RfJTI2TVRfSUQlM2QlMjZnZW9faWQlM2QlMjZybHNhdGFyZ2V0JTNka3dkLTc2NjkxMTcyMzY5ODQwJTNhbG9jLTQ5OTMlMjZhZHBvcyUzZCUyNmRldmljZSUzZGMlMjZta3R5cGUlM2QlMjZsb2MlM2QxMzg3NDElMjZwb2klM2QlMjZhYmNJZCUzZCUyNmNtcGduJTNkMzk1NDExNjkwJTI2c2l0ZWxuayUzZDYlMjZhZGdyb3VwaWQlM2QxMjI3MDU1MjU1MjA4MDUwJTI2bmV0d29yayUzZG8lMjZtYXRjaHR5cGUlM2RwJTI2bXNjbGtpZCUzZDBiNzRlNTZjY2NjZTFhNzZiNTZkOGYxYzM5ZTk4YzJi&rlid=0b74e56cccce1a76b56d8f1c39e98c2b&ntb=1
+        - listitem [ref=f48e447]:
+          - generic [ref=f48e448]:
+            - heading [level=2] [ref=f48e449]:
+              - text: Deep dive into
+              - strong [ref=f48e450]: Help me find brake pads for a 2018 Honda Civic Si
+            - list [ref=f48e451]:
+              - listitem [ref=f48e452]:
+                - link [ref=f48e453] [cursor=pointer]:
+                  - /url: https://www.bing.com/ck/a?!&&p=de27db5d55779dd833d7b687920a1531512066078710f098c14c25e5ea1398e6JmltdHM9MTc4NTcxNTIwMA&ptn=3&ver=2&hsh=4&fclid=3a5787fb-ed79-6bc8-34f8-9051ec956ad0&u=a1L3NlYXJjaD9xPTIwMjIrSG9uZGErQ2l2aWMrYnJha2UrcGFkcyZGT1JNPVFTUkUx&ntb=1
+                  - generic [ref=f48e455]:
+                    - strong [ref=f48e456]: "2022"
+                    - text: Honda Civic brake pads
+              - listitem [ref=f48e457]:
+                - link [ref=f48e458] [cursor=pointer]:
+                  - /url: https://www.bing.com/ck/a?!&&p=21af0a96f30fcbbcc6ea6689fcc5f156c380e1b3d8f7b01a4c8d2e98bfb9978fJmltdHM9MTc4NTcxNTIwMA&ptn=3&ver=2&hsh=4&fclid=3a5787fb-ed79-6bc8-34f8-9051ec956ad0&u=a1L3NlYXJjaD9xPUhvbmRhK0NpdmljK2JyYWtlK3BhZCtyZXBsYWNlbWVudCZGT1JNPVFTUkUy&ntb=1
+                  - generic [ref=f48e460]:
+                    - text: Honda Civic brake pad
+                    - strong [ref=f48e461]: replacement
+              - listitem [ref=f48e462]:
+                - link [ref=f48e463] [cursor=pointer]:
+                  - /url: https://www.bing.com/ck/a?!&&p=ce9e347ac7565ea67e39b19be0f667b44499931e49ecb65405d3c49983ed874eJmltdHM9MTc4NTcxNTIwMA&ptn=3&ver=2&hsh=4&fclid=3a5787fb-ed79-6bc8-34f8-9051ec956ad0&u=a1L3NlYXJjaD9xPTIwMTgrSG9uZGErQ2l2aWMrYnJha2UrcmVwbGFjZW1lbnQmRk9STT1RU1JFMw&ntb=1
+                  - generic [ref=f48e465]:
+                    - text: 2018 Honda Civic brake
+                    - strong [ref=f48e466]: replacement
+              - listitem [ref=f48e467]:
+                - link [ref=f48e468] [cursor=pointer]:
+                  - /url: https://www.bing.com/ck/a?!&&p=5ef2032fc2e0854f45edc1c2b5cdaff2326d9c333b2c797f92d17d17cd5ed2caJmltdHM9MTc4NTcxNTIwMA&ptn=3&ver=2&hsh=4&fclid=3a5787fb-ed79-6bc8-34f8-9051ec956ad0&u=a1L3NlYXJjaD9xPUhvbmRhK0NpdmljK2JyYWtlK3JlcGxhY2VtZW50JkZPUk09UVNSRTQ&ntb=1
+                  - generic [ref=f48e470]:
+                    - text: Honda Civic brake
+                    - strong [ref=f48e471]: replacement
+              - listitem [ref=f48e472]:
+                - link [ref=f48e473] [cursor=pointer]:
+                  - /url: https://www.bing.com/ck/a?!&&p=a0c4bc690287e812591b5bbab8f506d58952d4e5bab02f72c6f447babc94a04aJmltdHM9MTc4NTcxNTIwMA&ptn=3&ver=2&hsh=4&fclid=3a5787fb-ed79-6bc8-34f8-9051ec956ad0&u=a1L3NlYXJjaD9xPUhvbmRhK0NpdmljK2JyYWtlK3BhZHMrY29zdCZGT1JNPVFTUkU1&ntb=1
+                  - generic [ref=f48e475]:
+                    - text: Honda Civic brake pads
+                    - strong [ref=f48e476]: cost
+              - listitem [ref=f48e477]:
+                - link [ref=f48e478] [cursor=pointer]:
+                  - /url: https://www.bing.com/ck/a?!&&p=03ebe6a45d660db50aae72f09634ac72a855f5e8758c2570524ecee9f3119812JmltdHM9MTc4NTcxNTIwMA&ptn=3&ver=2&hsh=4&fclid=3a5787fb-ed79-6bc8-34f8-9051ec956ad0&u=a1L3NlYXJjaD9xPUhvbmRhK0NpdmljK2JyYWtlK3BhZHMrcHJpY2UmRk9STT1RU1JFNg&ntb=1
+                  - generic [ref=f48e480]:
+                    - text: Honda Civic brake pads
+                    - strong [ref=f48e481]: price
+              - listitem [ref=f48e482]:
+                - link [ref=f48e483] [cursor=pointer]:
+                  - /url: https://www.bing.com/ck/a?!&&p=9c2167f5cfcdfde2c070d29483ab5adc3e377445e8546c37d80f8ce1c5a3d107JmltdHM9MTc4NTcxNTIwMA&ptn=3&ver=2&hsh=4&fclid=3a5787fb-ed79-6bc8-34f8-9051ec956ad0&u=a1L3NlYXJjaD9xPUhvbmRhK0NpdmljK2JyYWtlK3BhZCtraXQmRk9STT1RU1JFNw&ntb=1
+                  - generic [ref=f48e485]:
+                    - text: Honda Civic brake pad
+                    - strong [ref=f48e486]: kit
+              - listitem [ref=f48e487]:
+                - link [ref=f48e488] [cursor=pointer]:
+                  - /url: https://www.bing.com/ck/a?!&&p=a653399097fa04b1ad554b9e172183eb8770f43f940cac0561b7b3e4d571d6b1JmltdHM9MTc4NTcxNTIwMA&ptn=3&ver=2&hsh=4&fclid=3a5787fb-ed79-6bc8-34f8-9051ec956ad0&u=a1L3NlYXJjaD9xPUhvbmRhK0NpdmljK3JlYXIrYnJha2UrcGFkcyZGT1JNPVFTUkU4&ntb=1
+                  - generic [ref=f48e490]:
+                    - text: Honda Civic
+                    - strong [ref=f48e491]: rear
+                    - text: brake pads
+              - listitem [ref=f48e492]:
+                - link [ref=f48e493] [cursor=pointer]:
+                  - /url: https://www.bing.com/ck/a?!&&p=14fec2bef027f1c8dbbf581785438792a05323be35e9bf93dcfab2fa49724b4dJmltdHM9MTc4NTcxNTIwMA&ptn=3&ver=2&hsh=4&fclid=3a5787fb-ed79-6bc8-34f8-9051ec956ad0&u=a1L3NlYXJjaD9xPTIwMTgrSG9uZGErQ2l2aWMrZnJvbnQrYnJha2VzJkZPUk09UVNSRTk&ntb=1
+                  - generic [ref=f48e495]:
+                    - text: 2018 Honda Civic
+                    - strong [ref=f48e496]: front
+                    - text: brakes
+              - listitem [ref=f48e497]:
+                - link [ref=f48e498] [cursor=pointer]:
+                  - /url: https://www.bing.com/ck/a?!&&p=db13b7bb6c647090bf2a4b290311572d93b120bab2d62caa92ee39cd0f5a3f32JmltdHM9MTc4NTcxNTIwMA&ptn=3&ver=2&hsh=4&fclid=3a5787fb-ed79-6bc8-34f8-9051ec956ad0&u=a1L3NlYXJjaD9xPTIwMTgrSG9uZGErQ2l2aWMrcmVhciZGT1JNPVFTUkUxMA&ntb=1
+                  - generic [ref=f48e500]:
+                    - text: 2018 Honda Civic
+                    - strong [ref=f48e501]: rear
+        - listitem [ref=f48e502]:
+          - navigation "More results for Help me find brake pads for a 2018 Honda Civic Si":
+            - list:
+              - listitem [ref=f48e503]:
+                - generic "Page 1" [ref=f48e504]: "1"
+              - listitem [ref=f48e505]:
+                - link "Page 2" [ref=f48e506] [cursor=pointer]:
+                  - /url: /search?q=Help+me+find+brake+pads+for+a+2018+Honda+Civic+Si&showcopilot=1&FPIG=66FA8BF8DCAC4399A6877939F4957063&first=11&FORM=PERE
+                  - text: "2"
+              - listitem [ref=f48e507]:
+                - link "Page 3" [ref=f48e508] [cursor=pointer]:
+                  - /url: /search?q=Help+me+find+brake+pads+for+a+2018+Honda+Civic+Si&showcopilot=1&FPIG=66FA8BF8DCAC4399A6877939F4957063&first=21&FORM=PERE1
+                  - text: "3"
+              - listitem [ref=f48e509]:
+                - link "Next page" [ref=f48e510] [cursor=pointer]:
+                  - /url: /search?q=Help+me+find+brake+pads+for+a+2018+Honda+Civic+Si&showcopilot=1&FPIG=66FA8BF8DCAC4399A6877939F4957063&first=11&FORM=PORE
+      - complementary "Additional Results" [ref=f48e511]:
+        - list
+  - contentinfo [ref=f48e512]:
+    - generic [ref=f48e513]:
+      - list:
+        - listitem [ref=f48e514]:
+          - link "Privacy" [ref=f48e515] [cursor=pointer]:
+            - /url: https://www.bing.com/ck/a?!&&p=85982122c0416dd4ca47ccf6049630c0cb5c868a2827404e9fdb4f073cbdc3d9JmltdHM9MTc4NTcxNTIwMA&ptn=3&ver=2&hsh=4&fclid=3a5787fb-ed79-6bc8-34f8-9051ec956ad0&u=a1aHR0cDovL2dvLm1pY3Jvc29mdC5jb20vZndsaW5rLz9MaW5rSWQ9NTIxODM5&ntb=1
+        - listitem [ref=f48e516]:
+          - link "Terms" [ref=f48e517] [cursor=pointer]:
+            - /url: https://www.bing.com/ck/a?!&&p=4412c8d21e283680c734b6710531f117345eedf6afde731ba5b247daf6753ad9JmltdHM9MTc4NTcxNTIwMA&ptn=3&ver=2&hsh=4&fclid=3a5787fb-ed79-6bc8-34f8-9051ec956ad0&u=a1aHR0cDovL2dvLm1pY3Jvc29mdC5jb20vZndsaW5rLz9MaW5rSUQ9MjQ2MzM4&ntb=1

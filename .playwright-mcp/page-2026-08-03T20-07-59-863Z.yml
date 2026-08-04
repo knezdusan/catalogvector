@@ -1,0 +1,35 @@
+- generic [ref=f45e5]:
+  - navigation "Sidebar" [ref=f45e7]:
+    - button [ref=f45e8]
+    - generic:
+      - generic:
+        - generic:
+          - generic:
+            - generic:
+              - heading "Copilot" [level=2]
+              - link "Go to Copilot home page" [ref=f45e9] [cursor=pointer]
+    - generic [ref=f45e18]:
+      - generic [ref=f45e19]:
+        - button "Open sidebar" [ref=f45e22]
+        - link "New chat" [ref=f45e29] [cursor=pointer]:
+          - /url: /
+      - generic [ref=f45e37]:
+        - button "Library" [ref=f45e39] [cursor=pointer]
+        - list [ref=f45e44]:
+          - listitem [ref=f45e45]:
+            - link "Discover" [ref=f45e46] [cursor=pointer]:
+              - /url: /discover
+          - listitem
+          - listitem [ref=f45e52]:
+            - link "Imagine" [ref=f45e53] [cursor=pointer]:
+              - /url: /imagine
+          - listitem [ref=f45e59]:
+            - link "Experiments" [ref=f45e60] [cursor=pointer]:
+              - /url: /labs
+  - main [ref=f45e67]:
+    - generic [ref=f45e75]:
+      - generic [ref=f45e83]:
+        - generic [ref=f45e84]: Message Copilot
+        - textbox "Message Copilot" [active] [ref=f45e85]
+      - generic [ref=f45e89]:
+        - button "Attach files, connect apps, or make something with Copilot." [disabled]

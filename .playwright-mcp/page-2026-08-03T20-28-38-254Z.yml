@@ -1,0 +1,120 @@
+- main [ref=f59e4]:
+  - button "Open sidebar" [ref=f59e15] [cursor=pointer]:
+    - generic [ref=f59e16]: side_nav_expand
+  - generic [ref=f59e24]:
+    - generic: play_arrow
+    - link "About Gemini Opens in a new window" [ref=f59e25] [cursor=pointer]:
+      - /url: https://gemini.google/about/?utm_source=gemini&utm_medium=web&utm_campaign=gemini_zero_state_link_to_marketing_microsite
+      - text: About Gemini
+      - generic [ref=f59e26]: Opens in a new window
+    - link "Get Gemini App Opens in a new window" [ref=f59e27] [cursor=pointer]:
+      - /url: https://gemini.google.com/app/download
+      - text: Get Gemini App
+      - generic [ref=f59e28]: Opens in a new window
+    - link "Subscriptions Opens in a new window" [ref=f59e29] [cursor=pointer]:
+      - /url: https://one.google.com/ai
+      - text: Subscriptions
+      - generic [ref=f59e30]: Opens in a new window
+    - link "For Business Opens in a new window" [ref=f59e31] [cursor=pointer]:
+      - /url: https://business.gemini.google/?utm_source=cloud_sfdc&utm_medium=et&utm_campaign=FY26-Q2-global-gemini-app&utm_content=-&utm_term=-
+      - text: For Business
+      - generic [ref=f59e32]: Opens in a new window
+    - button "Sign in" [ref=f59e35]
+  - generic [ref=f59e6]:
+    - navigation "Side Navigation" [ref=f59e41]:
+      - generic [ref=f59e44]:
+        - generic [ref=f59e45]:
+          - navigation "Main actions menu" [ref=f59e46]:
+            - link "New chat" [ref=f59e148] [cursor=pointer]:
+              - /url: /app
+              - img [ref=f59e150]: gemini_chat
+          - navigation "Additional actions menu" [ref=f59e50]:
+            - link "Images" [ref=f59e54] [cursor=pointer]:
+              - /url: /images
+              - img [ref=f59e56]: image_create
+        - group [ref=f59e58]:
+          - generic [ref=f59e60]:
+            - button "Sign in" [ref=f59e62] [cursor=pointer]:
+              - img [ref=f59e64]: account_circle
+            - button "Settings" [ref=f59e69] [cursor=pointer]:
+              - img [ref=f59e71]: settings
+    - generic [ref=f59e74]:
+      - generic [ref=f59e75]:
+        - heading "Conversation with Gemini" [level=1] [ref=f59e76]
+        - generic [ref=f59e152]:
+          - generic [ref=f59e156]:
+            - heading "You said Shop for a linen bed sheet set" [level=2] [ref=f59e160]:
+              - generic [ref=f59e161]: You said
+              - paragraph [ref=f59e162]: Shop for a linen bed sheet set
+            - generic [ref=f59e163]:
+              - button "Copy prompt" [ref=f59e165] [cursor=pointer]:
+                - img [ref=f59e167]: copy
+              - generic [ref=f59e169]:
+                - button "Edit" [disabled]:
+                  - generic:
+                    - img: edit
+          - generic [ref=f59e176]:
+            - heading "Gemini said" [level=2] [ref=f59e177]
+            - generic [ref=f59e181]:
+              - paragraph [ref=f59e182]: Shopping for a linen bed sheet set is a great investment in your sleep. Linen is famously breathable, highly moisture-wicking, and uniquely temperature-regulating—keeping you cool in the summer and cozy in the winter. It also gets softer and more comfortable with every single wash.
+              - paragraph [ref=f59e183]: "Top-rated linen sheet sets on the market span various preferences and budgets:"
+              - 'heading "1. Best Value: Quince European Linen Sheet Set" [level=3] [ref=f59e184]'
+              - list [ref=f59e185]:
+                - listitem [ref=f59e186]:
+                  - paragraph [ref=f59e187]: "Material: 100% European Flax"
+                - listitem [ref=f59e188]:
+                  - paragraph [ref=f59e189]: "Price (Queen): Around $129–$179"
+                - listitem [ref=f59e190]:
+                  - paragraph [ref=f59e191]: "Why buy: If you want luxury linen without the heavy luxury markup, Quince is the gold standard. It is sustainably sourced, pre-washed for softness, and offers incredible quality and color choices at a fraction of competitors' prices."
+              - 'heading "2. Best Overall / All-Season: Parachute Linen Sheet Set" [level=3] [ref=f59e192]'
+              - list [ref=f59e193]:
+                - listitem [ref=f59e194]:
+                  - paragraph [ref=f59e195]: "Material: 100% European Flax"
+                - listitem [ref=f59e196]:
+                  - paragraph [ref=f59e197]:
+                    - text: "Price (Queen): Around $329–$429"
+                    - generic [ref=f59e198]: "(Note: Parachute sets traditionally sold without a top sheet, which can be added separately)"
+                - listitem [ref=f59e199]:
+                  - paragraph [ref=f59e200]: "Why buy: Exceptionally well-balanced for year-round comfort. They feature a gorgeous, lived-in garment-washed texture straight out of the box and boast top-tier durability and breathability."
+              - 'heading "3. Best for Immediate Softness: Sijo LuxeWeave Linen Sheet Set" [level=3] [ref=f59e201]'
+              - list [ref=f59e202]:
+                - listitem [ref=f59e203]:
+                  - paragraph [ref=f59e204]: "Material: French Flax"
+                - listitem [ref=f59e205]:
+                  - paragraph [ref=f59e206]: "Why buy: Sijo stonewashes its small-batch French flax heavily, making these feel remarkably buttery and comfortable on night one. They are a favorite among hot sleepers who want maximum airflow."
+              - 'heading "4. Best Durable & Deep Pockets: Boll & Branch Linen Sheet Set" [level=3] [ref=f59e207]'
+              - list [ref=f59e208]:
+                - listitem [ref=f59e209]:
+                  - paragraph [ref=f59e210]: "Material: 100% Belgian Flax"
+                - listitem [ref=f59e211]:
+                  - paragraph [ref=f59e212]: "Price (Queen): Around $329–$409"
+                - listitem [ref=f59e213]:
+                  - paragraph [ref=f59e214]: "Why buy: Crafted with meticulous attention to detail, these feature a substantial weight, Fair Trade certification, and deep 17-inch pockets on the fitted sheet that easily accommodate thick pillow-top mattresses."
+              - heading "Quick Tips for Buying Linen Sheets:" [level=3] [ref=f59e215]
+              - list [ref=f59e216]:
+                - listitem [ref=f59e217]:
+                  - paragraph [ref=f59e218]:
+                    - text: "Check the Flax Source: Look for sheets made from"
+                    - generic [ref=f59e219]: European, French, or Belgian flax
+                    - text: . This dictates the quality of the plant fibers, meaning a softer, longer-lasting sheet.
+                - listitem [ref=f59e220]:
+                  - paragraph [ref=f59e221]: "Expect Wrinkles: Linen naturally has a relaxed, casual, rumpled aesthetic."
+      - generic [ref=f59e93]:
+        - group [ref=f59e94]:
+          - generic [ref=f59e97]:
+            - textbox "Enter a prompt for Gemini" [active] [ref=f59e103]:
+              - text: Ask Gemini
+              - paragraph [ref=f59e222]
+            - button "Upload & tools" [ref=f59e110] [cursor=pointer]:
+              - img [ref=f59e112]: plus
+            - generic [ref=f59e114]:
+              - group [ref=f59e117]:
+                - button "Open mode picker, currently Flash-Lite" [ref=f59e118]:
+                  - generic [ref=f59e120]:
+                    - generic [ref=f59e121]: Flash-Lite
+                    - img [ref=f59e123]: keyboard_arrow_down
+              - generic [ref=f59e126]:
+                - text: mic
+                - button "Stop response" [ref=f59e223] [cursor=pointer]:
+                  - img [ref=f59e146]: stop
+        - paragraph [ref=f59e224]: Gemini is AI and can make mistakes.

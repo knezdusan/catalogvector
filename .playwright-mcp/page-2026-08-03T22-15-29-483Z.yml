@@ -1,0 +1,105 @@
+- generic [ref=f105e2]:
+  - banner [ref=f105e5]:
+    - generic [ref=f105e6]:
+      - link [ref=f105e8] [cursor=pointer]:
+        - /url: /
+      - generic:
+        - link "Home" [ref=f105e12] [cursor=pointer]:
+          - /url: /
+        - link "Explore" [ref=f105e16] [cursor=pointer]:
+          - /url: /categories
+        - link "View Cart" [ref=f105e20] [cursor=pointer]:
+          - /url: /cart
+        - link "Deals" [ref=f105e24] [cursor=pointer]:
+          - /url: /offers
+        - button "Sign in to view saved items" [ref=f105e28] [cursor=pointer]
+      - button "Sign in" [ref=f105e33] [cursor=pointer]
+  - generic [ref=f105e39]:
+    - generic [ref=f105e1439]:
+      - heading "Related searches" [level=2] [ref=f105e1440]
+      - generic [ref=f105e1442]:
+        - paragraph [ref=f105e1453] [cursor=pointer]: placeholder-0
+        - paragraph [ref=f105e1464] [cursor=pointer]: placeholder-1
+        - paragraph [ref=f105e1475] [cursor=pointer]: placeholder-2
+        - paragraph [ref=f105e1486] [cursor=pointer]: placeholder-3
+        - paragraph [ref=f105e1497] [cursor=pointer]: placeholder-4
+        - paragraph [ref=f105e1508] [cursor=pointer]: placeholder-5
+    - generic [ref=f105e1513]:
+      - list [ref=f105e1516]:
+        - button "fluidampr steel internally balanced damper most ej" [ref=f105e1517] [cursor=pointer]:
+          - paragraph [ref=f105e1523]:
+            - generic [ref=f105e1524]: fluidampr steel internally balanced damper most ej
+      - generic [ref=f105e1528]:
+        - searchbox "Search products and stores" [ref=f105e1529]: Fluidampr Steel Internally Balanced Damper Most EJ
+        - button "Clear search" [ref=f105e1531] [cursor=pointer]
+    - contentinfo [ref=f105e405]:
+      - generic [ref=f105e406]:
+        - generic [ref=f105e407]:
+          - generic [ref=f105e408]:
+            - generic [ref=f105e409]:
+              - img "Shop" [ref=f105e410]
+              - paragraph [ref=f105e416]: Shop is the next step on our mission to make commerce better for everyone.
+            - generic [ref=f105e419]:
+              - link "Download on the App Store" [ref=f105e420] [cursor=pointer]:
+                - /url: https://open.shop.app/E2jp6/yphyl/7qog?sid=49250b87-aa1e-4965-aba6-313d211e8b95
+                - img "Download Shop" [ref=f105e421]
+              - link "Download on Google Play" [ref=f105e422] [cursor=pointer]:
+                - /url: https://open.shop.app/E2jp6/frmk/3n2h?sid=49250b87-aa1e-4965-aba6-313d211e8b95
+                - img "Download Shop" [ref=f105e423]
+          - generic [ref=f105e424]:
+            - navigation "Start selling" [ref=f105e425]:
+              - paragraph [ref=f105e426]: Start selling
+              - link [ref=f105e427] [cursor=pointer]:
+                - /url: https://www.shopify.com/shop?utm_medium=website&utm_source=shop-website&utm_campaign=shop_app_footer_for_brands
+                - paragraph [ref=f105e428]: For brands
+              - link [ref=f105e429] [cursor=pointer]:
+                - /url: https://www.shopify.com/collabs/creators?utm_medium=website&utm_source=shop-website&utm_campaign=shop_app_footer_for_creators
+                - paragraph [ref=f105e430]: For creators
+              - link [ref=f105e431] [cursor=pointer]:
+                - /url: https://www.shopify.com/free-trial?utm_medium=website&utm_source=shop-website&utm_campaign=shop_app_footer_build_your_store
+                - paragraph [ref=f105e432]: Build your store
+            - navigation "Information" [ref=f105e433]:
+              - paragraph [ref=f105e434]: Information
+              - link [ref=f105e435] [cursor=pointer]:
+                - /url: https://shop.app/shop-pay?utm_medium=website&utm_source=shop-website
+                - paragraph [ref=f105e436]: Shop Pay
+              - link [ref=f105e437] [cursor=pointer]:
+                - /url: https://help.shop.app/shop?utm_medium=website&utm_source=shop-website
+                - paragraph [ref=f105e438]: Help center
+            - navigation "Social" [ref=f105e439]:
+              - paragraph [ref=f105e440]: Social
+              - link [ref=f105e441] [cursor=pointer]:
+                - /url: https://twitter.com/shop?utm_medium=website&utm_source=shop-website
+                - paragraph [ref=f105e442]: X (Twitter)
+              - link [ref=f105e443] [cursor=pointer]:
+                - /url: https://instagram.com/shopapp?utm_medium=website&utm_source=shop-website
+                - paragraph [ref=f105e444]: Instagram
+            - navigation "Legal" [ref=f105e445]:
+              - paragraph [ref=f105e446]: Legal
+              - link [ref=f105e447] [cursor=pointer]:
+                - /url: /terms-of-service?locale=en-US
+                - paragraph [ref=f105e448]: Terms of Service
+              - link [ref=f105e449] [cursor=pointer]:
+                - /url: https://www.shopify.com/legal/privacy/app-users?utm_medium=website&utm_source=shop-website
+                - paragraph [ref=f105e450]: Privacy Policy
+              - link [ref=f105e451] [cursor=pointer]:
+                - /url: https://privacy.shopify.com/?utm_medium=website&utm_source=shop-website
+                - paragraph [ref=f105e452]: Your Privacy Choices
+        - generic [ref=f105e458]:
+          - separator [ref=f105e459]
+          - generic [ref=f105e460]:
+            - generic [ref=f105e461]:
+              - generic [ref=f105e462]:
+                - paragraph [ref=f105e463]: Powered by
+                - img "Shopify" [ref=f105e464]
+              - paragraph [ref=f105e478]: "|"
+              - link [ref=f105e479] [cursor=pointer]:
+                - /url: https://www.shopify.com/free-trial?utm_medium=website&utm_source=shop-website&utm_campaign=shop_app_subfooter_start_selling
+                - paragraph [ref=f105e480]: Start selling for free
+            - generic [ref=f105e481]:
+              - link [ref=f105e482] [cursor=pointer]:
+                - /url: /language-settings
+                - paragraph [ref=f105e483]: Language
+              - paragraph [ref=f105e484]: © Shopify Inc. 2026
+    - region "Notifications (F8)":
+      - list

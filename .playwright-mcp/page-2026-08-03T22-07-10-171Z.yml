@@ -1,0 +1,207 @@
+- generic [ref=f78e1]:
+  - link "Skip to content" [ref=f78e2] [cursor=pointer]:
+    - /url: "#main"
+  - generic [ref=f78e6]:
+    - generic [ref=f78e8]:
+      - navigation "Sidebar":
+        - generic:
+          - generic:
+            - generic:
+              - button "Open sidebar"
+        - generic:
+          - generic:
+            - link "New chat":
+              - /url: /
+          - generic: Search chats
+          - generic:
+            - link "Images":
+              - /url: /images
+        - generic:
+          - generic:
+            - button "Open profile menu"
+      - generic [ref=f78e9]:
+        - heading "Chat history" [level=2] [ref=f78e10]
+        - navigation "Chat history" [ref=f78e12]:
+          - generic [ref=f78e15]:
+            - link "Home" [ref=f78e16] [cursor=pointer]:
+              - /url: /
+            - generic [ref=f78e19]:
+              - button "Search chats" [ref=f78e20] [cursor=pointer]
+              - button "Close sidebar" [expanded] [ref=f78e25]
+          - list [ref=f78e29]:
+            - listitem [ref=f78e30]:
+              - link "New chat Shift Command O" [ref=f78e31] [cursor=pointer]:
+                - /url: /
+                - generic [ref=f78e32]: New chat
+                - generic [ref=f78e40]:
+                  - generic "Shift" [ref=f78e41]: ⇧
+                  - generic "Command" [ref=f78e43]: ⌘
+                  - generic [ref=f78e45]: O
+            - listitem
+          - link "Images" [ref=f78e47] [cursor=pointer]:
+            - /url: /images
+          - generic [ref=f78e54]:
+            - link "Plugins" [ref=f78e55] [cursor=pointer]:
+              - /url: /plugins
+            - generic [ref=f78e62] [cursor=pointer]: Deep research
+          - generic [ref=f78e69]:
+            - link [ref=f78e70] [cursor=pointer]:
+              - /url: https://openai.com/chatgpt/pricing/
+            - generic [ref=f78e78] [cursor=pointer]: Settings
+            - generic [ref=f78e82] [cursor=pointer]: Help
+          - generic [ref=f78e92]:
+            - generic [ref=f78e93]:
+              - paragraph [ref=f78e94]: Get responses tailored to you
+              - paragraph [ref=f78e95]: Log in to get answers based on saved chats, plus create images and upload files.
+            - button "Log in" [ref=f78e97] [cursor=pointer]
+    - generic [ref=f78e101]:
+      - generic [ref=f78e102]:
+        - banner:
+          - button "Model selector" [ref=f78e104] [cursor=pointer]:
+            - generic [ref=f78e105]: ChatGPT
+          - generic [ref=f78e113]:
+            - button "Log in" [ref=f78e114] [cursor=pointer]
+            - button "Sign up for free" [ref=f78e116] [cursor=pointer]
+      - main [ref=f78e119]:
+        - generic [ref=f78e121]:
+          - generic [ref=f78e173]:
+            - generic [ref=f78e174]:
+              - generic [ref=f78e176]:
+                - heading "You said:" [level=4] [ref=f78e177]
+                - generic [ref=f78e179]:
+                  - generic [ref=f78e180]: Shop for a down alternative comforter
+                  - generic [ref=f78e185]:
+                    - group "Your message actions":
+                      - button "Copy message"
+              - generic [ref=f78e188]:
+                - heading "ChatGPT said:" [level=4] [ref=f78e189]
+                - generic [ref=f78e191]:
+                  - generic [ref=f78e213]:
+                    - paragraph [ref=f78e214]:
+                      - text: Here are some strong down-alternative comforter picks, depending on what you’re looking for. Down alternatives are usually easier to wash and are a good option if you prefer synthetic fill, but they can feel a bit heavier than real down.
+                      - link "WIRED" [ref=f78e217] [cursor=pointer]:
+                        - /url: https://www.wired.com/story/what-is-down-alternative?utm_source=chatgpt.com
+                    - paragraph [ref=f78e223]:
+                      - link "Brooklinen Down Alternative Comforter" [ref=f78e225] [cursor=pointer]:
+                        - /url: https://www.brooklinen.com/products/down-alternative-comforter?utm_source=chatgpt.com
+                      - text: —
+                      - strong [ref=f78e229]: Best all-around choice
+                    - list [ref=f78e230]:
+                      - listitem [ref=f78e231]:
+                        - paragraph [ref=f78e232]: Good if you want a fluffy “hotel bed” feel
+                      - listitem [ref=f78e233]:
+                        - paragraph [ref=f78e234]: Comes in lightweight, all-season, and warmer options
+                      - listitem [ref=f78e235]:
+                        - paragraph [ref=f78e236]: Cotton sateen shell with recycled microfiber fill
+                      - listitem [ref=f78e237]:
+                        - paragraph [ref=f78e238]:
+                          - text: A common recommendation among bedding reviewers
+                          - link "Forbes +1" [ref=f78e241] [cursor=pointer]:
+                            - /url: https://www.forbes.com/sites/forbes-personal-shopper/article/best-down-alternative-comforter/?utm_source=chatgpt.com
+                            - generic [ref=f78e243]:
+                              - generic [ref=f78e244]: Forbes
+                              - generic [ref=f78e247]: "+1"
+                    - paragraph [ref=f78e248]:
+                      - link "Saatva Down Alternative Comforter" [ref=f78e250] [cursor=pointer]:
+                        - /url: https://www.saatva.com/bedding/down-alternative-comforter?utm_source=chatgpt.com
+                      - text: —
+                      - strong [ref=f78e254]: Best premium pick
+                    - list [ref=f78e255]:
+                      - listitem [ref=f78e256]:
+                        - paragraph [ref=f78e257]: Cotton shell with down-alternative and lyocell fill
+                      - listitem [ref=f78e258]:
+                        - paragraph [ref=f78e259]: Available in multiple warmth levels
+                      - listitem [ref=f78e260]:
+                        - paragraph [ref=f78e261]:
+                          - text: Good choice if you want a more luxurious, breathable feel
+                          - link "Sleep Foundation +1" [ref=f78e264] [cursor=pointer]:
+                            - /url: https://www.sleepfoundation.org/best-bedding/best-comforter?utm_source=chatgpt.com
+                            - generic [ref=f78e266]:
+                              - generic [ref=f78e267]: Sleep Foundation
+                              - generic [ref=f78e270]: "+1"
+                    - paragraph [ref=f78e271]:
+                      - generic [ref=f78e272]: Buffy Cloud Comforter
+                      - text: —
+                      - strong [ref=f78e277]: Best for soft, cozy feel
+                    - list [ref=f78e278]:
+                      - listitem [ref=f78e279]:
+                        - paragraph [ref=f78e280]: Eucalyptus-based lyocell shell
+                      - listitem [ref=f78e281]:
+                        - paragraph [ref=f78e282]: Recycled fill designed to mimic down
+                      - listitem [ref=f78e283]:
+                        - paragraph [ref=f78e284]:
+                          - text: Often recommended for a plush but not overly heavy comforter
+                          - link "Sleep Foundation +1" [ref=f78e287] [cursor=pointer]:
+                            - /url: https://www.sleepfoundation.org/best-bedding/best-down-alternative-comforter?utm_source=chatgpt.com
+                            - generic [ref=f78e289]:
+                              - generic [ref=f78e290]: Sleep Foundation
+                              - generic [ref=f78e293]: "+1"
+                    - paragraph [ref=f78e294]:
+                      - generic [ref=f78e295]: Bedsure Down Alternative Comforter
+                      - text: —
+                      - strong [ref=f78e300]: Budget-friendly option
+                    - list [ref=f78e301]:
+                      - listitem [ref=f78e302]:
+                        - paragraph [ref=f78e303]: Good if you want something affordable and easy-care
+                      - listitem [ref=f78e304]:
+                        - paragraph [ref=f78e305]:
+                          - text: A popular value pick among bedding guides
+                          - link "Good Housekeeping" [ref=f78e308] [cursor=pointer]:
+                            - /url: https://www.goodhousekeeping.com/home-products/comforter-reviews/g2145/down-alternative-comforter/?utm_source=chatgpt.com
+                    - paragraph [ref=f78e314]: "Quick guide:"
+                    - list [ref=f78e315]:
+                      - listitem [ref=f78e316]:
+                        - paragraph [ref=f78e317]:
+                          - strong [ref=f78e318]: "Hot sleeper:"
+                          - text: Buffy Cloud or a lightweight Brooklinen
+                          - link "Sleep Foundation" [ref=f78e321] [cursor=pointer]:
+                            - /url: https://www.sleepfoundation.org/best-bedding/best-down-alternative-comforter?utm_source=chatgpt.com
+                      - listitem [ref=f78e327]:
+                        - paragraph [ref=f78e328]:
+                          - strong [ref=f78e329]: "Cold sleeper:"
+                          - text: Brooklinen warmer option or Saatva heavyweight
+                          - link "Sleep Foundation +1" [ref=f78e332] [cursor=pointer]:
+                            - /url: https://www.sleepfoundation.org/best-bedding/best-down-alternative-comforter?utm_source=chatgpt.com
+                            - generic [ref=f78e334]:
+                              - generic [ref=f78e335]: Sleep Foundation
+                              - generic [ref=f78e338]: "+1"
+                      - listitem [ref=f78e339]:
+                        - paragraph [ref=f78e340]:
+                          - strong [ref=f78e341]: "One comforter year-round:"
+                          - text: Brooklinen all-season or Saatva all-year
+                          - link "Forbes +1" [ref=f78e344] [cursor=pointer]:
+                            - /url: https://www.forbes.com/sites/forbes-personal-shopper/article/best-down-alternative-comforter/?utm_source=chatgpt.com
+                            - generic [ref=f78e346]:
+                              - generic [ref=f78e347]: Forbes
+                              - generic [ref=f78e350]: "+1"
+                      - listitem [ref=f78e351]:
+                        - paragraph [ref=f78e352]:
+                          - strong [ref=f78e353]: "Best value:"
+                          - text: Bedsure or similar mid-range options
+                          - link "Good Housekeeping" [ref=f78e356] [cursor=pointer]:
+                            - /url: https://www.goodhousekeeping.com/home-products/comforter-reviews/g2145/down-alternative-comforter/?utm_source=chatgpt.com
+                    - paragraph [ref=f78e362]:
+                      - text: If you tell me your
+                      - strong [ref=f78e363]: bed size (Twin/Queen/King), budget, and whether you sleep hot or cold
+                      - text: ", I can narrow it to 2–3 choices."
+                  - generic [ref=f78e364]:
+                    - group "Response actions":
+                      - button "Copy response"
+                      - button "Share"
+                      - button "Sources"
+            - generic [ref=f78e197]: ChatGPT is AI and can make mistakes.
+          - generic:
+            - button [ref=f78e365] [cursor=pointer]
+            - generic [ref=f78e138]:
+              - generic [ref=f78e141]:
+                - button "Add files and more" [ref=f78e144] [cursor=pointer]
+                - textbox "Chat with ChatGPT" [active] [ref=f78e147]:
+                  - paragraph [ref=f78e148]: Ask anything
+                - generic [ref=f78e150]:
+                  - button "Start dictation" [ref=f78e151] [cursor=pointer]
+                  - button "Start Voice" [ref=f78e374] [cursor=pointer]:
+                    - generic [ref=f78e378]: Voice
+              - button [disabled] [ref=f78e159]
+              - button [disabled] [ref=f78e160]
+  - alert [ref=f78e171]
+  - status [ref=f78e172]

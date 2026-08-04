@@ -1,0 +1,95 @@
+- generic [ref=f96e1]:
+  - link "Skip to content" [ref=f96e2] [cursor=pointer]:
+    - /url: "#main"
+  - generic [ref=f96e6]:
+    - generic [ref=f96e8]:
+      - navigation "Sidebar":
+        - generic:
+          - generic:
+            - generic:
+              - button "Open sidebar"
+        - generic:
+          - generic:
+            - link "New chat":
+              - /url: /
+          - generic: Search chats
+          - generic:
+            - link "Images":
+              - /url: /images
+        - generic:
+          - generic:
+            - button "Open profile menu"
+      - generic [ref=f96e9]:
+        - heading "Chat history" [level=2] [ref=f96e10]
+        - navigation "Chat history" [ref=f96e12]:
+          - generic [ref=f96e15]:
+            - link "Home" [ref=f96e16] [cursor=pointer]:
+              - /url: /
+            - generic [ref=f96e19]:
+              - button "Search chats" [ref=f96e20] [cursor=pointer]
+              - button "Close sidebar" [expanded] [ref=f96e25]
+          - list [ref=f96e29]:
+            - listitem [ref=f96e30]:
+              - link "New chat Shift Command O" [ref=f96e31] [cursor=pointer]:
+                - /url: /
+                - generic [ref=f96e32]: New chat
+                - generic [ref=f96e40]:
+                  - generic "Shift" [ref=f96e41]: ⇧
+                  - generic "Command" [ref=f96e43]: ⌘
+                  - generic [ref=f96e45]: O
+            - listitem
+          - link "Images" [ref=f96e47] [cursor=pointer]:
+            - /url: /images
+          - generic [ref=f96e54]:
+            - link "Plugins" [ref=f96e55] [cursor=pointer]:
+              - /url: /plugins
+            - generic [ref=f96e62] [cursor=pointer]: Deep research
+          - generic [ref=f96e69]:
+            - link [ref=f96e70] [cursor=pointer]:
+              - /url: https://openai.com/chatgpt/pricing/
+            - generic [ref=f96e78] [cursor=pointer]: Settings
+            - generic [ref=f96e82] [cursor=pointer]: Help
+          - generic [ref=f96e92]:
+            - generic [ref=f96e93]:
+              - paragraph [ref=f96e94]: Get responses tailored to you
+              - paragraph [ref=f96e95]: Log in to get answers based on saved chats, plus create images and upload files.
+            - button "Log in" [ref=f96e97] [cursor=pointer]
+    - generic [ref=f96e101]:
+      - generic [ref=f96e102]:
+        - banner:
+          - button "Model selector" [ref=f96e104] [cursor=pointer]:
+            - generic [ref=f96e105]: ChatGPT
+          - generic [ref=f96e113]:
+            - button "Log in" [ref=f96e114] [cursor=pointer]
+            - button "Sign up for free" [ref=f96e116] [cursor=pointer]
+      - main [ref=f96e119]:
+        - generic [ref=f96e121]:
+          - generic [ref=f96e173]:
+            - generic [ref=f96e174]:
+              - generic [ref=f96e176]:
+                - heading "You said:" [level=4] [ref=f96e177]
+                - generic [ref=f96e179]:
+                  - generic [ref=f96e180]: Shop for a down sleeping bag 20 degree
+                  - generic [ref=f96e185]:
+                    - group "Your message actions":
+                      - button "Copy message"
+              - generic [ref=f96e188]:
+                - heading "ChatGPT said:" [level=4] [ref=f96e189]
+                - generic [ref=f96e190]: ●
+            - generic [ref=f96e197]: ChatGPT is AI and can make mistakes.
+          - generic:
+            - generic:
+              - generic:
+                - button
+            - generic [ref=f96e138]:
+              - generic [ref=f96e141]:
+                - button "Add files and more" [ref=f96e144] [cursor=pointer]
+                - textbox "Chat with ChatGPT" [active] [ref=f96e147]:
+                  - paragraph [ref=f96e148]: Ask anything
+                - generic [ref=f96e150]:
+                  - button "Start dictation" [ref=f96e151] [cursor=pointer]
+                  - button "Stop answering" [ref=f96e208] [cursor=pointer]
+              - button [disabled] [ref=f96e159]
+              - button [disabled] [ref=f96e160]
+  - alert [ref=f96e171]
+  - status [ref=f96e172]: Thinking

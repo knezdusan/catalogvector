@@ -1,0 +1,114 @@
+- generic [ref=f74e2]:
+  - banner [ref=f74e5]:
+    - generic [ref=f74e6]:
+      - link [ref=f74e8] [cursor=pointer]:
+        - /url: /
+      - generic:
+        - link "Home" [ref=f74e12] [cursor=pointer]:
+          - /url: /
+        - link "Explore" [ref=f74e16] [cursor=pointer]:
+          - /url: /categories
+        - link "View Cart" [ref=f74e20] [cursor=pointer]:
+          - /url: /cart
+        - link "Deals" [ref=f74e24] [cursor=pointer]:
+          - /url: /offers
+        - button "Sign in to view saved items" [ref=f74e28] [cursor=pointer]
+      - button "Sign in" [ref=f74e33] [cursor=pointer]
+  - generic [ref=f74e39]:
+    - link [ref=f74e41] [cursor=pointer]:
+      - /url: https://shop.app/download
+      - paragraph [ref=f74e50]: Download Shop app.
+      - paragraph [ref=f74e51]: Available on iOS & Android
+    - generic [ref=f74e58]:
+      - img "Shop" [ref=f74e59]
+      - generic [ref=f74e67]:
+        - generic [ref=f74e71]:
+          - searchbox "Search products and stores" [ref=f74e72]
+          - button "Clear search" [ref=f74e74] [cursor=pointer]
+        - generic [ref=f74e78]:
+          - paragraph [ref=f74e79]: Suggested searches
+          - list [ref=f74e80]:
+            - button [ref=f74e81] [cursor=pointer]:
+              - paragraph [ref=f74e87]: Plant-based protein powders
+            - button [ref=f74e88] [cursor=pointer]:
+              - paragraph [ref=f74e94]: Vegan leather handbags
+            - button [ref=f74e95] [cursor=pointer]:
+              - paragraph [ref=f74e101]: Bedroom decor
+            - button [ref=f74e102] [cursor=pointer]:
+              - paragraph [ref=f74e108]: Waterproof jackets
+            - button [ref=f74e109] [cursor=pointer]:
+              - paragraph [ref=f74e115]: Hoodies
+          - link [ref=f74e117] [cursor=pointer]:
+            - /url: https://www.shopify.com/legal/privacy/consumers
+            - paragraph [ref=f74e118]: Learn more about how we use your data to personalize your experience and ads. Recommendations are for informational purposes only.
+    - contentinfo [ref=f74e367]:
+      - generic [ref=f74e368]:
+        - generic [ref=f74e369]:
+          - generic [ref=f74e370]:
+            - generic [ref=f74e371]:
+              - img "Shop" [ref=f74e372]
+              - paragraph [ref=f74e378]: Shop is the next step on our mission to make commerce better for everyone.
+            - generic [ref=f74e381]:
+              - link "Download on the App Store" [ref=f74e382] [cursor=pointer]:
+                - /url: https://open.shop.app/E2jp6/yphyl/7qog?sid=49250b87-aa1e-4965-aba6-313d211e8b95
+                - img "Download Shop" [ref=f74e383]
+              - link "Download on Google Play" [ref=f74e384] [cursor=pointer]:
+                - /url: https://open.shop.app/E2jp6/frmk/3n2h?sid=49250b87-aa1e-4965-aba6-313d211e8b95
+                - img "Download Shop" [ref=f74e385]
+          - generic [ref=f74e386]:
+            - navigation "Start selling" [ref=f74e387]:
+              - paragraph [ref=f74e388]: Start selling
+              - link [ref=f74e389] [cursor=pointer]:
+                - /url: https://www.shopify.com/shop?utm_medium=website&utm_source=shop-website&utm_campaign=shop_app_footer_for_brands
+                - paragraph [ref=f74e390]: For brands
+              - link [ref=f74e391] [cursor=pointer]:
+                - /url: https://www.shopify.com/collabs/creators?utm_medium=website&utm_source=shop-website&utm_campaign=shop_app_footer_for_creators
+                - paragraph [ref=f74e392]: For creators
+              - link [ref=f74e393] [cursor=pointer]:
+                - /url: https://www.shopify.com/free-trial?utm_medium=website&utm_source=shop-website&utm_campaign=shop_app_footer_build_your_store
+                - paragraph [ref=f74e394]: Build your store
+            - navigation "Information" [ref=f74e395]:
+              - paragraph [ref=f74e396]: Information
+              - link [ref=f74e397] [cursor=pointer]:
+                - /url: https://shop.app/shop-pay?utm_medium=website&utm_source=shop-website
+                - paragraph [ref=f74e398]: Shop Pay
+              - link [ref=f74e399] [cursor=pointer]:
+                - /url: https://help.shop.app/shop?utm_medium=website&utm_source=shop-website
+                - paragraph [ref=f74e400]: Help center
+            - navigation "Social" [ref=f74e401]:
+              - paragraph [ref=f74e402]: Social
+              - link [ref=f74e403] [cursor=pointer]:
+                - /url: https://twitter.com/shop?utm_medium=website&utm_source=shop-website
+                - paragraph [ref=f74e404]: X (Twitter)
+              - link [ref=f74e405] [cursor=pointer]:
+                - /url: https://instagram.com/shopapp?utm_medium=website&utm_source=shop-website
+                - paragraph [ref=f74e406]: Instagram
+            - navigation "Legal" [ref=f74e407]:
+              - paragraph [ref=f74e408]: Legal
+              - link [ref=f74e409] [cursor=pointer]:
+                - /url: /terms-of-service?locale=en-US
+                - paragraph [ref=f74e410]: Terms of Service
+              - link [ref=f74e411] [cursor=pointer]:
+                - /url: https://www.shopify.com/legal/privacy/app-users?utm_medium=website&utm_source=shop-website
+                - paragraph [ref=f74e412]: Privacy Policy
+              - link [ref=f74e413] [cursor=pointer]:
+                - /url: https://privacy.shopify.com/?utm_medium=website&utm_source=shop-website
+                - paragraph [ref=f74e414]: Your Privacy Choices
+        - generic [ref=f74e420]:
+          - separator [ref=f74e421]
+          - generic [ref=f74e422]:
+            - generic [ref=f74e423]:
+              - generic [ref=f74e424]:
+                - paragraph [ref=f74e425]: Powered by
+                - img "Shopify" [ref=f74e426]
+              - paragraph [ref=f74e440]: "|"
+              - link [ref=f74e441] [cursor=pointer]:
+                - /url: https://www.shopify.com/free-trial?utm_medium=website&utm_source=shop-website&utm_campaign=shop_app_subfooter_start_selling
+                - paragraph [ref=f74e442]: Start selling for free
+            - generic [ref=f74e443]:
+              - link [ref=f74e444] [cursor=pointer]:
+                - /url: /language-settings
+                - paragraph [ref=f74e445]: Language
+              - paragraph [ref=f74e446]: © Shopify Inc. 2026
+    - region "Notifications (F8)":
+      - list

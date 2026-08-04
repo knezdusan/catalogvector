@@ -1,0 +1,73 @@
+- main [ref=f6e4]:
+  - button "Open sidebar" [ref=f6e7] [cursor=pointer]:
+    - generic [ref=f6e8]: side_nav_expand
+  - generic [ref=f6e16]:
+    - generic: play_arrow
+    - link "About Gemini Opens in a new window" [ref=f6e17] [cursor=pointer]:
+      - /url: https://gemini.google/about/?utm_source=gemini&utm_medium=web&utm_campaign=gemini_zero_state_link_to_marketing_microsite
+      - text: About Gemini
+      - generic [ref=f6e18]: Opens in a new window
+    - link "Get Gemini App Opens in a new window" [ref=f6e19] [cursor=pointer]:
+      - /url: https://gemini.google.com/app/download
+      - text: Get Gemini App
+      - generic [ref=f6e20]: Opens in a new window
+    - link "Subscriptions Opens in a new window" [ref=f6e21] [cursor=pointer]:
+      - /url: https://one.google.com/ai
+      - text: Subscriptions
+      - generic [ref=f6e22]: Opens in a new window
+    - link "For Business Opens in a new window" [ref=f6e23] [cursor=pointer]:
+      - /url: https://business.gemini.google/?utm_source=cloud_sfdc&utm_medium=et&utm_campaign=FY26-Q2-global-gemini-app&utm_content=-&utm_term=-
+      - text: For Business
+      - generic [ref=f6e24]: Opens in a new window
+    - button "Sign in" [ref=f6e27]
+  - generic [ref=f6e34]:
+    - navigation "Side Navigation" [ref=f6e35]:
+      - generic [ref=f6e38]:
+        - generic [ref=f6e39]:
+          - navigation "Main actions menu" [ref=f6e40]:
+            - generic [ref=f6e43]:
+              - link "New chat" [disabled]:
+                - /url: /app
+                - generic:
+                  - img: gemini_chat
+          - navigation "Additional actions menu" [ref=f6e44]:
+            - link "Images" [ref=f6e48] [cursor=pointer]:
+              - /url: /images
+              - img [ref=f6e50]: image_create
+        - group [ref=f6e52]:
+          - generic [ref=f6e54]:
+            - button "Sign in" [ref=f6e56] [cursor=pointer]:
+              - img [ref=f6e58]: account_circle
+            - button "Settings" [ref=f6e63] [cursor=pointer]:
+              - img [ref=f6e65]: settings
+    - generic [ref=f6e73]:
+      - generic [ref=f6e74]:
+        - heading "Conversation with Gemini" [level=1] [ref=f6e75]
+        - heading "Meet Gemini, your personal AI assistant" [level=1] [ref=f6e89]
+      - generic [ref=f6e92]:
+        - group [ref=f6e93]:
+          - generic [ref=f6e96]:
+            - textbox "Enter a prompt for Gemini" [active] [ref=f6e102]:
+              - text: Ask Gemini
+              - paragraph [ref=f6e103]
+            - button "Upload & tools" [ref=f6e109] [cursor=pointer]:
+              - img [ref=f6e111]: plus
+            - generic [ref=f6e113]:
+              - group [ref=f6e116]:
+                - button "Open mode picker, currently Flash-Lite" [ref=f6e117]:
+                  - generic [ref=f6e119]:
+                    - generic [ref=f6e120]: Flash-Lite
+                    - img [ref=f6e122]: keyboard_arrow_down
+              - button "Dictate (⌘⇧D)" [ref=f6e130] [cursor=pointer]:
+                - img [ref=f6e132]: mic
+        - paragraph [ref=f6e136]:
+          - link "Google Terms Opens in a new window" [ref=f6e137] [cursor=pointer]:
+            - /url: https://policies.google.com/terms
+            - text: Google Terms
+            - generic [ref=f6e138]: Opens in a new window
+          - text: and the
+          - link "Google Privacy Policy Opens in a new window" [ref=f6e139] [cursor=pointer]:
+            - /url: https://policies.google.com/privacy
+            - text: Google Privacy Policy
+            - generic [ref=f6e140]: Opens in a new window
+          - text: apply. Gemini is AI and can make mistakes.

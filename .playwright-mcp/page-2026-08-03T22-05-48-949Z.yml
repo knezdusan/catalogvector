@@ -1,0 +1,710 @@
+- generic [ref=f74e2]:
+  - banner [ref=f74e5]:
+    - generic [ref=f74e6]:
+      - link [ref=f74e8] [cursor=pointer]:
+        - /url: /
+      - generic:
+        - link "Home" [ref=f74e12] [cursor=pointer]:
+          - /url: /
+        - link "Explore" [ref=f74e16] [cursor=pointer]:
+          - /url: /categories
+        - link "View Cart" [ref=f74e20] [cursor=pointer]:
+          - /url: /cart
+        - link "Deals" [ref=f74e24] [cursor=pointer]:
+          - /url: /offers
+        - button "Sign in to view saved items" [ref=f74e28] [cursor=pointer]
+      - button "Sign in" [ref=f74e33] [cursor=pointer]
+  - generic [ref=f74e39]:
+    - link [ref=f74e449] [cursor=pointer]:
+      - /url: https://shop.app/download
+      - paragraph [ref=f74e458]: Download Shop app.
+      - paragraph [ref=f74e459]: Available on iOS & Android
+    - generic [ref=f74e54]:
+      - generic [ref=f74e55]:
+        - generic [ref=f74e57]:
+          - generic:
+            - link [ref=f74e1390] [cursor=pointer]:
+              - /url: /m/ruggable
+              - img "ruggable" [ref=f74e1393]
+              - img "ruggable" [ref=f74e1394]
+            - link [ref=f74e1397] [cursor=pointer]:
+              - /url: /m/mujius
+              - img "mujius" [ref=f74e1400]
+              - img "mujius" [ref=f74e1401]
+            - link "Era Flip 40oz | Mocha Dot (12)" [ref=f74e1402] [cursor=pointer]:
+              - /url: /products/7604552663111/era-flip-40oz-mocha-dot
+              - generic [ref=f74e1403]:
+                - paragraph [ref=f74e1404]: Era Flip 40oz | Mocha Dot
+                - paragraph [ref=f74e1405]: (12)
+            - link "Era 40oz | Wildflower Whisper (40)" [ref=f74e1420] [cursor=pointer]:
+              - /url: /products/7579365277767/era-40oz-wildflower-whisper
+              - generic [ref=f74e1421]:
+                - paragraph [ref=f74e1422]: Era 40oz | Wildflower Whisper
+                - paragraph [ref=f74e1423]: (40)
+        - generic [ref=f74e58]:
+          - img "Shop" [ref=f74e59]
+          - generic [ref=f74e67]:
+            - generic [ref=f74e71]:
+              - searchbox "Search products and stores" [active] [ref=f74e72]
+              - button "Clear search" [ref=f74e74] [cursor=pointer]
+            - generic [ref=f74e78]:
+              - paragraph [ref=f74e79]: Suggested searches
+              - list [ref=f74e80]:
+                - button [ref=f74e81] [cursor=pointer]:
+                  - paragraph [ref=f74e87]: Plant-based protein powders
+                - button [ref=f74e88] [cursor=pointer]:
+                  - paragraph [ref=f74e94]: Vegan leather handbags
+                - button [ref=f74e95] [cursor=pointer]:
+                  - paragraph [ref=f74e101]: Bedroom decor
+                - button [ref=f74e102] [cursor=pointer]:
+                  - paragraph [ref=f74e108]: Waterproof jackets
+                - button [ref=f74e109] [cursor=pointer]:
+                  - paragraph [ref=f74e115]: Hoodies
+              - link [ref=f74e117] [cursor=pointer]:
+                - /url: https://www.shopify.com/legal/privacy/consumers
+                - paragraph [ref=f74e118]: Learn more about how we use your data to personalize your experience and ads. Recommendations are for informational purposes only.
+      - generic [ref=f74e515]:
+        - generic [ref=f74e522]:
+          - link [ref=f74e525] [cursor=pointer]:
+            - /url: /categories/1/women
+            - img "Women" [ref=f74e527]
+            - paragraph [ref=f74e528]: Women
+          - link [ref=f74e531] [cursor=pointer]:
+            - /url: /categories/2/men
+            - img "Men" [ref=f74e533]
+            - paragraph [ref=f74e534]: Men
+          - link [ref=f74e537] [cursor=pointer]:
+            - /url: /categories/5/beauty
+            - img "Beauty" [ref=f74e539]
+            - paragraph [ref=f74e540]: Beauty
+          - link [ref=f74e543] [cursor=pointer]:
+            - /url: /categories/6/home
+            - img "Home" [ref=f74e545]
+            - paragraph [ref=f74e546]: Home
+          - link [ref=f74e549] [cursor=pointer]:
+            - /url: /categories/69/fitness-nutrition
+            - img "Fitness & nutrition" [ref=f74e551]
+            - paragraph [ref=f74e552]: Fitness & nutrition
+          - link [ref=f74e555] [cursor=pointer]:
+            - /url: /categories/209/baby-toddler
+            - img "Baby & toddler" [ref=f74e557]
+            - paragraph [ref=f74e558]: Baby & toddler
+          - link [ref=f74e561] [cursor=pointer]:
+            - /url: /categories/251/food-drinks
+            - img "Food & drinks" [ref=f74e563]
+            - paragraph [ref=f74e564]: Food & drinks
+        - generic [ref=f74e571]:
+          - generic:
+            - button "Go to the previous item" [ref=f74e574] [cursor=pointer]
+            - button "Go to the next item" [ref=f74e579] [cursor=pointer]
+          - generic [ref=f74e584]:
+            - link "Women" [ref=f74e586] [cursor=pointer]:
+              - /url: /categories/1/women
+              - heading "Women" [level=2] [ref=f74e592]
+            - generic [ref=f74e597]:
+              - link [ref=f74e598] [cursor=pointer]:
+                - /url: /categories/27/dresses
+                - img "Dresses" [ref=f74e599]
+                - generic:
+                  - paragraph: Dresses
+              - link [ref=f74e600] [cursor=pointer]:
+                - /url: /categories/314/shirts
+                - img "Shirts" [ref=f74e601]
+                - generic:
+                  - paragraph: Shirts
+              - link [ref=f74e602] [cursor=pointer]:
+                - /url: /categories/188/sneakers
+                - img "Sneakers" [ref=f74e603]
+                - generic:
+                  - paragraph: Sneakers
+              - link [ref=f74e604] [cursor=pointer]:
+                - /url: /categories/26/pants
+                - img "Pants" [ref=f74e605]
+                - generic:
+                  - paragraph: Pants
+          - generic [ref=f74e608]:
+            - link "Men" [ref=f74e610] [cursor=pointer]:
+              - /url: /categories/2/men
+              - heading "Men" [level=2] [ref=f74e616]
+            - generic [ref=f74e621]:
+              - link [ref=f74e622] [cursor=pointer]:
+                - /url: /categories/318/hoodies
+                - img "Hoodies" [ref=f74e623]
+                - generic:
+                  - paragraph: Hoodies
+              - link [ref=f74e624] [cursor=pointer]:
+                - /url: /categories/17/pants
+                - img "Pants" [ref=f74e625]
+                - generic:
+                  - paragraph: Pants
+              - link [ref=f74e626] [cursor=pointer]:
+                - /url: /categories/317/t-shirts
+                - img "T-shirts" [ref=f74e627]
+                - generic:
+                  - paragraph: T-shirts
+              - link [ref=f74e628] [cursor=pointer]:
+                - /url: /categories/205/sneakers
+                - img "Sneakers" [ref=f74e629]
+                - generic:
+                  - paragraph: Sneakers
+          - generic [ref=f74e632]:
+            - link "Beauty" [ref=f74e634] [cursor=pointer]:
+              - /url: /categories/5/beauty
+              - heading "Beauty" [level=2] [ref=f74e640]
+            - generic [ref=f74e645]:
+              - link [ref=f74e646] [cursor=pointer]:
+                - /url: /categories/55/lotion-moisturizer
+                - img "Lotion & moisturizer" [ref=f74e647]
+                - generic:
+                  - paragraph: Lotion & moisturizer
+              - link [ref=f74e648] [cursor=pointer]:
+                - /url: /categories/206/hair-styling-products
+                - img "Hair styling products" [ref=f74e649]
+                - generic:
+                  - paragraph: Hair styling products
+              - link [ref=f74e650] [cursor=pointer]:
+                - /url: /categories/59/anti-aging-kits
+                - img "Anti-aging kits" [ref=f74e651]
+                - generic:
+                  - paragraph: Anti-aging kits
+              - link [ref=f74e652] [cursor=pointer]:
+                - /url: /categories/66/perfume-cologne
+                - img "Perfume & cologne" [ref=f74e653]
+                - generic:
+                  - paragraph: Perfume & cologne
+          - generic [ref=f74e656]:
+            - link "Home" [ref=f74e658] [cursor=pointer]:
+              - /url: /categories/6/home
+              - heading "Home" [level=2] [ref=f74e664]
+            - generic [ref=f74e669]:
+              - link [ref=f74e670] [cursor=pointer]:
+                - /url: /categories/90/blankets
+                - img "Blankets" [ref=f74e671]
+                - generic:
+                  - paragraph: Blankets
+              - link [ref=f74e672] [cursor=pointer]:
+                - /url: /categories/77/rugs
+                - img "Rugs" [ref=f74e673]
+                - generic:
+                  - paragraph: Rugs
+              - link [ref=f74e674] [cursor=pointer]:
+                - /url: /categories/79/home-fragrances
+                - img "Home fragrances" [ref=f74e675]
+                - generic:
+                  - paragraph: Home fragrances
+              - link [ref=f74e676] [cursor=pointer]:
+                - /url: /categories/95/household-appliances
+                - img "Household appliances" [ref=f74e677]
+                - generic:
+                  - paragraph: Household appliances
+          - generic [ref=f74e680]:
+            - link "Fitness & nutrition" [ref=f74e682] [cursor=pointer]:
+              - /url: /categories/69/fitness-nutrition
+              - heading "Fitness & nutrition" [level=2] [ref=f74e688]
+            - generic [ref=f74e693]:
+              - link [ref=f74e694] [cursor=pointer]:
+                - /url: /categories/250/exercise-equipment
+                - img "Exercise equipment" [ref=f74e695]
+                - generic:
+                  - paragraph: Exercise equipment
+              - link [ref=f74e696] [cursor=pointer]:
+                - /url: /categories/242/supplements
+                - img "Supplements" [ref=f74e697]
+                - generic:
+                  - paragraph: Supplements
+              - link [ref=f74e698] [cursor=pointer]:
+                - /url: /categories/241/vitamins
+                - img "Vitamins" [ref=f74e699]
+                - generic:
+                  - paragraph: Vitamins
+              - link [ref=f74e700] [cursor=pointer]:
+                - /url: /categories/246/drinks-shakes
+                - img "Drinks & shakes" [ref=f74e701]
+                - generic:
+                  - paragraph: Drinks & shakes
+          - generic [ref=f74e704]:
+            - link "Baby & toddler" [ref=f74e706] [cursor=pointer]:
+              - /url: /categories/209/baby-toddler
+              - heading "Baby & toddler" [level=2] [ref=f74e712]
+            - generic [ref=f74e717]:
+              - link [ref=f74e718] [cursor=pointer]:
+                - /url: /categories/219/formula
+                - img "Formula" [ref=f74e719]
+                - generic:
+                  - paragraph: Formula
+              - link [ref=f74e720] [cursor=pointer]:
+                - /url: /categories/225/strollers-travel
+                - img "Strollers & travel" [ref=f74e721]
+                - generic:
+                  - paragraph: Strollers & travel
+              - link [ref=f74e722] [cursor=pointer]:
+                - /url: /categories/224/diapers
+                - img "Diapers" [ref=f74e723]
+                - generic:
+                  - paragraph: Diapers
+              - link [ref=f74e724] [cursor=pointer]:
+                - /url: /categories/211/outfits
+                - img "Outfits" [ref=f74e725]
+                - generic:
+                  - paragraph: Outfits
+          - generic [ref=f74e728]:
+            - link "Food & drinks" [ref=f74e730] [cursor=pointer]:
+              - /url: /categories/251/food-drinks
+              - heading "Food & drinks" [level=2] [ref=f74e736]
+            - generic [ref=f74e741]:
+              - link [ref=f74e742] [cursor=pointer]:
+                - /url: /categories/252/coffee
+                - img "Coffee" [ref=f74e743]
+                - generic:
+                  - paragraph: Coffee
+              - link [ref=f74e744] [cursor=pointer]:
+                - /url: /categories/253/tea
+                - img "Tea" [ref=f74e745]
+                - generic:
+                  - paragraph: Tea
+              - link [ref=f74e746] [cursor=pointer]:
+                - /url: /categories/254/candy-chocolate
+                - img "Candy & chocolate" [ref=f74e747]
+                - generic:
+                  - paragraph: Candy & chocolate
+              - link [ref=f74e748] [cursor=pointer]:
+                - /url: /categories/255/snacks
+                - img "Snacks" [ref=f74e749]
+                - generic:
+                  - paragraph: Snacks
+        - generic [ref=f74e851]:
+          - link "Baby & toddler" [ref=f74e853] [cursor=pointer]:
+            - /url: /categories/209/baby-toddler
+            - heading "Baby & toddler" [level=2] [ref=f74e859]
+          - generic [ref=f74e864]:
+            - generic:
+              - button "Go to the previous item" [ref=f74e867] [cursor=pointer]
+              - button "Go to the next item" [ref=f74e872] [cursor=pointer]
+            - generic [ref=f74e878]:
+              - img "WildBird" [ref=f74e880]
+              - generic [ref=f74e883]:
+                - link [ref=f74e884] [cursor=pointer]:
+                  - /url: /m/wildbird
+                  - img "WildBird" [ref=f74e886]
+                  - generic [ref=f74e887]:
+                    - heading "WildBird" [level=3] [ref=f74e888]
+                    - paragraph [ref=f74e892]: 4.8 (8.6K)
+                - generic [ref=f74e893]:
+                  - link "View Acadian - Aerial Newborn Buckle Wrap details" [ref=f74e894] [cursor=pointer]:
+                    - /url: /products/7352315183170/acadian-aerial-newborn-buckle-wrap
+                    - generic [ref=f74e895]:
+                      - img "View Acadian - Aerial Newborn Buckle Wrap details" [ref=f74e896]
+                      - generic "View Acadian - Aerial Newborn Buckle Wrap details" [ref=f74e897]
+                  - link "View Desert Lark - Aerial Newborn Buckle Wrap details" [ref=f74e898] [cursor=pointer]:
+                    - /url: /products/7352315478082/desert-lark-aerial-newborn-buckle-wrap
+                    - generic [ref=f74e899]:
+                      - img "View Desert Lark - Aerial Newborn Buckle Wrap details" [ref=f74e900]
+                      - generic "View Desert Lark - Aerial Newborn Buckle Wrap details" [ref=f74e901]
+                  - link "View Flutter - Aerial Newborn Buckle Wrap details" [ref=f74e902] [cursor=pointer]:
+                    - /url: /products/7563912511554/flutter-aerial-newborn-buckle-wrap
+                    - generic [ref=f74e903]:
+                      - img "View Flutter - Aerial Newborn Buckle Wrap details" [ref=f74e904]
+                      - generic "View Flutter - Aerial Newborn Buckle Wrap details" [ref=f74e905]
+            - generic [ref=f74e909]:
+              - img "Kyte Baby" [ref=f74e911]
+              - generic [ref=f74e914]:
+                - link [ref=f74e915] [cursor=pointer]:
+                  - /url: /m/kytebaby
+                  - img "Kyte Baby" [ref=f74e917]
+                  - generic [ref=f74e918]:
+                    - heading "Kyte Baby" [level=3] [ref=f74e919]
+                    - paragraph [ref=f74e923]: 4.9 (536.8K)
+                - generic [ref=f74e924]:
+                  - link "View Long Sleeve Pajamas in Monster Truck details" [ref=f74e925] [cursor=pointer]:
+                    - /url: /products/14982433407087/long-sleeve-pajamas-in-monster-truck
+                    - generic [ref=f74e926]:
+                      - img "View Long Sleeve Pajamas in Monster Truck details" [ref=f74e927]
+                      - generic "View Long Sleeve Pajamas in Monster Truck details" [ref=f74e928]
+                  - link "View Long Sleeve Pajamas in Spider-Man details" [ref=f74e929] [cursor=pointer]:
+                    - /url: /products/15358858133615/long-sleeve-pajamas-in-spider-man
+                    - generic [ref=f74e930]:
+                      - img "View Long Sleeve Pajamas in Spider-Man details" [ref=f74e931]
+                      - generic "View Long Sleeve Pajamas in Spider-Man details" [ref=f74e932]
+                  - link "View Short Sleeve Pajamas in Sakura Ice Cream details" [ref=f74e933] [cursor=pointer]:
+                    - /url: /products/14982216941679/short-sleeve-pajamas-in-sakura-ice-cream
+                    - generic [ref=f74e934]:
+                      - img "View Short Sleeve Pajamas in Sakura Ice Cream details" [ref=f74e935]
+                      - generic "View Short Sleeve Pajamas in Sakura Ice Cream details" [ref=f74e936]
+            - generic [ref=f74e940]:
+              - img "Tushbaby" [ref=f74e942]
+              - generic [ref=f74e945]:
+                - link [ref=f74e946] [cursor=pointer]:
+                  - /url: /m/tushbaby
+                  - generic [ref=f74e950]:
+                    - heading "Tushbaby" [level=3] [ref=f74e951]
+                    - paragraph [ref=f74e955]: 4.5 (12.7K)
+                - generic [ref=f74e956]:
+                  - link "View The Tushbaby Hip Carrier details" [ref=f74e957] [cursor=pointer]:
+                    - /url: /products/1815161176130/the-tushbaby-hip-carrier
+                    - generic [ref=f74e958]:
+                      - img "View The Tushbaby Hip Carrier details" [ref=f74e959]
+                      - generic "View The Tushbaby Hip Carrier details" [ref=f74e960]
+                  - link "View Hip Seat Hands-Free Attachment details" [ref=f74e961] [cursor=pointer]:
+                    - /url: /products/6952237072450/hip-seat-hands-free-attachment
+                    - generic [ref=f74e962]:
+                      - img "View Hip Seat Hands-Free Attachment details" [ref=f74e963]
+                      - generic "View Hip Seat Hands-Free Attachment details" [ref=f74e964]
+                  - link "View Tushbaby Liftoff Toddler Sling details" [ref=f74e965] [cursor=pointer]:
+                    - /url: /products/7554456617026/tushbaby-liftoff-toddler-sling
+                    - generic [ref=f74e966]:
+                      - img "View Tushbaby Liftoff Toddler Sling details" [ref=f74e967]
+                      - generic "View Tushbaby Liftoff Toddler Sling details" [ref=f74e968]
+            - generic [ref=f74e972]:
+              - img "Gathre" [ref=f74e974]
+              - generic [ref=f74e977]:
+                - link [ref=f74e978] [cursor=pointer]:
+                  - /url: /m/gathre
+                  - img "Gathre" [ref=f74e980]
+                  - generic [ref=f74e981]:
+                    - heading "Gathre" [level=3] [ref=f74e982]
+                    - paragraph [ref=f74e986]: 4.7 (1.5K)
+                - generic [ref=f74e987]:
+                  - link "View Basketball Hoop details" [ref=f74e988] [cursor=pointer]:
+                    - /url: /products/7801343475781/basketball-hoop
+                    - generic [ref=f74e989]:
+                      - img "View Basketball Hoop details" [ref=f74e990]
+                      - generic "View Basketball Hoop details" [ref=f74e991]
+                  - link "View Trampoline details" [ref=f74e992] [cursor=pointer]:
+                    - /url: /products/6898217484357/trampoline
+                    - generic [ref=f74e993]:
+                      - img "View Trampoline details" [ref=f74e994]
+                      - generic "View Trampoline details" [ref=f74e995]
+                  - link "View 100% Cotton Sheet Set details" [ref=f74e996] [cursor=pointer]:
+                    - /url: /products/8046859944005/100-cotton-sheet-set
+                    - generic [ref=f74e997]:
+                      - img "View 100% Cotton Sheet Set details" [ref=f74e998]
+                      - generic "View 100% Cotton Sheet Set details" [ref=f74e999]
+            - generic [ref=f74e1003]:
+              - img "Posh Peanut" [ref=f74e1005]
+              - generic [ref=f74e1008]:
+                - link [ref=f74e1009] [cursor=pointer]:
+                  - /url: /m/poshpeanut
+                  - img "Posh Peanut" [ref=f74e1011]
+                  - generic [ref=f74e1012]:
+                    - heading "Posh Peanut" [level=3] [ref=f74e1013]
+                    - paragraph [ref=f74e1017]: 4.8 (80.8K)
+                - generic [ref=f74e1018]:
+                  - link "View Disney Elsa & Anna Classic Pajama Set details" [ref=f74e1019] [cursor=pointer]:
+                    - /url: /products/8069244747952/disney-elsa-anna-classic-pajama-set
+                    - generic [ref=f74e1020]:
+                      - img "View Disney Elsa & Anna Classic Pajama Set details" [ref=f74e1021]
+                      - generic "View Disney Elsa & Anna Classic Pajama Set details" [ref=f74e1022]
+                  - link "View Disney Let It Go Classic Pajama Set details" [ref=f74e1023] [cursor=pointer]:
+                    - /url: /products/8069245567152/disney-let-it-go-classic-pajama-set
+                    - generic [ref=f74e1024]:
+                      - img "View Disney Let It Go Classic Pajama Set details" [ref=f74e1025]
+                      - generic "View Disney Let It Go Classic Pajama Set details" [ref=f74e1026]
+                  - link "View Disney Princess Ball Classic Pajama Set details" [ref=f74e1027] [cursor=pointer]:
+                    - /url: /products/7829689434288/disney-princess-ball-classic-pajama-set
+                    - generic [ref=f74e1028]:
+                      - img "View Disney Princess Ball Classic Pajama Set details" [ref=f74e1029]
+                      - generic "View Disney Princess Ball Classic Pajama Set details" [ref=f74e1030]
+            - generic [ref=f74e1034]:
+              - img "KicKee Pants" [ref=f74e1036]
+              - generic [ref=f74e1039]:
+                - link [ref=f74e1040] [cursor=pointer]:
+                  - /url: /m/kickeepants
+                  - img "KicKee Pants" [ref=f74e1042]
+                  - generic [ref=f74e1043]:
+                    - heading "KicKee Pants" [level=3] [ref=f74e1044]
+                    - paragraph [ref=f74e1048]: 4.9 (7.5K)
+                - generic [ref=f74e1049]:
+                  - link "View Ruffle Pants in Midnight details" [ref=f74e1050] [cursor=pointer]:
+                    - /url: /products/8941756285166/ruffle-pants-in-midnight
+                    - generic [ref=f74e1051]:
+                      - img "View Ruffle Pants in Midnight details" [ref=f74e1052]
+                      - generic "View Ruffle Pants in Midnight details" [ref=f74e1053]
+                  - link "View Print Girl's Underwear in Baby Rose Cats details" [ref=f74e1054] [cursor=pointer]:
+                    - /url: /products/9252233249006/print-girls-underwear-in-baby-rose-cats
+                    - generic [ref=f74e1055]:
+                      - img "View Print Girl's Underwear in Baby Rose Cats details" [ref=f74e1056]
+                      - generic "View Print Girl's Underwear in Baby Rose Cats details" [ref=f74e1057]
+                  - link "View Print Flutter Sleeve Twirl Dress with Pockets in Flamingo Jazz Band details" [ref=f74e1058] [cursor=pointer]:
+                    - /url: /products/8941892042990/print-flutter-sleeve-twirl-dress-with-pockets-in-flamingo-jazz-band
+                    - generic [ref=f74e1059]:
+                      - img "View Print Flutter Sleeve Twirl Dress with Pockets in Flamingo Jazz Band details" [ref=f74e1060]
+                      - generic "View Print Flutter Sleeve Twirl Dress with Pockets in Flamingo Jazz Band details" [ref=f74e1061]
+            - generic [ref=f74e1065]:
+              - img "Itzy Ritzy" [ref=f74e1067]
+              - generic [ref=f74e1070]:
+                - link [ref=f74e1071] [cursor=pointer]:
+                  - /url: /m/itzyritzy
+                  - img "Itzy Ritzy" [ref=f74e1073]
+                  - generic [ref=f74e1074]:
+                    - heading "Itzy Ritzy" [level=3] [ref=f74e1075]
+                    - paragraph [ref=f74e1079]: 4.9 (10.7K)
+                - generic [ref=f74e1080]:
+                  - link "View Latch & Soothe™ Breastlike Pacifier details" [ref=f74e1081] [cursor=pointer]:
+                    - /url: /products/8799611682987/latch-soothe-breastlike-pacifier
+                    - generic [ref=f74e1082]:
+                      - img "View Latch & Soothe™ Breastlike Pacifier details" [ref=f74e1083]
+                      - generic "View Latch & Soothe™ Breastlike Pacifier details" [ref=f74e1084]
+                  - link "View Boss Plus™ Large Diaper Bag Backpack details" [ref=f74e1085] [cursor=pointer]:
+                    - /url: /products/7269315641515/boss-plus-large-diaper-bag-backpack
+                    - generic [ref=f74e1086]:
+                      - img "View Boss Plus™ Large Diaper Bag Backpack details" [ref=f74e1087]
+                      - generic "View Boss Plus™ Large Diaper Bag Backpack details" [ref=f74e1088]
+                  - link "View Itzy Paci Case™ details" [ref=f74e1089] [cursor=pointer]:
+                    - /url: /products/7857297916075/itzy-paci-case
+                    - generic [ref=f74e1090]:
+                      - img "View Itzy Paci Case™ details" [ref=f74e1091]
+                      - generic "View Itzy Paci Case™ details" [ref=f74e1092]
+            - generic [ref=f74e1096]:
+              - img "Mattel Creations" [ref=f74e1098]
+              - generic [ref=f74e1101]:
+                - link [ref=f74e1102] [cursor=pointer]:
+                  - /url: /m/mattelcreations
+                  - img "Mattel Creations" [ref=f74e1104]
+                  - generic [ref=f74e1105]:
+                    - heading "Mattel Creations" [level=3] [ref=f74e1106]
+                    - paragraph [ref=f74e1110]: 4.9 (165.4K)
+                - generic [ref=f74e1111]:
+                  - link "View Hot Wheels RLC Exclusive 1985 Audi Sport quattro S1 details" [ref=f74e1112] [cursor=pointer]:
+                    - /url: /products/9120264552653/hot-wheels-rlc-exclusive-1985-audi-sport-quattro-s1
+                    - generic [ref=f74e1113]:
+                      - img "View Hot Wheels RLC Exclusive 1985 Audi Sport quattro S1 details" [ref=f74e1114]
+                      - generic "View Hot Wheels RLC Exclusive 1985 Audi Sport quattro S1 details" [ref=f74e1115]
+                  - link "View Hot Wheels Elite 64 Mod Shop Nissan Stagea details" [ref=f74e1116] [cursor=pointer]:
+                    - /url: /products/9119408390349/hot-wheels-elite-64-mod-shop-nissan-stagea
+                    - generic [ref=f74e1117]:
+                      - img "View Hot Wheels Elite 64 Mod Shop Nissan Stagea details" [ref=f74e1118]
+                      - generic "View Hot Wheels Elite 64 Mod Shop Nissan Stagea details" [ref=f74e1119]
+                  - link "View Hot Wheels Elite 64 Mazda RX-7 Liberty Walk details" [ref=f74e1120] [cursor=pointer]:
+                    - /url: /products/9123767615693/hot-wheels-elite-64-mazda-rx-7-liberty-walk
+                    - generic [ref=f74e1121]:
+                      - img "View Hot Wheels Elite 64 Mazda RX-7 Liberty Walk details" [ref=f74e1122]
+                      - generic "View Hot Wheels Elite 64 Mazda RX-7 Liberty Walk details" [ref=f74e1123]
+        - generic [ref=f74e1128]:
+          - link "Beauty" [ref=f74e1130] [cursor=pointer]:
+            - /url: /categories/5/beauty
+            - heading "Beauty" [level=2] [ref=f74e1136]
+          - generic [ref=f74e1141]:
+            - generic:
+              - button "Go to the previous item" [ref=f74e1144] [cursor=pointer]
+              - button "Go to the next item" [ref=f74e1149] [cursor=pointer]
+            - generic [ref=f74e1155]:
+              - img "SACHEU" [ref=f74e1157]
+              - generic [ref=f74e1160]:
+                - link [ref=f74e1161] [cursor=pointer]:
+                  - /url: /m/sacheu
+                  - img "SACHEU" [ref=f74e1163]
+                  - generic [ref=f74e1164]:
+                    - heading "SACHEU" [level=3] [ref=f74e1165]
+                    - paragraph [ref=f74e1169]: 4.5 (5.5K)
+                - generic [ref=f74e1170]:
+                  - link "View Lip Liner Stay-N® details" [ref=f74e1171] [cursor=pointer]:
+                    - /url: /products/6768045326385/lip-liner-stay-n
+                    - generic [ref=f74e1172]:
+                      - img "View Lip Liner Stay-N® details" [ref=f74e1173]
+                      - generic "View Lip Liner Stay-N® details" [ref=f74e1174]
+                  - link "View Liquid Glow STAY-N® details" [ref=f74e1175] [cursor=pointer]:
+                    - /url: /products/7032018665521/liquid-glow-stay-n
+                    - generic [ref=f74e1176]:
+                      - img "View Liquid Glow STAY-N® details" [ref=f74e1177]
+                      - generic "View Liquid Glow STAY-N® details" [ref=f74e1178]
+                  - link "View Lip Glaze Elixir details" [ref=f74e1179] [cursor=pointer]:
+                    - /url: /products/6928256106545/lip-glaze-elixir
+                    - generic [ref=f74e1180]:
+                      - img "View Lip Glaze Elixir details" [ref=f74e1181]
+                      - generic "View Lip Glaze Elixir details" [ref=f74e1182]
+            - generic [ref=f74e1186]:
+              - img "Kosas Cosmetics" [ref=f74e1188]
+              - generic [ref=f74e1191]:
+                - link [ref=f74e1192] [cursor=pointer]:
+                  - /url: /m/kosas
+                  - img "Kosas Cosmetics" [ref=f74e1194]
+                  - generic [ref=f74e1195]:
+                    - heading "Kosas Cosmetics" [level=3] [ref=f74e1196]
+                    - paragraph [ref=f74e1200]: 4.6 (22.1K)
+                - generic [ref=f74e1201]:
+                  - link "View Wet Lip Oil Gloss details" [ref=f74e1202] [cursor=pointer]:
+                    - /url: /products/4808264024121/wet-lip-oil-gloss
+                    - generic [ref=f74e1203]:
+                      - img "View Wet Lip Oil Gloss details" [ref=f74e1204]
+                      - generic "View Wet Lip Oil Gloss details" [ref=f74e1205]
+                  - link "View Impressionist Multistick details" [ref=f74e1206] [cursor=pointer]:
+                    - /url: /products/8202846470201/impressionist-multistick
+                    - generic [ref=f74e1207]:
+                      - img "View Impressionist Multistick details" [ref=f74e1208]
+                      - generic "View Impressionist Multistick details" [ref=f74e1209]
+                  - link "View Revealer Concealer details" [ref=f74e1210] [cursor=pointer]:
+                    - /url: /products/4808264253497/revealer-concealer
+                    - generic [ref=f74e1211]:
+                      - img "View Revealer Concealer details" [ref=f74e1212]
+                      - generic "View Revealer Concealer details" [ref=f74e1213]
+            - generic [ref=f74e1217]:
+              - img "Patrick Ta Beauty" [ref=f74e1219]
+              - generic [ref=f74e1222]:
+                - link [ref=f74e1223] [cursor=pointer]:
+                  - /url: /m/patrickta
+                  - img "Patrick Ta Beauty" [ref=f74e1225]
+                  - generic [ref=f74e1226]:
+                    - heading "Patrick Ta Beauty" [level=3] [ref=f74e1227]
+                    - paragraph [ref=f74e1231]: 4.6 (22.4K)
+                - generic [ref=f74e1232]:
+                  - link "View Major Headlines Double-Take Crème & Powder Blush Duo details" [ref=f74e1233] [cursor=pointer]:
+                    - /url: /products/6782927142993/major-headlines-double-take-creme-powder-blush-duo
+                    - generic [ref=f74e1234]:
+                      - img "View Major Headlines Double-Take Crème & Powder Blush Duo details" [ref=f74e1235]
+                      - generic "View Major Headlines Double-Take Crème & Powder Blush Duo details" [ref=f74e1236]
+                  - link "View Mini Major Headlines Double-Take Crème & Powder Blush Duo details" [ref=f74e1237] [cursor=pointer]:
+                    - /url: /products/15251865960817/mini-major-headlines-double-take-creme-powder-blush-duo
+                    - generic [ref=f74e1238]:
+                      - img "View Mini Major Headlines Double-Take Crème & Powder Blush Duo details" [ref=f74e1239]
+                      - generic "View Mini Major Headlines Double-Take Crème & Powder Blush Duo details" [ref=f74e1240]
+                  - link "View Major Moisture Smoothing Lip Balm details" [ref=f74e1241] [cursor=pointer]:
+                    - /url: /products/15251859931505/major-moisture-smoothing-lip-balm
+                    - generic [ref=f74e1242]:
+                      - img "View Major Moisture Smoothing Lip Balm details" [ref=f74e1243]
+                      - generic "View Major Moisture Smoothing Lip Balm details" [ref=f74e1244]
+            - generic [ref=f74e1248]:
+              - img "Ole Henriksen" [ref=f74e1250]
+              - generic [ref=f74e1253]:
+                - link [ref=f74e1254] [cursor=pointer]:
+                  - /url: /m/olehenriksen
+                  - img "Ole Henriksen" [ref=f74e1256]
+                  - generic [ref=f74e1257]:
+                    - heading "Ole Henriksen" [level=3] [ref=f74e1258]
+                    - paragraph [ref=f74e1262]: 4.7 (8.9K)
+                - generic [ref=f74e1263]:
+                  - link "View Pout Preserve Hydrating Peptide Lip Treatment details" [ref=f74e1264] [cursor=pointer]:
+                    - /url: /products/7739001766060/pout-preserve-hydrating-peptide-lip-treatment
+                    - generic [ref=f74e1265]:
+                      - img "View Pout Preserve Hydrating Peptide Lip Treatment details" [ref=f74e1266]
+                      - generic "View Pout Preserve Hydrating Peptide Lip Treatment details" [ref=f74e1267]
+                  - link "View Pout Preserve Hydrating Peptide Lip Treatment details" [ref=f74e1268] [cursor=pointer]:
+                    - /url: /products/8565870854316/pout-preserve-hydrating-peptide-lip-treatment
+                    - generic [ref=f74e1269]:
+                      - img "View Pout Preserve Hydrating Peptide Lip Treatment details" [ref=f74e1270]
+                      - generic "View Pout Preserve Hydrating Peptide Lip Treatment details" [ref=f74e1271]
+                  - link "View Pout Preserve Chillers Peptide Lip Treatment details" [ref=f74e1272] [cursor=pointer]:
+                    - /url: /products/8530149015724/pout-preserve-chillers-peptide-lip-treatment
+                    - generic [ref=f74e1273]:
+                      - img "View Pout Preserve Chillers Peptide Lip Treatment details" [ref=f74e1274]
+                      - generic "View Pout Preserve Chillers Peptide Lip Treatment details" [ref=f74e1275]
+            - generic [ref=f74e1279]:
+              - img "ColourPop" [ref=f74e1281]
+              - generic [ref=f74e1284]:
+                - link [ref=f74e1285] [cursor=pointer]:
+                  - /url: /m/colourpop
+                  - img "ColourPop" [ref=f74e1287]
+                  - generic [ref=f74e1288]:
+                    - heading "ColourPop" [level=3] [ref=f74e1289]
+                    - paragraph [ref=f74e1293]: 4.6 (336.7K)
+                - generic [ref=f74e1294]:
+                  - link "View Eevee Headband details" [ref=f74e1295] [cursor=pointer]:
+                    - /url: /products/7593243607122/eevee-headband
+                    - generic [ref=f74e1296]:
+                      - img "View Eevee Headband details" [ref=f74e1297]
+                      - generic "View Eevee Headband details" [ref=f74e1298]
+                  - link "View Trending Now details" [ref=f74e1299] [cursor=pointer]:
+                    - /url: /products/7326324195410/trending-now
+                    - generic [ref=f74e1300]:
+                      - img "View Trending Now details" [ref=f74e1301]
+                      - generic "View Trending Now details" [ref=f74e1302]
+                  - link "View Daybreak and Moonlight details" [ref=f74e1303] [cursor=pointer]:
+                    - /url: /products/7593246752850/daybreak-and-moonlight
+                    - generic [ref=f74e1304]:
+                      - img "View Daybreak and Moonlight details" [ref=f74e1305]
+                      - generic "View Daybreak and Moonlight details" [ref=f74e1306]
+            - generic [ref=f74e1310]:
+              - img "DedCool" [ref=f74e1312]
+              - generic [ref=f74e1315]:
+                - link [ref=f74e1316] [cursor=pointer]:
+                  - /url: /m/dedcool
+                  - img "DedCool" [ref=f74e1318]
+                  - generic [ref=f74e1319]:
+                    - heading "DedCool" [level=3] [ref=f74e1320]
+                    - paragraph [ref=f74e1324]: 4.6 (17.1K)
+                - generic [ref=f74e1325]:
+                  - link "View Room + Linen Spray in Xtra Milk details" [ref=f74e1326] [cursor=pointer]:
+                    - /url: /products/8053915255013/room-linen-spray-in-xtra-milk
+                    - generic [ref=f74e1327]:
+                      - img "View Room + Linen Spray in Xtra Milk details" [ref=f74e1328]
+                      - generic "View Room + Linen Spray in Xtra Milk details" [ref=f74e1329]
+                  - link "View Dryer Sheets Xtra Milk details" [ref=f74e1330] [cursor=pointer]:
+                    - /url: /products/8264491270373/dryer-sheets-xtra-milk
+                    - generic [ref=f74e1331]:
+                      - img "View Dryer Sheets Xtra Milk details" [ref=f74e1332]
+                      - generic "View Dryer Sheets Xtra Milk details" [ref=f74e1333]
+                  - link "View Xtra Milk Fragrance details" [ref=f74e1334] [cursor=pointer]:
+                    - /url: /products/7982870757605/xtra-milk-fragrance
+                    - generic [ref=f74e1335]:
+                      - img "View Xtra Milk Fragrance details" [ref=f74e1336]
+                      - generic "View Xtra Milk Fragrance details" [ref=f74e1337]
+    - contentinfo [ref=f74e367]:
+      - generic [ref=f74e368]:
+        - generic [ref=f74e369]:
+          - generic [ref=f74e370]:
+            - generic [ref=f74e371]:
+              - img "Shop" [ref=f74e372]
+              - paragraph [ref=f74e378]: Shop is the next step on our mission to make commerce better for everyone.
+            - generic [ref=f74e381]:
+              - link "Download on the App Store" [ref=f74e382] [cursor=pointer]:
+                - /url: https://open.shop.app/E2jp6/yphyl/7qog?sid=49250b87-aa1e-4965-aba6-313d211e8b95
+                - img "Download Shop" [ref=f74e383]
+              - link "Download on Google Play" [ref=f74e384] [cursor=pointer]:
+                - /url: https://open.shop.app/E2jp6/frmk/3n2h?sid=49250b87-aa1e-4965-aba6-313d211e8b95
+                - img "Download Shop" [ref=f74e385]
+          - generic [ref=f74e386]:
+            - navigation "Start selling" [ref=f74e387]:
+              - paragraph [ref=f74e388]: Start selling
+              - link [ref=f74e389] [cursor=pointer]:
+                - /url: https://www.shopify.com/shop?utm_medium=website&utm_source=shop-website&utm_campaign=shop_app_footer_for_brands
+                - paragraph [ref=f74e390]: For brands
+              - link [ref=f74e391] [cursor=pointer]:
+                - /url: https://www.shopify.com/collabs/creators?utm_medium=website&utm_source=shop-website&utm_campaign=shop_app_footer_for_creators
+                - paragraph [ref=f74e392]: For creators
+              - link [ref=f74e393] [cursor=pointer]:
+                - /url: https://www.shopify.com/free-trial?utm_medium=website&utm_source=shop-website&utm_campaign=shop_app_footer_build_your_store
+                - paragraph [ref=f74e394]: Build your store
+            - navigation "Information" [ref=f74e395]:
+              - paragraph [ref=f74e396]: Information
+              - link [ref=f74e397] [cursor=pointer]:
+                - /url: https://shop.app/shop-pay?utm_medium=website&utm_source=shop-website
+                - paragraph [ref=f74e398]: Shop Pay
+              - link [ref=f74e399] [cursor=pointer]:
+                - /url: https://help.shop.app/shop?utm_medium=website&utm_source=shop-website
+                - paragraph [ref=f74e400]: Help center
+            - navigation "Social" [ref=f74e401]:
+              - paragraph [ref=f74e402]: Social
+              - link [ref=f74e403] [cursor=pointer]:
+                - /url: https://twitter.com/shop?utm_medium=website&utm_source=shop-website
+                - paragraph [ref=f74e404]: X (Twitter)
+              - link [ref=f74e405] [cursor=pointer]:
+                - /url: https://instagram.com/shopapp?utm_medium=website&utm_source=shop-website
+                - paragraph [ref=f74e406]: Instagram
+            - navigation "Legal" [ref=f74e407]:
+              - paragraph [ref=f74e408]: Legal
+              - link [ref=f74e409] [cursor=pointer]:
+                - /url: /terms-of-service?locale=en-US
+                - paragraph [ref=f74e410]: Terms of Service
+              - link [ref=f74e411] [cursor=pointer]:
+                - /url: https://www.shopify.com/legal/privacy/app-users?utm_medium=website&utm_source=shop-website
+                - paragraph [ref=f74e412]: Privacy Policy
+              - link [ref=f74e413] [cursor=pointer]:
+                - /url: https://privacy.shopify.com/?utm_medium=website&utm_source=shop-website
+                - paragraph [ref=f74e414]: Your Privacy Choices
+        - generic [ref=f74e420]:
+          - separator [ref=f74e421]
+          - generic [ref=f74e422]:
+            - generic [ref=f74e423]:
+              - generic [ref=f74e424]:
+                - paragraph [ref=f74e425]: Powered by
+                - img "Shopify" [ref=f74e426]
+              - paragraph [ref=f74e440]: "|"
+              - link [ref=f74e441] [cursor=pointer]:
+                - /url: https://www.shopify.com/free-trial?utm_medium=website&utm_source=shop-website&utm_campaign=shop_app_subfooter_start_selling
+                - paragraph [ref=f74e442]: Start selling for free
+            - generic [ref=f74e443]:
+              - link [ref=f74e444] [cursor=pointer]:
+                - /url: /language-settings
+                - paragraph [ref=f74e445]: Language
+              - paragraph [ref=f74e446]: © Shopify Inc. 2026
+    - region "Notifications (F8)":
+      - list

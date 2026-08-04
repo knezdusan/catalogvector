@@ -1,0 +1,129 @@
+- main [ref=f53e4]:
+  - button "Open sidebar" [ref=f53e35] [cursor=pointer]:
+    - generic [ref=f53e36]: side_nav_expand
+  - generic [ref=f53e8]:
+    - generic: play_arrow
+    - link "About Gemini Opens in a new window" [ref=f53e9] [cursor=pointer]:
+      - /url: https://gemini.google/about/?utm_source=gemini&utm_medium=web&utm_campaign=gemini_zero_state_link_to_marketing_microsite
+      - text: About Gemini
+      - generic [ref=f53e10]: Opens in a new window
+    - link "Get Gemini App Opens in a new window" [ref=f53e11] [cursor=pointer]:
+      - /url: https://gemini.google.com/app/download
+      - text: Get Gemini App
+      - generic [ref=f53e12]: Opens in a new window
+    - link "Subscriptions Opens in a new window" [ref=f53e13] [cursor=pointer]:
+      - /url: https://one.google.com/ai
+      - text: Subscriptions
+      - generic [ref=f53e14]: Opens in a new window
+    - link "For Business Opens in a new window" [ref=f53e15] [cursor=pointer]:
+      - /url: https://business.gemini.google/?utm_source=cloud_sfdc&utm_medium=et&utm_campaign=FY26-Q2-global-gemini-app&utm_content=-&utm_term=-
+      - text: For Business
+      - generic [ref=f53e16]: Opens in a new window
+    - button "Sign in" [ref=f53e19]
+  - generic [ref=f53e26]:
+    - navigation "Side Navigation" [ref=f53e41]:
+      - generic [ref=f53e44]:
+        - generic [ref=f53e45]:
+          - navigation "Main actions menu" [ref=f53e46]:
+            - link "New chat" [ref=f53e148] [cursor=pointer]:
+              - /url: /app
+              - img [ref=f53e150]: gemini_chat
+          - navigation "Additional actions menu" [ref=f53e50]:
+            - link "Images" [ref=f53e54] [cursor=pointer]:
+              - /url: /images
+              - img [ref=f53e56]: image_create
+        - group [ref=f53e58]:
+          - generic [ref=f53e60]:
+            - button "Sign in" [ref=f53e62] [cursor=pointer]:
+              - img [ref=f53e64]: account_circle
+            - button "Settings" [ref=f53e69] [cursor=pointer]:
+              - img [ref=f53e71]: settings
+    - generic [ref=f53e74]:
+      - generic [ref=f53e75]:
+        - heading "Conversation with Gemini" [level=1] [ref=f53e76]
+        - generic [ref=f53e152]:
+          - generic [ref=f53e156]:
+            - heading "You said Help me find brake pads for a 2018 Honda Civic Si" [level=2] [ref=f53e160]:
+              - generic [ref=f53e161]: You said
+              - paragraph [ref=f53e162]: Help me find brake pads for a 2018 Honda Civic Si
+            - generic [ref=f53e163]:
+              - button "Copy prompt" [ref=f53e165] [cursor=pointer]:
+                - img [ref=f53e167]: copy
+              - generic [ref=f53e169]:
+                - button "Edit" [disabled]:
+                  - generic:
+                    - img: edit
+          - generic [ref=f53e176]:
+            - heading "Gemini said" [level=2] [ref=f53e177]
+            - generic [ref=f53e181]:
+              - paragraph [ref=f53e182]:
+                - text: Finding the right brake pads for a
+                - generic [ref=f53e183]: 2018 Honda Civic Si
+                - text: requires specifying the Si trim, as it uses different braking components than the standard Civic (EX, LX, Touring) and the high-performance Type R.
+              - heading "1. Official OEM Honda Brake Pads" [level=3] [ref=f53e184]
+              - paragraph [ref=f53e185]: "If you prefer factory-original parts, use these specific Honda part numbers:"
+              - list [ref=f53e186]:
+                - listitem [ref=f53e187]:
+                  - paragraph [ref=f53e188]:
+                    - text: "Front Pad Set:"
+                    - code [ref=f53e189]: 45022-TX4-305
+                    - text: (or updated part
+                    - code [ref=f53e190]: 45022-TX4-315
+                    - text: )
+                - listitem [ref=f53e191]:
+                  - paragraph [ref=f53e192]:
+                    - text: "Rear Pad Set:"
+                    - code [ref=f53e193]: 43022-TBF-A01
+              - heading "2. Popular Aftermarket Options" [level=3] [ref=f53e194]
+              - paragraph [ref=f53e195]: "Depending on how you drive your Civic Si (daily commuting vs. spirited driving/track days), several trusted aftermarket brands offer great upgrades:"
+              - list [ref=f53e196]:
+                - listitem [ref=f53e197]:
+                  - paragraph [ref=f53e198]: "Daily Driving & Low Dust (Ceramic):"
+                  - list [ref=f53e199]:
+                    - listitem [ref=f53e200]:
+                      - paragraph [ref=f53e201]:
+                        - text: "Akebono Ultra-Premium Ceramic (Front part:"
+                        - code [ref=f53e202]: W0133-2543893
+                        - text: ) – Exceptional for low noise, minimal brake dust, and long pad life.
+                    - listitem [ref=f53e203]:
+                      - paragraph [ref=f53e204]: Power Stop (Z16 or Z23 Evolution Sport) – Great daily driver options that offer better initial bite than stock without sacrificing comfort.
+                    - listitem [ref=f53e205]:
+                      - paragraph [ref=f53e206]:
+                        - text: "Bosch QuietCast Ceramic (Front part:"
+                        - code [ref=f53e207]: BC1625
+                        - text: ) – Excellent OE-style quiet braking performance.
+                - listitem [ref=f53e208]:
+                  - paragraph [ref=f53e209]: "Spirited Driving & Performance (Semi-Metallic / Carbon-Fiber Ceramic):"
+                  - list [ref=f53e210]:
+                    - listitem [ref=f53e211]:
+                      - paragraph [ref=f53e212]:
+                        - text: "Brembo OE Replacement / Low-Metallic (Front part:"
+                        - code [ref=f53e213]: P28084N
+                        - text: ) – Ideal if you want a sharper, more aggressive pedal feel suited to the Si’s sporty nature.
+                    - listitem [ref=f53e214]:
+                      - paragraph [ref=f53e215]: Power Stop Track Day or EBC Brakes (Redstuff/Greenstuff) – Perfect if you enjoy canyon carving or autocross and need higher resistance to brake fade.
+              - heading "Quick Buying Tips" [level=3] [ref=f53e216]
+              - list [ref=f53e217]:
+                - listitem [ref=f53e218]:
+                  - paragraph [ref=f53e219]: "Double-Check Your Trim: Always verify that the retailer's fitment tool specifies \"With Si model\" or engine size 1.5L Turbo (Si specific), as standard Civic coupe/sedan pads will not fit."
+                - listitem [ref=f53e220]:
+                  - paragraph [ref=f53e221]: "Hardware: Some budget pads do not include new abutment clips and shims."
+      - generic [ref=f53e93]:
+        - group [ref=f53e94]:
+          - generic [ref=f53e97]:
+            - textbox "Enter a prompt for Gemini" [active] [ref=f53e103]:
+              - text: Ask Gemini
+              - paragraph [ref=f53e222]
+            - button "Upload & tools" [ref=f53e110] [cursor=pointer]:
+              - img [ref=f53e112]: plus
+            - generic [ref=f53e114]:
+              - group [ref=f53e117]:
+                - button "Open mode picker, currently Flash-Lite" [ref=f53e118]:
+                  - generic [ref=f53e120]:
+                    - generic [ref=f53e121]: Flash-Lite
+                    - img [ref=f53e123]: keyboard_arrow_down
+              - generic [ref=f53e126]:
+                - text: mic
+                - button "Stop response" [ref=f53e223] [cursor=pointer]:
+                  - img [ref=f53e146]: stop
+        - paragraph [ref=f53e224]: Gemini is AI and can make mistakes.

@@ -1,0 +1,183 @@
+- generic [ref=f81e1]:
+  - link "Skip to content" [ref=f81e2] [cursor=pointer]:
+    - /url: "#main"
+  - generic [ref=f81e6]:
+    - generic [ref=f81e8]:
+      - navigation "Sidebar":
+        - generic:
+          - generic:
+            - generic:
+              - button "Open sidebar"
+        - generic:
+          - generic:
+            - link "New chat":
+              - /url: /
+          - generic: Search chats
+          - generic:
+            - link "Images":
+              - /url: /images
+        - generic:
+          - generic:
+            - button "Open profile menu"
+      - generic [ref=f81e9]:
+        - heading "Chat history" [level=2] [ref=f81e10]
+        - navigation "Chat history" [ref=f81e12]:
+          - generic [ref=f81e15]:
+            - link "Home" [ref=f81e16] [cursor=pointer]:
+              - /url: /
+            - generic [ref=f81e19]:
+              - button "Search chats" [ref=f81e20] [cursor=pointer]
+              - button "Close sidebar" [expanded] [ref=f81e25]
+          - list [ref=f81e29]:
+            - listitem [ref=f81e30]:
+              - link "New chat Shift Command O" [ref=f81e31] [cursor=pointer]:
+                - /url: /
+                - generic [ref=f81e32]: New chat
+                - generic [ref=f81e40]:
+                  - generic "Shift" [ref=f81e41]: ⇧
+                  - generic "Command" [ref=f81e43]: ⌘
+                  - generic [ref=f81e45]: O
+            - listitem
+          - link "Images" [ref=f81e47] [cursor=pointer]:
+            - /url: /images
+          - generic [ref=f81e54]:
+            - link "Plugins" [ref=f81e55] [cursor=pointer]:
+              - /url: /plugins
+            - generic [ref=f81e62] [cursor=pointer]: Deep research
+          - generic [ref=f81e69]:
+            - link [ref=f81e70] [cursor=pointer]:
+              - /url: https://openai.com/chatgpt/pricing/
+            - generic [ref=f81e78] [cursor=pointer]: Settings
+            - generic [ref=f81e82] [cursor=pointer]: Help
+          - generic [ref=f81e92]:
+            - generic [ref=f81e93]:
+              - paragraph [ref=f81e94]: Get responses tailored to you
+              - paragraph [ref=f81e95]: Log in to get answers based on saved chats, plus create images and upload files.
+            - button "Log in" [ref=f81e97] [cursor=pointer]
+    - generic [ref=f81e101]:
+      - generic [ref=f81e102]:
+        - banner:
+          - button "Model selector" [ref=f81e104] [cursor=pointer]:
+            - generic [ref=f81e105]: ChatGPT
+          - generic [ref=f81e113]:
+            - button "Log in" [ref=f81e114] [cursor=pointer]
+            - button "Sign up for free" [ref=f81e116] [cursor=pointer]
+      - main [ref=f81e119]:
+        - generic [ref=f81e121]:
+          - generic [ref=f81e173]:
+            - generic [ref=f81e174]:
+              - generic [ref=f81e176]:
+                - heading "You said:" [level=4] [ref=f81e177]
+                - generic [ref=f81e179]:
+                  - generic [ref=f81e180]: Help me find a vitamin C serum
+                  - generic [ref=f81e185]:
+                    - group "Your message actions":
+                      - button "Copy message"
+              - generic [ref=f81e188]:
+                - heading "ChatGPT said:" [level=4] [ref=f81e189]
+                - generic [ref=f81e191]:
+                  - generic [ref=f81e213]:
+                    - paragraph [ref=f81e214]:
+                      - text: "I can help you pick one. The “best” vitamin C serum depends a lot on your skin type and goal (dark spots, glow, fine lines, sensitivity, budget). Here are strong options across categories:"
+                      - link "Good Housekeeping +1" [ref=f81e217] [cursor=pointer]:
+                        - /url: https://www.goodhousekeeping.com/beauty/anti-aging/g71536873/vitamin-c-serums/?utm_source=chatgpt.com
+                        - generic [ref=f81e219]:
+                          - generic [ref=f81e220]: Good Housekeeping
+                          - generic [ref=f81e223]: "+1"
+                    - generic [ref=f81e226]:
+                      - generic [ref=f81e230] [cursor=pointer]:
+                        - generic [ref=f81e231]:
+                          - img "SkinCeuticals C E Ferulic with 15% L-Ascorbic Acid" [ref=f81e233]
+                          - button "Select product"
+                        - generic [ref=f81e234]:
+                          - generic [ref=f81e235]: SkinCeuticals C E Ferulic with 15% L-Ascorbic Acid
+                          - generic [ref=f81e236]: Price not available•High-potency vitamin C serum with ferulic acid for antioxidant protection.
+                      - generic [ref=f81e243] [cursor=pointer]:
+                        - generic [ref=f81e244]:
+                          - img "Paula’s Choice 25% Vitamin C + Glutathione Clinical Serum" [ref=f81e246]
+                          - button "Select product"
+                        - generic [ref=f81e247]:
+                          - generic [ref=f81e248]: Paula’s Choice 25% Vitamin C + Glutathione Clinical Serum
+                          - generic [ref=f81e249]: Price not available•Serum with 25% vitamin C and glutathione for brightening and skin tone.
+                      - generic [ref=f81e256] [cursor=pointer]:
+                        - generic [ref=f81e257]:
+                          - img "The Ordinary Ascorbyl Glucoside Solution 12%" [ref=f81e259]
+                          - button "Select product"
+                        - generic [ref=f81e260]:
+                          - generic [ref=f81e261]: The Ordinary Ascorbyl Glucoside Solution 12%
+                          - generic [ref=f81e262]: Price not available•Lightweight solution with 12% ascorbyl glucoside for effective vitamin C delivery.
+                    - paragraph [ref=f81e266]:
+                      - strong [ref=f81e267]: "My shortlist:"
+                    - list [ref=f81e268]:
+                      - listitem [ref=f81e269]:
+                        - paragraph [ref=f81e270]:
+                          - strong [ref=f81e271]: "Best overall / proven classic:"
+                          - generic [ref=f81e272] [cursor=pointer]: SkinCeuticals C E Ferulic with 15% L-Ascorbic Acid
+                          - text: — a premium choice with 15% L-ascorbic acid plus vitamin E and ferulic acid; often chosen for brightening, antioxidant protection, and fine-line concerns.
+                          - link "SkinCeuticals" [ref=f81e275] [cursor=pointer]:
+                            - /url: https://www.skinceuticals.com/skincare/vitamin-c-serums/c-e-ferulic-with-15-l-ascorbic-acid/S17.html?utm_source=chatgpt.com
+                      - listitem [ref=f81e281]:
+                        - paragraph [ref=f81e282]:
+                          - strong [ref=f81e283]: "Best for pigmentation and uneven tone:"
+                          - generic [ref=f81e284] [cursor=pointer]: Paula’s Choice 25% Vitamin C + Glutathione Clinical Serum
+                          - text: — a higher-strength formula aimed at radiance and discoloration concerns.
+                          - link "www.paulaschoice.co.uk" [ref=f81e287] [cursor=pointer]:
+                            - /url: https://www.paulaschoice.co.uk/25perc-vitamin-c-and-glutathione-clinical-serum/1490.html?utm_source=chatgpt.com
+                      - listitem [ref=f81e293]:
+                        - paragraph [ref=f81e294]:
+                          - strong [ref=f81e295]: "Best budget / beginner-friendly:"
+                          - generic [ref=f81e296] [cursor=pointer]: The Ordinary Ascorbyl Glucoside Solution 12%
+                          - text: — a gentler vitamin C derivative that’s a good starting point if pure L-ascorbic acid feels irritating.
+                          - link "The Ordinary" [ref=f81e299] [cursor=pointer]:
+                            - /url: https://theordinary.com/en-us/ascorbyl-glucoside-solution-12-vitamin-c-100405.html?utm_source=chatgpt.com
+                    - paragraph [ref=f81e305]: "A quick guide:"
+                    - list [ref=f81e306]:
+                      - listitem [ref=f81e307]:
+                        - paragraph [ref=f81e308]:
+                          - strong [ref=f81e309]: "Oily/acne-prone:"
+                          - text: look for lightweight formulas; avoid very heavy oils.
+                      - listitem [ref=f81e310]:
+                        - paragraph [ref=f81e311]:
+                          - strong [ref=f81e312]: "Sensitive skin:"
+                          - text: start with a vitamin C derivative (like ascorbyl glucoside) rather than a strong L-ascorbic acid serum.
+                      - listitem [ref=f81e313]:
+                        - paragraph [ref=f81e314]:
+                          - strong [ref=f81e315]: "Dark spots:"
+                          - text: L-ascorbic acid formulas are usually the more aggressive choice.
+                      - listitem [ref=f81e316]:
+                        - paragraph [ref=f81e317]:
+                          - strong [ref=f81e318]: "First vitamin C ever:"
+                          - text: don’t start with the strongest option—consistency matters more.
+                    - paragraph [ref=f81e319]:
+                      - text: Use it
+                      - strong [ref=f81e320]: in the morning after cleansing and before moisturizer + sunscreen
+                      - text: .
+                      - link "Good Housekeeping" [ref=f81e323] [cursor=pointer]:
+                        - /url: https://www.goodhousekeeping.com/beauty/anti-aging/g71536873/vitamin-c-serums/?utm_source=chatgpt.com
+                    - paragraph [ref=f81e329]:
+                      - text: Tell me your
+                      - strong [ref=f81e330]: skin type (dry/oily/sensitive/acne-prone)
+                      - text: and your main goal (
+                      - strong [ref=f81e331]: glow, dark spots, acne marks, wrinkles, or redness
+                      - text: ) and I’ll narrow it to one or two picks.
+                  - generic [ref=f81e332]:
+                    - group "Response actions":
+                      - button "Copy response"
+                      - button "Share"
+                      - button "Sources"
+            - generic [ref=f81e197]: ChatGPT is AI and can make mistakes.
+          - generic:
+            - button [ref=f81e333] [cursor=pointer]
+            - generic [ref=f81e138]:
+              - generic [ref=f81e141]:
+                - button "Add files and more" [ref=f81e144] [cursor=pointer]
+                - textbox "Chat with ChatGPT" [active] [ref=f81e147]:
+                  - paragraph [ref=f81e148]: Ask anything
+                - generic [ref=f81e150]:
+                  - button "Start dictation" [ref=f81e151] [cursor=pointer]
+                  - button "Start Voice" [ref=f81e342] [cursor=pointer]:
+                    - generic [ref=f81e346]: Voice
+              - button [disabled] [ref=f81e159]
+              - button [disabled] [ref=f81e160]
+  - alert [ref=f81e171]
+  - status [ref=f81e172]

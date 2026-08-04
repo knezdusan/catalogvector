@@ -1,0 +1,176 @@
+- generic [ref=f9e1]:
+  - link "Skip to content" [ref=f9e2] [cursor=pointer]:
+    - /url: "#main"
+  - generic [ref=f9e6]:
+    - generic [ref=f9e8]:
+      - navigation "Sidebar":
+        - generic:
+          - generic:
+            - generic:
+              - button "Open sidebar"
+        - generic:
+          - generic:
+            - link "New chat":
+              - /url: /
+          - generic: Search chats
+          - generic:
+            - link "Images":
+              - /url: /images
+        - generic:
+          - generic:
+            - button "Open profile menu"
+      - generic [ref=f9e9]:
+        - heading "Chat history" [level=2] [ref=f9e10]
+        - navigation "Chat history" [ref=f9e12]:
+          - generic [ref=f9e15]:
+            - link "Home" [ref=f9e16] [cursor=pointer]:
+              - /url: /
+            - generic [ref=f9e19]:
+              - button "Search chats" [ref=f9e20] [cursor=pointer]
+              - button "Close sidebar" [expanded] [ref=f9e25]
+          - list [ref=f9e29]:
+            - listitem [ref=f9e30]:
+              - link "New chat Shift Command O" [ref=f9e159] [cursor=pointer]:
+                - /url: /
+                - generic [ref=f9e160]: New chat
+                - generic [ref=f9e167]:
+                  - generic "Shift" [ref=f9e168]: ⇧
+                  - generic "Command" [ref=f9e170]: ⌘
+                  - generic [ref=f9e172]: O
+            - listitem
+          - link "Images" [ref=f9e38] [cursor=pointer]:
+            - /url: /images
+          - generic [ref=f9e45]:
+            - link "Plugins" [ref=f9e46] [cursor=pointer]:
+              - /url: /plugins
+            - generic [ref=f9e53] [cursor=pointer]: Deep research
+          - generic [ref=f9e60]:
+            - link [ref=f9e61] [cursor=pointer]:
+              - /url: https://openai.com/chatgpt/pricing/
+            - generic [ref=f9e69] [cursor=pointer]: Settings
+            - generic [ref=f9e73] [cursor=pointer]: Help
+          - generic [ref=f9e83]:
+            - generic [ref=f9e84]:
+              - paragraph [ref=f9e85]: Get responses tailored to you
+              - paragraph [ref=f9e86]: Log in to get answers based on saved chats, plus create images and upload files.
+            - button "Log in" [ref=f9e88] [cursor=pointer]
+    - generic [ref=f9e92]:
+      - generic [ref=f9e93]:
+        - banner:
+          - button "Model selector" [ref=f9e95] [cursor=pointer]:
+            - generic [ref=f9e96]: ChatGPT
+          - generic [ref=f9e104]:
+            - button "Log in" [ref=f9e105] [cursor=pointer]
+            - button "Sign up for free" [ref=f9e107] [cursor=pointer]
+      - main [ref=f9e110]:
+        - generic [ref=f9e112]:
+          - generic [ref=f9e197]:
+            - generic [ref=f9e198]:
+              - generic [ref=f9e200]:
+                - heading "You said:" [level=4] [ref=f9e201]
+                - generic [ref=f9e203]:
+                  - generic [ref=f9e204]: Help me find brake pads for a 2018 Honda Civic Si
+                  - generic [ref=f9e209]:
+                    - group "Your message actions":
+                      - button "Copy message"
+              - generic [ref=f9e212]:
+                - heading "ChatGPT said:" [level=4] [ref=f9e213]
+                - generic [ref=f9e215]:
+                  - generic [ref=f9e236]:
+                    - paragraph [ref=f9e237]:
+                      - text: For a
+                      - strong [ref=f9e238]: 2018 Honda Civic Si (2-door or 4-door, 6-speed manual)
+                      - text: ", you have several good brake pad options depending on how you drive."
+                    - heading "Best overall (daily driving)" [level=3] [ref=f9e239]
+                    - button [ref=f9e240] [cursor=pointer]:
+                      - generic [ref=f9e241]:
+                        - generic [ref=f9e242]:
+                          - button "Select product"
+                        - heading "Akebono ProACT Ceramic Brake Pads" [level=3] [ref=f9e249]
+                    - paragraph [ref=f9e250]: "These are a favorite for daily-driven Civics because they offer:"
+                    - list [ref=f9e251]:
+                      - listitem [ref=f9e252]:
+                        - paragraph [ref=f9e253]: Quiet operation
+                      - listitem [ref=f9e254]:
+                        - paragraph [ref=f9e255]: Low brake dust
+                      - listitem [ref=f9e256]:
+                        - paragraph [ref=f9e257]: Long pad life
+                      - listitem [ref=f9e258]:
+                        - paragraph [ref=f9e259]: Excellent OEM-like braking performance
+                    - paragraph [ref=f9e260]: "Akebono's front and rear pad sets for the 2018 Civic Si are commonly listed as:"
+                    - list [ref=f9e261]:
+                      - listitem [ref=f9e262]:
+                        - paragraph [ref=f9e263]:
+                          - strong [ref=f9e264]: "Front:"
+                          - text: ACT1697
+                      - listitem [ref=f9e265]:
+                        - paragraph [ref=f9e266]:
+                          - strong [ref=f9e267]: "Rear:"
+                          - text: ACT1878
+                          - link "Tire Rack" [ref=f9e270] [cursor=pointer]:
+                            - /url: https://www.tirerack.com/brakes/results.jsp?autoMake=Honda&autoModel=Civic+Si+Sedan&autoYear=2018&utm_source=chatgpt.com
+                    - heading "If you want to stay OEM" [level=3] [ref=f9e276]
+                    - paragraph [ref=f9e277]: Honda OEM pads are an excellent choice if you like the factory brake feel.
+                    - list [ref=f9e278]:
+                      - listitem [ref=f9e279]:
+                        - paragraph [ref=f9e280]:
+                          - strong [ref=f9e281]: "Front Honda pad set:"
+                          - text: 45022-TX4-315 (supersedes 45022-TX4-305)
+                      - listitem [ref=f9e282]:
+                        - paragraph [ref=f9e283]:
+                          - strong [ref=f9e284]: "Rear Honda pad set:"
+                          - text: 43022-TBF-A01
+                    - paragraph [ref=f9e285]:
+                      - text: These are direct-fit for both the 2018 Civic Si coupe and sedan.
+                      - link "Honda Parts Now +1" [ref=f9e288] [cursor=pointer]:
+                        - /url: https://www.hondapartsnow.com/genuine/honda~set~pad~fr~18cl~45022-tx4-315.html?utm_source=chatgpt.com
+                        - generic [ref=f9e290]:
+                          - generic [ref=f9e291]: Honda Parts Now
+                          - generic [ref=f9e294]: "+1"
+                    - heading "If you drive aggressively" [level=3] [ref=f9e295]
+                    - paragraph [ref=f9e296]: "Consider:"
+                    - list [ref=f9e297]:
+                      - listitem [ref=f9e298]:
+                        - paragraph [ref=f9e299]: Hawk HPS 5.0
+                      - listitem [ref=f9e300]:
+                        - paragraph [ref=f9e301]: Hawk HPS Street
+                      - listitem [ref=f9e302]:
+                        - paragraph [ref=f9e303]: Brembo OE Ceramic
+                    - paragraph [ref=f9e304]:
+                      - text: These provide stronger initial bite than many OEM-style pads, though they may create a little more dust or noise.
+                      - link "Tire Rack" [ref=f9e307] [cursor=pointer]:
+                        - /url: https://www.tirerack.com/brakes/results.jsp?autoMake=Honda&autoModel=Civic+Si+Sedan&autoYear=2018&utm_source=chatgpt.com
+                    - paragraph [ref=f9e313]:
+                      - text: "One thing to keep in mind: the 2018 Civic Si uses an"
+                      - strong [ref=f9e314]: electronic parking brake
+                      - text: ", so replacing the"
+                      - strong [ref=f9e315]: rear
+                      - text: pads requires putting the parking brake into service/maintenance mode before compressing the caliper.
+                      - link "Reddit +1" [ref=f9e318] [cursor=pointer]:
+                        - /url: https://www.reddit.com/r/CivicSi/comments/ti99gr?utm_source=chatgpt.com
+                        - generic [ref=f9e320]:
+                          - generic [ref=f9e321]: Reddit
+                          - generic [ref=f9e324]: "+1"
+                    - paragraph [ref=f9e325]: If you're also replacing the rotors, I can recommend matched pad-and-rotor kits as well.
+                  - group "Response actions" [active] [ref=f9e341]:
+                    - button "Copy response" [ref=f9e342] [cursor=pointer]
+                    - button "Share" [ref=f9e346] [cursor=pointer]
+                    - button "Sources" [ref=f9e350] [cursor=pointer]
+            - generic [ref=f9e221]: ChatGPT is AI and can make mistakes.
+          - generic:
+            - generic:
+              - generic:
+                - button
+            - generic [ref=f9e129]:
+              - generic [ref=f9e132]:
+                - button "Add files and more" [ref=f9e135] [cursor=pointer]
+                - textbox "Chat with ChatGPT" [ref=f9e174]:
+                  - paragraph [ref=f9e175]: Ask anything
+                - generic [ref=f9e140]:
+                  - button "Start dictation" [ref=f9e141] [cursor=pointer]
+                  - button "Start Voice" [ref=f9e336] [cursor=pointer]:
+                    - generic [ref=f9e340]: Voice
+              - button [ref=f9e149]
+              - button [ref=f9e150]
+  - alert [ref=f9e157]
+  - status [ref=f9e158]

@@ -1,0 +1,107 @@
+- generic [ref=e1]:
+  - link "Skip to content" [ref=e2] [cursor=pointer]:
+    - /url: "#main"
+  - generic [ref=e4]:
+    - generic [ref=e6]:
+      - generic [ref=e8]:
+        - navigation "Sidebar":
+          - generic:
+            - generic:
+              - generic:
+                - button "Open sidebar"
+          - generic:
+            - generic:
+              - link "New chat":
+                - /url: /
+            - generic: Search chats
+            - generic:
+              - link "Images":
+                - /url: /images
+          - generic:
+            - generic:
+              - button "Open profile menu"
+        - generic [ref=e9]:
+          - heading "Chat history" [level=2] [ref=e10]
+          - navigation "Chat history" [ref=e12]:
+            - generic [ref=e15]:
+              - link "Home" [ref=e16] [cursor=pointer]:
+                - /url: /
+              - generic [ref=e19]:
+                - button "Search chats" [ref=e20] [cursor=pointer]
+                - button "Close sidebar" [expanded] [ref=e25]
+            - list [ref=e29]:
+              - listitem [ref=e30]:
+                - link "New chat Shift Command O" [ref=e31] [cursor=pointer]:
+                  - /url: /
+                  - generic [ref=e32]: New chat
+                  - generic [ref=e40]:
+                    - generic "Shift" [ref=e41]: ⇧
+                    - generic "Command" [ref=e43]: ⌘
+                    - generic [ref=e45]: O
+              - listitem
+            - link "Images" [ref=e47] [cursor=pointer]:
+              - /url: /images
+            - generic [ref=e54]:
+              - link "Plugins" [ref=e55] [cursor=pointer]:
+                - /url: /plugins
+              - generic [ref=e62] [cursor=pointer]: Deep research
+            - generic [ref=e69]:
+              - link [ref=e70] [cursor=pointer]:
+                - /url: https://openai.com/chatgpt/pricing/
+              - generic [ref=e78] [cursor=pointer]: Settings
+              - generic [ref=e82] [cursor=pointer]: Help
+            - generic [ref=e92]:
+              - generic [ref=e93]:
+                - paragraph [ref=e94]: Get responses tailored to you
+                - paragraph [ref=e95]: Log in to get answers based on saved chats, plus create images and upload files.
+              - button "Log in" [ref=e97] [cursor=pointer]
+      - generic [ref=e101]:
+        - generic [ref=e102]:
+          - banner:
+            - button "Model selector" [ref=e104] [cursor=pointer]:
+              - generic [ref=e105]: ChatGPT
+            - generic [ref=e113]:
+              - button "Log in" [ref=e114] [cursor=pointer]
+              - button "Sign up for free" [ref=e116] [cursor=pointer]
+        - main [ref=e119]:
+          - generic [ref=e121]:
+            - heading "What’s on your mind today?" [level=1] [ref=e129]
+            - generic [ref=e131]:
+              - generic [ref=e138]:
+                - generic [ref=e141]:
+                  - button "Add files and more" [ref=e144] [cursor=pointer]
+                  - textbox "Chat with ChatGPT" [ref=e147]:
+                    - paragraph [ref=e148]: Ask anything
+                  - generic [ref=e150]:
+                    - button "Start dictation" [ref=e151] [cursor=pointer]
+                    - button "Start Voice" [ref=e154] [cursor=pointer]:
+                      - generic [ref=e158]: Voice
+                - button [ref=e159]
+                - button [ref=e160]
+              - generic [ref=e167]:
+                - text: ChatGPT is AI. By using it, you agree to our
+                - link "Terms" [ref=e168] [cursor=pointer]:
+                  - /url: https://openai.com/terms
+                - text: "&"
+                - link "Privacy Policy" [ref=e169] [cursor=pointer]:
+                  - /url: https://openai.com/privacy
+                - text: . Chats may be reviewed and used to improve our AI models.
+                - link "Learn more" [ref=e170] [cursor=pointer]:
+                  - /url: https://help.openai.com/en/articles/5722486-how-your-data-is-used-to-improve-model-performance
+    - dialog [ref=e172]:
+      - generic [ref=e173]:
+        - heading "We use cookies" [level=1] [ref=e174]
+        - button "Close" [ref=e175] [cursor=pointer]
+      - generic [ref=e176]:
+        - paragraph [ref=e177]:
+          - text: Cookies help this site function, measure usage, and support marketing.
+          - button "Manage" [ref=e178] [cursor=pointer]
+          - text: your cookie preferences anytime. Learn more about our
+          - link "cookie policy" [ref=e179] [cursor=pointer]:
+            - /url: https://openai.com/policies/cookie-policy/
+          - text: .
+        - generic [ref=e180]:
+          - button "Reject non-essential" [ref=e181] [cursor=pointer]
+          - button "Accept all" [active] [ref=e183] [cursor=pointer]
+  - alert [ref=e185]
+  - status [ref=e186]

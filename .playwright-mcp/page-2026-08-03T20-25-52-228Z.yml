@@ -1,0 +1,119 @@
+- main [ref=f56e4]:
+  - button "Open sidebar" [ref=f56e127] [cursor=pointer]:
+    - generic [ref=f56e128]: side_nav_expand
+  - generic [ref=f56e8]:
+    - generic: play_arrow
+    - link "About Gemini Opens in a new window" [ref=f56e9] [cursor=pointer]:
+      - /url: https://gemini.google/about/?utm_source=gemini&utm_medium=web&utm_campaign=gemini_zero_state_link_to_marketing_microsite
+      - text: About Gemini
+      - generic [ref=f56e10]: Opens in a new window
+    - link "Get Gemini App Opens in a new window" [ref=f56e11] [cursor=pointer]:
+      - /url: https://gemini.google.com/app/download
+      - text: Get Gemini App
+      - generic [ref=f56e12]: Opens in a new window
+    - link "Subscriptions Opens in a new window" [ref=f56e13] [cursor=pointer]:
+      - /url: https://one.google.com/ai
+      - text: Subscriptions
+      - generic [ref=f56e14]: Opens in a new window
+    - link "For Business Opens in a new window" [ref=f56e15] [cursor=pointer]:
+      - /url: https://business.gemini.google/?utm_source=cloud_sfdc&utm_medium=et&utm_campaign=FY26-Q2-global-gemini-app&utm_content=-&utm_term=-
+      - text: For Business
+      - generic [ref=f56e16]: Opens in a new window
+    - button "Sign in" [ref=f56e19]
+  - generic [ref=f56e26]:
+    - navigation "Side Navigation" [ref=f56e27]:
+      - generic [ref=f56e30]:
+        - generic [ref=f56e31]:
+          - navigation "Main actions menu" [ref=f56e32]:
+            - link "New chat" [ref=f56e148] [cursor=pointer]:
+              - /url: /app
+              - img [ref=f56e150]: gemini_chat
+          - navigation "Additional actions menu" [ref=f56e36]:
+            - link "Images" [ref=f56e40] [cursor=pointer]:
+              - /url: /images
+              - img [ref=f56e42]: image_create
+        - group [ref=f56e44]:
+          - generic [ref=f56e46]:
+            - button "Sign in" [ref=f56e48] [cursor=pointer]:
+              - img [ref=f56e50]: account_circle
+            - button "Settings" [ref=f56e55] [cursor=pointer]:
+              - img [ref=f56e57]: settings
+    - generic [ref=f56e65]:
+      - generic [ref=f56e66]:
+        - heading "Conversation with Gemini" [level=1] [ref=f56e67]
+        - generic [ref=f56e152]:
+          - generic [ref=f56e156]:
+            - heading "You said Help me find a cold air intake for a 2023 Honda Civic Type R FL5" [level=2] [ref=f56e160]:
+              - generic [ref=f56e161]: You said
+              - paragraph [ref=f56e162]: Help me find a cold air intake for a 2023 Honda Civic Type R FL5
+            - generic [ref=f56e163]:
+              - button "Copy prompt" [ref=f56e165] [cursor=pointer]:
+                - img [ref=f56e167]: copy
+              - generic [ref=f56e169]:
+                - button "Edit" [disabled]:
+                  - generic:
+                    - img: edit
+          - generic [ref=f56e176]:
+            - heading "Gemini said" [level=2] [ref=f56e177]
+            - generic [ref=f56e181]:
+              - paragraph [ref=f56e182]: Upgrading the cold air intake (or hybrid/sealed induction system) on your 2023 Honda Civic Type R (FL5) is one of the best ways to wake up the K20C1 engine, improve throttle response, and hear the turbo spool and blow-off valve chatter.
+              - paragraph [ref=f56e183]: Because the FL5 engine bay sits right behind the radiator, most reputable brands use a sealed or shrouded airbox design to prevent engine heat soak while maximizing cool air intake.
+              - paragraph [ref=f56e184]: "Top options available for the FL5 platform span several categories depending on your budget and aesthetic goals:"
+              - heading "1. Popular Mid-Range & Performance Options ($300 – $600)" [level=3] [ref=f56e185]
+              - list [ref=f56e186]:
+                - listitem [ref=f56e187]:
+                  - paragraph [ref=f56e188]: PRL Motorsports High Volume Intake (HVI)
+                  - list [ref=f56e189]:
+                    - listitem [ref=f56e190]:
+                      - paragraph [ref=f56e191]: "Why choose it: PRL is a household name in the Honda community. Their HVI features a large-volume roto-molded sealed airbox and a custom-molded high-flow air filter. It’s engineered to offer seamless airflow transitions, solid horsepower/torque gains, and a noticeable increase in induction sound without throwing check engine lights (CEL)."
+                - listitem [ref=f56e192]:
+                  - paragraph [ref=f56e193]: "HPS Performance Cold Air Intake Kit (Part # 827-741)"
+                  - list [ref=f56e194]:
+                    - listitem [ref=f56e195]:
+                      - paragraph [ref=f56e196]: "Why choose it: Features a 3.5-inch mandrel-bent aluminum intake tube and a heavy-duty powder-coated steel heat shield. It’s a great bolt-on option that delivers dyno-proven gains (around 14 hp and 16 lb-ft of torque) at a more accessible price point."
+                - listitem [ref=f56e197]:
+                  - paragraph [ref=f56e198]: 27WON Performance Hybrid Air Intake System
+                  - list [ref=f56e199]:
+                    - listitem [ref=f56e200]:
+                      - paragraph [ref=f56e201]: "Why choose it: 27WON uses a unique \"hybrid\" sealed-to-hood design with a massive dry-flow filter and a trick billet-aluminum MAF housing featuring a twist-n-lock mechanism. It excels at keeping hot manifold air out while giving the FL5 an aggressive look under the hood."
+                - listitem [ref=f56e202]:
+                  - paragraph [ref=f56e203]: aFe Takeda Momentum Cold Air Intake
+                  - list [ref=f56e204]:
+                    - listitem [ref=f56e205]:
+                      - paragraph [ref=f56e206]: "Why choose it: Known for excellent fitment, a large clear sight window (on select versions) to check filter condition, and a fully sealed rotomolded housing that isolates the filter from engine bay heat."
+              - heading "2. Premium Carbon Fiber Options ($900 – $1,800+)" [level=3] [ref=f56e207]
+              - paragraph [ref=f56e208]: "If you want exotic aesthetics, top-tier craftsmanship, and maximum performance, carbon fiber options are the gold standard for the FL5:"
+              - list [ref=f56e209]:
+                - listitem [ref=f56e210]:
+                  - paragraph [ref=f56e211]: Eventuri Carbon Fiber Intake System
+                  - list [ref=f56e212]:
+                    - listitem [ref=f56e213]:
+                      - paragraph [ref=f56e214]: "Why choose it: Eventuri is famous for its patented Venturi carbon fiber housing stack. Their FL5 system completely replaces the factory air path with a seamless carbon fiber enclosure designed to smooth out turbulent airflow and prevent heat soak entirely. It is exceptionally high-quality (and priced accordingly), providing the best possible turbo acoustics."
+                - listitem [ref=f56e215]:
+                  - paragraph [ref=f56e216]: COBB Tuning Redline Carbon Fiber Air Intake
+                  - list [ref=f56e217]:
+                    - listitem [ref=f56e218]:
+                      - paragraph [ref=f56e219]: "Why choose it: A stunning, high-end alternative that pairs a real carbon fiber airbox lid and intake ducting with custom filtration to optimize airflow and elevate your engine bay's appearance."
+              - heading "What to Consider Before Buying:" [level=3] [ref=f56e220]
+              - list [ref=f56e221]:
+                - listitem [ref=f56e222]:
+                  - paragraph [ref=f56e223]: "Tune Requirements: Most high-quality intakes for the FL5 are designed to run safely on the stock ECU tune without throwing a CEL. However, if you opt for a massive MAF housing upgrade down the road,"
+      - generic [ref=f56e82]:
+        - group [ref=f56e83]:
+          - generic [ref=f56e86]:
+            - textbox "Enter a prompt for Gemini" [active] [ref=f56e92]:
+              - text: Ask Gemini
+              - paragraph [ref=f56e224]
+            - button "Upload & tools" [ref=f56e99] [cursor=pointer]:
+              - img [ref=f56e101]: plus
+            - generic [ref=f56e103]:
+              - group [ref=f56e106]:
+                - button "Open mode picker, currently Flash-Lite" [ref=f56e107]:
+                  - generic [ref=f56e109]:
+                    - generic [ref=f56e110]: Flash-Lite
+                    - img [ref=f56e112]: keyboard_arrow_down
+              - generic [ref=f56e115]:
+                - text: mic
+                - button "Stop response" [ref=f56e225] [cursor=pointer]:
+                  - img [ref=f56e146]: stop
+        - paragraph [ref=f56e226]: Gemini is AI and can make mistakes.

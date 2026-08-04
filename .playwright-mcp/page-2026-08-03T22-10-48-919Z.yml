@@ -1,0 +1,195 @@
+- generic [ref=f93e1]:
+  - link "Skip to content" [ref=f93e2] [cursor=pointer]:
+    - /url: "#main"
+  - generic [ref=f93e6]:
+    - generic [ref=f93e8]:
+      - navigation "Sidebar":
+        - generic:
+          - generic:
+            - generic:
+              - button "Open sidebar"
+        - generic:
+          - generic:
+            - link "New chat":
+              - /url: /
+          - generic: Search chats
+          - generic:
+            - link "Images":
+              - /url: /images
+        - generic:
+          - generic:
+            - button "Open profile menu"
+      - generic [ref=f93e9]:
+        - heading "Chat history" [level=2] [ref=f93e10]
+        - navigation "Chat history" [ref=f93e12]:
+          - generic [ref=f93e15]:
+            - link "Home" [ref=f93e16] [cursor=pointer]:
+              - /url: /
+            - generic [ref=f93e19]:
+              - button "Search chats" [ref=f93e20] [cursor=pointer]
+              - button "Close sidebar" [expanded] [ref=f93e25]
+          - list [ref=f93e29]:
+            - listitem [ref=f93e30]:
+              - link "New chat Shift Command O" [ref=f93e31] [cursor=pointer]:
+                - /url: /
+                - generic [ref=f93e32]: New chat
+                - generic [ref=f93e40]:
+                  - generic "Shift" [ref=f93e41]: ⇧
+                  - generic "Command" [ref=f93e43]: ⌘
+                  - generic [ref=f93e45]: O
+            - listitem
+          - link "Images" [ref=f93e47] [cursor=pointer]:
+            - /url: /images
+          - generic [ref=f93e54]:
+            - link "Plugins" [ref=f93e55] [cursor=pointer]:
+              - /url: /plugins
+            - generic [ref=f93e62] [cursor=pointer]: Deep research
+          - generic [ref=f93e69]:
+            - link [ref=f93e70] [cursor=pointer]:
+              - /url: https://openai.com/chatgpt/pricing/
+            - generic [ref=f93e78] [cursor=pointer]: Settings
+            - generic [ref=f93e82] [cursor=pointer]: Help
+          - generic [ref=f93e92]:
+            - generic [ref=f93e93]:
+              - paragraph [ref=f93e94]: Get responses tailored to you
+              - paragraph [ref=f93e95]: Log in to get answers based on saved chats, plus create images and upload files.
+            - button "Log in" [ref=f93e97] [cursor=pointer]
+    - generic [ref=f93e101]:
+      - generic [ref=f93e102]:
+        - banner:
+          - button "Model selector" [ref=f93e104] [cursor=pointer]:
+            - generic [ref=f93e105]: ChatGPT
+          - generic [ref=f93e113]:
+            - button "Log in" [ref=f93e114] [cursor=pointer]
+            - button "Sign up for free" [ref=f93e116] [cursor=pointer]
+      - main [ref=f93e119]:
+        - generic [ref=f93e121]:
+          - generic [ref=f93e173]:
+            - generic [ref=f93e174]:
+              - generic [ref=f93e176]:
+                - heading "You said:" [level=4] [ref=f93e177]
+                - generic [ref=f93e179]:
+                  - generic [ref=f93e180]: Help me find a 2-person backpacking tent
+                  - generic [ref=f93e185]:
+                    - group "Your message actions":
+                      - button "Copy message"
+              - generic [ref=f93e188]:
+                - heading "ChatGPT said:" [level=4] [ref=f93e189]
+                - generic [ref=f93e191]:
+                  - generic [ref=f93e213]:
+                    - paragraph [ref=f93e214]:
+                      - text: A good 2-person backpacking tent depends on whether you care most about
+                      - strong [ref=f93e215]: weight, comfort, durability, weather protection, or price
+                      - text: ". Here are the models I’d shortlist:"
+                    - generic [ref=f93e217]:
+                      - table [ref=f93e218]:
+                        - rowgroup [ref=f93e219]:
+                          - row [ref=f93e220]:
+                            - columnheader "Tent" [ref=f93e221]
+                            - columnheader "Best for" [ref=f93e222]
+                            - columnheader "Approx. weight" [ref=f93e223]
+                            - columnheader "Why consider it" [ref=f93e224]
+                        - rowgroup [ref=f93e225]:
+                          - row [ref=f93e226]:
+                            - cell "Big Agnes Copper Spur UL2" [ref=f93e227]
+                            - cell "Best lightweight all-rounder" [ref=f93e229]
+                            - cell "~3 lb" [ref=f93e230]
+                            - cell [ref=f93e231]:
+                              - text: Excellent space-to-weight ratio, two doors, two vestibules; a favorite for long-distance backpacking. The tradeoff is a higher price and lighter fabrics that need more care.
+                              - link "GearLab" [ref=f93e234] [cursor=pointer]:
+                                - /url: https://www.outdoorgearlab.com/reviews/camping-and-hiking/backpacking-tent/big-agnes-copper-spur-ul2?utm_source=chatgpt.com
+                          - row [ref=f93e240]:
+                            - cell "NEMO Dagger OSMO 2P Tent" [ref=f93e241]
+                            - cell "Best comfort for two people" [ref=f93e243]
+                            - cell "~3 lb 5 oz" [ref=f93e244]
+                            - cell [ref=f93e245]:
+                              - text: Roomy interior, tall peak height, two doors, generous vestibules, and a more spacious feel than many ultralight tents.
+                              - link "REI" [ref=f93e248] [cursor=pointer]:
+                                - /url: https://www.rei.com/product/242364/nemo-dagger-osmo-2p-tent?utm_source=chatgpt.com
+                          - row [ref=f93e254]:
+                            - cell "MSR Hubba Hubba" [ref=f93e255]
+                            - cell "Reliable classic" [ref=f93e257]
+                            - cell "varies by version" [ref=f93e258]
+                            - cell [ref=f93e259]:
+                              - text: A proven freestanding design with good ventilation and weather performance.
+                              - link "WIRED" [ref=f93e262] [cursor=pointer]:
+                                - /url: https://www.wired.com/review/msr-hubba-hubba-nx?utm_source=chatgpt.com
+                          - row [ref=f93e268]:
+                            - cell "REI Co-op Half Dome SL 2+" [ref=f93e269]
+                            - cell "Value and durability" [ref=f93e271]
+                            - cell "~3–4 lb range" [ref=f93e272]
+                            - cell [ref=f93e273]:
+                              - text: A good choice if you want more room and don’t need the absolute lowest weight.
+                              - link "People.com" [ref=f93e276] [cursor=pointer]:
+                                - /url: https://people.com/best-two-person-tents-7501282?utm_source=chatgpt.com
+                      - generic [ref=f93e283]:
+                        - button "Copy table"
+                    - paragraph [ref=f93e284]:
+                      - strong [ref=f93e285]: "My quick picks:"
+                    - list [ref=f93e286]:
+                      - listitem [ref=f93e287]:
+                        - paragraph [ref=f93e288]:
+                          - strong [ref=f93e289]: "For a couple sharing one tent:"
+                          - text: NEMO Dagger OSMO 2P — the extra room is worth the small weight penalty.
+                          - link "REI" [ref=f93e292] [cursor=pointer]:
+                            - /url: https://www.rei.com/product/242364/nemo-dagger-osmo-2p-tent?utm_source=chatgpt.com
+                      - listitem [ref=f93e298]:
+                        - paragraph [ref=f93e299]:
+                          - strong [ref=f93e300]: "For serious backpacking where every gram matters:"
+                          - text: Big Agnes Copper Spur UL2.
+                          - link "GearLab" [ref=f93e303] [cursor=pointer]:
+                            - /url: https://www.outdoorgearlab.com/reviews/camping-and-hiking/backpacking-tent/big-agnes-copper-spur-ul2?utm_source=chatgpt.com
+                      - listitem [ref=f93e309]:
+                        - paragraph [ref=f93e310]:
+                          - strong [ref=f93e311]: "For a first backpacking tent that you’ll use for years:"
+                          - text: MSR Hubba Hubba or NEMO Dagger.
+                          - link "WIRED +1" [ref=f93e314] [cursor=pointer]:
+                            - /url: https://www.wired.com/review/msr-hubba-hubba-nx?utm_source=chatgpt.com
+                            - generic [ref=f93e316]:
+                              - generic [ref=f93e317]: WIRED
+                              - generic [ref=f93e320]: "+1"
+                      - listitem [ref=f93e321]:
+                        - paragraph [ref=f93e322]:
+                          - strong [ref=f93e323]: "For budget-conscious buying:"
+                          - text: look at the REI Half Dome SL 2+ or sales on premium models.
+                          - link "People.com" [ref=f93e326] [cursor=pointer]:
+                            - /url: https://people.com/best-two-person-tents-7501282?utm_source=chatgpt.com
+                    - paragraph [ref=f93e332]: "A few questions would narrow it down a lot:"
+                    - list [ref=f93e333]:
+                      - listitem [ref=f93e334]:
+                        - paragraph [ref=f93e335]: What’s your budget (e.g., under $300, $300–500, $500+)?
+                      - listitem [ref=f93e336]:
+                        - paragraph [ref=f93e337]:
+                          - text: Will
+                          - strong [ref=f93e338]: two adults actually sleep inside
+                          - text: ", or is it mostly one person + gear?"
+                      - listitem [ref=f93e339]:
+                        - paragraph [ref=f93e340]: "What conditions: summer only, 3-season rain/wind, or snow/winter?"
+                      - listitem [ref=f93e341]:
+                        - paragraph [ref=f93e342]:
+                          - text: Do you prioritize
+                          - strong [ref=f93e343]: lighter pack weight
+                          - text: or
+                          - strong [ref=f93e344]: more interior space
+                          - text: "?"
+                  - generic [ref=f93e345]:
+                    - group "Response actions":
+                      - button "Copy response"
+                      - button "Share"
+                      - button "Sources"
+            - generic [ref=f93e197]: ChatGPT is AI and can make mistakes.
+          - generic:
+            - button [ref=f93e346] [cursor=pointer]
+            - generic [ref=f93e138]:
+              - generic [ref=f93e141]:
+                - button "Add files and more" [ref=f93e144] [cursor=pointer]
+                - textbox "Chat with ChatGPT" [active] [ref=f93e147]:
+                  - paragraph [ref=f93e148]: Ask anything
+                - generic [ref=f93e150]:
+                  - button "Start dictation" [ref=f93e151] [cursor=pointer]
+                  - button "Start Voice" [ref=f93e355] [cursor=pointer]:
+                    - generic [ref=f93e359]: Voice
+              - button [disabled] [ref=f93e159]
+              - button [disabled] [ref=f93e160]
+  - alert [ref=f93e171]
+  - status [ref=f93e172]

@@ -1,0 +1,9 @@
+[    1704ms] Error: Minified React error #418; visit https://react.dev/errors/418?args[]= for the full message or use the non-minified dev environment for full errors and additional helpful warnings.
+    at Gu (https://shopify-assets.shopifycdn.com/shopifycloud/shop-client/production/assets/entry.client-CcN4--Vx.js:39:24697)
+    at _f (https://shopify-assets.shopifycdn.com/shopifycloud/shop-client/production/assets/entry.client-CcN4--Vx.js:39:74122)
+    at sd (https://shopify-assets.shopifycdn.com/shopifycloud/shop-client/production/assets/entry.client-CcN4--Vx.js:39:106656)
+    at TD (https://shopify-assets.shopifycdn.com/shopifycloud/shop-client/production/assets/entry.client-CcN4--Vx.js:39:105721)
+    at ps (https://shopify-assets.shopifycdn.com/shopifycloud/shop-client/production/assets/entry.client-CcN4--Vx.js:39:105553)
+    at ad (https://shopify-assets.shopifycdn.com/shopifycloud/shop-client/production/assets/entry.client-CcN4--Vx.js:39:102315)
+    at vd (https://shopify-assets.shopifycdn.com/shopifycloud/shop-client/production/assets/entry.client-CcN4--Vx.js:39:114087)
+    at MessagePort.Ie (https://shopify-assets.shopifycdn.com/shopifycloud/shop-client/production/assets/entry.client-CcN4--Vx.js:24:1603)

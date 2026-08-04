@@ -1,0 +1,60 @@
+- main [ref=f56e4]:
+  - generic [ref=f56e8]:
+    - generic: play_arrow
+    - link "About Gemini Opens in a new window" [ref=f56e9] [cursor=pointer]:
+      - /url: https://gemini.google/about/?utm_source=gemini&utm_medium=web&utm_campaign=gemini_zero_state_link_to_marketing_microsite
+      - text: About Gemini
+      - generic [ref=f56e10]: Opens in a new window
+    - link "Get Gemini App Opens in a new window" [ref=f56e11] [cursor=pointer]:
+      - /url: https://gemini.google.com/app/download
+      - text: Get Gemini App
+      - generic [ref=f56e12]: Opens in a new window
+    - link "Subscriptions Opens in a new window" [ref=f56e13] [cursor=pointer]:
+      - /url: https://one.google.com/ai
+      - text: Subscriptions
+      - generic [ref=f56e14]: Opens in a new window
+    - link "For Business Opens in a new window" [ref=f56e15] [cursor=pointer]:
+      - /url: https://business.gemini.google/?utm_source=cloud_sfdc&utm_medium=et&utm_campaign=FY26-Q2-global-gemini-app&utm_content=-&utm_term=-
+      - text: For Business
+      - generic [ref=f56e16]: Opens in a new window
+    - button "Sign in" [ref=f56e19]
+  - generic [ref=f56e26]:
+    - navigation "Side Navigation" [ref=f56e27]:
+      - generic [ref=f56e30]:
+        - generic [ref=f56e31]:
+          - navigation "Main actions menu" [ref=f56e32]:
+            - generic [ref=f56e35]:
+              - link "New chat" [disabled]:
+                - /url: /app
+                - generic:
+                  - img: gemini_chat
+          - navigation "Additional actions menu" [ref=f56e36]:
+            - link "Images" [ref=f56e40] [cursor=pointer]:
+              - /url: /images
+              - img [ref=f56e42]: image_create
+        - group [ref=f56e44]:
+          - generic [ref=f56e46]:
+            - button "Sign in" [ref=f56e48] [cursor=pointer]:
+              - img [ref=f56e50]: account_circle
+            - button "Settings" [ref=f56e55] [cursor=pointer]:
+              - img [ref=f56e57]: settings
+    - generic [ref=f56e65]:
+      - generic [ref=f56e66]:
+        - heading "Conversation with Gemini" [level=1] [ref=f56e67]
+        - generic [ref=f56e80]:
+          - heading "Meet Gemini, your personal AI assistant" [level=1]
+      - group [ref=f56e83]:
+        - generic [ref=f56e86]:
+          - textbox "Enter a prompt for Gemini" [active] [ref=f56e92]:
+            - text: Ask Gemini
+            - paragraph [ref=f56e93]
+          - button "Upload & tools" [ref=f56e99] [cursor=pointer]:
+            - img [ref=f56e101]: plus
+          - generic [ref=f56e103]:
+            - group [ref=f56e106]:
+              - button "Open mode picker, currently Flash-Lite" [ref=f56e107]:
+                - generic [ref=f56e109]:
+                  - generic [ref=f56e110]: Flash-Lite
+                  - img [ref=f56e112]: keyboard_arrow_down
+            - button "Dictate (⌘⇧D)" [ref=f56e120] [cursor=pointer]:
+              - img [ref=f56e122]: mic

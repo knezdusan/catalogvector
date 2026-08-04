@@ -1,0 +1,180 @@
+- generic [ref=f90e1]:
+  - link "Skip to content" [ref=f90e2] [cursor=pointer]:
+    - /url: "#main"
+  - generic [ref=f90e6]:
+    - generic [ref=f90e8]:
+      - navigation "Sidebar":
+        - generic:
+          - generic:
+            - generic:
+              - button "Open sidebar"
+        - generic:
+          - generic:
+            - link "New chat":
+              - /url: /
+          - generic: Search chats
+          - generic:
+            - link "Images":
+              - /url: /images
+        - generic:
+          - generic:
+            - button "Open profile menu"
+      - generic [ref=f90e9]:
+        - heading "Chat history" [level=2] [ref=f90e10]
+        - navigation "Chat history" [ref=f90e12]:
+          - generic [ref=f90e15]:
+            - link "Home" [ref=f90e16] [cursor=pointer]:
+              - /url: /
+            - generic [ref=f90e19]:
+              - button "Search chats" [ref=f90e20] [cursor=pointer]
+              - button "Close sidebar" [expanded] [ref=f90e25]
+          - list [ref=f90e29]:
+            - listitem [ref=f90e30]:
+              - link "New chat Shift Command O" [ref=f90e31] [cursor=pointer]:
+                - /url: /
+                - generic [ref=f90e32]: New chat
+                - generic [ref=f90e40]:
+                  - generic "Shift" [ref=f90e41]: ⇧
+                  - generic "Command" [ref=f90e43]: ⌘
+                  - generic [ref=f90e45]: O
+            - listitem
+          - link "Images" [ref=f90e47] [cursor=pointer]:
+            - /url: /images
+          - generic [ref=f90e54]:
+            - link "Plugins" [ref=f90e55] [cursor=pointer]:
+              - /url: /plugins
+            - generic [ref=f90e62] [cursor=pointer]: Deep research
+          - generic [ref=f90e69]:
+            - link [ref=f90e70] [cursor=pointer]:
+              - /url: https://openai.com/chatgpt/pricing/
+            - generic [ref=f90e78] [cursor=pointer]: Settings
+            - generic [ref=f90e82] [cursor=pointer]: Help
+          - generic [ref=f90e92]:
+            - generic [ref=f90e93]:
+              - paragraph [ref=f90e94]: Get responses tailored to you
+              - paragraph [ref=f90e95]: Log in to get answers based on saved chats, plus create images and upload files.
+            - button "Log in" [ref=f90e97] [cursor=pointer]
+    - generic [ref=f90e101]:
+      - generic [ref=f90e102]:
+        - banner:
+          - button "Model selector" [ref=f90e104] [cursor=pointer]:
+            - generic [ref=f90e105]: ChatGPT
+          - generic [ref=f90e113]:
+            - button "Log in" [ref=f90e114] [cursor=pointer]
+            - button "Sign up for free" [ref=f90e116] [cursor=pointer]
+      - main [ref=f90e119]:
+        - generic [ref=f90e121]:
+          - generic [ref=f90e173]:
+            - generic [ref=f90e174]:
+              - generic [ref=f90e176]:
+                - heading "You said:" [level=4] [ref=f90e177]
+                - generic [ref=f90e179]:
+                  - generic [ref=f90e180]: Shop for a solid cologne for men
+                  - generic [ref=f90e185]:
+                    - group "Your message actions":
+                      - button "Copy message"
+              - generic [ref=f90e188]:
+                - heading "ChatGPT said:" [level=4] [ref=f90e189]
+                - generic [ref=f90e191]:
+                  - generic [ref=f90e213]:
+                    - paragraph [ref=f90e214]:
+                      - text: If you’re looking for a
+                      - strong [ref=f90e215]: solid cologne for men
+                      - text: ", these are some strong options depending on your style and budget. Solid colognes are compact, travel-friendly, and usually give a more subtle “close to the skin” scent than sprays."
+                      - link "GQ" [ref=f90e218] [cursor=pointer]:
+                        - /url: https://www.gq.com/story/best-solid-colognes?utm_source=chatgpt.com
+                    - heading "Best picks" [level=3] [ref=f90e224]
+                    - list [ref=f90e225]:
+                      - listitem [ref=f90e226]:
+                        - paragraph [ref=f90e227]:
+                          - strong [ref=f90e228]:
+                            - generic [ref=f90e229] [cursor=pointer]: Fulton & Roark
+                            - text: Solid Fragrance — Best premium choice
+                        - list [ref=f90e230]:
+                          - listitem [ref=f90e231]:
+                            - paragraph [ref=f90e232]: Great if you want a refined, masculine scent.
+                          - listitem [ref=f90e233]:
+                            - paragraph [ref=f90e234]:
+                              - text: Popular scents include woody, smoky, and fresh profiles; the brand is known for its refillable metal cases.
+                              - link "Fulton & Roark" [ref=f90e237] [cursor=pointer]:
+                                - /url: https://fultonandroark.com/blogs/news/solid-cologne-vs-spray-cologne-everything-you-need-to-know-2026-comparison?utm_source=chatgpt.com
+                          - listitem [ref=f90e243]:
+                            - paragraph [ref=f90e244]: "Good for: office, dates, travel, everyday wear."
+                      - listitem [ref=f90e245]:
+                        - paragraph [ref=f90e246]:
+                          - strong [ref=f90e247]:
+                            - generic [ref=f90e248] [cursor=pointer]: Duke Cannon
+                            - text: Solid Cologne — Best value
+                        - list [ref=f90e249]:
+                          - listitem [ref=f90e250]:
+                            - paragraph [ref=f90e251]: More affordable and easygoing.
+                          - listitem [ref=f90e252]:
+                            - paragraph [ref=f90e253]:
+                              - text: Good scents for men who like classic barbershop, outdoorsy, or clean styles.
+                              - link "GQ" [ref=f90e256] [cursor=pointer]:
+                                - /url: https://www.gq.com/story/best-solid-colognes?utm_source=chatgpt.com
+                          - listitem [ref=f90e262]:
+                            - paragraph [ref=f90e263]: "Good for: casual use and keeping in a gym bag."
+                      - listitem [ref=f90e264]:
+                        - paragraph [ref=f90e265]:
+                          - strong [ref=f90e266]:
+                            - generic [ref=f90e267] [cursor=pointer]: Malin+Goetz
+                            - text: Solid Cologne — Best minimalist/luxury feel
+                        - list [ref=f90e268]:
+                          - listitem [ref=f90e269]:
+                            - paragraph [ref=f90e270]: Cleaner, more modern scent profiles.
+                          - listitem [ref=f90e271]:
+                            - paragraph [ref=f90e272]: Good if you prefer something understated rather than a loud fragrance.
+                    - heading "Scent style guide" [level=3] [ref=f90e273]
+                    - list [ref=f90e274]:
+                      - listitem [ref=f90e275]:
+                        - paragraph [ref=f90e276]:
+                          - strong [ref=f90e277]: "Fresh/clean:"
+                          - text: citrus, vetiver, marine notes
+                      - listitem [ref=f90e278]:
+                        - paragraph [ref=f90e279]:
+                          - strong [ref=f90e280]: "Masculine/classic:"
+                          - text: cedar, sandalwood, leather, spice
+                      - listitem [ref=f90e281]:
+                        - paragraph [ref=f90e282]:
+                          - strong [ref=f90e283]: "Night/date:"
+                          - text: amber, tobacco, rum, vanilla
+                    - paragraph [ref=f90e284]: "My quick recommendation:"
+                    - list [ref=f90e285]:
+                      - listitem [ref=f90e286]:
+                        - paragraph [ref=f90e287]:
+                          - strong [ref=f90e288]: "Under $30:"
+                          - text: Duke Cannon
+                      - listitem [ref=f90e289]:
+                        - paragraph [ref=f90e290]:
+                          - strong [ref=f90e291]: "Best overall:"
+                          - text: Fulton & Roark
+                      - listitem [ref=f90e292]:
+                        - paragraph [ref=f90e293]:
+                          - strong [ref=f90e294]: "Most sophisticated:"
+                          - text: Malin+Goetz
+                    - paragraph [ref=f90e295]:
+                      - text: If you tell me your budget and whether you prefer
+                      - strong [ref=f90e296]: fresh, woody, sweet, or spicy
+                      - text: ", I can narrow it to one."
+                  - generic [ref=f90e297]:
+                    - group "Response actions":
+                      - button "Copy response"
+                      - button "Share"
+                      - button "Sources"
+            - generic [ref=f90e197]: ChatGPT is AI and can make mistakes.
+          - generic:
+            - button [ref=f90e298] [cursor=pointer]
+            - generic [ref=f90e138]:
+              - generic [ref=f90e141]:
+                - button "Add files and more" [ref=f90e144] [cursor=pointer]
+                - textbox "Chat with ChatGPT" [active] [ref=f90e147]:
+                  - paragraph [ref=f90e148]: Ask anything
+                - generic [ref=f90e150]:
+                  - button "Start dictation" [ref=f90e151] [cursor=pointer]
+                  - button "Start Voice" [ref=f90e307] [cursor=pointer]:
+                    - generic [ref=f90e311]: Voice
+              - button [disabled] [ref=f90e159]
+              - button [disabled] [ref=f90e160]
+  - alert [ref=f90e171]
+  - status [ref=f90e172]

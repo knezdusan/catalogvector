@@ -1,0 +1,150 @@
+- generic [ref=f68e1]:
+  - link "Skip to content" [ref=f68e2] [cursor=pointer]:
+    - /url: "#main"
+  - generic [ref=f68e6]:
+    - generic [ref=f68e8]:
+      - navigation "Sidebar":
+        - generic:
+          - generic:
+            - generic:
+              - button "Open sidebar"
+        - generic:
+          - generic:
+            - link "New chat":
+              - /url: /
+          - generic: Search chats
+          - generic:
+            - link "Images":
+              - /url: /images
+        - generic:
+          - generic:
+            - button "Open profile menu"
+      - generic [ref=f68e9]:
+        - heading "Chat history" [level=2] [ref=f68e10]
+        - navigation "Chat history" [ref=f68e12]:
+          - generic [ref=f68e15]:
+            - link "Home" [ref=f68e16] [cursor=pointer]:
+              - /url: /
+            - generic [ref=f68e19]:
+              - button "Search chats" [ref=f68e20] [cursor=pointer]
+              - button "Close sidebar" [expanded] [ref=f68e25]
+          - list [ref=f68e29]:
+            - listitem [ref=f68e30]:
+              - link "New chat Shift Command O" [ref=f68e159] [cursor=pointer]:
+                - /url: /
+                - generic [ref=f68e160]: New chat
+                - generic [ref=f68e167]:
+                  - generic "Shift" [ref=f68e168]: ⇧
+                  - generic "Command" [ref=f68e170]: ⌘
+                  - generic [ref=f68e172]: O
+            - listitem
+          - link "Images" [ref=f68e38] [cursor=pointer]:
+            - /url: /images
+          - generic [ref=f68e45]:
+            - link "Plugins" [ref=f68e46] [cursor=pointer]:
+              - /url: /plugins
+            - generic [ref=f68e53] [cursor=pointer]: Deep research
+          - generic [ref=f68e60]:
+            - link [ref=f68e61] [cursor=pointer]:
+              - /url: https://openai.com/chatgpt/pricing/
+            - generic [ref=f68e69] [cursor=pointer]: Settings
+            - generic [ref=f68e73] [cursor=pointer]: Help
+          - generic [ref=f68e83]:
+            - generic [ref=f68e84]:
+              - paragraph [ref=f68e85]: Get responses tailored to you
+              - paragraph [ref=f68e86]: Log in to get answers based on saved chats, plus create images and upload files.
+            - button "Log in" [ref=f68e88] [cursor=pointer]
+    - generic [ref=f68e92]:
+      - generic [ref=f68e93]:
+        - banner:
+          - button "Model selector" [ref=f68e95] [cursor=pointer]:
+            - generic [ref=f68e96]: ChatGPT
+          - generic [ref=f68e104]:
+            - button "Log in" [ref=f68e105] [cursor=pointer]
+            - button "Sign up for free" [ref=f68e107] [cursor=pointer]
+      - main [ref=f68e110]:
+        - generic [ref=f68e112]:
+          - generic [ref=f68e180]:
+            - generic [ref=f68e181]:
+              - generic [ref=f68e183]:
+                - heading "You said:" [level=4] [ref=f68e184]
+                - generic [ref=f68e186]:
+                  - generic [ref=f68e187]: Shop for a ceramic dinnerware set
+                  - generic [ref=f68e192]:
+                    - group "Your message actions":
+                      - button "Copy message"
+              - generic [ref=f68e195]:
+                - heading "ChatGPT said:" [level=4] [ref=f68e196]
+                - generic [ref=f68e198]:
+                  - generic [ref=f68e220]:
+                    - paragraph [ref=f68e221]: "Here are some ceramic dinnerware sets worth considering, depending on your style and budget:"
+                    - list [ref=f68e222]:
+                      - listitem [ref=f68e223]:
+                        - paragraph [ref=f68e224]:
+                          - generic [ref=f68e225] [cursor=pointer]: MONITO Ceramic Dinnerware 16-Piece Stoneware Set
+                          - text: — a good everyday option with a decorative reactive-glaze look; designed as a 16-piece service for four and marketed as chip/crack resistant.
+                          - link "Ubuy Serbia" [ref=f68e228] [cursor=pointer]:
+                            - /url: https://www.ubuy.rs/en/product/J34LYA6S4-monito-ceramic-dinnerware-sets-starry-16-pieces-blue-dinner-set-plates-pasta-bowls-soup-bowls-reactive-change-glaze-dish-sets-modern-stoneware?utm_source=chatgpt.com
+                      - listitem [ref=f68e234]:
+                        - paragraph [ref=f68e235]:
+                          - generic [ref=f68e236] [cursor=pointer]: LE TAUCI 16-Piece Stoneware Dinnerware Set
+                          - text: — a classic choice with plates, bowls, and mugs; dishwasher and microwave safe, with a simple rustic style.
+                          - link "Ubuy Serbia" [ref=f68e239] [cursor=pointer]:
+                            - /url: https://www.ubuy.rs/en/product/J4NY3T2SY-dinnerware-sets-16-piece-ceramic-plates-and-bowls-set-house-warming-wedding-gift-serve-for-4-10-dinner-plates-8-salad-dish-28-oz?utm_source=chatgpt.com
+                      - listitem [ref=f68e245]:
+                        - paragraph [ref=f68e246]:
+                          - generic [ref=f68e247] [cursor=pointer]: Kilne 16-Piece Ceramic Stoneware Dinnerware Set
+                          - text: — a more premium modern set with an organic handmade look; includes four dinner plates, salad plates, entrée bowls, and breakfast bowls.
+                          - link "Kilne" [ref=f68e250] [cursor=pointer]:
+                            - /url: https://us.kilne.com/products/the-dinnerware-set?variant=46327142187178&utm_source=chatgpt.com
+                      - listitem [ref=f68e256]:
+                        - paragraph [ref=f68e257]:
+                          - generic [ref=f68e258] [cursor=pointer]: Le Creuset Stoneware 16-Piece Dinnerware Set
+                          - text: — a higher-end option with a classic design and durable glazed stoneware construction.
+                          - link "Le Creuset" [ref=f68e261] [cursor=pointer]:
+                            - /url: https://www.lecreuset.ie/en_IE/p/stoneware-16-piece-dinnerware-set/79224004817081.html?utm_source=chatgpt.com
+                    - paragraph [ref=f68e267]: "Quick buying guide:"
+                    - list [ref=f68e268]:
+                      - listitem [ref=f68e269]:
+                        - paragraph [ref=f68e270]:
+                          - strong [ref=f68e271]: "For daily family use:"
+                          - text: choose a 16-piece stoneware set that is dishwasher/microwave safe.
+                      - listitem [ref=f68e272]:
+                        - paragraph [ref=f68e273]:
+                          - strong [ref=f68e274]: "For a modern table:"
+                          - text: look for matte finishes, organic shapes, or reactive glazes.
+                      - listitem [ref=f68e275]:
+                        - paragraph [ref=f68e276]:
+                          - strong [ref=f68e277]: "For durability:"
+                          - text: thicker stoneware usually handles everyday use better than lightweight ceramic.
+                      - listitem [ref=f68e278]:
+                        - paragraph [ref=f68e279]:
+                          - strong [ref=f68e280]: "For a timeless look:"
+                          - text: white, cream, grey, or natural tones are easiest to match.
+                    - paragraph [ref=f68e281]:
+                      - text: If you tell me your
+                      - strong [ref=f68e282]: budget, number of people (2/4/6+), and preferred style (minimal, rustic, colorful, luxury)
+                      - text: ", I can narrow it down."
+                  - generic [ref=f68e283]:
+                    - group "Response actions":
+                      - button "Copy response"
+                      - button "Share"
+                      - button "Sources"
+            - generic [ref=f68e204]: ChatGPT is AI and can make mistakes.
+          - generic:
+            - generic:
+              - generic:
+                - button
+            - generic [ref=f68e129]:
+              - generic [ref=f68e132]:
+                - button "Add files and more" [ref=f68e135] [cursor=pointer]
+                - textbox "Chat with ChatGPT" [active] [ref=f68e174]:
+                  - paragraph [ref=f68e175]: Ask anything
+                - generic [ref=f68e140]:
+                  - button "Start dictation" [ref=f68e141] [cursor=pointer]
+                  - button "Start Voice" [ref=f68e286] [cursor=pointer]:
+                    - generic [ref=f68e290]: Voice
+              - button [disabled] [ref=f68e149]
+              - button [disabled] [ref=f68e150]
+  - alert [ref=f68e157]
+  - status [ref=f68e158]

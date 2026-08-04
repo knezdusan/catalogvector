@@ -1,0 +1,143 @@
+- generic [ref=f75e1]:
+  - link "Skip to content" [ref=f75e2] [cursor=pointer]:
+    - /url: "#main"
+  - generic [ref=f75e6]:
+    - generic [ref=f75e8]:
+      - navigation "Sidebar":
+        - generic:
+          - generic:
+            - generic:
+              - button "Open sidebar"
+        - generic:
+          - generic:
+            - link "New chat":
+              - /url: /
+          - generic: Search chats
+          - generic:
+            - link "Images":
+              - /url: /images
+        - generic:
+          - generic:
+            - button "Open profile menu"
+      - generic [ref=f75e9]:
+        - heading "Chat history" [level=2] [ref=f75e10]
+        - navigation "Chat history" [ref=f75e12]:
+          - generic [ref=f75e15]:
+            - link "Home" [ref=f75e16] [cursor=pointer]:
+              - /url: /
+            - generic [ref=f75e19]:
+              - button "Search chats" [ref=f75e20] [cursor=pointer]
+              - button "Close sidebar" [expanded] [ref=f75e25]
+          - list [ref=f75e29]:
+            - listitem [ref=f75e30]:
+              - link "New chat Shift Command O" [ref=f75e31] [cursor=pointer]:
+                - /url: /
+                - generic [ref=f75e32]: New chat
+                - generic [ref=f75e40]:
+                  - generic "Shift" [ref=f75e41]: ⇧
+                  - generic "Command" [ref=f75e43]: ⌘
+                  - generic [ref=f75e45]: O
+            - listitem
+          - link "Images" [ref=f75e47] [cursor=pointer]:
+            - /url: /images
+          - generic [ref=f75e54]:
+            - link "Plugins" [ref=f75e55] [cursor=pointer]:
+              - /url: /plugins
+            - generic [ref=f75e62] [cursor=pointer]: Deep research
+          - generic [ref=f75e69]:
+            - link [ref=f75e70] [cursor=pointer]:
+              - /url: https://openai.com/chatgpt/pricing/
+            - generic [ref=f75e78] [cursor=pointer]: Settings
+            - generic [ref=f75e82] [cursor=pointer]: Help
+          - generic [ref=f75e92]:
+            - generic [ref=f75e93]:
+              - paragraph [ref=f75e94]: Get responses tailored to you
+              - paragraph [ref=f75e95]: Log in to get answers based on saved chats, plus create images and upload files.
+            - button "Log in" [ref=f75e97] [cursor=pointer]
+    - generic [ref=f75e101]:
+      - generic [ref=f75e102]:
+        - banner:
+          - button "Model selector" [ref=f75e104] [cursor=pointer]:
+            - generic [ref=f75e105]: ChatGPT
+          - generic [ref=f75e113]:
+            - button "Log in" [ref=f75e114] [cursor=pointer]
+            - button "Sign up for free" [ref=f75e116] [cursor=pointer]
+      - main [ref=f75e119]:
+        - generic [ref=f75e121]:
+          - generic [ref=f75e173]:
+            - generic [ref=f75e174]:
+              - generic [ref=f75e176]:
+                - heading "You said:" [level=4] [ref=f75e177]
+                - generic [ref=f75e179]:
+                  - generic [ref=f75e180]: Help me find a wool area rug 8x10
+                  - generic [ref=f75e185]:
+                    - group "Your message actions":
+                      - button "Copy message"
+              - generic [ref=f75e188]:
+                - heading "ChatGPT said:" [level=4] [ref=f75e189]
+                - generic [ref=f75e191]:
+                  - generic [ref=f75e213]:
+                    - paragraph [ref=f75e214]: "I found several good 8×10 wool rug options. Here are a few directions depending on your budget and style:"
+                    - paragraph [ref=f75e215]:
+                      - strong [ref=f75e216]: "Good picks to consider:"
+                    - list [ref=f75e217]:
+                      - listitem [ref=f75e218]:
+                        - paragraph [ref=f75e219]:
+                          - strong [ref=f75e220]: "Hand-knotted wool (investment piece):"
+                          - text: A Turkish or Persian-style hand-knotted rug is the most durable and develops character over time. One example I found is a taupe/beige Turkish weave 100% wool 8×10 rug.
+                          - link "Oriental Rug Of Houston" [ref=f75e223] [cursor=pointer]:
+                            - /url: https://orientalrugofhouston.com/products/taupe-hand-knotted-wool-persian-area-rug-orh8276?utm_source=chatgpt.com
+                      - listitem [ref=f75e229]:
+                        - paragraph [ref=f75e230]:
+                          - strong [ref=f75e231]: "Neutral modern look:"
+                          - text: Grey/ivory tufted wool rugs work well with contemporary, Scandinavian, and transitional rooms.
+                          - link "Gardner White" [ref=f75e234] [cursor=pointer]:
+                            - /url: https://www.gardner-white.com/product/140007-grey-ivory-tufted-wool-8x10-area-rug%3Fsrsltid%3DAfmBOoq9C-yvdUHh1SaABDhU_DYqcN4PD-TFha3v0sFVQNHcbsr6ZMtY?utm_source=chatgpt.com
+                      - listitem [ref=f75e240]:
+                        - paragraph [ref=f75e241]:
+                          - strong [ref=f75e242]: "Largest selection:"
+                          - generic [ref=f75e243] [cursor=pointer]: Rugs Direct
+                          - text: has a large 8×10 wool category with thousands of styles ranging from traditional Persian-inspired designs to modern solids and geometrics.
+                          - link "Rugs Direct" [ref=f75e246] [cursor=pointer]:
+                            - /url: https://www.rugs-direct.com/Store/nav/Category-Area-Rugs-StandardSize-8x10-Material-Wool%3Fsrsltid%3DAfmBOoqJYQJykeTg45rOC_BWHYXTGvNofKDIREXxN0fp7szux4MQUSB7?utm_source=chatgpt.com
+                    - paragraph [ref=f75e252]: "Typical price ranges:"
+                    - list [ref=f75e253]:
+                      - listitem [ref=f75e254]:
+                        - paragraph [ref=f75e255]:
+                          - strong [ref=f75e256]: "Budget wool:"
+                          - text: ~$300–$700 (often machine-made or lower pile)
+                      - listitem [ref=f75e257]:
+                        - paragraph [ref=f75e258]:
+                          - strong [ref=f75e259]: "Mid-range:"
+                          - text: ~$700–$1,500 (good everyday wool rugs)
+                      - listitem [ref=f75e260]:
+                        - paragraph [ref=f75e261]:
+                          - strong [ref=f75e262]: "Hand-knotted:"
+                          - text: ~$1,000–$3,000+ (heirloom quality)
+                    - paragraph [ref=f75e263]:
+                      - text: If you tell me your
+                      - strong [ref=f75e264]: budget, color preference, and room style
+                      - text: (modern, traditional, farmhouse, Persian, neutral, etc.), I can narrow it down to a few specific rugs.
+                  - generic [ref=f75e265]:
+                    - group "Response actions":
+                      - button "Copy response"
+                      - button "Share"
+                      - button "Sources"
+            - generic [ref=f75e197]: ChatGPT is AI and can make mistakes.
+          - generic:
+            - generic:
+              - generic:
+                - button
+            - generic [ref=f75e138]:
+              - generic [ref=f75e141]:
+                - button "Add files and more" [ref=f75e144] [cursor=pointer]
+                - textbox "Chat with ChatGPT" [active] [ref=f75e147]:
+                  - paragraph [ref=f75e148]: Ask anything
+                - generic [ref=f75e150]:
+                  - button "Start dictation" [ref=f75e151] [cursor=pointer]
+                  - button "Start Voice" [ref=f75e268] [cursor=pointer]:
+                    - generic [ref=f75e272]: Voice
+              - button [disabled] [ref=f75e159]
+              - button [disabled] [ref=f75e160]
+  - alert [ref=f75e171]
+  - status [ref=f75e172]

@@ -1,0 +1,199 @@
+- generic [ref=f96e1]:
+  - link "Skip to content" [ref=f96e2] [cursor=pointer]:
+    - /url: "#main"
+  - generic [ref=f96e6]:
+    - generic [ref=f96e8]:
+      - navigation "Sidebar":
+        - generic:
+          - generic:
+            - generic:
+              - button "Open sidebar"
+        - generic:
+          - generic:
+            - link "New chat":
+              - /url: /
+          - generic: Search chats
+          - generic:
+            - link "Images":
+              - /url: /images
+        - generic:
+          - generic:
+            - button "Open profile menu"
+      - generic [ref=f96e9]:
+        - heading "Chat history" [level=2] [ref=f96e10]
+        - navigation "Chat history" [ref=f96e12]:
+          - generic [ref=f96e15]:
+            - link "Home" [ref=f96e16] [cursor=pointer]:
+              - /url: /
+            - generic [ref=f96e19]:
+              - button "Search chats" [ref=f96e20] [cursor=pointer]
+              - button "Close sidebar" [expanded] [ref=f96e25]
+          - list [ref=f96e29]:
+            - listitem [ref=f96e30]:
+              - link "New chat Shift Command O" [ref=f96e31] [cursor=pointer]:
+                - /url: /
+                - generic [ref=f96e32]: New chat
+                - generic [ref=f96e40]:
+                  - generic "Shift" [ref=f96e41]: ⇧
+                  - generic "Command" [ref=f96e43]: ⌘
+                  - generic [ref=f96e45]: O
+            - listitem
+          - link "Images" [ref=f96e47] [cursor=pointer]:
+            - /url: /images
+          - generic [ref=f96e54]:
+            - link "Plugins" [ref=f96e55] [cursor=pointer]:
+              - /url: /plugins
+            - generic [ref=f96e62] [cursor=pointer]: Deep research
+          - generic [ref=f96e69]:
+            - link [ref=f96e70] [cursor=pointer]:
+              - /url: https://openai.com/chatgpt/pricing/
+            - generic [ref=f96e78] [cursor=pointer]: Settings
+            - generic [ref=f96e82] [cursor=pointer]: Help
+          - generic [ref=f96e92]:
+            - generic [ref=f96e93]:
+              - paragraph [ref=f96e94]: Get responses tailored to you
+              - paragraph [ref=f96e95]: Log in to get answers based on saved chats, plus create images and upload files.
+            - button "Log in" [ref=f96e97] [cursor=pointer]
+    - generic [ref=f96e101]:
+      - generic [ref=f96e102]:
+        - banner:
+          - button "Model selector" [ref=f96e104] [cursor=pointer]:
+            - generic [ref=f96e105]: ChatGPT
+          - generic [ref=f96e113]:
+            - button "Log in" [ref=f96e114] [cursor=pointer]
+            - button "Sign up for free" [ref=f96e116] [cursor=pointer]
+      - main [ref=f96e119]:
+        - generic [ref=f96e121]:
+          - generic [ref=f96e173]:
+            - generic [ref=f96e174]:
+              - generic [ref=f96e176]:
+                - heading "You said:" [level=4] [ref=f96e177]
+                - generic [ref=f96e179]:
+                  - generic [ref=f96e180]: Shop for a down sleeping bag 20 degree
+                  - generic [ref=f96e185]:
+                    - group "Your message actions":
+                      - button "Copy message"
+              - generic [ref=f96e188]:
+                - heading "ChatGPT said:" [level=4] [ref=f96e189]
+                - generic [ref=f96e191]:
+                  - generic [ref=f96e213]:
+                    - paragraph [ref=f96e214]:
+                      - text: Here are some good
+                      - strong [ref=f96e215]: 20°F down sleeping bag
+                      - text: options, depending on your budget and priorities. A 20°F bag is a popular 3-season choice for backpacking and camping.
+                      - link "REI +1" [ref=f96e218] [cursor=pointer]:
+                        - /url: https://www.rei.com/product/165266/therm-a-rest-questar-20-down-sleeping-bag?redirect-pup=false&utm_source=chatgpt.com
+                        - generic [ref=f96e220]:
+                          - generic [ref=f96e221]: REI
+                          - generic [ref=f96e224]: "+1"
+                    - heading "Best value" [level=3] [ref=f96e225]
+                    - paragraph [ref=f96e226]:
+                      - strong [ref=f96e227]: Kelty Cosmic Down 20
+                    - list [ref=f96e228]:
+                      - listitem [ref=f96e229]:
+                        - paragraph [ref=f96e230]:
+                          - strong [ref=f96e231]: "Temp rating:"
+                          - text: 20°F / -7°C
+                      - listitem [ref=f96e232]:
+                        - paragraph [ref=f96e233]:
+                          - strong [ref=f96e234]: "Fill:"
+                          - text: 550-fill down
+                      - listitem [ref=f96e235]:
+                        - paragraph [ref=f96e236]:
+                          - strong [ref=f96e237]: "Weight:"
+                          - text: about 2 lb 7 oz (regular)
+                      - listitem [ref=f96e238]:
+                        - paragraph [ref=f96e239]:
+                          - strong [ref=f96e240]: "Best for:"
+                          - text: affordable backpacking and general camping
+                      - listitem [ref=f96e241]:
+                        - paragraph [ref=f96e242]:
+                          - strong [ref=f96e243]: "Why buy:"
+                          - text: excellent warmth-per-dollar, roomy semi-rectangular fit, good features for the price.
+                          - link "Kelty" [ref=f96e246] [cursor=pointer]:
+                            - /url: https://kelty.com/products/cosmic-down-20?variant=44267913543856&utm_source=chatgpt.com
+                    - heading "Lighter backpacking option" [level=3] [ref=f96e252]
+                    - paragraph [ref=f96e253]:
+                      - strong [ref=f96e254]: Therm-a-Rest Questar 20
+                    - list [ref=f96e255]:
+                      - listitem [ref=f96e256]:
+                        - paragraph [ref=f96e257]:
+                          - strong [ref=f96e258]: "Temp rating:"
+                          - text: 20°F
+                      - listitem [ref=f96e259]:
+                        - paragraph [ref=f96e260]:
+                          - strong [ref=f96e261]: "Fill:"
+                          - text: 650-fill hydrophobic down
+                      - listitem [ref=f96e262]:
+                        - paragraph [ref=f96e263]:
+                          - strong [ref=f96e264]: "Weight:"
+                          - text: about 2 lb 5 oz
+                      - listitem [ref=f96e265]:
+                        - paragraph [ref=f96e266]:
+                          - strong [ref=f96e267]: "Best for:"
+                          - text: hikers who want a lighter, more technical bag
+                      - listitem [ref=f96e268]:
+                        - paragraph [ref=f96e269]:
+                          - strong [ref=f96e270]: "Why buy:"
+                          - text: water-resistant down and backpacking-focused design.
+                          - link "REI" [ref=f96e273] [cursor=pointer]:
+                            - /url: https://www.rei.com/product/165266/therm-a-rest-questar-20-down-sleeping-bag?redirect-pup=false&utm_source=chatgpt.com
+                    - heading "If you want more comfort/room" [level=3] [ref=f96e279]
+                    - paragraph [ref=f96e280]:
+                      - text: Consider a wider “spoon” style bag such as NEMO’s options; they are popular with side sleepers who dislike tight mummy bags.
+                      - link "Reddit" [ref=f96e283] [cursor=pointer]:
+                        - /url: https://www.reddit.com/r/REI/comments/1r39jta/i_have_about_200_is_rewards_coming_up_looking_for/?utm_source=chatgpt.com
+                    - paragraph [ref=f96e289]:
+                      - strong [ref=f96e290]: "My shortlist:"
+                    - list [ref=f96e291]:
+                      - listitem [ref=f96e292]:
+                        - paragraph [ref=f96e293]:
+                          - strong [ref=f96e294]: Kelty Cosmic Down 20
+                          - text: — best budget pick
+                      - listitem [ref=f96e295]:
+                        - paragraph [ref=f96e296]:
+                          - strong [ref=f96e297]: Therm-a-Rest Questar 20
+                          - text: — best lightweight pick
+                      - listitem [ref=f96e298]:
+                        - paragraph [ref=f96e299]:
+                          - strong [ref=f96e300]: NEMO 20°F models
+                          - text: — best comfort pick
+                    - paragraph [ref=f96e301]: "A few things that will change the best choice:"
+                    - list [ref=f96e302]:
+                      - listitem [ref=f96e303]:
+                        - paragraph [ref=f96e304]:
+                          - strong [ref=f96e305]: "Budget:"
+                          - text: under $200, $200–350, or higher?
+                      - listitem [ref=f96e306]:
+                        - paragraph [ref=f96e307]:
+                          - strong [ref=f96e308]: "Use:"
+                          - text: backpacking or car camping?
+                      - listitem [ref=f96e309]:
+                        - paragraph [ref=f96e310]:
+                          - strong [ref=f96e311]: "Your height/size:"
+                          - text: regular vs long/wide fit
+                      - listitem [ref=f96e312]:
+                        - paragraph [ref=f96e313]:
+                          - strong [ref=f96e314]: Do you sleep cold or warm?
+                    - paragraph [ref=f96e315]: I can narrow it down to the best one for you.
+                  - generic [ref=f96e316]:
+                    - group "Response actions":
+                      - button "Copy response"
+                      - button "Share"
+                      - button "Sources"
+            - generic [ref=f96e197]: ChatGPT is AI and can make mistakes.
+          - generic:
+            - button [ref=f96e317] [cursor=pointer]
+            - generic [ref=f96e138]:
+              - generic [ref=f96e141]:
+                - button "Add files and more" [ref=f96e144] [cursor=pointer]
+                - textbox "Chat with ChatGPT" [active] [ref=f96e147]:
+                  - paragraph [ref=f96e148]: Ask anything
+                - generic [ref=f96e150]:
+                  - button "Start dictation" [ref=f96e151] [cursor=pointer]
+                  - button "Start Voice" [ref=f96e326] [cursor=pointer]:
+                    - generic [ref=f96e330]: Voice
+              - button [disabled] [ref=f96e159]
+              - button [disabled] [ref=f96e160]
+  - alert [ref=f96e171]
+  - status [ref=f96e172]

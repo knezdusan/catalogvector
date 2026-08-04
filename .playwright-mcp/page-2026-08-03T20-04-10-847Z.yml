@@ -1,0 +1,127 @@
+- generic:
+  - link [ref=f27e177] [cursor=pointer]:
+    - /url: "#main"
+    - text: Skip to content
+  - generic:
+    - generic:
+      - generic:
+        - generic:
+          - generic:
+            - generic:
+              - navigation:
+                - generic:
+                  - generic:
+                    - generic:
+                      - button
+                - generic:
+                  - generic:
+                    - link:
+                      - /url: /
+                      - generic: New chat
+                  - generic: Search chats
+                  - generic:
+                    - link:
+                      - /url: /images
+                      - generic: Images
+                - generic:
+                  - generic:
+                    - button
+              - generic:
+                - heading [level=2]: Chat history
+                - generic:
+                  - navigation:
+                    - generic:
+                      - generic:
+                        - generic:
+                          - link:
+                            - /url: /
+                          - generic:
+                            - button
+                            - button [expanded]
+                    - generic:
+                      - list:
+                        - listitem:
+                          - link:
+                            - /url: /
+                            - generic: New chat
+                            - generic:
+                              - generic:
+                                - generic: ⇧
+                                - generic: ⌘
+                                - generic: O
+                    - link:
+                      - /url: /images
+                      - generic: Images
+                    - generic:
+                      - link:
+                        - /url: /plugins
+                        - generic: Plugins
+                      - generic: Deep research
+                    - generic:
+                      - link:
+                        - /url: https://openai.com/chatgpt/pricing/
+                        - generic: See plans and pricing
+                      - generic: Settings
+                      - generic: Help
+                    - generic:
+                      - generic:
+                        - paragraph: Get responses tailored to you
+                        - paragraph: Log in to get answers based on saved chats, plus create images and upload files.
+                      - button [ref=f27e178] [cursor=pointer]:
+                        - generic [ref=f27e98]: Log in
+          - generic:
+            - generic:
+              - generic:
+                - generic:
+                  - banner:
+                    - button [ref=f27e179] [cursor=pointer]:
+                      - generic [ref=f27e105]: ChatGPT
+                    - generic [ref=f27e113]:
+                      - button [ref=f27e180] [cursor=pointer]:
+                        - generic [ref=f27e115]: Log in
+                      - button [ref=f27e181] [cursor=pointer]:
+                        - generic [ref=f27e117]: Sign up for free
+                - generic:
+                  - main:
+                    - generic:
+                      - generic:
+                        - generic:
+                          - generic:
+                            - generic:
+                              - generic:
+                                - generic:
+                                  - heading [level=4]: "You said:"
+                                  - generic:
+                                    - generic:
+                                      - generic: Help me find Paragon PBP370 brake pads
+                                      - generic:
+                                        - group:
+                                          - button
+                              - generic:
+                                - generic:
+                                  - heading [level=4]: "ChatGPT said:"
+                                  - generic: ●
+                            - generic: ChatGPT is AI and can make mistakes.
+                        - generic:
+                          - button
+                          - generic [ref=f27e138]:
+                            - generic [ref=f27e141]:
+                              - button [ref=f27e185] [cursor=pointer]
+                              - textbox [ref=f27e186]:
+                                - paragraph [ref=f27e148]: Ask anything
+                              - generic [ref=f27e150]:
+                                - button [ref=f27e187] [cursor=pointer]
+                                - button [ref=f27e188] [cursor=pointer]
+                            - button [ref=f27e159]
+                            - button [ref=f27e160]
+  - alert
+  - status: Thinking
+  - dialog [ref=f27e193]:
+    - generic [ref=f27e195]:
+      - paragraph [ref=f27e196]: Thanks for trying ChatGPT
+      - paragraph [ref=f27e197]: Log in or sign up to get smarter responses, upload files and images, and more.
+      - generic [ref=f27e198]:
+        - button "Log in" [active] [ref=f27e199] [cursor=pointer]
+        - button "Sign up for free" [ref=f27e201] [cursor=pointer]
+      - link "Stay logged out" [ref=f27e203] [cursor=pointer]:
+        - /url: "#"

@@ -1,0 +1,112 @@
+- main [ref=f62e4]:
+  - button "Open sidebar" [ref=f62e15] [cursor=pointer]:
+    - generic [ref=f62e16]: side_nav_expand
+  - generic [ref=f62e24]:
+    - generic: play_arrow
+    - link "About Gemini Opens in a new window" [ref=f62e25] [cursor=pointer]:
+      - /url: https://gemini.google/about/?utm_source=gemini&utm_medium=web&utm_campaign=gemini_zero_state_link_to_marketing_microsite
+      - text: About Gemini
+      - generic [ref=f62e26]: Opens in a new window
+    - link "Get Gemini App Opens in a new window" [ref=f62e27] [cursor=pointer]:
+      - /url: https://gemini.google.com/app/download
+      - text: Get Gemini App
+      - generic [ref=f62e28]: Opens in a new window
+    - link "Subscriptions Opens in a new window" [ref=f62e29] [cursor=pointer]:
+      - /url: https://one.google.com/ai
+      - text: Subscriptions
+      - generic [ref=f62e30]: Opens in a new window
+    - link "For Business Opens in a new window" [ref=f62e31] [cursor=pointer]:
+      - /url: https://business.gemini.google/?utm_source=cloud_sfdc&utm_medium=et&utm_campaign=FY26-Q2-global-gemini-app&utm_content=-&utm_term=-
+      - text: For Business
+      - generic [ref=f62e32]: Opens in a new window
+    - button "Sign in" [ref=f62e35]
+  - generic [ref=f62e6]:
+    - navigation "Side Navigation" [ref=f62e41]:
+      - generic [ref=f62e44]:
+        - generic [ref=f62e45]:
+          - navigation "Main actions menu" [ref=f62e46]:
+            - link "New chat" [ref=f62e148] [cursor=pointer]:
+              - /url: /app
+              - img [ref=f62e150]: gemini_chat
+          - navigation "Additional actions menu" [ref=f62e50]:
+            - link "Images" [ref=f62e54] [cursor=pointer]:
+              - /url: /images
+              - img [ref=f62e56]: image_create
+        - group [ref=f62e58]:
+          - generic [ref=f62e60]:
+            - button "Sign in" [ref=f62e62] [cursor=pointer]:
+              - img [ref=f62e64]: account_circle
+            - button "Settings" [ref=f62e69] [cursor=pointer]:
+              - img [ref=f62e71]: settings
+    - generic [ref=f62e74]:
+      - generic [ref=f62e75]:
+        - heading "Conversation with Gemini" [level=1] [ref=f62e76]
+        - generic [ref=f62e152]:
+          - generic [ref=f62e156]:
+            - heading "You said Shop for coilovers for a 2017 Honda Civic" [level=2] [ref=f62e160]:
+              - generic [ref=f62e161]: You said
+              - paragraph [ref=f62e162]: Shop for coilovers for a 2017 Honda Civic
+            - generic [ref=f62e163]:
+              - button "Copy prompt" [ref=f62e165] [cursor=pointer]:
+                - img [ref=f62e167]: copy
+              - generic [ref=f62e169]:
+                - button "Edit" [disabled]:
+                  - generic:
+                    - img: edit
+          - generic [ref=f62e176]:
+            - heading "Gemini said" [level=2] [ref=f62e177]
+            - generic [ref=f62e181]:
+              - paragraph [ref=f62e182]: "When shopping for coilovers for a 2017 Honda Civic (10th Generation: FC/FK chassis—Sedan, Coupe, or Hatchback), the right choice depends heavily on your budget, whether your car is a Base model (LX, EX, Touring), an Si, or a Type R, and whether you prioritize daily comfort or track performance."
+              - paragraph [ref=f62e183]: "Popular and reliable coilover options for the 2017 Civic are broken down below by category:"
+              - heading "1. Entry-Level & Budget-Friendly (Great for Daily Driving & Stance)" [level=3] [ref=f62e184]
+              - list [ref=f62e185]:
+                - listitem [ref=f62e186]:
+                  - paragraph [ref=f62e187]: TEIN Flex Z / Street Advance Z
+                  - list [ref=f62e188]:
+                    - listitem [ref=f62e189]:
+                      - paragraph [ref=f62e190]: "Approx. Price: $800 – $1,100"
+                    - listitem [ref=f62e191]:
+                      - paragraph [ref=f62e192]: "Features: Twin-tube design focused heavily on smooth street comfort, 16-level damping adjustment, and full-length ride height adjustment."
+                    - listitem [ref=f62e193]:
+                      - paragraph [ref=f62e194]: "Why buy: TEIN is legendary for making some of the most comfortable riding coilovers that won't beat you up on rough commutes. The Flex Z comes pre-assembled with upper mounts."
+                - listitem [ref=f62e195]:
+                  - paragraph [ref=f62e196]: TruHart StreetPlus
+                  - list [ref=f62e197]:
+                    - listitem [ref=f62e198]:
+                      - paragraph [ref=f62e199]: "Approx. Price: ~$780"
+                    - listitem [ref=f62e200]:
+                      - paragraph [ref=f62e201]: "Features: Independent ride height adjustment, anti-corrosion coating, fixed valving."
+                    - listitem [ref=f62e202]:
+                      - paragraph [ref=f62e203]: "Why buy: One of the most affordable entry points if you just want to eliminate wheel gap and get a clean drop without sacrificing baseline ride quality. (Note: If your Civic Si came with factory Electronic Damper Control/ADS, TruHart also offers specific module-compatible versions)."
+                - listitem [ref=f62e204]:
+                  - paragraph [ref=f62e205]: Megan Racing EZ Street Series
+                  - list [ref=f62e206]:
+                    - listitem [ref=f62e207]:
+                      - paragraph [ref=f62e208]: "Approx. Price: $900 – $1,000"
+                    - listitem [ref=f62e209]:
+                      - paragraph [ref=f62e210]: "Features: 15-way damping adjustment, reuses factory top mounts (which helps keep cabin noise down)."
+                    - listitem [ref=f62e211]:
+                      - paragraph [ref=f62e212]: "Why buy: A step up for budget-conscious builders who want adjustable stiffness for occasional spirited driving."
+              - heading "2. Mid-Tier Performance (Best All-Around Street & Autocross)" [level=3] [ref=f62e213]
+              - list [ref=f62e214]:
+                - listitem [ref=f62e215]:
+                  - paragraph [ref=f62e216]: BC Racing BR Series
+      - generic [ref=f62e93]:
+        - group [ref=f62e94]:
+          - generic [ref=f62e97]:
+            - textbox "Enter a prompt for Gemini" [active] [ref=f62e103]:
+              - text: Ask Gemini
+              - paragraph [ref=f62e217]
+            - button "Upload & tools" [ref=f62e110] [cursor=pointer]:
+              - img [ref=f62e112]: plus
+            - generic [ref=f62e114]:
+              - group [ref=f62e117]:
+                - button "Open mode picker, currently Flash-Lite" [ref=f62e118]:
+                  - generic [ref=f62e120]:
+                    - generic [ref=f62e121]: Flash-Lite
+                    - img [ref=f62e123]: keyboard_arrow_down
+              - generic [ref=f62e126]:
+                - text: mic
+                - button "Stop response" [ref=f62e218] [cursor=pointer]:
+                  - img [ref=f62e146]: stop
+        - paragraph [ref=f62e219]: Gemini is AI and can make mistakes.
