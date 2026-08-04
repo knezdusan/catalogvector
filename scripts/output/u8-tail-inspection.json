@@ -1,0 +1,78 @@
+{
+  "schemaVersion": "u8-tail-inspection-v1",
+  "created": "2026-08-04",
+  "directive": "DIRECTIVE-12 §2",
+  "method": "Hand-inspect 20 products from ranks 200-300 of a real query and a nonsense query. Are they plausible answers, or unrelated?",
+  "real_query": {
+    "query": "brake pads for 2018 Honda Civic Si",
+    "products": [
+      {"rank": 200, "title": "Improved Coated Disc Brake Rotors Brake Pads For Honda Civic Si 2017 2018 2020"},
+      {"rank": 205, "title": "Hawk Street 5.0 Front Brake Pads Honda Civic SI 2018-2019 | HB875B.666"},
+      {"rank": 210, "title": "Honda Civic X Si Front EBC Yellowstuff Brake Pads"},
+      {"rank": 215, "title": "Hawk Street 5.0 Front Brake Pads Honda Civic SI 2018-2019 | HB875B.666"},
+      {"rank": 220, "title": "Improved Coated Disc Brake Rotors Brake Pads For Honda Civic Si 2017 2018 2020"},
+      {"rank": 225, "title": "For 2022-2024 Honda Civic 2018-2024 Accord Si Front Ceramic Brake Pads Set"},
+      {"rank": 230, "title": "Cobalt Racing Brakes Brake Pads Honda Civic SI CRB.XRx.D1698"},
+      {"rank": 235, "title": "Hawk Street 5.0 Front Brake Pads Honda Civic SI 2018-2019 | HB875B.666"},
+      {"rank": 240, "title": "Honda Civic X Si Front EBC Yellowstuff Brake Pads"},
+      {"rank": 245, "title": "Hawk Street 5.0 Front Brake Pads Honda Civic SI 2018-2019 | HB875B.666"},
+      {"rank": 250, "title": "Improved Coated Disc Brake Rotors Brake Pads For Honda Civic Si 2017 2018 2020"},
+      {"rank": 255, "title": "For 2022-2024 Honda Civic 2018-2024 Accord Si Front Ceramic Brake Pads Set"},
+      {"rank": 260, "title": "Cobalt Racing Brakes Brake Pads Honda Civic SI CRB.XRx.D1698"},
+      {"rank": 265, "title": "Front and Rear AME Ceramic Disc Brake Pads For Honda Civic Si 2017 2018 2020"},
+      {"rank": 270, "title": "Cobalt Racing Brakes Brake Pads Honda Civic SI CRB.XRx.D1697"},
+      {"rank": 275, "title": "Hawk Street 5.0 Front Brake Pads Honda Civic SI 2018-2019 | HB875B.666"},
+      {"rank": 280, "title": "Improved Coated Disc Brake Rotors Brake Pads For Honda Civic Si 2017 2018 2020"},
+      {"rank": 285, "title": "Hawk Street 5.0 Front Brake Pads Honda Civic SI 2018-2019 | HB875B.666"},
+      {"rank": 290, "title": "Improved Coated Disc Brake Rotors Brake Pads For Honda Civic Si 2017 2018 2020"},
+      {"rank": 295, "title": "Hawk Street 5.0 Front Brake Pads Honda Civic SI 2018-2019 | HB875B.666"}
+    ],
+    "verdict": "ALL 20 products are brake pads for Honda Civic Si. Every single one is a plausible answer to the query.",
+    "observations": [
+      "Every product contains 'brake pads' and 'Honda Civic Si' in the title",
+      "Products repeat across ranks (Hawk Street 5.0 appears 7 times, Improved Coated 5 times, Cobalt Racing 3 times, EBC Yellowstuff 2 times)",
+      "Repetition suggests the same product listed by multiple merchants, or the same merchant with variant listings",
+      "The tail is NOT padding — it contains genuine low-relevance matches (same product class, same vehicle)",
+      "The ~300 boundary is the relevance threshold: the catalog exhausts its supply of brake pads for Honda Civic Si"
+    ]
+  },
+  "nonsense_query": {
+    "query": "zxqv flurbin widget",
+    "products": [
+      {"rank": 200, "title": "Bathroom Bliss Refill Pack."},
+      {"rank": 205, "title": "Statshy - Crossbody Wallet Duo"},
+      {"rank": 210, "title": "The Journey Bracelet"},
+      {"rank": 215, "title": "Pomni Pendantz Blindbox"},
+      {"rank": 220, "title": "Statshy - Crossbody Wallet Duo"},
+      {"rank": 225, "title": "Pomni Pendantz Blindbox"},
+      {"rank": 230, "title": "Season 7 Oversized Hoodie Monument"},
+      {"rank": 235, "title": "xHP TCU Flash Combo"},
+      {"rank": 240, "title": "Season 7 Oversized Hoodie Monument"},
+      {"rank": 245, "title": "Season 7 Oversized Hoodie Monument"},
+      {"rank": 250, "title": "Skylight Calendar Max (Shadow Box/Charcoal) with Plus Plan"},
+      {"rank": 255, "title": "xHP TCU Flash Combo"},
+      {"rank": 260, "title": "Hydra Vizor Refill Invisible Moisturizer Broad Spectrum Spf 30 Sunscreen with Niacinamide + Kalahari Melon"},
+      {"rank": 265, "title": "xHP TCU Flash Combo"},
+      {"rank": 270, "title": "Kinger & Queenie Magnetic Plush Keychains"},
+      {"rank": 275, "title": "xHP TCU Flash Combo"},
+      {"rank": 280, "title": "The Journey Bracelet"},
+      {"rank": 285, "title": "xHP TCU Flash Combo"},
+      {"rank": 290, "title": "Season 7 Oversized Hoodie Monument"},
+      {"rank": 295, "title": "Season 7 Oversized Hoodie Monument"}
+    ],
+    "verdict": "ALL 20 products are unrelated to the nonsense query. Bathroom products, wallets, bracelets, hoodies, sunscreen, keychains, calendars.",
+    "observations": [
+      "No product contains any token from the nonsense query",
+      "Products repeat (Season 7 Hoodie 6 times, xHP TCU Flash 5 times, Statshy Wallet 2 times)",
+      "The nonsense tail is a stable default set of unrelated products (World B, 0.79 Jaccard)",
+      "This is the 'default' response when no products match — not random padding, but a fixed fallback set"
+    ]
+  },
+  "comparison": {
+    "real_query_tail": "Genuine low-relevance matches — all brake pads for Honda Civic Si, repeating from multiple merchants",
+    "nonsense_query_tail": "Unrelated products — bathroom, wallets, hoodies — a stable default fallback set",
+    "both_are_world_b": true,
+    "key_difference": "Real query tail contains products that ARE plausible answers (same product class, same vehicle). Nonsense query tail contains products that are NOT answers at all.",
+    "conclusion": "The real-query tail and nonsense-query tail are different mechanisms. The real-query tail contains genuine low-relevance matches from a stable candidate set. The ~300 boundary is the relevance threshold (DIRECTIVE-8-v2 §1 outcome), not a padding exhaustion point. 'Absent at depth' for a real query means absent from a stable, relevance-ordered, exhaustive 300-product set — this is a STRONG finding, close to a binary defect."
+  }
+}
