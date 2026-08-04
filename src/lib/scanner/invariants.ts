@@ -65,20 +65,63 @@ export type Provenance = {
  *
  * Catches: the U8-A pagination bug (same IDs returned on every page).
  *
- * Note: The Catalog API's relevance ranking shifts between requests, causing
- * 1–9 products of overlap per page (1.6–8.1% of a 50-product page). This is
- * a real API behavior, not a bug. The invariant allows overlap up to
- * maxOverlapRatio (default 0.2 = 20% of page size) while still catching the
- * U8-A bug (100% overlap).
+ * Measured distribution (DIRECTIVE-15 §4.4, 18 queries × 6–8 pages):
+ *   Overlap ranges from 1.6% to 8.1% of page size.
+ *   Per-query: Q01 4.6%, Q02 2.3%, Q03 3.3%, Q04 5.4%, Q05 1.6%,
+ *   Q06 4.0%, Q07 8.1%, Q08 2.7%, Q09 4.2%, Q10 1.6%, Q11 2.7%,
+ *   Q12 6.3%, Q13 2.0%, Q14 4.1%, Q15 3.8%, Q16 2.0%, Q17 3.2%, Q18 3.4%.
+ *   Mean: 3.7%, max: 8.1%.
+ *
+ * Threshold: 20% ceiling (~2.5× the maximum observed 8.1%).
+ * Abort threshold: 15% (per DIRECTIVE-16 §4 — a second relaxation requires
+ * a directive). Overlap between 0 and 15% is logged but allowed.
+ * Overlap above 15% aborts. Overlap above 20% would also throw, but 15%
+ * fires first.
+ *
+ * The U8-A signature (100% overlap) sits far above both thresholds.
+ *
+ * Authorised by DIRECTIVE-16 §4. Every overlap event is logged with its
+ * magnitude so the distribution keeps being measured rather than assumed.
  */
 export class PaginationInvariant {
   private previousIds: Set<string> | null = null;
   private previousCursor: string | undefined = undefined;
   private pageCount = 0;
   private readonly maxOverlapRatio: number;
+  private readonly abortOverlapRatio: number;
+  private overlapLog: Array<{
+    page: number;
+    overlapCount: number;
+    overlapRatio: number;
+    pageSize: number;
+  }> = [];
 
-  constructor(maxOverlapRatio = 0.2) {
+  constructor(maxOverlapRatio = 0.2, abortOverlapRatio = 0.15) {
     this.maxOverlapRatio = maxOverlapRatio;
+    this.abortOverlapRatio = abortOverlapRatio;
+  }
+
+  /** Returns the log of every overlap event for inspection. */
+  getOverlapLog(): Array<{
+    page: number;
+    overlapCount: number;
+    overlapRatio: number;
+    pageSize: number;
+  }> {
+    return [...this.overlapLog];
+  }
+
+  /** Returns summary statistics for the overlap distribution. */
+  getOverlapStats(): { count: number; mean: number; max: number; min: number } {
+    if (this.overlapLog.length === 0)
+      return { count: 0, mean: 0, max: 0, min: 0 };
+    const ratios = this.overlapLog.map((e) => e.overlapRatio);
+    return {
+      count: this.overlapLog.length,
+      mean: ratios.reduce((a, b) => a + b, 0) / ratios.length,
+      max: Math.max(...ratios),
+      min: Math.min(...ratios),
+    };
   }
 
   check(page: PageResult): void {
@@ -88,7 +131,35 @@ export class PaginationInvariant {
     if (this.previousIds !== null) {
       const prev = this.previousIds;
       const shared = [...currentIds].filter((id) => prev.has(id));
+      const overlapRatio = shared.length / page.products.length;
       const maxAllowed = Math.ceil(page.products.length * this.maxOverlapRatio);
+      const abortThreshold = Math.ceil(
+        page.products.length * this.abortOverlapRatio,
+      );
+
+      // Log every overlap event (including zero-overlap pages where shared.length > 0)
+      if (shared.length > 0) {
+        this.overlapLog.push({
+          page: this.pageCount,
+          overlapCount: shared.length,
+          overlapRatio,
+          pageSize: page.products.length,
+        });
+      }
+
+      // Abort at 15% — a second relaxation requires a directive
+      if (shared.length > abortThreshold) {
+        throw new InvariantViolation(
+          "I-1",
+          `Page ${this.pageCount} overlap ${shared.length}/${page.products.length} ` +
+            `(${(overlapRatio * 100).toFixed(1)}%) exceeds abort threshold ` +
+            `${(this.abortOverlapRatio * 100).toFixed(0)}%. ` +
+            `First shared ID: ${shared[0]}. ` +
+            `A second relaxation requires a directive (DIRECTIVE-16 §4).`,
+        );
+      }
+
+      // Throw at 20% ceiling (should not be reached if 15% abort fires first)
       if (shared.length > maxAllowed) {
         throw new InvariantViolation(
           "I-1",

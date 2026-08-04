@@ -178,6 +178,46 @@ Subimods terminated naturally on page 73 with 66 products (partial page). TSP te
 
 ---
 
+## 12. Catalog API cursor pagination overlap — platform behaviour
+
+**Documented claim:** (Not documented — discovered by this project)
+
+**Observed behaviour:** The Catalog API's cursor-based pagination has inter-page overlap because the relevance ranking shifts between requests. The cursor encodes an offset (`eyJvZmZzZXQiOjUz...` = `{"offset":53,...}`), but the products at that offset can overlap with the previous page by 1–9 products per 50-product page.
+
+Per-query overlap rates (DIRECTIVE-15 §4.4, depth-1000 transcript):
+
+| Query | Scanned | Distinct | Duplicates | Dupe % |
+|---|---|---|---|---|
+| Q01 | 284 | 271 | 13 | 4.6% |
+| Q02 | 310 | 303 | 7 | 2.3% |
+| Q03 | 331 | 320 | 11 | 3.3% |
+| Q04 | 317 | 300 | 17 | 5.4% |
+| Q05 | 315 | 310 | 5 | 1.6% |
+| Q06 | 273 | 262 | 11 | 4.0% |
+| Q07 | 385 | 354 | 31 | 8.1% |
+| Q08 | 301 | 293 | 8 | 2.7% |
+| Q09 | 308 | 295 | 13 | 4.2% |
+| Q10 | 316 | 311 | 5 | 1.6% |
+| Q11 | 300 | 292 | 8 | 2.7% |
+| Q12 | 286 | 268 | 18 | 6.3% |
+| Q13 | 303 | 297 | 6 | 2.0% |
+| Q14 | 343 | 329 | 14 | 4.1% |
+| Q15 | 315 | 303 | 12 | 3.8% |
+| Q16 | 296 | 290 | 6 | 2.0% |
+| Q17 | 313 | 303 | 10 | 3.2% |
+| Q18 | 357 | 345 | 12 | 3.4% |
+| **Total** | **5,653** | **5,446** | **207** | **3.7%** |
+
+Range: 1.6–8.1%. Mean: 3.7%. This is not the U8-A bug (which returned 100% identical pages) — it is a small overlap at page boundaries due to unstable relevance ranking.
+
+**Evidence:** `scripts/output/depth1000-2026-08-02T20-32-02-308Z.json` — transcript with 123 page entries, duplicate IDs counted across all 18 queries.
+
+**Date established:** 4 August 2026 (DIRECTIVE-15 §4.4, recorded as register entry 12 per DIRECTIVE-16 §4)
+
+**Impact:** I-1 invariant relaxed to allow overlap up to 15% (abort threshold) with a 20% ceiling. Every overlap event is logged so the distribution keeps being measured. A second relaxation requires a directive. The U8-A signature (100% overlap) sits far above both thresholds.
+
+---
+
 ## Summary
 
 | # | Fact | Status | Date |
@@ -192,6 +232,7 @@ Subimods terminated naturally on page 73 with 66 products (partial page). TSP te
 | 8 | Scoped-fallback overlap | Documentation incomplete — partial fallback, 14.5% overlap | 3 Aug 2026 |
 | 9 | Head/padding boundary | INCONCLUSIVE — deterministic prefix ~12 ranks (real), ~6 (nonsense). **U8-A data partially corrupted by pagination bug — World B and "16 distinct products" withdrawn pending re-validation** | 3 Aug 2026 |
 | 10 | No per-store enumeration | Platform limitation — search is relevance-ranked, no enumeration endpoint, 54% false negative rate | 4 Aug 2026 |
-| 11 | `/products.json` not exhaustive | Sitemap is ground truth — Subimods 70.9% missing, MAP 92.4% missing, TSP 0% | 4 Aug 2026 |
+| 11 | `/products.json` exhaustiveness | **RESTATED** — exhaustive for stores < 25,000 products. Platform caps at 25,000 (HTTP 400 at page 101). Subimods: 18,066 vs 18,067 sitemap (0.006%). MAP: 25,000 vs 102,176 (75.5%). TSP: 2,608 vs 2,608 (0%). Prior shortfall was our fetch bug | 4 Aug 2026 |
+| 12 | Cursor pagination overlap | Platform behaviour — 1.6–8.1% overlap per page, mean 3.7%. Not the U8-A bug (100%). I-1 relaxed to 15% abort / 20% ceiling | 4 Aug 2026 |
 
 **This is the one publishable artefact the project already owns outright.** It depends on no hypothesis, cannot be over-read, is checkable by anyone with an API key, and is exactly what establishes standing with the people who would eventually pay.

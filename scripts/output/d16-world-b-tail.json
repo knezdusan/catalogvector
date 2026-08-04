@@ -1,0 +1,60 @@
+{
+  "query": "brake pads for 2018 Honda Civic Si",
+  "runs": [
+    {
+      "run": 0,
+      "productCount": 233,
+      "distinctIds": 227,
+      "overlapStats": {
+        "count": 5,
+        "mean": 0.06295415557527359,
+        "max": 0.1836734693877551,
+        "min": 0.021739130434782608
+      }
+    },
+    {
+      "run": 1,
+      "productCount": 275,
+      "distinctIds": 265,
+      "overlapStats": {
+        "count": 5,
+        "mean": 0.09406791135105026,
+        "max": 0.24444444444444444,
+        "min": 0.02
+      }
+    },
+    {
+      "run": 2,
+      "productCount": 368,
+      "distinctIds": 358,
+      "overlapStats": {
+        "count": 6,
+        "mean": 0.09195471798732668,
+        "max": 0.3333333333333333,
+        "min": 0.021739130434782608
+      }
+    }
+  ],
+  "fullSetJaccard": {
+    "0v1": 0.6026058631921825,
+    "0v2": 0.5194805194805194,
+    "1v2": 0.5195121951219512,
+    "average": 0.5471995259315511
+  },
+  "tailSetJaccard": {
+    "0v1": 0.525096525096525,
+    "0v2": 0.45103857566765576,
+    "1v2": 0.4530386740331492,
+    "average": 0.4763912582657766
+  },
+  "headPositional": {
+    "matches": 50,
+    "total": 50,
+    "rate": 1
+  },
+  "tailPositional": {
+    "matches": 0,
+    "total": 183,
+    "rate": 0
+  }
+}

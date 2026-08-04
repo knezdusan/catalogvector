@@ -103,6 +103,68 @@ describe("I-1: PaginationInvariant", () => {
     ).toThrow(InvariantViolation);
   });
 
+  it("logs every overlap event and exposes stats", () => {
+    const inv = new PaginationInvariant(0.2, 0.15);
+    const page1 = Array.from({ length: 10 }, (_, i) => ({
+      id: `id${i}`,
+      title: `P${i}`,
+      surface: "catalog-api" as const,
+      variants: [],
+    }));
+    inv.check({ products: page1, cursor: "c1", hasNextPage: true });
+
+    // 1 shared = 10% overlap, logged but allowed
+    const page2 = [
+      { id: "id0", title: "S", surface: "catalog-api" as const, variants: [] },
+      ...Array.from({ length: 9 }, (_, i) => ({
+        id: `n${i}`,
+        title: `N${i}`,
+        surface: "catalog-api" as const,
+        variants: [],
+      })),
+    ];
+    inv.check({ products: page2, cursor: "c2", hasNextPage: true });
+
+    const log = inv.getOverlapLog();
+    expect(log).toHaveLength(1);
+    expect(log[0].overlapCount).toBe(1);
+    expect(log[0].overlapRatio).toBeCloseTo(0.1);
+
+    const stats = inv.getOverlapStats();
+    expect(stats.count).toBe(1);
+    expect(stats.max).toBeCloseTo(0.1);
+  });
+
+  it("aborts at 15% overlap (DIRECTIVE-16 §4 abort threshold)", () => {
+    const inv = new PaginationInvariant(0.2, 0.15);
+    const page1 = Array.from({ length: 20 }, (_, i) => ({
+      id: `id${i}`,
+      title: `P${i}`,
+      surface: "catalog-api" as const,
+      variants: [],
+    }));
+    inv.check({ products: page1, cursor: "c1", hasNextPage: true });
+
+    // 4 shared out of 20 = 20% overlap, above 15% abort threshold
+    const page2 = [
+      ...Array.from({ length: 4 }, (_, i) => ({
+        id: `id${i}`,
+        title: `S${i}`,
+        surface: "catalog-api" as const,
+        variants: [],
+      })),
+      ...Array.from({ length: 16 }, (_, i) => ({
+        id: `new${i}`,
+        title: `N${i}`,
+        surface: "catalog-api" as const,
+        variants: [],
+      })),
+    ];
+    expect(() =>
+      inv.check({ products: page2, cursor: "c2", hasNextPage: true }),
+    ).toThrow(InvariantViolation);
+  });
+
   it("throws when cursor does not change between pages", () => {
     const inv = new PaginationInvariant();
     inv.check({

@@ -1,0 +1,116 @@
+{
+  "real": {
+    "query": "brake pads for 2018 Honda Civic Si",
+    "pages": 5,
+    "totalProducts": 239,
+    "distinctIds": 236,
+    "totalCount": 362,
+    "pageBoundaries": [
+      {
+        "page": 1,
+        "count": 49,
+        "distinctSoFar": 49,
+        "cursor": "eyJvZmZzZXQiOjYwLCJ0b3RhbF9jb3VudCI6MzYyLCJyZXR1cm5lZCI6NDl9",
+        "overlap": 0
+      },
+      {
+        "page": 2,
+        "count": 50,
+        "distinctSoFar": 97,
+        "cursor": "eyJvZmZzZXQiOjExOSwidG90YWxfY291bnQiOjM2MiwicmV0dXJuZWQiOjk5fQ",
+        "overlap": 2
+      },
+      {
+        "page": 3,
+        "count": 48,
+        "distinctSoFar": 145,
+        "cursor": "eyJvZmZzZXQiOjE3OSwidG90YWxfY291bnQiOjM2MiwicmV0dXJuZWQiOjE0N30",
+        "overlap": 0
+      },
+      {
+        "page": 4,
+        "count": 44,
+        "distinctSoFar": 189,
+        "cursor": "eyJvZmZzZXQiOjIzOSwidG90YWxfY291bnQiOjM2MiwicmV0dXJuZWQiOjE5MX0",
+        "overlap": 0
+      },
+      {
+        "page": 5,
+        "count": 48,
+        "distinctSoFar": 236,
+        "cursor": "eyJvZmZzZXQiOjI5OSwidG90YWxfY291bnQiOjM2MiwicmV0dXJuZWQiOjIzOX0",
+        "overlap": 1
+      }
+    ],
+    "overlapStats": {
+      "count": 3,
+      "mean": 0.11551587301587302,
+      "max": 0.2857142857142857,
+      "min": 0.020833333333333332
+    }
+  },
+  "nonsense": {
+    "query": "zxqv flurbin widget",
+    "pages": 7,
+    "totalProducts": 350,
+    "distinctIds": 341,
+    "totalCount": 361,
+    "pageBoundaries": [
+      {
+        "page": 1,
+        "count": 50,
+        "distinctSoFar": 50,
+        "cursor": "eyJvZmZzZXQiOjUxLCJ0b3RhbF9jb3VudCI6MzYxLCJyZXR1cm5lZCI6NTB9",
+        "overlap": 0
+      },
+      {
+        "page": 2,
+        "count": 50,
+        "distinctSoFar": 99,
+        "cursor": "eyJvZmZzZXQiOjEwMSwidG90YWxfY291bnQiOjM2MSwicmV0dXJuZWQiOjEwMH0",
+        "overlap": 1
+      },
+      {
+        "page": 3,
+        "count": 50,
+        "distinctSoFar": 147,
+        "cursor": "eyJvZmZzZXQiOjE1MSwidG90YWxfY291bnQiOjM2MSwicmV0dXJuZWQiOjE1MH0",
+        "overlap": 2
+      },
+      {
+        "page": 4,
+        "count": 50,
+        "distinctSoFar": 195,
+        "cursor": "eyJvZmZzZXQiOjIwMSwidG90YWxfY291bnQiOjM2MSwicmV0dXJuZWQiOjIwMH0",
+        "overlap": 2
+      },
+      {
+        "page": 5,
+        "count": 50,
+        "distinctSoFar": 245,
+        "cursor": "eyJvZmZzZXQiOjI1MiwidG90YWxfY291bnQiOjM2MSwicmV0dXJuZWQiOjI1MH0",
+        "overlap": 0
+      },
+      {
+        "page": 6,
+        "count": 50,
+        "distinctSoFar": 293,
+        "cursor": "eyJvZmZzZXQiOjMwNCwidG90YWxfY291bnQiOjM2MSwicmV0dXJuZWQiOjMwMH0",
+        "overlap": 2
+      },
+      {
+        "page": 7,
+        "count": 50,
+        "distinctSoFar": 341,
+        "cursor": "eyJvZmZzZXQiOjM1NCwidG90YWxfY291bnQiOjM2MSwicmV0dXJuZWQiOjM1MH0",
+        "overlap": 2
+      }
+    ],
+    "overlapStats": {
+      "count": 6,
+      "mean": 0.15121212121212121,
+      "max": 0.7272727272727273,
+      "min": 0.02
+    }
+  }
+}
