@@ -1,0 +1,27 @@
+{
+  "schemaVersion": "h7-membership-validation-v1",
+  "created": "2026-08-04",
+  "directive": "DIRECTIVE-13 §1 H7",
+  "method": "Validate the membership test by checking 50 'absent' products directly. For each, search by its exact title with the Subimods shops filter and check if the product appears by handle match.",
+  "results": {
+    "totalChecked": 50,
+    "trueNegatives": 23,
+    "falseNegatives": 27,
+    "falseNegativeRate": 0.54
+  },
+  "verdict": "MEMBERSHIP TEST UNRELIABLE — 54% false negative rate.",
+  "implications": [
+    "The scoped search with filters.shops returns ~300 results per query (U-4 fallback), but with 5,250+ products in the store, a single query cannot surface every product.",
+    "The union of 40 queries returned 6,730 unique handles, but this is still incomplete — 54% of 'absent' products are actually present when searched by exact title.",
+    "The membership test cannot distinguish present from absent products with sufficient accuracy for H7.",
+    "Per the directive: 'if the membership test is unreliable, H7 cannot run and the correct answer is to say so.'"
+  ],
+  "rootCause": "The Catalog API's search is relevance-ranked, not an exhaustive enumeration. A scoped search returns the top ~300 products matching the query, not all products from that shop. Products that don't match the query terms well enough to appear in the top 300 are missed, even though they ARE in the Catalog.",
+  "whatWouldFixThis": [
+    "A direct lookup by product GID (lookup_catalog) — but store product IDs are not the same as Catalog product IDs, and there's no API to convert between them.",
+    "A store-scoped product enumeration API — but the Catalog API doesn't offer this. The scoped search with nonsense query returns a default set, not the full catalog.",
+    "Access to the merchant's Shopify admin API — which would show syndication status directly, but requires merchant authentication."
+  ],
+  "additionalFinding": "The §3 finding from DIRECTIVE-12 was WRONG. All 5 'known-absent' aftermarket products (Fluidampr, COBB Boost Control, PRL HVI, COBB AccessPORT, PRL Charge Pipe) ARE in the Catalog API under Subimods' seller name. The §3 subagent checked shop.app, not the Catalog API. The Catalog API and shop.app index different subsets of a merchant's catalog.",
+  "revisedUnderstanding": "The partial syndication observation from DIRECTIVE-12 §3 was based on shop.app data, not Catalog API data. The Catalog API appears to index a much larger portion of Subimods' catalog than shop.app does. The 'OEM parts in, aftermarket parts out' split may be a shop.app-specific phenomenon, not a Catalog API phenomenon."
+}
