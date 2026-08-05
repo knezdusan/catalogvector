@@ -1,0 +1,23 @@
+{
+  "preRegisteredRule": {
+    "threshold": 0.75,
+    "storesRequired": 2,
+    "rawResult": "supported",
+    "rawResultDetail": "Both stores had attributes at ≥75% held-out accuracy"
+  },
+  "classImbalanceCorrection": {
+    "subimods": {
+      "baseRate": 0.7666666666666667,
+      "bestHeldOut": 0.7666666666666667,
+      "lift": 0
+    },
+    "tsp": {
+      "baseRate": 0.92,
+      "bestHeldOut": 0.9066666666666666,
+      "lift": -0.01333333333333342
+    }
+  },
+  "honestVerdict": "rejected",
+  "storesWithRealSeparation": 0,
+  "timestamp": "2026-08-05T16:40:23.545Z"
+}

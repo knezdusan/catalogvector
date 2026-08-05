@@ -1,0 +1,136 @@
+{
+  "stores": [
+    {
+      "store": "subimods",
+      "sampleSize": 300,
+      "presentCount": 230,
+      "absentCount": 70,
+      "attributes": [
+        {
+          "name": "imageCount",
+          "type": "numeric",
+          "trainAccuracy": 0.78,
+          "heldOutAccuracy": 0.7666666666666667,
+          "detail": "threshold=0.50"
+        },
+        {
+          "name": "variantCount",
+          "type": "numeric",
+          "trainAccuracy": 0.78,
+          "heldOutAccuracy": 0.7666666666666667,
+          "detail": "threshold=0.50"
+        },
+        {
+          "name": "price",
+          "type": "numeric",
+          "trainAccuracy": 0.78,
+          "heldOutAccuracy": 0.76,
+          "detail": "threshold=2.50"
+        },
+        {
+          "name": "publishedAgeDays",
+          "type": "numeric",
+          "trainAccuracy": 0.7866666666666666,
+          "heldOutAccuracy": 0.7533333333333333,
+          "detail": "threshold=17.00"
+        },
+        {
+          "name": "tagCount",
+          "type": "numeric",
+          "trainAccuracy": 0.78,
+          "heldOutAccuracy": 0.7666666666666667,
+          "detail": "threshold=5.00"
+        },
+        {
+          "name": "bodyLength",
+          "type": "numeric",
+          "trainAccuracy": 0.78,
+          "heldOutAccuracy": 0.76,
+          "detail": "threshold=460.00"
+        },
+        {
+          "name": "vendor",
+          "type": "categorical",
+          "trainAccuracy": 0.82,
+          "heldOutAccuracy": 0.68,
+          "detail": "28 absent-predicting categories"
+        },
+        {
+          "name": "productType",
+          "type": "categorical",
+          "trainAccuracy": 0.8666666666666667,
+          "heldOutAccuracy": 0.7066666666666667,
+          "detail": "29 absent-predicting categories"
+        }
+      ]
+    },
+    {
+      "store": "tsp",
+      "sampleSize": 300,
+      "presentCount": 276,
+      "absentCount": 24,
+      "attributes": [
+        {
+          "name": "imageCount",
+          "type": "numeric",
+          "trainAccuracy": 0.94,
+          "heldOutAccuracy": 0.9066666666666666,
+          "detail": "threshold=0.50"
+        },
+        {
+          "name": "variantCount",
+          "type": "numeric",
+          "trainAccuracy": 0.94,
+          "heldOutAccuracy": 0.9066666666666666,
+          "detail": "threshold=0.50"
+        },
+        {
+          "name": "price",
+          "type": "numeric",
+          "trainAccuracy": 0.94,
+          "heldOutAccuracy": 0.9066666666666666,
+          "detail": "threshold=3.75"
+        },
+        {
+          "name": "publishedAgeDays",
+          "type": "numeric",
+          "trainAccuracy": 0.9466666666666667,
+          "heldOutAccuracy": 0.9066666666666666,
+          "detail": "threshold=13.50"
+        },
+        {
+          "name": "tagCount",
+          "type": "numeric",
+          "trainAccuracy": 0.9333333333333333,
+          "heldOutAccuracy": 0.9066666666666666,
+          "detail": "threshold=0.00"
+        },
+        {
+          "name": "bodyLength",
+          "type": "numeric",
+          "trainAccuracy": 0.94,
+          "heldOutAccuracy": 0.9066666666666666,
+          "detail": "threshold=33.00"
+        },
+        {
+          "name": "vendor",
+          "type": "categorical",
+          "trainAccuracy": 0.8333333333333334,
+          "heldOutAccuracy": 0.7533333333333333,
+          "detail": "9 absent-predicting categories"
+        },
+        {
+          "name": "productType",
+          "type": "categorical",
+          "trainAccuracy": 0.7866666666666666,
+          "heldOutAccuracy": 0.6933333333333334,
+          "detail": "8 absent-predicting categories"
+        }
+      ]
+    }
+  ],
+  "storesWithSupport": 2,
+  "storesWithReject": 0,
+  "verdict": "supported",
+  "timestamp": "2026-08-05T16:39:24.259Z"
+}

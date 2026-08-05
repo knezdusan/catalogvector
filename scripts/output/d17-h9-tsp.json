@@ -1,0 +1,1869 @@
+{
+  "store": "tsp",
+  "sampleSize": 300,
+  "presentCount": 276,
+  "absentCount": 24,
+  "trainingSize": 150,
+  "heldOutSize": 150,
+  "attributes": [
+    {
+      "name": "imageCount",
+      "type": "numeric",
+      "trainAccuracy": 0.94,
+      "heldOutAccuracy": 0.9066666666666666,
+      "detail": "threshold=0.50"
+    },
+    {
+      "name": "variantCount",
+      "type": "numeric",
+      "trainAccuracy": 0.94,
+      "heldOutAccuracy": 0.9066666666666666,
+      "detail": "threshold=0.50"
+    },
+    {
+      "name": "price",
+      "type": "numeric",
+      "trainAccuracy": 0.94,
+      "heldOutAccuracy": 0.9066666666666666,
+      "detail": "threshold=3.75"
+    },
+    {
+      "name": "publishedAgeDays",
+      "type": "numeric",
+      "trainAccuracy": 0.9466666666666667,
+      "heldOutAccuracy": 0.9066666666666666,
+      "detail": "threshold=13.50"
+    },
+    {
+      "name": "tagCount",
+      "type": "numeric",
+      "trainAccuracy": 0.9333333333333333,
+      "heldOutAccuracy": 0.9066666666666666,
+      "detail": "threshold=0.00"
+    },
+    {
+      "name": "bodyLength",
+      "type": "numeric",
+      "trainAccuracy": 0.94,
+      "heldOutAccuracy": 0.9066666666666666,
+      "detail": "threshold=33.00"
+    },
+    {
+      "name": "vendor",
+      "type": "categorical",
+      "trainAccuracy": 0.8333333333333334,
+      "heldOutAccuracy": 0.7533333333333333,
+      "detail": "9 absent-predicting categories"
+    },
+    {
+      "name": "productType",
+      "type": "categorical",
+      "trainAccuracy": 0.7866666666666666,
+      "heldOutAccuracy": 0.6933333333333334,
+      "detail": "8 absent-predicting categories"
+    }
+  ],
+  "labels": [
+    {
+      "handle": "hps-performance-cold-air-intake-kit-polished-837-732p",
+      "refFound": true,
+      "enumFound": false,
+      "unionPresent": true
+    },
+    {
+      "handle": "hondata-fuel-system-upgrade-1530cc-injectors-for-2017-2023-honda-civic-type-r-fk8-fl5-acura-integra-type-s-de5",
+      "refFound": true,
+      "enumFound": false,
+      "unionPresent": true
+    },
+    {
+      "handle": "27won-cold-air-intake-for-2022-honda-civic-2023-acura-integra-1-5t-fe1-fl1-de4-returned-item",
+      "refFound": true,
+      "enumFound": false,
+      "unionPresent": true
+    },
+    {
+      "handle": "hybrid-racing-dimensions-t-shirt-hyb-dmg-00-0s-c",
+      "refFound": true,
+      "enumFound": false,
+      "unionPresent": true
+    },
+    {
+      "handle": "revel-gt-dry-carbon-shifter-panel-cover-17-18-honda-civic-type-r-1-piece",
+      "refFound": true,
+      "enumFound": false,
+      "unionPresent": true
+    },
+    {
+      "handle": "tsp-x-27won-stage1-bundle-kit-2022-civic-non-si-1-5t",
+      "refFound": true,
+      "enumFound": false,
+      "unionPresent": true
+    },
+    {
+      "handle": "afe-takeda-2-1-2in-304-ss-axle-back-exhaust-w-carbon-tips-17-20-honda-civic-sport-l4-1-5l-t",
+      "refFound": true,
+      "enumFound": false,
+      "unionPresent": true
+    },
+    {
+      "handle": "hybrid-racing-silicone-oil-cooler-hoses-for-06-11-honda-civic-si",
+      "refFound": true,
+      "enumFound": false,
+      "unionPresent": true
+    },
+    {
+      "handle": "22-25-honda-civic-nova-series-led-projector-headlights-alpha-black",
+      "refFound": false,
+      "enumFound": false,
+      "unionPresent": false
+    },
+    {
+      "handle": "skunk2-megapower-rr-17-20-honda-civic-si-sedan-exhaust-system",
+      "refFound": true,
+      "enumFound": false,
+      "unionPresent": true
+    },
+    {
+      "handle": "hybridracing-low-temp-thermostat-k20c-typer",
+      "refFound": true,
+      "enumFound": false,
+      "unionPresent": true
+    },
+    {
+      "handle": "k-n-17-18-honda-civic-type-r-l4-2-0l-f-i-turbo-replacement-drop-in-air-filter",
+      "refFound": true,
+      "enumFound": false,
+      "unionPresent": true
+    },
+    {
+      "handle": "rs-r-2017-2022-honda-civic-type-r-fk8-down-sus-springs",
+      "refFound": true,
+      "enumFound": false,
+      "unionPresent": true
+    },
+    {
+      "handle": "2022-civic-integra-1-5t-short-ram-intake-sri-system",
+      "refFound": true,
+      "enumFound": false,
+      "unionPresent": true
+    },
+    {
+      "handle": "prl-srs-collar-kit-front-for-2022-honda-civic",
+      "refFound": true,
+      "enumFound": false,
+      "unionPresent": true
+    },
+    {
+      "handle": "k-n-2018-honda-accord-l4-2-0l-f-i-turbo-drop-in-air-filter",
+      "refFound": true,
+      "enumFound": false,
+      "unionPresent": true
+    },
+    {
+      "handle": "hps-performance-high-temp-reinforced-silicone-heater-coolant-hose-kit-black-57-1769-blk",
+      "refFound": true,
+      "enumFound": false,
+      "unionPresent": true
+    },
+    {
+      "handle": "tsp-x-27won-stage-2-bundle-kit-for-2017-honda-civic-si-1-5t",
+      "refFound": true,
+      "enumFound": false,
+      "unionPresent": true
+    },
+    {
+      "handle": "2016-honda-civic-2-0l-replacement-panel-air-filter-upgrade",
+      "refFound": true,
+      "enumFound": false,
+      "unionPresent": true
+    },
+    {
+      "handle": "injen-17-20-honda-civic-si-1-5l-turbo-sedan-only-3in-cat-back-stainless-steel-exhaust",
+      "refFound": true,
+      "enumFound": false,
+      "unionPresent": true
+    },
+    {
+      "handle": "gen-2-v3-hfpcs-high-flow-precats-kit-for-04-08-tl",
+      "refFound": true,
+      "enumFound": false,
+      "unionPresent": true
+    },
+    {
+      "handle": "dress-up-bolts-titanium-hardware-radiator-shroud-kit-honda-civic-si-2016-2021",
+      "refFound": true,
+      "enumFound": false,
+      "unionPresent": true
+    },
+    {
+      "handle": "qp009375",
+      "refFound": true,
+      "enumFound": false,
+      "unionPresent": true
+    },
+    {
+      "handle": "prl-motorsports-adjustable-shift-knob-collar-kit",
+      "refFound": true,
+      "enumFound": false,
+      "unionPresent": true
+    },
+    {
+      "handle": "performance-lowering-springs-for-2016-honda-civic-1",
+      "refFound": true,
+      "enumFound": false,
+      "unionPresent": true
+    },
+    {
+      "handle": "acuity-shifter-performance-max-upgrade-bundle-for-2016-honda-civic",
+      "refFound": true,
+      "enumFound": false,
+      "unionPresent": true
+    },
+    {
+      "handle": "as-r80-rgb-slim-switch-panel-toggle-momentary-pulsed-mode-supportedone-sided-outlet",
+      "refFound": true,
+      "enumFound": false,
+      "unionPresent": true
+    },
+    {
+      "handle": "mishimoto-2016-honda-civic-1-5t-2017-honda-civic-si-silver-intercooler-kit-w-black-pipes",
+      "refFound": true,
+      "enumFound": false,
+      "unionPresent": true
+    },
+    {
+      "handle": "seibon-2017-honda-civic-type-r-gloss-carbon-fiber-tailgate-middle-spoiler",
+      "refFound": true,
+      "enumFound": false,
+      "unionPresent": true
+    },
+    {
+      "handle": "hybrid-racing-short-throw-shifter-for-12-15-civic",
+      "refFound": true,
+      "enumFound": false,
+      "unionPresent": true
+    },
+    {
+      "handle": "2018-honda-accord-2-0t-front-pipe-hardware",
+      "refFound": true,
+      "enumFound": false,
+      "unionPresent": true
+    },
+    {
+      "handle": "double-spoiler-extension-acura-rsx-dc5-2002-2006",
+      "refFound": true,
+      "enumFound": false,
+      "unionPresent": true
+    },
+    {
+      "handle": "olm-carbon-fiber-wrapped-hood-struts-2017-2021-honda-civic-type-r-returned-item",
+      "refFound": false,
+      "enumFound": false,
+      "unionPresent": false
+    },
+    {
+      "handle": "muteki-sr48-open-end-lug-nuts-m12x1-50",
+      "refFound": true,
+      "enumFound": false,
+      "unionPresent": true
+    },
+    {
+      "handle": "short-ram-air-intake-system-race-for-2016-1-5t-honda-civic-non-si",
+      "refFound": false,
+      "enumFound": false,
+      "unionPresent": false
+    },
+    {
+      "handle": "eibach-26mm-front-22mm-rear-anti-roll-kit-for-18-20-honda-accord-1-5l-turbo-2-0l-turbo",
+      "refFound": true,
+      "enumFound": false,
+      "unionPresent": true
+    },
+    {
+      "handle": "billetworkz-6-speed-velocity-engraving-cosmic-space-honda-fitment",
+      "refFound": true,
+      "enumFound": false,
+      "unionPresent": true
+    },
+    {
+      "handle": "ktunerflash-v2-0-tuning-package",
+      "refFound": true,
+      "enumFound": false,
+      "unionPresent": true
+    },
+    {
+      "handle": "2016-honda-civic-acura-integra-coolant-expansion-tank-upgrade",
+      "refFound": true,
+      "enumFound": false,
+      "unionPresent": true
+    },
+    {
+      "handle": "power-stop-18-19-honda-accord-front-z23-evolution-sport-brake-kit",
+      "refFound": true,
+      "enumFound": false,
+      "unionPresent": true
+    },
+    {
+      "handle": "prl-motorsports-2016-civic-1-5t-braided-stainless-steel-clutch-line",
+      "refFound": true,
+      "enumFound": false,
+      "unionPresent": true
+    },
+    {
+      "handle": "spu20040",
+      "refFound": true,
+      "enumFound": false,
+      "unionPresent": true
+    },
+    {
+      "handle": "hps-performance-billet-aluminum-oil-catch-can-kit-860-017",
+      "refFound": true,
+      "enumFound": false,
+      "unionPresent": true
+    },
+    {
+      "handle": "titanium-hardware-seat-kit-honda-civic-si-2012-2015",
+      "refFound": true,
+      "enumFound": false,
+      "unionPresent": true
+    },
+    {
+      "handle": "hps-performance-high-temp-reinforced-silicone-radiator-and-heater-coolant-hose-kit-black-57-1387-blk",
+      "refFound": true,
+      "enumFound": false,
+      "unionPresent": true
+    },
+    {
+      "handle": "h-r-trak-5mm-drs-wheel-adaptor-bolt-5-114-3-center-bore-64-1-stud-thread-12x1-6",
+      "refFound": false,
+      "enumFound": false,
+      "unionPresent": false
+    },
+    {
+      "handle": "ignition-coil-overlay",
+      "refFound": true,
+      "enumFound": false,
+      "unionPresent": true
+    },
+    {
+      "handle": "skunk2-12-x-1-5-forged-lug-nut-set-20-pcs",
+      "refFound": true,
+      "enumFound": false,
+      "unionPresent": true
+    },
+    {
+      "handle": "diffuser-v1-honda-civic-coupe-fg4-2012-2015",
+      "refFound": false,
+      "enumFound": false,
+      "unionPresent": false
+    },
+    {
+      "handle": "invidia-2016-honda-civic-ex-touring-1-5t-2d-4d-70mm-front-pipe",
+      "refFound": true,
+      "enumFound": false,
+      "unionPresent": true
+    },
+    {
+      "handle": "prl-motorsports-tube-and-fin-front-mount-intercooler-upgrade-for-23-honda-civic-type-r-24-acura-integra-type-s",
+      "refFound": false,
+      "enumFound": false,
+      "unionPresent": false
+    },
+    {
+      "handle": "totlylgl-no-drill-front-license-plate-mount-for-23-honda-civic-type-r",
+      "refFound": true,
+      "enumFound": false,
+      "unionPresent": true
+    },
+    {
+      "handle": "mbrp-22-24-honda-civic-sport-touring-1-5l-3in-cat-back-2-5in-dual-split-rear-w-quad-tips-al",
+      "refFound": true,
+      "enumFound": false,
+      "unionPresent": true
+    },
+    {
+      "handle": "hps-performance-high-temp-reinforced-silicone-radiator-coolant-hose-kit-black-57-1843-blk",
+      "refFound": true,
+      "enumFound": false,
+      "unionPresent": true
+    },
+    {
+      "handle": "2000-2009-honda-s2000-big-brake-kit",
+      "refFound": true,
+      "enumFound": false,
+      "unionPresent": true
+    },
+    {
+      "handle": "honda-civic-x-throttle-body-spacer",
+      "refFound": false,
+      "enumFound": false,
+      "unionPresent": false
+    },
+    {
+      "handle": "2001-civic-ex-metal-car-wall-art-mt0287",
+      "refFound": true,
+      "enumFound": false,
+      "unionPresent": true
+    },
+    {
+      "handle": "wunderladen-racing-rear-cam-plate-for-2016-honda-civic-integra-1-5t",
+      "refFound": true,
+      "enumFound": false,
+      "unionPresent": true
+    },
+    {
+      "handle": "nsx-perspective-metal-car-wall-art-mt1128",
+      "refFound": true,
+      "enumFound": false,
+      "unionPresent": true
+    },
+    {
+      "handle": "bc-racing-coilovers-br-for-2022-honda-civic-si",
+      "refFound": true,
+      "enumFound": false,
+      "unionPresent": true
+    },
+    {
+      "handle": "seibon-16-17-honda-civic-tr-carbon-fiber-hood",
+      "refFound": true,
+      "enumFound": false,
+      "unionPresent": true
+    },
+    {
+      "handle": "mxp-comp-rs-exhaust-civic-type-r-fk8",
+      "refFound": true,
+      "enumFound": false,
+      "unionPresent": true
+    },
+    {
+      "handle": "high-flow-injectors-for-2017-honda-civic-type-r-fk8",
+      "refFound": true,
+      "enumFound": false,
+      "unionPresent": true
+    },
+    {
+      "handle": "168-2825-w5w-t10-led-license-plate-side-marker-interior-light-bulbs-3w-400-brighter-canbus-error-free-white-b1-series-10-bulbs",
+      "refFound": true,
+      "enumFound": false,
+      "unionPresent": true
+    },
+    {
+      "handle": "pro-series-lowering-springs",
+      "refFound": true,
+      "enumFound": false,
+      "unionPresent": true
+    },
+    {
+      "handle": "mishimoto-2018-honda-accord-2-0t-baffled-oil-catch-can-pcv-side-black",
+      "refFound": true,
+      "enumFound": false,
+      "unionPresent": true
+    },
+    {
+      "handle": "seibon-18-20-honda-accord-ts-style-carbon-fiber-hood",
+      "refFound": true,
+      "enumFound": false,
+      "unionPresent": true
+    },
+    {
+      "handle": "afe-takeda-stage-2-cold-air-intake-system-w-pro-dry-s-filter-17-20-honda-civic-si-l4-1-5l-t",
+      "refFound": true,
+      "enumFound": false,
+      "unionPresent": true
+    },
+    {
+      "handle": "ignition-coil-covers-for-2016-honda-accord-civic-crv-1-5t",
+      "refFound": true,
+      "enumFound": false,
+      "unionPresent": true
+    },
+    {
+      "handle": "os-giken-honda-civic-type-r-fk8-spec-s-super-lock-lsd",
+      "refFound": true,
+      "enumFound": false,
+      "unionPresent": true
+    },
+    {
+      "handle": "end-user-board-kit-r1-for-honda-k20-k24-accord-rsx-tsx-element-ecu",
+      "refFound": true,
+      "enumFound": false,
+      "unionPresent": true
+    },
+    {
+      "handle": "hps-performance-high-temp-reinforced-silicone-oil-cooler-and-throttle-body-coolant-hose-kit-black-57-1857-blk",
+      "refFound": true,
+      "enumFound": false,
+      "unionPresent": true
+    },
+    {
+      "handle": "aem-2016-honda-civic-2-0l-l4-gunmetal-cold-air-intake-will-not-fit-type-r-models",
+      "refFound": true,
+      "enumFound": false,
+      "unionPresent": true
+    },
+    {
+      "handle": "77725468",
+      "refFound": true,
+      "enumFound": false,
+      "unionPresent": true
+    },
+    {
+      "handle": "ktuner-connectivity-device-for-2025-honda-civic-si",
+      "refFound": true,
+      "enumFound": false,
+      "unionPresent": true
+    },
+    {
+      "handle": "3157-amber-b2-pro-series-xd000594",
+      "refFound": true,
+      "enumFound": false,
+      "unionPresent": true
+    },
+    {
+      "handle": "prl-cobra-cold-air-intake-system-and-intercooler-bundle-for-2016-honda-civic-non-si-1-5t-fc-fk",
+      "refFound": true,
+      "enumFound": false,
+      "unionPresent": true
+    },
+    {
+      "handle": "track-day-brake-pads-for-2017-honda-civic-type-r-fk8",
+      "refFound": true,
+      "enumFound": false,
+      "unionPresent": true
+    },
+    {
+      "handle": "hps-performance-high-temp-reinforced-silicone-radiator-coolant-hose-kit-black-57-1705-blk",
+      "refFound": true,
+      "enumFound": false,
+      "unionPresent": true
+    },
+    {
+      "handle": "spoon-roof-spoiler-frp-civic-fk7",
+      "refFound": true,
+      "enumFound": false,
+      "unionPresent": true
+    },
+    {
+      "handle": "prl-adjustable-shift-knob-shift-feel-bundle-for-2016-honda-acura",
+      "refFound": true,
+      "enumFound": false,
+      "unionPresent": true
+    },
+    {
+      "handle": "hondata-flashpro-integra-type-s-de5-us-2023",
+      "refFound": true,
+      "enumFound": false,
+      "unionPresent": true
+    },
+    {
+      "handle": "touring-sport-damper-for-17-18-honda-civic-type-r",
+      "refFound": true,
+      "enumFound": false,
+      "unionPresent": true
+    },
+    {
+      "handle": "168-2825-w5w-t10-led-license-plate-side-marker-interior-light-bulbs-3w-400-brighter-canbus-error-free-red-b1-series-2-bulbs",
+      "refFound": false,
+      "enumFound": false,
+      "unionPresent": false
+    },
+    {
+      "handle": "dress-up-bolts-titanium-hardware-cooling-plate-kit-honda-civic-type-r-2017-2021",
+      "refFound": true,
+      "enumFound": false,
+      "unionPresent": true
+    },
+    {
+      "handle": "spoon-clutch-slave-hose-civic-fk7-fe1-fl1",
+      "refFound": true,
+      "enumFound": false,
+      "unionPresent": true
+    },
+    {
+      "handle": "mbrp-23-24-honda-civic-type-r-2-0l-t304-ss-3in-cat-back-exhaust-triple-center-outlet-w-burnt-tips",
+      "refFound": true,
+      "enumFound": false,
+      "unionPresent": true
+    },
+    {
+      "handle": "seibon-2017-honda-civic-type-r-oe-style-gloss-carbon-fiber-rear-doors",
+      "refFound": true,
+      "enumFound": false,
+      "unionPresent": true
+    },
+    {
+      "handle": "front-upper-strut-tower-bar-for-2016-honda-civic-1-5t",
+      "refFound": true,
+      "enumFound": false,
+      "unionPresent": true
+    },
+    {
+      "handle": "seibon-2017-honda-civic-type-r-hatchback-oem-carbon-fiber-trunk-lid",
+      "refFound": true,
+      "enumFound": false,
+      "unionPresent": true
+    },
+    {
+      "handle": "invidia-n1-catback-exhaust-with-burnt-titanium-tip-for-2012-2015-honda-civic-si-sedan",
+      "refFound": true,
+      "enumFound": false,
+      "unionPresent": true
+    },
+    {
+      "handle": "lava-turbo-blanket-for-2017-honda-civic-type-r-fk8",
+      "refFound": true,
+      "enumFound": false,
+      "unionPresent": true
+    },
+    {
+      "handle": "2018-accord-2-0t-high-volume-intake-system-v2",
+      "refFound": true,
+      "enumFound": false,
+      "unionPresent": true
+    },
+    {
+      "handle": "front-splitter-kit-for-2017-honda-civic-type-r-fk8",
+      "refFound": true,
+      "enumFound": false,
+      "unionPresent": true
+    },
+    {
+      "handle": "2-inch-40w-4000lm-spot-led-pods-light-amber-offroad-light",
+      "refFound": true,
+      "enumFound": false,
+      "unionPresent": true
+    },
+    {
+      "handle": "tsp-led-tail-lights-for-2016-2021-honda-civic-sedan-fc-returned-item",
+      "refFound": true,
+      "enumFound": false,
+      "unionPresent": true
+    },
+    {
+      "handle": "remark-2023-honda-civic-type-r-fl5-triple-tip-catback-exhaust-w-triple-tip-front-pipe-1",
+      "refFound": true,
+      "enumFound": false,
+      "unionPresent": true
+    },
+    {
+      "handle": "xd000555",
+      "refFound": true,
+      "enumFound": false,
+      "unionPresent": true
+    },
+    {
+      "handle": "poco-insulated-low-profile-shift-knob-in-black-m10x1-5",
+      "refFound": true,
+      "enumFound": false,
+      "unionPresent": true
+    },
+    {
+      "handle": "new-ktuner-v2-above-stereo-mount-for-2016-honda-civic",
+      "refFound": true,
+      "enumFound": false,
+      "unionPresent": true
+    },
+    {
+      "handle": "908-fkm-o-rings-for-use-with-8-orb-fittings-5-pack",
+      "refFound": true,
+      "enumFound": false,
+      "unionPresent": true
+    },
+    {
+      "handle": "seibon-2016-2017-honda-civic-coupe-sedan-hatchback-mr-style-carbon-fiber-hood",
+      "refFound": true,
+      "enumFound": false,
+      "unionPresent": true
+    },
+    {
+      "handle": "hawk-16-17-honda-civic-performance-ceramic-street-rear-brake-pads",
+      "refFound": true,
+      "enumFound": false,
+      "unionPresent": true
+    },
+    {
+      "handle": "2023-honda-civic-type-r-fl5-throwback-front-strut-bar",
+      "refFound": true,
+      "enumFound": false,
+      "unionPresent": true
+    },
+    {
+      "handle": "kyb-16-18-honda-civic-excl-si-type-r-front-right-strut-excel-g",
+      "refFound": true,
+      "enumFound": false,
+      "unionPresent": true
+    },
+    {
+      "handle": "ventvisor-in-channel-window-deflectors-2pc-smoke-for-2016-civic-coupe",
+      "refFound": true,
+      "enumFound": false,
+      "unionPresent": true
+    },
+    {
+      "handle": "hondata-flashpro-carb-for-2018-honda-accord-2-0t",
+      "refFound": true,
+      "enumFound": false,
+      "unionPresent": true
+    },
+    {
+      "handle": "17-civic-type-r-2-0t-fk8-front-spherical-bushings",
+      "refFound": true,
+      "enumFound": false,
+      "unionPresent": true
+    },
+    {
+      "handle": "skunk2-front-lower-control-arm-hard-rubber-bushing-for-88-91-honda-civic",
+      "refFound": true,
+      "enumFound": false,
+      "unionPresent": true
+    },
+    {
+      "handle": "xp-ultra-series-4-5-inch-flood-beam-led-pod-lights-off-road-lights-with-amber-drl",
+      "refFound": true,
+      "enumFound": false,
+      "unionPresent": true
+    },
+    {
+      "handle": "honda-civic-x-wunderladen-racing-big-brake-kit",
+      "refFound": false,
+      "enumFound": false,
+      "unionPresent": false
+    },
+    {
+      "handle": "h-r-trak-25mm-drm-wheel-adaptor-bolt-5-114-3-center-bore-64-1-stud-thread-12x1-5-black-returned-item",
+      "refFound": true,
+      "enumFound": false,
+      "unionPresent": true
+    },
+    {
+      "handle": "hybrid-racing-formula-valved-exhaust-for-2023-honda-civic-type-r-fl5",
+      "refFound": true,
+      "enumFound": false,
+      "unionPresent": true
+    },
+    {
+      "handle": "wot-performance-triple-pass-radiator-trans-cooler-for-2017-2021-honda-civic-type-r-fk8",
+      "refFound": true,
+      "enumFound": false,
+      "unionPresent": true
+    },
+    {
+      "handle": "rv6%E2%84%A2-1-5t-fk8-clutch-retro-flywheel-for-2016-honda-civic-1-5t",
+      "refFound": false,
+      "enumFound": false,
+      "unionPresent": false
+    },
+    {
+      "handle": "tsp-stage-1-tune-for-2022-honda-civic-1-5t-non-si",
+      "refFound": true,
+      "enumFound": false,
+      "unionPresent": true
+    },
+    {
+      "handle": "prl-motorsports-high-volume-intake-for-2017-2025-ford-f-150-3-5l-ecoboost-raptor",
+      "refFound": true,
+      "enumFound": false,
+      "unionPresent": true
+    },
+    {
+      "handle": "afe-22-23-honda-civic-l4-1-5l-t-takeda-momentum-cold-air-intake-system-w-pro-5r-filter",
+      "refFound": true,
+      "enumFound": false,
+      "unionPresent": true
+    },
+    {
+      "handle": "gp00009688",
+      "refFound": true,
+      "enumFound": false,
+      "unionPresent": true
+    },
+    {
+      "handle": "dt-s-exhaust-for-2017-2021-honda-civic-si-sedan",
+      "refFound": true,
+      "enumFound": false,
+      "unionPresent": true
+    },
+    {
+      "handle": "thermal-r-d-2-5-frontpipe-back-exhaust-system-for-2018-honda-accord-cv1-cv2",
+      "refFound": true,
+      "enumFound": false,
+      "unionPresent": true
+    },
+    {
+      "handle": "dress-up-bolts-gear-titanium-valve-stem-caps",
+      "refFound": true,
+      "enumFound": false,
+      "unionPresent": true
+    },
+    {
+      "handle": "skunk2-pro-series-16-20-honda-civic-gold-anodized-rear-camber-kit",
+      "refFound": true,
+      "enumFound": false,
+      "unionPresent": true
+    },
+    {
+      "handle": "titan7-t-p10-forged-10-spoke-wheel-for-2017-honda-civic-type-r-fk8-fl5-de5",
+      "refFound": true,
+      "enumFound": false,
+      "unionPresent": true
+    },
+    {
+      "handle": "intercooler-charge-pipe-upgrade-kit-for-2017-fk8-civic-type-r-2-0t",
+      "refFound": true,
+      "enumFound": false,
+      "unionPresent": true
+    },
+    {
+      "handle": "hybrid-racing-reservoir-cover",
+      "refFound": true,
+      "enumFound": false,
+      "unionPresent": true
+    },
+    {
+      "handle": "act-17-21-honda-civic-18-21-honda-accord-xact-flywheel-streetlite",
+      "refFound": true,
+      "enumFound": false,
+      "unionPresent": true
+    },
+    {
+      "handle": "7440-c8-model-decoder-xd000583",
+      "refFound": false,
+      "enumFound": false,
+      "unionPresent": false
+    },
+    {
+      "handle": "pre-order-prl-charge-pipe-kit-for-2023-honda-civic-type-r-fl5-acura-integra-type-s-de5-2-0t",
+      "refFound": true,
+      "enumFound": false,
+      "unionPresent": true
+    },
+    {
+      "handle": "mishimoto-performance-aluminum-fan-shroud-kit-for-1992-2000-honda-civic-eg-eh-ej-em",
+      "refFound": true,
+      "enumFound": false,
+      "unionPresent": true
+    },
+    {
+      "handle": "titanium-hardware-fuel-door-kit-honda-civic-si-2012-2015",
+      "refFound": true,
+      "enumFound": false,
+      "unionPresent": true
+    },
+    {
+      "handle": "afe-takeda-momentum-pro-dry-s-cold-air-intake-system-2018-honda-accord-i4-2-0l-t",
+      "refFound": true,
+      "enumFound": false,
+      "unionPresent": true
+    },
+    {
+      "handle": "spoiler-extension-honda-civic-si-coupe-fc3-2017-2021",
+      "refFound": true,
+      "enumFound": false,
+      "unionPresent": true
+    },
+    {
+      "handle": "k-n-18-19-honda-accord-l4-1-5l-f-i-typhoon-air-intake",
+      "refFound": true,
+      "enumFound": false,
+      "unionPresent": true
+    },
+    {
+      "handle": "stage-1-clutch-kit-for-2016-2018-honda-civic-1-5t",
+      "refFound": true,
+      "enumFound": false,
+      "unionPresent": true
+    },
+    {
+      "handle": "2023-integra-foglight-tint",
+      "refFound": true,
+      "enumFound": false,
+      "unionPresent": true
+    },
+    {
+      "handle": "honda-genuine-cylinder-head-gasket-for-2022-honda-civic-1-5t",
+      "refFound": true,
+      "enumFound": false,
+      "unionPresent": true
+    },
+    {
+      "handle": "high-volume-intercooler-outlet-for-2022-honda-civic-1-5t",
+      "refFound": true,
+      "enumFound": false,
+      "unionPresent": true
+    },
+    {
+      "handle": "honda-genuine-unpainted-rear-bumper-for-2022-honda-civic-sedan",
+      "refFound": true,
+      "enumFound": false,
+      "unionPresent": true
+    },
+    {
+      "handle": "z17-evolution-plus-brake-pads-for-2017-honda-civic-si",
+      "refFound": true,
+      "enumFound": false,
+      "unionPresent": true
+    },
+    {
+      "handle": "8-5-inch-220w-led-spot-driving-light-off-road-lights-with-white-drl-amber-turn-signal-light",
+      "refFound": true,
+      "enumFound": false,
+      "unionPresent": true
+    },
+    {
+      "handle": "v-max-series-led-pod-light-amber-cover-light-shield-cover",
+      "refFound": true,
+      "enumFound": false,
+      "unionPresent": true
+    },
+    {
+      "handle": "2016-2021-civic-turbocharger-upgrade-w3",
+      "refFound": true,
+      "enumFound": false,
+      "unionPresent": true
+    },
+    {
+      "handle": "1-4-sae-quick-connect-to-6an-adapter",
+      "refFound": true,
+      "enumFound": false,
+      "unionPresent": true
+    },
+    {
+      "handle": "xd000588",
+      "refFound": false,
+      "enumFound": false,
+      "unionPresent": false
+    },
+    {
+      "handle": "spoon-steering-boss-switch-bracket-set-civic-fk7-fk8",
+      "refFound": true,
+      "enumFound": false,
+      "unionPresent": true
+    },
+    {
+      "handle": "gdi-high-flow-pump-for-2017-honda-civic-type-r-fk8",
+      "refFound": true,
+      "enumFound": false,
+      "unionPresent": true
+    },
+    {
+      "handle": "cometic-16-17-honda-l15b7-molded-rubber-valve-cover-gasket",
+      "refFound": true,
+      "enumFound": false,
+      "unionPresent": true
+    },
+    {
+      "handle": "4-inch-round-led-pod-lights-black-cover-light-shield-cover-1",
+      "refFound": true,
+      "enumFound": false,
+      "unionPresent": true
+    },
+    {
+      "handle": "prl-motorsports-drop-in-air-filter-panel-for-2011-2025-ford-f-150",
+      "refFound": true,
+      "enumFound": false,
+      "unionPresent": true
+    },
+    {
+      "handle": "zd000484",
+      "refFound": true,
+      "enumFound": false,
+      "unionPresent": true
+    },
+    {
+      "handle": "seibon-2017-honda-civic-type-r-carbon-fiber-rear-roof-trim",
+      "refFound": true,
+      "enumFound": false,
+      "unionPresent": true
+    },
+    {
+      "handle": "shifter-base-bushings-for-the-8th-gen-civic",
+      "refFound": true,
+      "enumFound": false,
+      "unionPresent": true
+    },
+    {
+      "handle": "awe-tuning-22-honda-civic-si-acura-integra-track-edition-catback-exhaust-dual-chrome-silver-tips",
+      "refFound": false,
+      "enumFound": false,
+      "unionPresent": false
+    },
+    {
+      "handle": "ventvisor-in-channel-window-deflectors-4pc-smoke-for-2016-civic-sedan",
+      "refFound": true,
+      "enumFound": false,
+      "unionPresent": true
+    },
+    {
+      "handle": "02-04-rsx-auto-to-05-06-rsx-auto-ecu-jumper-harness",
+      "refFound": true,
+      "enumFound": false,
+      "unionPresent": true
+    },
+    {
+      "handle": "hole-saw",
+      "refFound": true,
+      "enumFound": false,
+      "unionPresent": true
+    },
+    {
+      "handle": "z17-evolution-plus-front-brake-pads-for-2018-honda-accord",
+      "refFound": true,
+      "enumFound": false,
+      "unionPresent": true
+    },
+    {
+      "handle": "mishimoto-2016-honda-civic-1-5l-turbo-performance-air-intake-red",
+      "refFound": false,
+      "enumFound": false,
+      "unionPresent": false
+    },
+    {
+      "handle": "special-order-touring-car-widebody-honda-civic-cr-x-del-sol-92-98",
+      "refFound": true,
+      "enumFound": false,
+      "unionPresent": true
+    },
+    {
+      "handle": "color-play-series-led-pod-lights-black-cover-light-shield-cover",
+      "refFound": true,
+      "enumFound": false,
+      "unionPresent": true
+    },
+    {
+      "handle": "revel-gt-dry-carbon-front-fog-light-covers-left-right-17-18-honda-civic-type-r-2-pieces",
+      "refFound": true,
+      "enumFound": false,
+      "unionPresent": true
+    },
+    {
+      "handle": "hybrid-racing-k-swap-air-conditioning-lines-for-92-93-civic",
+      "refFound": true,
+      "enumFound": false,
+      "unionPresent": true
+    },
+    {
+      "handle": "mishimoto-universal-dual-port-compact-baffled-oil-catch-can",
+      "refFound": true,
+      "enumFound": false,
+      "unionPresent": true
+    },
+    {
+      "handle": "xd000441",
+      "refFound": true,
+      "enumFound": false,
+      "unionPresent": true
+    },
+    {
+      "handle": "hps-performance-billet-aluminum-oil-catch-can-kit-860-013",
+      "refFound": true,
+      "enumFound": false,
+      "unionPresent": true
+    },
+    {
+      "handle": "mdr-industries-billet-tube-fin-front-mount-intercooler-for-2023-honda-civic-type-r-2023-acura-integra-type-s-fl5-de5",
+      "refFound": true,
+      "enumFound": false,
+      "unionPresent": true
+    },
+    {
+      "handle": "k-n-22-24-honda-civic-cabin-air-filter",
+      "refFound": true,
+      "enumFound": false,
+      "unionPresent": true
+    },
+    {
+      "handle": "sport-wing-honda-civic-hatchback-fl2-fl5-2022",
+      "refFound": true,
+      "enumFound": false,
+      "unionPresent": true
+    },
+    {
+      "handle": "spu20048",
+      "refFound": true,
+      "enumFound": false,
+      "unionPresent": true
+    },
+    {
+      "handle": "27won-brake-pads",
+      "refFound": true,
+      "enumFound": false,
+      "unionPresent": true
+    },
+    {
+      "handle": "color-play-series-3-inch-led-fog-light-kit-for-honda",
+      "refFound": true,
+      "enumFound": false,
+      "unionPresent": true
+    },
+    {
+      "handle": "tsp-led-tail-lights-for-2018-2022-honda-accord-cv1-cv2",
+      "refFound": true,
+      "enumFound": false,
+      "unionPresent": true
+    },
+    {
+      "handle": "spoon-steering-boss-fit-gk5-civic-fk7-fk8",
+      "refFound": true,
+      "enumFound": false,
+      "unionPresent": true
+    },
+    {
+      "handle": "zd000678",
+      "refFound": true,
+      "enumFound": false,
+      "unionPresent": true
+    },
+    {
+      "handle": "mdr-industries-billet-front-mount-intercooler-for-2023-honda-civic-type-r-type-s-fl5-de5",
+      "refFound": true,
+      "enumFound": false,
+      "unionPresent": true
+    },
+    {
+      "handle": "ballade-sports-titanium-shell-type-open-ended-lug-nut-set-for-2016-honda-acura",
+      "refFound": true,
+      "enumFound": false,
+      "unionPresent": true
+    },
+    {
+      "handle": "skunk2-12-x-1-5-forged-lug-nut-set-black-series-20-pcs",
+      "refFound": false,
+      "enumFound": false,
+      "unionPresent": false
+    },
+    {
+      "handle": "rv6-downpipe-hardware-kit-for-2016-honda-civic-2-0l-n-a",
+      "refFound": true,
+      "enumFound": false,
+      "unionPresent": true
+    },
+    {
+      "handle": "2022-1-5t-civic-integra-turbocharger-upgrade-gin",
+      "refFound": true,
+      "enumFound": false,
+      "unionPresent": true
+    },
+    {
+      "handle": "milltek-sport-valve-delete-module",
+      "refFound": true,
+      "enumFound": false,
+      "unionPresent": true
+    },
+    {
+      "handle": "hps-performance-air-intake-kit-blue-827-579bl",
+      "refFound": true,
+      "enumFound": false,
+      "unionPresent": true
+    },
+    {
+      "handle": "3-high-volume-exhaust-adapter-for-2022-honda-civic",
+      "refFound": true,
+      "enumFound": false,
+      "unionPresent": true
+    },
+    {
+      "handle": "7443d-dual-color-switchback-b21-pro-series-xd000591",
+      "refFound": true,
+      "enumFound": false,
+      "unionPresent": true
+    },
+    {
+      "handle": "dc-sport-anodized-oil-cap-honda-nissan-suzuki",
+      "refFound": false,
+      "enumFound": false,
+      "unionPresent": false
+    },
+    {
+      "handle": "gt-wing-honda-cr-z-zf1-zf2-2010-2016",
+      "refFound": true,
+      "enumFound": false,
+      "unionPresent": true
+    },
+    {
+      "handle": "super-cooler-reverse-flow-silicone-radiator-hoses-for-the-fk8-civic-type-r",
+      "refFound": true,
+      "enumFound": false,
+      "unionPresent": true
+    },
+    {
+      "handle": "tsp-x-prl-stage-1-bundle-kit-for-2017-honda-civic-si-1-5t",
+      "refFound": true,
+      "enumFound": false,
+      "unionPresent": true
+    },
+    {
+      "handle": "acuity-4-way-adjustable-performance-shifter-for-2022-honda-civic-integra-fe-fl-de",
+      "refFound": true,
+      "enumFound": false,
+      "unionPresent": true
+    },
+    {
+      "handle": "perrin-solid-shifter-cable-bushings-for-07-honda-acura",
+      "refFound": true,
+      "enumFound": false,
+      "unionPresent": true
+    },
+    {
+      "handle": "hondata-flashpro-for-2007-2008-acura-tl",
+      "refFound": true,
+      "enumFound": false,
+      "unionPresent": true
+    },
+    {
+      "handle": "prl-high-volume-intake-and-cold-air-duct-bundle-for-2022-honda-civic-2023-acura-integra-1-5t-fe1-fl1-de4",
+      "refFound": true,
+      "enumFound": false,
+      "unionPresent": true
+    },
+    {
+      "handle": "h10-led-fog-bulbs",
+      "refFound": true,
+      "enumFound": false,
+      "unionPresent": true
+    },
+    {
+      "handle": "hps-performance-drop-in-panel-air-filter-hps-457349",
+      "refFound": true,
+      "enumFound": false,
+      "unionPresent": true
+    },
+    {
+      "handle": "hybrid-racing-oem-acura-rdx-injector-upgrade-kit-for-k-swaps",
+      "refFound": true,
+      "enumFound": false,
+      "unionPresent": true
+    },
+    {
+      "handle": "invidia-front-pipe-upgrade-for-2017-2021-honda-civic-type-r-fk8",
+      "refFound": true,
+      "enumFound": false,
+      "unionPresent": true
+    },
+    {
+      "handle": "carbon-fiber-fender-vents-for-2017-honda-civic-type-r-fk8",
+      "refFound": true,
+      "enumFound": false,
+      "unionPresent": true
+    },
+    {
+      "handle": "wunderladen-racing-rear-motor-mount-for-2022-honda-civic",
+      "refFound": true,
+      "enumFound": false,
+      "unionPresent": true
+    },
+    {
+      "handle": "greddy-2017-honda-civic-si-coupe-supreme-sp-exhaust",
+      "refFound": true,
+      "enumFound": false,
+      "unionPresent": true
+    },
+    {
+      "handle": "stage-3-titanium-hardware-engine-bay-kit-honda-s2000-2000-2009",
+      "refFound": true,
+      "enumFound": false,
+      "unionPresent": true
+    },
+    {
+      "handle": "8-o-ring-boss-orb-plug-1",
+      "refFound": true,
+      "enumFound": false,
+      "unionPresent": true
+    },
+    {
+      "handle": "ghost-power-honda-acura",
+      "refFound": true,
+      "enumFound": false,
+      "unionPresent": true
+    },
+    {
+      "handle": "dcsports_frontpipe_22_honda_civic_si",
+      "refFound": true,
+      "enumFound": false,
+      "unionPresent": true
+    },
+    {
+      "handle": "mishimoto-honda-hoonigan-oil-filler-cap-red",
+      "refFound": true,
+      "enumFound": false,
+      "unionPresent": true
+    },
+    {
+      "handle": "rear-motor-mount-insert-for-2017-honda-civic-si-type-r-fk8",
+      "refFound": true,
+      "enumFound": false,
+      "unionPresent": true
+    },
+    {
+      "handle": "remark-2017-honda-civic-sport-non-resonated-cat-back-exhaust-w-stainless-steel-tip-cover",
+      "refFound": true,
+      "enumFound": false,
+      "unionPresent": true
+    },
+    {
+      "handle": "injen-2016-honda-civic-2-0l-4-cyl-black-cold-air-intake",
+      "refFound": false,
+      "enumFound": false,
+      "unionPresent": false
+    },
+    {
+      "handle": "hondata-7-bar-map-sensor-k-series",
+      "refFound": true,
+      "enumFound": false,
+      "unionPresent": true
+    },
+    {
+      "handle": "borla-17-19-honda-civic-si-sedan-1-5l-turbo-mt-fwd-4dr-catback-s-type-w-ceramic-black-tips",
+      "refFound": true,
+      "enumFound": false,
+      "unionPresent": true
+    },
+    {
+      "handle": "ktuner-revision-1-05-06-rsx-type-s-prb-ecu-package",
+      "refFound": true,
+      "enumFound": false,
+      "unionPresent": true
+    },
+    {
+      "handle": "konig-hexaform-gloss-white-wheel-18x8-5-43-5x114-3",
+      "refFound": false,
+      "enumFound": false,
+      "unionPresent": false
+    },
+    {
+      "handle": "comp-clutch-16-honda-civic-1-5t-stage-2-organic-steel-flywheel-w-17lbs",
+      "refFound": true,
+      "enumFound": false,
+      "unionPresent": true
+    },
+    {
+      "handle": "tsp-x-prl-stage-4-bundle-kit-for-2017-honda-civic-si-1-5t",
+      "refFound": true,
+      "enumFound": false,
+      "unionPresent": true
+    },
+    {
+      "handle": "injen-16-21-honda-civic-1-5l-4-cyl-wrinkle-red-short-ram-intake",
+      "refFound": true,
+      "enumFound": false,
+      "unionPresent": true
+    },
+    {
+      "handle": "ghost-box-3-0",
+      "refFound": true,
+      "enumFound": false,
+      "unionPresent": true
+    },
+    {
+      "handle": "hps-performance-high-temp-reinforced-silicone-air-intake-hose-kit-black-57-1595-blk",
+      "refFound": true,
+      "enumFound": false,
+      "unionPresent": true
+    },
+    {
+      "handle": "ballade-sports-gloss-black-mesh-grille-for-2017-2021-honda-civic-type-r-fk8",
+      "refFound": true,
+      "enumFound": false,
+      "unionPresent": true
+    },
+    {
+      "handle": "seibon-2017-honda-civic-type-r-rear-license-trim",
+      "refFound": true,
+      "enumFound": false,
+      "unionPresent": true
+    },
+    {
+      "handle": "prl-motorsports-helix-air-oil-separator-for-23-honda-civic-type-r-24-acura-integra-type-s",
+      "refFound": true,
+      "enumFound": false,
+      "unionPresent": true
+    },
+    {
+      "handle": "airplus-air-struts-for-2017-honda-civic-si-2018-honda-accord",
+      "refFound": true,
+      "enumFound": false,
+      "unionPresent": true
+    },
+    {
+      "handle": "carbon-fibre-brake-pad-shims-for-2017-honda-civic-type-r-fk8-fronts-only",
+      "refFound": true,
+      "enumFound": false,
+      "unionPresent": true
+    },
+    {
+      "handle": "rear-spats-acura-integra-de4-2023",
+      "refFound": true,
+      "enumFound": false,
+      "unionPresent": true
+    },
+    {
+      "handle": "eibach-pro-alignment-rear-camber-arm-kit-for-2018-honda-accord-1-5l-turbo",
+      "refFound": true,
+      "enumFound": false,
+      "unionPresent": true
+    },
+    {
+      "handle": "50-inch-6-modes-white-amber-straight-off-road-led-light-bar",
+      "refFound": false,
+      "enumFound": false,
+      "unionPresent": false
+    },
+    {
+      "handle": "cube-z-series-4-inch-led-pod-lights-off-road-lights-with-white-drl-amber-turn-signal-lights-1",
+      "refFound": true,
+      "enumFound": false,
+      "unionPresent": true
+    },
+    {
+      "handle": "16-21-honda-civic-doubletap-dual-color-led-projector-fog-lights",
+      "refFound": true,
+      "enumFound": false,
+      "unionPresent": true
+    },
+    {
+      "handle": "tsp-x-27won-stage-1-bundle-kit-for-2022-civic-si",
+      "refFound": true,
+      "enumFound": false,
+      "unionPresent": true
+    },
+    {
+      "handle": "revel-gt-dry-carbon-dash-cluster-cover-16-18-honda-civic-1-piece",
+      "refFound": true,
+      "enumFound": false,
+      "unionPresent": true
+    },
+    {
+      "handle": "billetworkz-alcantara-premium-shift-boot-for-2023-acura-integra-w-manual-transmission",
+      "refFound": true,
+      "enumFound": false,
+      "unionPresent": true
+    },
+    {
+      "handle": "gp00009690",
+      "refFound": true,
+      "enumFound": false,
+      "unionPresent": true
+    },
+    {
+      "handle": "mdr-industries-silicone-intercooler-hose-kit-for-2023-honda-civic-type-r-type-s-fl5-de5",
+      "refFound": true,
+      "enumFound": false,
+      "unionPresent": true
+    },
+    {
+      "handle": "4-inch-168w-combo-beam-side-shooter-led-pod-lights-with-amber-drl-1",
+      "refFound": true,
+      "enumFound": false,
+      "unionPresent": true
+    },
+    {
+      "handle": "xd000464",
+      "refFound": true,
+      "enumFound": false,
+      "unionPresent": true
+    },
+    {
+      "handle": "drl-tint-overlays",
+      "refFound": true,
+      "enumFound": false,
+      "unionPresent": true
+    },
+    {
+      "handle": "honda-genuine-turbocharger-to-downpipe-flanged-bolt-for-2016-honda-civic-integra-accord",
+      "refFound": true,
+      "enumFound": false,
+      "unionPresent": true
+    },
+    {
+      "handle": "x-pro-series-3-inch-80w-spot-beam-led-pods-yellow-white-offroad-lights",
+      "refFound": true,
+      "enumFound": false,
+      "unionPresent": true
+    },
+    {
+      "handle": "honda-genuine-accord-rear-aluminum-end-link-upgrade-for-2016-civic-accord-integra",
+      "refFound": true,
+      "enumFound": false,
+      "unionPresent": true
+    },
+    {
+      "handle": "honda-oem-release-bearing-for-2016-civic-1-5t",
+      "refFound": true,
+      "enumFound": false,
+      "unionPresent": true
+    },
+    {
+      "handle": "titanium-hardware-fuel-rail-kit-honda-k20-k24",
+      "refFound": true,
+      "enumFound": false,
+      "unionPresent": true
+    },
+    {
+      "handle": "hondata-flashpro-ecu-programmer-tuner-for-2006-2011-honda-civic-si",
+      "refFound": true,
+      "enumFound": false,
+      "unionPresent": true
+    },
+    {
+      "handle": "ktuner-flexfit-hat",
+      "refFound": true,
+      "enumFound": false,
+      "unionPresent": true
+    },
+    {
+      "handle": "eibach-sportline-kit-for-17-18-honda-civic-type-r",
+      "refFound": true,
+      "enumFound": false,
+      "unionPresent": true
+    },
+    {
+      "handle": "resonator-delete-kit-for-2022-honda-civic-1-5t",
+      "refFound": true,
+      "enumFound": false,
+      "unionPresent": true
+    },
+    {
+      "handle": "honda-civic-gen-10-2-0-non-type-r-oil-catch-can-kit",
+      "refFound": true,
+      "enumFound": false,
+      "unionPresent": true
+    },
+    {
+      "handle": "honda-civic-gen-10-coolant-expansion-tank",
+      "refFound": true,
+      "enumFound": false,
+      "unionPresent": true
+    },
+    {
+      "handle": "invidia-17-honda-civic-si-sedan-gemini-triple-titanium-tip-cat-back-exhaust",
+      "refFound": true,
+      "enumFound": false,
+      "unionPresent": true
+    },
+    {
+      "handle": "p3-gauges-low-profile-obd2-splitter",
+      "refFound": true,
+      "enumFound": false,
+      "unionPresent": true
+    },
+    {
+      "handle": "greddy-2017-honda-civic-si-coupe-dd-r-resonated-exhaust",
+      "refFound": true,
+      "enumFound": false,
+      "unionPresent": true
+    },
+    {
+      "handle": "6-an-centerfeed-fuel-line-for-various-k-series-applications",
+      "refFound": true,
+      "enumFound": false,
+      "unionPresent": true
+    },
+    {
+      "handle": "gtc-300-adjustable-wing-for-2024-acura-integra-type-s-de5",
+      "refFound": true,
+      "enumFound": false,
+      "unionPresent": true
+    },
+    {
+      "handle": "apr-c-f-aero-kit-civic-type-r-fl5-2023",
+      "refFound": true,
+      "enumFound": false,
+      "unionPresent": true
+    },
+    {
+      "handle": "eibach-pro-kit-for-2018-honda-accord-1-5l-2-0l",
+      "refFound": true,
+      "enumFound": false,
+      "unionPresent": true
+    },
+    {
+      "handle": "tsp-led-tail-lights-for-2022-honda-civic-hatchback",
+      "refFound": true,
+      "enumFound": false,
+      "unionPresent": true
+    },
+    {
+      "handle": "spoon-motion-control-beam-front-rear-civic-fk7-fc1-fk8",
+      "refFound": true,
+      "enumFound": false,
+      "unionPresent": true
+    },
+    {
+      "handle": "spu20029",
+      "refFound": true,
+      "enumFound": false,
+      "unionPresent": true
+    },
+    {
+      "handle": "verus-engineering-dive-plane-canard-kit-for-2023-honda-civic-type-r-fl5",
+      "refFound": false,
+      "enumFound": false,
+      "unionPresent": false
+    },
+    {
+      "handle": "hybrid-racing-shifter-base-bushing-16-18-civic",
+      "refFound": true,
+      "enumFound": false,
+      "unionPresent": true
+    },
+    {
+      "handle": "zd000681",
+      "refFound": true,
+      "enumFound": false,
+      "unionPresent": true
+    },
+    {
+      "handle": "bosch-ecu-unlocking-service-for-honda-civic-type-r-fk8-fl5-integra-type-s-de5",
+      "refFound": false,
+      "enumFound": false,
+      "unionPresent": false
+    },
+    {
+      "handle": "cube-z-series-4-inch-flood-led-pod-lights-off-road-lights-with-white-drl-amber-turn-signal-lights",
+      "refFound": true,
+      "enumFound": false,
+      "unionPresent": true
+    },
+    {
+      "handle": "wunderladen-racing-in-tank-fuel-pump-upgrade-for-2016-honda-civic-1-5t",
+      "refFound": true,
+      "enumFound": false,
+      "unionPresent": true
+    },
+    {
+      "handle": "hybrid-racing-license-plate-frame",
+      "refFound": true,
+      "enumFound": false,
+      "unionPresent": true
+    },
+    {
+      "handle": "honda-l15b-turbo-helical-limited-slip-differential-lsd",
+      "refFound": true,
+      "enumFound": false,
+      "unionPresent": true
+    },
+    {
+      "handle": "hybrid-racing-maxim-shift-boot-collar",
+      "refFound": true,
+      "enumFound": false,
+      "unionPresent": true
+    },
+    {
+      "handle": "hps-performance-high-temp-reinforced-silicone-radiator-coolant-hose-kit-black-57-1022-blk",
+      "refFound": true,
+      "enumFound": false,
+      "unionPresent": true
+    },
+    {
+      "handle": "tsp-x-ptp-form-fitting-lava-downpipe-blanket-for-2017-honda-acura-tsp-hedp-fk8-accord-tlx-rdx-returned-item-3",
+      "refFound": false,
+      "enumFound": false,
+      "unionPresent": false
+    },
+    {
+      "handle": "h-r-18-21-honda-accord-sport-spring",
+      "refFound": true,
+      "enumFound": false,
+      "unionPresent": true
+    },
+    {
+      "handle": "magnaflow-cat-back-2016-honda-civic-sedan-only-1-5l-l4-turbo-2-25in-ss-dual-outlet",
+      "refFound": true,
+      "enumFound": false,
+      "unionPresent": true
+    },
+    {
+      "handle": "front-bumper-spoiler-for-2017-honda-civic-type-r-fk8",
+      "refFound": true,
+      "enumFound": false,
+      "unionPresent": true
+    },
+    {
+      "handle": "prl-motorsports-titanium-turbo-inlet-pipe-for-2018-2022-honda-accord-2-0t-cv2",
+      "refFound": true,
+      "enumFound": false,
+      "unionPresent": true
+    },
+    {
+      "handle": "center-cap-set-for-titan7-wheels",
+      "refFound": true,
+      "enumFound": false,
+      "unionPresent": true
+    },
+    {
+      "handle": "rv6-front-spherical-bushings-for-2022-honda-civic-type-r-fl5",
+      "refFound": true,
+      "enumFound": false,
+      "unionPresent": true
+    },
+    {
+      "handle": "seibon-16-17-honda-civic-type-r-oem-carbon-fiber-rear-lip",
+      "refFound": true,
+      "enumFound": false,
+      "unionPresent": true
+    },
+    {
+      "handle": "prl-motorsports-2016-1-5t-honda-civic-stage-1-silicone-intake-hose-black",
+      "refFound": true,
+      "enumFound": false,
+      "unionPresent": true
+    },
+    {
+      "handle": "hondata-fk8-2020-civic-type-r-jailbreaker",
+      "refFound": true,
+      "enumFound": false,
+      "unionPresent": true
+    },
+    {
+      "handle": "tsp-downpipe-o2-sensor-extension-harness-for-2016-honda-acura-1-5t-2-0t",
+      "refFound": true,
+      "enumFound": false,
+      "unionPresent": true
+    },
+    {
+      "handle": "aos-coolant-add-on-kit-for-2017-honda-civic-type-r",
+      "refFound": true,
+      "enumFound": false,
+      "unionPresent": true
+    },
+    {
+      "handle": "led-foglight-tint-for-2016-honda-civic",
+      "refFound": true,
+      "enumFound": false,
+      "unionPresent": true
+    },
+    {
+      "handle": "rb80-xl-rgb-switch-panel-with-app-toggle-momentary-pulsed-mode-supported-two-sided-outlet",
+      "refFound": true,
+      "enumFound": false,
+      "unionPresent": true
+    },
+    {
+      "handle": "hps-performance-high-temp-reinforced-silicone-radiator-coolant-hose-kit-black-57-1393-blk",
+      "refFound": true,
+      "enumFound": false,
+      "unionPresent": true
+    },
+    {
+      "handle": "2019-acura-rdx-2-0t-silicone-intake-hose-kit",
+      "refFound": true,
+      "enumFound": false,
+      "unionPresent": true
+    },
+    {
+      "handle": "apr-performance-passenger-side-carbon-fiber-radiator-cooling-plate-for-2023-honda-civic-type-r-fl5",
+      "refFound": true,
+      "enumFound": false,
+      "unionPresent": true
+    },
+    {
+      "handle": "prl-motorsports-2016-1-5t-honda-civic-stage-1-intake-system-black",
+      "refFound": true,
+      "enumFound": false,
+      "unionPresent": true
+    },
+    {
+      "handle": "3-inch-led-driving-light-black-cover-light-shield-cover-1",
+      "refFound": true,
+      "enumFound": false,
+      "unionPresent": true
+    },
+    {
+      "handle": "dress-up-bolts-titanium-hardware-headlight-kit-honda-civic-si-2016-2021",
+      "refFound": true,
+      "enumFound": false,
+      "unionPresent": true
+    },
+    {
+      "handle": "hps-performance-high-temp-reinforced-silicone-radiator-and-heater-coolant-hose-kit-black-57-1607-blk",
+      "refFound": true,
+      "enumFound": false,
+      "unionPresent": true
+    },
+    {
+      "handle": "awe-tuning-honda-civic-si-10th-gen-1-5l-turbo-touring-edition-conversion-kit",
+      "refFound": true,
+      "enumFound": false,
+      "unionPresent": true
+    },
+    {
+      "handle": "hps-performance-high-temp-reinforced-silicone-radiator-and-heater-coolant-hose-kit-black-57-1389-blk",
+      "refFound": true,
+      "enumFound": false,
+      "unionPresent": true
+    },
+    {
+      "handle": "exedy-oe-2017-honda-civic-type-r-clutch-kit",
+      "refFound": true,
+      "enumFound": false,
+      "unionPresent": true
+    },
+    {
+      "handle": "perrin-short-shift-adapter-for-16-21-honda-civic",
+      "refFound": true,
+      "enumFound": false,
+      "unionPresent": true
+    },
+    {
+      "handle": "ballade-sports-titanium-exhaust-system-for-2023-honda-civic-type-r-fl5",
+      "refFound": true,
+      "enumFound": false,
+      "unionPresent": true
+    },
+    {
+      "handle": "k-series-transmission-performance-spring-upgrade-1887",
+      "refFound": true,
+      "enumFound": false,
+      "unionPresent": true
+    },
+    {
+      "handle": "11566500k-white-b52-series-xd000700",
+      "refFound": true,
+      "enumFound": false,
+      "unionPresent": true
+    },
+    {
+      "handle": "4p-k20-k24-heavy-hitter-flywheel-bolts",
+      "refFound": true,
+      "enumFound": false,
+      "unionPresent": true
+    },
+    {
+      "handle": "tsp-x-prl-stage-4-bundle-kits-for-2023-integra-1-5t",
+      "refFound": true,
+      "enumFound": false,
+      "unionPresent": true
+    },
+    {
+      "handle": "ghostkey-plug-and-play-push-to-start-conversion-kit",
+      "refFound": true,
+      "enumFound": false,
+      "unionPresent": true
+    },
+    {
+      "handle": "hps-performance-drop-in-panel-air-filter-hps-457348",
+      "refFound": true,
+      "enumFound": false,
+      "unionPresent": true
+    },
+    {
+      "handle": "hondata-flex-fuel-kit-canbus",
+      "refFound": true,
+      "enumFound": false,
+      "unionPresent": true
+    },
+    {
+      "handle": "albert-park-metal-neon-race-track-mtn0114",
+      "refFound": false,
+      "enumFound": false,
+      "unionPresent": false
+    },
+    {
+      "handle": "diffuser-v1-acura-rsx-dc5-2002-2006",
+      "refFound": false,
+      "enumFound": false,
+      "unionPresent": false
+    }
+  ],
+  "timestamp": "2026-08-05T16:39:24.253Z"
+}
