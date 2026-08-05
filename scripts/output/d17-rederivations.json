@@ -1,0 +1,192 @@
+{
+  "absolutelyInvisible": [
+    {
+      "targetId": "IV01",
+      "handle": "br-series-coilovers-for-2016-honda-civic-non-si-1-5t-coupe-sedan",
+      "title": "BR Series Coilovers for 2016-2021 Honda Civic Non-Si Coupe / Sedan",
+      "rankBasedVerdict": "absolutely_invisible",
+      "enumVerdict": "ABSENT",
+      "agrees": true
+    },
+    {
+      "targetId": "IV02",
+      "handle": "icon-stage-4-w-billet-uca-suspension-kit-for-2021-2025-ford-f-150-4wd",
+      "title": "ICON Stage 4 Lift Kit CDCV for 2021-2024 Ford F-150 4WD",
+      "rankBasedVerdict": "absolutely_invisible",
+      "enumVerdict": "ABSENT",
+      "agrees": true
+    },
+    {
+      "targetId": "IV03",
+      "handle": "paragon-pbp370-brake-pads",
+      "title": "Paragon PBP370 Front Brake Pads",
+      "rankBasedVerdict": "absolutely_invisible",
+      "enumVerdict": "ABSENT",
+      "agrees": true
+    }
+  ],
+  "absentAtDepth": [
+    {
+      "queryId": "Q01",
+      "targetId": "keep-paragon-pbp370",
+      "handle": "paragon-pbp370-brake-pads",
+      "population": "retained",
+      "rankBasedVerdict": "absent_at_depth_1000",
+      "enumVerdict": "ABSENT",
+      "agrees": true
+    },
+    {
+      "queryId": "Q03",
+      "targetId": "keep-paragon-pbp370",
+      "handle": "paragon-pbp370-brake-pads",
+      "population": "retained",
+      "rankBasedVerdict": "absent_at_depth_1000",
+      "enumVerdict": "ABSENT",
+      "agrees": true
+    },
+    {
+      "queryId": "Q03",
+      "targetId": "keep-paragon-pbp1557",
+      "handle": "paragon-pbp1557-brake-pads",
+      "population": "retained",
+      "rankBasedVerdict": "absent_at_depth_1000",
+      "enumVerdict": "ABSENT",
+      "agrees": true
+    },
+    {
+      "queryId": "Q03",
+      "targetId": "drop-27won-pads",
+      "handle": "27won-brake-pads",
+      "population": "dropped",
+      "rankBasedVerdict": "absent_at_depth_1000",
+      "enumVerdict": "ABSENT",
+      "agrees": true
+    },
+    {
+      "queryId": "Q05",
+      "targetId": "drop-prl-bbk",
+      "handle": "prl-motorsports-4-piston-bbk-paragon-upgrade-kit-for-2017-honda-civic-si-integra-fc-fe-de4-1",
+      "population": "dropped",
+      "rankBasedVerdict": "absent_at_depth_1000",
+      "enumVerdict": "ABSENT",
+      "agrees": true
+    },
+    {
+      "queryId": "Q05",
+      "targetId": "drop-27won-pads",
+      "handle": "27won-brake-pads",
+      "population": "dropped",
+      "rankBasedVerdict": "absent_at_depth_1000",
+      "enumVerdict": "ABSENT",
+      "agrees": true
+    },
+    {
+      "queryId": "Q10",
+      "targetId": "keep-br-coilovers",
+      "handle": "br-series-coilovers-for-2016-honda-civic-non-si-1-5t-coupe-sedan",
+      "population": "retained",
+      "rankBasedVerdict": "absent_at_depth_1000",
+      "enumVerdict": "ABSENT",
+      "agrees": true
+    },
+    {
+      "queryId": "Q11",
+      "targetId": "keep-icon-lift",
+      "handle": "icon-stage-4-w-billet-uca-suspension-kit-for-2021-2025-ford-f-150-4wd",
+      "population": "retained",
+      "rankBasedVerdict": "absent_at_depth_1000",
+      "enumVerdict": "ABSENT",
+      "agrees": true
+    },
+    {
+      "queryId": "Q15",
+      "targetId": "drop-27won-pads",
+      "handle": "27won-brake-pads",
+      "population": "dropped",
+      "rankBasedVerdict": "absent_at_depth_1000",
+      "enumVerdict": "ABSENT",
+      "agrees": true
+    },
+    {
+      "queryId": "Q16",
+      "targetId": "keep-br-coilovers",
+      "handle": "br-series-coilovers-for-2016-honda-civic-non-si-1-5t-coupe-sedan",
+      "population": "retained",
+      "rankBasedVerdict": "absent_at_depth_1000",
+      "enumVerdict": "ABSENT",
+      "agrees": true
+    }
+  ],
+  "subimodsInvisibility": {
+    "totalTargets": 12,
+    "rankBasedFound": 9,
+    "rankBasedAbsent": 3,
+    "enumPresent": 0,
+    "enumAbsent": 12,
+    "absentAtDepthInEnum": 0,
+    "absentAtDepthNotInEnum": 3,
+    "perTarget": [
+      {
+        "handle": "27won-brake-pads",
+        "rankBased": "present@present@200",
+        "enumVerdict": "ABSENT"
+      },
+      {
+        "handle": "paragon-pbp370-brake-pads",
+        "rankBased": "absent_at_depth",
+        "enumVerdict": "ABSENT"
+      },
+      {
+        "handle": "paragon-pbp1557-brake-pads",
+        "rankBased": "present@present@200",
+        "enumVerdict": "ABSENT"
+      },
+      {
+        "handle": "prl-motorsports-4-piston-bbk-paragon-upgrade-kit-for-2017-honda-civic-si-integra-fc-fe-de4-1",
+        "rankBased": "present@present@50",
+        "enumVerdict": "ABSENT"
+      },
+      {
+        "handle": "hel-hon-4-905",
+        "rankBased": "present@present@3",
+        "enumVerdict": "ABSENT"
+      },
+      {
+        "handle": "eibach-22-23-honda-civic-type-r-fwd-fl5-sportline-kit-set-of-4-springs",
+        "rankBased": "present@present@10",
+        "enumVerdict": "ABSENT"
+      },
+      {
+        "handle": "whiteline-2015-honda-civic-rear-upper-camber-arm-adjustable-pair",
+        "rankBased": "present@present@3",
+        "enumVerdict": "ABSENT"
+      },
+      {
+        "handle": "br-series-coilovers-for-2016-honda-civic-non-si-1-5t-coupe-sedan",
+        "rankBased": "absent_at_depth",
+        "enumVerdict": "ABSENT"
+      },
+      {
+        "handle": "icon-stage-4-w-billet-uca-suspension-kit-for-2021-2025-ford-f-150-4wd",
+        "rankBased": "absent_at_depth",
+        "enumVerdict": "ABSENT"
+      },
+      {
+        "handle": "27won-performance-valved-exhaust-system-for-2023-honda-civic-type-r-fl5",
+        "rankBased": "present@present@3",
+        "enumVerdict": "ABSENT"
+      },
+      {
+        "handle": "high-efficiency-downpipe-upgrade-for-2017-2021-honda-civic-type-r-fk8",
+        "rankBased": "present@present@10",
+        "enumVerdict": "ABSENT"
+      },
+      {
+        "handle": "11th-gen-civic-front-strut-tower-bar",
+        "rankBased": "present@present@3",
+        "enumVerdict": "ABSENT"
+      }
+    ]
+  },
+  "timestamp": "2026-08-05T09:34:27.168Z"
+}
