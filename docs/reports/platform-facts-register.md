@@ -218,6 +218,32 @@ Range: 1.6–8.1%. Mean: 3.7%. This is not the U8-A bug (which returned 100% ide
 
 ---
 
+## 13. `total_count` is a response budget, not a match count
+
+**Documented claim:** (Not documented — discovered by this project)
+
+**Observed behaviour:** The Catalog API's `pagination.total_count` field returns approximately the same value (~360–390) regardless of query semantics. Seven semantically unrelated queries all return values in a narrow range:
+
+| Query | `total_count` |
+|---|---|
+| brake pads for 2018 Honda Civic Si | 362 |
+| zxqv flurbin widget (nonsense) | 361 |
+| organic coffee beans | 361 |
+| yoga mat | 373 |
+| dog leash | 387 |
+| mechanical keyboard | 385 |
+| garden hose | 381 |
+
+Range: 361–387. A nonsense query and a real query return nearly identical values (361 vs 362). This is not what a count of matching products looks like — it is a response budget.
+
+**Evidence:** `scripts/output/d16-exhaustion.json` (first two queries), §2 probe output (remaining five queries, DIRECTIVE-17 §2).
+
+**Date established:** 4 August 2026 (DIRECTIVE-17 §2)
+
+**Impact:** For queries with more than ~360 genuine matches, the result set is truncated by budget, not exhausted by relevance. The tail inspection showing genuine brake pads at rank 200–220 is consistent with this: the budget is filled with the best available matches. The CAP reading of U-7 (register entry 7) is settled — the ~300 exhaustion boundary is a budget cap, not a relevance boundary. Rank-based absence testing is retired (DIRECTIVE-17 §3).
+
+---
+
 ## Summary
 
 | # | Fact | Status | Date |
@@ -234,5 +260,6 @@ Range: 1.6–8.1%. Mean: 3.7%. This is not the U8-A bug (which returned 100% ide
 | 10 | No per-store enumeration | Platform limitation — search is relevance-ranked, no enumeration endpoint, 54% false negative rate | 4 Aug 2026 |
 | 11 | `/products.json` exhaustiveness | **RESTATED** — exhaustive for stores < 25,000 products. Platform caps at 25,000 (HTTP 400 at page 101). Subimods: 18,066 vs 18,067 sitemap (0.006%). MAP: 25,000 vs 102,176 (75.5%). TSP: 2,608 vs 2,608 (0%). Prior shortfall was our fetch bug | 4 Aug 2026 |
 | 12 | Cursor pagination overlap | Platform behaviour — 1.6–8.1% overlap per page, mean 3.7%. Not the U8-A bug (100%). I-1 relaxed to 15% abort / 20% ceiling | 4 Aug 2026 |
+| 13 | `total_count` is a response budget | ~360–390 across 7 unrelated queries. Not a match count. Rank-based absence retired | 4 Aug 2026 |
 
 **This is the one publishable artefact the project already owns outright.** It depends on no hypothesis, cannot be over-read, is checkable by anyone with an API key, and is exactly what establishes standing with the people who would eventually pay.

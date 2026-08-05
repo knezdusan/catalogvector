@@ -1,0 +1,39 @@
+{
+  "seed": 42,
+  "sampleSize": 100,
+  "sitemapCount": 18067,
+  "enumerationHandles": 13257,
+  "partitionQueries": 692,
+  "partition": {
+    "vendors": 265,
+    "productTypes": 428,
+    "totalQueries": 692,
+    "oldVendors": 183,
+    "oldProductTypes": 342,
+    "oldQueries": 524
+  },
+  "scoring": {
+    "refPresent": 77,
+    "enumPresent": 74,
+    "unionPresent": 80,
+    "bothPresent": 71,
+    "bothAbsent": 20,
+    "refOnlyPresent": 6,
+    "enumOnlyPresent": 3,
+    "recallRandom": 0.8875,
+    "absenceRate": 0.2,
+    "ci": {
+      "lower": 0.1333659225590988,
+      "upper": 0.28883096192650237
+    }
+  },
+  "absenceRange": {
+    "presenceRate": 0.8,
+    "impliedPresentFromSample": 14454,
+    "impliedAbsentFromSample": 3613,
+    "absentShare": 0.1999778601870814,
+    "ciLower": 0.1333659225590988,
+    "ciUpper": 0.28883096192650237
+  },
+  "timestamp": "2026-08-05T09:31:17.899Z"
+}
