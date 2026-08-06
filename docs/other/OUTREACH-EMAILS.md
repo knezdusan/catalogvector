@@ -1,7 +1,7 @@
 # CatalogVector — Gate A Outreach
 
-**Date:** 4 August 2026
-**Target:** 2 merchants, 3 brands (inverted split — the brand hypothesis is the one that needs the sample)
+**Date:** 4 August 2026 (revised 6 August 2026, DIRECTIVE-19 §5.1)
+**Target:** 25 contacts total — merchants and brands (inverted split — the brand hypothesis is the one that needs the sample). Send 5 now, reach 25 within three weeks as the study measures more stores.
 **Gate:** one paid pilot at ≥€2,500 within 8–10 weeks of first outbound contact. The €500 tier is removed.
 
 ---
@@ -36,6 +36,8 @@
 >
 > But it's your catalogue and you can check the ones I flag. Happy to send the list free, no strings. If it turns out to matter, I do a paid deeper version.
 >
+> One thing I should mention: I'm publishing a methods paper on this measurement. Your store's name would appear in it with its absence rate and confidence interval — not as a failing, just as a data point. I'll send you the figure before anything goes public, and you can dispute it. If you'd rather not be named, say so and I'll exclude you from the paper.
+>
 > Worth fifteen minutes?
 >
 > Dušan
@@ -56,6 +58,8 @@
 > I'm not selling a fix; I can't diagnose why it happens. I measure it, and only the Shopify side of the shelf.
 >
 > If it's useful I'll run [store] and send you the list, free. Fifteen minutes to tell me whether the number means anything to you would be worth more to me than the report is to you.
+>
+> One disclosure: I'm publishing a methods paper on this measurement. Your store would be named in it with its absence rate and interval. I'll share the figure before publication and you can dispute it. If you'd rather not be named, say so.
 >
 > Dušan
 > [link]
@@ -102,21 +106,23 @@
 
 ---
 
-## BRAND 3 — the surface angle, for a brand outside auto parts
+## BRAND 3 — the attribution angle, for a brand outside auto parts
 
-**Subject:** ChatGPT doesn't show product cards for [category] at all
+**Subject:** which resellers hold the AI shelf for [brand] parts
 
 > Hi [name],
 >
-> I've been measuring when ChatGPT actually renders a shopping card versus answering in plain text. Across 24 buying-intent queries the card fired about 42% of the time — but it varied hard by category: 67% in auto parts, **0% across four queries in [their category]**.
+> I've been measuring which sellers appear in Shopify's Global Catalog — the index feeding ChatGPT and Copilot shopping results — for specific parts.
 >
-> If the card never fires for your category, catalogue data, schema and feed work change nothing on that surface. That's a different question from ranking, and it's the one I'd want answered before spending on the rest.
+> For [brand], I can enumerate which resellers carry your parts in that catalogue and which don't appear under their own name. The same part sitting in three authorised distributors' warehouses might show up under one seller's name, or none, and there's no way to see this from a reseller's admin.
 >
-> Small sample, one assistant, and I only see the Shopify side. I'll widen the query set for [category] and send you what I get, free.
+> I only see Shopify sellers — not Amazon, eBay or the aggregators. But the per-part list is checkable and it's yours free.
 >
-> Fifteen minutes?
+> Worth a short call?
 >
 > Dušan
+
+**NOTE (added 6 Aug 2026, DIRECTIVE-19 §5.1):** The previous BRAND 3 template was built on a 0/4 surface-trigger figure with a 95% interval running to ~60%. Sending a 0/4 figure as a headline to a brand in that category is failure mode #6 aimed at an external recipient. BRAND 3 is rewritten on the attribution angle. The surface-trigger angle will be re-tested at ≥10 queries per vertical (DIRECTIVE-19 §4.4) before any surface-trigger claim is made in outreach.
 
 ---
 
@@ -126,7 +132,7 @@ Plain text, from your own domain, no HTML, no tracking pixels, no attachments �
 
 Send Tuesday to Thursday, morning in the recipient's timezone. **One follow-up only**, seven days later, three lines: *"Following up on the below — happy to send the [store/brand] list either way, no call needed. If it's not relevant, just say so and I'll stop."* That last clause raises reply rates and gives you a clean negative.
 
-Send all five within 48 hours. **The clock starts at the first one.**
+Send the first 5 within 48 hours. **The clock starts at the first one.** Reach 25 within three weeks as the study measures more stores.
 
 ---
 
@@ -146,7 +152,9 @@ Send all five within 48 hours. **The clock starts at the first one.**
 
 ## The read — pre-registered, not adjustable
 
-- **≤1 substantive reply** → the framing is wrong. Recraft and resend once. **Not a demand finding.**
+**Applies at n=25 contacts, not n=5.** At n=5, a generous 20% reply rate gives P(≥3 substantive replies) ≈ 5.8% — the pre-registered read is unreachable. At n=25, the same rate gives P(≥3) ≈ 76%. Send 5 now, reach 25 within three weeks. The read applies at 25.
+
+- **≤1 substantive reply out of 25** → the framing is wrong. Recraft and resend once. **Not a demand finding.**
 - **≥3 substantive replies, none naming an internal owner or a budget line** → **this is the demand finding.** No buyer exists at present.
 - **Anyone paying €2,500, or asking about recurring before you mention it** → Gate A is live.
 

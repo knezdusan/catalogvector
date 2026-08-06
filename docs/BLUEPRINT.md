@@ -150,7 +150,7 @@ Productization reopens only after **2–3 engagements reveal the same repeatable
 ### Phase 3 — Productize
 Not now. Not designed now.
 
-### 5.1 Timebox withdrawal, evidence-gated milestones, and Gate A replacement *(updated per DIRECTIVE-4 §8, 2 Aug 2026)*
+### 5.1 Timebox withdrawal, evidence-gated milestones, and Gate A replacement *(updated per DIRECTIVE-4 §8, 2 Aug 2026; revised 6 Aug 2026 per DIRECTIVE-19 §5.5)*
 
 **The three-week timebox is withdrawn.** The Phase 1 header above reads "*(3 weeks)*" for historical continuity; that calendar constraint no longer binds. DIRECTIVE-3 supersedes the Phase 0 / Phase 1 sequencing in this §5 and the three-week milestone plan in `TDD.md` §9.
 
@@ -162,13 +162,11 @@ Not now. Not designed now.
 
 **Window: 8–10 weeks from first outbound contact.**
 
-**G1 — the gate. Either route clears:**
-- Two paid diagnostics at **≥ €500 each**, or
-- One paid pilot remediation at **≥ €2,500** (e.g. 100 SKUs)
+**G1 — the gate.** One paid pilot remediation at **≥ €2,500** (e.g. 100 SKUs).
 
-€500 sits where a manager can approve without procurement — low enough to be a real decision, high enough that nobody pays it to be polite. The pilot route matters because it tests willingness to pay for the **fix**, which is where the business is, rather than for the diagnosis. **Free catalogue access, however enthusiastic, prices at zero and does not clear G1.**
+The pilot route tests willingness to pay for the **fix**, which is where the business is, rather than for the diagnosis. **Free catalogue access, however enthusiastic, prices at zero and does not clear G1.** The €500 diagnostic tier was removed per DIRECTIVE-19 §5.5 (6 August 2026) — `OUTREACH-EMAILS.md` and the handoff both record it as removed, and `BLUEPRINT` §0 requires decisions written into the governing docs in the session they are made.
 
-**G3 — early read, does not gate.** 3 of 25 contacted merchants confirm the problem is already known to them *and* name an internal owner.
+**G3 — early read, does not gate.** 3 of 25 contacted merchants confirm the problem is already known to them *and* name an internal owner. **G3 is unreachable at 5 contacts** (at 20% reply rate, P(≥3 replies) ≈ 5.8%) and **becomes live at 25 contacts** (P(≥3) ≈ 76%). The contact volume is scaled to 25 per DIRECTIVE-19 §5.1.
 
 **Why compound.** G3 passing while G1 fails means the problem is real and the offer is wrong — a different instruction from "no demand." A single gate hides that.
 

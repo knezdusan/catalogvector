@@ -401,9 +401,9 @@ export const scanStore = inngest.createFunction(
 
 ### C9 — Publication pipeline
 **Purpose.** Turn the database into the four published artifacts.
-**Notes.** Aggregate statistics by store (anonymised), by query archetype, by miss class. **Named per-store results are not published** — they are generated on request, which is the lead-capture mechanism. Export as CSV + JSON alongside the repo. Include the frozen query set and the arbitration prompt version so the work is re-runnable by a third party.
-**Testable boundary.** Snapshot tests on export shape; assertion that no store name appears in the public export.
-**Status.** `PENDING`
+**Notes.** Aggregate statistics by store, by query archetype, by miss class. **Stores are named in the paper** (DIRECTIVE-19 §5.3, ruled 6 August 2026). Rationale: every input is public (sitemap, `/products.json`, the Catalog API), a named store can verify and dispute — which is a feature of a methods paper, not a risk — anonymised per-store rates are uncheckable and therefore not citable, and `BLUEPRINT` §3 records Shero publishing their raw dataset as having strengthened them. This amends the prior C9 design (written for a mass scan of non-consenting stores) to the 16–20 store study design. **Each store is notified with its own data before publication.** Three binding conditions apply (DIRECTIVE-19 §5.3): (1) absence is framed as a measurement, never as a defect in the store; (2) no per-store figure appears as a bare point estimate — every published row carries its 95% interval, bounded range at recall 1.0 and at measured recall, and measurement date, inline; (3) the disclosure line (number is headed for a published paper) is in the outreach email before it is sent. Export as CSV + JSON alongside the repo. Include the frozen query set and the arbitration prompt version so the work is re-runnable by a third party.
+**Testable boundary.** Snapshot tests on export shape; assertion that every per-store figure carries its interval, bounded range, and measurement date.
+**Status.** `PENDING` (amended 6 August 2026, DIRECTIVE-19 §5.3)
 
 ---
 
@@ -815,7 +815,7 @@ Test-first per boundary. Order below is also the implementation order.
 | C4 synthesis | Deterministic under seed | Archetype coverage met |
 | C5 resolver | Golden set, precision/recall | **Human agreement published** |
 | C8 workflows | Integration, mocked externals | Idempotent, resumable |
-| C9 export | Snapshot | No store names in public export |
+| C9 export | Snapshot | Every per-store figure carries interval, bounded range, and measurement date (DIRECTIVE-19 §5.3) |
 
 No Playwright in Phase 1 — there is no UI. It re-enters if a public results page is built.
 
@@ -859,7 +859,7 @@ Actions that must happen on or before the day the report goes public. Each is a 
 
 - [ ] **Remove `robots: noindex` from `src/app/layout.tsx`.** The metadata currently sets `robots: { index: false, follow: false }` so the placeholder site is not crawled. **If this is not flipped before launch, Google will never index the report and no one will find it.** Set to `{ index: true, follow: true }` (or remove the `robots` key entirely) when PUB-1..4 are published.
 - [ ] Confirm the public route group `(public)/` serves the real report pages, not placeholders.
-- [ ] Verify the dataset export contains no store names (C9 invariant, TDD §5 C9).
+- [ ] Verify the dataset export contains per-store figures with intervals, bounded ranges, and measurement dates (C9 invariant, TDD §5 C9, amended DIRECTIVE-19 §5.3).
 - [ ] Confirm the frozen query set and arbitration prompt version are committed and referenced in PUB-2.
 - [ ] Run `npm run verify` green on `main`.
 

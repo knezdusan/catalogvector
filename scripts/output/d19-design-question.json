@@ -1,0 +1,106 @@
+{
+  "timestamp": "2026-08-06T15:58:08.705Z",
+  "parameters": {
+    "observedAbsenceRates": [
+      0.13,
+      0.17,
+      0.2
+    ],
+    "observedBetweenStoreSD": 0.035,
+    "typicalRecall": 0.888,
+    "nStoresPerVertical": 5,
+    "nVerticals": 4
+  },
+  "allocationA": {
+    "nPerStore": 50,
+    "totalStores": 20,
+    "totalProducts": 1000,
+    "perStoreBoundedRange": {
+      "upperBound": 0.17,
+      "lowerBound": 0.19144144144144146,
+      "lowerBoundSE": 0.009615092837473744,
+      "lowerBoundCI": [
+        0.17259585947999292,
+        0.21028702340289
+      ],
+      "rangeWidth": -0.0025958594799929124
+    },
+    "verticalLevel": {
+      "mean": 0.16666666666666666,
+      "se": 0.03467338539775482,
+      "ci": [
+        0.09870683128706721,
+        0.23462650204626612
+      ],
+      "width": 0.13591967075919892
+    }
+  },
+  "allocationB": {
+    "nCalibration": 100,
+    "nRest": 50,
+    "calibrationStores": 2,
+    "restStores": 3,
+    "totalProducts": 1400,
+    "calibrationStoreBoundedRange": {
+      "upperBound": 0.17,
+      "lowerBound": 0.19144144144144146,
+      "lowerBoundSE": 0.006798897347115886,
+      "lowerBoundCI": [
+        0.17811560264109433,
+        0.20476728024178859
+      ],
+      "rangeWidth": -0.008115602641094316
+    },
+    "restStoreBoundedRange": {
+      "upperBound": 0.17,
+      "lowerBound": 0.19144144144144146,
+      "lowerBoundSE": 0.006798897347115886,
+      "lowerBoundCI": [
+        0.17811560264109433,
+        0.20476728024178859
+      ],
+      "rangeWidth": -0.008115602641094316
+    },
+    "verticalLevel": {
+      "mean": 0.17400000000000002,
+      "se": 0.026559764688386167,
+      "ci": [
+        0.12194286121076313,
+        0.2260571387892369
+      ],
+      "width": 0.10411427757847376
+    }
+  },
+  "noiseFloor": {
+    "meanJaccard": 1,
+    "minJaccard": 1,
+    "maxJaccard": 1,
+    "jaccards": [
+      1,
+      1,
+      1
+    ],
+    "meanAbsence": 1,
+    "absenceStdDev": 0,
+    "absenceRange": [
+      1,
+      1
+    ],
+    "absenceRates": [
+      1,
+      1,
+      1
+    ],
+    "meanHandles": 0,
+    "handleStdDev": 0,
+    "handleRange": [
+      0,
+      0
+    ],
+    "handleCounts": [
+      0,
+      0,
+      0
+    ]
+  }
+}
