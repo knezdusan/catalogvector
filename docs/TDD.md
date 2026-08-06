@@ -4,9 +4,9 @@
 |---|---|
 | **Document** | TDD (governing, technical) |
 | **Companion** | `BLUEPRINT.md` (governing, non-technical) |
-| **Version** | 0.8.5 |
+| **Version** | 1.0.0 |
 | **Date** | 4 August 2026 |
-| **Status** | Design + scaffold + I-3, I-4 resolved. U-3, U-4 resolved. Inference-accuracy reframe nullified (n=59, 1.7% error). **Fitment-recall probe: PROVISIONAL coverage gap** (corrected mean recall ~0.70 < 0.80 threshold, n=12, 1-2 stores; inferred-set audit passed — zeros are real platform failures, not extractor bugs; but extractor needs hardening, matching needs handle/SKU, stratification didn't happen, re-run required before declaration). Original thesis holds: specs visible ≠ products retrievable. §6 `fitment_recall` is the primary metric. No pipeline code written. Phase 0 not started. |
+| **Status** | Design + scaffold + I-3, I-4 resolved. Runtime invariants I-1–I-6 implemented (22 tests). **Measurement instrument operational**: partition-based enumeration (88.8% recall against union presence, n=100, seed=42), sitemap ground truth, platform-facts register (13 entries). **Absence measured across 3 stores**: Subimods 20.0%, TSP 13.0%, MAP 17.0%. **H9 REJECTED** — absence is random loss, not predictable from public product attributes. H6 REJECTED (shop.app ≠ Catalog proxy). H7 WITHDRAWN (shop.app finding misread as Catalog finding). H8 REJECTED (0/401 stale entries). U-6-R SURFACE-DEPENDENT (Catalog feeds assistants, unpredictably). U-9 SAME INDEX (Catalog API = assistant index). Fitment-recall 0.385 (n=18, 4 stores) stands as secondary. Original pitch ("reliable diagnostic") not supported. No pipeline code written. Phase 0 not started. |
 
 ---
 
@@ -77,8 +77,10 @@ The Remix template is maintained for critical security issues only. The React Ro
 - `catalog.query` — free text. `catalog.context.intent` — free-text buyer intent.
 - **`catalog.filters.shops`** — array of shop GIDs, **up to 1000 per request**. This is what makes store-scoped measurement possible.
 - **`catalog.filters.attributes` supports only `Color`, `Size`, `Target gender`.** Unsupported names are silently ignored and returned in `messages`. **This is the single most important fact in the document** — it is why a technical vertical is the wedge.
-- Pagination: `limit` default 10, **max 50**; depth capped at **1000 results** (`has_next_page` false beyond, regardless of matches). `total_count` is an **estimate** — never use it for exact arithmetic.
-- ~~Results cluster by Universal Product ID (UPID) with offers from multiple merchants.~~ **CORRECTED 2 Aug 2026 (DIRECTIVE-7 §3):** The response returns per-merchant rows, not UPID clusters. Each product row has exactly 1 variant with 1 seller. The same physical part appears as separate rows with different product IDs, one per merchant. No UPID field, no cluster object, no multi-offer array exists at any JSON path. Verified across all 900 products in `unscoped-2026-08-02T15-44-54-483Z.json`. H5 (offer attachment) is not testable in this response shape.
+- Pagination: `limit` default 10, **max 50**; depth capped at **1000 results** (`has_next_page` false beyond, regardless of matches). `total_count` is an **estimate** — never use it for exact arithmetic. **CORRECTED 4 Aug 2026 (DIRECTIVE-17 §2, register entry 13):** `total_count` is a **response budget**, not an estimate of matching products. Five unrelated queries returned `total_count` values between 361 and 387, consistently, regardless of query content. It does not correlate with match count and must never be used as a denominator.
+- **Cursor pagination overlaps 1.6–8.1% between pages** (register entry 12, DIRECTIVE-15-v2/16). Consecutive pages share some product IDs because the relevance ranking shifts between requests. This is a real, previously unknown Catalog API property, discovered by the I-1 invariant firing on its first run. The I-1 invariant is relaxed to a 20% ceiling with 15% abort threshold; a second relaxation requires a directive.
+- ~~Results cluster by Universal Product ID (UPID) with offers from multiple merchants.~~ **CORRECTED 2 Aug 2026 (DIRECTIVE-7 §3, reconfirmed 4 Aug 2026 DIRECTIVE-14 §1):** The response returns per-merchant rows, not UPID clusters. Each product row has exactly 1 variant with 1 seller. The same physical part appears as separate rows with different product IDs, one per merchant. No UPID field, no cluster object, no multi-offer array exists at any JSON path. Verified twice: 900 products in `unscoped-2026-08-02T15-44-54-483Z.json`, then 300 rows with correct pagination (248 distinct IDs, 0 shared across sellers) in DIRECTIVE-14 §1. H5 (offer attachment) is not testable in this response shape and is dead (DIRECTIVE-15-v2 §0).
+- **No per-store Catalog enumeration endpoint exists** (register entry 10, DIRECTIVE-14 §6). `search_catalog` is relevance-ranked with no enumeration mode. `lookup_catalog` takes opaque Catalog IDs that do not correspond to store product IDs. A scoped-search-based membership test measured 54% false negatives. The partition-based enumeration method (§6.1.10) works around this by issuing many scoped queries built from the store's own vendor/product-type partition.
 - `get_product` returns option values with `available` / `exists` flags → variant modelling quality is directly measurable.
 - `categories` returned in both `google_product_category` and `merchant` taxonomies → taxonomy divergence is directly measurable.
 
@@ -105,7 +107,13 @@ Published products are auto-enrolled with manual opt-out. Rate limiting and cach
 
 **Google AI tested from Serbia, not US.** The authenticated pass's Google AI results were captured from a Belgrade VPS, not a US IP. Google AI did not allow US VPS access. No US claim about Google AI behaviour is licensed. This is a partially open confound from DIRECTIVE-11 §2.3.
 
-**shop.app ≠ Catalog API.** DIRECTIVE-12 §3 checked shop.app for Subimods products and concluded they were absent. DIRECTIVE-13 §1 re-checked the same products against the Catalog API and found them present. The two surfaces index different subsets of a merchant's catalog. shop.app is not a valid proxy for Catalog API presence.
+**shop.app ≠ Catalog API.** DIRECTIVE-12 §3 checked shop.app for Subimods products and concluded they were absent. DIRECTIVE-13 §1 re-checked the same products against the Catalog API and found them present. The two surfaces index different subsets of a merchant's catalog. shop.app is not a valid proxy for Catalog API presence. H6 (shop.app as proxy) REJECTED on pre-registered threshold (DIRECTIVE-11).
+
+**Catalog API is the assistant's index (U-9, SAME INDEX).** DIRECTIVE-12 §4: products present in the Catalog API's deterministic top-12 appear in ChatGPT cards; products absent from the Catalog API at depth do not. The UCP `search_catalog` endpoint and the assistant's product carousel share an index. The assistant applies its own ranking and presentation layer on top, but the underlying retrieval surface is the same. Eleven directives of measurement stand.
+
+**Absence is random, not predictable (H9, REJECTED).** DIRECTIVE-17 §5: 300 random products per store (Subimods, TSP), 8 public attributes (image count, variant count, price, published_at age, vendor, product type, tag count, body length). After correcting for class imbalance, held-out accuracy = majority-class baseline. No attribute provides lift. The "reliable diagnostic" pitch is not supported.
+
+**`total_count` is a response budget, not a match count.** DIRECTIVE-17 §2, register entry 13: five unrelated queries returned `total_count` 361–387, consistently. It does not correlate with match count and must never be used as a denominator.
 
 ### 2.8 Facts requiring runtime confirmation (not yet verified)
 | # | Unknown | Blocks | How to resolve |
@@ -115,7 +123,7 @@ Published products are auto-enrolled with manual opt-out. Rate limiting and cach
 | U-3 | ~~Can a shop GID be resolved from a public domain without OAuth?~~ **RESOLVED 1 Aug 2026:** Yes, via `search_catalog` with a shop-identifying query. `lookup_catalog` requires GIDs (not URLs) as input, so it cannot resolve a domain. Instead, search for a product unique to the target shop and extract `variants[].seller.id` (format: `gid://shopify/Shop/<id>`). Verified: Two Step Performance → `gid://shopify/Shop/1357086779`, Movcan → `gid://shopify/Shop/71335575609`. | ~~C1 → C3 handoff~~ | Done — see §2.4 |
 | U-4 | ~~Is `filters.shops` semantics a hard restriction or a soft bias?~~ **RESOLVED 1 Aug 2026:** **HARD RESTRICTION with query fallback.** Control experiment (5 tests, 250 products, 0 containment violations): `filters.shops` restricts results to the scoped shop set — every returned product carries at least one seller from the scoped set. The negative control (T3: "wedding dress" scoped to an auto-parts shop) returned 50 products, all from the target shop, 0 violations — the filter held. **Caveat:** the query is a soft ranking signal within the shop, not a hard filter. When the query has no matches in the scoped shop, the API returns the shop's general catalog instead of an empty set. **Implication for C6:** recall@k must account for query relevance, not just product presence. Store-scoped retrieval measurement is valid. | ~~C6 scoring validity~~ | Done — transcript at `scripts/output/u4-*.json` |
 | U-5 | Do Catalog results reflect merchant metafields at all? | C5/C6 interpretation, all Phase 2 value claims | Seed a dev store with structured metafields, wait out §2.6 delay, compare |
-| U-6 | **Does Global Catalog rank predict what a consumer AI assistant actually surfaces?** `BLUEPRINT.md` §2.2 asserts the Global Catalog *"is the same retrieval surface the consumer AI assistants query."* Every measurement in this project inherits that claim, and it was never in §2.7's unknowns until now. **Status: OPEN (DIRECTIVE-5 §5, 2 Aug 2026).** Founder-owned: put the same relational queries to ChatGPT, Copilot, Gemini as a shopper would; record which merchants/products each names; compare against unscoped rank ordering. Blocks the publication framing, not the measurement. | Publication framing | One afternoon, no code. If rank predicts assistant output, the instrument is validated against the outcome — and that validation is itself publishable. If it does not, the Global Catalog is a proxy, and this project has been measuring a proxy while its entire position rests on criticising everyone else for measuring proxies. |
+| U-6 | ~~Does Global Catalog rank predict what a consumer AI assistant actually surfaces?~~ **RESOLVED 3 Aug 2026 (DIRECTIVE-10/11, U-6-R):** **SURFACE-DEPENDENT.** 12 queries × 3 assistants, buying-intent phrasing. Carousels render 7/12. Shopify merchants appear in cards (≥3 of 7, 4 unaudited, corrected from 28.6% to 57.1%). The Catalog feeds the assistants — the exposé premise is falsified. But the mapping is unpredictable: carousels don't always render, and Shopify merchant appearance is inconsistent. **Verdict: SURFACE-DEPENDENT — a measurable gap exists between what the Catalog contains and what assistants surface.** U-9 (DIRECTIVE-12 §4) confirmed SAME INDEX: the Catalog API and the assistant share a retrieval index, with the assistant applying its own ranking/presentation on top. | ~~Publication framing~~ | Done — reports: `docs/reports/directive10-u6r-report.md`, `docs/reports/directive11-round-report.md`, `docs/reports/directive11-authenticated-pass-note.md` |
 
 **Verified platform fact — Shopify storefront `tags` schema (2 Aug 2026, DIRECTIVE-4 §11):** Shopify's `/products.json` and `/products/<handle>.json` endpoints return `tags` as a **comma-separated string**, not an array. Example: `"tags": "10percent, 2003 Mitsubishi Evo 8, 2004 Subaru WRX STI, ..."`. This is significant because tags often contain vehicle fitment data (make + model + year) that is invisible to an extractor expecting an array. The Stage 1 probe's `StorefrontProduct` Zod schema expected `z.array(z.string())`, causing every `fetchStorefrontProduct()` call to fail silently (Zod parse error caught in a try/catch that returned null). This suppressed ~99% of matches across three of four stores. Fix: `z.union([z.string(), z.array(z.string())])`. **Every Zod parse failure must be logged and counted (DIRECTIVE-4 §4 P-4.4) — a zero-match store is a loud error, never an empty row.**
 
@@ -662,6 +670,90 @@ Both populations scored near zero. Only 1 Intec product appeared across all 8 qu
 
 **This is the first pre-registered rule to fire on a compliant sample.** The original Stage 1 (12 from 1 store) was non-compliant and withdrawn. This re-sample (18 from 4 stores) is compliant. Report: `docs/reports/directive7-stage5-followback.md`.
 
+### 6.1.10 H6 — shop.app as proxy for Catalog-to-assistant reach (pre-registered 3 Aug 2026, DIRECTIVE-11 §4)
+
+**Observation.** ChatGPT's B3 card cited a `shop.app/products/…` URL. If Catalog-syndicated products surface to ChatGPT through shop.app URLs, then shop.app presence is a public, deterministic, cheaply scrapable proxy for Catalog-to-assistant reach — measurable without querying an assistant at all.
+
+**Pre-registered decision rule — fixed 3 Aug 2026, before any run:**
+
+> **H6 supported:** shop.app presence agrees with ChatGPT card appearance on ≥16 of 20, and disagrees with unscoped Catalog presence on ≥5.
+> **H6 rejected:** agreement with ChatGPT card appearance ≤12 of 20.
+> **H6 inconclusive:** anything between, or fewer than 15 products resolvable on shop.app.
+
+**Result — 3 Aug 2026 (DIRECTIVE-11/12):**
+
+> **H6 REJECTED.** shop.app presence did not agree with ChatGPT card appearance on ≥16 of 20. All 20 products were found on shop.app, including 5 Subimods products that return zero on their own Catalog queries — but checking the **seller** (not just the product) dissolved the finding: the shop.app results were from *other merchants*, not Subimods. shop.app and the Catalog API index different subsets of a merchant's catalogue. Neither is a proxy for the other. Reports: `docs/reports/directive11-u8-report.md`, `docs/reports/directive12-round-report.md`.
+
+### 6.1.11 H7 — per-product syndication eligibility (pre-registered 4 Aug 2026, DIRECTIVE-13 §1; WITHDRAWN 4 Aug 2026, DIRECTIVE-14 §0)
+
+**Observation.** Subimods' OEM Subaru parts and Motul oils are indexed on shop.app, but their aftermarket performance products are not — a discrimination inside one merchant's catalogue. H7 hypothesised that syndication into Shopify Catalog is decided per product, predictable from publicly visible product attributes (vendor, product type, tags, SKU, variant count, image count, published_at, price, options, body length).
+
+**Pre-registered decision rule — fixed 4 Aug 2026, before any run:**
+
+> **H7 supported:** in ≥2 of 3 stores, the absent population is ≥10% of the catalogue, AND at least one public attribute separates present from absent with ≥0.75 accuracy on a held-out half.
+> **H7 rejected:** the absent population is <3% of the catalogue in ≥2 of 3 stores, OR no attribute exceeds 0.60 accuracy in any store.
+> **H7 inconclusive:** anything between, or fewer than 2 stores yield a validated membership test.
+
+**Result — 4 Aug 2026 (DIRECTIVE-14 §0):**
+
+> **H7 WITHDRAWN — the observation was a shop.app finding misread as a Catalog finding.** DIRECTIVE-13 §1 built H7 on the shop.app result (OEM in, aftermarket out) as though it were a statement about the Catalog API. It was not. All five aftermarket products were present in the Catalog API under Subimods' seller name. The advisor (not the data) killed the hypothesis: "I conflated the two surfaces one directive after Devin had correctly separated them." The membership test was also run in the unreliable direction (searching for store products in the Catalog, which has no enumeration endpoint — 54% false negatives). Register entry 10 records this. The observation survives as a shop.app phenomenon, not a Catalog one.
+
+### 6.1.12 H8 — stale Catalog entries (pre-registered 4 Aug 2026, DIRECTIVE-14 §2)
+
+**Observation.** The scoped union returned 6,707 unique Subimods handles against 5,250 products in `/products.json` — the Catalog appeared to hold more than the live store. If the Catalog serves products that are no longer purchasable, that is a live harm: agents recommending products the merchant no longer sells.
+
+**Pre-registered decision rule — fixed 4 Aug 2026, before any run:**
+
+> **H8 supported:** ≥5% of a store's recovered Catalog handles return 404, in ≥2 of 3 stores.
+> **H8 rejected:** <1% return 404 in ≥2 of 3 stores.
+> **H8 inconclusive:** anything between, or fewer than 2 stores yield ≥200 testable handles.
+
+**Result — 4 Aug 2026 (DIRECTIVE-14 §2):**
+
+> **H8 REJECTED — 0 of 401 handles returned 404.** All 401 candidate handles fetched directly from store domains returned `200` with `available: true`. The test involves no pagination and no matching — a direct URL either resolves or it does not. The "extra" Catalog handles are explained by `/products.json` being incomplete (register entry 11 — fetch bug, not platform cap), not by stale entries. **Strengthened by DIRECTIVE-15-v2 §0:** the /products.json finding does not weaken H8's rejection; a broader candidate set would surface more live products, not more dead ones. H8 is dead and not re-registered.
+
+### 6.1.13 H9 — absence predictability from product attributes (pre-registered 4 Aug 2026, DIRECTIVE-17 §5)
+
+**Observation.** The partition-based enumeration method (§6.1.14) found that 13–20% of a store's catalogue is absent from the Catalog across three stores. If absence is systematic — predictable from publicly visible product attributes — then a diagnostic can identify which products are invisible and why. If absence is random, no such diagnostic is possible.
+
+**Pre-registered decision rule — fixed 4 Aug 2026, before any run:**
+
+> **H9 supported (absence is systematic):** held-out accuracy ≥ 0.75 for predicting absence from public attributes, in ≥2 of 2 stores, after correcting for class imbalance (accuracy must exceed the majority-class baseline by ≥ 0.10).
+> **H9 rejected (absence is random):** held-out accuracy ≤ majority-class baseline + 0.05 in ≥2 of 2 stores.
+> **H9 inconclusive:** anything between.
+
+**Design.** 300 random products per store (Subimods, TSP), sampled from the sitemap. Per-product exhaustive probe (exact title, title with stopwords removed, vendor + product type, SKU if public, first five title tokens) to establish ground truth. Attributes tested: image count, variant count, price, published_at age, vendor, product type, tag count, body length. Models trained on 50% holdout, scored on 50%.
+
+**Result — 4 Aug 2026 (DIRECTIVE-17 §5):**
+
+> **H9 REJECTED — absence is random loss, not systematically predictable from publicly visible product attributes.** Held-out accuracy: Subimods 76.7% (presence rate 80%, majority-class baseline 80%), TSP 90.7% (presence rate 87%, majority-class baseline 87%). No attribute provided any lift over the base rate. The initial appearance of "support" (accuracy > 0.75) was an artefact of class imbalance — the model achieved high accuracy by predicting "present" for everything, which is the majority class. After correcting for imbalance, no model beat the baseline.
+
+**Commercial consequence.** The original pitch — "reliable diagnostic that identifies which products are structurally invisible and why" — is not supported by the evidence. Absence is real (13–20%) and measurable, but it is not diagnosable from product data. What survives: the measurement method (partition-based enumeration, 88.8% recall), the absence finding itself, and the platform-facts register. Report: `docs/reports/directive17-stage4-report.md` (deleted by user post-completion; findings preserved here and in stage 1–3 reports).
+
+### 6.1.14 Partition-based enumeration method (DIRECTIVE-15-v2/16/17)
+
+**The method that works around the absence of a Catalog enumeration endpoint (register entry 10).**
+
+1. **Enumerate the full public catalogue** from `/sitemap.xml` → `/sitemap_products_*.xml` (I-2 invariant: must equal sitemap product count or abort).
+2. **Build a vendor × product-type partition** from the store's `/products.json` metadata. For Subimods: 265 vendors × 428 product types → 692 scoped keyword queries.
+3. **Issue each query** scoped to the store via `filters.shops`, with I-1 enforced (page overlap ≤ 20%, abort at 15%). Collect all returned handles.
+4. **Union all handles** across all queries → the enumerated Catalog presence set.
+5. **Validate against a reference standard:** 100 products drawn at random from the sitemap (seed=42), each probed exhaustively (exact title, title with stopwords, vendor + type, SKU, first five tokens). Score recall against the union of reference-standard and enumeration labels.
+
+**Recall (DIRECTIVE-17, final):** `recall_random` = 88.8% (against union presence, n=100, seed=42). The enumeration finds 88.8% of products confirmed present by an independent, more expensive reference standard.
+
+**What the 98% recall figure was (and why it was withdrawn).** DIRECTIVE-15-v2 Stage 3 reported 98% recall. DIRECTIVE-16 §1 found this was circular: ground truth "present" products were selected by scoped keyword search, then scored against a larger scoped keyword search — measuring the method against a subset of its own output. The corrected method (DIRECTIVE-16/17) samples randomly from the sitemap and uses a per-product exhaustive probe as the reference standard.
+
+**Absence rates (DIRECTIVE-17, final):**
+
+| Store | Sitemap products | Enumerated handles | Absence rate | 95% CI | Recall |
+|---|---|---|---|---|---|
+| Subimods | 18,066 | 13,257 | 20.0% | 13.3–28.9% | 88.8% |
+| TSP | 2,608 | — | 13.0% | 7.8–21.0% | 97.7% |
+| MAP | 102,176 | 25,000 (capped) | 17.0% | 10.9–25.5% | 56.6% |
+
+MAP's low recall (56.6%) is due to the `/products.json` cap at 100 pages (25,000 products) limiting the partition's coverage of a 102,176-product catalogue. The absence rate is conditioned on the recall figure and must be reported as a range, never a point estimate.
+
 ### 6.2 Miss classification
 When an expected product is not retrieved, classify why — **this is the part with commercial value**, because it is the fix list:
 
@@ -677,6 +769,28 @@ When an expected product is not retrieved, classify why — **this is the part w
 3. Retrieval reflects Shopify's ranking at a point in time; catalogue fields refresh on a delay (§2.6).
 4. Expectations are LLM-derived with human calibration; the agreement rate is published (C5).
 5. Results are US-context (`address_country: 'US'`) unless stated otherwise.
+6. **Absence is random, not predictable (H9, DIRECTIVE-17).** A diagnostic that identifies *which* products are invisible from public attributes cannot be built. The absence rate (13–20%) is measurable; the per-product diagnosis is not.
+7. **`total_count` is a response budget, not a match count (register entry 13).** Never use it as a denominator.
+8. **Cursor pagination overlaps 1.6–8.1% between pages (register entry 12).** Consecutive pages share product IDs due to ranking shifts between requests.
+
+### 6.4 Runtime invariants (DIRECTIVE-15-v2 §3, implemented 4 Aug 2026)
+
+Every historical failure in this project was detectable at runtime by a one-line assertion at the moment it happened. Not by review, not by a later directive. The U8-A pagination bug would have thrown on page 2: the same IDs as page 1.
+
+Implemented as assertions inside a shared probe library (`src/lib/scanner/invariants.ts`, 22 passing tests). **A probe that cannot satisfy its invariants aborts and reports; it does not return partial data.**
+
+| # | Invariant | The failure it catches |
+|---|---|---|
+| **I-1** | Consecutive pages must share < 20% product IDs (15% abort, 20% ceiling), and the cursor must change between requests. Every overlap event is logged with its magnitude. | U8-A pagination bug — would have thrown on page 2. Relaxed from 0% to 20% by DIRECTIVE-16 §4 (measured overlap 1.6–8.1%, ceiling is ~2.5× max observed). A second relaxation requires a directive. |
+| **I-2** | Any store enumeration must equal the sitemap product count, or abort with the delta. | `/products.json` being short by 40–75% (register entry 11 — fetch bug, not platform cap). |
+| **I-3** | Every presence or absence claim must carry a `seller.domain`; a claim without one is rejected. | H6's product-match-vs-seller-match error, and U-9's repeat of it. |
+| **I-4** | Every result row records which API or surface produced it, and cross-surface comparison is refused. | H7 — a `shop.app` finding read as a Catalog finding. |
+| **I-5** | Domain comparison is normalised (`www.`, case, trailing dot) and the compared domain must exist in the known-store list. | The `twosteppeRformance` one-character false negative. |
+| **I-6** | Any membership or matching method reports its false-negative rate against committed ground truth **before** any result derived from it is quoted. | The 54% false-negative membership test (register entry 10). This one already worked; generalised. |
+
+**Provenance requirement:** every number in every future report carries its source file, the script's commit hash, and which invariants passed. **A number without provenance is not reportable.**
+
+**I-1 caught a previously unknown Catalog API property on its first run** (DIRECTIVE-15-v2 §0): cursor pagination overlaps 1.6–8.1% between pages because the relevance ranking shifts between requests. This is register entry 12 and was found by an assertion firing, not by three directives of downstream confusion.
 
 ---
 
@@ -775,3 +889,12 @@ Actions that must happen on or before the day the report goes public. Each is a 
 | 2026-08-03 | 0.8.2 | **DIRECTIVE-8-v2 Stage 2 — domain concentration + scoped-fallback + platform-facts register.** §4.2: 702 distinct domains, 5653 slots, top 20 hold 34.7% of slots / 48.3% of top-10. TSP 17 top-10 (9.4%), MAP 11 (6.1%). EBC Brake Shop 191 slots, 0 top-10 (volume without visibility). §4.3: Scoped-fallback test (TSP, two unrelated queries): Jaccard 0.145 — LOW overlap, genuine matching with partial fallback. §4.4: Platform-facts register compiled (8 entries: UPID clustering wrong, tech_specs 60-70% dropped, tags string-not-array, scoped fallback, pagination ~300 not 1000, scoped-fallback 14.5%, filters.shops correct, agent-profile multi-day). Reports: `docs/reports/directive8-stage2-followback.md`, `docs/reports/platform-facts-register.md`. |
 | 2026-08-03 | 0.8.3 | **DIRECTIVE-8-v2 Stage 3 — store-level visibility. Subimods completely invisible. Intec NOT invisible.** §5.1 Intec diagnosis: NL 5/5 (1.000), BS 3/5 (0.600) — Stage 4 floor effect was title-level (H4), not store-level. Intec products findable by product-type queries. §5.2 10-store scan (100 queries): Subimods 0/5 NL, 0/5 BS — COMPLETELY INVISIBLE. Enrolled store, same brands as visible stores (COBB, PRL, Fluidampr), 0 unscoped presence. 7 stores NL 1.000, 2 stores NL 0.800, 1 store NL 0.000. Three mechanisms corrected: (1) title-level (H4), (2) relevance-matching (IV02), (3) store-level (Subimods, confirmed by clean probe). Report: `docs/reports/directive8-stage3-followback.md`. |
 | 2026-08-03 | 0.8.4 | **DIRECTIVE-8-v2 Stage 4 — H4-R INCONCLUSIVE (registered design cannot be executed at TSP).** 591 TSP products scraped, 35 title-absent (5.9%), 26 genuinely title-absent. No single category has ≥6 title-absent AND ≥6 matched title-present of same product type. Best-available approximation with relaxed matching: TA 3/6 (0.500), TP 1/6 (0.167), difference -0.333 — REJECTS by rule but uninterpretable (title-present controls were wrong product types for queries). H4-R INCONCLUSIVE: registered design cannot be executed, relaxed result uninterpretable. H4 remains auto-parts finding (TSP+MAP, 0.708 gap), not replicated. §6.1.8 updated with H4-R result. Report: `docs/reports/directive8-stage4-followback.md`. **DIRECTIVE-8-v2 COMPLETE — all 4 stages executed.** |
+| 2026-08-03 | 0.9.0 | **DIRECTIVE-9 — U-8 head/padding boundary, register corrections.** U8-A (determinism): ~12-rank deterministic prefix for real queries, ~6 for nonsense. U8-B (token overlap): could not locate boundary — real-query tails carry 0.40–0.98 fractional overlap at every decile. Register entries 2, 3 corrected. Subimods 0/10 strengthened (0 slots across ~8,600). **Later compromised:** U8-A had pagination bug (DIRECTIVE-14), World B restated (DIRECTIVE-16). |
+| 2026-08-03 | 0.9.1 | **DIRECTIVE-10 — exposé pivot halted, U-6-R registered, market position recorded.** U-6 "Catalog is a phantom" falsified by OpenAI help centre docs. U-6-R (12 queries × 3 assistants) pre-registered. Market position: causal diagnosis layer ($5–15k, no product) is the position. §2.7 standing limitations not yet added. |
+| 2026-08-03 | 0.9.2 | **DIRECTIVE-11 — U-6-R SURFACE-DEPENDENT, H6 REJECTED, surface_trigger_rate identified.** Carousels 7/12. Shopify share 28.6%→57.1% (Block D error + 4/7 cards unaudited). H6 (shop.app proxy) REJECTED. surface_trigger_rate (5/12 no card) = novel finding. Authenticated pass required. Google AI on wrong surface. §6.1.10 added (H6). |
+| 2026-08-04 | 0.9.3 | **DIRECTIVE-12 — World B confirmed (later compromised), tail inspection, U-9 SAME INDEX, H6 finding 2 dissolved.** Tail Jaccard 0.90–1.00 (4 real queries). Tail inspection: ranks 200–300 = genuine brake pads. H6 finding 2 dissolved (seller check). U-9: Catalog API = assistant index (SAME INDEX). Authenticated pass: 19 Shopify merchants across 3 assistants. §2.7 updated (partial competitive field, Google AI from Serbia, shop.app ≠ Catalog). |
+| 2026-08-04 | 0.9.4 | **DIRECTIVE-13 — H7 registered, partial syndication observed.** Subimods OEM in / aftermarket out on shop.app. H7: syndication per product, predictable from attributes. §3 distinct products vs listings: 16 distinct from 300 (later found to be dedup artefact). |
+| 2026-08-04 | 0.9.5 | **DIRECTIVE-14 — H7 WITHDRAWN, ID contradiction resolved, H8 REJECTED, register entry 10.** H7 withdrawn (shop.app finding misread as Catalog). §1: per-merchant rows confirmed (248 distinct IDs, 0 shared). H8 REJECTED (0/401 404s). Register entry 10: no per-store enumeration endpoint (54% false negatives). §6.1.11 (H7), §6.1.12 (H8) added. |
+| 2026-08-04 | 0.9.6 | **DIRECTIVE-15-v2 — evidence triage, runtime invariants I-1–I-6, sitemap enumeration, partition-based enumeration.** Evidence triage table (sound/compromised/never-established). I-1–I-6 implemented (22 tests). I-1 caught page overlap (1.6–8.1%) on first run — register entry 12. Sitemap enumeration: Subimods 18,067, MAP 102,176. Partition-based enumeration: 524 queries, 98% recall (later found circular). Register entries 11, 12. §6.4 (runtime invariants) added. |
+| 2026-08-04 | 0.9.7 | **DIRECTIVE-16 — 98% recall found circular, honest recall measured, /products.json fetch bug, World B restated.** 98% recall circular (ground truth = scoped search output). recall_random = 97.4% (100 random, per-product probe). /products.json fetch bug: Subimods 5,250→18,066, MAP 7,750→25,000 (Shopify 100-page cap). I-1 relaxed (20% ceiling, 15% abort). World B restated: head deterministic, tail not. Real-query tail = genuine. Absence: Subimods 23.0–27.5%. |
+| 2026-08-04 | 1.0.0 | **DIRECTIVE-17 COMPLETE — absence measured across 3 stores, H9 REJECTED, original pitch not supported.** §1: false positive class eliminated. Partition rebuilt (692 queries from 18,066 products). recall_random = 88.8% (union presence, n=100, seed=42). Absence: Subimods 20.0% (95% CI 13.3–28.9%), TSP 13.0% (7.8–21.0%), MAP 17.0% (10.9–25.5%). §2: total_count = response budget (register entry 13). §3: 3 invisible + 6 absent-at-depth confirmed. Subimods 0/10 restated (9/12 = syndication, not visibility failure). §5: H9 REJECTED — 300 random/store, 8 attributes, held-out accuracy = majority-class baseline. Absence is random. §6.1.13 (H9), §6.1.14 (partition method) added. §6.3 limitations 6–8 added. U-6 marked RESOLVED. §2.4 updated (total_count, page overlap, enumeration endpoint). Reports: `docs/reports/directive17-stage{1,2,3}-report.md`. **BLUEPRINT §3 updated with 6 new invalidated directions. BLUEPRINT §6 feature status updated (C1–C4, C6 → PARTIAL). BLUEPRINT §8 updated with market layers.** |
