@@ -1,0 +1,1199 @@
+{
+  "timestamp": "2026-08-06T15:23:02.539Z",
+  "store": "subimods.com",
+  "totalProducts": 18098,
+  "coverage": {
+    "productsWithPartNumber": 181,
+    "totalProducts": 18098,
+    "rate": 0.010001105094485579
+  },
+  "groundTruth": {
+    "samePartPairs": 60,
+    "nearMissPairs": 50
+  },
+  "validation": {
+    "truePositives": 105,
+    "falsePositives": 0,
+    "trueNegatives": 0,
+    "falseNegatives": 5,
+    "falsePositiveRate": 0,
+    "falseNegativeRate": 0.045454545454545456,
+    "fprTargetMet": true
+  },
+  "samePartPairs": [
+    {
+      "partNumber": "TC105X",
+      "brand": "WEDSSPORT",
+      "sellerA": "machv-com.myshopify.com",
+      "sellerB": "kami-speed.myshopify.com",
+      "titleA": "Weds TC105X 18x9.5 +39 5x120 SBC",
+      "titleB": "WedsSport TC105X 17x8 +32 5-114.3 EJ-Titan (Honda CR-Z)",
+      "productIdA": "gid://shopify/p/4Nkn5ipU2azTg7CxPPWoqG",
+      "productIdB": "gid://shopify/p/3odqBPyGZ4hSwm5F48twKm",
+      "confirmedBy": "exact_match"
+    },
+    {
+      "partNumber": "TC105X",
+      "brand": "WEDSSPORT",
+      "sellerA": "machv-com.myshopify.com",
+      "sellerB": "6b9a6e.myshopify.com",
+      "titleA": "Weds TC105X 18x9.5 +39 5x120 SBC",
+      "titleB": "WedsSport TC105X Forged Wheel (Face 1) - 18x9.0 / Offset +32 / 5x114.3 (EJ Titan)",
+      "productIdA": "gid://shopify/p/4Nkn5ipU2azTg7CxPPWoqG",
+      "productIdB": "gid://shopify/p/4TMXHkYMMNzK9KfE1sCdBZ",
+      "confirmedBy": "exact_match"
+    },
+    {
+      "partNumber": "TC105X",
+      "brand": "WEDSSPORT",
+      "sellerA": "machv-com.myshopify.com",
+      "sellerB": "legacy-racing.myshopify.com",
+      "titleA": "Weds TC105X 18x9.5 +39 5x120 SBC",
+      "titleB": "WedsSport TC105X Forged Wheel (Face 2) - 18x9.5 +35 | 5x114.3 | EJ-Titan",
+      "productIdA": "gid://shopify/p/4Nkn5ipU2azTg7CxPPWoqG",
+      "productIdB": "gid://shopify/p/7jZaHb1JcuVExbAxvK9O8B",
+      "confirmedBy": "exact_match"
+    },
+    {
+      "partNumber": "TC105X",
+      "brand": "WEDSSPORT",
+      "sellerA": "machv-com.myshopify.com",
+      "sellerB": "rzcrew.myshopify.com",
+      "titleA": "Weds TC105X 18x9.5 +39 5x120 SBC",
+      "titleB": "WedsSport TC105X - 16x7J - 4x100 - ET: 36/43 (Titanium)",
+      "productIdA": "gid://shopify/p/4Nkn5ipU2azTg7CxPPWoqG",
+      "productIdB": "gid://shopify/p/1gbbKUk6nLBCv2j5AKsQXj",
+      "confirmedBy": "exact_match"
+    },
+    {
+      "partNumber": "TC105X",
+      "brand": "WEDSSPORT",
+      "sellerA": "machv-com.myshopify.com",
+      "sellerB": "fc8542.myshopify.com",
+      "titleA": "Weds TC105X 18x9.5 +39 5x120 SBC",
+      "titleB": "Weds Sport TC105X DSR 18x10",
+      "productIdA": "gid://shopify/p/4Nkn5ipU2azTg7CxPPWoqG",
+      "productIdB": "gid://shopify/p/55j4GwvYyMilSlAGU48hns",
+      "confirmedBy": "exact_match"
+    },
+    {
+      "partNumber": "TC105X",
+      "brand": "WEDSSPORT",
+      "sellerA": "machv-com.myshopify.com",
+      "sellerB": "eug84v-z4.myshopify.com",
+      "titleA": "Weds TC105X 18x9.5 +39 5x120 SBC",
+      "titleB": "WedsSport TC105X FORGED - 17 Inch",
+      "productIdA": "gid://shopify/p/4Nkn5ipU2azTg7CxPPWoqG",
+      "productIdB": "gid://shopify/p/5p2MqiI3BygQzkxYkrquu",
+      "confirmedBy": "exact_match"
+    },
+    {
+      "partNumber": "TC105X",
+      "brand": "WEDSSPORT",
+      "sellerA": "kami-speed.myshopify.com",
+      "sellerB": "6b9a6e.myshopify.com",
+      "titleA": "WedsSport TC105X 17x8 +32 5-114.3 EJ-Titan (Honda CR-Z)",
+      "titleB": "WedsSport TC105X Forged Wheel (Face 1) - 18x9.0 / Offset +32 / 5x114.3 (EJ Titan)",
+      "productIdA": "gid://shopify/p/3odqBPyGZ4hSwm5F48twKm",
+      "productIdB": "gid://shopify/p/4TMXHkYMMNzK9KfE1sCdBZ",
+      "confirmedBy": "exact_match"
+    },
+    {
+      "partNumber": "TC105X",
+      "brand": "WEDSSPORT",
+      "sellerA": "kami-speed.myshopify.com",
+      "sellerB": "legacy-racing.myshopify.com",
+      "titleA": "WedsSport TC105X 17x8 +32 5-114.3 EJ-Titan (Honda CR-Z)",
+      "titleB": "WedsSport TC105X Forged Wheel (Face 2) - 18x9.5 +35 | 5x114.3 | EJ-Titan",
+      "productIdA": "gid://shopify/p/3odqBPyGZ4hSwm5F48twKm",
+      "productIdB": "gid://shopify/p/7jZaHb1JcuVExbAxvK9O8B",
+      "confirmedBy": "exact_match"
+    },
+    {
+      "partNumber": "TC105X",
+      "brand": "WEDSSPORT",
+      "sellerA": "kami-speed.myshopify.com",
+      "sellerB": "rzcrew.myshopify.com",
+      "titleA": "WedsSport TC105X 17x8 +32 5-114.3 EJ-Titan (Honda CR-Z)",
+      "titleB": "WedsSport TC105X - 16x7J - 4x100 - ET: 36/43 (Titanium)",
+      "productIdA": "gid://shopify/p/3odqBPyGZ4hSwm5F48twKm",
+      "productIdB": "gid://shopify/p/1gbbKUk6nLBCv2j5AKsQXj",
+      "confirmedBy": "exact_match"
+    },
+    {
+      "partNumber": "TC105X",
+      "brand": "WEDSSPORT",
+      "sellerA": "kami-speed.myshopify.com",
+      "sellerB": "fc8542.myshopify.com",
+      "titleA": "WedsSport TC105X 17x8 +32 5-114.3 EJ-Titan (Honda CR-Z)",
+      "titleB": "Weds Sport TC105X DSR 18x10",
+      "productIdA": "gid://shopify/p/3odqBPyGZ4hSwm5F48twKm",
+      "productIdB": "gid://shopify/p/55j4GwvYyMilSlAGU48hns",
+      "confirmedBy": "exact_match"
+    },
+    {
+      "partNumber": "TC105X",
+      "brand": "WEDSSPORT",
+      "sellerA": "kami-speed.myshopify.com",
+      "sellerB": "eug84v-z4.myshopify.com",
+      "titleA": "WedsSport TC105X 17x8 +32 5-114.3 EJ-Titan (Honda CR-Z)",
+      "titleB": "WedsSport TC105X FORGED - 17 Inch",
+      "productIdA": "gid://shopify/p/3odqBPyGZ4hSwm5F48twKm",
+      "productIdB": "gid://shopify/p/5p2MqiI3BygQzkxYkrquu",
+      "confirmedBy": "exact_match"
+    },
+    {
+      "partNumber": "TC105X",
+      "brand": "WEDSSPORT",
+      "sellerA": "6b9a6e.myshopify.com",
+      "sellerB": "legacy-racing.myshopify.com",
+      "titleA": "WedsSport TC105X Forged Wheel (Face 1) - 18x9.0 / Offset +32 / 5x114.3 (EJ Titan)",
+      "titleB": "WedsSport TC105X Forged Wheel (Face 2) - 18x9.5 +35 | 5x114.3 | EJ-Titan",
+      "productIdA": "gid://shopify/p/4TMXHkYMMNzK9KfE1sCdBZ",
+      "productIdB": "gid://shopify/p/7jZaHb1JcuVExbAxvK9O8B",
+      "confirmedBy": "exact_match"
+    },
+    {
+      "partNumber": "TC105X",
+      "brand": "WEDSSPORT",
+      "sellerA": "6b9a6e.myshopify.com",
+      "sellerB": "rzcrew.myshopify.com",
+      "titleA": "WedsSport TC105X Forged Wheel (Face 1) - 18x9.0 / Offset +32 / 5x114.3 (EJ Titan)",
+      "titleB": "WedsSport TC105X - 16x7J - 4x100 - ET: 36/43 (Titanium)",
+      "productIdA": "gid://shopify/p/4TMXHkYMMNzK9KfE1sCdBZ",
+      "productIdB": "gid://shopify/p/1gbbKUk6nLBCv2j5AKsQXj",
+      "confirmedBy": "exact_match"
+    },
+    {
+      "partNumber": "TC105X",
+      "brand": "WEDSSPORT",
+      "sellerA": "6b9a6e.myshopify.com",
+      "sellerB": "fc8542.myshopify.com",
+      "titleA": "WedsSport TC105X Forged Wheel (Face 1) - 18x9.0 / Offset +32 / 5x114.3 (EJ Titan)",
+      "titleB": "Weds Sport TC105X DSR 18x10",
+      "productIdA": "gid://shopify/p/4TMXHkYMMNzK9KfE1sCdBZ",
+      "productIdB": "gid://shopify/p/55j4GwvYyMilSlAGU48hns",
+      "confirmedBy": "exact_match"
+    },
+    {
+      "partNumber": "TC105X",
+      "brand": "WEDSSPORT",
+      "sellerA": "6b9a6e.myshopify.com",
+      "sellerB": "eug84v-z4.myshopify.com",
+      "titleA": "WedsSport TC105X Forged Wheel (Face 1) - 18x9.0 / Offset +32 / 5x114.3 (EJ Titan)",
+      "titleB": "WedsSport TC105X FORGED - 17 Inch",
+      "productIdA": "gid://shopify/p/4TMXHkYMMNzK9KfE1sCdBZ",
+      "productIdB": "gid://shopify/p/5p2MqiI3BygQzkxYkrquu",
+      "confirmedBy": "exact_match"
+    },
+    {
+      "partNumber": "TC105X",
+      "brand": "WEDSSPORT",
+      "sellerA": "legacy-racing.myshopify.com",
+      "sellerB": "rzcrew.myshopify.com",
+      "titleA": "WedsSport TC105X Forged Wheel (Face 2) - 18x9.5 +35 | 5x114.3 | EJ-Titan",
+      "titleB": "WedsSport TC105X - 16x7J - 4x100 - ET: 36/43 (Titanium)",
+      "productIdA": "gid://shopify/p/7jZaHb1JcuVExbAxvK9O8B",
+      "productIdB": "gid://shopify/p/1gbbKUk6nLBCv2j5AKsQXj",
+      "confirmedBy": "exact_match"
+    },
+    {
+      "partNumber": "TC105X",
+      "brand": "WEDSSPORT",
+      "sellerA": "legacy-racing.myshopify.com",
+      "sellerB": "fc8542.myshopify.com",
+      "titleA": "WedsSport TC105X Forged Wheel (Face 2) - 18x9.5 +35 | 5x114.3 | EJ-Titan",
+      "titleB": "Weds Sport TC105X DSR 18x10",
+      "productIdA": "gid://shopify/p/7jZaHb1JcuVExbAxvK9O8B",
+      "productIdB": "gid://shopify/p/55j4GwvYyMilSlAGU48hns",
+      "confirmedBy": "exact_match"
+    },
+    {
+      "partNumber": "TC105X",
+      "brand": "WEDSSPORT",
+      "sellerA": "legacy-racing.myshopify.com",
+      "sellerB": "eug84v-z4.myshopify.com",
+      "titleA": "WedsSport TC105X Forged Wheel (Face 2) - 18x9.5 +35 | 5x114.3 | EJ-Titan",
+      "titleB": "WedsSport TC105X FORGED - 17 Inch",
+      "productIdA": "gid://shopify/p/7jZaHb1JcuVExbAxvK9O8B",
+      "productIdB": "gid://shopify/p/5p2MqiI3BygQzkxYkrquu",
+      "confirmedBy": "exact_match"
+    },
+    {
+      "partNumber": "TC105X",
+      "brand": "WEDSSPORT",
+      "sellerA": "rzcrew.myshopify.com",
+      "sellerB": "fc8542.myshopify.com",
+      "titleA": "WedsSport TC105X - 16x7J - 4x100 - ET: 36/43 (Titanium)",
+      "titleB": "Weds Sport TC105X DSR 18x10",
+      "productIdA": "gid://shopify/p/1gbbKUk6nLBCv2j5AKsQXj",
+      "productIdB": "gid://shopify/p/55j4GwvYyMilSlAGU48hns",
+      "confirmedBy": "exact_match"
+    },
+    {
+      "partNumber": "TC105X",
+      "brand": "WEDSSPORT",
+      "sellerA": "rzcrew.myshopify.com",
+      "sellerB": "eug84v-z4.myshopify.com",
+      "titleA": "WedsSport TC105X - 16x7J - 4x100 - ET: 36/43 (Titanium)",
+      "titleB": "WedsSport TC105X FORGED - 17 Inch",
+      "productIdA": "gid://shopify/p/1gbbKUk6nLBCv2j5AKsQXj",
+      "productIdB": "gid://shopify/p/5p2MqiI3BygQzkxYkrquu",
+      "confirmedBy": "exact_match"
+    },
+    {
+      "partNumber": "TC105X",
+      "brand": "WEDSSPORT",
+      "sellerA": "fc8542.myshopify.com",
+      "sellerB": "eug84v-z4.myshopify.com",
+      "titleA": "Weds Sport TC105X DSR 18x10",
+      "titleB": "WedsSport TC105X FORGED - 17 Inch",
+      "productIdA": "gid://shopify/p/55j4GwvYyMilSlAGU48hns",
+      "productIdB": "gid://shopify/p/5p2MqiI3BygQzkxYkrquu",
+      "confirmedBy": "exact_match"
+    },
+    {
+      "partNumber": "PSX24W",
+      "brand": "OLM",
+      "sellerA": "30mci8-9d.myshopify.com",
+      "sellerB": "jcarpartcom.myshopify.com",
+      "titleA": "ORL PSX24W LED BULBSJL JT & UNIVERSAL",
+      "titleB": "Philips Car Standard Auxiliary Bulbs PSX24W 12V24W PG20/7 12276C1",
+      "productIdA": "gid://shopify/p/1yPtluPf9tFiCQgPh2lZsS",
+      "productIdB": "gid://shopify/p/3aTFpsAxFCVQ36OklagKQf",
+      "confirmedBy": "exact_match"
+    },
+    {
+      "partNumber": "PSX24W",
+      "brand": "OLM",
+      "sellerA": "30mci8-9d.myshopify.com",
+      "sellerB": "carlightbulb.myshopify.com",
+      "titleA": "ORL PSX24W LED BULBSJL JT & UNIVERSAL",
+      "titleB": "Philips PSX24W x 1 Bulb Standard Car Foglight Beam 12276 Genuine Fog Lamp Generic",
+      "productIdA": "gid://shopify/p/1yPtluPf9tFiCQgPh2lZsS",
+      "productIdB": "gid://shopify/p/6Gwg37gI0eY1nufeckSkX5",
+      "confirmedBy": "exact_match"
+    },
+    {
+      "partNumber": "PSX24W",
+      "brand": "OLM",
+      "sellerA": "30mci8-9d.myshopify.com",
+      "sellerB": "mokingda.myshopify.com",
+      "titleA": "ORL PSX24W LED BULBSJL JT & UNIVERSAL",
+      "titleB": "Philips PSX24W x 1 Ampoule Standard Car Foglight Beam 12276 Véritable Phare Antibrouillard",
+      "productIdA": "gid://shopify/p/1yPtluPf9tFiCQgPh2lZsS",
+      "productIdB": "gid://shopify/p/1p8kCDiYweU0Krhw7Rt1Ap",
+      "confirmedBy": "exact_match"
+    },
+    {
+      "partNumber": "PSX24W",
+      "brand": "OLM",
+      "sellerA": "30mci8-9d.myshopify.com",
+      "sellerB": "bbba0c-3.myshopify.com",
+      "titleA": "ORL PSX24W LED BULBSJL JT & UNIVERSAL",
+      "titleB": "2x PSX24W 12V 24W PG20/7 Fog Light Clear Globe Bulbs",
+      "productIdA": "gid://shopify/p/1yPtluPf9tFiCQgPh2lZsS",
+      "productIdB": "gid://shopify/p/4jH3NiWv7F7Vd9n6D17dxB",
+      "confirmedBy": "exact_match"
+    },
+    {
+      "partNumber": "PSX24W",
+      "brand": "OLM",
+      "sellerA": "30mci8-9d.myshopify.com",
+      "sellerB": "viprh.myshopify.com",
+      "titleA": "ORL PSX24W LED BULBSJL JT & UNIVERSAL",
+      "titleB": "Für Philips PSX24W x 1 Glühbirne Standard Auto Nebelscheinwerfer Strahl 12276 Nebelscheinwerfer",
+      "productIdA": "gid://shopify/p/1yPtluPf9tFiCQgPh2lZsS",
+      "productIdB": "gid://shopify/p/7lnGgwm5XASOmym5J0sG5A",
+      "confirmedBy": "exact_match"
+    },
+    {
+      "partNumber": "PSX24W",
+      "brand": "OLM",
+      "sellerA": "30mci8-9d.myshopify.com",
+      "sellerB": "jae-auto-electrical-refrigeration.myshopify.com",
+      "titleA": "ORL PSX24W LED BULBSJL JT & UNIVERSAL",
+      "titleB": "GLOBE  PSX24W 12V 24W",
+      "productIdA": "gid://shopify/p/1yPtluPf9tFiCQgPh2lZsS",
+      "productIdB": "gid://shopify/p/6jsvcUm8xWEEfphbUsh1Wg",
+      "confirmedBy": "exact_match"
+    },
+    {
+      "partNumber": "PSX24W",
+      "brand": "OLM",
+      "sellerA": "30mci8-9d.myshopify.com",
+      "sellerB": "iqzeaw-sd.myshopify.com",
+      "titleA": "ORL PSX24W LED BULBSJL JT & UNIVERSAL",
+      "titleB": "No Hyper Flash PSX24W Amber LED Turn Signal",
+      "productIdA": "gid://shopify/p/1yPtluPf9tFiCQgPh2lZsS",
+      "productIdB": "gid://shopify/p/2AoPwvnCCV6Lxv5twq7lFy",
+      "confirmedBy": "exact_match"
+    },
+    {
+      "partNumber": "PSX24W",
+      "brand": "OLM",
+      "sellerA": "jcarpartcom.myshopify.com",
+      "sellerB": "carlightbulb.myshopify.com",
+      "titleA": "Philips Car Standard Auxiliary Bulbs PSX24W 12V24W PG20/7 12276C1",
+      "titleB": "Philips PSX24W x 1 Bulb Standard Car Foglight Beam 12276 Genuine Fog Lamp Generic",
+      "productIdA": "gid://shopify/p/3aTFpsAxFCVQ36OklagKQf",
+      "productIdB": "gid://shopify/p/6Gwg37gI0eY1nufeckSkX5",
+      "confirmedBy": "exact_match"
+    },
+    {
+      "partNumber": "PSX24W",
+      "brand": "OLM",
+      "sellerA": "jcarpartcom.myshopify.com",
+      "sellerB": "mokingda.myshopify.com",
+      "titleA": "Philips Car Standard Auxiliary Bulbs PSX24W 12V24W PG20/7 12276C1",
+      "titleB": "Philips PSX24W x 1 Ampoule Standard Car Foglight Beam 12276 Véritable Phare Antibrouillard",
+      "productIdA": "gid://shopify/p/3aTFpsAxFCVQ36OklagKQf",
+      "productIdB": "gid://shopify/p/1p8kCDiYweU0Krhw7Rt1Ap",
+      "confirmedBy": "exact_match"
+    },
+    {
+      "partNumber": "PSX24W",
+      "brand": "OLM",
+      "sellerA": "jcarpartcom.myshopify.com",
+      "sellerB": "bbba0c-3.myshopify.com",
+      "titleA": "Philips Car Standard Auxiliary Bulbs PSX24W 12V24W PG20/7 12276C1",
+      "titleB": "2x PSX24W 12V 24W PG20/7 Fog Light Clear Globe Bulbs",
+      "productIdA": "gid://shopify/p/3aTFpsAxFCVQ36OklagKQf",
+      "productIdB": "gid://shopify/p/4jH3NiWv7F7Vd9n6D17dxB",
+      "confirmedBy": "exact_match"
+    },
+    {
+      "partNumber": "PSX24W",
+      "brand": "OLM",
+      "sellerA": "jcarpartcom.myshopify.com",
+      "sellerB": "viprh.myshopify.com",
+      "titleA": "Philips Car Standard Auxiliary Bulbs PSX24W 12V24W PG20/7 12276C1",
+      "titleB": "Für Philips PSX24W x 1 Glühbirne Standard Auto Nebelscheinwerfer Strahl 12276 Nebelscheinwerfer",
+      "productIdA": "gid://shopify/p/3aTFpsAxFCVQ36OklagKQf",
+      "productIdB": "gid://shopify/p/7lnGgwm5XASOmym5J0sG5A",
+      "confirmedBy": "exact_match"
+    },
+    {
+      "partNumber": "PSX24W",
+      "brand": "OLM",
+      "sellerA": "jcarpartcom.myshopify.com",
+      "sellerB": "jae-auto-electrical-refrigeration.myshopify.com",
+      "titleA": "Philips Car Standard Auxiliary Bulbs PSX24W 12V24W PG20/7 12276C1",
+      "titleB": "GLOBE  PSX24W 12V 24W",
+      "productIdA": "gid://shopify/p/3aTFpsAxFCVQ36OklagKQf",
+      "productIdB": "gid://shopify/p/6jsvcUm8xWEEfphbUsh1Wg",
+      "confirmedBy": "exact_match"
+    },
+    {
+      "partNumber": "PSX24W",
+      "brand": "OLM",
+      "sellerA": "jcarpartcom.myshopify.com",
+      "sellerB": "iqzeaw-sd.myshopify.com",
+      "titleA": "Philips Car Standard Auxiliary Bulbs PSX24W 12V24W PG20/7 12276C1",
+      "titleB": "No Hyper Flash PSX24W Amber LED Turn Signal",
+      "productIdA": "gid://shopify/p/3aTFpsAxFCVQ36OklagKQf",
+      "productIdB": "gid://shopify/p/2AoPwvnCCV6Lxv5twq7lFy",
+      "confirmedBy": "exact_match"
+    },
+    {
+      "partNumber": "PSX24W",
+      "brand": "OLM",
+      "sellerA": "carlightbulb.myshopify.com",
+      "sellerB": "mokingda.myshopify.com",
+      "titleA": "Philips PSX24W x 1 Bulb Standard Car Foglight Beam 12276 Genuine Fog Lamp Generic",
+      "titleB": "Philips PSX24W x 1 Ampoule Standard Car Foglight Beam 12276 Véritable Phare Antibrouillard",
+      "productIdA": "gid://shopify/p/6Gwg37gI0eY1nufeckSkX5",
+      "productIdB": "gid://shopify/p/1p8kCDiYweU0Krhw7Rt1Ap",
+      "confirmedBy": "exact_match"
+    },
+    {
+      "partNumber": "PSX24W",
+      "brand": "OLM",
+      "sellerA": "carlightbulb.myshopify.com",
+      "sellerB": "bbba0c-3.myshopify.com",
+      "titleA": "Philips PSX24W x 1 Bulb Standard Car Foglight Beam 12276 Genuine Fog Lamp Generic",
+      "titleB": "2x PSX24W 12V 24W PG20/7 Fog Light Clear Globe Bulbs",
+      "productIdA": "gid://shopify/p/6Gwg37gI0eY1nufeckSkX5",
+      "productIdB": "gid://shopify/p/4jH3NiWv7F7Vd9n6D17dxB",
+      "confirmedBy": "exact_match"
+    },
+    {
+      "partNumber": "PSX24W",
+      "brand": "OLM",
+      "sellerA": "carlightbulb.myshopify.com",
+      "sellerB": "viprh.myshopify.com",
+      "titleA": "Philips PSX24W x 1 Bulb Standard Car Foglight Beam 12276 Genuine Fog Lamp Generic",
+      "titleB": "Für Philips PSX24W x 1 Glühbirne Standard Auto Nebelscheinwerfer Strahl 12276 Nebelscheinwerfer",
+      "productIdA": "gid://shopify/p/6Gwg37gI0eY1nufeckSkX5",
+      "productIdB": "gid://shopify/p/7lnGgwm5XASOmym5J0sG5A",
+      "confirmedBy": "exact_match"
+    },
+    {
+      "partNumber": "PSX24W",
+      "brand": "OLM",
+      "sellerA": "carlightbulb.myshopify.com",
+      "sellerB": "jae-auto-electrical-refrigeration.myshopify.com",
+      "titleA": "Philips PSX24W x 1 Bulb Standard Car Foglight Beam 12276 Genuine Fog Lamp Generic",
+      "titleB": "GLOBE  PSX24W 12V 24W",
+      "productIdA": "gid://shopify/p/6Gwg37gI0eY1nufeckSkX5",
+      "productIdB": "gid://shopify/p/6jsvcUm8xWEEfphbUsh1Wg",
+      "confirmedBy": "exact_match"
+    },
+    {
+      "partNumber": "PSX24W",
+      "brand": "OLM",
+      "sellerA": "carlightbulb.myshopify.com",
+      "sellerB": "iqzeaw-sd.myshopify.com",
+      "titleA": "Philips PSX24W x 1 Bulb Standard Car Foglight Beam 12276 Genuine Fog Lamp Generic",
+      "titleB": "No Hyper Flash PSX24W Amber LED Turn Signal",
+      "productIdA": "gid://shopify/p/6Gwg37gI0eY1nufeckSkX5",
+      "productIdB": "gid://shopify/p/2AoPwvnCCV6Lxv5twq7lFy",
+      "confirmedBy": "exact_match"
+    },
+    {
+      "partNumber": "PSX24W",
+      "brand": "OLM",
+      "sellerA": "mokingda.myshopify.com",
+      "sellerB": "bbba0c-3.myshopify.com",
+      "titleA": "Philips PSX24W x 1 Ampoule Standard Car Foglight Beam 12276 Véritable Phare Antibrouillard",
+      "titleB": "2x PSX24W 12V 24W PG20/7 Fog Light Clear Globe Bulbs",
+      "productIdA": "gid://shopify/p/1p8kCDiYweU0Krhw7Rt1Ap",
+      "productIdB": "gid://shopify/p/4jH3NiWv7F7Vd9n6D17dxB",
+      "confirmedBy": "exact_match"
+    },
+    {
+      "partNumber": "PSX24W",
+      "brand": "OLM",
+      "sellerA": "mokingda.myshopify.com",
+      "sellerB": "viprh.myshopify.com",
+      "titleA": "Philips PSX24W x 1 Ampoule Standard Car Foglight Beam 12276 Véritable Phare Antibrouillard",
+      "titleB": "Für Philips PSX24W x 1 Glühbirne Standard Auto Nebelscheinwerfer Strahl 12276 Nebelscheinwerfer",
+      "productIdA": "gid://shopify/p/1p8kCDiYweU0Krhw7Rt1Ap",
+      "productIdB": "gid://shopify/p/7lnGgwm5XASOmym5J0sG5A",
+      "confirmedBy": "exact_match"
+    },
+    {
+      "partNumber": "PSX24W",
+      "brand": "OLM",
+      "sellerA": "mokingda.myshopify.com",
+      "sellerB": "jae-auto-electrical-refrigeration.myshopify.com",
+      "titleA": "Philips PSX24W x 1 Ampoule Standard Car Foglight Beam 12276 Véritable Phare Antibrouillard",
+      "titleB": "GLOBE  PSX24W 12V 24W",
+      "productIdA": "gid://shopify/p/1p8kCDiYweU0Krhw7Rt1Ap",
+      "productIdB": "gid://shopify/p/6jsvcUm8xWEEfphbUsh1Wg",
+      "confirmedBy": "exact_match"
+    },
+    {
+      "partNumber": "PSX24W",
+      "brand": "OLM",
+      "sellerA": "mokingda.myshopify.com",
+      "sellerB": "iqzeaw-sd.myshopify.com",
+      "titleA": "Philips PSX24W x 1 Ampoule Standard Car Foglight Beam 12276 Véritable Phare Antibrouillard",
+      "titleB": "No Hyper Flash PSX24W Amber LED Turn Signal",
+      "productIdA": "gid://shopify/p/1p8kCDiYweU0Krhw7Rt1Ap",
+      "productIdB": "gid://shopify/p/2AoPwvnCCV6Lxv5twq7lFy",
+      "confirmedBy": "exact_match"
+    },
+    {
+      "partNumber": "PSX24W",
+      "brand": "OLM",
+      "sellerA": "bbba0c-3.myshopify.com",
+      "sellerB": "viprh.myshopify.com",
+      "titleA": "2x PSX24W 12V 24W PG20/7 Fog Light Clear Globe Bulbs",
+      "titleB": "Für Philips PSX24W x 1 Glühbirne Standard Auto Nebelscheinwerfer Strahl 12276 Nebelscheinwerfer",
+      "productIdA": "gid://shopify/p/4jH3NiWv7F7Vd9n6D17dxB",
+      "productIdB": "gid://shopify/p/7lnGgwm5XASOmym5J0sG5A",
+      "confirmedBy": "exact_match"
+    },
+    {
+      "partNumber": "PSX24W",
+      "brand": "OLM",
+      "sellerA": "bbba0c-3.myshopify.com",
+      "sellerB": "jae-auto-electrical-refrigeration.myshopify.com",
+      "titleA": "2x PSX24W 12V 24W PG20/7 Fog Light Clear Globe Bulbs",
+      "titleB": "GLOBE  PSX24W 12V 24W",
+      "productIdA": "gid://shopify/p/4jH3NiWv7F7Vd9n6D17dxB",
+      "productIdB": "gid://shopify/p/6jsvcUm8xWEEfphbUsh1Wg",
+      "confirmedBy": "exact_match"
+    },
+    {
+      "partNumber": "PSX24W",
+      "brand": "OLM",
+      "sellerA": "bbba0c-3.myshopify.com",
+      "sellerB": "iqzeaw-sd.myshopify.com",
+      "titleA": "2x PSX24W 12V 24W PG20/7 Fog Light Clear Globe Bulbs",
+      "titleB": "No Hyper Flash PSX24W Amber LED Turn Signal",
+      "productIdA": "gid://shopify/p/4jH3NiWv7F7Vd9n6D17dxB",
+      "productIdB": "gid://shopify/p/2AoPwvnCCV6Lxv5twq7lFy",
+      "confirmedBy": "exact_match"
+    },
+    {
+      "partNumber": "PSX24W",
+      "brand": "OLM",
+      "sellerA": "viprh.myshopify.com",
+      "sellerB": "jae-auto-electrical-refrigeration.myshopify.com",
+      "titleA": "Für Philips PSX24W x 1 Glühbirne Standard Auto Nebelscheinwerfer Strahl 12276 Nebelscheinwerfer",
+      "titleB": "GLOBE  PSX24W 12V 24W",
+      "productIdA": "gid://shopify/p/7lnGgwm5XASOmym5J0sG5A",
+      "productIdB": "gid://shopify/p/6jsvcUm8xWEEfphbUsh1Wg",
+      "confirmedBy": "exact_match"
+    },
+    {
+      "partNumber": "PSX24W",
+      "brand": "OLM",
+      "sellerA": "viprh.myshopify.com",
+      "sellerB": "iqzeaw-sd.myshopify.com",
+      "titleA": "Für Philips PSX24W x 1 Glühbirne Standard Auto Nebelscheinwerfer Strahl 12276 Nebelscheinwerfer",
+      "titleB": "No Hyper Flash PSX24W Amber LED Turn Signal",
+      "productIdA": "gid://shopify/p/7lnGgwm5XASOmym5J0sG5A",
+      "productIdB": "gid://shopify/p/2AoPwvnCCV6Lxv5twq7lFy",
+      "confirmedBy": "exact_match"
+    },
+    {
+      "partNumber": "PSX24W",
+      "brand": "OLM",
+      "sellerA": "jae-auto-electrical-refrigeration.myshopify.com",
+      "sellerB": "iqzeaw-sd.myshopify.com",
+      "titleA": "GLOBE  PSX24W 12V 24W",
+      "titleB": "No Hyper Flash PSX24W Amber LED Turn Signal",
+      "productIdA": "gid://shopify/p/6jsvcUm8xWEEfphbUsh1Wg",
+      "productIdB": "gid://shopify/p/2AoPwvnCCV6Lxv5twq7lFy",
+      "confirmedBy": "exact_match"
+    },
+    {
+      "partNumber": "RN-05M",
+      "brand": "WEDSSPORT",
+      "sellerA": "dev-elite-performance.myshopify.com",
+      "sellerB": "fec074.myshopify.com",
+      "titleA": "WedsSport RN-05M 18x8.0J +35 5x114.3 GBK",
+      "titleB": "WedsSport RN-05M 18x9.5 5x120",
+      "productIdA": "gid://shopify/p/43UuICPnSU57zdcPJZnkQM",
+      "productIdB": "gid://shopify/p/55frIfPG9aB5WgQR499BKE",
+      "confirmedBy": "exact_match"
+    }
+  ],
+  "nearMissPairs": [
+    {
+      "partNumberA": "TC105X",
+      "partNumberB": "RN-05M",
+      "brand": "WEDSSPORT",
+      "reason": "same_brand_different_sku",
+      "sellerA": "subimods.com",
+      "sellerB": "subimods.com",
+      "titleA": "WedsSport TC105X EJ Titan 18x8.5 5x114.3 +43mm Offset 2015-2026 WRX / 2011-2021 STI",
+      "titleB": "WedsSport RN-05M Gloss Black 18x9.5 5x100 +45mm Offset"
+    },
+    {
+      "partNumberA": "TC105X",
+      "partNumberB": "SA-25R",
+      "brand": "WEDSSPORT",
+      "reason": "same_brand_different_sku",
+      "sellerA": "subimods.com",
+      "sellerB": "subimods.com",
+      "titleA": "WedsSport TC105X EJ Titan 18x8.5 5x114.3 +43mm Offset 2015-2026 WRX / 2011-2021 STI",
+      "titleB": "WedsSport SA-25R Platinum Silver Black (PSB) 18x9.5 5x100 +45mm Offset"
+    },
+    {
+      "partNumberA": "TC105X",
+      "partNumberB": "SA-01R",
+      "brand": "WEDSSPORT",
+      "reason": "same_brand_different_sku",
+      "sellerA": "subimods.com",
+      "sellerB": "subimods.com",
+      "titleA": "WedsSport TC105X EJ Titan 18x8.5 5x114.3 +43mm Offset 2015-2026 WRX / 2011-2021 STI",
+      "titleB": "WedsSport SA-01R EJ Bronze II 18x9.5 5x100 +45mm Offset"
+    },
+    {
+      "partNumberA": "TC105X",
+      "partNumberB": "SA-25R",
+      "brand": "WEDSSPORT",
+      "reason": "same_brand_different_sku",
+      "sellerA": "subimods.com",
+      "sellerB": "subimods.com",
+      "titleA": "WedsSport TC105X EJ Titan 18x8.5 5x114.3 +43mm Offset 2015-2026 WRX / 2011-2021 STI",
+      "titleB": "WedsSport SA-25R Weds Black Clear (WBC) 18x9.5 5x100 +45mm Offset"
+    },
+    {
+      "partNumberA": "TC105X",
+      "partNumberB": "SA-62R",
+      "brand": "WEDSSPORT",
+      "reason": "same_brand_different_sku",
+      "sellerA": "subimods.com",
+      "sellerB": "subimods.com",
+      "titleA": "WedsSport TC105X EJ Titan 18x8.5 5x114.3 +43mm Offset 2015-2026 WRX / 2011-2021 STI",
+      "titleB": "WedsSport SA-62R Platinum Silver Black (PSB) 18x9.5 5x100 +45mm Offset"
+    },
+    {
+      "partNumberA": "TC105X",
+      "partNumberB": "SA-27R",
+      "brand": "WEDSSPORT",
+      "reason": "same_brand_different_sku",
+      "sellerA": "subimods.com",
+      "sellerB": "subimods.com",
+      "titleA": "WedsSport TC105X EJ Titan 18x8.5 5x114.3 +43mm Offset 2015-2026 WRX / 2011-2021 STI",
+      "titleB": "WedsSport SA-27R EJ Bronze 18x9.5 5x100 +45mm Offset"
+    },
+    {
+      "partNumberA": "TC105X",
+      "partNumberB": "SA-62R",
+      "brand": "WEDSSPORT",
+      "reason": "same_brand_different_sku",
+      "sellerA": "subimods.com",
+      "sellerB": "subimods.com",
+      "titleA": "WedsSport TC105X EJ Titan 18x8.5 5x114.3 +43mm Offset 2015-2026 WRX / 2011-2021 STI",
+      "titleB": "WedsSport SA-62R EJ Bronze II 18x9.5 5x100 +45mm Offset"
+    },
+    {
+      "partNumberA": "TC105X",
+      "partNumberB": "SA-75R",
+      "brand": "WEDSSPORT",
+      "reason": "same_brand_different_sku",
+      "sellerA": "subimods.com",
+      "sellerB": "subimods.com",
+      "titleA": "WedsSport TC105X EJ Titan 18x8.5 5x114.3 +43mm Offset 2015-2026 WRX / 2011-2021 STI",
+      "titleB": "WedsSport SA-75R HBCII 18x9.5 5x100 +45mm Offset"
+    },
+    {
+      "partNumberA": "TC105X",
+      "partNumberB": "SA-27R",
+      "brand": "WEDSSPORT",
+      "reason": "same_brand_different_sku",
+      "sellerA": "subimods.com",
+      "sellerB": "subimods.com",
+      "titleA": "WedsSport TC105X EJ Titan 18x8.5 5x114.3 +43mm Offset 2015-2026 WRX / 2011-2021 STI",
+      "titleB": "WedsSports SA-27R 18x9.5 5x114.3 +38mm Offset BLC II 2015-2026 WRX / 2011-2021 STI"
+    },
+    {
+      "partNumberA": "TC105X",
+      "partNumberB": "TC-105X",
+      "brand": "WEDSSPORT",
+      "reason": "same_brand_different_sku",
+      "sellerA": "subimods.com",
+      "sellerB": "subimods.com",
+      "titleA": "WedsSport TC105X EJ Titan 18x8.5 5x114.3 +43mm Offset 2015-2026 WRX / 2011-2021 STI",
+      "titleB": "WedsSport TC-105X AMF GT Yellow 18x9.5 5x114.3 +35mm Offset 2015-2026 WRX / 2011-2021 STI"
+    },
+    {
+      "partNumberA": "TC105X",
+      "partNumberB": "SA-75R",
+      "brand": "WEDSSPORT",
+      "reason": "same_brand_different_sku",
+      "sellerA": "subimods.com",
+      "sellerB": "subimods.com",
+      "titleA": "WedsSport TC105X EJ Titan 18x8.5 5x114.3 +43mm Offset 2015-2026 WRX / 2011-2021 STI",
+      "titleB": "WedsSport SA-75R EJ-Bronze II 18x9.5 5x114.3 +39mm Offset 2015-2026 WRX / 2011-2021 STI"
+    },
+    {
+      "partNumberA": "TC105X",
+      "partNumberB": "SA-62R",
+      "brand": "WEDSSPORT",
+      "reason": "same_brand_different_sku",
+      "sellerA": "subimods.com",
+      "sellerB": "subimods.com",
+      "titleA": "WedsSport TC105X EJ Titan 18x8.5 5x114.3 +43mm Offset 2015-2026 WRX / 2011-2021 STI",
+      "titleB": "WedsSport SA-62R Platinum Silver Black (PSB) 18x9.5 5x114.3 +38mm Offset 15-24 WRX / 11-21 STI"
+    },
+    {
+      "partNumberA": "TC105X",
+      "partNumberB": "SA-01R",
+      "brand": "WEDSSPORT",
+      "reason": "same_brand_different_sku",
+      "sellerA": "subimods.com",
+      "sellerB": "subimods.com",
+      "titleA": "WedsSport TC105X EJ Titan 18x8.5 5x114.3 +43mm Offset 2015-2026 WRX / 2011-2021 STI",
+      "titleB": "WedsSport SA-01R EJ Bronze II 18x9.5 5x114.3 +38mm Offset 2015-2026 WRX / 2011-2021 STI"
+    },
+    {
+      "partNumberA": "TC105X",
+      "partNumberB": "SA-75R",
+      "brand": "WEDSSPORT",
+      "reason": "same_brand_different_sku",
+      "sellerA": "subimods.com",
+      "sellerB": "subimods.com",
+      "titleA": "WedsSport TC105X EJ Titan 18x8.5 5x114.3 +43mm Offset 2015-2026 WRX / 2011-2021 STI",
+      "titleB": "WedsSport SA-75R WBC 18x9.5 5x114.3 +38mm Offset 2015-2026 WRX / 2011-2021 STI"
+    },
+    {
+      "partNumberA": "TC105X",
+      "partNumberB": "SA-99R",
+      "brand": "WEDSSPORT",
+      "reason": "same_brand_different_sku",
+      "sellerA": "subimods.com",
+      "sellerB": "subimods.com",
+      "titleA": "WedsSport TC105X EJ Titan 18x8.5 5x114.3 +43mm Offset 2015-2026 WRX / 2011-2021 STI",
+      "titleB": "WedsSport SA-99R Platinum Silver Black 18x9.5 5x114.3 +38mm Offset 2015-2026 WRX / 2011-2021 STI"
+    },
+    {
+      "partNumberA": "TC105X",
+      "partNumberB": "SA-20R",
+      "brand": "WEDSSPORT",
+      "reason": "same_brand_different_sku",
+      "sellerA": "subimods.com",
+      "sellerB": "subimods.com",
+      "titleA": "WedsSport TC105X EJ Titan 18x8.5 5x114.3 +43mm Offset 2015-2026 WRX / 2011-2021 STI",
+      "titleB": "WedsSport SA-20R Blue Light Chrome 18x9.5 5x114.3 +38mm Offset 2015-2026 WRX / 2011-2021 STI"
+    },
+    {
+      "partNumberA": "TC105X",
+      "partNumberB": "SA-20R",
+      "brand": "WEDSSPORT",
+      "reason": "same_brand_different_sku",
+      "sellerA": "subimods.com",
+      "sellerB": "subimods.com",
+      "titleA": "WedsSport TC105X EJ Titan 18x8.5 5x114.3 +43mm Offset 2015-2026 WRX / 2011-2021 STI",
+      "titleB": "WedsSport SA-20R Weds Black Clear 18x9.5 5x114.3 +38mm Offset 2015-2026 WRX / 2011-2021 STI"
+    },
+    {
+      "partNumberA": "TC105X",
+      "partNumberB": "SA-52R",
+      "brand": "WEDSSPORT",
+      "reason": "same_brand_different_sku",
+      "sellerA": "subimods.com",
+      "sellerB": "subimods.com",
+      "titleA": "WedsSport TC105X EJ Titan 18x8.5 5x114.3 +43mm Offset 2015-2026 WRX / 2011-2021 STI",
+      "titleB": "WedsSport SA-52R Weds Black Clear (WBC) 18x9.5 5x114.3 +38mm Offset 2015-2026 WRX / 2011-2021 STI"
+    },
+    {
+      "partNumberA": "TC105X",
+      "partNumberB": "SA-52R",
+      "brand": "WEDSSPORT",
+      "reason": "same_brand_different_sku",
+      "sellerA": "subimods.com",
+      "sellerB": "subimods.com",
+      "titleA": "WedsSport TC105X EJ Titan 18x8.5 5x114.3 +43mm Offset 2015-2026 WRX / 2011-2021 STI",
+      "titleB": "WedsSport SA-52R Gloss Black 18x9.5 5x114.3 +38mm Offset 2015-2026 WRX / 2011-2021 STI"
+    },
+    {
+      "partNumberA": "TC105X",
+      "partNumberB": "SA-52R",
+      "brand": "WEDSSPORT",
+      "reason": "same_brand_different_sku",
+      "sellerA": "subimods.com",
+      "sellerB": "subimods.com",
+      "titleA": "WedsSport TC105X EJ Titan 18x8.5 5x114.3 +43mm Offset 2015-2026 WRX / 2011-2021 STI",
+      "titleB": "WedsSport SA-52R BLC II 18x9.5 5x114.3 +38mm Offset 2015-2026 WRX / 2011-2021 STI"
+    },
+    {
+      "partNumberA": "TC105X",
+      "partNumberB": "SA-52R",
+      "brand": "WEDSSPORT",
+      "reason": "same_brand_different_sku",
+      "sellerA": "subimods.com",
+      "sellerB": "subimods.com",
+      "titleA": "WedsSport TC105X EJ Titan 18x8.5 5x114.3 +43mm Offset 2015-2026 WRX / 2011-2021 STI",
+      "titleB": "WedsSport SA-52R Platinum Silver Black 18x9.5 5x114.3 +38mm Offset 2015-2026 WRX / 2011-2021 STI"
+    },
+    {
+      "partNumberA": "TC105X",
+      "partNumberB": "SA-52R",
+      "brand": "WEDSSPORT",
+      "reason": "same_brand_different_sku",
+      "sellerA": "subimods.com",
+      "sellerB": "subimods.com",
+      "titleA": "WedsSport TC105X EJ Titan 18x8.5 5x114.3 +43mm Offset 2015-2026 WRX / 2011-2021 STI",
+      "titleB": "WedsSport SA-52R EJ-Bronze II 18x9.5 5x114.3 +38mm Offset 2015-2026 WRX / 2011-2021 STI"
+    },
+    {
+      "partNumberA": "TC105X",
+      "partNumberB": "SA-27R",
+      "brand": "WEDSSPORT",
+      "reason": "same_brand_different_sku",
+      "sellerA": "subimods.com",
+      "sellerB": "subimods.com",
+      "titleA": "WedsSport TC105X EJ Titan 18x8.5 5x114.3 +43mm Offset 2015-2026 WRX / 2011-2021 STI",
+      "titleB": "WedsSport SA-27R Platinum Silver Black (PSB) 18x9.5 5x114.3 +38mm Offset 15-24 WRX / 11-21 STI"
+    },
+    {
+      "partNumberA": "TC105X",
+      "partNumberB": "SA-27R",
+      "brand": "WEDSSPORT",
+      "reason": "same_brand_different_sku",
+      "sellerA": "subimods.com",
+      "sellerB": "subimods.com",
+      "titleA": "WedsSport TC105X EJ Titan 18x8.5 5x114.3 +43mm Offset 2015-2026 WRX / 2011-2021 STI",
+      "titleB": "WedsSport SA-27R EJ Bronze 18x9.5 5x114.3 +38mm Offset 2015-2026 WRX / 2011-2021 STI"
+    },
+    {
+      "partNumberA": "TC105X",
+      "partNumberB": "SA-25R",
+      "brand": "WEDSSPORT",
+      "reason": "same_brand_different_sku",
+      "sellerA": "subimods.com",
+      "sellerB": "subimods.com",
+      "titleA": "WedsSport TC105X EJ Titan 18x8.5 5x114.3 +43mm Offset 2015-2026 WRX / 2011-2021 STI",
+      "titleB": "WedsSport SA-25R BLC II 18x9.5 5x114.3 +38mm Offset 2015-2026 WRX / 2011-2021 STI"
+    },
+    {
+      "partNumberA": "TC105X",
+      "partNumberB": "SA-75R",
+      "brand": "WEDSSPORT",
+      "reason": "same_brand_different_sku",
+      "sellerA": "subimods.com",
+      "sellerB": "subimods.com",
+      "titleA": "WedsSport TC105X EJ Titan 18x8.5 5x114.3 +43mm Offset 2015-2026 WRX / 2011-2021 STI",
+      "titleB": "WedsSport SA-75R Matte Blue 18x9.5 5x114.3 +39mm Offset 2015-2026 WRX / 2011-2021 STI"
+    },
+    {
+      "partNumberA": "TC105X",
+      "partNumberB": "SA-75R",
+      "brand": "WEDSSPORT",
+      "reason": "same_brand_different_sku",
+      "sellerA": "subimods.com",
+      "sellerB": "subimods.com",
+      "titleA": "WedsSport TC105X EJ Titan 18x8.5 5x114.3 +43mm Offset 2015-2026 WRX / 2011-2021 STI",
+      "titleB": "WedsSport SA-75R Circuit White 18x9.5 5x114.3 +39mm Offset 2015-2026 WRX / 2011-2021 STI"
+    },
+    {
+      "partNumberA": "TC105X",
+      "partNumberB": "SA-27R",
+      "brand": "WEDSSPORT",
+      "reason": "same_brand_different_sku",
+      "sellerA": "subimods.com",
+      "sellerB": "subimods.com",
+      "titleA": "WedsSport TC105X EJ Titan 18x8.5 5x114.3 +43mm Offset 2015-2026 WRX / 2011-2021 STI",
+      "titleB": "WedsSport SA-27R Weds Black Clear (WBC) 18x9.5 5x114.3 +38mm Offset 2015-2026 WRX / 2011-2021 STI"
+    },
+    {
+      "partNumberA": "TC105X",
+      "partNumberB": "SA-01R",
+      "brand": "WEDSSPORT",
+      "reason": "same_brand_different_sku",
+      "sellerA": "subimods.com",
+      "sellerB": "subimods.com",
+      "titleA": "WedsSport TC105X EJ Titan 18x8.5 5x114.3 +43mm Offset 2015-2026 WRX / 2011-2021 STI",
+      "titleB": "WedsSport SA-01R BLC II 18x9.5 5x114.3 +38mm Offset 2015-2026 WRX / 2011-2021 STI"
+    },
+    {
+      "partNumberA": "TC105X",
+      "partNumberB": "SA-01R",
+      "brand": "WEDSSPORT",
+      "reason": "same_brand_different_sku",
+      "sellerA": "subimods.com",
+      "sellerB": "subimods.com",
+      "titleA": "WedsSport TC105X EJ Titan 18x8.5 5x114.3 +43mm Offset 2015-2026 WRX / 2011-2021 STI",
+      "titleB": "WedsSport SA-01R Platinum Silver Black (PSB) 18x9.5 5x114.3 +38mm Offset 15-24 WRX / 11-21 STI"
+    },
+    {
+      "partNumberA": "TC105X",
+      "partNumberB": "SA-01R",
+      "brand": "WEDSSPORT",
+      "reason": "same_brand_different_sku",
+      "sellerA": "subimods.com",
+      "sellerB": "subimods.com",
+      "titleA": "WedsSport TC105X EJ Titan 18x8.5 5x114.3 +43mm Offset 2015-2026 WRX / 2011-2021 STI",
+      "titleB": "WedsSport SA-01R Matte Black 18x9.5 5x114.3 +38mm Offset 2015-2026 WRX / 2011-2021 STI"
+    },
+    {
+      "partNumberA": "TC105X",
+      "partNumberB": "SA-01R",
+      "brand": "WEDSSPORT",
+      "reason": "same_brand_different_sku",
+      "sellerA": "subimods.com",
+      "sellerB": "subimods.com",
+      "titleA": "WedsSport TC105X EJ Titan 18x8.5 5x114.3 +43mm Offset 2015-2026 WRX / 2011-2021 STI",
+      "titleB": "WedsSport SA-01R Weds Black Clear (WBC) 18x9.5 5x114.3 +38mm Offset 2015-2026 WRX / 2011-2021 STI"
+    },
+    {
+      "partNumberA": "TC105X",
+      "partNumberB": "SA-62R",
+      "brand": "WEDSSPORT",
+      "reason": "same_brand_different_sku",
+      "sellerA": "subimods.com",
+      "sellerB": "subimods.com",
+      "titleA": "WedsSport TC105X EJ Titan 18x8.5 5x114.3 +43mm Offset 2015-2026 WRX / 2011-2021 STI",
+      "titleB": "WedsSport SA-62R BLC II 18x9.5 5x114.3 +38mm Offset 2015-2026 WRX / 2011-2021 STI"
+    },
+    {
+      "partNumberA": "TC105X",
+      "partNumberB": "SA-62R",
+      "brand": "WEDSSPORT",
+      "reason": "same_brand_different_sku",
+      "sellerA": "subimods.com",
+      "sellerB": "subimods.com",
+      "titleA": "WedsSport TC105X EJ Titan 18x8.5 5x114.3 +43mm Offset 2015-2026 WRX / 2011-2021 STI",
+      "titleB": "WedsSport SA-62R Weds EJ Bronze II 18x9.5 5x114.3 +38mm Offset 2015-2026 WRX / 2011-2021 STI"
+    },
+    {
+      "partNumberA": "TC105X",
+      "partNumberB": "SA-62R",
+      "brand": "WEDSSPORT",
+      "reason": "same_brand_different_sku",
+      "sellerA": "subimods.com",
+      "sellerB": "subimods.com",
+      "titleA": "WedsSport TC105X EJ Titan 18x8.5 5x114.3 +43mm Offset 2015-2026 WRX / 2011-2021 STI",
+      "titleB": "WedsSport SA-62R Weds Black Clear (WBC) 18x9.5 5x114.3 +38mm Offset 2015-2026 WRX / 2011-2021 STI"
+    },
+    {
+      "partNumberA": "TC105X",
+      "partNumberB": "SA-75R",
+      "brand": "WEDSSPORT",
+      "reason": "same_brand_different_sku",
+      "sellerA": "subimods.com",
+      "sellerB": "subimods.com",
+      "titleA": "WedsSport TC105X EJ Titan 18x8.5 5x114.3 +43mm Offset 2015-2026 WRX / 2011-2021 STI",
+      "titleB": "WedsSport SA-75R BLCII 18x9.5 5x114.3 +38mm Offset 2015-2026 WRX / 2011-2021 STI"
+    },
+    {
+      "partNumberA": "TC105X",
+      "partNumberB": "SA-75R",
+      "brand": "WEDSSPORT",
+      "reason": "same_brand_different_sku",
+      "sellerA": "subimods.com",
+      "sellerB": "subimods.com",
+      "titleA": "WedsSport TC105X EJ Titan 18x8.5 5x114.3 +43mm Offset 2015-2026 WRX / 2011-2021 STI",
+      "titleB": "WedsSport SA-75R HBCII 18x9.5 5x114.3 +38mm Offset 2015-2026 WRX / 2011-2021 STI"
+    },
+    {
+      "partNumberA": "TC105X",
+      "partNumberB": "SA-75R",
+      "brand": "WEDSSPORT",
+      "reason": "same_brand_different_sku",
+      "sellerA": "subimods.com",
+      "sellerB": "subimods.com",
+      "titleA": "WedsSport TC105X EJ Titan 18x8.5 5x114.3 +43mm Offset 2015-2026 WRX / 2011-2021 STI",
+      "titleB": "WedsSport SA-75R EJ-Bronze 18x9.5 5x114.3 +38mm Offset 2015-2026 WRX / 2011-2021 STI"
+    },
+    {
+      "partNumberA": "TC105X",
+      "partNumberB": "SA-99R",
+      "brand": "WEDSSPORT",
+      "reason": "same_brand_different_sku",
+      "sellerA": "subimods.com",
+      "sellerB": "subimods.com",
+      "titleA": "WedsSport TC105X EJ Titan 18x8.5 5x114.3 +43mm Offset 2015-2026 WRX / 2011-2021 STI",
+      "titleB": "WedsSport SA-99R EJ-Bronze 18x9.5 5x114.3 +38mm Offset 2015-2026 WRX / 2011-2021 STI"
+    },
+    {
+      "partNumberA": "TC105X",
+      "partNumberB": "SA-99R",
+      "brand": "WEDSSPORT",
+      "reason": "same_brand_different_sku",
+      "sellerA": "subimods.com",
+      "sellerB": "subimods.com",
+      "titleA": "WedsSport TC105X EJ Titan 18x8.5 5x114.3 +43mm Offset 2015-2026 WRX / 2011-2021 STI",
+      "titleB": "WedsSport SA-99R Worth Black Clear 18x9.5 5x114.3 +38mm Offset 2015-2026 WRX / 2011-2021 STI"
+    },
+    {
+      "partNumberA": "TC105X",
+      "partNumberB": "SA-99R",
+      "brand": "WEDSSPORT",
+      "reason": "same_brand_different_sku",
+      "sellerA": "subimods.com",
+      "sellerB": "subimods.com",
+      "titleA": "WedsSport TC105X EJ Titan 18x8.5 5x114.3 +43mm Offset 2015-2026 WRX / 2011-2021 STI",
+      "titleB": "WedsSport SA-99R Blue Light Chrome II 18x9.5 5x114.3 +38mm Offset 2015-2026 WRX / 2011-2021 STI"
+    },
+    {
+      "partNumberA": "TC105X",
+      "partNumberB": "SA-25R",
+      "brand": "WEDSSPORT",
+      "reason": "same_brand_different_sku",
+      "sellerA": "subimods.com",
+      "sellerB": "subimods.com",
+      "titleA": "WedsSport TC105X EJ Titan 18x8.5 5x114.3 +43mm Offset 2015-2026 WRX / 2011-2021 STI",
+      "titleB": "WedsSport SA-25R Worth Black Clear 18x9.5 5x114.3 +38mm Offset 2015-2026 WRX / 2011-2021 STI"
+    },
+    {
+      "partNumberA": "TC105X",
+      "partNumberB": "SA-25R",
+      "brand": "WEDSSPORT",
+      "reason": "same_brand_different_sku",
+      "sellerA": "subimods.com",
+      "sellerB": "subimods.com",
+      "titleA": "WedsSport TC105X EJ Titan 18x8.5 5x114.3 +43mm Offset 2015-2026 WRX / 2011-2021 STI",
+      "titleB": "WedsSport SA-25R Platinum Silver Black 18x9.5 5x114.3 +38mm Offset 2015-2026 WRX / 2011-2021 STI"
+    },
+    {
+      "partNumberA": "TC105X",
+      "partNumberB": "RN-05M",
+      "brand": "WEDSSPORT",
+      "reason": "same_brand_different_sku",
+      "sellerA": "subimods.com",
+      "sellerB": "subimods.com",
+      "titleA": "WedsSport TC105X EJ Titan 18x8.5 5x114.3 +43mm Offset 2015-2026 WRX / 2011-2021 STI",
+      "titleB": "WedsSport RN-05M Gloss Black 18x9.5 5x114.3 +38mm Offset 2015-2026 WRX / 2011-2021 STI"
+    },
+    {
+      "partNumberA": "RN-05M",
+      "partNumberB": "SA-25R",
+      "brand": "WEDSSPORT",
+      "reason": "same_brand_different_sku",
+      "sellerA": "subimods.com",
+      "sellerB": "subimods.com",
+      "titleA": "WedsSport RN-05M Gloss Black 18x9.5 5x100 +45mm Offset",
+      "titleB": "WedsSport SA-25R Platinum Silver Black (PSB) 18x9.5 5x100 +45mm Offset"
+    },
+    {
+      "partNumberA": "RN-05M",
+      "partNumberB": "SA-01R",
+      "brand": "WEDSSPORT",
+      "reason": "same_brand_different_sku",
+      "sellerA": "subimods.com",
+      "sellerB": "subimods.com",
+      "titleA": "WedsSport RN-05M Gloss Black 18x9.5 5x100 +45mm Offset",
+      "titleB": "WedsSport SA-01R EJ Bronze II 18x9.5 5x100 +45mm Offset"
+    },
+    {
+      "partNumberA": "RN-05M",
+      "partNumberB": "SA-25R",
+      "brand": "WEDSSPORT",
+      "reason": "same_brand_different_sku",
+      "sellerA": "subimods.com",
+      "sellerB": "subimods.com",
+      "titleA": "WedsSport RN-05M Gloss Black 18x9.5 5x100 +45mm Offset",
+      "titleB": "WedsSport SA-25R Weds Black Clear (WBC) 18x9.5 5x100 +45mm Offset"
+    },
+    {
+      "partNumberA": "RN-05M",
+      "partNumberB": "SA-62R",
+      "brand": "WEDSSPORT",
+      "reason": "same_brand_different_sku",
+      "sellerA": "subimods.com",
+      "sellerB": "subimods.com",
+      "titleA": "WedsSport RN-05M Gloss Black 18x9.5 5x100 +45mm Offset",
+      "titleB": "WedsSport SA-62R Platinum Silver Black (PSB) 18x9.5 5x100 +45mm Offset"
+    },
+    {
+      "partNumberA": "RN-05M",
+      "partNumberB": "SA-27R",
+      "brand": "WEDSSPORT",
+      "reason": "same_brand_different_sku",
+      "sellerA": "subimods.com",
+      "sellerB": "subimods.com",
+      "titleA": "WedsSport RN-05M Gloss Black 18x9.5 5x100 +45mm Offset",
+      "titleB": "WedsSport SA-27R EJ Bronze 18x9.5 5x100 +45mm Offset"
+    },
+    {
+      "partNumberA": "RN-05M",
+      "partNumberB": "SA-62R",
+      "brand": "WEDSSPORT",
+      "reason": "same_brand_different_sku",
+      "sellerA": "subimods.com",
+      "sellerB": "subimods.com",
+      "titleA": "WedsSport RN-05M Gloss Black 18x9.5 5x100 +45mm Offset",
+      "titleB": "WedsSport SA-62R EJ Bronze II 18x9.5 5x100 +45mm Offset"
+    }
+  ],
+  "partNumberExamples": [
+    {
+      "title": "WedsSport TC105X EJ Titan 18x8.5 5x114.3 +43mm Offset 2015-2026 WRX / 2011-2021 STI",
+      "vendor": "WedsSport",
+      "partNumber": "TC105X",
+      "brand": "WEDSSPORT"
+    },
+    {
+      "title": "OLM PSX24W to H11 Adapter 2013-2016 BRZ, 2013-2017 Crosstrek w/ SRF",
+      "vendor": "OLM",
+      "partNumber": "PSX24W",
+      "brand": "OLM"
+    },
+    {
+      "title": "WedsSport RN-05M Gloss Black 18x9.5 5x100 +45mm Offset",
+      "vendor": "WedsSport",
+      "partNumber": "RN-05M",
+      "brand": "WEDSSPORT"
+    },
+    {
+      "title": "WedsSport SA-25R Platinum Silver Black (PSB) 18x9.5 5x100 +45mm Offset",
+      "vendor": "WedsSport",
+      "partNumber": "SA-25R",
+      "brand": "WEDSSPORT"
+    },
+    {
+      "title": "WedsSport SA-01R EJ Bronze II 18x9.5 5x100 +45mm Offset",
+      "vendor": "WedsSport",
+      "partNumber": "SA-01R",
+      "brand": "WEDSSPORT"
+    },
+    {
+      "title": "WedsSport SA-25R Weds Black Clear (WBC) 18x9.5 5x100 +45mm Offset",
+      "vendor": "WedsSport",
+      "partNumber": "SA-25R",
+      "brand": "WEDSSPORT"
+    },
+    {
+      "title": "WedsSport SA-62R Platinum Silver Black (PSB) 18x9.5 5x100 +45mm Offset",
+      "vendor": "WedsSport",
+      "partNumber": "SA-62R",
+      "brand": "WEDSSPORT"
+    },
+    {
+      "title": "WedsSport SA-27R EJ Bronze 18x9.5 5x100 +45mm Offset",
+      "vendor": "WedsSport",
+      "partNumber": "SA-27R",
+      "brand": "WEDSSPORT"
+    },
+    {
+      "title": "WedsSport SA-62R EJ Bronze II 18x9.5 5x100 +45mm Offset",
+      "vendor": "WedsSport",
+      "partNumber": "SA-62R",
+      "brand": "WEDSSPORT"
+    },
+    {
+      "title": "WedsSport SA-75R HBCII 18x9.5 5x100 +45mm Offset",
+      "vendor": "WedsSport",
+      "partNumber": "SA-75R",
+      "brand": "WEDSSPORT"
+    },
+    {
+      "title": "WedsSport TC105X EJ Titan 18x9.5 5x100 +45mm Offset",
+      "vendor": "WedsSport",
+      "partNumber": "TC105X",
+      "brand": "WEDSSPORT"
+    },
+    {
+      "title": "WedsSports TC105X DSR EJ Titan 18x9.5 5x114.3 +35mm Offset 2015-2026 WRX / 2011-2021 STI",
+      "vendor": "WedsSport",
+      "partNumber": "TC105X",
+      "brand": "WEDSSPORT"
+    },
+    {
+      "title": "WedsSports SA-27R 18x9.5 5x114.3 +38mm Offset BLC II 2015-2026 WRX / 2011-2021 STI",
+      "vendor": "WedsSport",
+      "partNumber": "SA-27R",
+      "brand": "WEDSSPORT"
+    },
+    {
+      "title": "Volk Racing CE28SL Gloss Black 18x9.5 5x114.3 +35mm 2015-2026 WRX / 2011-2021 STI",
+      "vendor": "Volk",
+      "partNumber": "CE28SL",
+      "brand": "VOLK"
+    },
+    {
+      "title": "WedsSport TC-105X AMF GT Yellow 18x9.5 5x114.3 +35mm Offset 2015-2026 WRX / 2011-2021 STI",
+      "vendor": "WedsSport",
+      "partNumber": "TC-105X",
+      "brand": "WEDSSPORT"
+    },
+    {
+      "title": "APR Performance Ver.II GTC-200 Spoiler Carbon Fiber Gurney Flap",
+      "vendor": "APR",
+      "partNumber": "GTC-200",
+      "brand": "APR"
+    },
+    {
+      "title": "APR Performance GTC-300 Carbon Fiber Wing 2022-2026 WRX",
+      "vendor": "APR",
+      "partNumber": "GTC-300",
+      "brand": "APR"
+    },
+    {
+      "title": "APR Performance GTC-300 67\" Spoiler Carbon Fiber Gurney Flap",
+      "vendor": "APR",
+      "partNumber": "GTC-300",
+      "brand": "APR"
+    },
+    {
+      "title": "APR Adjustable Rods For Use w/ GTC-200 Wing",
+      "vendor": "APR",
+      "partNumber": "GTC-200",
+      "brand": "APR"
+    },
+    {
+      "title": "APR Performance GT-250 Carbon Fiber 67\" Spec Wing w/ 7\" Pedestals 2013-2021 BRZ / FRS",
+      "vendor": "APR",
+      "partNumber": "GT-250",
+      "brand": "APR"
+    }
+  ]
+}

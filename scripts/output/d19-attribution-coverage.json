@@ -1,0 +1,291 @@
+{
+  "timestamp": "2026-08-06T15:27:53.087Z",
+  "store": "subimods.com",
+  "totalProducts": 18109,
+  "coverage": {
+    "titleOnly": 79,
+    "skuOnly": 13476,
+    "both": 102,
+    "either": 13657,
+    "neither": 4452,
+    "coverageRate": 0.7541553923463471
+  },
+  "examples": {
+    "skuSource": [
+      {
+        "handle": "subaru-oem-left-inner-engine-timing-belt-cover-1998-forester-1998-impreza-1996-1999-legacy-1996-1999-outback",
+        "title": "Subaru OEM Left Inner Engine Timing Belt Cover 1998 Forester / 1998 Impreza 2.5 RS / 1996–1999 Legacy / 1996–1999 Outback 2.5",
+        "vendor": "Subaru OEM",
+        "titlePartNum": null,
+        "skuPartNum": "13575AA044",
+        "partNumber": "13575AA044",
+        "source": "sku"
+      },
+      {
+        "handle": "overtake-modknob-weighted-light-bulb-shift-knob-illusion-scarlet-subaru-2004-2021-sti-2015-2026-wrx",
+        "title": "Overtake ModKnob Weighted Light Bulb Shift Knob Illusion Scarlet 15-26 WRX / 04-21 STI",
+        "vendor": "Overtake",
+        "titlePartNum": null,
+        "skuPartNum": "A10999SCR",
+        "partNumber": "A10999SCR",
+        "source": "sku"
+      },
+      {
+        "handle": "overtake-modknob-weighted-light-bulb-shift-knob-illusion-scarlet-subaru-2002-2026-wrx-2004-2021-sti-2013-2026-brz-86",
+        "title": "Overtake ModKnob Weighted Light Bulb Shift Knob Illusion Scarlet 02-26 WRX / 04-21 STI / 13-26 BRZ /FRS / 86",
+        "vendor": "Overtake",
+        "titlePartNum": null,
+        "skuPartNum": "A10998SCR",
+        "partNumber": "A10998SCR",
+        "source": "sku"
+      },
+      {
+        "handle": "map-sensor-5-bar-2013-2021-brz-frs-gt86",
+        "title": "Omni Power 5 Bar MAP Sensor 2013-2021 BRZ / FRS / GT86",
+        "vendor": "Omni Power",
+        "titlePartNum": null,
+        "skuPartNum": "MAP-K-5BR",
+        "partNumber": "MAP-K-5BR",
+        "source": "sku"
+      },
+      {
+        "handle": "map-sensor-4-bar-2013-2021-brz-frs-gt86",
+        "title": "Omni Power 4 Bar MAP Sensor 2013-2021 BRZ / FRS / GT86",
+        "vendor": "Omni Power",
+        "titlePartNum": null,
+        "skuPartNum": "MAP-K-4BR",
+        "partNumber": "MAP-K-4BR",
+        "source": "sku"
+      },
+      {
+        "handle": "map-sensor-3-bar-2013-2021-brz-frs-gt86",
+        "title": "Omni Power 3 Bar MAP Sensor 2013-2021 BRZ / FRS / GT86",
+        "vendor": "Omni Power",
+        "titlePartNum": null,
+        "skuPartNum": "MAP-K-3BR",
+        "partNumber": "MAP-K-3BR",
+        "source": "sku"
+      },
+      {
+        "handle": "map-sensor-4-bar-2008-2014-wrx-2005-2009-legacy-gt",
+        "title": "Omni Power 5 Bar MAP Sensor 2008-2014 WRX / 2005-2009 Legacy GT",
+        "vendor": "Omni Power",
+        "titlePartNum": null,
+        "skuPartNum": "MAP-SUP-4BR",
+        "partNumber": "MAP-SUP-4BR",
+        "source": "sku"
+      },
+      {
+        "handle": "map-sensor-5-bar-2008-2014-wrx-2005-2009-legacy-gt",
+        "title": "Omni Power 4 Bar MAP Sensor 2008-2014 WRX / 2005-2009 Legacy GT",
+        "vendor": "Omni Power",
+        "titlePartNum": null,
+        "skuPartNum": "MAP-SUP-5BR",
+        "partNumber": "MAP-SUP-5BR",
+        "source": "sku"
+      },
+      {
+        "handle": "map-sensor-3-bar-2008-2014-wrx-2005-2009-legacy-gt",
+        "title": "Omni Power 3 Bar MAP Sensor 2008-2014 WRX / 2005-2009 Legacy GT",
+        "vendor": "Omni Power",
+        "titlePartNum": null,
+        "skuPartNum": "MAP-SUP-3BR",
+        "partNumber": "MAP-SUP-3BR",
+        "source": "sku"
+      },
+      {
+        "handle": "t-map-sensor-5-bar-2015-2021-wrx",
+        "title": "Omni Power 5 Bar T-MAP Sensor 2015-2021 WRX",
+        "vendor": "Omni Power",
+        "titlePartNum": null,
+        "skuPartNum": "MAP-GTRT-5BR",
+        "partNumber": "MAP-GTRT-5BR",
+        "source": "sku"
+      }
+    ],
+    "titleSource": [
+      {
+        "handle": "wedssport-tc105x-ej-titan-18x8-5-5x114-3-43mm-offset-2015-2026-wrx-2011-2021-sti",
+        "title": "WedsSport TC105X EJ Titan 18x8.5 5x114.3 +43mm Offset 2015-2026 WRX / 2011-2021 STI",
+        "vendor": "WedsSport",
+        "titlePartNum": "TC105X",
+        "skuPartNum": null,
+        "partNumber": "TC105X",
+        "source": "title"
+      },
+      {
+        "handle": "rn05m-gbk-18x9-5-5x100-45mm-offset",
+        "title": "WedsSport RN-05M Gloss Black 18x9.5 5x100 +45mm Offset",
+        "vendor": "WedsSport",
+        "titlePartNum": "RN-05M",
+        "skuPartNum": null,
+        "partNumber": "RN-05M",
+        "source": "title"
+      },
+      {
+        "handle": "sa25r-psb-18x9-5-5x100-45mm-offset",
+        "title": "WedsSport SA-25R Platinum Silver Black (PSB) 18x9.5 5x100 +45mm Offset",
+        "vendor": "WedsSport",
+        "titlePartNum": "SA-25R",
+        "skuPartNum": null,
+        "partNumber": "SA-25R",
+        "source": "title"
+      },
+      {
+        "handle": "sa01r-ej-bronze-ii-18x9-5-5x100-45mm-offset",
+        "title": "WedsSport SA-01R EJ Bronze II 18x9.5 5x100 +45mm Offset",
+        "vendor": "WedsSport",
+        "titlePartNum": "SA-01R",
+        "skuPartNum": null,
+        "partNumber": "SA-01R",
+        "source": "title"
+      },
+      {
+        "handle": "sa25r-wbc-18x9-5-5x100-45mm-offset",
+        "title": "WedsSport SA-25R Weds Black Clear (WBC) 18x9.5 5x100 +45mm Offset",
+        "vendor": "WedsSport",
+        "titlePartNum": "SA-25R",
+        "skuPartNum": null,
+        "partNumber": "SA-25R",
+        "source": "title"
+      },
+      {
+        "handle": "sa62r-psb-18x9-5-5x100-45mm-offset",
+        "title": "WedsSport SA-62R Platinum Silver Black (PSB) 18x9.5 5x100 +45mm Offset",
+        "vendor": "WedsSport",
+        "titlePartNum": "SA-62R",
+        "skuPartNum": null,
+        "partNumber": "SA-62R",
+        "source": "title"
+      },
+      {
+        "handle": "sa27r-ej-bronze-18x9-5-5x100-45mm-offset",
+        "title": "WedsSport SA-27R EJ Bronze 18x9.5 5x100 +45mm Offset",
+        "vendor": "WedsSport",
+        "titlePartNum": "SA-27R",
+        "skuPartNum": null,
+        "partNumber": "SA-27R",
+        "source": "title"
+      },
+      {
+        "handle": "sa62r-ej-bronze-ii-18x9-5-5x100-45mm-offset",
+        "title": "WedsSport SA-62R EJ Bronze II 18x9.5 5x100 +45mm Offset",
+        "vendor": "WedsSport",
+        "titlePartNum": "SA-62R",
+        "skuPartNum": null,
+        "partNumber": "SA-62R",
+        "source": "title"
+      },
+      {
+        "handle": "sa75r-hbc-ii-18x9-5-5x100-45mm-offset",
+        "title": "WedsSport SA-75R HBCII 18x9.5 5x100 +45mm Offset",
+        "vendor": "WedsSport",
+        "titlePartNum": "SA-75R",
+        "skuPartNum": null,
+        "partNumber": "SA-75R",
+        "source": "title"
+      },
+      {
+        "handle": "tc105x-amf-ej-ti-18x9-5-5x100-45mm-offset",
+        "title": "WedsSport TC105X EJ Titan 18x9.5 5x100 +45mm Offset",
+        "vendor": "WedsSport",
+        "titlePartNum": "TC105X",
+        "skuPartNum": null,
+        "partNumber": "TC105X",
+        "source": "title"
+      }
+    ],
+    "bothSource": [
+      {
+        "handle": "olm-psx24w-to-h11-adapter-brz-crosstrek-2013-2016-subaru-brz-2013-2017-crosstrek-w-srf",
+        "title": "OLM PSX24W to H11 Adapter 2013-2016 BRZ, 2013-2017 Crosstrek w/ SRF",
+        "vendor": "OLM",
+        "titlePartNum": "PSX24W",
+        "skuPartNum": "OLMPSX24W-H11-ADPT",
+        "partNumber": "PSX24W",
+        "source": "both"
+      },
+      {
+        "handle": "volk-racing-ce28sl-gloss-black-18x9-5-5x114-3-35mm-2015-2024-wrx-2011-2021-sti",
+        "title": "Volk Racing CE28SL Gloss Black 18x9.5 5x114.3 +35mm 2015-2026 WRX / 2011-2021 STI",
+        "vendor": "Volk",
+        "titlePartNum": "CE28SL",
+        "skuPartNum": "WV2X35EP9",
+        "partNumber": "CE28SL",
+        "source": "both"
+      },
+      {
+        "handle": "apr-performance-ver-ii-gtc-200-spoiler-carbon-fiber-gurney-flap",
+        "title": "APR Performance Ver.II GTC-200 Spoiler Carbon Fiber Gurney Flap",
+        "vendor": "APR",
+        "titlePartNum": "GTC-200",
+        "skuPartNum": "GF-20060",
+        "partNumber": "GTC-200",
+        "source": "both"
+      },
+      {
+        "handle": "apr-performance-gtc-300-carbon-fiber-wing-2022-2024-wrx",
+        "title": "APR Performance GTC-300 Carbon Fiber Wing 2022-2026 WRX",
+        "vendor": "APR",
+        "titlePartNum": "GTC-300",
+        "skuPartNum": "AS-106182",
+        "partNumber": "GTC-300",
+        "source": "both"
+      },
+      {
+        "handle": "apr-performance-gtc-300-67-spoiler-carbon-fiber-gurney-flap",
+        "title": "APR Performance GTC-300 67\" Spoiler Carbon Fiber Gurney Flap",
+        "vendor": "APR",
+        "titlePartNum": "GTC-300",
+        "skuPartNum": "GF-30067",
+        "partNumber": "GTC-300",
+        "source": "both"
+      },
+      {
+        "handle": "gtc-200-wing-adjustable-rods",
+        "title": "APR Adjustable Rods For Use w/ GTC-200 Wing",
+        "vendor": "APR",
+        "titlePartNum": "GTC-200",
+        "skuPartNum": "AA-100055",
+        "partNumber": "GTC-200",
+        "source": "both"
+      },
+      {
+        "handle": "gt-250-frs-brz-67-spec-wing-with-7-pedestals-2013-2021-frs-brz",
+        "title": "APR Performance GT-250 Carbon Fiber 67\" Spec Wing w/ 7\" Pedestals 2013-2021 BRZ / FRS",
+        "vendor": "APR",
+        "titlePartNum": "GT-250",
+        "skuPartNum": "AS-206701",
+        "partNumber": "GT-250",
+        "source": "both"
+      },
+      {
+        "handle": "gt-250-wrx-67-spec-wing-2002-2007-wrx",
+        "title": "APR Performance GT-250 Carbon Fiber 67\" Spec Wing 2002-2007 WRX",
+        "vendor": "APR",
+        "titlePartNum": "GT-250",
+        "skuPartNum": "AS-206760",
+        "partNumber": "GT-250",
+        "source": "both"
+      },
+      {
+        "handle": "gt-250-wrx-61-spec-wing-2002-2007-wrx",
+        "title": "APR Performance GT-250 Carbon Fiber 61\" Spec Wing 2002-2007 WRX",
+        "vendor": "APR",
+        "titlePartNum": "GT-250",
+        "skuPartNum": "AS-206160",
+        "partNumber": "GT-250",
+        "source": "both"
+      },
+      {
+        "handle": "gt-250-frs-brz-spec-61-wing-with-8-pedestals-2013-2021-frs-brz",
+        "title": "APR Performance GT-250 Carbon Fiber 61\" Spec Wing w/ 8\" Pedestals 2013-2021 BRZ / FRS",
+        "vendor": "APR",
+        "titlePartNum": "GT-250",
+        "skuPartNum": "AS-206101",
+        "partNumber": "GT-250",
+        "source": "both"
+      }
+    ]
+  }
+}
