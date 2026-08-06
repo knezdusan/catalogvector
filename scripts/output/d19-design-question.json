@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-08-06T15:58:08.705Z",
+  "timestamp": "2026-08-06T23:08:54.056Z",
   "parameters": {
     "observedAbsenceRates": [
       0.13,
@@ -72,35 +72,35 @@
     }
   },
   "noiseFloor": {
-    "meanJaccard": 1,
-    "minJaccard": 1,
-    "maxJaccard": 1,
+    "meanJaccard": 0.9835124574687022,
+    "minJaccard": 0.9800345267582377,
+    "maxJaccard": 0.9875743655395738,
     "jaccards": [
-      1,
-      1,
-      1
+      0.9829284801082951,
+      0.9800345267582377,
+      0.9875743655395738
     ],
-    "meanAbsence": 1,
-    "absenceStdDev": 0,
+    "meanAbsence": 0.2698992582752131,
+    "absenceStdDev": 0.0005875376703232833,
     "absenceRange": [
-      1,
-      1
+      0.2691796745267353,
+      0.2706188420236909
     ],
     "absenceRates": [
-      1,
-      1,
-      1
+      0.2706188420236909,
+      0.2698992582752131,
+      0.2691796745267353
     ],
-    "meanHandles": 0,
-    "handleStdDev": 0,
+    "meanHandles": 13190,
+    "handleStdDev": 10.614455552060438,
     "handleRange": [
-      0,
-      0
+      13177,
+      13203
     ],
     "handleCounts": [
-      0,
-      0,
-      0
+      13177,
+      13190,
+      13203
     ]
   }
 }

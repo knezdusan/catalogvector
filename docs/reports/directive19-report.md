@@ -31,7 +31,7 @@ All governing inputs were committed and pushed before any work began, per DIRECT
 | §3.1 Register corrections (entries 7, 9, 10 + standing instruction + Subimods handle reconciliation) | **DONE** | `2a0421b` |
 | §3.2 Attribution matcher (brand + part number, title + SKU, 60 same-part + 50 near-miss, FPR 0.0%) | **DONE** | `2a0421b` |
 | §3.3 Partition rarefaction (MAP curve + Subimods selection-error check) | **DONE** | `d88b9f2` |
-| §3.4 Same-day noise floor (TSP + Subimods, 3 runs each) | **IN PROGRESS** — running at time of report | pending |
+| §3.4 Same-day noise floor (TSP + Subimods, 3 runs each) | **DONE** | pending |
 | §3.5 Store-selection rule (pre-registered, seed=42) | **DONE** | `02e8dc3` |
 | §4.2 Design question (interval width projections) | **DONE** | `02e8dc3` |
 | §5.1 Outreach fixes (25 contacts, BRAND 3 rewrite, disclosure line) | **DONE** | `02e8dc3` |
@@ -41,7 +41,6 @@ All governing inputs were committed and pushed before any work began, per DIRECT
 
 ### Not executed
 
-- **§3.4 noise floor results**: The full enumeration runs (299 queries × 3 for TSP, 692 queries × 3 for Subimods) were started but had not completed at the time of this report. The script is committed and running. Results will be appended in a follow-up commit. The §4.2 design question analysis was completed using analytical projections; the noise floor data will be incorporated when available.
 - **No store work was performed**, per DIRECTIVE-19 §3. No Catalog API queries were issued for study purposes. All Catalog queries in §3.2 were for matcher validation (ground truth construction), which is Stage 1 instrument preparation, not study data.
 
 ---
@@ -104,6 +103,40 @@ All governing inputs were committed and pushed before any work began, per DIRECT
 - Total cells: 2,449
 - Cells with zero recovery: 182
 
+### §3.4 Same-day noise floor
+
+**TSP (small store, 2,608 sitemap products, 299 queries per run):**
+
+| Run | Handles | Absence rate | Duration |
+|---|---|---|---|
+| 1 | 2,400 | 7.98% | 67.2 min |
+| 2 | 2,391 | 8.32% | 71.0 min |
+| 3 | 2,330 | 10.66% | 38.8 min |
+
+- Mean handles: 2,374 (±31.1)
+- Handle range: 2,330–2,400 (70 handles)
+- Mean absence: 8.99% (±1.19pp)
+- Absence range: 7.98%–10.66% (2.68pp)
+- Pairwise Jaccard: 0.9913 / 0.9635 / 0.9687 (mean 0.9745)
+
+**Subimods (medium store, 18,066 sitemap products, 694 queries per run):**
+
+| Run | Handles | Absence rate | Duration |
+|---|---|---|---|
+| 1 | 13,177 | 27.06% | 86.1 min |
+| 2 | 13,190 | 26.99% | 83.9 min |
+| 3 | 13,203 | 26.92% | 79.7 min |
+
+- Mean handles: 13,190 (±10.6)
+- Handle range: 13,177–13,203 (26 handles)
+- Mean absence: 26.99% (±0.06pp)
+- Absence range: 26.92%–27.06% (0.14pp)
+- Pairwise Jaccard: 0.9829 / 0.9800 / 0.9876 (mean 0.9835)
+
+**Comparison with D12 expectation:** DIRECTIVE-12 reported ~1.88% run-to-run variance in recovered handles. The measured same-day floor is lower for both stores: TSP ±1.19pp, Subimods ±0.06pp. The D12 figure is corrected downward.
+
+**Key finding:** Noise floor scales inversely with catalogue size. TSP (2,608 products) has 20x higher variance than Subimods (18,066 products). This is consistent with the partition-based enumeration method: larger catalogues have more queries, each recovering more handles, so the non-determinism in individual query results averages out more. The study's registered rule (only movement exceeding the measured same-day floor counts as change) will use a per-store floor, not a universal one.
+
 ### §4.2 Design question
 
 | Metric | Allocation A (n=50 all) | Allocation B (2×n=100 + 3×n=50) |
@@ -117,6 +150,8 @@ All governing inputs were committed and pushed before any work began, per DIRECT
 - Between-store component: 1.57pp (dominates vertical-level CI)
 - Within-store component (n=50): 2.40pp
 - Within-store component (n=100): 1.67pp
+- **Noise floor (Subimods):** 0.06pp — 1.7% of vertical SE (negligible)
+- **Noise floor (TSP):** 1.19pp — 34% of vertical SE (material for small stores)
 
 ---
 
@@ -185,7 +220,7 @@ Corrections were applied to both the merchant side (title + SKU extraction) and 
 
 ### §3.4 Same-day noise floor
 
-- **Not completed at time of report.** The script is running. No deviation from the registered design — the delay is operational, not methodological.
+- **No deviation from the registered design.** Three full enumeration runs were executed for both TSP and Subimods, same partition, same seeds, through the invariant library. Jaccard and per-run absence variance reported as specified.
 
 ---
 
@@ -198,7 +233,7 @@ DIRECTIVE-19 is an instrument preparation and pre-registration directive. It doe
 | §3.1 Register corrections | Entries 7, 9, 10 rewritten; standing instruction added; Subimods count reconciled | **MET** |
 | §3.2 Attribution matcher | ≥40 same-part + ≥40 near-miss; FPR ≤2%; coverage reported separately | **MET** (60+50 pairs, FPR 0.0%, coverage 75.4%) |
 | §3.3 Partition rarefaction | Rarefaction curve + selection-error check; both numbers reported | **MET** (curve + 91% in recovered cells) |
-| §3.4 Same-day noise floor | 3 runs × 2 stores; Jaccard + absence variance reported | **PENDING** (script running) |
+| §3.4 Same-day noise floor | 3 runs × 2 stores; Jaccard + absence variance reported | **MET** (TSP ±1.19pp, Subimods ±0.06pp, Jaccard 0.97/0.98) |
 | §3.5 Store-selection rule | Committed before any store chosen; seed recorded; independent frame | **MET** |
 | §4.2 Design question | Projected interval widths under both allocations | **MET** |
 | §5.1 Outreach fixes | 25 contacts, BRAND 3 fixed, disclosure line added | **MET** |
@@ -254,10 +289,14 @@ DIRECTIVE-19 is an instrument preparation and pre-registration directive. It doe
 
 3. **MAP's 56.6% recall is explained by the 25K metadata cap.** The rarefaction curve shows that vendor and product_type counts saturate at ~70% of the 25K metadata. The missing 77K products contain vendors and product types that were never queried. The log-log extrapolation estimates ~13,469 queries would be needed for full coverage — a 35x increase from the current 384. This is a metadata problem, not a Catalog API problem.
 
+4. **Noise floor scales inversely with catalogue size.** TSP (2,608 products) has a noise floor of ±1.19pp, while Subimods (18,066 products) has ±0.06pp — a 20x difference. This is consistent with the partition method: larger catalogues have more queries, each recovering more handles, so non-determinism in individual query results averages out. The D12 expectation of ~1.88% variance is corrected downward for both stores. The study's registered rule (movement exceeding the measured floor counts as change) will use per-store floors, not a universal one.
+
+5. **TSP absence rate is lower than D17 measured.** D17 reported TSP absence at 13.0% (7.8–21.0%, n=100). The noise floor runs report 8.0–10.7% absence (n=full enumeration). This is consistent — the D17 figure was from a 100-product sample with a wide Wilson interval, and the full enumeration gives a tighter estimate. The D17 figure is not wrong; it is less precise.
+
 ### Blockers
 
 1. **TSP `/products.json` requires correct domain.** The initial noise floor script used `tspauto.com` (returns HTTP 444). The correct domain is `www.twostepperformance.com`. Fixed and restarted.
-2. **Noise floor script runtime.** The full enumeration (299 queries × 3 runs for TSP + 692 queries × 3 runs for Subimods) takes several hours. The script was started but had not completed at the time of this report.
+2. **Noise floor script runtime.** The full enumeration (299 queries × 3 runs for TSP + 692 queries × 3 runs for Subimods) took approximately 7 hours total. No blocker — completed successfully.
 
 ### Disagreement with the directive
 
@@ -267,7 +306,7 @@ DIRECTIVE-19 is an instrument preparation and pre-registration directive. It doe
 
 3. **§3.2 body text extraction:** The directive lists "title, SKU, or body text" as part number sources. I did not use body text. SKUs provided 75.4% coverage, which was sufficient to exceed the 40-pair target. Body text would have increased coverage marginally but was not needed. This is a deviation from the letter of the directive but not from its intent.
 
-4. **§4.2 noise floor integration:** The design question analysis was completed using analytical projections because the noise floor had not finished running. The noise floor data will be incorporated when available. The analytical projections use the observed between-store SD (3.5pp) and typical recall (88.8%) from D17, which are settled numbers. The noise floor will confirm or correct the run-to-run variance assumption.
+4. **§4.2 noise floor integration:** The design question analysis was re-run with the actual noise floor data. The Subimods noise floor (0.06pp) is 1.7% of the vertical SE — negligible. The TSP noise floor (1.19pp) is 34% of the vertical SE — material for small stores, confirming that per-store noise floors should be used rather than a universal one. The analytical projections use the observed between-store SD (3.5pp) and typical recall (88.8%) from D17, which are settled numbers.
 
 ### Advisor errors caught
 

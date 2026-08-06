@@ -1,117 +1,117 @@
 {
   "tsp": {
     "store": "tsp",
-    "domain": "tspauto.com",
+    "domain": "www.twostepperformance.com",
     "sitemapCount": 2608,
-    "partitionQueries": 0,
+    "partitionQueries": 299,
     "runs": [
       {
         "run": 1,
-        "handleCount": 0,
-        "queryCount": 0,
-        "durationSec": 0
+        "handleCount": 2400,
+        "queryCount": 299,
+        "durationSec": 4029.421
       },
       {
         "run": 2,
-        "handleCount": 0,
-        "queryCount": 0,
-        "durationSec": 0
+        "handleCount": 2391,
+        "queryCount": 299,
+        "durationSec": 4262.007
       },
       {
         "run": 3,
-        "handleCount": 0,
-        "queryCount": 0,
-        "durationSec": 0
+        "handleCount": 2330,
+        "queryCount": 299,
+        "durationSec": 2329.437
       }
     ],
     "stats": {
-      "meanJaccard": 1,
-      "minJaccard": 1,
-      "maxJaccard": 1,
+      "meanJaccard": 0.9744886922324754,
+      "minJaccard": 0.9634703196347032,
+      "maxJaccard": 0.9912718204488778,
       "jaccards": [
-        1,
-        1,
-        1
+        0.9912718204488778,
+        0.9634703196347032,
+        0.9687239366138448
       ],
-      "meanAbsence": 1,
-      "absenceStdDev": 0,
+      "meanAbsence": 0.0898517382413088,
+      "absenceStdDev": 0.01192286695298449,
       "absenceRange": [
-        1,
-        1
+        0.07975460122699385,
+        0.10659509202453987
       ],
       "absenceRates": [
-        1,
-        1,
-        1
+        0.07975460122699385,
+        0.08320552147239269,
+        0.10659509202453987
       ],
-      "meanHandles": 0,
-      "handleStdDev": 0,
+      "meanHandles": 2373.6666666666665,
+      "handleStdDev": 31.09483701338357,
       "handleRange": [
-        0,
-        0
+        2330,
+        2400
       ],
       "handleCounts": [
-        0,
-        0,
-        0
+        2400,
+        2391,
+        2330
       ]
     }
   },
   "subimods": {
     "store": "subimods",
-    "domain": "subimods.com",
+    "domain": "www.subimods.com",
     "sitemapCount": 18066,
-    "partitionQueries": 0,
+    "partitionQueries": 694,
     "runs": [
       {
         "run": 1,
-        "handleCount": 0,
-        "queryCount": 0,
-        "durationSec": 0
+        "handleCount": 13177,
+        "queryCount": 694,
+        "durationSec": 5165.65
       },
       {
         "run": 2,
-        "handleCount": 0,
-        "queryCount": 0,
-        "durationSec": 0
+        "handleCount": 13190,
+        "queryCount": 694,
+        "durationSec": 5031.296
       },
       {
         "run": 3,
-        "handleCount": 0,
-        "queryCount": 0,
-        "durationSec": 0
+        "handleCount": 13203,
+        "queryCount": 694,
+        "durationSec": 4783.11
       }
     ],
     "stats": {
-      "meanJaccard": 1,
-      "minJaccard": 1,
-      "maxJaccard": 1,
+      "meanJaccard": 0.9835124574687022,
+      "minJaccard": 0.9800345267582377,
+      "maxJaccard": 0.9875743655395738,
       "jaccards": [
-        1,
-        1,
-        1
+        0.9829284801082951,
+        0.9800345267582377,
+        0.9875743655395738
       ],
-      "meanAbsence": 1,
-      "absenceStdDev": 0,
+      "meanAbsence": 0.2698992582752131,
+      "absenceStdDev": 0.0005875376703232833,
       "absenceRange": [
-        1,
-        1
+        0.2691796745267353,
+        0.2706188420236909
       ],
       "absenceRates": [
-        1,
-        1,
-        1
+        0.2706188420236909,
+        0.2698992582752131,
+        0.2691796745267353
       ],
-      "meanHandles": 0,
-      "handleStdDev": 0,
+      "meanHandles": 13190,
+      "handleStdDev": 10.614455552060438,
       "handleRange": [
-        0,
-        0
+        13177,
+        13203
       ],
       "handleCounts": [
-        0,
-        0,
-        0
+        13177,
+        13190,
+        13203
       ]
     }
   }
