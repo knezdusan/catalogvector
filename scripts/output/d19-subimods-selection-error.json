@@ -1,0 +1,157 @@
+{
+  "timestamp": "2026-08-06T15:51:41.144Z",
+  "store": "subimods.com",
+  "totalProducts": 18098,
+  "enumHandles": 13257,
+  "absentHandles": 4847,
+  "selectionError": {
+    "absentInCoveredCells": 4845,
+    "absentInUncoveredCells": 0,
+    "absentNoCell": 2,
+    "absentInZeroRecoveryCells": 435,
+    "zeroRecoveryCells": 182,
+    "totalCells": 2449
+  },
+  "topAbsentCells": [
+    {
+      "cell": "KYB|Struts And Shocks",
+      "absent": 123,
+      "recovered": 67,
+      "total": 190,
+      "recoveryRate": 0.3526315789473684
+    },
+    {
+      "cell": "Yokohama|Tires",
+      "absent": 121,
+      "recovered": 116,
+      "total": 237,
+      "recoveryRate": 0.48945147679324896
+    },
+    {
+      "cell": "Billetworkz|Shift Knobs, Interior Trim Pieces, Interior Accessories",
+      "absent": 120,
+      "recovered": 127,
+      "total": 247,
+      "recoveryRate": 0.5141700404858299
+    },
+    {
+      "cell": "Rally Armor|Mudflaps, Exterior Protection",
+      "absent": 103,
+      "recovered": 41,
+      "total": 144,
+      "recoveryRate": 0.2847222222222222
+    },
+    {
+      "cell": "Enkei Racing|Wheels",
+      "absent": 83,
+      "recovered": 10,
+      "total": 93,
+      "recoveryRate": 0.10752688172043011
+    },
+    {
+      "cell": "LP Aventure|Bumper Bars",
+      "absent": 68,
+      "recovered": 9,
+      "total": 77,
+      "recoveryRate": 0.11688311688311688
+    },
+    {
+      "cell": "Subimods|Stickers And Vinyls",
+      "absent": 61,
+      "recovered": 108,
+      "total": 169,
+      "recoveryRate": 0.6390532544378699
+    },
+    {
+      "cell": "Enkei Tuning|Wheels",
+      "absent": 60,
+      "recovered": 11,
+      "total": 71,
+      "recoveryRate": 0.15492957746478872
+    },
+    {
+      "cell": "Torque Solution|Shift Knobs, Interior Trim Pieces, Interior Accessories",
+      "absent": 55,
+      "recovered": 32,
+      "total": 87,
+      "recoveryRate": 0.367816091954023
+    },
+    {
+      "cell": "Kansei Wheels|Wheels",
+      "absent": 55,
+      "recovered": 23,
+      "total": 78,
+      "recoveryRate": 0.2948717948717949
+    },
+    {
+      "cell": "Hardrace|Suspension Bushings",
+      "absent": 54,
+      "recovered": 1,
+      "total": 55,
+      "recoveryRate": 0.01818181818181818
+    },
+    {
+      "cell": "Gram Lights|Wheels",
+      "absent": 45,
+      "recovered": 34,
+      "total": 79,
+      "recoveryRate": 0.43037974683544306
+    },
+    {
+      "cell": "Grip Royal|Steering Wheels",
+      "absent": 45,
+      "recovered": 23,
+      "total": 68,
+      "recoveryRate": 0.3382352941176471
+    },
+    {
+      "cell": "fifteen52|Wheels",
+      "absent": 44,
+      "recovered": 21,
+      "total": 65,
+      "recoveryRate": 0.3230769230769231
+    },
+    {
+      "cell": "HPS Performance|Radiator Hoses",
+      "absent": 42,
+      "recovered": 28,
+      "total": 70,
+      "recoveryRate": 0.4
+    },
+    {
+      "cell": "Motul|Motor Oil",
+      "absent": 39,
+      "recovered": 29,
+      "total": 68,
+      "recoveryRate": 0.4264705882352941
+    },
+    {
+      "cell": "BC Racing|Coilovers",
+      "absent": 38,
+      "recovered": 135,
+      "total": 173,
+      "recoveryRate": 0.7803468208092486
+    },
+    {
+      "cell": "Molded Innovations|Tail Lights, Exterior Lighting",
+      "absent": 34,
+      "recovered": 27,
+      "total": 61,
+      "recoveryRate": 0.4426229508196721
+    },
+    {
+      "cell": "ISC|Coilovers",
+      "absent": 34,
+      "recovered": 4,
+      "total": 38,
+      "recoveryRate": 0.10526315789473684
+    },
+    {
+      "cell": "Bilstein|Strut / Spring Combo",
+      "absent": 33,
+      "recovered": 0,
+      "total": 33,
+      "recoveryRate": 0
+    }
+  ]
+}

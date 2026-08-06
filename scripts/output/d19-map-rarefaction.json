@@ -1,0 +1,103 @@
+{
+  "timestamp": "2026-08-06T15:51:41.036Z",
+  "store": "maperformance.com",
+  "sitemapCount": 102176,
+  "productsJsonCount": 25000,
+  "currentEnumHandles": 43840,
+  "currentRecall": 0.566,
+  "fullPartition": {
+    "queries": 383,
+    "vendors": 307,
+    "productTypes": 76,
+    "cells": 995
+  },
+  "rarefactionCurve": [
+    {
+      "fraction": 0.1,
+      "productCount": 2500,
+      "queries": 61,
+      "vendors": 36,
+      "productTypes": 25,
+      "cells": 51
+    },
+    {
+      "fraction": 0.2,
+      "productCount": 5000,
+      "queries": 125,
+      "vendors": 89,
+      "productTypes": 36,
+      "cells": 128
+    },
+    {
+      "fraction": 0.3,
+      "productCount": 7500,
+      "queries": 135,
+      "vendors": 99,
+      "productTypes": 36,
+      "cells": 138
+    },
+    {
+      "fraction": 0.4,
+      "productCount": 10000,
+      "queries": 144,
+      "vendors": 108,
+      "productTypes": 36,
+      "cells": 147
+    },
+    {
+      "fraction": 0.5,
+      "productCount": 12500,
+      "queries": 267,
+      "vendors": 205,
+      "productTypes": 62,
+      "cells": 488
+    },
+    {
+      "fraction": 0.6,
+      "productCount": 15000,
+      "queries": 355,
+      "vendors": 281,
+      "productTypes": 74,
+      "cells": 801
+    },
+    {
+      "fraction": 0.7,
+      "productCount": 17500,
+      "queries": 383,
+      "vendors": 307,
+      "productTypes": 76,
+      "cells": 929
+    },
+    {
+      "fraction": 0.8,
+      "productCount": 20000,
+      "queries": 383,
+      "vendors": 307,
+      "productTypes": 76,
+      "cells": 968
+    },
+    {
+      "fraction": 0.9,
+      "productCount": 22500,
+      "queries": 383,
+      "vendors": 307,
+      "productTypes": 76,
+      "cells": 976
+    },
+    {
+      "fraction": 1,
+      "productCount": 25000,
+      "queries": 383,
+      "vendors": 307,
+      "productTypes": 76,
+      "cells": 995
+    }
+  ],
+  "extrapolation": {
+    "scalingFactor": 4.08704,
+    "linearCells": 4066,
+    "logLogCells": 8979,
+    "logLogQueries": 13469,
+    "estimatedRecall": 1
+  }
+}
